@@ -1,0 +1,7586 @@
+{
+  "publicadores": [
+    {
+      "id": "mmm9qi4jqz6w",
+      "apellido": "Acosta",
+      "nombre": "Judith",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 4",
+      "telefono": "3007033852",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jw1p2",
+      "apellido": "Acosta",
+      "nombre": "Miguel",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 10",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4j5xl2",
+      "apellido": "Acosta",
+      "nombre": "Paola",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 10",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jbuql",
+      "apellido": "Acosta",
+      "nombre": "Thiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 10",
+      "telefono": "304 368 2478",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jfkxs",
+      "apellido": "Alarcon",
+      "nombre": "Blanca",
+      "nacimiento": "1960-12-12",
+      "bautismo": "1996-07-20",
+      "grupo": "Grupo 4",
+      "telefono": "317 651 1346",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jaer1",
+      "apellido": "Alarcon",
+      "nombre": "Karla",
+      "nacimiento": "1999-09-13",
+      "bautismo": "2012-07-07",
+      "grupo": "Grupo 4",
+      "telefono": "310 876 0263",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jnax6",
+      "apellido": "Alarcon",
+      "nombre": "Victor Hugo",
+      "nacimiento": "1960-04-17",
+      "bautismo": "1996-07-20",
+      "grupo": "Grupo 4",
+      "telefono": "315 895 8866",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jigd3",
+      "apellido": "Alba",
+      "nombre": "Geraldine",
+      "nacimiento": "1998-04-28",
+      "bautismo": "2014-04-14",
+      "grupo": "Grupo 9",
+      "telefono": "3226253069",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jq3yf",
+      "apellido": "Alba",
+      "nombre": "Nicolas",
+      "nacimiento": "1996-06-24",
+      "bautismo": "2008-12-08",
+      "grupo": "Grupo 9",
+      "telefono": "3204590342",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jl2r2",
+      "apellido": "Amortegui",
+      "nombre": "Cesar Mauricio",
+      "nacimiento": "1974-01-07",
+      "bautismo": "2003-03-30",
+      "grupo": "Grupo 1",
+      "telefono": "317 6400153",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4j8aj2",
+      "apellido": "Amortegui",
+      "nombre": "Natalia",
+      "nacimiento": "1995-08-29",
+      "bautismo": "2007-09-29",
+      "grupo": "Grupo 1",
+      "telefono": "310 2189593",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jevxb",
+      "apellido": "Arevalo",
+      "nombre": "Mercedes",
+      "nacimiento": "1958-11-11",
+      "bautismo": "1990-06-30",
+      "grupo": "Grupo 6",
+      "telefono": "3114098561",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4jl0fy",
+      "apellido": "Aular",
+      "nombre": "Daritza",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k5qc0",
+      "apellido": "Aular",
+      "nombre": "Jose",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "317 5846571",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k2l0u",
+      "apellido": "Avila",
+      "nombre": "Rosario",
+      "nacimiento": "1959-12-20",
+      "bautismo": "1999-07-04",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k6wjw",
+      "apellido": "Ayala",
+      "nombre": "Saul",
+      "nacimiento": "1948-08-14",
+      "bautismo": "2012-01-14",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kolhi",
+      "apellido": "Bejarano",
+      "nombre": "Luisa",
+      "nacimiento": "1998-08-01",
+      "bautismo": "2012-07-01",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kye7q",
+      "apellido": "Bejarano",
+      "nombre": "Martha",
+      "nacimiento": "1970-02-02",
+      "bautismo": "2008-11-13",
+      "grupo": "Grupo 10",
+      "telefono": "321 241 7331",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kqpna",
+      "apellido": "BeleñO",
+      "nombre": "Isaac",
+      "nacimiento": "",
+      "bautismo": "2015-02-08",
+      "grupo": "Grupo 14",
+      "telefono": "3013629170",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k0gox",
+      "apellido": "BeleñO",
+      "nombre": "Laura",
+      "nacimiento": "1996-04-05",
+      "bautismo": "2014-07-05",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kqs2f",
+      "apellido": "Bellino",
+      "nombre": "Melissa",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "313 4051048",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k6yoa",
+      "apellido": "Bellino",
+      "nombre": "Roberto",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "300 8258079",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k17a6",
+      "apellido": "Bellino",
+      "nombre": "Victoria",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4k7c8y",
+      "apellido": "Beltran",
+      "nombre": "Gloria",
+      "nacimiento": "1968-10-27",
+      "bautismo": "1984-01-07",
+      "grupo": "Grupo 2",
+      "telefono": "320  849 4251",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kzg1p",
+      "apellido": "Beltran",
+      "nombre": "Kevin",
+      "nacimiento": "",
+      "bautismo": "2012-03-24",
+      "grupo": "Grupo 2",
+      "telefono": "322 346 2780",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4kk1hh",
+      "apellido": "Beltran",
+      "nombre": "Mauricio",
+      "nacimiento": "",
+      "bautismo": "2012-03-24",
+      "grupo": "Grupo 2",
+      "telefono": "322 346 2780",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lgiwv",
+      "apellido": "Beltran",
+      "nombre": "Stefany",
+      "nacimiento": "1998-10-27",
+      "bautismo": "2009-08-17",
+      "grupo": "Grupo 2",
+      "telefono": "310 319 6069",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lb847",
+      "apellido": "BolañOs QuiñOn",
+      "nombre": "Miler",
+      "nacimiento": "1986-10-08",
+      "bautismo": "2003-11-15",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l2zz4",
+      "apellido": "Calambas",
+      "nombre": "Clemencia",
+      "nacimiento": "1969-03-31",
+      "bautismo": "2002-01-12",
+      "grupo": "Grupo 2",
+      "telefono": "317 491 2850",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lb04j",
+      "apellido": "Carmona",
+      "nombre": "Maria",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l0gf8",
+      "apellido": "Castro De Cruz",
+      "nombre": "Elizabeth",
+      "nacimiento": "1964-09-01",
+      "bautismo": "1991-06-08",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lss62",
+      "apellido": "Castro",
+      "nombre": "Luz Helena",
+      "nacimiento": "1968-03-31",
+      "bautismo": "2007-09-29",
+      "grupo": "Grupo 1",
+      "telefono": "305 7893355",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l14cm",
+      "apellido": "Cepeda",
+      "nombre": "Laura",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l3vpi",
+      "apellido": "Cepeda",
+      "nombre": "Liz",
+      "nacimiento": "1969-10-29",
+      "bautismo": "2009-11-21",
+      "grupo": "Grupo 7",
+      "telefono": "315 233 2963",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l1oio",
+      "apellido": "Chacon",
+      "nombre": "Alfonso",
+      "nacimiento": "1976-05-18",
+      "bautismo": "1991-02-23",
+      "grupo": "Grupo 10",
+      "telefono": "3208386196",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lfo92",
+      "apellido": "Chacon",
+      "nombre": "Camila",
+      "nacimiento": "2000-04-10",
+      "bautismo": "2014-08-02",
+      "grupo": "Grupo 10",
+      "telefono": "3128584753",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l7kbw",
+      "apellido": "Chacon",
+      "nombre": "Felipe",
+      "nacimiento": "2001-09-16",
+      "bautismo": "2017-07-02",
+      "grupo": "Grupo 10",
+      "telefono": "3212429269",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lxrtx",
+      "apellido": "Chacon",
+      "nombre": "Lina",
+      "nacimiento": "1972-03-15",
+      "bautismo": "1992-06-28",
+      "grupo": "Grupo 10",
+      "telefono": "3118317856",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4lq6aj",
+      "apellido": "Charry",
+      "nombre": "Lila",
+      "nacimiento": "1935-02-17",
+      "bautismo": "1983-08-04",
+      "grupo": "Grupo 7",
+      "telefono": "311 547 5632",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4l379l",
+      "apellido": "Clavijo Arias",
+      "nombre": "Luz Marina",
+      "nacimiento": "1956-11-11",
+      "bautismo": "1988-04-01",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m0e5g",
+      "apellido": "Clavijo",
+      "nombre": "Gloria",
+      "nacimiento": "1954-09-29",
+      "bautismo": "2016-01-10",
+      "grupo": "Grupo 12",
+      "telefono": "3213240652",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m86kf",
+      "apellido": "Conde",
+      "nombre": "Jose",
+      "nacimiento": "1957-09-17",
+      "bautismo": "2004-10-22",
+      "grupo": "Grupo 7",
+      "telefono": "312 317 9826",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mva5c",
+      "apellido": "Conde",
+      "nombre": "Martha",
+      "nacimiento": "1967-06-16",
+      "bautismo": "1989-10-14",
+      "grupo": "Grupo 7",
+      "telefono": "312 426 6877",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m5k1f",
+      "apellido": "Creach",
+      "nombre": "Isabela",
+      "nacimiento": "2012-07-21",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mjx72",
+      "apellido": "Cuevas",
+      "nombre": "Gilma",
+      "nacimiento": "1942-11-11",
+      "bautismo": "1998-09-12",
+      "grupo": "Grupo 2",
+      "telefono": "3138373579",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m00va",
+      "apellido": "De Leon",
+      "nombre": "Marcela",
+      "nacimiento": "1977-01-11",
+      "bautismo": "2022-07-24",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mqrls",
+      "apellido": "Delgado",
+      "nombre": "Diana",
+      "nacimiento": "1991-02-02",
+      "bautismo": "2025-06-19",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mjawz",
+      "apellido": "Desiree",
+      "nombre": "Marisol",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 5",
+      "telefono": "301670731",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mvdcx",
+      "apellido": "Diaz",
+      "nombre": "Azucena",
+      "nacimiento": "",
+      "bautismo": "2016-11-06",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mhyua",
+      "apellido": "Diaz",
+      "nombre": "Juan David",
+      "nacimiento": "2005-01-13",
+      "bautismo": "",
+      "grupo": "Grupo 6",
+      "telefono": "3114468527",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mz3i4",
+      "apellido": "Dominguez",
+      "nombre": "Sonia",
+      "nacimiento": "1975-08-30",
+      "bautismo": "1993-10-30",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m740x",
+      "apellido": "Duarte",
+      "nombre": "Dufay Arlet",
+      "nacimiento": "1980-11-03",
+      "bautismo": "2000-12-17",
+      "grupo": "Grupo 5",
+      "telefono": "310 7620502",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4m97a4",
+      "apellido": "Erazo",
+      "nombre": "Virluz",
+      "nacimiento": "1983-02-02",
+      "bautismo": "1997-06-29",
+      "grupo": "Grupo 3",
+      "telefono": "3204115902",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mdub9",
+      "apellido": "Fajardo",
+      "nombre": "Nidia",
+      "nacimiento": "1980-03-23",
+      "bautismo": "2011-10-29",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mfztz",
+      "apellido": "Florez",
+      "nombre": "Roanny Mariana",
+      "nacimiento": "2001-03-15",
+      "bautismo": "2014-07-03",
+      "grupo": "Grupo 8",
+      "telefono": "313 6364899",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4moy12",
+      "apellido": "Fuentes",
+      "nombre": "Raidy",
+      "nacimiento": "1982-01-24",
+      "bautismo": "2002-08-01",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4me0oy",
+      "apellido": "Fuentes",
+      "nombre": "Saray",
+      "nacimiento": "2000-09-04",
+      "bautismo": "2018-10-06",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nj17y",
+      "apellido": "Galindo",
+      "nombre": "Estefania",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nc993",
+      "apellido": "Gallardo",
+      "nombre": "Raquel",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 1",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n4dj1",
+      "apellido": "Garcia",
+      "nombre": "Luis Fernando",
+      "nacimiento": "1970-10-23",
+      "bautismo": "1987-12-19",
+      "grupo": "Grupo 7",
+      "telefono": "310 232 8538",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ny3mk",
+      "apellido": "Garcia",
+      "nombre": "Roxana",
+      "nacimiento": "1976-01-03",
+      "bautismo": "1992-03-14",
+      "grupo": "Grupo 7",
+      "telefono": "317 855 4299",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nd6my",
+      "apellido": "Garcia",
+      "nombre": "Samuel",
+      "nacimiento": "2004-04-04",
+      "bautismo": "2013-03-30",
+      "grupo": "Grupo 5",
+      "telefono": "301 649 0432",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nm05s",
+      "apellido": "Godoy",
+      "nombre": "Maria Irene",
+      "nacimiento": "1947-04-16",
+      "bautismo": "2010-07-10",
+      "grupo": "Grupo 1",
+      "telefono": "3185911489",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ndhnb",
+      "apellido": "Gomez",
+      "nombre": "Betsabe",
+      "nacimiento": "1963-06-22",
+      "bautismo": "1997-11-08",
+      "grupo": "Grupo 9",
+      "telefono": "311 217 2142",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nsgsv",
+      "apellido": "Gomez",
+      "nombre": "Carlos",
+      "nacimiento": "",
+      "bautismo": "1997-11-08",
+      "grupo": "Grupo 9",
+      "telefono": "310 856 9671",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n5yrp",
+      "apellido": "Gomez",
+      "nombre": "Isaac",
+      "nacimiento": "2008-03-05",
+      "bautismo": "2018-06-10",
+      "grupo": "Grupo 9",
+      "telefono": "3115407104",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4npk28",
+      "apellido": "Grisales",
+      "nombre": "Angie",
+      "nacimiento": "1996-06-15",
+      "bautismo": "2007-11-05",
+      "grupo": "Grupo 4",
+      "telefono": "313 4701213",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nusbr",
+      "apellido": "Grisales",
+      "nombre": "Fabio",
+      "nacimiento": "1971-02-02",
+      "bautismo": "1998-06-04",
+      "grupo": "Grupo 4",
+      "telefono": "313 4701213",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ndp9i",
+      "apellido": "Guerrero",
+      "nombre": "Adriana",
+      "nacimiento": "1966-11-08",
+      "bautismo": "2004-10-17",
+      "grupo": "Grupo 10",
+      "telefono": "3174856881",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4now8s",
+      "apellido": "Guerrero",
+      "nombre": "Gabriela",
+      "nacimiento": "2005-10-11",
+      "bautismo": "2023-04-16",
+      "grupo": "Grupo 10",
+      "telefono": "3178908898",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4np3hl",
+      "apellido": "Guerrero",
+      "nombre": "Transito",
+      "nacimiento": "1952-05-09",
+      "bautismo": "1993-12-18",
+      "grupo": "Grupo 8",
+      "telefono": "310 337 0338",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nhqsp",
+      "apellido": "Gutierrez",
+      "nombre": "Mateo",
+      "nacimiento": "1998-04-03",
+      "bautismo": "2008-05-24",
+      "grupo": "Grupo 13",
+      "telefono": "311 318 2008",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n7oq9",
+      "apellido": "Gutierrez",
+      "nombre": "Tatiana",
+      "nacimiento": "1999-05-11",
+      "bautismo": "2013-03-30",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n3s74",
+      "apellido": "Hernandez",
+      "nombre": "Andrey",
+      "nacimiento": "1980-03-05",
+      "bautismo": "2018-04-29",
+      "grupo": "Grupo 5",
+      "telefono": "302 4411301",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nr0kx",
+      "apellido": "Hernandez",
+      "nombre": "Daniel",
+      "nacimiento": "1961-01-29",
+      "bautismo": "1994-02-27",
+      "grupo": "Grupo 8",
+      "telefono": "318 2260968",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nts9j",
+      "apellido": "Hernandez",
+      "nombre": "Ingrid",
+      "nacimiento": "1975-01-06",
+      "bautismo": "1991-07-13",
+      "grupo": "Grupo 13",
+      "telefono": "3212682183",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n8uw3",
+      "apellido": "Hernandez",
+      "nombre": "Martha",
+      "nacimiento": "1961-08-16",
+      "bautismo": "1992-07-18",
+      "grupo": "Grupo 8",
+      "telefono": "310 791 9867",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nge9e",
+      "apellido": "Hernandez",
+      "nombre": "Martha Lucia",
+      "nacimiento": "1954-11-11",
+      "bautismo": "1974-01-01",
+      "grupo": "Grupo 5",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nsqsw",
+      "apellido": "Hernandez",
+      "nombre": "Melanie",
+      "nacimiento": "2004-03-13",
+      "bautismo": "2016-10-01",
+      "grupo": "Grupo 5",
+      "telefono": "314 761 7961",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ntf6r",
+      "apellido": "Hernandez",
+      "nombre": "Sabrina",
+      "nacimiento": "2001-06-19",
+      "bautismo": "2015-06-14",
+      "grupo": "Grupo 5",
+      "telefono": "314 761 7961",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nym0v",
+      "apellido": "Hernandez",
+      "nombre": "Yudid",
+      "nacimiento": "1973-05-18",
+      "bautismo": "2015-06-14",
+      "grupo": "Grupo 5",
+      "telefono": "314 761 7961",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n7jsy",
+      "apellido": "Huertas",
+      "nombre": "Maria Jose",
+      "nacimiento": "2015-08-28",
+      "bautismo": "",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ntq1t",
+      "apellido": "Huertas",
+      "nombre": "Oscar",
+      "nacimiento": "1985-07-09",
+      "bautismo": "2010-11-20",
+      "grupo": "Grupo 12",
+      "telefono": "3005267349",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ntbx0",
+      "apellido": "Isaza",
+      "nombre": "Maria Del Rosario",
+      "nacimiento": "1967-06-12",
+      "bautismo": "",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nxp0i",
+      "apellido": "Jimenez",
+      "nombre": "Camila",
+      "nacimiento": "1999-12-04",
+      "bautismo": "2015-02-15",
+      "grupo": "Grupo 10",
+      "telefono": "3057711660",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4n3qgi",
+      "apellido": "Jimenez",
+      "nombre": "Carlos",
+      "nacimiento": "1957-11-28",
+      "bautismo": "1997-12-14",
+      "grupo": "Grupo 3",
+      "telefono": "3143720428",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4nszua",
+      "apellido": "Jimenez",
+      "nombre": "Flor",
+      "nacimiento": "1958-04-17",
+      "bautismo": "1997-12-14",
+      "grupo": "Grupo 3",
+      "telefono": "3115598688",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4o3hbq",
+      "apellido": "Jimenez",
+      "nombre": "Miguel",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 10",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4o4bcn",
+      "apellido": "Larrota",
+      "nombre": "Andrea",
+      "nacimiento": "1982-02-15",
+      "bautismo": "1999-08-05",
+      "grupo": "Grupo 5",
+      "telefono": "318 759 5368",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ol4i0",
+      "apellido": "Larrota",
+      "nombre": "Harold",
+      "nacimiento": "",
+      "bautismo": "2009-12-27",
+      "grupo": "Grupo 5",
+      "telefono": "312 4429277",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ocyur",
+      "apellido": "Larrota",
+      "nombre": "Mercedes",
+      "nacimiento": "1955-09-01",
+      "bautismo": "1985-07-15",
+      "grupo": "Grupo 5",
+      "telefono": "313 344 4417",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4oz8wb",
+      "apellido": "Larrota",
+      "nombre": "Rose",
+      "nacimiento": "",
+      "bautismo": "2017-12-23",
+      "grupo": "Grupo 5",
+      "telefono": "321 3028502",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4oyf8q",
+      "apellido": "Larrota",
+      "nombre": "Sergio",
+      "nacimiento": "1995-07-22",
+      "bautismo": "2007-05-05",
+      "grupo": "Grupo 5",
+      "telefono": "321 474 8182",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4o3na7",
+      "apellido": "Leon",
+      "nombre": "Jose",
+      "nacimiento": "1977-02-08",
+      "bautismo": "2023-06-03",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4oohcg",
+      "apellido": "Lizarazo",
+      "nombre": "Esther",
+      "nacimiento": "1944-02-11",
+      "bautismo": "2016-06-03",
+      "grupo": "Grupo 1",
+      "telefono": "321 2657289",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4oaz18",
+      "apellido": "Lopez Pardo",
+      "nombre": "Willian",
+      "nacimiento": "1964-11-11",
+      "bautismo": "1988-07-15",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4o4j3b",
+      "apellido": "Lugo",
+      "nombre": "Esthefany",
+      "nacimiento": "2013-07-30",
+      "bautismo": "2023-04-16",
+      "grupo": "Grupo 1",
+      "telefono": "322 8377193",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4otsz7",
+      "apellido": "Lugo",
+      "nombre": "Oscar",
+      "nacimiento": "1989-10-31",
+      "bautismo": "2019-10-20",
+      "grupo": "Grupo 1",
+      "telefono": "322 8377193",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q0047",
+      "apellido": "Lugo",
+      "nombre": "Paulina",
+      "nacimiento": "2013-02-15",
+      "bautismo": "",
+      "grupo": "Grupo 1",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q8ujz",
+      "apellido": "Lugo",
+      "nombre": "Randol",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 4",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q76n8",
+      "apellido": "Lugo",
+      "nombre": "Roger",
+      "nacimiento": "1971-04-08",
+      "bautismo": "1992-12-12",
+      "grupo": "Grupo 4",
+      "telefono": "300 413 9472",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qvq3o",
+      "apellido": "Lugo",
+      "nombre": "Rogers",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 4",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q8sw6",
+      "apellido": "Lugo",
+      "nombre": "Yasmilys",
+      "nacimiento": "1991-12-14",
+      "bautismo": "2019-10-20",
+      "grupo": "Grupo 1",
+      "telefono": "314 2759381",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qi9vu",
+      "apellido": "Martinez",
+      "nombre": "Diana Milena",
+      "nacimiento": "1983-10-27",
+      "bautismo": "2012-07-07",
+      "grupo": "Grupo 8",
+      "telefono": "317 339 2555",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qdgc9",
+      "apellido": "Martinez",
+      "nombre": "Jose Manuel",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q2dwl",
+      "apellido": "Martinez",
+      "nombre": "Juan David",
+      "nacimiento": "2015-02-26",
+      "bautismo": "2025-07-19",
+      "grupo": "Grupo 5",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qeh9c",
+      "apellido": "Martinez",
+      "nombre": "Juan Pablo",
+      "nacimiento": "2013-01-30",
+      "bautismo": "",
+      "grupo": "Grupo 4",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q025q",
+      "apellido": "Martinez",
+      "nombre": "Luis",
+      "nacimiento": "1954-11-25",
+      "bautismo": "",
+      "grupo": "Grupo 2",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qc1j1",
+      "apellido": "Martinez",
+      "nombre": "Odilia",
+      "nacimiento": "1947-10-12",
+      "bautismo": "1965-11-05",
+      "grupo": "Grupo 8",
+      "telefono": "310 791 9867",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qzmjj",
+      "apellido": "Martinez",
+      "nombre": "Ruth",
+      "nacimiento": "",
+      "bautismo": "2002-11-17",
+      "grupo": "Grupo 5",
+      "telefono": "3144474321",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qdi8f",
+      "apellido": "Martinez",
+      "nombre": "Yakci",
+      "nacimiento": "2008-11-04",
+      "bautismo": "2023-07-01",
+      "grupo": "Grupo 5",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qxdzp",
+      "apellido": "Mesa",
+      "nombre": "Lina",
+      "nacimiento": "1987-08-01",
+      "bautismo": "2015-07-19",
+      "grupo": "Grupo 8",
+      "telefono": "319 4501016",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qp27l",
+      "apellido": "MilláN",
+      "nombre": "Andrea Carolina",
+      "nacimiento": "1976-12-05",
+      "bautismo": "1993-12-18",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4q1iwb",
+      "apellido": "Millan",
+      "nombre": "Fernando",
+      "nacimiento": "1971-05-19",
+      "bautismo": "1988-04-24",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qf90z",
+      "apellido": "MilláN",
+      "nombre": "Laura Camila",
+      "nacimiento": "1999-03-31",
+      "bautismo": "2012-07-01",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qve1a",
+      "apellido": "MilláN",
+      "nombre": "Valentina",
+      "nacimiento": "1998-02-02",
+      "bautismo": "2009-12-26",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qg4ch",
+      "apellido": "MontañEz",
+      "nombre": "Ana",
+      "nacimiento": "1960-10-20",
+      "bautismo": "1985-06-30",
+      "grupo": "Grupo 7",
+      "telefono": "316 827 7557",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qfkhc",
+      "apellido": "Montoya",
+      "nombre": "Marco",
+      "nacimiento": "1990-02-14",
+      "bautismo": "2005-01-22",
+      "grupo": "Grupo 14",
+      "telefono": "316 7882063",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qgt8u",
+      "apellido": "Montoya",
+      "nombre": "Xiomara",
+      "nacimiento": "1991-12-20",
+      "bautismo": "2008-07-19",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qbs9d",
+      "apellido": "Moreno",
+      "nombre": "Laura",
+      "nacimiento": "1990-10-31",
+      "bautismo": "2002-06-13",
+      "grupo": "Grupo 11",
+      "telefono": "318 3979892",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qzr2s",
+      "apellido": "Moreno",
+      "nombre": "Marta",
+      "nacimiento": "1964-12-16",
+      "bautismo": "1993-05-13",
+      "grupo": "Grupo 11",
+      "telefono": "316 4705377",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qyfeu",
+      "apellido": "Mory",
+      "nombre": "Alejandro",
+      "nacimiento": "2009-08-27",
+      "bautismo": "2018-11-11",
+      "grupo": "Grupo 6",
+      "telefono": "318 8097333",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qy3ip",
+      "apellido": "Mory",
+      "nombre": "Erick",
+      "nacimiento": "1983-12-20",
+      "bautismo": "1999-08-21",
+      "grupo": "Grupo 6",
+      "telefono": "318 8097333",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qlkxi",
+      "apellido": "Mory",
+      "nombre": "Isaias",
+      "nacimiento": "2009-08-27",
+      "bautismo": "",
+      "grupo": "Grupo 6",
+      "telefono": "318 8097333",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qxain",
+      "apellido": "Mory",
+      "nombre": "Yessika",
+      "nacimiento": "1988-07-18",
+      "bautismo": "2005-11-27",
+      "grupo": "Grupo 6",
+      "telefono": "318 8097333",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qnxk5",
+      "apellido": "Padilla",
+      "nombre": "Anyela",
+      "nacimiento": "1982-07-10",
+      "bautismo": "1998-03-09",
+      "grupo": "Grupo 11",
+      "telefono": "321 790 9360",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qnojt",
+      "apellido": "Padilla",
+      "nombre": "Isabela",
+      "nacimiento": "2013-08-21",
+      "bautismo": "",
+      "grupo": "Grupo 11",
+      "telefono": "321 790 9360",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4quyam",
+      "apellido": "Padilla",
+      "nombre": "Jaime",
+      "nacimiento": "1982-09-21",
+      "bautismo": "1997-10-04",
+      "grupo": "Grupo 11",
+      "telefono": "311 7673415",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4qzusx",
+      "apellido": "Parra",
+      "nombre": "Flor Alba",
+      "nacimiento": "1968-12-28",
+      "bautismo": "2006-04-16",
+      "grupo": "Grupo 1",
+      "telefono": "321 467 4595",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r3xys",
+      "apellido": "Parrado Pinzon",
+      "nombre": "Mercedes",
+      "nacimiento": "1958-09-07",
+      "bautismo": "1973-11-17",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rlg84",
+      "apellido": "Pelaez",
+      "nombre": "Danna",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 1",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r96q2",
+      "apellido": "Pelaez",
+      "nombre": "Julian",
+      "nacimiento": "2012-01-04",
+      "bautismo": "2025-07-19",
+      "grupo": "Grupo 1",
+      "telefono": "310 241 8902",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r9s54",
+      "apellido": "Pelaez",
+      "nombre": "Neismer",
+      "nacimiento": "1984-04-26",
+      "bautismo": "1997-11-",
+      "grupo": "Grupo 1",
+      "telefono": "310 241 8902",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rb7p1",
+      "apellido": "PeñA",
+      "nombre": "Johana Marcela",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 3",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rokye",
+      "apellido": "Perez",
+      "nombre": "Angelica",
+      "nacimiento": "1948-02-14",
+      "bautismo": "1983-06-26",
+      "grupo": "Grupo 9",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rigm6",
+      "apellido": "Perez",
+      "nombre": "Danna",
+      "nacimiento": "",
+      "bautismo": "2016-07-31",
+      "grupo": "Grupo 14",
+      "telefono": "318 7274363",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r0lk8",
+      "apellido": "Perez",
+      "nombre": "Marisol",
+      "nacimiento": "1970-01-20",
+      "bautismo": "",
+      "grupo": "Grupo 14",
+      "telefono": "316 8531096",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rtrpu",
+      "apellido": "Perez",
+      "nombre": "Ruben",
+      "nacimiento": "1973-07-13",
+      "bautismo": "1998-08-01",
+      "grupo": "Grupo 14",
+      "telefono": "316 8531096",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rqoc2",
+      "apellido": "Pinzon Parrado",
+      "nombre": "Gilma",
+      "nacimiento": "1936-01-07",
+      "bautismo": "1973-03-01",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r9k22",
+      "apellido": "Pulido",
+      "nombre": "Angela",
+      "nacimiento": "1984-04-19",
+      "bautismo": "1997-06-28",
+      "grupo": "Grupo 8",
+      "telefono": "313 360 0764",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rakns",
+      "apellido": "Quiroz",
+      "nombre": "Carmen",
+      "nacimiento": "1956-04-13",
+      "bautismo": "2008-11-01",
+      "grupo": "Grupo 5",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rwj0v",
+      "apellido": "Ramos",
+      "nombre": "Daniela",
+      "nacimiento": "2000-07-23",
+      "bautismo": "2010-08-21",
+      "grupo": "Grupo 4",
+      "telefono": "310 791 9867",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r25tb",
+      "apellido": "Ramos",
+      "nombre": "Jhonatan",
+      "nacimiento": "2004-04-20",
+      "bautismo": "2018-01-11",
+      "grupo": "Grupo 12",
+      "telefono": "3213237986",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rre7b",
+      "apellido": "Ramos",
+      "nombre": "Martha",
+      "nacimiento": "1976-10-27",
+      "bautismo": "1999-12-25",
+      "grupo": "Grupo 10",
+      "telefono": "313 411 5836",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4r1pju",
+      "apellido": "Ramos",
+      "nombre": "Miguel",
+      "nacimiento": "2000-12-14",
+      "bautismo": "2018-11-18",
+      "grupo": "Grupo 4",
+      "telefono": "310 4947409",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rhmxc",
+      "apellido": "Ramos",
+      "nombre": "Roger",
+      "nacimiento": "1971-07-15",
+      "bautismo": "1999-12-25",
+      "grupo": "Grupo 10",
+      "telefono": "3147554255",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rz94m",
+      "apellido": "Reyes",
+      "nombre": "Karen",
+      "nacimiento": "1999-11-09",
+      "bautismo": "2014-06-22",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rhwr4",
+      "apellido": "Reyes",
+      "nombre": "Monica",
+      "nacimiento": "1976-01-07",
+      "bautismo": "2001-07-01",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4rvhuc",
+      "apellido": "Reyes",
+      "nombre": "Oscar",
+      "nacimiento": "1974-08-09",
+      "bautismo": "1999-11-14",
+      "grupo": "Grupo 14",
+      "telefono": "316 4182585",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4swquo",
+      "apellido": "Reyes",
+      "nombre": "Santiago",
+      "nacimiento": "2002-04-22",
+      "bautismo": "2015-09-05",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4sl35g",
+      "apellido": "Rincon",
+      "nombre": "Eloisa",
+      "nacimiento": "1945-03-18",
+      "bautismo": "1962-08-15",
+      "grupo": "Grupo 3",
+      "telefono": "311 547 7107",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4scy1j",
+      "apellido": "Rivera",
+      "nombre": "David",
+      "nacimiento": "2010-07-09",
+      "bautismo": "",
+      "grupo": "Grupo 3",
+      "telefono": "310 5582171",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4spxmz",
+      "apellido": "Rivera",
+      "nombre": "Patricia",
+      "nacimiento": "1973-10-17",
+      "bautismo": "2002-02-05",
+      "grupo": "Grupo 3",
+      "telefono": "310 5582171",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4slz78",
+      "apellido": "Rivera",
+      "nombre": "Samuel",
+      "nacimiento": "2010-06-09",
+      "bautismo": "",
+      "grupo": "Grupo 3",
+      "telefono": "310 5582171",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4spd20",
+      "apellido": "Rivera",
+      "nombre": "Sandra",
+      "nacimiento": "1979-08-22",
+      "bautismo": "2023-04-16",
+      "grupo": "Grupo 4",
+      "telefono": "310 4947409",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4sgwb2",
+      "apellido": "Rodriguez",
+      "nombre": "Cristian",
+      "nacimiento": "",
+      "bautismo": "2022-08-24",
+      "grupo": "Grupo 8",
+      "telefono": "350 565 1069",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s4baq",
+      "apellido": "Rodriguez",
+      "nombre": "Lina",
+      "nacimiento": "1979-05-31",
+      "bautismo": "2014-03-23",
+      "grupo": "Grupo 8",
+      "telefono": "313 292 0625",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4spu34",
+      "apellido": "Rodriguez",
+      "nombre": "Olga",
+      "nacimiento": "1967-03-15",
+      "bautismo": "1986-08-03",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s0oc6",
+      "apellido": "Rojas",
+      "nombre": "Blanca Cecilia",
+      "nacimiento": "1963-10-02",
+      "bautismo": "2006-07-29",
+      "grupo": "Grupo 12",
+      "telefono": "3213000581",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4seyz6",
+      "apellido": "Ruiz",
+      "nombre": "Luz Marina",
+      "nacimiento": "1955-02-10",
+      "bautismo": "1999-02-06",
+      "grupo": "Grupo 12",
+      "telefono": "312 469 4436",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s3c4f",
+      "apellido": "Sanchez",
+      "nombre": "John",
+      "nacimiento": "1979-11-05",
+      "bautismo": "2012-07-07",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4spx52",
+      "apellido": "Sanchez",
+      "nombre": "Maritza",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4si0is",
+      "apellido": "Sierra",
+      "nombre": "Fabian",
+      "nacimiento": "1991-10-22",
+      "bautismo": "2004-08-04",
+      "grupo": "Grupo 9",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4smd7i",
+      "apellido": "Sierra",
+      "nombre": "Lizeth",
+      "nacimiento": "1995-12-18",
+      "bautismo": "2010-08-28",
+      "grupo": "Grupo 9",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4smpf8",
+      "apellido": "Sierra",
+      "nombre": "Marlen",
+      "nacimiento": "1963-01-10",
+      "bautismo": "1991-01-10",
+      "grupo": "Grupo 6",
+      "telefono": "3054629422",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4surcd",
+      "apellido": "Silva",
+      "nombre": "Edith",
+      "nacimiento": "1965-07-14",
+      "bautismo": "1994-10-22",
+      "grupo": "Grupo 3",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4shqru",
+      "apellido": "Suarez",
+      "nombre": "Angela",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s08s9",
+      "apellido": "Suarez",
+      "nombre": "Laura",
+      "nacimiento": "",
+      "bautismo": "2006-07-29",
+      "grupo": "Grupo 6",
+      "telefono": "321 427 2671",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4szjx7",
+      "apellido": "Tibaquicha",
+      "nombre": "Luz Marina",
+      "nacimiento": "1957-02-19",
+      "bautismo": "2000-07-08",
+      "grupo": "Grupo 9",
+      "telefono": "318 2290655",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4shgsr",
+      "apellido": "Tibaquicha",
+      "nombre": "Oscar",
+      "nacimiento": "1986-11-19",
+      "bautismo": "2001-12-01",
+      "grupo": "Grupo 9",
+      "telefono": "316 397 1693",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s4eyz",
+      "apellido": "Tovar",
+      "nombre": "Andres",
+      "nacimiento": "1996-09-17",
+      "bautismo": "2009-04-11",
+      "grupo": "Grupo 2",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4s0lt4",
+      "apellido": "Tovar",
+      "nombre": "Brayan",
+      "nacimiento": "2004-06-20",
+      "bautismo": "2016-05-29",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4sqy67",
+      "apellido": "Tovar",
+      "nombre": "Daniela",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 2",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tcdjz",
+      "apellido": "Tovar",
+      "nombre": "Gloria",
+      "nacimiento": "1977-01-18",
+      "bautismo": "2005-12-10",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4t7a77",
+      "apellido": "Tovar",
+      "nombre": "Mario",
+      "nacimiento": "1965-01-11",
+      "bautismo": "2005-12-10",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tlges",
+      "apellido": "Valderrama",
+      "nombre": "Melissa",
+      "nacimiento": "",
+      "bautismo": "2008-08-02",
+      "grupo": "Grupo 12",
+      "telefono": "320 2389100",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4t6vl7",
+      "apellido": "Vargas",
+      "nombre": "Juan Pablo",
+      "nacimiento": "1982-03-22",
+      "bautismo": "1994-01-08",
+      "grupo": "Grupo 6",
+      "telefono": "3133909994",
+      "genero": "M",
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4twt9q",
+      "apellido": "Vargas",
+      "nombre": "Mayerli",
+      "nacimiento": "1984-06-26",
+      "bautismo": "2000-09-09",
+      "grupo": "Grupo 6",
+      "telefono": "321 610 7201",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ta4tn",
+      "apellido": "Vargas",
+      "nombre": "Norely",
+      "nacimiento": "1972-08-10",
+      "bautismo": "1991-08-31",
+      "grupo": "Grupo 1",
+      "telefono": "312 435 2055",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tl3oj",
+      "apellido": "Vargas",
+      "nombre": "Samantha",
+      "nacimiento": "",
+      "bautismo": "2016-05-28",
+      "grupo": "Grupo 6",
+      "telefono": "3222455355",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4t0ubg",
+      "apellido": "Vega Palomino",
+      "nombre": "Zulma",
+      "nacimiento": "1982-08-14",
+      "bautismo": "1993-12-09",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tnncr",
+      "apellido": "Villa",
+      "nombre": "Julia",
+      "nacimiento": "1955-07-20",
+      "bautismo": "1955-06-20",
+      "grupo": "Grupo 10",
+      "telefono": "3212035708",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4t0167",
+      "apellido": "Vivas",
+      "nombre": "Sonia Julieth",
+      "nacimiento": "1991-12-28",
+      "bautismo": "2003-11-30",
+      "grupo": "Grupo 3",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tpwhw",
+      "apellido": "Yanes",
+      "nombre": "Maria",
+      "nacimiento": "1972-03-20",
+      "bautismo": "2021-11-28",
+      "grupo": "Grupo 7",
+      "telefono": "302 277 0213",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ttlv0",
+      "apellido": "Zuluaga",
+      "nombre": "Carlos",
+      "nacimiento": "1956-09-15",
+      "bautismo": "2001-11-10",
+      "grupo": "Grupo 2",
+      "telefono": "320 261 5611",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tnkh4",
+      "apellido": "Zuluaga",
+      "nombre": "Glena",
+      "nacimiento": "1978-03-08",
+      "bautismo": "2010-04-10",
+      "grupo": "Grupo 3",
+      "telefono": "310 340 3985",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ttbx6",
+      "apellido": "Zuluaga",
+      "nombre": "Juan Camilo",
+      "nacimiento": "2002-05-25",
+      "bautismo": "2020-02-29",
+      "grupo": "Grupo 3",
+      "telefono": "310 340 3985",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4t7uj1",
+      "apellido": "MéNdez",
+      "nombre": "Lucy",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 9",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4tbtlk",
+      "apellido": "MeriñO Ibarra",
+      "nombre": "Eduardo Andres",
+      "nacimiento": "1999-11-26",
+      "bautismo": "2011-01-21",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ustom",
+      "apellido": "Ibarra Castro",
+      "nombre": "Sirley",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ux55z",
+      "apellido": "Silva",
+      "nombre": "Jhasleidy",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4uprah",
+      "apellido": "Garcia",
+      "nombre": "Sarha",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4u9kvo",
+      "apellido": "Galeado",
+      "nombre": "Santiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4ulvrs",
+      "apellido": "GarcíA",
+      "nombre": "Bobadilla Alicia",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4uvqhc",
+      "apellido": "Dominguez",
+      "nombre": "Oscar Javier",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
+    }
+  ],
+  "grupos": {},
+  "inactivos": [
+    {
+      "id": "mmm9qi4sayrz",
+      "apellido": "Rivera",
+      "nombre": "Emily",
+      "nacimiento": "2005-12-21",
+      "bautismo": "2020-08-05",
+      "grupo": "Grupo 3",
+      "telefono": "311 2695400",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "fechaInactivo": "2026-03-11",
+      "motivoInactivo": "Sacado de la congregación"
+    },
+    {
+      "id": "mmm9qi4ovmh3",
+      "apellido": "Lugo",
+      "nombre": "Josias",
+      "nacimiento": "2005-06-06",
+      "bautismo": "2016-10-22",
+      "grupo": "Grupo 4",
+      "telefono": "324 614 4023",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "fechaInactivo": "2026-03-11",
+      "motivoInactivo": "Sacado de la congregación"
+    }
+  ]
+}
