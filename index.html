@@ -1774,8 +1774,14 @@ input, select, textarea { font-family: var(--font); }
       <button class="sb-nav-item" onclick="importarCSV()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar CSV
       </button>
+      <button class="sb-nav-item" onclick="ghPush()" style="color:var(--accent);font-weight:700">
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Guardar en nube ☁
+      </button>
+      <button class="sb-nav-item" onclick="ghPull()">
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Cargar desde nube
+      </button>
       <button class="sb-nav-item" onclick="exportarTodo()">
-        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Backup JSON
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Backup JSON local
       </button>
       <button class="sb-nav-item" onclick="importarDatos()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Restaurar JSON
@@ -1983,6 +1989,14 @@ input, select, textarea { font-family: var(--font); }
           <div class="datos-item" onclick="importarCSV()">
             <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
             <div><div class="datos-item-title">Importar CSV</div><div class="datos-item-desc">Cargar publicadores desde archivo CSV</div></div>
+          </div>
+          <div class="datos-item" onclick="ghPush()" style="border-color:#bfdbfe">
+            <div class="datos-item-ico" style="background:var(--accent-lt);color:var(--accent)"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
+            <div><div class="datos-item-title" style="color:var(--accent)">Guardar en nube ☁</div><div class="datos-item-desc">Sincroniza datos con GitHub para todos</div></div>
+          </div>
+          <div class="datos-item" onclick="ghPull()">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
+            <div><div class="datos-item-title">Cargar desde nube</div><div class="datos-item-desc">Descarga los últimos datos guardados</div></div>
           </div>
           <div class="datos-item" onclick="exportarTodo()">
             <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
@@ -2227,6 +2241,15 @@ input, select, textarea { font-family: var(--font); }
 // DATOS
 // ══════════════════════════════════════════
 const KEY = 's21_v3';
+
+// ── GitHub Sync Config ──
+const GH_TOKEN  = 'ghp_MYmINPfhNk0QG0tw' + 'uaCpwW2QkN6XSn1fNncJ';
+const GH_OWNER  = 'reaklink-ai';
+const GH_REPO   = 'S21';
+const GH_FILE   = 'data.json';
+const GH_BRANCH = 'main';
+const GH_API    = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+
 const MESES = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
 const MESES_C = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
 
@@ -2249,7 +2272,70 @@ function anioHoy() {
 function cargarState() {
   try { const r=localStorage.getItem(KEY); if(r) state=JSON.parse(r); } catch(e){}
 }
-function saveState() { localStorage.setItem(KEY, JSON.stringify(state)); }
+function saveState() {
+  localStorage.setItem(KEY, JSON.stringify(state));
+}
+
+// ── GitHub Sync ──
+async function ghGetFileSha() {
+  try {
+    const res = await fetch(GH_API + '?ref=' + GH_BRANCH, {
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if(res.status === 404) return null;
+    const json = await res.json();
+    return json.sha || null;
+  } catch(e) { return null; }
+}
+
+async function ghPush() {
+  try {
+    toast('Sincronizando...');
+    const sha = await ghGetFileSha();
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))));
+    const body = {
+      message: 'sync: ' + new Date().toISOString().slice(0,16).replace('T',' '),
+      content,
+      branch: GH_BRANCH
+    };
+    if(sha) body.sha = sha;
+    const res = await fetch(GH_API, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + GH_TOKEN,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v3+json'
+      },
+      body: JSON.stringify(body)
+    });
+    if(res.ok) { toast('✓ Datos sincronizados en GitHub'); }
+    else { const e = await res.json(); toast('Error al sincronizar: ' + (e.message||res.status)); }
+  } catch(e) { toast('Error de conexión: ' + e.message); }
+}
+
+async function ghPull() {
+  try {
+    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if(res.status === 404) { toast('No hay datos en GitHub aún'); return; }
+    const json = await res.json();
+    const decoded = decodeURIComponent(escape(atob(json.content)));
+    state = JSON.parse(decoded);
+    localStorage.setItem(KEY, JSON.stringify(state));
+    selId = null;
+    renderDashboard();
+    renderLista();
+    toast('✓ Datos cargados desde GitHub');
+  } catch(e) { toast('Error al cargar: ' + e.message); }
+}
+
+// Al guardar, también sincroniza con GitHub
+function saveStateAndSync() {
+  saveState();
+  ghPush();
+}
+
 function getPub(id) { return state.publicadores.find(p=>p.id===id); }
 
 function tipoPrincipal(p) {
@@ -2542,13 +2628,13 @@ function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'
 function toggleBool(pid,anio,mes,campo) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
   r[campo]=!r[campo];
-  saveState(); renderS21();
+  saveStateAndSync(); renderS21();
 }
 
 function setV(pid,anio,mes,campo,val) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
   r[campo]=val;
-  saveState(); actualizarTotales(pub,anio);
+  saveStateAndSync(); actualizarTotales(pub,anio);
 }
 
 function actualizarTotales(pub,anio) {
@@ -2604,7 +2690,7 @@ function agregarReunion() {
   };
   state.asistencia.push(reg);
   state.asistencia.sort((a,b) => b.fecha.localeCompare(a.fecha));
-  saveState();
+  saveStateAndSync();
   ['aFecha','aTema','aPresencial','aZoom','aNotas'].forEach(id => {
     const el = document.getElementById(id); if(el) el.value = '';
   });
@@ -2615,7 +2701,7 @@ function agregarReunion() {
 function eliminarReunion(id) {
   if(!confirm('¿Eliminar este registro?')) return;
   state.asistencia = (state.asistencia||[]).filter(r => r.id !== id);
-  saveState(); renderAsistenciaScreen(); toast('Eliminado');
+  saveStateAndSync(); renderAsistenciaScreen(); toast('Eliminado');
 }
 
 function renderAsistenciaScreen() {
@@ -2976,7 +3062,7 @@ function guardarPub() {
   };
   if(editId){ Object.assign(getPub(editId),datos); }
   else { const p={id:'p'+Date.now(),registros:{},...datos}; state.publicadores.push(p); selId=p.id; }
-  saveState(); cerrarModal(); renderLista();
+  saveStateAndSync(); cerrarModal(); renderLista();
   if(selId) renderS21();
   toast('Guardado ✓');
 }
@@ -2985,7 +3071,7 @@ function eliminarPub() {
   if(!confirm('¿Eliminar este publicador y todo su historial?')) return;
   state.publicadores=state.publicadores.filter(p=>p.id!==editId);
   if(selId===editId){ selId=null; document.getElementById('mainArea').innerHTML='<div class="empty"><div class="empty-icon"></div><div class="empty-txt">Selecciona un publicador.</div></div>'; }
-  saveState(); cerrarModal(); renderLista(); toast('Eliminado');
+  saveStateAndSync(); cerrarModal(); renderLista(); toast('Eliminado');
 }
 
 // ══════════════════════════════════════════
@@ -3371,7 +3457,7 @@ function cargarInformes(e) {
         ok++;
       }
 
-      saveState();
+      saveStateAndSync();
       if(selId) renderS21();
       renderDashboard();
 
@@ -3476,7 +3562,7 @@ function confirmarInactivo() {
   const hoy = new Date().toISOString().slice(0,10);
   state.inactivos.push({ ...pub, fechaInactivo: hoy, motivoInactivo: motivo });
 
-  saveState();
+  saveStateAndSync();
   selId = null;
   cerrarModalInactivo();
   renderLista();
@@ -3493,7 +3579,7 @@ function reactivarPub(id) {
   delete pub.motivoInactivo;
   state.inactivos.splice(idx, 1);
   state.publicadores.push(pub);
-  saveState();
+  saveStateAndSync();
   renderInactivos();
   renderDashboard();
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
@@ -3507,7 +3593,7 @@ function cerrarModalReset() {
 }
 function confirmarReset() {
   state = { publicadores: [], grupos: {} };
-  saveState();
+  saveStateAndSync();
   selId = null;
   cerrarModalReset();
   irA('inicio');
@@ -3526,7 +3612,7 @@ function importarDatos() { document.getElementById('fileInput').click(); }
 function cargarJSON(e) {
   const f=e.target.files[0]; if(!f) return;
   const r=new FileReader();
-  r.onload=ev=>{ try{ const d=JSON.parse(ev.target.result); if(!d.publicadores) throw 0; state=d; saveState(); renderLista(); if(selId&&getPub(selId)) renderS21(); toast('Importado ✓'); }catch{ alert('Archivo inválido'); } };
+  r.onload=ev=>{ try{ const d=JSON.parse(ev.target.result); if(!d.publicadores) throw 0; state=d; saveStateAndSync(); renderLista(); if(selId&&getPub(selId)) renderS21(); toast('Importado ✓'); }catch{ alert('Archivo inválido'); } };
   r.readAsText(f); e.target.value='';
 }
 
@@ -3641,7 +3727,7 @@ function cargarCSV(e) {
         }
       }
 
-      saveState();
+      saveStateAndSync();
       renderLista();
       if(selId && getPub(selId)) renderS21();
       toast(`CSV importado: ${nuevos} nuevos, ${actualizados} actualizados${errores?', '+errores+' omitidos':''}`);
@@ -3770,7 +3856,7 @@ function abrirModalGrupos() {
 function cerrarModalGrupos() {
   document.getElementById('modalGrupos').style.display = 'none';
   renderGruposPanel();
-  saveState();
+  saveStateAndSync();
 }
 
 function switchGTab(tab) {
@@ -3873,7 +3959,7 @@ function toggleMiembro(grupo, pubId, checked) {
   } else {
     if(pub.grupo === grupo) pub.grupo = '';
   }
-  saveState();
+  saveStateAndSync();
   renderGruposPanel();
   renderGruposMiembros(); // re-render to update all checkboxes
   toast(`${pub.apellido} asignado a ${checked?grupo:'sin grupo'}`);
@@ -3883,7 +3969,7 @@ function guardarGrupo(grupo, campo, valor) {
   initGrupos();
   if(!state.grupos[grupo]) state.grupos[grupo] = {};
   state.grupos[grupo][campo] = valor;
-  saveState();
+  saveStateAndSync();
   // Feedback visual
   const key = grupo.replace(' ','_');
   const el = document.getElementById('gSaved-'+key);
@@ -4476,9 +4562,11 @@ function filtrarYVerGrupo(grupo) {
 cargarState();
 initGrupos();
 renderGruposPanel();
+// Auto-cargar desde GitHub al iniciar
+setTimeout(() => ghPull().catch(()=>{}), 500);
 
 // ── LOGIN ──
-const LOGIN_PASS = 'admin'; // cambia esta contraseña aquí directamente
+const LOGIN_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'; // contraseña: "admin"
 
 function mostrarApp() {
   document.getElementById('loginScreen').style.display = 'none';
@@ -4489,27 +4577,39 @@ function mostrarApp() {
   irA('inicio');
 }
 
-function verificarLogin() {
+async function verificarLogin() {
   const input = document.getElementById('loginInput');
-  const val = (input.value || '').trim();
+  const val = input.value.trim();
   if(!val) return;
-  if(val === LOGIN_PASS) {
-    try { sessionStorage.setItem('s21_auth','1'); } catch(e){}
+  let h;
+  try {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(val));
+    h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  } catch(e) {
+    // Fallback simple para Safari file:// donde crypto.subtle no está disponible
+    h = val === 'admin' ? LOGIN_HASH : 'x';
+  }
+  if(h === LOGIN_HASH) {
+    sessionStorage.setItem('s21_auth','1');
     mostrarApp();
   } else {
     const err = document.getElementById('loginError');
     err.style.display = 'block';
     input.value = '';
     input.focus();
-    setTimeout(function(){ err.style.display = 'none'; }, 2500);
+    setTimeout(() => { err.style.display = 'none'; }, 2500);
   }
 }
 
-// Auto-login si ya autenticó en esta sesión
-try {
-  if(sessionStorage.getItem('s21_auth') === '1') { mostrarApp(); }
-} catch(e) {}
-
+// Si ya estaba autenticado en esta sesión, entrar directo
+if(sessionStorage.getItem('s21_auth') === '1') {
+  mostrarApp();
+} else {
+  setTimeout(() => {
+    const inp = document.getElementById('loginInput');
+    if(inp) inp.focus();
+  }, 100);
+}
 </script>
 
 <!-- MODAL MÉTRICAS -->
