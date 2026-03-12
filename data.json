@@ -7624,5 +7624,21 @@
       "total": 149,
       "notas": ""
     }
+  ],
+  "usuarios": [
+    {
+      "id": "admin",
+      "nombre": "Administrador",
+      "pin": "1234",
+      "rol": "admin",
+      "grupo": null
+    },
+    {
+      "id": "mmnomh2w",
+      "nombre": "Harold Larrota",
+      "pin": "3212",
+      "rol": "anciano",
+      "grupo": "Grupo 5"
+    }
   ]
 }
