@@ -1670,9 +1670,96 @@ input, select, textarea { font-family: var(--font); }
 .asist-tipo-card-n { font-family:var(--font-serif); font-size:22px; font-weight:700; }
 .asist-tipo-bar-bg { height:6px; background:var(--border-2); border-radius:3px; overflow:hidden; }
 .asist-tipo-bar-fg { height:100%; border-radius:3px; transition:width .4s; }
+
+/* ══════════════════════════════════════════
+   LOGIN SCREEN
+══════════════════════════════════════════ */
+#screenLogin {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.login-card {
+  background: #fff;
+  border-radius: var(--r-xl);
+  box-shadow: 0 4px 24px rgba(0,0,0,.12), 0 1px 4px rgba(0,0,0,.06);
+  padding: 40px 36px;
+  width: 100%; max-width: 360px;
+  display: flex; flex-direction: column; gap: 20px;
+  align-items: center;
+}
+.login-logo {
+  font-family: var(--font-serif);
+  font-size: 42px; font-weight: 700;
+  color: var(--accent); letter-spacing: -1px;
+}
+.login-sub {
+  font-size: 13px; color: var(--ink-3);
+  text-align: center; margin-top: -12px;
+  text-transform: uppercase; letter-spacing: 1px; font-weight: 700;
+}
+.login-pin-wrap { width: 100%; display: flex; flex-direction: column; gap: 8px; }
+.login-pin-label { font-size: 11px; font-weight: 800; color: var(--ink-3); letter-spacing: .8px; text-transform: uppercase; }
+.login-pin-input {
+  width: 100%; box-sizing: border-box;
+  height: 48px; border: 2px solid var(--border);
+  border-radius: var(--r); font-size: 20px;
+  font-family: var(--font-mono); text-align: center;
+  letter-spacing: 6px; outline: none;
+  transition: border-color .12s, box-shadow .12s;
+  color: var(--ink);
+}
+.login-pin-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(26,63,203,.1); }
+.login-btn {
+  width: 100%; height: 46px;
+  background: var(--accent); color: #fff;
+  border: none; border-radius: var(--r);
+  font-size: 14px; font-weight: 700;
+  font-family: var(--font); cursor: pointer;
+  transition: background .12s;
+}
+.login-btn:hover { background: var(--accent-dk); }
+.login-error {
+  display: none; color: var(--red);
+  font-size: 12px; font-weight: 600;
+  text-align: center;
+}
+
+/* Appbar user badge */
+.appbar-user-wrap {
+  display: flex; align-items: center; gap: 8px;
+  margin-left: auto;
+}
+.appbar-user-name { font-size: 12px; color: rgba(255,255,255,.7); font-weight: 500; }
+.appbar-user-rol  { font-size: 10px; font-weight: 700; letter-spacing: .5px; }
+.appbar-logout {
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.7); padding: 5px 10px; border-radius: 5px;
+  font-size: 11px; font-weight: 600; cursor: pointer; font-family: var(--font);
+  transition: all .12s;
+}
+.appbar-logout:hover { background: rgba(255,255,255,.2); color: #fff; }
+
+/* Usuarios modal */
+.usr-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px; border-radius: var(--r);
+  border: 1px solid var(--border-2); background: #fff;
+  margin-bottom: 8px;
+}
+.usr-av {
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; flex-shrink: 0;
+}
 </style>
 </head>
 <body>
+
+<!-- PANTALLA LOGIN -->
+<!-- APP PRINCIPAL -->
+<div id="appWrap" style="display:none">
 
 <!-- SVG ICONS (sprite oculto) -->
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
@@ -1692,30 +1779,42 @@ input, select, textarea { font-family: var(--font); }
 </svg>
 
 <!-- LOGIN SCREEN -->
-<div id="loginScreen" style="position:fixed;inset:0;background:#f8f8f8;display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;">
-  <div style="background:#fff;border:1px solid var(--border);border-radius:16px;padding:40px 36px;width:100%;max-width:380px;box-shadow:0 4px 12px rgba(0,0,0,.06),0 20px 60px rgba(0,0,0,.1);text-align:center;">
-    <div style="width:48px;height:48px;background:var(--accent);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+<div id="loginScreen" style="position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px;">
+  <div style="background:#fff;border:1.5px solid var(--border);border-radius:20px;padding:40px 36px;width:100%;max-width:400px;box-shadow:0 8px 40px rgba(0,0,0,.12)">
+    <div style="text-align:center;margin-bottom:28px">
+      <div style="font-family:var(--font-serif);font-size:36px;font-weight:700;color:var(--accent);letter-spacing:-1px">S-21</div>
+      <div style="font-size:12px;color:var(--ink-3);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px">Registro de Publicadores</div>
     </div>
-    <div style="font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;letter-spacing:-.3px">S‑21 Congregación</div>
-    <div style="font-size:13px;color:var(--ink-3);margin-bottom:28px">Ingresa la contraseña para continuar</div>
-    <input id="loginInput" type="password" placeholder="Contraseña"
-      style="width:100%;height:42px;padding:0 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:var(--font);outline:none;background:var(--surface-2);color:var(--ink);margin-bottom:10px;box-sizing:border-box;transition:border-color .15s,box-shadow .15s;"
-      onfocus="this.style.borderColor='var(--accent)';this.style.boxShadow='0 0 0 3px rgba(37,99,235,.15)'"
-      onblur="this.style.borderColor='var(--border)';this.style.boxShadow='none'"
-      onkeydown="if(event.key==='Enter')verificarLogin()">
-    <div id="loginError" style="color:var(--red);font-size:12px;margin-bottom:8px;display:none;min-height:16px">Contraseña incorrecta</div>
-    <button onclick="verificarLogin()"
-      style="width:100%;height:42px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);transition:background .15s;"
-      onmouseover="this.style.background='var(--accent-dk)'" onmouseout="this.style.background='var(--accent)'">
-      Ingresar
-    </button>
-    <div style="margin-top:20px;font-size:11px;color:var(--ink-3)">S‑21 · Sistema de gestión de congregación</div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div>
+        <label style="font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:.8px;text-transform:uppercase;display:block;margin-bottom:5px">Nombre de usuario</label>
+        <input id="loginUser" type="text" placeholder="Ej: Administrador" autocomplete="username"
+          style="width:100%;height:42px;padding:0 14px;border:1.5px solid var(--border);border-radius:8px;font-size:14px;font-family:var(--font);outline:none;box-sizing:border-box;background:#fff"
+          onkeydown="if(event.key==='Enter')document.getElementById('loginPass').focus()">
+      </div>
+      <div>
+        <label style="font-size:11px;font-weight:700;color:var(--ink-3);letter-spacing:.8px;text-transform:uppercase;display:block;margin-bottom:5px">PIN</label>
+        <input id="loginPass" type="password" placeholder="••••" maxlength="10" autocomplete="current-password"
+          style="width:100%;height:42px;padding:0 14px;border:1.5px solid var(--border);border-radius:8px;font-size:18px;font-family:var(--font-mono);letter-spacing:6px;outline:none;box-sizing:border-box;background:#fff"
+          onkeydown="if(event.key==='Enter')verificarLogin()">
+      </div>
+      <div id="loginError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:9px 12px;font-size:12px;color:#991b1b;text-align:center">
+        Nombre o PIN incorrecto. Intenta de nuevo.
+      </div>
+      <button onclick="verificarLogin()"
+        style="height:44px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);margin-top:4px;transition:background .12s"
+        onmouseover="this.style.background='var(--accent-dk)'" onmouseout="this.style.background='var(--accent)'">
+        Ingresar
+      </button>
+      <div style="font-size:11px;color:var(--ink-3);text-align:center;line-height:1.6;margin-top:4px">
+        Usuario por defecto: <strong>Administrador</strong> · PIN: <strong>1234</strong>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- APPBAR -->
-<div class="appbar" id="appbar" style="display:none">
+<div class="appbar" id="appbar">
   <button class="sb-toggle" onclick="toggleSidebar()" title="Menú">
     <span></span><span></span><span></span>
   </button>
@@ -1725,10 +1824,17 @@ input, select, textarea { font-family: var(--font); }
     </div>
     S‑21 <span>· Registro de Predicación</span>
   </div>
-  <button class="appbar-btn prim" onclick="abrirModalNuevo()">
+  <button class="appbar-btn prim sb-add-btn" onclick="abrirModalNuevo()">
     <svg width="12" height="12"><use href="#ico-plus"/></svg>
     Nuevo
   </button>
+  <div class="appbar-user-wrap">
+    <div style="display:flex;flex-direction:column;align-items:flex-end;line-height:1.2">
+      <span class="appbar-user-name" id="appbar-user"></span>
+      <span class="appbar-user-rol" id="appbar-rol"></span>
+    </div>
+    <button class="appbar-logout" onclick="logout()">Salir</button>
+  </div>
 </div>
 
 <input type="file" id="fileInput" accept=".json" style="display:none" onchange="cargarJSON(event)">
@@ -1774,7 +1880,7 @@ input, select, textarea { font-family: var(--font); }
       <button class="sb-nav-item" onclick="importarCSV()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar CSV
       </button>
-      <button class="sb-nav-item" onclick="ghPush()" style="color:var(--accent);font-weight:700">
+      <button class="sb-nav-item" onclick="ghPush()" style="color:var(--accent);font-weight:700" class="sb-nav-item sb-export-only">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Guardar en nube ☁
       </button>
       <button class="sb-nav-item" onclick="ghPull()">
@@ -1798,7 +1904,10 @@ input, select, textarea { font-family: var(--font); }
       <button class="sb-nav-item" onclick="irA('inactivos')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-inactive"/></svg></span>Inactivos
       </button>
-      <button class="sb-nav-item" style="color:var(--red)" onclick="resetTodo()">
+      <button class="sb-nav-item sb-admin-only" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-gear"/></svg></span>Usuarios
+      </button>
+      <button class="sb-nav-item" style="color:var(--red)" class="sb-admin-only" onclick="resetTodo()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Borrar todo
       </button>
     </nav>
@@ -2250,6 +2359,44 @@ const GH_FILE   = 'data.json';
 const GH_BRANCH = 'main';
 const GH_API    = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
 
+// ══════════════════════════════════════════
+//  ROLES Y USUARIOS
+// ══════════════════════════════════════════
+// Roles: admin | secretario | anciano | lector
+// Los usuarios y contraseñas se guardan en state.usuarios
+// Usuario admin por defecto (solo si no hay ninguno)
+const DEFAULT_ADMIN = { id:'admin', nombre:'Administrador', pin:'1234', rol:'admin', grupo:null };
+// admin123 → 240be518... | secretario123 → e9cee71ab932fde863338d08be4de9dfe39ea049bdafb342ce659ec5450b69ae
+
+let currentUser = null; // usuario logueado
+
+function getRolLabel(rol) {
+  return {admin:'Administrador',secretario:'Secretario',anciano:'Anciano',lector:'Solo lectura'}[rol] || rol;
+}
+function getRolColor(rol) {
+  return {admin:'#1a3fcb',secretario:'#1a6b3c',anciano:'#b45309',lector:'#64748b'}[rol] || '#64748b';
+}
+
+// Permisos por rol
+const PERMS = {
+  admin:      { editarTodo:true,  borrar:true,  exportar:true,  verEmerg:true,  soloGrupo:false },
+  secretario: { editarTodo:true,  borrar:false, exportar:true,  verEmerg:true,  soloGrupo:false },
+  anciano:    { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true  },
+  lector:     { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:false },
+};
+function can(perm) {
+  if(!currentUser) return false;
+  return !!(PERMS[currentUser.rol]?.[perm]);
+}
+function canEdit() { return can('editarTodo') || can('soloGrupo'); }
+function canEditPub(pub) {
+  if(!currentUser) return false;
+  if(can('editarTodo')) return true;
+  if(can('soloGrupo') && pub && pub.grupo === currentUser.grupo) return true;
+  return false;
+}
+
+
 const MESES = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
 const MESES_C = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
 
@@ -2492,8 +2639,8 @@ function renderS21() {
     <div class="s21-toolbar">
       ${isMobile?`<button onclick="volverLista()" class="s21-toolbar-btn">← Lista</button>`:''}
       <span class="s21-toolbar-name">${escHtml(pub.apellido)}, ${escHtml(pub.nombre)}</span>
-      <button class="s21-toolbar-btn edit" onclick="abrirModalEditar('${pub.id}')">Editar</button>
-      <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5" onclick="moverAInactivos('${pub.id}')">Sacar</button>
+      <button class="s21-toolbar-btn edit" onclick="abrirModalEditar('${pub.id}')" style="display:${canEditPub(pub)?'':'none'}">Editar</button>
+      <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5" onclick="moverAInactivos('${pub.id}')" style="display:${(can('editarTodo'))?'':'none'}">Sacar</button>
     </div>
 
     <!-- Formulario oficial -->
@@ -3163,6 +3310,70 @@ function exportarEmergencias() {
   <tbody>${filas}</tbody>
 </table>
 <div class="pie">S-21 · Sistema de gestión de congregación · ${fecha}</div>
+
+<!-- MODAL GESTIÓN USUARIOS -->
+<div class="overlay" id="modalUsuariosOverlay" style="display:none">
+  <div class="modal" style="max-width:560px;max-height:90vh;display:flex;flex-direction:column">
+    <div class="modal-hd">
+      <span class="modal-hd-title">Gestión de Usuarios</span>
+      <button class="modal-x" onclick="cerrarGestionUsuarios()">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:20px">
+
+      <!-- Lista usuarios -->
+      <div>
+        <div style="font-size:11px;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px">Usuarios activos</div>
+        <div id="usuariosLista"></div>
+      </div>
+
+      <!-- Agregar nuevo -->
+      <div style="border-top:1px solid var(--border);padding-top:18px">
+        <div style="font-size:11px;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Agregar usuario</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:10px">
+          <div class="mf-group">
+            <label>Nombre completo</label>
+            <input id="nuevoNombre" placeholder="Ej: Hermano García" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>Nombre de usuario</label>
+            <input id="nuevoUsuario" placeholder="ej: garcia" autocomplete="off" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font-mono);outline:none;width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>Contraseña (mínimo 4 caracteres)</label>
+            <input id="nuevoPin" type="password" placeholder="••••••" maxlength="32" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font-mono);letter-spacing:4px;outline:none;width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>Rol</label>
+            <select id="nuevoRol" onchange="toggleGrupoSelect()" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
+              <option value="lector">Solo lectura</option>
+              <option value="anciano">Anciano</option>
+              <option value="secretario">Secretario</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+          <div class="mf-group" id="grupoSelectWrap" style="display:none">
+            <label>Grupo asignado</label>
+            <select id="nuevoGrupo" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
+              <option value="">— Selecciona —</option>
+            </select>
+          </div>
+        </div>
+        <button onclick="agregarUsuario()" style="background:var(--accent);color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)">+ Agregar usuario</button>
+      </div>
+    </div>
+    <div style="padding:0 20px 16px">
+      <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;padding:10px 14px;font-size:12px;color:#0369a1;line-height:1.6">
+        <strong>Usuarios por defecto:</strong> admin / <code>admin123</code> · secretario / <code>secretario123</code><br>
+        Cambia las contraseñas después del primer acceso.
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="cerrarGestionUsuarios()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /appWrap -->
 </body>
 </html>`;
 
@@ -3583,6 +3794,185 @@ function reactivarPub(id) {
   renderInactivos();
   renderDashboard();
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
+}
+
+
+// ══════════════════════════════════════════
+//  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
+// ══════════════════════════════════════════
+function getUsuarios() {
+  if(!state.usuarios || state.usuarios.length === 0) {
+    state.usuarios = [ { ...DEFAULT_ADMIN } ];
+  }
+  // Migración: si algún usuario tiene passHash pero no pin, asignar pin por defecto
+  state.usuarios.forEach(u => {
+    if(!u.pin) u.pin = (u.id === 'admin') ? '1234' : '0000';
+    if(!u.nombre && u.usuario) u.nombre = u.usuario;
+    // limpiar campos legacy
+    delete u.passHash; delete u.usuario;
+  });
+  return state.usuarios;
+}
+
+async function sha256(str) {
+  try {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+  } catch(e) { return str; }
+}
+
+async function verificarLogin() {
+  const usuario = (document.getElementById('loginUser')?.value || '').trim().toLowerCase();
+  const pass    = (document.getElementById('loginPass')?.value || '').trim();
+  if(!usuario || !pass) return;
+
+  const h = await sha256(pass);
+  const users = getUsuarios();
+  const user  = users.find(u => (u.usuario||u.nombre||'').toLowerCase() === usuario && u.passHash === h);
+
+  if(!user) {
+    const err = document.getElementById('loginError');
+    if(err) { err.style.display='block'; setTimeout(()=>err.style.display='none', 2500); }
+    document.getElementById('loginPass').value = '';
+    document.getElementById('loginPass').focus();
+    return;
+  }
+  currentUser = user;
+  sessionStorage.setItem('s21_user', JSON.stringify(user));
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('appbar').style.display = 'flex';
+  document.getElementById('appLayout').style.display = 'flex';
+  const nav = document.getElementById('mobileNav');
+  if(nav) nav.style.removeProperty('display');
+  if(document.getElementById('appbar-user')) document.getElementById('appbar-user').textContent = user.nombre;
+  if(document.getElementById('appbar-rol')) {
+    document.getElementById('appbar-rol').textContent = getRolLabel(user.rol);
+    document.getElementById('appbar-rol').style.color = getRolColor(user.rol);
+  }
+  applyRoleUI();
+  ghPull().catch(()=>{}).finally(() => irA('inicio'));
+}
+
+async function hashPass(pass) { return sha256(pass); }
+
+function logout() {
+  currentUser = null;
+  sessionStorage.removeItem('s21_user');
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('appbar').style.display = 'none';
+  document.getElementById('appLayout').style.display = 'none';
+  const nav = document.getElementById('mobileNav');
+  if(nav) nav.style.display = 'none';
+  if(document.getElementById('loginUser')) document.getElementById('loginUser').value = '';
+  if(document.getElementById('loginPass')) document.getElementById('loginPass').value = '';
+  if(document.getElementById('loginError')) document.getElementById('loginError').style.display = 'none';
+  setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
+}
+
+function applyRoleUI() {
+  if(!currentUser) return;
+  const rol = currentUser.rol;
+  // Sidebar datos section — ocultar si no puede exportar
+  document.querySelectorAll('.sb-export-only').forEach(el => {
+    el.style.display = can('exportar') ? '' : 'none';
+  });
+  // Botón nuevo publicador
+  document.querySelectorAll('.sb-add-btn, .btn-nuevo-pub').forEach(el => {
+    el.style.display = canEdit() ? '' : 'none';
+  });
+  // Reset y datos destructivos solo admin
+  document.querySelectorAll('.sb-admin-only').forEach(el => {
+    el.style.display = (rol === 'admin') ? '' : 'none';
+  });
+  // Mostrar sección usuarios solo si admin
+  const sbUsuarios = document.getElementById('sbnav-usuarios');
+  if(sbUsuarios) sbUsuarios.parentElement.style.display = (rol === 'admin') ? '' : 'none';
+}
+
+// ── Gestión usuarios (solo admin) ──
+function abrirGestionUsuarios() {
+  document.getElementById('modalUsuariosOverlay').style.display = 'flex';
+  renderUsuariosModal();
+}
+
+function toggleGrupoSelect() {
+  const rol = document.getElementById('nuevoRol').value;
+  const wrap = document.getElementById('grupoSelectWrap');
+  wrap.style.display = rol === 'anciano' ? '' : 'none';
+  if(rol === 'anciano') {
+    const sel = document.getElementById('nuevoGrupo');
+    sel.innerHTML = '<option value="">— Selecciona —</option>' +
+      GRUPOS_LISTA.map(g => `<option value="${g}">${g}</option>`).join('');
+  }
+}
+
+function cerrarGestionUsuarios() {
+  document.getElementById('modalUsuariosOverlay').style.display = 'none';
+}
+
+function renderUsuariosModal() {
+  const users = getUsuarios();
+  const lista = users.map(u => `
+    <div class="usr-item">
+      <div class="usr-av" style="background:${getRolColor(u.rol)}22;color:${getRolColor(u.rol)}">${(u.nombre||'?')[0]}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(u.nombre||'?')}</div>
+        <div style="font-size:11px;color:${getRolColor(u.rol)};font-weight:600">${getRolLabel(u.rol)}${u.grupo?' · '+u.grupo:''}</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px">
+        <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-3);background:var(--surface-2);padding:3px 8px;border-radius:4px;border:1px solid var(--border)">PIN: ${u.pin}</div>
+        <button onclick="cambiarPin('${u.id}')" title="Cambiar PIN" style="background:none;border:1px solid var(--border);border-radius:4px;color:var(--ink-2);cursor:pointer;font-size:11px;padding:3px 8px;font-family:var(--font);font-weight:600;white-space:nowrap">✏ PIN</button>
+        ${u.id !== 'admin' ? `<button onclick="eliminarUsuario('${u.id}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;padding:4px 8px" title="Eliminar">×</button>` : '<span style="font-size:10px;color:var(--ink-3);padding:0 8px">protegido</span>'}
+      </div>
+    </div>`).join('');
+
+  document.getElementById('usuariosLista').innerHTML = lista || '<p style="color:var(--ink-3);font-size:13px">No hay usuarios</p>';
+}
+
+function cambiarPin(id) {
+  const users = getUsuarios();
+  const u = users.find(x => x.id === id);
+  if(!u) return;
+  const nuevo = prompt(`Nuevo PIN para "${u.nombre}" (mínimo 4 dígitos):`);
+  if(nuevo === null) return;
+  if(!nuevo || nuevo.trim().length < 4) { toast('El PIN debe tener al menos 4 caracteres'); return; }
+  const pinLimpio = nuevo.trim();
+  if(users.find(x => x.id !== id && x.pin === pinLimpio)) { toast('Ese PIN ya está en uso por otro usuario'); return; }
+  u.pin = pinLimpio;
+  state.usuarios = users;
+  saveStateAndSync();
+  renderUsuariosModal();
+  toast(`PIN de "${u.nombre}" actualizado`);
+}
+
+function agregarUsuario() {
+  const nombre = document.getElementById('nuevoNombre').value.trim();
+  const pin    = document.getElementById('nuevoPin').value.trim();
+  const rol    = document.getElementById('nuevoRol').value;
+  const grupo  = document.getElementById('nuevoGrupo').value;
+
+  if(!nombre || !pin) { toast('Completa nombre y PIN'); return; }
+  if(pin.length < 4)  { toast('El PIN debe tener al menos 4 caracteres'); return; }
+
+  const users = getUsuarios();
+  if(users.find(u => u.pin === pin)) { toast('Ese PIN ya está en uso'); return; }
+
+  const id = Date.now().toString(36);
+  users.push({ id, nombre, pin, rol, grupo: grupo || null });
+  state.usuarios = users;
+  saveStateAndSync();
+  renderUsuariosModal();
+  document.getElementById('nuevoNombre').value = '';
+  document.getElementById('nuevoPin').value = '';
+  toast(`Usuario "${nombre}" creado`);
+}
+
+function eliminarUsuario(id) {
+  if(!confirm('¿Eliminar este usuario?')) return;
+  state.usuarios = getUsuarios().filter(u => u.id !== id);
+  saveStateAndSync();
+  renderUsuariosModal();
+  toast('Usuario eliminado');
 }
 
 function resetTodo() {
@@ -4562,54 +4952,35 @@ function filtrarYVerGrupo(grupo) {
 cargarState();
 initGrupos();
 renderGruposPanel();
-// Auto-cargar desde GitHub al iniciar
-setTimeout(() => ghPull().catch(()=>{}), 500);
 
-// ── LOGIN ──
-const LOGIN_HASH = '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918'; // contraseña: "admin"
-
-function mostrarApp() {
-  document.getElementById('loginScreen').style.display = 'none';
-  document.getElementById('appbar').style.display = 'flex';
-  document.getElementById('appLayout').style.display = 'flex';
-  const nav = document.getElementById('mobileNav');
-  if(nav) nav.style.removeProperty('display');
-  irA('inicio');
-}
-
-async function verificarLogin() {
-  const input = document.getElementById('loginInput');
-  const val = input.value.trim();
-  if(!val) return;
-  let h;
-  try {
-    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(val));
-    h = Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-  } catch(e) {
-    // Fallback simple para Safari file:// donde crypto.subtle no está disponible
-    h = val === 'admin' ? LOGIN_HASH : 'x';
-  }
-  if(h === LOGIN_HASH) {
-    sessionStorage.setItem('s21_auth','1');
-    mostrarApp();
+// Restaurar sesión si ya estaba autenticado
+(function() {
+  const _saved = sessionStorage.getItem('s21_user');
+  if(_saved) {
+    try {
+      currentUser = JSON.parse(_saved);
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('appbar').style.display = 'flex';
+      document.getElementById('appLayout').style.display = 'flex';
+      const _nav = document.getElementById('mobileNav');
+      if(_nav) _nav.style.removeProperty('display');
+      if(document.getElementById('appbar-user')) document.getElementById('appbar-user').textContent = currentUser.nombre;
+      if(document.getElementById('appbar-rol')) {
+        document.getElementById('appbar-rol').textContent = getRolLabel(currentUser.rol);
+        document.getElementById('appbar-rol').style.color = getRolColor(currentUser.rol);
+      }
+      applyRoleUI();
+      setTimeout(() => ghPull().catch(()=>{}).finally(() => irA('inicio')), 200);
+    } catch(e) {
+      currentUser = null;
+      setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
+    }
   } else {
-    const err = document.getElementById('loginError');
-    err.style.display = 'block';
-    input.value = '';
-    input.focus();
-    setTimeout(() => { err.style.display = 'none'; }, 2500);
+    setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
   }
-}
+})();
 
-// Si ya estaba autenticado en esta sesión, entrar directo
-if(sessionStorage.getItem('s21_auth') === '1') {
-  mostrarApp();
-} else {
-  setTimeout(() => {
-    const inp = document.getElementById('loginInput');
-    if(inp) inp.focus();
-  }, 100);
-}
+
 </script>
 
 <!-- MODAL MÉTRICAS -->
@@ -4714,5 +5085,61 @@ if(sessionStorage.getItem('s21_auth') === '1') {
     </div>
   </div>
 </div>
+
+<!-- MODAL GESTIÓN USUARIOS -->
+<div class="overlay" id="modalUsuariosOverlay" style="display:none">
+  <div class="modal" style="max-width:580px;max-height:90vh;display:flex;flex-direction:column">
+    <div class="modal-hd">
+      <span class="modal-hd-title">Gestión de Usuarios</span>
+      <button class="modal-x" onclick="cerrarGestionUsuarios()">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:20px">
+      <div>
+        <div style="font-size:11px;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px">Usuarios activos</div>
+        <div id="usuariosLista"></div>
+      </div>
+      <div style="border-top:1px solid var(--border);padding-top:18px">
+        <div style="font-size:11px;font-weight:800;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px">Agregar usuario</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
+          <div class="mf-group">
+            <label>Nombre del usuario</label>
+            <input id="nuevoNombre" placeholder="Ej: Hermano García" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>PIN (mínimo 4 dígitos)</label>
+            <input id="nuevoPin" type="password" placeholder="••••" maxlength="10" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:18px;font-family:var(--font-mono);letter-spacing:6px;outline:none;width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>Rol</label>
+            <select id="nuevoRol" onchange="toggleGrupoSelect()" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
+              <option value="lector">Solo lectura</option>
+              <option value="anciano">Anciano</option>
+              <option value="secretario">Secretario</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+          <div class="mf-group" id="grupoSelectWrap" style="display:none">
+            <label>Grupo asignado</label>
+            <select id="nuevoGrupo" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
+              <option value="">— Selecciona —</option>
+            </select>
+          </div>
+        </div>
+        <button onclick="agregarUsuario()" style="background:var(--accent);color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)">+ Agregar usuario</button>
+      </div>
+    </div>
+    <div style="padding:0 20px 16px">
+      <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;padding:10px 14px;font-size:12px;color:#0369a1;line-height:1.6">
+        <strong>Login:</strong> Nombre del usuario + PIN · PIN por defecto del admin: <strong>1234</strong><br>
+        Botón ✏ junto a cada usuario para cambiar su PIN.
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="cerrarGestionUsuarios()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /appWrap -->
 </body>
 </html>
