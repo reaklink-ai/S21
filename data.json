@@ -2806,7 +2806,7 @@
           "Jun": {
             "particip": false,
             "cursos": "",
-            "paux": true,
+            "paux": false,
             "horas": "",
             "notas": ""
           },
@@ -7604,11 +7604,7 @@
       }
     }
   ],
-  "grupos": {
-    "Grupo 1": {
-      "super": "mmm9qi4otsz7"
-    }
-  },
+  "grupos": {},
   "inactivos": [
     {
       "id": "mmm9qi4ovmh3",
