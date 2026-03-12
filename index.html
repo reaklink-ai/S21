@@ -2539,12 +2539,8 @@ input, select, textarea { font-family: var(--font); }
 const KEY = 's21_v3';
 
 // ── GitHub Sync Config ──
-const GH_TOKEN  = 'ghp_MYmINPfhNk0QG0tw' + 'uaCpwW2QkN6XSn1fNncJ';
-const GH_OWNER  = 'reaklink-ai';
-const GH_REPO   = 'S21';
-const GH_FILE   = 'data.json';
-const GH_BRANCH = 'main';
-const GH_API    = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${GH_FILE}`;
+// ── Sync: apunta al Worker de Cloudflare (el token vive allá, no aquí) ──
+const SYNC_URL = 'https://mute-grass-cc8b.reaklink.workers.dev/sync';
 
 // ══════════════════════════════════════════
 //  ROLES Y USUARIOS
@@ -2617,22 +2613,9 @@ function saveState() {
   localStorage.setItem(KEY, JSON.stringify(state));
 }
 
-// ── GitHub Sync ──
-async function ghGetFileSha() {
-  try {
-    const res = await fetch(GH_API + '?ref=' + GH_BRANCH, {
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
-    });
-    if(res.status === 404) return null;
-    const json = await res.json();
-    return json.sha || null;
-  } catch(e) { return null; }
-}
-
-// ── Merge-safe sync ──
-// Antes de cada push: descarga remoto, mezcla campo a campo, sube merged.
-// Así dos usuarios simultáneos no se pisan entre sí.
+// ── Sync via Worker ──
 let _syncQueue = Promise.resolve();
+let _lastSha   = null; // SHA cacheado para reducir llamadas
 
 function saveStateAndSync() {
   saveState();
@@ -2641,47 +2624,46 @@ function saveStateAndSync() {
 
 async function _mergeAndPush(intentos = 0) {
   try {
-    // 1. Obtener versión remota fresca + SHA
-    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
-    });
-
+    // 1. Descargar versión remota fresca via Worker (GET /sync)
+    const res = await fetch(SYNC_URL + '?t=' + Date.now());
     let remoto = null, sha = null;
     if(res.ok) {
       const json = await res.json();
-      sha = json.sha;
-      try { remoto = JSON.parse(decodeURIComponent(escape(atob(json.content)))); } catch(e) {}
+      remoto = json.data || null;
+      sha    = json.sha  || null;
+      _lastSha = sha;
+    } else if(res.status !== 404) {
+      throw new Error('Error al leer remoto: ' + res.status);
     }
 
-    // 2. Mezclar: local gana en sus propios datos, pero preserva cambios remotos que local no tocó
+    // 2. Mezclar: local gana en sus cambios, preserva cambios remotos no tocados
     const merged = remoto ? _mergeStates(remoto, state) : JSON.parse(JSON.stringify(state));
     merged._lastModified = Date.now();
 
-    // 3. PUT con el SHA fresco
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(merged, null, 2))));
-    const body = { message: 'sync: ' + new Date().toISOString().slice(0,16).replace('T',' '), content, branch: GH_BRANCH };
-    if(sha) body.sha = sha;
-
-    const putRes = await fetch(GH_API, {
+    // 3. PUT via Worker (/sync) con SHA fresco
+    const putRes = await fetch(SYNC_URL, {
       method: 'PUT',
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
-      body: JSON.stringify(body)
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ data: merged, sha })
     });
 
     if(putRes.ok) {
+      const putJson = await putRes.json();
+      if(putJson.sha) _lastSha = putJson.sha;
       state = merged;
       saveState();
       toast('✓ Datos sincronizados');
       return;
     }
 
-    const err = await putRes.json();
-    const esConflicto = err.message && (err.message.includes('does not match') || putRes.status === 409 || putRes.status === 422);
+    const err = await putRes.json().catch(() => ({}));
+    const esConflicto = putRes.status === 409 || putRes.status === 422 ||
+      (err.error && err.error.includes('does not match'));
     if(esConflicto && intentos < 4) {
       await new Promise(r => setTimeout(r, 500 * (intentos + 1)));
       return _mergeAndPush(intentos + 1);
     }
-    toast('Error al sincronizar: ' + (err.message || putRes.status));
+    toast('Error al sincronizar: ' + (err.error || putRes.status));
   } catch(e) {
     if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1); }
     toast('Error de conexión al sincronizar');
@@ -2696,7 +2678,6 @@ function _mergeStates(remoto, local) {
   const localIds = new Set((local.publicadores||[]).map(p=>p.id));
   (remoto.publicadores||[]).forEach(rp => {
     if(!localIds.has(rp.id)) { m.publicadores.push(rp); return; }
-    // Mezclar registros mes a mes: tomar del remoto solo lo que local no tiene
     const lp = m.publicadores.find(p=>p.id===rp.id);
     if(!lp) return;
     Object.entries(rp.registros||{}).forEach(([anio, meses]) => {
@@ -2723,28 +2704,26 @@ function _mergeStates(remoto, local) {
   return m;
 }
 
-async function ghPush(intentos = 0) { return _mergeAndPush(intentos); }
+async function ghPush() { return _mergeAndPush(); }
 
 async function ghPull() {
   try {
-    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
-    });
-    if(res.status === 404) { toast('No hay datos en GitHub aún'); return; }
-    const json = await res.json();
-    const remoto = JSON.parse(decodeURIComponent(escape(atob(json.content))));
+    const res = await fetch(SYNC_URL + '?t=' + Date.now());
+    if(res.status === 404) { toast('No hay datos en la nube aún'); return; }
+    if(!res.ok) { toast('Error al conectar con el servidor'); return; }
+    const json  = await res.json();
+    const remoto = json.data;
+    _lastSha = json.sha;
 
     const tsLocal  = state._lastModified || 0;
     const tsRemoto = remoto._lastModified || 0;
 
-    // Si local tiene cambios más recientes no subidos, mezclar y subir
     if(tsLocal > tsRemoto) {
       toast('Sincronizando cambios locales...');
       await _mergeAndPush();
       return;
     }
 
-    // GitHub más reciente: mezclar remoto con local y aplicar
     state = _mergeStates(state, remoto);
     if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [{ ...DEFAULT_ADMIN }];
     migrarUsuariosLegacy();
@@ -2755,7 +2734,6 @@ async function ghPull() {
     toast('✓ Datos actualizados');
   } catch(e) { toast('Error al cargar: ' + e.message); }
 }
-
 
 
 function getPub(id) { return state.publicadores.find(p=>p.id===id); }
@@ -4143,21 +4121,20 @@ async function verificarLogin() {
   const btnLogin = document.querySelector('#loginScreen button[onclick="verificarLogin()"]');
   if(btnLogin) { btnLogin.textContent = 'Verificando...'; btnLogin.disabled = true; }
 
-  // Cargar usuarios frescos desde GitHub antes de comparar
+  // Cargar usuarios frescos desde el Worker antes de comparar
   try {
-    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
-      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
-    });
+    const res = await fetch(SYNC_URL + '?t=' + Date.now());
     if(res.ok) {
-      const json = await res.json();
-      const decoded = decodeURIComponent(escape(atob(json.content)));
-      const remoto = JSON.parse(decoded);
-      state = remoto;
-      if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [ { ...DEFAULT_ADMIN } ];
-      migrarUsuariosLegacy();
-      localStorage.setItem(KEY, JSON.stringify(state));
+      const json   = await res.json();
+      const remoto = json.data;
+      if(remoto) {
+        state = remoto;
+        if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [ { ...DEFAULT_ADMIN } ];
+        migrarUsuariosLegacy();
+        localStorage.setItem(KEY, JSON.stringify(state));
+      }
     }
-  } catch(e) { /* continuar con datos locales si GitHub falla */ }
+  } catch(e) { /* continuar con datos locales si el Worker no responde */ }
 
   if(btnLogin) { btnLogin.textContent = 'Ingresar'; btnLogin.disabled = false; }
 
@@ -5398,24 +5375,20 @@ renderGruposPanel();
       // Primero aplicar permisos, luego ir al inicio
       applyRoleUI();
       irA('inicio');
-      // Sincronizar: si local tiene grupos asignados y remoto no, subir local
+      // Sincronizar al restaurar sesión
       setTimeout(async () => {
         try {
-          const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
-            headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
-          });
+          const res = await fetch(SYNC_URL + '?t=' + Date.now());
           if(!res.ok) return;
-          const json = await res.json();
-          const remoto = JSON.parse(decodeURIComponent(escape(atob(json.content))));
+          const json   = await res.json();
+          const remoto = json.data;
           const tsLocal  = state._lastModified || 0;
           const tsRemoto = remoto._lastModified || 0;
-          // Si local es más reciente o tiene supers asignados que remoto no tiene → subir
-          const localTieneSupers = Object.values(state.grupos||{}).some(g=>g.super);
+          const localTieneSupers  = Object.values(state.grupos||{}).some(g=>g.super);
           const remotoTieneSupers = Object.values(remoto.grupos||{}).some(g=>g.super);
           if(tsLocal > tsRemoto || (localTieneSupers && !remotoTieneSupers)) {
             await _mergeAndPush();
           } else {
-            // Remoto más reciente: mezclar
             state = _mergeStates(state, remoto);
             if(!state.usuarios||state.usuarios.length===0) state.usuarios=[{...DEFAULT_ADMIN}];
             migrarUsuariosLegacy();
