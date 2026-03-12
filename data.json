@@ -7367,14 +7367,14 @@
   "grupos": {},
   "inactivos": [
     {
-      "id": "mmm9qi4sayrz",
-      "apellido": "Rivera",
-      "nombre": "Emily",
-      "nacimiento": "2005-12-21",
-      "bautismo": "2020-08-05",
-      "grupo": "Grupo 3",
-      "telefono": "311 2695400",
-      "genero": "F",
+      "id": "mmm9qi4ovmh3",
+      "apellido": "Lugo",
+      "nombre": "Josias",
+      "nacimiento": "2005-06-06",
+      "bautismo": "2016-10-22",
+      "grupo": "Grupo 4",
+      "telefono": "324 614 4023",
+      "genero": "M",
       "anciano": false,
       "siervo": false,
       "precursorReg": false,
@@ -7475,14 +7475,14 @@
       "motivoInactivo": "Sacado de la congregación"
     },
     {
-      "id": "mmm9qi4ovmh3",
-      "apellido": "Lugo",
-      "nombre": "Josias",
-      "nacimiento": "2005-06-06",
-      "bautismo": "2016-10-22",
-      "grupo": "Grupo 4",
-      "telefono": "324 614 4023",
-      "genero": "M",
+      "id": "mmm9qi4sayrz",
+      "apellido": "Rivera",
+      "nombre": "Emily",
+      "nacimiento": "2005-12-21",
+      "bautismo": "2020-08-05",
+      "grupo": "Grupo 3",
+      "telefono": "311 2695400",
+      "genero": "F",
       "anciano": false,
       "siervo": false,
       "precursorReg": false,
@@ -7632,6 +7632,13 @@
       "pin": "1234",
       "rol": "admin",
       "grupo": null
+    },
+    {
+      "id": "mmnourlz",
+      "nombre": "Harold_La",
+      "pin": "1221",
+      "rol": "anciano",
+      "grupo": "Grupo 5"
     }
   ]
 }
