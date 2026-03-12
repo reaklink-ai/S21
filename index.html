@@ -2417,7 +2417,13 @@ function anioHoy() {
 }
 
 function cargarState() {
-  try { const r=localStorage.getItem(KEY); if(r) state=JSON.parse(r); } catch(e){}
+  try {
+    const r = localStorage.getItem(KEY);
+    if(r) {
+      state = JSON.parse(r);
+      migrarUsuariosLegacy();
+    }
+  } catch(e) {}
 }
 function saveState() {
   localStorage.setItem(KEY, JSON.stringify(state));
@@ -2468,9 +2474,24 @@ async function ghPull() {
     if(res.status === 404) { toast('No hay datos en GitHub aún'); return; }
     const json = await res.json();
     const decoded = decodeURIComponent(escape(atob(json.content)));
-    state = JSON.parse(decoded);
-    // Migrar usuarios legacy (passHash → pin) después de cargar desde GitHub
-    getUsuarios(); // dispara la migración en state.usuarios
+    const remoto = JSON.parse(decoded);
+
+    // Preservar usuarios locales si el remoto no los tiene o son legacy
+    const usuariosLocales = state.usuarios && state.usuarios.length ? state.usuarios : null;
+    state = remoto;
+
+    // Migrar usuarios legacy del remoto
+    migrarUsuariosLegacy();
+
+    // Si después de migrar no hay usuarios con PIN válido, usar los locales
+    const tieneUsuariosValidos = state.usuarios && state.usuarios.some(u => u.pin);
+    if(!tieneUsuariosValidos && usuariosLocales) {
+      state.usuarios = usuariosLocales;
+    }
+    if(!state.usuarios || state.usuarios.length === 0) {
+      state.usuarios = [ { ...DEFAULT_ADMIN } ];
+    }
+
     localStorage.setItem(KEY, JSON.stringify(state));
     selId = null;
     renderDashboard();
@@ -3809,22 +3830,19 @@ function getUsuarios() {
   return state.usuarios;
 }
 
-// Migración única: convierte usuarios legacy (passHash) a PIN
-// Se llama solo después de ghPull o cargarState
 function migrarUsuariosLegacy() {
   if(!state.usuarios) return;
-  let cambios = false;
   state.usuarios.forEach(u => {
-    // Si tiene passHash pero no pin, asignar pin por defecto
-    if(u.passHash && !u.pin) {
+    // Normalizar nombre: si solo tiene 'usuario', usarlo como nombre
+    if(!u.nombre && u.usuario) u.nombre = u.usuario;
+    // Asignar PIN si no tiene
+    if(!u.pin) {
       u.pin = (u.id === 'admin') ? '1234' : '0000';
-      cambios = true;
     }
-    if(!u.nombre && u.usuario) { u.nombre = u.usuario; cambios = true; }
+    // Limpiar campos legacy
     delete u.passHash;
     delete u.usuario;
   });
-  return cambios;
 }
 
 async function sha256(str) {
