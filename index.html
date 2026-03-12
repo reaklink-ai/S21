@@ -1785,8 +1785,8 @@ input, select, textarea { font-family: var(--font); }
         onmouseover="this.style.background='var(--accent-dk)'" onmouseout="this.style.background='var(--accent)'">
         Ingresar
       </button>
-      <div style="font-size:11px;color:var(--ink-3);text-align:center;line-height:1.6;margin-top:4px">
-        Usuario por defecto: <strong>Administrador</strong> · PIN: <strong>1234</strong>
+      <div style="font-size:11px;color:var(--ink-3);text-align:center;margin-top:8px">
+        S‑21 · Sistema de gestión de congregación
       </div>
     </div>
   </div>
@@ -1875,7 +1875,7 @@ input, select, textarea { font-family: var(--font); }
       </button>
     </nav>
     <div class="sb-sep"></div>
-    <!-- Sección datos — admin/secretario -->
+    <!-- Sección datos admin/secretario -->
     <div id="sbSectionDatos">
       <div class="sb-section-label">Datos</div>
       <nav class="sb-nav">
@@ -1914,7 +1914,7 @@ input, select, textarea { font-family: var(--font); }
         </button>
       </nav>
     </div>
-    <!-- Sección datos — solo anciano -->
+    <!-- Sección datos anciano (solo su grupo) -->
     <div id="sbDatosAnciano" style="display:none">
       <div class="sb-section-label">Mi grupo</div>
       <nav class="sb-nav">
@@ -2380,7 +2380,7 @@ const GH_API    = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/
 // Roles: admin | secretario | anciano | lector
 // Los usuarios y contraseñas se guardan en state.usuarios
 // Usuario admin por defecto (solo si no hay ninguno)
-const DEFAULT_ADMIN = { id:'admin', nombre:'Administrador', pin:'1234', rol:'admin', grupo:null };
+const DEFAULT_ADMIN = { id:'admin', nombre:'Administrador', pin:'4535', rol:'admin', grupo:null };
 // admin123 → 240be518... | secretario123 → e9cee71ab932fde863338d08be4de9dfe39ea049bdafb342ce659ec5450b69ae
 
 let currentUser = null; // usuario logueado
@@ -2514,10 +2514,8 @@ async function ghPull() {
     const decoded = decodeURIComponent(escape(atob(json.content)));
     const remoto = JSON.parse(decoded);
 
-    // Cargar todo desde remoto — usuarios incluidos (son la fuente de verdad)
+    // GitHub es la fuente de verdad — cargar todo incluyendo usuarios
     state = remoto;
-
-    // Garantizar que siempre haya al menos el admin por defecto
     if(!state.usuarios || state.usuarios.length === 0) {
       state.usuarios = [ { ...DEFAULT_ADMIN } ];
     }
@@ -2560,15 +2558,11 @@ function getReg(pub, anio, mes) {
 // ══════════════════════════════════════════
 function renderLista() {
   const q = document.getElementById('searchBox').value.toLowerCase();
+  const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
 
-  // Si es anciano, forzar filtro a su grupo
-  const esSoloGrupo = can('soloGrupo') && currentUser?.grupo;
-
-  // Filtro por tipo
+  // Filtro base — si es anciano, SIEMPRE filtrar por su grupo
   let lista = state.publicadores.filter(p=>(p.apellido+' '+p.nombre).toLowerCase().includes(q));
-
-  // Anciano: solo ve su grupo, siempre
-  if(esSoloGrupo) {
+  if(esAnciano) {
     lista = lista.filter(p => p.grupo === currentUser.grupo);
   } else if(filtroGrupo) {
     lista = lista.filter(p => p.grupo === filtroGrupo);
@@ -2580,8 +2574,10 @@ function renderLista() {
   }
   lista = lista.sort((a,b)=>a.apellido.localeCompare(b.apellido));
 
-  document.getElementById('statTotal').textContent = state.publicadores.length;
-  const grupos = new Set(state.publicadores.map(p=>p.grupo).filter(Boolean));
+  // Contadores — anciano solo ve su grupo
+  const pubsBase = esAnciano ? state.publicadores.filter(p=>p.grupo===currentUser.grupo) : state.publicadores;
+  document.getElementById('statTotal').textContent = pubsBase.length;
+  const grupos = new Set(pubsBase.map(p=>p.grupo).filter(Boolean));
   document.getElementById('statGrupos').textContent = grupos.size;
 
   renderStats();
@@ -3875,7 +3871,7 @@ function migrarUsuariosLegacy() {
     if(!u.nombre && u.usuario) u.nombre = u.usuario;
     // Asignar PIN si no tiene
     if(!u.pin) {
-      u.pin = (u.id === 'admin') ? '1234' : '0000';
+      u.pin = (u.id === 'admin') ? '4535' : '0000';
     }
     // Limpiar campos legacy
     delete u.passHash;
@@ -3895,8 +3891,8 @@ async function verificarLogin() {
   const pin         = (document.getElementById('loginPass')?.value || '').trim();
   if(!nombreInput || !pin) { toast('Ingresa nombre y PIN'); return; }
 
-  // Indicador de carga
-  const btnLogin = document.querySelector('#loginScreen button');
+  // Mostrar "Verificando..."
+  const btnLogin = document.querySelector('#loginScreen button[onclick="verificarLogin()"]');
   if(btnLogin) { btnLogin.textContent = 'Verificando...'; btnLogin.disabled = true; }
 
   // Cargar usuarios frescos desde GitHub antes de comparar
@@ -3913,7 +3909,7 @@ async function verificarLogin() {
       migrarUsuariosLegacy();
       localStorage.setItem(KEY, JSON.stringify(state));
     }
-  } catch(e) { /* usar datos locales si falla */ }
+  } catch(e) { /* continuar con datos locales si GitHub falla */ }
 
   if(btnLogin) { btnLogin.textContent = 'Ingresar'; btnLogin.disabled = false; }
 
@@ -3927,6 +3923,8 @@ async function verificarLogin() {
     document.getElementById('loginPass').focus();
     return;
   }
+
+  // Login exitoso
   currentUser = user;
   sessionStorage.setItem('s21_user', JSON.stringify(user));
   document.getElementById('loginScreen').style.display = 'none';
@@ -3958,63 +3956,43 @@ function logout() {
 function applyRoleUI() {
   if(!currentUser) return;
   const rol = currentUser.rol;
-  const esSoloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const esAnciano = rol === 'anciano' && currentUser.grupo;
 
-  // ── Elementos que requieren permiso de edición ──
+  // Elementos por permiso de clase CSS
   document.querySelectorAll('.sb-perm-edit').forEach(el => {
     el.style.display = canEdit() ? '' : 'none';
   });
-
-  // ── Elementos que requieren permiso de exportar ──
   document.querySelectorAll('.sb-perm-export').forEach(el => {
     el.style.display = can('exportar') ? '' : 'none';
   });
-
-  // ── Elementos solo admin ──
   document.querySelectorAll('.sb-perm-admin').forEach(el => {
     el.style.display = (rol === 'admin') ? '' : 'none';
   });
-
-  // ── Botón "Sacar" publicador ──
   document.querySelectorAll('.filter-cfg-btn').forEach(el => {
     el.style.display = can('editarTodo') ? '' : 'none';
   });
-
-  // ── Botones de grupos ──
   document.querySelectorAll('.gs-btn-prim, .btn-gestionar-grupos').forEach(el => {
     el.style.display = can('editarTodo') ? '' : 'none';
   });
 
-  // ── Anciano: ocultar secciones de sidebar que no le corresponden ──
-  if(esSoloGrupo) {
-    // Ocultar: métricas globales, emergencias, importar CSV, backup, restaurar, inactivos, borrar
-    ['sbnav-metricas','sbnav-emergencias'].forEach(id => {
-      const el = document.getElementById(id);
-      if(el) el.style.display = 'none';
-    });
-    // Ocultar items de datos que no aplican
-    document.querySelectorAll('.sb-perm-export, .sb-datos-import-csv, .sb-datos-backup, .sb-datos-restaurar, .sb-datos-inactivos, .sb-datos-borrar').forEach(el => {
-      el.style.display = 'none';
-    });
-    // Mostrar solo: plantilla informes e importar informes
-    document.querySelectorAll('.sb-datos-plantilla-inf, .sb-datos-importar-inf').forEach(el => {
-      el.style.display = '';
-    });
-    // Ocultar sección entera de datos del sidebar excepto lo necesario
-    const sbSectionDatos = document.getElementById('sbSectionDatos');
-    if(sbSectionDatos) sbSectionDatos.style.display = 'none';
-    const sbDatosAnciano = document.getElementById('sbDatosAnciano');
-    if(sbDatosAnciano) sbDatosAnciano.style.display = '';
+  // ── Control específico para Anciano ──
+  const ids = {
+    metricas:    document.getElementById('sbnav-metricas'),
+    emergencias: document.getElementById('sbnav-emergencias'),
+    secDatos:    document.getElementById('sbSectionDatos'),
+    secAnciano:  document.getElementById('sbDatosAnciano'),
+  };
+
+  if(esAnciano) {
+    if(ids.metricas)    ids.metricas.style.display    = 'none';
+    if(ids.emergencias) ids.emergencias.style.display = 'none';
+    if(ids.secDatos)    ids.secDatos.style.display    = 'none';
+    if(ids.secAnciano)  ids.secAnciano.style.display  = '';
   } else {
-    // Restaurar visibilidad normal
-    ['sbnav-metricas','sbnav-emergencias'].forEach(id => {
-      const el = document.getElementById(id);
-      if(el) el.style.display = '';
-    });
-    const sbSectionDatos = document.getElementById('sbSectionDatos');
-    if(sbSectionDatos) sbSectionDatos.style.display = '';
-    const sbDatosAnciano = document.getElementById('sbDatosAnciano');
-    if(sbDatosAnciano) sbDatosAnciano.style.display = 'none';
+    if(ids.metricas)    ids.metricas.style.display    = '';
+    if(ids.emergencias) ids.emergencias.style.display = '';
+    if(ids.secDatos)    ids.secDatos.style.display    = '';
+    if(ids.secAnciano)  ids.secAnciano.style.display  = 'none';
   }
 }
 
@@ -4873,13 +4851,7 @@ function toggleSidebar() {
 // DASHBOARD (INICIO)
 // ══════════════════════════════════════════
 function renderDashboard() {
-  const esSoloGrupo = can('soloGrupo') && currentUser?.grupo;
-  const grupoAnciano = esSoloGrupo ? currentUser.grupo : null;
-
-  // Si es anciano, filtrar publicadores solo de su grupo
-  const pubs  = esSoloGrupo
-    ? state.publicadores.filter(p => p.grupo === grupoAnciano)
-    : state.publicadores;
+  const pubs  = state.publicadores;
   const total = pubs.length;
   const anio  = anioHoy();
 
@@ -4896,22 +4868,20 @@ function renderDashboard() {
     return r&&r.paux;
   }).length;
   const noPredicaron = total - participaron;
-  const gruposActivos = esSoloGrupo ? 1 : GRUPOS_LISTA.filter(g => state.publicadores.some(p=>p.grupo===g)).length;
+  const gruposActivos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g)).length;
+  const ancianos = pubs.filter(p=>p.anciano).length;
   const precursores = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).length;
-
-  const bannerTitulo = esSoloGrupo ? `${grupoAnciano}` : 'Registro de Predicación';
-  const bannerSub    = esSoloGrupo ? `Anciano · Año de servicio ${anio}-${anio+1}` : `Año de servicio ${anio}-${anio+1}`;
 
   document.getElementById('dashboardGrid').innerHTML = `
     <!-- Banner bienvenida -->
     <div class="dash-banner">
       <div>
-        <div class="dash-banner-title">${bannerTitulo}</div>
-        <div class="dash-banner-sub">${bannerSub}</div>
+        <div class="dash-banner-title">Registro de Predicación</div>
+        <div class="dash-banner-sub">Año de servicio ${anio}-${anio+1}</div>
       </div>
       <div class="dash-banner-stats">
         <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
-        ${!esSoloGrupo ? `<div class="dw-stat"><div class="dw-stat-n">${gruposActivos}</div><div class="dw-stat-l">Grupos</div></div>` : ''}
+        <div class="dw-stat"><div class="dw-stat-n">${gruposActivos}</div><div class="dw-stat-l">Grupos</div></div>
         <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
       </div>
     </div>
@@ -4920,29 +4890,29 @@ function renderDashboard() {
 
     <div class="dash-card c-accent" onclick="irA('publicadores')">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-users"/></svg></div>
-      <div class="dash-card-label">Publicadores${esSoloGrupo?' · '+grupoAnciano:''}</div>
+      <div class="dash-card-label">Publicadores</div>
       <div class="dash-card-value">${total}</div>
-      <div class="dash-card-desc">${esSoloGrupo?'Miembros de tu grupo':'Registros S-21 individuales'}</div>
+      <div class="dash-card-desc">Registros S-21 individuales</div>
     </div>
     <div class="dash-card c-accent" onclick="irA('grupos')">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-grid"/></svg></div>
-      <div class="dash-card-label">${esSoloGrupo?'Mi grupo':'Grupos activos'}</div>
-      <div class="dash-card-value">${esSoloGrupo?grupoAnciano:gruposActivos}</div>
-      <div class="dash-card-desc">${esSoloGrupo?'Ver y cargar informes':'Con miembros asignados'}</div>
+      <div class="dash-card-label">Grupos activos</div>
+      <div class="dash-card-value">${gruposActivos}</div>
+      <div class="dash-card-desc">Con miembros asignados</div>
     </div>
-    <div class="dash-card c-accent" onclick="${esSoloGrupo?'irA(\'grupos\')':'abrirMetricas()'}">
+    <div class="dash-card c-accent" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
       <div class="dash-card-label">Predicaron · ${mesNombre}</div>
       <div class="dash-card-value">${participaron}</div>
-      <div class="dash-card-desc">de ${total} ${esSoloGrupo?'en tu grupo':'publicadores'}</div>
+      <div class="dash-card-desc">de ${total} publicadores</div>
     </div>
-    <div class="dash-card ${noPredicaron>0?'c-red':'c-green'}" onclick="${esSoloGrupo?'irA(\'grupos\')':'abrirMetricas()'}">
+    <div class="dash-card ${noPredicaron>0?'c-red':'c-green'}" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
       <div class="dash-card-label">Sin informar · ${mesNombre}</div>
       <div class="dash-card-value">${noPredicaron}</div>
       <div class="dash-card-desc">${noPredicaron===0?'Todos predicaron este mes':'Pendientes de informe'}</div>
     </div>
-    <div class="dash-card c-amber" onclick="${esSoloGrupo?'irA(\'grupos\')':'abrirMetricas()'}">
+    <div class="dash-card c-amber" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-star"/></svg></div>
       <div class="dash-card-label">Prec. auxiliares · ${mesNombre}</div>
       <div class="dash-card-value">${paux}</div>
@@ -4954,11 +4924,10 @@ function renderDashboard() {
       <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">Reuniones</div>
       <div class="dash-card-desc">Registro de asistencia</div>
     </div>
-    ${!esSoloGrupo ? `
     <div class="dash-card" onclick="exportarEmergencias()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
       <div class="dash-card-label">Emergencias</div>
-      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${state.publicadores.length} fichas</div>
+      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${total} fichas</div>
       <div class="dash-card-desc">Directorio de contacto</div>
     </div>
     <div class="dash-card" onclick="abrirModalGrupos()">
@@ -4966,13 +4935,7 @@ function renderDashboard() {
       <div class="dash-card-label">Gestión de grupos</div>
       <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${GRUPOS_LISTA.length} grupos</div>
       <div class="dash-card-desc">Asignar miembros y líderes</div>
-    </div>` : `
-    <div class="dash-card c-accent" onclick="importarInformes()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
-      <div class="dash-card-label">Cargar informe</div>
-      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${grupoAnciano}</div>
-      <div class="dash-card-desc">Importar planilla Excel del mes</div>
-    </div>`}
+    </div>
   `;
   // Update sidebar badge
   const badge = document.getElementById('sbBadgePubs');
@@ -4988,14 +4951,14 @@ function renderGruposScreen() {
 
   const anio = anioHoy();
   const { mesC, mesNombre } = mesActual ? mesActual() : { mesC: MESES_C[0], mesNombre: MESES[0] };
+  const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
 
-  // Grupos con miembros — anciano solo ve el suyo
-  const esSoloGrupo = can('soloGrupo') && currentUser?.grupo;
+  // Anciano solo ve su grupo; los demás ven todos
   const gruposActivos = GRUPOS_LISTA.filter(g => {
-    if(esSoloGrupo) return g === currentUser.grupo;
+    if(esAnciano) return g === currentUser.grupo;
     return state.publicadores.some(p => p.grupo === g);
   });
-  const sinGrupo = state.publicadores.filter(p => !p.grupo || p.grupo === '');
+  const sinGrupo = esAnciano ? [] : state.publicadores.filter(p => !p.grupo || p.grupo === '');
 
   const tarjetas = gruposActivos.map(g => {
     const miembros = state.publicadores.filter(p => p.grupo === g)
@@ -5117,8 +5080,11 @@ renderGruposPanel();
         document.getElementById('appbar-rol').textContent = getRolLabel(currentUser.rol);
         document.getElementById('appbar-rol').style.color = getRolColor(currentUser.rol);
       }
+      // Primero aplicar permisos, luego ir al inicio
       applyRoleUI();
-      setTimeout(() => ghPull().catch(()=>{}).finally(() => irA('inicio')), 200);
+      irA('inicio');
+      // Luego sincronizar en segundo plano
+      setTimeout(() => ghPull().catch(()=>{}), 500);
     } catch(e) {
       currentUser = null;
       setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
@@ -5278,7 +5244,7 @@ renderGruposPanel();
     </div>
     <div style="padding:0 20px 16px">
       <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;padding:10px 14px;font-size:12px;color:#0369a1;line-height:1.6">
-        <strong>Login:</strong> Nombre del usuario + PIN · PIN por defecto del admin: <strong>1234</strong><br>
+        <strong>Login:</strong> Nombre del usuario + PIN · PIN por defecto del admin: <strong>4535</strong><br>
         Botón ✏ junto a cada usuario para cambiar su PIN.
       </div>
     </div>
