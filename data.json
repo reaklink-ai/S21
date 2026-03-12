@@ -7604,7 +7604,11 @@
       }
     }
   ],
-  "grupos": {},
+  "grupos": {
+    "Grupo 1": {
+      "super": "mmm9qi4otsz7"
+    }
+  },
   "inactivos": [
     {
       "id": "mmm9qi4ovmh3",
