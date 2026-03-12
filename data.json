@@ -7639,6 +7639,13 @@
       "pin": "3212",
       "rol": "anciano",
       "grupo": "Grupo 5"
+    },
+    {
+      "id": "mmnqi1mc",
+      "nombre": "prueba1",
+      "pin": "1212",
+      "rol": "anciano",
+      "grupo": "Grupo 9"
     }
   ]
 }
