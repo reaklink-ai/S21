@@ -7632,6 +7632,13 @@
       "pin": "1234",
       "rol": "admin",
       "grupo": null
+    },
+    {
+      "id": "mmnopf6q",
+      "nombre": "Harold_La",
+      "pin": "1221",
+      "rol": "lector",
+      "grupo": null
     }
   ]
 }
