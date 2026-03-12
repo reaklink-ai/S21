@@ -7926,7 +7926,7 @@
     {
       "id": "admin",
       "nombre": "Administrador",
-      "pin": "1234",
+      "pin": "4535",
       "rol": "admin",
       "grupo": null
     },
@@ -7944,5 +7944,6 @@
       "rol": "anciano",
       "grupo": "Grupo 5"
     }
-  ]
+  ],
+  "_lastModified": 1773354483029
 }
