@@ -1824,7 +1824,7 @@ input, select, textarea { font-family: var(--font); }
     </div>
     S‑21 <span>· Registro de Predicación</span>
   </div>
-  <button class="appbar-btn prim sb-add-btn" onclick="abrirModalNuevo()">
+  <button class="appbar-btn prim sb-add-btn sb-perm-edit" onclick="abrirModalNuevo()">
     <svg width="12" height="12"><use href="#ico-plus"/></svg>
     Nuevo
   </button>
@@ -1877,42 +1877,42 @@ input, select, textarea { font-family: var(--font); }
     <div class="sb-sep"></div>
     <div class="sb-section-label">Datos</div>
     <nav class="sb-nav">
-      <button class="sb-nav-item" onclick="importarCSV()">
+      <button class="sb-nav-item sb-perm-edit" onclick="importarCSV()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar CSV
       </button>
-      <button class="sb-nav-item" onclick="ghPush()" style="color:var(--accent);font-weight:700" class="sb-nav-item sb-export-only">
+      <button class="sb-nav-item sb-perm-export" onclick="ghPush()" style="color:var(--accent);font-weight:700">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Guardar en nube ☁
       </button>
       <button class="sb-nav-item" onclick="ghPull()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Cargar desde nube
       </button>
-      <button class="sb-nav-item" onclick="exportarTodo()">
+      <button class="sb-nav-item sb-perm-export" onclick="exportarTodo()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Backup JSON local
       </button>
-      <button class="sb-nav-item" onclick="importarDatos()">
+      <button class="sb-nav-item sb-perm-admin" onclick="importarDatos()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Restaurar JSON
       </button>
-      <button class="sb-nav-item" onclick="exportarPlantillaCSV()">
+      <button class="sb-nav-item sb-perm-export" onclick="exportarPlantillaCSV()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla publicadores
       </button>
       <button class="sb-nav-item" onclick="exportarPlantillaInformes()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla informes
       </button>
-      <button class="sb-nav-item" onclick="importarInformes()">
+      <button class="sb-nav-item sb-perm-edit" onclick="importarInformes()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar informes
       </button>
       <button class="sb-nav-item" onclick="irA('inactivos')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-inactive"/></svg></span>Inactivos
       </button>
-      <button class="sb-nav-item sb-admin-only" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
+      <button class="sb-nav-item sb-perm-admin" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-gear"/></svg></span>Usuarios
       </button>
-      <button class="sb-nav-item" style="color:var(--red)" class="sb-admin-only" onclick="resetTodo()">
+      <button class="sb-nav-item sb-perm-admin" style="color:var(--red)" onclick="resetTodo()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Borrar todo
       </button>
     </nav>
     <div class="sb-sep"></div>
-    <button class="sb-add-btn" onclick="abrirModalNuevo()">
+    <button class="sb-add-btn sb-perm-edit" onclick="abrirModalNuevo()">
       <svg width="14" height="14"><use href="#ico-plus"/></svg>Nuevo publicador
     </button>
   </div>
@@ -2469,6 +2469,8 @@ async function ghPull() {
     const json = await res.json();
     const decoded = decodeURIComponent(escape(atob(json.content)));
     state = JSON.parse(decoded);
+    // Migrar usuarios legacy (passHash → pin) después de cargar desde GitHub
+    getUsuarios(); // dispara la migración en state.usuarios
     localStorage.setItem(KEY, JSON.stringify(state));
     selId = null;
     renderDashboard();
@@ -2640,7 +2642,7 @@ function renderS21() {
       ${isMobile?`<button onclick="volverLista()" class="s21-toolbar-btn">← Lista</button>`:''}
       <span class="s21-toolbar-name">${escHtml(pub.apellido)}, ${escHtml(pub.nombre)}</span>
       <button class="s21-toolbar-btn edit" onclick="abrirModalEditar('${pub.id}')" style="display:${canEditPub(pub)?'':'none'}">Editar</button>
-      <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5" onclick="moverAInactivos('${pub.id}')" style="display:${(can('editarTodo'))?'':'none'}">Sacar</button>
+      <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5;display:${can('editarTodo')?'':'none'}" onclick="moverAInactivos('${pub.id}')">Sacar</button>
     </div>
 
     <!-- Formulario oficial -->
@@ -3804,14 +3806,25 @@ function getUsuarios() {
   if(!state.usuarios || state.usuarios.length === 0) {
     state.usuarios = [ { ...DEFAULT_ADMIN } ];
   }
-  // Migración: si algún usuario tiene passHash pero no pin, asignar pin por defecto
-  state.usuarios.forEach(u => {
-    if(!u.pin) u.pin = (u.id === 'admin') ? '1234' : '0000';
-    if(!u.nombre && u.usuario) u.nombre = u.usuario;
-    // limpiar campos legacy
-    delete u.passHash; delete u.usuario;
-  });
   return state.usuarios;
+}
+
+// Migración única: convierte usuarios legacy (passHash) a PIN
+// Se llama solo después de ghPull o cargarState
+function migrarUsuariosLegacy() {
+  if(!state.usuarios) return;
+  let cambios = false;
+  state.usuarios.forEach(u => {
+    // Si tiene passHash pero no pin, asignar pin por defecto
+    if(u.passHash && !u.pin) {
+      u.pin = (u.id === 'admin') ? '1234' : '0000';
+      cambios = true;
+    }
+    if(!u.nombre && u.usuario) { u.nombre = u.usuario; cambios = true; }
+    delete u.passHash;
+    delete u.usuario;
+  });
+  return cambios;
 }
 
 async function sha256(str) {
@@ -3867,21 +3880,35 @@ function logout() {
 function applyRoleUI() {
   if(!currentUser) return;
   const rol = currentUser.rol;
-  // Sidebar datos section — ocultar si no puede exportar
-  document.querySelectorAll('.sb-export-only').forEach(el => {
-    el.style.display = can('exportar') ? '' : 'none';
-  });
-  // Botón nuevo publicador
-  document.querySelectorAll('.sb-add-btn, .btn-nuevo-pub').forEach(el => {
+
+  // ── Elementos que requieren permiso de edición (admin, secretario, anciano) ──
+  // sb-perm-edit: visible si canEdit()
+  document.querySelectorAll('.sb-perm-edit').forEach(el => {
     el.style.display = canEdit() ? '' : 'none';
   });
-  // Reset y datos destructivos solo admin
-  document.querySelectorAll('.sb-admin-only').forEach(el => {
+
+  // ── Elementos que requieren permiso de exportar (admin, secretario) ──
+  document.querySelectorAll('.sb-perm-export').forEach(el => {
+    el.style.display = can('exportar') ? '' : 'none';
+  });
+
+  // ── Elementos solo admin ──
+  document.querySelectorAll('.sb-perm-admin').forEach(el => {
     el.style.display = (rol === 'admin') ? '' : 'none';
   });
-  // Mostrar sección usuarios solo si admin
-  const sbUsuarios = document.getElementById('sbnav-usuarios');
-  if(sbUsuarios) sbUsuarios.parentElement.style.display = (rol === 'admin') ? '' : 'none';
+
+  // ── Botón "Sacar" publicador (solo admin/secretario = editarTodo) ──
+  // Se maneja en renderS21() vía can('editarTodo')
+
+  // ── Botón "Gestionar grupos" solo si puede editar todo ──
+  document.querySelectorAll('.filter-cfg-btn').forEach(el => {
+    el.style.display = can('editarTodo') ? '' : 'none';
+  });
+
+  // ── Botones de la pantalla de grupos ──
+  document.querySelectorAll('.gs-btn-prim, .btn-gestionar-grupos').forEach(el => {
+    el.style.display = can('editarTodo') ? '' : 'none';
+  });
 }
 
 // ── Gestión usuarios (solo admin) ──
@@ -4728,6 +4755,7 @@ function irA(pantalla) {
   if(pantalla === 'grupos')       renderGruposScreen();
   if(pantalla === 'inactivos')    renderInactivos();
   if(pantalla === 'asistencia')   renderAsistenciaScreen();
+  applyRoleUI();
 }
 
 function toggleSidebar() {
