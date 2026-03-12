@@ -416,7 +416,7 @@ input, select, textarea { font-family: var(--font); }
 
 /* Panel lista */
 .panel {
-  width: 280px; min-width: 280px;
+  width: 290px; min-width: 290px;
   background: var(--surface);
   border-right: 1px solid var(--border);
   flex-shrink: 0;
@@ -438,9 +438,10 @@ input, select, textarea { font-family: var(--font); }
 }
 
 .panel-head {
-  padding: 14px 12px 12px;
+  padding: 16px 14px 14px;
   border-bottom: 1px solid var(--border-2);
   flex-shrink: 0;
+  background: var(--surface);
 }
 .search {
   width: 100%;
@@ -448,7 +449,7 @@ input, select, textarea { font-family: var(--font); }
   background: var(--surface-2);
   padding: 9px 12px 9px 36px;
   font-size: 13px; font-weight: 500;
-  border-radius: var(--r);
+  border-radius: var(--r-lg);
   outline: none; color: var(--ink);
   transition: all .15s var(--ease);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
@@ -458,35 +459,39 @@ input, select, textarea { font-family: var(--font); }
 .search:focus { border-color: var(--accent); background: #fff; box-shadow: var(--sh-focus); }
 .search::placeholder { color: var(--ink-3); }
 
-.panel-counters { display: flex; gap: 8px; margin-top: 10px; }
+/* Contadores — fila compacta con borde y accent limpio */
+.panel-counters { display: flex; gap: 8px; margin-top: 12px; }
 .panel-counter-pill {
-  flex: 1; display: flex; align-items: center; gap: 7px;
+  flex: 1; display: flex; flex-direction: column; gap: 1px;
   background: var(--surface-2); border: 1px solid var(--border);
-  border-radius: var(--r); padding: 9px 10px;
+  border-radius: var(--r-lg); padding: 10px 12px;
   transition: border-color .12s;
 }
 .panel-counter-pill:hover { border-color: var(--accent-mid); }
-.panel-counter-pill .num { font-family: var(--font); font-size: 20px; font-weight: 800; color: var(--accent); line-height: 1; letter-spacing: -.5px; }
-.panel-counter-pill .lbl { font-size: 10px; color: var(--ink-3); line-height: 1.3; font-weight: 600; }
+.panel-counter-pill .num {
+  font-family: var(--font); font-size: 22px; font-weight: 800;
+  color: var(--ink); line-height: 1; letter-spacing: -1px;
+}
+.panel-counter-pill .lbl { font-size: 10px; color: var(--ink-3); font-weight: 600; text-transform: uppercase; letter-spacing: .4px; }
 
 /* Filtros */
 .panel-filters { flex-shrink: 0; border-bottom: 1px solid var(--border-2); }
 .filter-section { border-bottom: 1px solid var(--border-2); }
 .filter-section:last-child { border-bottom: none; }
 .filter-toggle {
-  width: 100%; display: flex; align-items: center; gap: 9px;
-  padding: 11px 12px;
+  width: 100%; display: flex; align-items: center; gap: 8px;
+  padding: 11px 14px;
   background: var(--surface); border: none; cursor: pointer;
   transition: background .1s;
 }
 .filter-toggle:hover { background: var(--surface-2); }
 .filter-toggle-dot {
-  width: 7px; height: 7px; border-radius: 50%;
+  width: 6px; height: 6px; border-radius: 50%;
   background: var(--border); flex-shrink: 0;
   transition: background .2s;
 }
 .filter-section.open .filter-toggle-dot { background: var(--accent); }
-.filter-toggle-label { font-size: 12px; font-weight: 700; color: var(--ink); flex: 1; text-align: left; letter-spacing: .2px; }
+.filter-toggle-label { font-size: 11px; font-weight: 700; color: var(--ink); flex: 1; text-align: left; letter-spacing: .4px; text-transform: uppercase; }
 .filter-active-badge {
   font-size: 9px; font-weight: 700;
   background: var(--accent); color: #fff;
@@ -495,94 +500,129 @@ input, select, textarea { font-family: var(--font); }
 }
 .filter-active-badge.visible { display: inline; }
 .filter-cfg-btn {
-  font-size: 10px; font-weight: 600; color: var(--ink-2);
-  background: var(--surface-2); border: 1px solid var(--border);
-  border-radius: 5px; padding: 3px 8px; cursor: pointer;
+  font-size: 10px; font-weight: 600; color: var(--accent);
+  background: var(--accent-lt); border: 1px solid var(--accent-mid);
+  border-radius: 6px; padding: 3px 9px; cursor: pointer;
   transition: all .12s;
 }
 .filter-cfg-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
 .filter-toggle-chevron { font-size: 10px; color: var(--ink-3); transition: transform .2s; }
 .filter-section.open .filter-toggle-chevron { transform: rotate(180deg); }
-.filter-body { overflow: hidden; max-height: 0; transition: max-height .25s ease; background: var(--surface-2); }
+.filter-body { overflow: hidden; max-height: 0; transition: max-height .25s ease; background: var(--surface); }
 .filter-section.open .filter-body { max-height: 600px; }
 
-.priv-list { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 1px; }
+/* Lista de privilegios */
+.priv-list { padding: 6px 10px 8px; display: flex; flex-direction: column; gap: 1px; }
 .priv-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 9px 10px; border-radius: 7px; cursor: pointer;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer;
   transition: background .1s;
 }
 .priv-item:hover { background: var(--accent-lt); }
 .priv-item.activo { background: var(--accent-lt); }
-.priv-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.priv-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
 .priv-name { font-size: 12px; font-weight: 500; color: var(--ink-2); flex: 1; }
-.priv-count { font-size: 13px; font-weight: 700; color: var(--border); min-width: 20px; text-align: right; }
-.priv-item.activo .priv-count, .priv-item:hover .priv-count { color: var(--accent); }
+.priv-count {
+  font-size: 12px; font-weight: 700;
+  color: var(--ink-3); min-width: 24px; text-align: right;
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  padding: 1px 7px; border-radius: 20px;
+}
+.priv-item.activo .priv-count { color: var(--accent); background: var(--accent-lt); border-color: var(--accent-mid); }
+.priv-item:hover .priv-count { color: var(--accent); background: var(--accent-lt); border-color: var(--accent-mid); }
+
+/* Botón Ver todos — gradiente limpio */
 .priv-ver-todos {
   margin: 4px 10px 10px;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 9px 12px; background: var(--ink);
-  border-radius: 7px; color: #fff; cursor: pointer;
-  font-size: 12px; font-weight: 500;
+  padding: 10px 14px;
+  background: linear-gradient(135deg, var(--accent), var(--violet));
+  border-radius: 10px; color: #fff; cursor: pointer;
+  font-size: 12px; font-weight: 600;
+  box-shadow: 0 2px 8px rgba(79,70,229,.25);
+  transition: opacity .15s, box-shadow .15s;
 }
-.priv-ver-todos:hover { opacity: .85; }
-.priv-ver-todos strong { font-family: var(--font-serif); font-size: 18px; font-weight: 700; color: #93c5fd; }
+.priv-ver-todos:hover { opacity: .9; box-shadow: 0 4px 14px rgba(79,70,229,.35); }
+.priv-ver-todos strong {
+  font-family: var(--font); font-size: 16px; font-weight: 800;
+  color: rgba(255,255,255,.9); letter-spacing: -.5px;
+}
 
-.grupos-list { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 2px; }
+/* Lista de grupos en panel */
+.grupos-list { padding: 6px 10px 8px; display: flex; flex-direction: column; gap: 1px; }
 .grupo-pill {
   display: flex; align-items: center; gap: 8px;
-  padding: 9px 10px; border-radius: 7px; cursor: pointer; transition: background .1s;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer; transition: background .1s;
 }
 .grupo-pill:hover { background: var(--accent-lt); }
 .grupo-pill.activo { background: var(--accent-lt); }
 .grupo-pill-nombre { font-size: 12px; font-weight: 600; color: var(--ink); flex: 1; }
 .grupo-pill-info { font-size: 10px; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 90px; }
-.grupo-pill-n { font-size: 13px; font-weight: 700; color: var(--border); min-width: 18px; text-align: right; }
-.grupo-pill.activo .grupo-pill-n, .grupo-pill:hover .grupo-pill-n { color: var(--accent); }
+.grupo-pill-n {
+  font-size: 11px; font-weight: 700; color: var(--ink-3);
+  background: var(--surface-2); border: 1px solid var(--border-2);
+  padding: 1px 7px; border-radius: 20px; min-width: 18px; text-align: right;
+}
+.grupo-pill.activo .grupo-pill-n { color: var(--accent); background: var(--accent-lt); border-color: var(--accent-mid); }
+.grupo-pill:hover .grupo-pill-n { color: var(--accent); background: var(--accent-lt); border-color: var(--accent-mid); }
 
+/* Chip filtro activo */
 .active-filter {
   display: flex; align-items: center; justify-content: space-between;
   margin: 10px 12px; flex-shrink: 0;
-  background: var(--accent); color: #fff;
-  border-radius: 7px; padding: 9px 12px;
+  background: var(--accent-lt); color: var(--accent);
+  border: 1px solid var(--accent-mid);
+  border-radius: 8px; padding: 8px 12px;
   font-size: 12px; font-weight: 600; gap: 8px;
 }
 .active-filter-label { flex: 1; }
 .active-filter-clear {
-  background: rgba(255,255,255,.2); border: none;
-  color: #fff; padding: 3px 9px; border-radius: 5px;
+  background: var(--accent); border: none;
+  color: #fff; padding: 3px 9px; border-radius: 6px;
   font-size: 11px; font-weight: 600; cursor: pointer;
+  transition: opacity .12s;
 }
+.active-filter-clear:hover { opacity: .85; }
 
 /* Lista publicadores */
 .pub-list { flex: 1; overflow-y: auto; }
 .pub-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 11px 12px; cursor: pointer;
+  padding: 10px 14px; cursor: pointer;
   border-bottom: 1px solid var(--border-2);
   transition: background .1s;
 }
 .pub-item:hover { background: var(--surface-2); }
-.pub-item.sel { background: var(--accent-lt); border-left: 3px solid var(--accent); padding-left: 9px; }
+.pub-item.sel {
+  background: var(--accent-lt);
+  border-left: 3px solid var(--accent);
+  padding-left: 11px;
+}
 .pub-av {
-  width: 36px; height: 36px; border-radius: 50%;
+  width: 34px; height: 34px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 700; flex-shrink: 0;
-  border: 2px solid currentColor; background: white;
 }
 .pub-item-info { flex: 1; min-width: 0; }
-.pub-item-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -.1px; }
+.pub-item-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -.1px; color: var(--ink); }
 .pub-item-sub { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
 .pub-badge { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; flex-shrink: 0; letter-spacing: .3px; }
 
-.panel-footer { padding: 12px; border-top: 1px solid var(--border-2); background: var(--surface); flex-shrink: 0; }
+/* Footer con botón nuevo publicador */
+.panel-footer { padding: 12px 14px; border-top: 1px solid var(--border-2); background: var(--surface); flex-shrink: 0; }
 .add-btn {
   width: 100%; padding: 11px;
-  background: var(--ink); color: #fff; border: none;
-  border-radius: var(--r); font-size: 13px; font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), var(--violet));
+  color: #fff; border: none;
+  border-radius: var(--r-lg); font-size: 12px; font-weight: 700;
   display: flex; align-items: center; justify-content: center; gap: 7px;
+  box-shadow: 0 2px 8px rgba(79,70,229,.25);
+  transition: opacity .15s, box-shadow .15s;
+  letter-spacing: .2px;
 }
-.add-btn:hover { background: var(--accent); }
+.add-btn:hover { opacity: .9; box-shadow: 0 4px 14px rgba(79,70,229,.35); }
 
 /* Área S-21 */
 .main { flex: 1; overflow-y: auto; padding: 28px 32px; min-width: 0; }
@@ -603,53 +643,119 @@ input, select, textarea { font-family: var(--font); }
   gap: 12px;
 }
 .gs-card {
-  background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--r-lg); overflow: hidden;
-  transition: box-shadow .15s, transform .15s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  transition: box-shadow .18s var(--ease), transform .18s var(--ease);
+  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 2px 10px rgba(0,0,0,.04);
+  display: flex; flex-direction: column;
 }
-.gs-card:hover { box-shadow: var(--sh); transform: translateY(-1px); }
+.gs-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.09), 0 2px 6px rgba(0,0,0,.05); transform: translateY(-2px); }
+
+/* Header con banda de color y nombre del grupo */
 .gs-card-hd {
-  padding: 14px 16px 12px;
+  padding: 18px 18px 14px;
   border-bottom: 1px solid var(--border-2);
-  display: flex; align-items: center; justify-content: space-between;
+  position: relative;
 }
-.gs-card-nombre { font-size: 14px; font-weight: 700; color: var(--ink); }
+.gs-card-hd::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gs-color, var(--accent));
+}
+.gs-card-nombre {
+  font-size: 15px; font-weight: 800; color: var(--ink);
+  letter-spacing: -.3px; line-height: 1.2;
+}
 .gs-card-n {
-  font-size: 10px; font-weight: 700;
-  background: var(--accent); color: #fff;
-  padding: 2px 9px; border-radius: 20px;
+  font-size: 13px; font-weight: 800;
+  background: var(--gs-color, var(--accent));
+  color: #fff;
+  padding: 3px 10px; border-radius: 20px;
+  letter-spacing: -.2px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
-.gs-card-roles {
-  padding: 8px 16px 8px; font-size: 11px; color: var(--ink-3);
+.gs-card-super {
+  display: flex; align-items: center; gap: 6px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: var(--surface-2);
+  border-radius: 8px;
+  border: 1px solid var(--border-2);
+}
+.gs-card-super-ico {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--gs-color, var(--accent));
+  opacity: .15;
+  flex-shrink: 0;
+}
+.gs-card-super-label {
+  font-size: 10px; font-weight: 700; color: var(--ink-3);
+  letter-spacing: .5px; text-transform: uppercase;
+}
+.gs-card-super-nombre {
+  font-size: 12px; font-weight: 600; color: var(--ink);
+}
+.gs-card-super-vacio {
+  font-size: 11px; color: var(--ink-3); font-style: italic;
+}
+
+/* Stats redesigned */
+.gs-card-stats {
+  display: flex; gap: 8px;
+  padding: 12px 16px;
   border-bottom: 1px solid var(--border-2);
-  display: flex; gap: 14px; flex-wrap: wrap;
+  background: var(--surface-2);
 }
-.gs-card-rol b { color: var(--accent); font-weight: 600; }
-.gs-miembros { padding: 6px 8px; display: flex; flex-direction: column; gap: 1px; max-height: 190px; overflow-y: auto; }
+.gs-stat {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 8px 6px;
+  border-radius: 10px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+}
+.gs-stat-n {
+  font-family: var(--font);
+  font-size: 22px; font-weight: 800; line-height: 1;
+  color: var(--ink); letter-spacing: -1px;
+}
+.gs-stat-l { font-size: 9px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .5px; margin-top: 3px; font-weight: 700; line-height: 1.3; text-align: center; }
+.gs-stat-warn { background: #fff5f5; border-color: #fecaca; }
+.gs-stat-warn .gs-stat-n { color: var(--red); }
+.gs-stat-ok  { background: #f0fdf4; border-color: #bbf7d0; }
+.gs-stat-ok  .gs-stat-n { color: var(--green); }
+
+/* Miembros */
+.gs-miembros { padding: 8px 10px; display: flex; flex-direction: column; gap: 1px; max-height: 200px; overflow-y: auto; flex: 1; }
 .gs-miembro {
   display: flex; align-items: center; gap: 9px;
-  padding: 6px 8px; border-radius: 7px; cursor: pointer; transition: background .1s;
+  padding: 6px 8px; border-radius: 8px; cursor: pointer;
+  transition: background .1s;
 }
 .gs-miembro:hover { background: var(--surface-2); }
 .gs-miembro-avatar {
   width: 28px; height: 28px; border-radius: 50%;
-  background: var(--accent-lt); color: var(--accent);
   font-size: 10px; font-weight: 700;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.gs-miembro-nombre { font-size: 12px; font-weight: 500; flex: 1; }
-.gs-miembro-tipo { font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 20px; text-transform: uppercase; }
+.gs-miembro-nombre { font-size: 12px; font-weight: 500; flex: 1; color: var(--ink); }
+.gs-miembro-tipo { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; letter-spacing: .3px; }
+
+/* Footer */
 .gs-card-footer {
   padding: 10px 12px; background: var(--surface-2);
-  border-top: 1px solid var(--border-2); display: flex; gap: 6px;
+  border-top: 1px solid var(--border-2); display: flex; gap: 6px; margin-top: auto;
 }
 .gs-btn {
-  flex: 1; padding: 8px 10px;
-  background: none; border: 1px solid var(--border);
+  flex: 1; padding: 8px 8px;
+  background: var(--surface); border: 1px solid var(--border);
   border-radius: var(--r); font-size: 11px; font-weight: 600; color: var(--ink-2);
-  transition: all .12s;
+  transition: all .12s var(--ease);
 }
-.gs-btn:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent); }
+.gs-btn:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent-mid); }
 
 /* ══════════════════════════════════════════
    GRUPOS EDITOR (modal)
@@ -1461,11 +1567,12 @@ input, select, textarea { font-family: var(--font); }
 .gs-stat-ok  .gs-stat-n { color: var(--green); }
 
 .gs-btn-prim {
-  background: var(--accent) !important;
+  background: linear-gradient(135deg,var(--accent),var(--violet)) !important;
   color: #fff !important;
-  border-color: var(--accent) !important;
+  border-color: transparent !important;
+  box-shadow: 0 2px 8px rgba(79,70,229,.3);
 }
-.gs-btn-prim:hover { background: var(--accent-dk) !important; }
+.gs-btn-prim:hover { opacity: .9 !important; box-shadow: 0 4px 14px rgba(79,70,229,.4) !important; }
 .gs-card-singrupo { border-color: #fca5a5; }
 
 /* ══════════════════════════════════════════
@@ -1614,22 +1721,55 @@ input, select, textarea { font-family: var(--font); }
 .asist-screen { padding:24px 20px 40px; max-width:1040px; margin:0 auto; }
 .asist-page-hd {
   display:flex; align-items:flex-start; justify-content:space-between;
-  margin-bottom:22px; gap:12px; flex-wrap:wrap;
+  margin-bottom:24px; gap:12px; flex-wrap:wrap;
 }
-.asist-page-title { font-family:var(--font-serif); font-size:28px; font-weight:600; color:var(--ink); letter-spacing:-.5px; }
-.asist-page-sub { font-size:13px; color:var(--ink-3); margin-top:3px; }
+.asist-page-title { font-family:var(--font); font-size:22px; font-weight:800; color:var(--ink); letter-spacing:-.5px; }
+.asist-page-sub { font-size:12px; color:var(--ink-3); margin-top:3px; font-weight:500; }
 
-/* Tarjetas métricas */
-.asist-metrics { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:10px; margin-bottom:20px; }
+/* Tarjetas métricas — fila de pills compactas */
+.asist-metrics {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px; margin-bottom:16px;
+}
+@media(min-width:640px){ .asist-metrics { grid-template-columns:repeat(6,1fr); } }
 .asist-met-card {
   background:var(--surface); border:1px solid var(--border);
-  border-radius:var(--r-lg); padding:16px;
+  border-radius:var(--r-lg); padding:14px 14px 12px;
+  display:flex; flex-direction:column; gap:4px;
 }
-.asist-met-n { font-family:var(--font-serif); font-size:30px; font-weight:700; line-height:1; }
-.asist-met-l { font-size:11px; color:var(--ink-3); margin-top:5px; font-weight:500; }
-.asist-met-trend { font-size:10px; margin-top:6px; font-weight:600; }
+.asist-met-card-ico {
+  width:28px; height:28px; border-radius:8px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:4px; flex-shrink:0;
+}
+.asist-met-n { font-family:var(--font); font-size:26px; font-weight:800; line-height:1; color:var(--ink); letter-spacing:-1px; }
+.asist-met-l { font-size:10px; color:var(--ink-3); font-weight:600; text-transform:uppercase; letter-spacing:.4px; }
+.asist-met-trend { font-size:10px; margin-top:2px; font-weight:700; }
 .asist-met-trend.up { color:var(--green); }
 .asist-met-trend.dn { color:var(--red); }
+
+/* Cards por tipo */
+.asist-tipo-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px; }
+@media(max-width:520px){ .asist-tipo-cards { grid-template-columns:1fr; } }
+.asist-tipo-card {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:var(--r-lg); padding:16px 18px;
+  position:relative; overflow:hidden;
+}
+.asist-tipo-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--tc-color,var(--accent));
+}
+.asist-tipo-card-hd { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.asist-tipo-card-label { font-size:12px; font-weight:800; color:var(--ink); letter-spacing:-.2px; }
+.asist-tipo-reuniones { font-size:11px; font-weight:600; color:var(--ink-3); background:var(--surface-2); border:1px solid var(--border); padding:2px 8px; border-radius:20px; }
+.asist-tipo-card-n { font-size:32px; font-weight:800; color:var(--ink); letter-spacing:-1.5px; line-height:1; }
+.asist-tipo-card-n span { font-size:13px; font-weight:500; color:var(--ink-3); letter-spacing:0; }
+.asist-tipo-bar-bg { height:6px; background:var(--border); border-radius:4px; margin:10px 0 8px; overflow:hidden; }
+.asist-tipo-bar-fg { height:100%; border-radius:4px; background:var(--tc-color,var(--accent)); transition:width .4s var(--ease); }
+.asist-tipo-max { font-size:11px; color:var(--ink-3); font-weight:500; }
+.asist-tipo-max strong { color:var(--ink); font-weight:700; }
 
 /* Gráfica de barras SVG */
 .asist-chart-wrap {
@@ -1637,13 +1777,13 @@ input, select, textarea { font-family: var(--font); }
   border-radius:var(--r-lg); padding:18px 20px;
   margin-bottom:20px;
 }
-.asist-chart-title { font-size:12px; font-weight:700; color:var(--ink-2); letter-spacing:.3px; margin-bottom:14px; text-transform:uppercase; }
+.asist-chart-title { font-size:11px; font-weight:700; color:var(--ink-2); letter-spacing:.5px; margin-bottom:14px; text-transform:uppercase; }
 .asist-chart-svg { width:100%; overflow:visible; }
 .asist-chart-tabs { display:flex; gap:6px; margin-bottom:14px; }
 .asist-chart-tab {
   padding:5px 14px; border-radius:20px; font-size:11px; font-weight:600;
   border:1.5px solid var(--border); background:none; color:var(--ink-2); cursor:pointer;
-  transition:all .15s;
+  transition:all .15s var(--ease);
 }
 .asist-chart-tab.active { background:var(--accent); border-color:var(--accent); color:#fff; }
 
@@ -1696,17 +1836,8 @@ input, select, textarea { font-family: var(--font); }
 .asist-empty-state svg { opacity:.2; margin-bottom:12px; }
 
 /* ── Métricas por tipo ── */
-.asist-by-tipo { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:20px; }
-@media(max-width:500px){ .asist-by-tipo { grid-template-columns:1fr; } }
-.asist-tipo-card {
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:var(--r-lg); padding:14px 16px;
-}
-.asist-tipo-card-hd { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
-.asist-tipo-card-label { font-size:11px; font-weight:700; }
-.asist-tipo-card-n { font-family:var(--font-serif); font-size:22px; font-weight:700; }
-.asist-tipo-bar-bg { height:6px; background:var(--border-2); border-radius:3px; overflow:hidden; }
-.asist-tipo-bar-fg { height:100%; border-radius:3px; transition:width .4s; }
+.asist-by-tipo { margin-bottom:16px; }
+
 
 /* ══════════════════════════════════════════
    LOGIN SCREEN
@@ -1841,7 +1972,7 @@ input, select, textarea { font-family: var(--font); }
         Ingresar
       </button>
       <div style="font-size:11px;color:#9898a8;text-align:center">
-        S‑21 · Sistema de gestión de congregación
+        Congregación · S‑21
       </div>
     </div>
   </div>
@@ -2118,7 +2249,7 @@ input, select, textarea { font-family: var(--font); }
             </div>
             <div class="asist-field">
               <label>Tipo de reunión</label>
-              <select id="aTipo" class="asist-input">
+              <select id="aTipo" class="asist-input" onchange="autoTemaReunion(this.value)">
                 <option value="Entre semana">Entre semana</option>
                 <option value="Fin de semana">Fin de semana</option>
               </select>
@@ -2377,7 +2508,7 @@ input, select, textarea { font-family: var(--font); }
           </div>
           <div>
             <div style="font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#777;margin-bottom:4px;">Tipo de reunión</div>
-            <select id="aTipo" class="asist-inp" style="width:100%">
+            <select id="aTipo" class="asist-inp" style="width:100%" onchange="autoTemaReunion(this.value)">
               <option value="Entre semana">Entre semana</option>
               <option value="Fin de semana">Fin de semana</option>
             </select>
@@ -2678,7 +2809,7 @@ function renderLista() {
     const init=(pub.apellido[0]||'')+(pub.nombre[0]||'');
     const sel=pub.id===selId?' sel':'';
     return `<div class="pub-item${sel}" onclick="selPub('${pub.id}')">
-      <div class="pub-av" style="color:${col};border-color:${col}">${init}</div>
+      <div class="pub-av" style="background:${col}18;color:${col}">${init}</div>
       <div class="pub-item-info">
         <div class="pub-item-name">${pub.apellido}, ${pub.nombre}</div>
         <div class="pub-item-sub">${pub.grupo||'Sin grupo'}</div>
@@ -2931,6 +3062,19 @@ function setRecordFilter(val, btn) {
   renderAsistenciaTabla();
 }
 
+function autoTemaReunion(tipo) {
+  const temas = {
+    'Entre semana': 'Vida y Ministerio Cristiano',
+    'Fin de semana': 'Estudio de la Atalaya',
+  };
+  const campo = document.getElementById('aTema');
+  if(!campo) return;
+  const valorActual = campo.value.trim();
+  // Solo sobreescribir si está vacío o es uno de los temas por defecto
+  const esDefault = Object.values(temas).includes(valorActual) || valorActual === '';
+  if(esDefault) campo.value = temas[tipo] || '';
+}
+
 function agregarReunion() {
   const fecha = document.getElementById('aFecha').value;
   if(!fecha){ alert('Selecciona una fecha'); return; }
@@ -2968,6 +3112,11 @@ function renderAsistenciaScreen() {
   renderAsistenciaByTipo();
   renderAsistenciaChart();
   renderAsistenciaTabla();
+  // Inicializar tema por defecto según tipo seleccionado
+  setTimeout(() => {
+    const sel = document.getElementById('aTipo');
+    if(sel) autoTemaReunion(sel.value);
+  }, 50);
 }
 
 function renderAsistenciaMetrics() {
@@ -2996,29 +3145,35 @@ function renderAsistenciaMetrics() {
 
   el.innerHTML = `
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:var(--ink)">${totalR}</div>
+      <div class="asist-met-card-ico" style="background:var(--accent-lt)"><svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+      <div class="asist-met-n">${totalR}</div>
       <div class="asist-met-l">Reuniones</div>
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:var(--accent)">${promedio}</div>
-      <div class="asist-met-l">Promedio total</div>
+      <div class="asist-met-card-ico" style="background:var(--accent-lt)"><svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg></div>
+      <div class="asist-met-n">${promedio}</div>
+      <div class="asist-met-l">Promedio</div>
       ${trendHtml}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:#1d4ed8">${presTotal}</div>
-      <div class="asist-met-l">Total presencial</div>
+      <div class="asist-met-card-ico" style="background:#eff6ff"><svg width="14" height="14" fill="none" stroke="#2563eb" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div class="asist-met-n">${presTotal}</div>
+      <div class="asist-met-l">Presencial</div>
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:#6d28d9">${zoomTotal}</div>
-      <div class="asist-met-l">Total Zoom / remoto</div>
+      <div class="asist-met-card-ico" style="background:#f5f3ff"><svg width="14" height="14" fill="none" stroke="#7c3aed" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="asist-met-n">${zoomTotal}</div>
+      <div class="asist-met-l">Zoom / remoto</div>
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:var(--green)">${maxTotal}</div>
-      <div class="asist-met-l">Máxima asistencia</div>
+      <div class="asist-met-card-ico" style="background:var(--green-lt)"><svg width="14" height="14" fill="none" stroke="var(--green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+      <div class="asist-met-n">${maxTotal}</div>
+      <div class="asist-met-l">Máxima</div>
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-n" style="color:var(--amber)">${minTotal||'—'}</div>
-      <div class="asist-met-l">Mínima asistencia</div>
+      <div class="asist-met-card-ico" style="background:var(--amber-lt)"><svg width="14" height="14" fill="none" stroke="var(--amber)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
+      <div class="asist-met-n">${minTotal||'—'}</div>
+      <div class="asist-met-l">Mínima</div>
     </div>`;
 }
 
@@ -3026,7 +3181,7 @@ function renderAsistenciaByTipo() {
   const el = document.getElementById('asistByTipo'); if(!el) return;
   const lista = state.asistencia||[];
   const tipos = ['Entre semana','Fin de semana'];
-  const colores = { 'Entre semana':'#1d4ed8', 'Fin de semana':'#15803d' };
+  const colores = { 'Entre semana':'#4f46e5', 'Fin de semana':'#16a34a' };
 
   const stats = tipos.map(t => {
     const sub = lista.filter(r => r.tipo === t);
@@ -3036,18 +3191,19 @@ function renderAsistenciaByTipo() {
   });
   const maxProm = Math.max(...stats.map(s=>s.prom), 1);
 
-  el.innerHTML = stats.map(s => `
-    <div class="asist-tipo-card">
+  el.innerHTML = `<div class="asist-tipo-cards">${stats.map(s => `
+    <div class="asist-tipo-card" style="--tc-color:${colores[s.t]}">
       <div class="asist-tipo-card-hd">
-        <span class="asist-tipo-card-label" style="color:${colores[s.t]}">${s.t}</span>
-        <span style="font-size:11px;color:var(--ink-3)">${s.sub.length} reuniones</span>
+        <span class="asist-tipo-card-label">${s.t}</span>
+        <span class="asist-tipo-reuniones">${s.sub.length} reunión${s.sub.length!==1?'es':''}</span>
       </div>
-      <div class="asist-tipo-card-n" style="color:${colores[s.t]};margin-bottom:8px">${s.prom} <span style="font-size:13px;font-family:var(--font);color:var(--ink-3);font-weight:400">promedio</span></div>
+      <div class="asist-tipo-card-n">${s.prom} <span>promedio</span></div>
       <div class="asist-tipo-bar-bg">
-        <div class="asist-tipo-bar-fg" style="width:${Math.round(s.prom/maxProm*100)}%;background:${colores[s.t]}"></div>
+        <div class="asist-tipo-bar-fg" style="width:${Math.round(s.prom/maxProm*100)}%"></div>
       </div>
-      <div style="font-size:11px;color:var(--ink-3);margin-top:6px">Máxima: <strong style="color:var(--ink)">${s.max||'—'}</strong></div>
-    </div>`).join('');
+      <div class="asist-tipo-max">Máxima: <strong>${s.max||'—'}</strong></div>
+    </div>`).join('')}
+  </div>`;
 }
 
 function renderAsistenciaChart() {
@@ -3421,7 +3577,7 @@ function exportarEmergencias() {
   </thead>
   <tbody>${filas}</tbody>
 </table>
-<div class="pie">S-21 · Sistema de gestión de congregación · ${fecha}</div>
+<div class="pie">S-21 · Registro de Publicadores · ${fecha}</div>
 
 <!-- MODAL GESTIÓN USUARIOS -->
 <div class="overlay" id="modalUsuariosOverlay" style="display:none">
@@ -4927,9 +5083,44 @@ function renderDashboard() {
     return r&&r.paux;
   }).length;
   const noPredicaron = total - participaron;
-  const gruposActivos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g)).length;
+  const gruposActivos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g));
   const ancianos = pubs.filter(p=>p.anciano).length;
   const precursores = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).length;
+
+  // Bloque superintendentes — solo admin
+  const esAdmin = currentUser && currentUser.rol === 'admin';
+  const bloqueSuper = esAdmin ? (() => {
+    const filas = gruposActivos.map(g => {
+      const cfg = state.grupos?.[g] || {};
+      const superPub = cfg.super ? pubs.find(p=>p.id===cfg.super) : null;
+      const superNombre = superPub ? `${superPub.apellido}, ${superPub.nombre}` : '—';
+      const miembros = pubs.filter(p=>p.grupo===g).length;
+      const color = superPub ? 'var(--ink)' : 'var(--ink-3)';
+      return `<tr>
+        <td style="padding:9px 12px;font-weight:700;font-size:13px;color:var(--ink);white-space:nowrap">${g}</td>
+        <td style="padding:9px 12px;font-size:13px;color:${color};font-weight:${superPub?'500':'400'}">${superNombre}</td>
+        <td style="padding:9px 12px;font-size:12px;color:var(--ink-3);text-align:right">${miembros} miembros</td>
+        <td style="padding:9px 12px;text-align:right">
+          <button onclick="abrirModalGrupos()" style="font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);cursor:pointer;transition:all .12s" onmouseover="this.style.background='var(--accent-lt)';this.style.color='var(--accent)';this.style.borderColor='var(--accent-mid)'" onmouseout="this.style.background='var(--surface-2)';this.style.color='var(--ink-2)';this.style.borderColor='var(--border)'">Editar</button>
+        </td>
+      </tr>`;
+    }).join('');
+    return `
+      <div style="margin-top:28px" class="dash-section-label">Superintendentes por grupo</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.03);margin-bottom:28px">
+        <table style="width:100%;border-collapse:collapse">
+          <thead>
+            <tr style="background:var(--surface-2);border-bottom:1px solid var(--border)">
+              <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Grupo</th>
+              <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Superintendente</th>
+              <th style="padding:9px 12px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Miembros</th>
+              <th style="padding:9px 12px"></th>
+            </tr>
+          </thead>
+          <tbody>${filas}</tbody>
+        </table>
+      </div>`;
+  })() : '';
 
   document.getElementById('dashboardGrid').innerHTML = `
     <!-- Banner bienvenida -->
@@ -4940,7 +5131,7 @@ function renderDashboard() {
       </div>
       <div class="dash-banner-stats">
         <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
-        <div class="dw-stat"><div class="dw-stat-n">${gruposActivos}</div><div class="dw-stat-l">Grupos</div></div>
+        <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
         <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
       </div>
     </div>
@@ -4956,7 +5147,7 @@ function renderDashboard() {
     <div class="dash-card c-accent" onclick="irA('grupos')">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-grid"/></svg></div>
       <div class="dash-card-label">Grupos activos</div>
-      <div class="dash-card-value">${gruposActivos}</div>
+      <div class="dash-card-value">${gruposActivos.length}</div>
       <div class="dash-card-desc">Con miembros asignados</div>
     </div>
     <div class="dash-card c-accent" onclick="abrirMetricas()">
@@ -4993,8 +5184,10 @@ function renderDashboard() {
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-gear"/></svg></div>
       <div class="dash-card-label">Gestión de grupos</div>
       <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${GRUPOS_LISTA.length} grupos</div>
-      <div class="dash-card-desc">Asignar miembros y líderes</div>
+      <div class="dash-card-desc">Asignar miembros</div>
     </div>
+  </div>
+  ${bloqueSuper}
   `;
   // Update sidebar badge
   const badge = document.getElementById('sbBadgePubs');
@@ -5019,7 +5212,15 @@ function renderGruposScreen() {
   });
   const sinGrupo = esAnciano ? [] : state.publicadores.filter(p => !p.grupo || p.grupo === '');
 
-  const tarjetas = gruposActivos.map(g => {
+  // Paleta de colores para grupos — cíclica
+  const GRUPO_COLORS = [
+    '#4f46e5','#0891b2','#16a34a','#d97706','#dc2626',
+    '#7c3aed','#0d9488','#ca8a04','#db2777','#2563eb',
+    '#65a30d','#ea580c','#9333ea','#0369a1','#b45309',
+  ];
+
+  const tarjetas = gruposActivos.map((g, gIdx) => {
+    const colGrupo = GRUPO_COLORS[gIdx % GRUPO_COLORS.length];
     const miembros = state.publicadores.filter(p => p.grupo === g)
       .sort((a,b) => a.apellido.localeCompare(b.apellido));
     const info = state.grupos?.[g] || {};
@@ -5044,20 +5245,30 @@ function renderGruposScreen() {
       </div>`;
     }).join('');
 
-    return `<div class="gs-card">
+    return `<div class="gs-card" style="--gs-color:${colGrupo}">
       <div class="gs-card-hd">
-        <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:${superNombre||!superPub?'10px':'0'}">
           <div class="gs-card-nombre">${g}</div>
-          ${superNombre ? `<div class="gs-card-super">${superNombre}${auxNombre?' · '+auxNombre:''}</div>` : ''}
+          <span class="gs-card-n">${miembros.length}</span>
         </div>
-        <span class="gs-card-n">${miembros.length}</span>
+        <div class="gs-card-super">
+          <div style="width:22px;height:22px;border-radius:50%;background:${colGrupo};opacity:1;flex-shrink:0;display:flex;align-items:center;justify-content:center">
+            <svg width="11" height="11" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:1px;min-width:0">
+            <span style="font-size:9px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.6px">Superintendente</span>
+            <span style="font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${superNombre || '<span style="color:var(--ink-3);font-weight:400;font-style:italic">Sin asignar</span>'}</span>
+          </div>
+        </div>
       </div>
       <div class="gs-card-stats">
         <div class="gs-stat ${noInf>0?'gs-stat-warn':'gs-stat-ok'}">
           <span class="gs-stat-n">${predicaron}</span>
-          <span class="gs-stat-l">Predicaron · ${mesNombre}</span>
+          <span class="gs-stat-l">Predicaron</span>
         </div>
-        ${noInf>0 ? `<div class="gs-stat gs-stat-warn"><span class="gs-stat-n">${noInf}</span><span class="gs-stat-l">Sin informe</span></div>` : '<div class="gs-stat gs-stat-ok"><span class="gs-stat-n" style="font-size:13px">✓</span><span class="gs-stat-l">Todos informaron</span></div>'}
+        <div class="gs-stat ${noInf>0?'gs-stat-warn':'gs-stat-ok'}">
+          ${noInf>0 ? `<span class="gs-stat-n">${noInf}</span><span class="gs-stat-l">Sin informe</span>` : `<span class="gs-stat-n" style="font-size:18px">✓</span><span class="gs-stat-l">Al día</span>`}
+        </div>
         ${paux>0 ? `<div class="gs-stat"><span class="gs-stat-n">${paux}</span><span class="gs-stat-l">Prec. aux.</span></div>` : ''}
       </div>
       <div class="gs-miembros">${items}</div>
