@@ -2499,16 +2499,13 @@ async function ghPull() {
     const decoded = decodeURIComponent(escape(atob(json.content)));
     const remoto = JSON.parse(decoded);
 
-    // Siempre preservar los usuarios locales — son la fuente de verdad para auth
-    const usuariosLocales = state.usuarios && state.usuarios.length
-      ? JSON.parse(JSON.stringify(state.usuarios))  // copia profunda
-      : [ { ...DEFAULT_ADMIN } ];
-
-    // Cargar datos remotos (publicadores, grupos, asistencia, etc.)
+    // Cargar todo desde remoto — usuarios incluidos (son la fuente de verdad)
     state = remoto;
 
-    // Restaurar usuarios locales (ignorar los del remoto)
-    state.usuarios = usuariosLocales;
+    // Garantizar que siempre haya al menos el admin por defecto
+    if(!state.usuarios || state.usuarios.length === 0) {
+      state.usuarios = [ { ...DEFAULT_ADMIN } ];
+    }
     migrarUsuariosLegacy();
 
     localStorage.setItem(KEY, JSON.stringify(state));
@@ -3876,6 +3873,34 @@ async function verificarLogin() {
   const pin         = (document.getElementById('loginPass')?.value || '').trim();
   if(!nombreInput || !pin) { toast('Ingresa nombre y PIN'); return; }
 
+  // Mostrar indicador de carga
+  const btnLogin = document.querySelector('#loginScreen button[onclick="verificarLogin()"]');
+  if(btnLogin) { btnLogin.textContent = 'Verificando...'; btnLogin.disabled = true; }
+
+  // Primero cargar usuarios desde GitHub para tener la lista actualizada
+  try {
+    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if(res.ok) {
+      const json = await res.json();
+      const decoded = decodeURIComponent(escape(atob(json.content)));
+      const remoto = JSON.parse(decoded);
+      // Actualizar todo el state con los datos remotos
+      state = remoto;
+      if(!state.usuarios || state.usuarios.length === 0) {
+        state.usuarios = [ { ...DEFAULT_ADMIN } ];
+      }
+      migrarUsuariosLegacy();
+      localStorage.setItem(KEY, JSON.stringify(state));
+    }
+  } catch(e) {
+    // Si falla GitHub, intentar con datos locales
+  }
+
+  // Restaurar botón
+  if(btnLogin) { btnLogin.textContent = 'Ingresar'; btnLogin.disabled = false; }
+
   const users = getUsuarios();
   const user  = users.find(u => u.nombre.toLowerCase() === nombreInput.toLowerCase() && u.pin === pin);
 
@@ -3900,7 +3925,7 @@ async function verificarLogin() {
     document.getElementById('appbar-rol').style.color = getRolColor(user.rol);
   }
   applyRoleUI();
-  ghPull().catch(()=>{}).finally(() => irA('inicio'));
+  irA('inicio');
 }
 
 function logout() {
