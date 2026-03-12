@@ -7585,6 +7585,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1773278679953",
+      "fecha": "2026-03-11",
+      "tipo": "Entre semana",
+      "tema": "",
+      "presencial": 129,
+      "zoom": 58,
+      "total": 187,
+      "notas": ""
+    },
+    {
       "id": "r1773261108802",
       "fecha": "2026-03-07",
       "tipo": "Fin de semana",
