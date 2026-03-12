@@ -2444,6 +2444,7 @@ async function ghGetFileSha() {
 async function ghPush() {
   try {
     toast('Sincronizando...');
+    // Siempre obtener SHA fresco justo antes de subir para evitar conflictos
     const sha = await ghGetFileSha();
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))));
     const body = {
@@ -2461,8 +2462,30 @@ async function ghPush() {
       },
       body: JSON.stringify(body)
     });
-    if(res.ok) { toast('✓ Datos sincronizados en GitHub'); }
-    else { const e = await res.json(); toast('Error al sincronizar: ' + (e.message||res.status)); }
+    if(res.ok) {
+      toast('✓ Datos sincronizados en GitHub');
+    } else {
+      const err = await res.json();
+      // Si el error es de conflicto de SHA, reintentar una vez con SHA fresco
+      if(err.message && err.message.includes('does not match')) {
+        toast('Reintentando sincronización...');
+        const sha2 = await ghGetFileSha();
+        if(sha2) body.sha = sha2;
+        const res2 = await fetch(GH_API, {
+          method: 'PUT',
+          headers: {
+            'Authorization': 'token ' + GH_TOKEN,
+            'Content-Type': 'application/json',
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          body: JSON.stringify(body)
+        });
+        if(res2.ok) { toast('✓ Datos sincronizados en GitHub'); }
+        else { const e2 = await res2.json(); toast('Error al sincronizar: ' + (e2.message||res2.status)); }
+      } else {
+        toast('Error al sincronizar: ' + (err.message||res.status));
+      }
+    }
   } catch(e) { toast('Error de conexión: ' + e.message); }
 }
 
@@ -2476,21 +2499,17 @@ async function ghPull() {
     const decoded = decodeURIComponent(escape(atob(json.content)));
     const remoto = JSON.parse(decoded);
 
-    // Preservar usuarios locales si el remoto no los tiene o son legacy
-    const usuariosLocales = state.usuarios && state.usuarios.length ? state.usuarios : null;
+    // Siempre preservar los usuarios locales — son la fuente de verdad para auth
+    const usuariosLocales = state.usuarios && state.usuarios.length
+      ? JSON.parse(JSON.stringify(state.usuarios))  // copia profunda
+      : [ { ...DEFAULT_ADMIN } ];
+
+    // Cargar datos remotos (publicadores, grupos, asistencia, etc.)
     state = remoto;
 
-    // Migrar usuarios legacy del remoto
+    // Restaurar usuarios locales (ignorar los del remoto)
+    state.usuarios = usuariosLocales;
     migrarUsuariosLegacy();
-
-    // Si después de migrar no hay usuarios con PIN válido, usar los locales
-    const tieneUsuariosValidos = state.usuarios && state.usuarios.some(u => u.pin);
-    if(!tieneUsuariosValidos && usuariosLocales) {
-      state.usuarios = usuariosLocales;
-    }
-    if(!state.usuarios || state.usuarios.length === 0) {
-      state.usuarios = [ { ...DEFAULT_ADMIN } ];
-    }
 
     localStorage.setItem(KEY, JSON.stringify(state));
     selId = null;
