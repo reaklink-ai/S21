@@ -632,119 +632,135 @@ input, select, textarea { font-family: var(--font); }
    POR GRUPO SCREEN
 ══════════════════════════════════════════ */
 .grupos-screen-wrap { padding: 24px 20px 32px; max-width: 960px; margin: 0 auto; }
+/* ══════════════════════════════════════════
+   GRUPOS SCREEN
+══════════════════════════════════════════ */
 .gs-header {
   display: flex; align-items: center; justify-content: space-between;
-  margin-bottom: 20px; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 24px; gap: 16px; flex-wrap: wrap;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 18px 24px;
+  box-shadow: var(--sh);
 }
-.gs-title { font-family: var(--font-serif); font-size: 28px; font-weight: 600; color: var(--ink); letter-spacing: -.5px; }
+.gs-title { font-family: var(--font-serif); font-size: 24px; font-weight: 600; color: var(--ink); letter-spacing: -.4px; }
+.gs-subtitle { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
 .gs-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+  gap: 16px;
 }
+
+/* ── TARJETA ── */
 .gs-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-xl);
   overflow: hidden;
   transition: box-shadow .18s var(--ease), transform .18s var(--ease);
-  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 2px 10px rgba(0,0,0,.04);
+  box-shadow: var(--sh);
   display: flex; flex-direction: column;
 }
-.gs-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.09), 0 2px 6px rgba(0,0,0,.05); transform: translateY(-2px); }
+.gs-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.1), 0 2px 8px rgba(0,0,0,.05); transform: translateY(-2px); }
 
-/* Header con banda de color y nombre del grupo */
+/* ── CABECERA ── */
 .gs-card-hd {
   padding: 18px 18px 14px;
-  border-bottom: 1px solid var(--border-2);
-  position: relative;
+  background: var(--accent);
+  position: relative; overflow: hidden;
 }
-.gs-card-hd::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: var(--gs-color, var(--accent));
+.gs-card-hd::after {
+  content: ''; position: absolute; top: -20px; right: -20px;
+  width: 90px; height: 90px; border-radius: 50%;
+  background: rgba(255,255,255,.08); pointer-events: none;
+}
+.gs-card-hd-top {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;
 }
 .gs-card-nombre {
-  font-size: 15px; font-weight: 800; color: var(--ink);
-  letter-spacing: -.3px; line-height: 1.2;
+  font-size: 17px; font-weight: 800; color: #fff;
+  letter-spacing: -.4px; line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0,0,0,.15);
 }
 .gs-card-n {
-  font-size: 13px; font-weight: 800;
-  background: var(--gs-color, var(--accent));
-  color: #fff;
-  padding: 3px 10px; border-radius: 20px;
-  letter-spacing: -.2px;
-  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  font-size: 11px; font-weight: 800;
+  background: rgba(255,255,255,.22);
+  color: #fff; padding: 3px 10px; border-radius: 20px;
+  white-space: nowrap; flex-shrink: 0;
 }
 .gs-card-super {
-  display: flex; align-items: center; gap: 6px;
-  margin-top: 8px;
-  padding: 6px 10px;
-  background: var(--surface-2);
-  border-radius: 8px;
-  border: 1px solid var(--border-2);
+  display: flex; align-items: center; gap: 8px; margin-top: 12px;
 }
-.gs-card-super-ico {
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--gs-color, var(--accent));
-  opacity: .15;
-  flex-shrink: 0;
+.gs-card-super-av {
+  width: 26px; height: 26px; border-radius: 50%;
+  background: rgba(255,255,255,.25);
+  border: 1.5px solid rgba(255,255,255,.45);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 10px; font-weight: 800; color: #fff;
 }
+.gs-card-super-av.vacio {
+  background: rgba(255,255,255,.1);
+  border: 1.5px dashed rgba(255,255,255,.35);
+}
+.gs-card-super-info { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
 .gs-card-super-label {
-  font-size: 10px; font-weight: 700; color: var(--ink-3);
-  letter-spacing: .5px; text-transform: uppercase;
+  font-size: 8px; font-weight: 700; color: rgba(255,255,255,.6);
+  letter-spacing: .7px; text-transform: uppercase;
 }
 .gs-card-super-nombre {
-  font-size: 12px; font-weight: 600; color: var(--ink);
+  font-size: 12px; font-weight: 700; color: #fff;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.gs-card-super-vacio {
-  font-size: 11px; color: var(--ink-3); font-style: italic;
-}
+.gs-card-super-vacio { font-size: 11px; color: rgba(255,255,255,.5); font-style: italic; }
 
-/* Stats redesigned */
-.gs-card-stats {
-  display: flex; gap: 8px;
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-2);
+/* ── BARRA DE PROGRESO ── */
+.gs-progress-wrap {
+  padding: 12px 16px; border-bottom: 1px solid var(--border-2);
   background: var(--surface-2);
 }
-.gs-stat {
-  flex: 1;
-  display: flex; flex-direction: column; align-items: center;
-  padding: 8px 6px;
-  border-radius: 10px;
-  text-align: center;
-  background: var(--surface);
-  border: 1px solid var(--border-2);
+.gs-progress-row {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;
 }
-.gs-stat-n {
-  font-family: var(--font);
-  font-size: 22px; font-weight: 800; line-height: 1;
-  color: var(--ink); letter-spacing: -1px;
-}
-.gs-stat-l { font-size: 9px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .5px; margin-top: 3px; font-weight: 700; line-height: 1.3; text-align: center; }
-.gs-stat-warn { background: #fff5f5; border-color: #fecaca; }
-.gs-stat-warn .gs-stat-n { color: var(--red); }
-.gs-stat-ok  { background: #f0fdf4; border-color: #bbf7d0; }
-.gs-stat-ok  .gs-stat-n { color: var(--green); }
+.gs-progress-label { font-size: 10px; font-weight: 700; color: var(--ink-2); text-transform: uppercase; letter-spacing: .5px; }
+.gs-progress-nums { font-size: 11px; font-weight: 600; color: var(--ink-3); }
+.gs-progress-nums strong { color: var(--ink); }
+.gs-progress-bar { height: 6px; border-radius: 99px; background: var(--border-2); overflow: hidden; }
+.gs-progress-fill { height: 100%; border-radius: 99px; background: var(--accent); transition: width .4s var(--ease); }
+.gs-progress-fill.warn { background: var(--red); }
+.gs-progress-fill.ok   { background: var(--green); }
 
-/* Miembros */
-.gs-miembros { padding: 8px 10px; display: flex; flex-direction: column; gap: 1px; max-height: 200px; overflow-y: auto; flex: 1; }
+/* ── CHIPS ── */
+.gs-chips {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding: 10px 14px; border-bottom: 1px solid var(--border-2);
+}
+.gs-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 99px;
+  font-size: 11px; font-weight: 700; border: 1px solid;
+}
+.gs-chip-warn  { background: var(--red-lt);   color: var(--red);   border-color: #fecaca; }
+.gs-chip-ok    { background: var(--green-lt);  color: var(--green); border-color: #bbf7d0; }
+.gs-chip-amber { background: var(--amber-lt);  color: var(--amber); border-color: #fde68a; }
+.gs-chip-dot   { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink:0; }
+
+/* ── MIEMBROS ── */
+.gs-miembros { padding: 6px 10px; display: flex; flex-direction: column; gap: 1px; max-height: 210px; overflow-y: auto; flex: 1; }
 .gs-miembro {
   display: flex; align-items: center; gap: 9px;
-  padding: 6px 8px; border-radius: 8px; cursor: pointer;
-  transition: background .1s;
+  padding: 5px 8px; border-radius: 8px; cursor: pointer; transition: background .1s;
 }
 .gs-miembro:hover { background: var(--surface-2); }
 .gs-miembro-avatar {
-  width: 28px; height: 28px; border-radius: 50%;
-  font-size: 10px; font-weight: 700;
+  width: 26px; height: 26px; border-radius: 50%;
+  font-size: 9px; font-weight: 800;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.gs-miembro-nombre { font-size: 12px; font-weight: 500; flex: 1; color: var(--ink); }
-.gs-miembro-tipo { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; letter-spacing: .3px; }
+.gs-miembro-nombre { font-size: 12px; font-weight: 500; flex: 1; color: var(--ink); line-height: 1.3; }
+.gs-miembro-tipo { font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 20px; text-transform: uppercase; letter-spacing: .3px; white-space: nowrap; }
 
-/* Footer */
+/* ── FOOTER ── */
 .gs-card-footer {
   padding: 10px 12px; background: var(--surface-2);
   border-top: 1px solid var(--border-2); display: flex; gap: 6px; margin-top: auto;
@@ -1198,8 +1214,9 @@ input, select, textarea { font-family: var(--font); }
 
 /* Barra acciones (encima del formulario) */
 .s21-toolbar {
-  background: var(--ink);
-  padding: 12px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1207,16 +1224,16 @@ input, select, textarea { font-family: var(--font); }
 }
 .s21-toolbar-name {
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: var(--ink);
   flex: 1;
-  letter-spacing: -.2px;
+  letter-spacing: -.3px;
 }
 .s21-toolbar-btn {
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  color: rgba(255,255,255,.85);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--ink-2);
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 11px;
@@ -1227,9 +1244,9 @@ input, select, textarea { font-family: var(--font); }
   white-space: nowrap;
   letter-spacing: .3px;
 }
-.s21-toolbar-btn:hover { background: rgba(255,255,255,.2); color: #fff; }
+.s21-toolbar-btn:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent-mid); }
 .s21-toolbar-btn.edit { background: var(--accent); border-color: var(--accent); color: #fff; }
-.s21-toolbar-btn.edit:hover { background: var(--accent-dk); }
+.s21-toolbar-btn.edit:hover { background: var(--accent-dk); border-color: var(--accent-dk); }
 
 /* Año navigation */
 .s21-anio-bar {
@@ -1275,7 +1292,7 @@ input, select, textarea { font-family: var(--font); }
 
 /* ── El formulario en sí — replica oficial ── */
 .s21-form {
-  padding: 18px 20px 4px;
+  padding: 10px 20px 4px;
 }
 .s21-form-title {
   text-align: center;
@@ -1534,46 +1551,15 @@ input, select, textarea { font-family: var(--font); }
   .s21-name-input { font-size: 15px; }
 }
 
-/* ── Grupos screen mejorado ── */
-.gs-subtitle { font-size: 13px; color: var(--ink-3); margin-top: 3px; }
-.gs-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:20px; gap:12px; flex-wrap:wrap; }
-.gs-card-super { font-size: 11px; color: var(--ink-3); margin-top: 2px; }
-
-.gs-card-stats {
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--border-2);
-  background: var(--surface-2);
-}
-.gs-stat {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 8px;
-  border-right: 1px solid var(--border-2);
-  text-align: center;
-}
-.gs-stat:last-child { border-right: none; }
-.gs-stat-n {
-  font-family: var(--font-serif);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--ink);
-}
-.gs-stat-l { font-size: 9px; color: var(--ink-3); text-transform: uppercase; letter-spacing: .5px; margin-top: 3px; font-weight: 600; }
-.gs-stat-warn .gs-stat-n { color: var(--red); }
-.gs-stat-ok  .gs-stat-n { color: var(--green); }
-
+/* ── gs-btn-prim y card sin grupo ── */
 .gs-btn-prim {
   background: linear-gradient(135deg,var(--accent),var(--violet)) !important;
-  color: #fff !important;
-  border-color: transparent !important;
+  color: #fff !important; border-color: transparent !important;
   box-shadow: 0 2px 8px rgba(79,70,229,.3);
 }
 .gs-btn-prim:hover { opacity: .9 !important; box-shadow: 0 4px 14px rgba(79,70,229,.4) !important; }
 .gs-card-singrupo { border-color: #fca5a5; }
+.gs-card-singrupo .gs-card-hd { background: var(--red); }
 
 /* ══════════════════════════════════════════
    MODAL PUBLICADOR — FORM FIELDS
@@ -2627,6 +2613,7 @@ function cargarState() {
   } catch(e) {}
 }
 function saveState() {
+  state._lastModified = Date.now();
   localStorage.setItem(KEY, JSON.stringify(state));
 }
 
@@ -2642,53 +2629,101 @@ async function ghGetFileSha() {
   } catch(e) { return null; }
 }
 
-async function ghPush() {
+// ── Merge-safe sync ──
+// Antes de cada push: descarga remoto, mezcla campo a campo, sube merged.
+// Así dos usuarios simultáneos no se pisan entre sí.
+let _syncQueue = Promise.resolve();
+
+function saveStateAndSync() {
+  saveState();
+  _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+}
+
+async function _mergeAndPush(intentos = 0) {
   try {
-    toast('Sincronizando...');
-    // Siempre obtener SHA fresco justo antes de subir para evitar conflictos
-    const sha = await ghGetFileSha();
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))));
-    const body = {
-      message: 'sync: ' + new Date().toISOString().slice(0,16).replace('T',' '),
-      content,
-      branch: GH_BRANCH
-    };
+    // 1. Obtener versión remota fresca + SHA
+    const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
+    });
+
+    let remoto = null, sha = null;
+    if(res.ok) {
+      const json = await res.json();
+      sha = json.sha;
+      try { remoto = JSON.parse(decodeURIComponent(escape(atob(json.content)))); } catch(e) {}
+    }
+
+    // 2. Mezclar: local gana en sus propios datos, pero preserva cambios remotos que local no tocó
+    const merged = remoto ? _mergeStates(remoto, state) : JSON.parse(JSON.stringify(state));
+    merged._lastModified = Date.now();
+
+    // 3. PUT con el SHA fresco
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(merged, null, 2))));
+    const body = { message: 'sync: ' + new Date().toISOString().slice(0,16).replace('T',' '), content, branch: GH_BRANCH };
     if(sha) body.sha = sha;
-    const res = await fetch(GH_API, {
+
+    const putRes = await fetch(GH_API, {
       method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + GH_TOKEN,
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json'
-      },
+      headers: { 'Authorization': 'token ' + GH_TOKEN, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify(body)
     });
-    if(res.ok) {
-      toast('✓ Datos sincronizados en GitHub');
-    } else {
-      const err = await res.json();
-      // Si el error es de conflicto de SHA, reintentar una vez con SHA fresco
-      if(err.message && err.message.includes('does not match')) {
-        toast('Reintentando sincronización...');
-        const sha2 = await ghGetFileSha();
-        if(sha2) body.sha = sha2;
-        const res2 = await fetch(GH_API, {
-          method: 'PUT',
-          headers: {
-            'Authorization': 'token ' + GH_TOKEN,
-            'Content-Type': 'application/json',
-            'Accept': 'application/vnd.github.v3+json'
-          },
-          body: JSON.stringify(body)
-        });
-        if(res2.ok) { toast('✓ Datos sincronizados en GitHub'); }
-        else { const e2 = await res2.json(); toast('Error al sincronizar: ' + (e2.message||res2.status)); }
-      } else {
-        toast('Error al sincronizar: ' + (err.message||res.status));
-      }
+
+    if(putRes.ok) {
+      state = merged;
+      saveState();
+      toast('✓ Datos sincronizados');
+      return;
     }
-  } catch(e) { toast('Error de conexión: ' + e.message); }
+
+    const err = await putRes.json();
+    const esConflicto = err.message && (err.message.includes('does not match') || putRes.status === 409 || putRes.status === 422);
+    if(esConflicto && intentos < 4) {
+      await new Promise(r => setTimeout(r, 500 * (intentos + 1)));
+      return _mergeAndPush(intentos + 1);
+    }
+    toast('Error al sincronizar: ' + (err.message || putRes.status));
+  } catch(e) {
+    if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1); }
+    toast('Error de conexión al sincronizar');
+  }
 }
+
+// Mezcla inteligente: preserva cambios de ambos lados
+function _mergeStates(remoto, local) {
+  const m = JSON.parse(JSON.stringify(local));
+
+  // Publicadores: agregar los del remoto que local no tiene
+  const localIds = new Set((local.publicadores||[]).map(p=>p.id));
+  (remoto.publicadores||[]).forEach(rp => {
+    if(!localIds.has(rp.id)) { m.publicadores.push(rp); return; }
+    // Mezclar registros mes a mes: tomar del remoto solo lo que local no tiene
+    const lp = m.publicadores.find(p=>p.id===rp.id);
+    if(!lp) return;
+    Object.entries(rp.registros||{}).forEach(([anio, meses]) => {
+      if(!lp.registros) lp.registros = {};
+      if(!lp.registros[anio]) lp.registros[anio] = {};
+      Object.entries(meses||{}).forEach(([mes, val]) => {
+        if(!lp.registros[anio][mes]) lp.registros[anio][mes] = val;
+      });
+    });
+  });
+
+  // Grupos: preservar asignaciones remotas que local no tiene
+  Object.entries(remoto.grupos||{}).forEach(([g, cfg]) => {
+    if(!m.grupos) m.grupos = {};
+    if(!m.grupos[g]) { m.grupos[g] = cfg; return; }
+    if(!m.grupos[g].super && cfg.super) m.grupos[g].super = cfg.super;
+    if(!m.grupos[g].aux   && cfg.aux)   m.grupos[g].aux   = cfg.aux;
+  });
+
+  // Asistencia: agregar registros remotos que local no tiene (por ID)
+  const localAIds = new Set((local.asistencia||[]).map(r=>r.id));
+  (remoto.asistencia||[]).forEach(r => { if(!localAIds.has(r.id)) m.asistencia.push(r); });
+
+  return m;
+}
+
+async function ghPush(intentos = 0) { return _mergeAndPush(intentos); }
 
 async function ghPull() {
   try {
@@ -2697,29 +2732,31 @@ async function ghPull() {
     });
     if(res.status === 404) { toast('No hay datos en GitHub aún'); return; }
     const json = await res.json();
-    const decoded = decodeURIComponent(escape(atob(json.content)));
-    const remoto = JSON.parse(decoded);
+    const remoto = JSON.parse(decodeURIComponent(escape(atob(json.content))));
 
-    // GitHub es la fuente de verdad — cargar todo incluyendo usuarios
-    state = remoto;
-    if(!state.usuarios || state.usuarios.length === 0) {
-      state.usuarios = [ { ...DEFAULT_ADMIN } ];
+    const tsLocal  = state._lastModified || 0;
+    const tsRemoto = remoto._lastModified || 0;
+
+    // Si local tiene cambios más recientes no subidos, mezclar y subir
+    if(tsLocal > tsRemoto) {
+      toast('Sincronizando cambios locales...');
+      await _mergeAndPush();
+      return;
     }
-    migrarUsuariosLegacy();
 
+    // GitHub más reciente: mezclar remoto con local y aplicar
+    state = _mergeStates(state, remoto);
+    if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [{ ...DEFAULT_ADMIN }];
+    migrarUsuariosLegacy();
     localStorage.setItem(KEY, JSON.stringify(state));
     selId = null;
     renderDashboard();
     renderLista();
-    toast('✓ Datos cargados desde GitHub');
+    toast('✓ Datos actualizados');
   } catch(e) { toast('Error al cargar: ' + e.message); }
 }
 
-// Al guardar, también sincroniza con GitHub
-function saveStateAndSync() {
-  saveState();
-  ghPush();
-}
+
 
 function getPub(id) { return state.publicadores.find(p=>p.id===id); }
 
@@ -4498,10 +4535,11 @@ const GRUPOS_LISTA = Array.from({length:14},(_,i)=>`Grupo ${i+1}`);
 let filtroGrupo = null;
 
 function initGrupos() {
-  if(!state.grupos) {
-    state.grupos = {};
-    GRUPOS_LISTA.forEach(g => { state.grupos[g] = { super:'', aux:'' }; });
-  }
+  if(!state.grupos) state.grupos = {};
+  // Agregar grupos que faltan sin tocar los que ya tienen datos
+  GRUPOS_LISTA.forEach(g => {
+    if(!state.grupos[g]) state.grupos[g] = { super:'', aux:'' };
+  });
 }
 
 function filtrarGrupo(nombre) {
@@ -5213,26 +5251,25 @@ function renderGruposScreen() {
   const sinGrupo = esAnciano ? [] : state.publicadores.filter(p => !p.grupo || p.grupo === '');
 
   // Paleta de colores para grupos — cíclica
-  const GRUPO_COLORS = [
-    '#4f46e5','#0891b2','#16a34a','#d97706','#dc2626',
-    '#7c3aed','#0d9488','#ca8a04','#db2777','#2563eb',
-    '#65a30d','#ea580c','#9333ea','#0369a1','#b45309',
-  ];
-
-  const tarjetas = gruposActivos.map((g, gIdx) => {
-    const colGrupo = GRUPO_COLORS[gIdx % GRUPO_COLORS.length];
+  const tarjetas = gruposActivos.map((g) => {
     const miembros = state.publicadores.filter(p => p.grupo === g)
       .sort((a,b) => a.apellido.localeCompare(b.apellido));
     const info = state.grupos?.[g] || {};
     const superPub = info.super ? state.publicadores.find(p=>p.id===info.super) : null;
     const auxPub   = info.aux   ? state.publicadores.find(p=>p.id===info.aux)   : null;
-    const superNombre = superPub ? getNombreCorto(superPub) : null;
-    const auxNombre   = auxPub   ? getNombreCorto(auxPub)   : null;
+    const superNombre = superPub ? `${superPub.apellido.split(' ')[0]}, ${superPub.nombre.split(' ')[0]}` : null;
+    const auxNombre   = auxPub   ? `${auxPub.apellido.split(' ')[0]}, ${auxPub.nombre.split(' ')[0]}`   : null;
 
-    // Stats del mes
     const predicaron = miembros.filter(p => getReg(p,anio,mesC).particip).length;
     const noInf = miembros.length - predicaron;
     const paux = miembros.filter(p => getReg(p,anio,mesC).paux).length;
+    const pct = miembros.length ? Math.round((predicaron/miembros.length)*100) : 0;
+    const progClass = pct === 100 ? 'ok' : noInf > 0 ? 'warn' : '';
+
+    const chips = [];
+    if(noInf > 0) chips.push(`<span class="gs-chip gs-chip-warn"><span class="gs-chip-dot"></span>${noInf} sin informe</span>`);
+    else          chips.push(`<span class="gs-chip gs-chip-ok"><span class="gs-chip-dot"></span>Al día</span>`);
+    if(paux > 0)  chips.push(`<span class="gs-chip gs-chip-amber"><span class="gs-chip-dot"></span>${paux} prec. aux.</span>`);
 
     const items = miembros.map(p => {
       const tipo = tipoPrincipal(p);
@@ -5245,32 +5282,38 @@ function renderGruposScreen() {
       </div>`;
     }).join('');
 
-    return `<div class="gs-card" style="--gs-color:${colGrupo}">
+    const superInits = superPub ? (superPub.apellido[0]||'')+(superPub.nombre[0]||'') : '';
+
+    return `<div class="gs-card">
       <div class="gs-card-hd">
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:${superNombre||!superPub?'10px':'0'}">
+        <div class="gs-card-hd-top">
           <div class="gs-card-nombre">${g}</div>
-          <span class="gs-card-n">${miembros.length}</span>
+          <span class="gs-card-n">${miembros.length} miembros</span>
         </div>
         <div class="gs-card-super">
-          <div style="width:22px;height:22px;border-radius:50%;background:${colGrupo};opacity:1;flex-shrink:0;display:flex;align-items:center;justify-content:center">
-            <svg width="11" height="11" fill="none" stroke="#fff" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:1px;min-width:0">
-            <span style="font-size:9px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.6px">Superintendente</span>
-            <span style="font-size:12px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${superNombre || '<span style="color:var(--ink-3);font-weight:400;font-style:italic">Sin asignar</span>'}</span>
+          ${superPub
+            ? `<div class="gs-card-super-av">${superInits}</div>`
+            : `<div class="gs-card-super-av vacio"><svg width="11" height="11" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>`
+          }
+          <div class="gs-card-super-info">
+            <span class="gs-card-super-label">Superintendente</span>
+            ${superNombre
+              ? `<span class="gs-card-super-nombre">${superNombre}${auxNombre ? ` <span style="opacity:.7;font-weight:500">· ${auxNombre}</span>` : ''}</span>`
+              : `<span class="gs-card-super-vacio">Sin asignar</span>`
+            }
           </div>
         </div>
       </div>
-      <div class="gs-card-stats">
-        <div class="gs-stat ${noInf>0?'gs-stat-warn':'gs-stat-ok'}">
-          <span class="gs-stat-n">${predicaron}</span>
-          <span class="gs-stat-l">Predicaron</span>
+      <div class="gs-progress-wrap">
+        <div class="gs-progress-row">
+          <span class="gs-progress-label">Informes ${mesNombre}</span>
+          <span class="gs-progress-nums"><strong>${predicaron}</strong> / ${miembros.length}</span>
         </div>
-        <div class="gs-stat ${noInf>0?'gs-stat-warn':'gs-stat-ok'}">
-          ${noInf>0 ? `<span class="gs-stat-n">${noInf}</span><span class="gs-stat-l">Sin informe</span>` : `<span class="gs-stat-n" style="font-size:18px">✓</span><span class="gs-stat-l">Al día</span>`}
+        <div class="gs-progress-bar">
+          <div class="gs-progress-fill ${progClass}" style="width:${pct}%"></div>
         </div>
-        ${paux>0 ? `<div class="gs-stat"><span class="gs-stat-n">${paux}</span><span class="gs-stat-l">Prec. aux.</span></div>` : ''}
       </div>
+      <div class="gs-chips">${chips.join('')}</div>
       <div class="gs-miembros">${items}</div>
       <div class="gs-card-footer">
         <button class="gs-btn" onclick="_descargarPlantillaGrupo('${g}')">↓ Plantilla</button>
@@ -5283,13 +5326,15 @@ function renderGruposScreen() {
   const sinGrupoBloque = sinGrupo.length ? `
     <div class="gs-card gs-card-singrupo">
       <div class="gs-card-hd">
-        <div class="gs-card-nombre" style="color:var(--red)">Sin grupo asignado</div>
-        <span class="gs-card-n" style="background:var(--red)">${sinGrupo.length}</span>
+        <div class="gs-card-hd-top">
+          <div class="gs-card-nombre">Sin grupo asignado</div>
+          <span class="gs-card-n">${sinGrupo.length} miembros</span>
+        </div>
       </div>
       <div class="gs-miembros" style="max-height:200px">
         ${sinGrupo.sort((a,b)=>a.apellido.localeCompare(b.apellido)).map(p=>`
           <div class="gs-miembro" onclick="verPublicadorDesdeGrupo('${p.id}')">
-            <div class="gs-miembro-avatar">${(p.apellido[0]||'')+(p.nombre[0]||'')}</div>
+            <div class="gs-miembro-avatar" style="background:var(--red-lt);color:var(--red)">${(p.apellido[0]||'')+(p.nombre[0]||'')}</div>
             <span class="gs-miembro-nombre">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</span>
           </div>`).join('')}
       </div>
@@ -5353,8 +5398,32 @@ renderGruposPanel();
       // Primero aplicar permisos, luego ir al inicio
       applyRoleUI();
       irA('inicio');
-      // Luego sincronizar en segundo plano
-      setTimeout(() => ghPull().catch(()=>{}), 500);
+      // Sincronizar: si local tiene grupos asignados y remoto no, subir local
+      setTimeout(async () => {
+        try {
+          const res = await fetch(GH_API + '?ref=' + GH_BRANCH + '&t=' + Date.now(), {
+            headers: { 'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json' }
+          });
+          if(!res.ok) return;
+          const json = await res.json();
+          const remoto = JSON.parse(decodeURIComponent(escape(atob(json.content))));
+          const tsLocal  = state._lastModified || 0;
+          const tsRemoto = remoto._lastModified || 0;
+          // Si local es más reciente o tiene supers asignados que remoto no tiene → subir
+          const localTieneSupers = Object.values(state.grupos||{}).some(g=>g.super);
+          const remotoTieneSupers = Object.values(remoto.grupos||{}).some(g=>g.super);
+          if(tsLocal > tsRemoto || (localTieneSupers && !remotoTieneSupers)) {
+            await _mergeAndPush();
+          } else {
+            // Remoto más reciente: mezclar
+            state = _mergeStates(state, remoto);
+            if(!state.usuarios||state.usuarios.length===0) state.usuarios=[{...DEFAULT_ADMIN}];
+            migrarUsuariosLegacy();
+            localStorage.setItem(KEY, JSON.stringify(state));
+            renderDashboard(); renderLista();
+          }
+        } catch(e) {}
+      }, 500);
     } catch(e) {
       currentUser = null;
       setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
