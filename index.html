@@ -585,6 +585,11 @@ input, select, textarea { font-family: var(--font); }
   transition: opacity .12s;
 }
 .active-filter-clear:hover { opacity: .85; }
+.datos-section-label {
+  font-size: 10px; font-weight: 800; letter-spacing: .8px;
+  color: var(--ink-3); text-transform: uppercase;
+  padding: 16px 4px 6px; margin: 0;
+}
 
 /* Lista publicadores */
 .pub-list-wrap { flex: 1; display: flex; overflow: hidden; min-height: 0; }
@@ -636,6 +641,20 @@ input, select, textarea { font-family: var(--font); }
 .pub-item-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -.1px; color: var(--ink); }
 .pub-item-sub { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
 .pub-badge { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; flex-shrink: 0; letter-spacing: .3px; }
+
+/* Botón volver al inicio */
+.pub-scroll-top {
+  position: absolute; bottom: 60px; right: 30px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: #fff; border: none;
+  font-size: 14px; cursor: pointer; display: none;
+  align-items: center; justify-content: center;
+  box-shadow: 0 2px 10px rgba(79,70,229,.4);
+  transition: opacity .2s, transform .2s;
+  z-index: 10;
+}
+.pub-scroll-top:hover { opacity: .85; transform: translateY(-2px); }
+.pub-scroll-top.visible { display: flex; }
 
 /* Grupos como chips horizontales */
 .grupos-chips { display: flex; flex-wrap: wrap; gap: 5px; padding: 6px 10px 10px; }
@@ -2087,34 +2106,34 @@ input, select, textarea { font-family: var(--font); }
     <div class="sb-sep"></div>
     <!-- Sección datos admin/secretario -->
     <div id="sbSectionDatos">
-      <div class="sb-section-label">Datos</div>
+      <div class="sb-section-label">Informes</div>
+      <nav class="sb-nav">
+        <button class="sb-nav-item sb-perm-edit" onclick="exportarPlantillaInformes()">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla del mes
+        </button>
+        <button class="sb-nav-item sb-perm-edit" onclick="importarInformes()">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Cargar informe
+        </button>
+        <button class="sb-nav-item sb-perm-export" onclick="exportarHistoricoExcel()">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Histórico Excel
+        </button>
+      </nav>
+      <div class="sb-section-label">Publicadores</div>
       <nav class="sb-nav">
         <button class="sb-nav-item sb-perm-edit" onclick="importarCSV()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar CSV
         </button>
-        <button class="sb-nav-item sb-perm-export" onclick="ghPush()" style="color:var(--accent);font-weight:700">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Guardar en nube ☁
+        <button class="sb-nav-item" onclick="irA('inactivos')">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-inactive"/></svg></span>Inactivos
         </button>
-        <button class="sb-nav-item" onclick="ghPull()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Cargar desde nube
-        </button>
+      </nav>
+      <div class="sb-section-label">Sistema</div>
+      <nav class="sb-nav">
         <button class="sb-nav-item sb-perm-export" onclick="exportarTodo()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Backup JSON local
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Backup JSON
         </button>
         <button class="sb-nav-item sb-perm-admin" onclick="importarDatos()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Restaurar JSON
-        </button>
-        <button class="sb-nav-item sb-perm-export" onclick="exportarPlantillaCSV()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla publicadores
-        </button>
-        <button class="sb-nav-item" onclick="exportarPlantillaInformes()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla informes
-        </button>
-        <button class="sb-nav-item sb-perm-edit" onclick="importarInformes()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Importar informes
-        </button>
-        <button class="sb-nav-item" onclick="irA('inactivos')">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-inactive"/></svg></span>Inactivos
         </button>
         <button class="sb-nav-item sb-perm-admin" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-gear"/></svg></span>Usuarios
@@ -2204,9 +2223,10 @@ input, select, textarea { font-family: var(--font); }
             <span class="active-filter-label" id="filtroChipLabel"></span>
             <button class="active-filter-clear" onclick="limpiarFiltros()">Limpiar ×</button>
           </div>
-          <div class="pub-list-wrap">
-            <div class="pub-list" id="pubList"></div>
+          <div class="pub-list-wrap" style="position:relative">
+            <div class="pub-list" id="pubList" onscroll="onPubListScroll()"></div>
             <div class="pub-alpha-index" id="alphaIndex"></div>
+            <button class="pub-scroll-top" id="scrollTopBtn" onclick="pubListScrollTop()" title="Volver al inicio">↑</button>
           </div>
           <div class="panel-footer">
             <button class="add-btn" onclick="abrirModalNuevo()">
@@ -2320,52 +2340,58 @@ input, select, textarea { font-family: var(--font); }
 
     <!-- DATOS (solo móvil) -->
     <div class="screen" id="screen-datos" style="display:none">
-      <div style="padding:24px 16px 80px">
-        <div style="font-family:var(--font-serif);font-size:22px;font-weight:700;margin-bottom:20px">Datos</div>
+      <div style="padding:20px 16px 80px">
+        <div style="font-family:var(--font-serif);font-size:22px;font-weight:700;margin-bottom:4px">Datos</div>
+
+        <div class="datos-section-label">Informes</div>
         <div class="datos-list">
-          <div class="datos-item" onclick="importarCSV()">
+          <div class="datos-item sb-perm-edit" onclick="exportarPlantillaInformes()">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
+            <div><div class="datos-item-title">Plantilla del mes</div><div class="datos-item-desc">CSV por grupo para llenar y devolver</div></div>
+          </div>
+          <div class="datos-item sb-perm-edit" onclick="importarInformes()">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
+            <div><div class="datos-item-title">Cargar informe</div><div class="datos-item-desc">Importar CSV con informes del mes</div></div>
+          </div>
+          <div class="datos-item sb-perm-export" onclick="exportarHistoricoExcel()">
+            <div class="datos-item-ico" style="background:#dcfce7;color:#16a34a"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
+            <div><div class="datos-item-title" style="color:#16a34a">Histórico Excel</div><div class="datos-item-desc">Exportar todo el historial de informes</div></div>
+          </div>
+        </div>
+
+        <div class="datos-section-label">Publicadores</div>
+        <div class="datos-list">
+          <div class="datos-item sb-perm-edit" onclick="importarCSV()">
             <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
             <div><div class="datos-item-title">Importar CSV</div><div class="datos-item-desc">Cargar publicadores desde archivo CSV</div></div>
           </div>
-          <div class="datos-item" onclick="ghPush()" style="border-color:#bfdbfe">
-            <div class="datos-item-ico" style="background:var(--accent-lt);color:var(--accent)"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
-            <div><div class="datos-item-title" style="color:var(--accent)">Guardar en nube ☁</div><div class="datos-item-desc">Sincroniza datos con GitHub para todos</div></div>
-          </div>
-          <div class="datos-item" onclick="ghPull()">
+          <div class="datos-item sb-perm-export" onclick="exportarPlantillaCSV()">
             <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
-            <div><div class="datos-item-title">Cargar desde nube</div><div class="datos-item-desc">Descarga los últimos datos guardados</div></div>
+            <div><div class="datos-item-title">Plantilla publicadores</div><div class="datos-item-desc">Formato CSV para agregar publicadores</div></div>
           </div>
-          <div class="datos-item" onclick="exportarTodo()">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
-            <div><div class="datos-item-title">Backup JSON</div><div class="datos-item-desc">Guardar copia de seguridad completa</div></div>
+          <div class="datos-item" onclick="irA('inactivos')">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-inactive"/></svg></div>
+            <div><div class="datos-item-title">Inactivos</div><div class="datos-item-desc">Ver publicadores inactivos</div></div>
           </div>
-          <div class="datos-item" onclick="importarDatos()">
+        </div>
+
+        <div class="datos-section-label">Sistema</div>
+        <div class="datos-list">
+          <div class="datos-item sb-perm-export" onclick="exportarTodo()">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-db"/></svg></div>
+            <div><div class="datos-item-title">Backup JSON</div><div class="datos-item-desc">Copia de seguridad completa local</div></div>
+          </div>
+          <div class="datos-item sb-perm-admin" onclick="importarDatos()">
             <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-db"/></svg></div>
             <div><div class="datos-item-title">Restaurar JSON</div><div class="datos-item-desc">Recuperar desde copia de seguridad</div></div>
           </div>
-          <div class="datos-item" onclick="exportarPlantillaCSV()">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
-            <div><div class="datos-item-title">Plantilla publicadores</div><div class="datos-item-desc">Formato para importar publicadores</div></div>
-          </div>
-          <div class="datos-item" onclick="exportarPlantillaInformes()">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-download"/></svg></div>
-            <div><div class="datos-item-title">Plantilla informes</div><div class="datos-item-desc">Descargar CSV por grupo para llenar informes del mes</div></div>
-          </div>
-          <div class="datos-item" onclick="importarInformes()">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-upload"/></svg></div>
-            <div><div class="datos-item-title">Importar informes</div><div class="datos-item-desc">Cargar CSV con informes mensuales del grupo</div></div>
+          <div class="datos-item sb-perm-admin" onclick="abrirGestionUsuarios()">
+            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-gear"/></svg></div>
+            <div><div class="datos-item-title">Usuarios</div><div class="datos-item-desc">Gestionar accesos y roles</div></div>
           </div>
           <div class="datos-item" style="border-color:#fca5a5" onclick="resetTodo()">
             <div class="datos-item-ico" style="background:#fef2f2;color:var(--red)"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
-            <div><div class="datos-item-title" style="color:var(--red)">Borrar todos los datos</div><div class="datos-item-desc">Elimina publicadores y registros permanentemente</div></div>
-          </div>
-          <div class="datos-item" onclick="exportarEmergencias()">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
-            <div><div class="datos-item-title">Directorio de Emergencias</div><div class="datos-item-desc">Exportar hoja de contactos de emergencia</div></div>
-          </div>
-          <div class="datos-item" onclick="irA('asistencia')">
-            <div class="datos-item-ico"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
-            <div><div class="datos-item-title">Asistencia a Reuniones</div><div class="datos-item-desc">Registro de asistencia de la congregación</div></div>
+            <div><div class="datos-item-title" style="color:var(--red)">Borrar todos los datos</div><div class="datos-item-desc">Elimina todo permanentemente</div></div>
           </div>
         </div>
       </div>
@@ -2903,17 +2929,33 @@ function renderAlphaIndex(letrasPresentes) {
   if(!idx) return;
   const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   const set = new Set(letrasPresentes);
-  idx.innerHTML = letras.map(l =>
-    `<button class="alpha-btn${set.has(l)?' has-items':''}" onclick="scrollToLetra('${l}')">${l}</button>`
-  ).join('');
+  idx.innerHTML =
+    `<button class="alpha-btn has-items" onclick="pubListScrollTop()" title="Inicio" style="font-size:11px">↑</button>` +
+    letras.map(l =>
+      `<button class="alpha-btn${set.has(l)?' has-items':''}" onclick="scrollToLetra('${l}')">${l}</button>`
+    ).join('');
 }
 
 function scrollToLetra(letra) {
+  const list = document.getElementById('pubList');
   const header = document.getElementById('alpha-'+letra);
-  if(header) header.scrollIntoView({behavior:'smooth', block:'start'});
-  // Marcar activo
+  if(header && list) {
+    list.scrollTo({top: header.offsetTop - 2, behavior:'smooth'});
+  }
   document.querySelectorAll('.alpha-btn').forEach(b => b.classList.toggle('active', b.textContent===letra));
   setTimeout(()=>document.querySelectorAll('.alpha-btn').forEach(b=>b.classList.remove('active')), 1200);
+}
+
+function pubListScrollTop() {
+  const list = document.getElementById('pubList');
+  if(list) list.scrollTo({top:0, behavior:'smooth'});
+}
+
+function onPubListScroll() {
+  const list = document.getElementById('pubList');
+  const btn = document.getElementById('scrollTopBtn');
+  if(!list || !btn) return;
+  btn.classList.toggle('visible', list.scrollTop > 150);
 }
 
 // ══════════════════════════════════════════
@@ -4408,6 +4450,88 @@ function confirmarReset() {
   renderDashboard();
   renderLista();
   toast('Todos los datos han sido eliminados');
+}
+
+function exportarHistoricoExcel() {
+  const MESES_C = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
+
+  // Recolectar años disponibles
+  const aniosSet = new Set();
+  state.publicadores.forEach(p => Object.keys(p.registros||{}).forEach(a => aniosSet.add(Number(a))));
+  const anios = [...aniosSet].sort();
+  if(!anios.length){ toast('No hay registros de informes'); return; }
+
+  // Construir CSV con columnas: Grupo | Apellido | Nombre | Privilegio | [anio/mes...]
+  const cols = ['Grupo','Apellido','Nombre','Privilegio'];
+  anios.forEach(a => MESES_C.forEach(m => cols.push(`${m} ${a}-${a+1}`)));
+
+  const rows = [cols];
+
+  // Ordenar por grupo luego apellido
+  const pubs = [...state.publicadores].sort((a,b)=>(a.grupo||'').localeCompare(b.grupo||'','es')||(a.apellido||'').localeCompare(b.apellido||'','es'));
+
+  function priv(p) {
+    if(p.misionero) return 'Misionero';
+    if(p.precursorEsp) return 'Prec. Esp.';
+    if(p.precursorReg) return 'Prec. Reg.';
+    if(p.anciano) return 'Anciano';
+    if(p.siervo) return 'Siervo';
+    return 'Publicador';
+  }
+
+  pubs.forEach(pub => {
+    const row = [pub.grupo||'', pub.apellido||'', pub.nombre||'', priv(pub)];
+    anios.forEach(a => {
+      MESES_C.forEach(m => {
+        const v = (pub.registros||{})[a]?.[m] || (pub.registros||{})[String(a)]?.[m];
+        if(!v) { row.push(''); return; }
+        if(v.particip) {
+          const partes = [];
+          if(v.paux) partes.push('PA');
+          if(v.horas) partes.push(v.horas+'h');
+          if(v.cursos) partes.push(v.cursos+'c');
+          row.push(partes.length ? partes.join(' ') : 'SI');
+        } else {
+          row.push('NO');
+        }
+      });
+    });
+    rows.push(row);
+  });
+
+  // Hoja 2: resumen por mes
+  const rows2 = [['Mes','Total','Participaron','No Predicaron','% Participación','Prec. Auxiliares','Total Horas','Total Cursos']];
+  anios.forEach(a => {
+    MESES_C.forEach(m => {
+      let part=0, noPred=0, paux=0, horas=0, cursos=0;
+      state.publicadores.forEach(p => {
+        const v = (p.registros||{})[a]?.[m] || (p.registros||{})[String(a)]?.[m];
+        if(v && v.particip){ part++; if(v.paux) paux++; horas+=parseFloat(v.horas)||0; cursos+=parseInt(v.cursos)||0; }
+        else noPred++;
+      });
+      const total = state.publicadores.length;
+      const pct = total ? Math.round(part/total*100)+'%' : '0%';
+      rows2.push([`${m} ${a}-${a+1}`, total, part, noPred, pct, paux, horas||'', cursos||'']);
+    });
+  });
+
+  // Generar como ZIP con 2 CSV (simulado como TSV en un solo CSV con separador de sección)
+  // Usar formato CSV descargable
+  function toCSV(data) {
+    return data.map(r => r.map(v => {
+      const s = String(v==null?'':v);
+      return s.includes(',') || s.includes('"') || s.includes('\n') ? `"${s.replace(/"/g,'""')}"` : s;
+    }).join(',')).join('\n');
+  }
+
+  const combined = '=== HISTÓRICO INFORMES ===\n' + toCSV(rows) + '\n\n=== RESUMEN POR MES ===\n' + toCSV(rows2);
+  const bom = '\uFEFF';
+  const blob = new Blob([bom + combined], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `S21_Historico_${new Date().toISOString().slice(0,10)}.csv`;
+  a.click();
+  toast('✓ Histórico exportado');
 }
 
 function exportarTodo() {
