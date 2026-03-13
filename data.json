@@ -8,7 +8,7 @@
       "bautismo": "",
       "grupo": "Grupo 4",
       "telefono": "3007033852",
-      "genero": "M",
+      "genero": "F",
       "anciano": false,
       "siervo": false,
       "precursorReg": false,
@@ -16,7 +16,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Mar": {
@@ -37466,5 +37473,5 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773421362808
+  "_lastModified": 1773421381299
 }
