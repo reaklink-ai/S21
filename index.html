@@ -587,7 +587,34 @@ input, select, textarea { font-family: var(--font); }
 .active-filter-clear:hover { opacity: .85; }
 
 /* Lista publicadores */
+.pub-list-wrap { flex: 1; display: flex; overflow: hidden; min-height: 0; }
 .pub-list { flex: 1; overflow-y: auto; }
+.pub-alpha-index {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 4px 2px; gap: 1px; flex-shrink: 0;
+  background: var(--surface); border-left: 1px solid var(--border-2);
+  overflow-y: auto; scrollbar-width: none; width: 22px;
+}
+.pub-alpha-index::-webkit-scrollbar { display: none; }
+.alpha-btn {
+  font-size: 9px; font-weight: 700; color: var(--ink-3);
+  width: 18px; height: 18px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background .1s, color .1s;
+  flex-shrink: 0; text-transform: uppercase; border: none; background: transparent;
+  font-family: var(--font-mono);
+}
+.alpha-btn:hover { background: var(--accent-lt); color: var(--accent); }
+.alpha-btn.has-items { color: var(--ink); font-weight: 800; }
+.alpha-btn.active { background: var(--accent); color: #fff; }
+.pub-alpha-header {
+  padding: 4px 14px 2px;
+  font-size: 10px; font-weight: 800; letter-spacing: .8px;
+  color: var(--accent); text-transform: uppercase;
+  background: var(--accent-lt);
+  border-bottom: 1px solid var(--accent-mid);
+  position: sticky; top: 0; z-index: 2;
+}
 .pub-item {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 14px; cursor: pointer;
@@ -609,6 +636,17 @@ input, select, textarea { font-family: var(--font); }
 .pub-item-name { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -.1px; color: var(--ink); }
 .pub-item-sub { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
 .pub-badge { font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 20px; text-transform: uppercase; flex-shrink: 0; letter-spacing: .3px; }
+
+/* Grupos como chips horizontales */
+.grupos-chips { display: flex; flex-wrap: wrap; gap: 5px; padding: 6px 10px 10px; }
+.grupo-chip {
+  font-size: 11px; font-weight: 600; padding: 4px 10px;
+  border-radius: 20px; cursor: pointer; border: 1.5px solid var(--border-2);
+  background: var(--surface); color: var(--ink-2);
+  transition: all .12s; white-space: nowrap;
+}
+.grupo-chip:hover { border-color: var(--accent-mid); background: var(--accent-lt); color: var(--accent); }
+.grupo-chip.activo { background: var(--accent); color: #fff; border-color: var(--accent); }
 
 /* Footer con botón nuevo publicador */
 .panel-footer { padding: 12px 14px; border-top: 1px solid var(--border-2); background: var(--surface); flex-shrink: 0; }
@@ -2158,7 +2196,7 @@ input, select, textarea { font-family: var(--font); }
                 <span class="filter-toggle-chevron" id="chevGrupos">▾</span>
               </button>
               <div class="filter-body">
-                <div class="grupos-list" id="gruposPanel"></div>
+                <div class="grupos-chips" id="gruposPanel"></div>
               </div>
             </div>
           </div>
@@ -2166,7 +2204,10 @@ input, select, textarea { font-family: var(--font); }
             <span class="active-filter-label" id="filtroChipLabel"></span>
             <button class="active-filter-clear" onclick="limpiarFiltros()">Limpiar ×</button>
           </div>
-          <div class="pub-list" id="pubList"></div>
+          <div class="pub-list-wrap">
+            <div class="pub-list" id="pubList"></div>
+            <div class="pub-alpha-index" id="alphaIndex"></div>
+          </div>
           <div class="panel-footer">
             <button class="add-btn" onclick="abrirModalNuevo()">
               <svg width="14" height="14"><use href="#ico-plus"/></svg>Nuevo publicador
@@ -2758,11 +2799,14 @@ function getReg(pub, anio, mes) {
 // LISTA
 // ══════════════════════════════════════════
 function renderLista() {
-  const q = document.getElementById('searchBox').value.toLowerCase();
+  const q = document.getElementById('searchBox').value.toLowerCase().trim();
   const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
 
-  // Filtro base — si es anciano, SIEMPRE filtrar por su grupo
-  let lista = state.publicadores.filter(p=>(p.apellido+' '+p.nombre).toLowerCase().includes(q));
+  // Filtro base — búsqueda por nombre, apellido o grupo
+  let lista = state.publicadores.filter(p => {
+    const haystack = (p.apellido+' '+p.nombre+' '+(p.grupo||'')).toLowerCase();
+    return !q || haystack.includes(q);
+  });
   if(esAnciano) {
     lista = lista.filter(p => p.grupo === currentUser.grupo);
   } else if(filtroGrupo) {
@@ -2773,9 +2817,9 @@ function renderLista() {
     else
       lista = lista.filter(p=>!!p[filtroTipo]);
   }
-  lista = lista.sort((a,b)=>a.apellido.localeCompare(b.apellido));
+  lista = lista.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
 
-  // Contadores — anciano solo ve su grupo
+  // Contadores
   const pubsBase = esAnciano ? state.publicadores.filter(p=>p.grupo===currentUser.grupo) : state.publicadores;
   document.getElementById('statTotal').textContent = pubsBase.length;
   const grupos = new Set(pubsBase.map(p=>p.grupo).filter(Boolean));
@@ -2817,21 +2861,59 @@ function renderLista() {
   });
 
   const el = document.getElementById('pubList');
-  if(!lista.length){ el.innerHTML='<div style="padding:16px;text-align:center;color:#aaa;font-size:12px;">Sin resultados</div>'; return; }
+  if(!lista.length){
+    el.innerHTML='<div style="padding:24px;text-align:center;color:#aaa;font-size:12px;">Sin resultados</div>';
+    renderAlphaIndex([]);
+    return;
+  }
 
-  el.innerHTML = lista.map(pub=>{
-    const tipo=tipoPrincipal(pub), col=TIPO_COLOR[tipo]||'#64748b';
-    const init=(pub.apellido[0]||'')+(pub.nombre[0]||'');
-    const sel=pub.id===selId?' sel':'';
-    return `<div class="pub-item${sel}" onclick="selPub('${pub.id}')">
-      <div class="pub-av" style="background:${col}18;color:${col}">${init}</div>
-      <div class="pub-item-info">
-        <div class="pub-item-name">${pub.apellido}, ${pub.nombre}</div>
-        <div class="pub-item-sub">${pub.grupo||'Sin grupo'}</div>
-      </div>
-      <div class="pub-badge" style="background:${col}20;color:${col}">${tipo.split(' ')[0]}</div>
-    </div>`;
+  // Agrupar por letra inicial del apellido
+  const letrasPresentes = new Set();
+  const grupos_alfa = {};
+  lista.forEach(pub => {
+    const letra = pub.apellido[0]?.toUpperCase().normalize('NFD').replace(/[̀-ͯ]/g,'') || '#';
+    letrasPresentes.add(letra);
+    if(!grupos_alfa[letra]) grupos_alfa[letra] = [];
+    grupos_alfa[letra].push(pub);
+  });
+
+  // Render con cabeceras alfabéticas
+  el.innerHTML = Object.keys(grupos_alfa).sort().map(letra => {
+    const items = grupos_alfa[letra].map(pub => {
+      const tipo=tipoPrincipal(pub), col=TIPO_COLOR[tipo]||'#64748b';
+      const init=(pub.apellido[0]||'')+(pub.nombre[0]||'');
+      const sel=pub.id===selId?' sel':'';
+      return `<div class="pub-item${sel}" id="pub-${pub.id}" onclick="selPub('${pub.id}')">
+        <div class="pub-av" style="background:${col}18;color:${col}">${init}</div>
+        <div class="pub-item-info">
+          <div class="pub-item-name">${escHtml(pub.apellido)}, ${escHtml(pub.nombre)}</div>
+          <div class="pub-item-sub">${escHtml(pub.grupo||'Sin grupo')}</div>
+        </div>
+        <div class="pub-badge" style="background:${col}20;color:${col}">${tipo.split(' ')[0]}</div>
+      </div>`;
+    }).join('');
+    return `<div class="pub-alpha-header" id="alpha-${letra}">${letra}</div>${items}`;
   }).join('');
+
+  renderAlphaIndex([...letrasPresentes]);
+}
+
+function renderAlphaIndex(letrasPresentes) {
+  const idx = document.getElementById('alphaIndex');
+  if(!idx) return;
+  const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const set = new Set(letrasPresentes);
+  idx.innerHTML = letras.map(l =>
+    `<button class="alpha-btn${set.has(l)?' has-items':''}" onclick="scrollToLetra('${l}')">${l}</button>`
+  ).join('');
+}
+
+function scrollToLetra(letra) {
+  const header = document.getElementById('alpha-'+letra);
+  if(header) header.scrollIntoView({behavior:'smooth', block:'start'});
+  // Marcar activo
+  document.querySelectorAll('.alpha-btn').forEach(b => b.classList.toggle('active', b.textContent===letra));
+  setTimeout(()=>document.querySelectorAll('.alpha-btn').forEach(b=>b.classList.remove('active')), 1200);
 }
 
 // ══════════════════════════════════════════
@@ -4338,7 +4420,30 @@ function importarDatos() { document.getElementById('fileInput').click(); }
 function cargarJSON(e) {
   const f=e.target.files[0]; if(!f) return;
   const r=new FileReader();
-  r.onload=ev=>{ try{ const d=JSON.parse(ev.target.result); if(!d.publicadores) throw 0; state=d; saveStateAndSync(); renderLista(); if(selId&&getPub(selId)) renderS21(); toast('Importado ✓'); }catch{ alert('Archivo inválido'); } };
+  r.onload=async ev=>{
+    try{
+      const d=JSON.parse(ev.target.result);
+      if(!d.publicadores) throw 0;
+      d._lastModified = Date.now();
+      state = d;
+      saveState();
+      // Restauración completa: subir directo sin merge para no perder datos
+      try {
+        const res = await fetch(SYNC_URL + '?t=' + Date.now());
+        let sha = null;
+        if(res.ok){ const j=await res.json(); sha=j.sha||null; _lastSha=sha; }
+        const putRes = await fetch(SYNC_URL, {
+          method:'PUT',
+          headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({data:state, sha})
+        });
+        if(putRes.ok){ const pj=await putRes.json(); if(pj.sha) _lastSha=pj.sha; toast('✓ Restaurado y sincronizado'); }
+        else { toast('Restaurado localmente (error al sincronizar)'); }
+      } catch(se){ toast('Restaurado localmente (sin conexión)'); }
+      renderLista();
+      if(selId&&getPub(selId)) renderS21();
+    }catch{ alert('Archivo inválido'); }
+  };
   r.readAsText(f); e.target.value='';
 }
 
@@ -4530,25 +4635,19 @@ function renderGruposPanel() {
   initGrupos();
   const el = document.getElementById('gruposPanel');
   if(!el) return;
+  // Chips compactos: solo número de grupo + cantidad miembros
   el.innerHTML = GRUPOS_LISTA.map(g => {
-    const miembros = state.publicadores.filter(p => p.grupo === g);
-    const cfg = state.grupos[g] || {};
-    const superNombre = cfg.super ? getNombreCorto(cfg.super) : '';
-    const auxNombre   = cfg.aux   ? getNombreCorto(cfg.aux)   : '';
+    const miembros = state.publicadores.filter(p => p.grupo === g).length;
     const activo = filtroGrupo === g ? ' activo' : '';
-    const info = superNombre ? `${superNombre}${auxNombre?' · '+auxNombre:''}` : 'Sin asignar';
-    return `<div class="grupo-pill${activo}" onclick="filtrarGrupo('${g}')">
-      <div style="flex:1;min-width:0">
-        <div class="grupo-pill-nombre">${g}</div>
-        <div class="grupo-pill-info">${info}</div>
-      </div>
-      <div class="grupo-pill-n">${miembros.length}</div>
+    const num = g.replace(/[^0-9]/g,'') || g;
+    return `<div class="grupo-chip${activo}" onclick="filtrarGrupo('${g}')" title="${g} · ${miembros} publicadores">
+      G${num} <span style="opacity:.65;font-size:10px">${miembros}</span>
     </div>`;
   }).join('');
   // Badge en el toggle
   const badge = document.getElementById('badgeGrupos');
   if(badge) {
-    badge.textContent = filtroGrupo || '';
+    badge.textContent = filtroGrupo ? filtroGrupo.replace(/[^0-9]/g,'') ? 'G'+filtroGrupo.replace(/[^0-9]/g,'') : filtroGrupo : '';
     badge.classList.toggle('visible', !!filtroGrupo);
   }
 }
