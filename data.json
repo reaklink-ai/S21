@@ -48,7 +48,7 @@
             "notas": ""
           },
           "Nov": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -37473,5 +37473,5 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773421383704
+  "_lastModified": 1773421384957
 }
