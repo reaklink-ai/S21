@@ -1096,7 +1096,7 @@
       "registros": {
         "2025": {
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -21953,5 +21953,5 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773427830515
+  "_lastModified": 1773427832002
 }
