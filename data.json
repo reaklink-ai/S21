@@ -22326,7 +22326,7 @@
       }
     }
   ],
-  "_lastModified": 1773695347812,
+  "_lastModified": 1773695352273,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22449,7 +22449,8 @@
           "p3_aux": "mmm9qi4j5xl2",
           "p4": "mmm9qi4jfkxs",
           "p5": "mmm9qi4jaer1",
-          "p3": "mmm9qi4jqz6w"
+          "p3": "mmm9qi4jqz6w",
+          "p2": "mmm9qi4kqpna"
         }
       },
       "2026-03-23": {
@@ -22573,6 +22574,14 @@
         "sala": "aux",
         "pubId": "mmm9qi4j5xl2",
         "nombreParte": "Lectura de la Biblia",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p2",
+        "sala": "prin",
+        "pubId": "mmm9qi4kqpna",
+        "nombreParte": "Busquemos perlas escondidas",
         "fecha": "2026-03-16"
       }
     ]
