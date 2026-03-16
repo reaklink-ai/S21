@@ -22313,5 +22313,105 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773684124352
+  "_lastModified": 1773687284064,
+  "vym": {
+    "semanas": {
+      "2026-03-16": {
+        "fechaKey": "2026-03-16",
+        "partes": [
+          {
+            "id": "presidente",
+            "nombre": "Presidente de la reunión",
+            "mins": null,
+            "seccion": "apertura",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p1",
+            "nombre": "“Yo soy Dios, y no hay nadie como yo”",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p2",
+            "nombre": "Busquemos perlas escondidas",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p3",
+            "nombre": "Lectura de la Biblia",
+            "mins": 4,
+            "seccion": "tesoros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p4",
+            "nombre": "Empiece conversaciones",
+            "mins": 3,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p5",
+            "nombre": "Haga revisitas",
+            "mins": 4,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p6",
+            "nombre": "Haga discípulos",
+            "mins": 5,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p7",
+            "nombre": "Jehová es el único que siempre nos puede ayudar",
+            "mins": 7,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p8",
+            "nombre": "2026 | Informe sobre la actividad del Departamento Local de Diseño y Construcción",
+            "mins": 8,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p9",
+            "nombre": "Estudio bíblico de la congregación",
+            "mins": 30,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": true
+          },
+          {
+            "id": "p10",
+            "nombre": "Palabras de conclusión",
+            "mins": 3,
+            "seccion": "cierre",
+            "doble": false,
+            "soloAncianos": false
+          }
+        ],
+        "libros": "ISAÍAS 45-47",
+        "cargado": true,
+        "urlId": 202026083
+      }
+    }
+  }
 }
