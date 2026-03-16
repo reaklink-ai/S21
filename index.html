@@ -1179,6 +1179,59 @@ input, select, textarea { font-family: var(--font); }
 /* ══════════════════════════════════════════
    PRINT
 ══════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════
+   VIDA Y MINISTERIO
+   ══════════════════════════════════════════ */
+.vym-wrap { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+.vym-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.vym-title { font-family: var(--font-serif); font-size: 24px; font-weight: 700; color: var(--ink); }
+.vym-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.vym-btn { padding: 8px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--border); background: var(--surface); color: var(--ink-2); transition: all .12s; }
+.vym-btn:hover { border-color: var(--accent-mid); color: var(--accent); background: var(--accent-lt); }
+.vym-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.vym-btn.primary:hover { opacity: .9; }
+.vym-semana { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 18px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.vym-semana-hdr { background: var(--accent); color: #fff; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.vym-semana-fecha { font-size: 14px; font-weight: 700; }
+.vym-semana-libros { font-size: 12px; opacity: .85; font-style: italic; }
+.vym-semana-load { font-size: 11px; background: rgba(255,255,255,.2); border: none; color: #fff; padding: 4px 10px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.vym-semana-load:hover { background: rgba(255,255,255,.35); }
+.vym-seccion { border-bottom: 1px solid var(--border-2); }
+.vym-seccion:last-child { border-bottom: none; }
+.vym-seccion-hdr { display: flex; align-items: center; gap: 10px; padding: 10px 16px 8px; }
+.vym-seccion-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.vym-seccion-nombre { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; }
+.vym-parte { display: flex; align-items: flex-start; gap: 10px; padding: 8px 16px 8px 36px; border-top: 1px solid var(--border-2); flex-wrap: wrap; }
+.vym-parte-info { flex: 1; min-width: 160px; }
+.vym-parte-nombre { font-size: 12px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+.vym-parte-mins { font-size: 10px; color: var(--ink-3); margin-top: 2px; }
+.vym-parte-detalle { font-size: 11px; color: var(--ink-2); margin-top: 3px; font-style: italic; line-height: 1.4; }
+.vym-asign-wrap { display: flex; gap: 8px; flex-wrap: wrap; align-items: flex-end; }
+.vym-asign { display: flex; flex-direction: column; gap: 3px; }
+.vym-asign-label { font-size: 9px; font-weight: 700; color: var(--ink-3); text-transform: uppercase; letter-spacing: .5px; }
+.vym-asign-grupo { display: flex; flex-direction: column; gap: 6px; }
+.vym-asign-grupo-label { font-size: 8px; font-weight: 800; color: var(--ink-3); text-transform: uppercase; letter-spacing: .7px; padding: 4px 2px 0; border-top: 1px dashed var(--border-2); margin-top: 2px; }
+.vym-sala-bloque { display: flex; flex-direction: column; gap: 5px; padding: 8px 10px; background: var(--surface-2); border-radius: 8px; border: 1px solid var(--border-2); }
+.vym-sala-titulo { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; color: var(--ink-3); margin-bottom: 2px; }
+.vym-sala-fila { display: flex; gap: 8px; flex-wrap: wrap; }
+.vym-select { font-size: 12px; font-weight: 500; color: var(--ink); background: var(--surface-2); border: 1.5px solid var(--border); border-radius: 8px; padding: 6px 10px; min-width: 150px; cursor: pointer; transition: border-color .12s; font-family: var(--font); }
+.vym-select:focus { outline: none; border-color: var(--accent); background: var(--surface); }
+.vym-select.anciano-only { border-left: 3px solid #3b82f6; background: #f0f7ff; }
+.vym-select.anciano-siervo-only { border-left: 3px solid #059669; background: #f0fdf4; }
+.vym-parte-lector { background: var(--surface-2); padding-left: 36px; }
+.vym-parte-lector .vym-parte-nombre { font-size: 11px; color: var(--ink-3); font-style: italic; }
+.vym-cancion { padding: 6px 16px 6px 36px; font-size: 11px; color: var(--ink-3); font-style: italic; border-top: 1px solid var(--border-2); }
+.vym-loading { padding: 20px; text-align: center; color: var(--ink-3); font-size: 12px; }
+.vym-warn { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 8px 12px; font-size: 11px; color: #92400e; margin: 8px 16px; }
+@media print {
+  .vym-actions, .vym-semana-load, .vym-select, .sidebar, .appbar, .mobile-nav, .panel-footer, .pub-scroll-top { display: none !important; }
+  .vym-wrap { padding: 0; max-width: 100%; }
+  .vym-semana { box-shadow: none; break-inside: avoid; margin-bottom: 10px; }
+  .screen { display: block !important; }
+  #screen-vym { display: block !important; }
+}
+
 @media print {
   .appbar, .sidebar, .panel, .mobile-nav, .s21-actions,
   .anio-nav-btn, .appbar-btn, .modal, .overlay { display: none !important; }
@@ -2099,6 +2152,9 @@ input, select, textarea { font-family: var(--font); }
       <button class="sb-nav-item" id="sbnav-asistencia" onclick="irA('asistencia')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-cal"/></svg></span>Asistencia
       </button>
+      <button class="sb-nav-item" id="sbnav-vym" onclick="irA('vym')">
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-users"/></svg></span>Vida y Ministerio
+      </button>
       <button class="sb-nav-item" id="sbnav-emergencias" onclick="exportarEmergencias()">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Emergencias
       </button>
@@ -2148,7 +2204,7 @@ input, select, textarea { font-family: var(--font); }
       <div class="sb-section-label">Mi grupo</div>
       <nav class="sb-nav">
         <button class="sb-nav-item" onclick="exportarPlantillaInformes()">
-          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Descargar plantilla
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Plantilla del mes
         </button>
         <button class="sb-nav-item" onclick="importarInformes()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-upload"/></svg></span>Cargar informe
@@ -2397,6 +2453,11 @@ input, select, textarea { font-family: var(--font); }
       </div>
     </div>
 
+    <!-- VIDA Y MINISTERIO -->
+    <div class="screen" id="screen-vym" style="display:none">
+      <div id="vym-root" style="padding:0 0 80px"></div>
+    </div>
+
   </div>
 </div>
 
@@ -2417,6 +2478,10 @@ input, select, textarea { font-family: var(--font); }
   <button class="mob-nav-item" id="mobnav-metricas" onclick="abrirMetricas()">
     <svg width="22" height="22"><use href="#ico-chart"/></svg>
     Métricas
+  </button>
+  <button class="mob-nav-item" id="mobnav-vym" onclick="irA('vym')">
+    <svg width="22" height="22"><use href="#ico-users"/></svg>
+    VyM
   </button>
   <button class="mob-nav-item" id="mobnav-mas" onclick="irA('datos')">
     <svg width="22" height="22"><use href="#ico-db"/></svg>
@@ -2631,7 +2696,7 @@ function getRolColor(rol) {
 const PERMS = {
   admin:      { editarTodo:true,  borrar:true,  exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true  },
   secretario: { editarTodo:true,  borrar:false, exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true  },
-  anciano:    { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true,  asistencia:false },
+  anciano:    { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true,  asistencia:false, vym:true },
   lector:     { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:false, asistencia:false },
 };
 function can(perm) {
@@ -2639,6 +2704,24 @@ function can(perm) {
   return !!(PERMS[currentUser.rol]?.[perm]);
 }
 function canEdit() { return can('editarTodo') || can('soloGrupo'); }
+
+// Chequear si el usuario tiene acceso a una sección
+// Usa campo 'accesos' del usuario si existe, si no usa defaults por rol
+function puedeVerSeccion(seccion) {
+  if(!currentUser) return false;
+  const rol = currentUser.rol;
+  if(rol === 'admin' || rol === 'secretario') return true; // ven todo
+  // Si tiene accesos personalizados, usarlos
+  if(currentUser.accesos && typeof currentUser.accesos[seccion] !== 'undefined') {
+    return !!currentUser.accesos[seccion];
+  }
+  // Defaults por rol
+  const defaults = {
+    anciano: { publicadores:true, grupos:true, vym:true, metricas:false, datos:false, inactivos:false },
+    lector:  { publicadores:true, grupos:true, vym:false, metricas:false, datos:false, inactivos:false },
+  };
+  return !!(defaults[rol] && defaults[rol][seccion]);
+}
 function canEditPub(pub) {
   if(!currentUser) return false;
   if(can('editarTodo')) return true;
@@ -2767,6 +2850,17 @@ function _mergeStates(remoto, local) {
   // Asistencia: agregar registros remotos que local no tiene (por ID)
   const localAIds = new Set((local.asistencia||[]).map(r=>r.id));
   (remoto.asistencia||[]).forEach(r => { if(!localAIds.has(r.id)) m.asistencia.push(r); });
+
+  // VyM: agregar semanas remotas que local no tiene; preservar asignaciones locales
+  if(remoto.vym && remoto.vym.semanas) {
+    if(!m.vym) m.vym = { semanas: {} };
+    Object.entries(remoto.vym.semanas).forEach(([k, sv]) => {
+      if(!m.vym.semanas[k]) { m.vym.semanas[k] = sv; return; }
+      // Preservar asignaciones: local gana sobre remoto en asign
+      if(sv.partes && !m.vym.semanas[k].partes) m.vym.semanas[k].partes = sv.partes;
+      if(sv.libros && !m.vym.semanas[k].libros) m.vym.semanas[k].libros = sv.libros;
+    });
+  }
 
   return m;
 }
@@ -3801,14 +3895,45 @@ function exportarEmergencias() {
 // ══════════════════════════════════════════
 
 function mesActual() {
-  // Retorna { mesC, mesNombre, anio } del mes actual del año de servicio
+  // REGLA: Los informes se envían a la sucursal el día 20 de cada mes.
+  // - Antes del día 20: el mes a reportar es el MES ANTERIOR (aún no se envió)
+  // - Día 20 en adelante: el mes a reportar es el MES ACTUAL (ya se cerró y se envía)
+  // Ejemplo: 15 marzo → reportar febrero | 20 marzo → reportar marzo
   const ahora = new Date();
-  const m = ahora.getMonth(); // 0=ene..11=dic
-  // Año de servicio: Sep(8)=0, Oct(9)=1, Nov(10)=2, Dic(11)=3, Ene(0)=4, Feb(1)=5...
+  let m = ahora.getMonth();    // 0=ene..11=dic
+  let a = ahora.getFullYear();
+  const dia = ahora.getDate();
+
+  if(dia < 20) {
+    // Antes del 20: retroceder un mes
+    if(m === 0) { m = 11; a--; } else { m--; }
+  }
+  // Día 20+: usar el mes calendario actual tal cual
+
+  // Mapeo de mes calendario a índice en MESES_C (Sep=0 ... Ago=11)
   const mapMes = {8:0,9:1,10:2,11:3,0:4,1:5,2:6,3:7,4:8,5:9,6:10,7:11};
   const idx = mapMes[m];
-  const anio = anioHoy();
+  // Año de inicio del año de servicio
+  const anio = (m >= 8) ? a : a - 1;
   return { idx, mesC: MESES_C[idx], mesNombre: MESES[idx], anio };
+}
+
+function mesVencidoLabel() {
+  const { mesNombre, anio } = mesActual();
+  const ahora = new Date();
+  const sufijo = ahora.getDate() >= 20 ? ' (en curso)' : ' (vencido)';
+  return `${mesNombre} ${anio}\u2013${anio+1}${sufijo}`;
+}
+
+function mesVencidoInfo() {
+  const ahora = new Date();
+  const dia = ahora.getDate();
+  const { mesNombre } = mesActual();
+  if(dia < 20) {
+    return 'Mes a reportar: <b>' + mesNombre + '</b> \xb7 Faltan <b>' + (20-dia) + ' d\xedas</b> para el env\xedo (d\xeda 20)';
+  } else {
+    return 'Mes a reportar: <b>' + mesNombre + '</b> \xb7 <b>Per\xedodo de env\xedo activo</b> (d\xeda 20 al 31)';
+  }
 }
 
 function exportarPlantillaInformes(grupo) {
@@ -4330,18 +4455,27 @@ function applyRoleUI() {
     emergencias: document.getElementById('sbnav-emergencias'),
     secDatos:    document.getElementById('sbSectionDatos'),
     secAnciano:  document.getElementById('sbDatosAnciano'),
+    vym:         document.getElementById('sbnav-vym'),
+    mobVym:      document.getElementById('mobnav-vym'),
   };
 
+  // Control de secciones según permisos individuales o defaults de rol
+  const verVym      = puedeVerSeccion('vym');
+  const verMetricas = puedeVerSeccion('metricas');
+  const verDatos    = puedeVerSeccion('datos');
+
+  if(ids.vym)         ids.vym.style.display         = verVym ? '' : 'none';
+  if(ids.mobVym)      ids.mobVym.style.display       = verVym ? '' : 'none';
+  if(ids.metricas)    ids.metricas.style.display     = verMetricas ? '' : 'none';
+  if(ids.emergencias) ids.emergencias.style.display  = (rol==='admin'||rol==='secretario') ? '' : 'none';
+
+  // Sección de datos: anciano ve su menú reducido, resto ve el completo
   if(esAnciano) {
-    if(ids.metricas)    ids.metricas.style.display    = 'none';
-    if(ids.emergencias) ids.emergencias.style.display = 'none';
-    if(ids.secDatos)    ids.secDatos.style.display    = 'none';
-    if(ids.secAnciano)  ids.secAnciano.style.display  = '';
+    if(ids.secDatos)   ids.secDatos.style.display   = verDatos ? '' : 'none';
+    if(ids.secAnciano) ids.secAnciano.style.display = '';
   } else {
-    if(ids.metricas)    ids.metricas.style.display    = '';
-    if(ids.emergencias) ids.emergencias.style.display = '';
-    if(ids.secDatos)    ids.secDatos.style.display    = '';
-    if(ids.secAnciano)  ids.secAnciano.style.display  = 'none';
+    if(ids.secDatos)   ids.secDatos.style.display   = (rol==='admin'||rol==='secretario') ? '' : 'none';
+    if(ids.secAnciano) ids.secAnciano.style.display = 'none';
   }
 
   // Formulario de asistencia — solo admin/secretario
@@ -4372,21 +4506,79 @@ function cerrarGestionUsuarios() {
 
 function renderUsuariosModal() {
   const users = getUsuarios();
-  const lista = users.map(u => `
-    <div class="usr-item">
-      <div class="usr-av" style="background:${getRolColor(u.rol)}22;color:${getRolColor(u.rol)}">${(u.nombre||'?')[0]}</div>
-      <div style="flex:1;min-width:0">
-        <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(u.nombre||'?')}</div>
-        <div style="font-size:11px;color:${getRolColor(u.rol)};font-weight:600">${getRolLabel(u.rol)}${u.grupo?' · '+u.grupo:''}</div>
+
+  const SECCIONES = [
+    { key:'publicadores', label:'Publicadores' },
+    { key:'grupos',       label:'Grupos' },
+    { key:'vym',          label:'Vida y Ministerio' },
+    { key:'metricas',     label:'Métricas' },
+    { key:'inactivos',    label:'Inactivos' },
+    { key:'datos',        label:'Datos/Admin' },
+  ];
+
+  // Defaults de acceso por rol (admin/secretario siempre ven todo)
+  const DEFAULTS = {
+    anciano:  { publicadores:true, grupos:true, vym:true, metricas:false, inactivos:false, datos:false },
+    lector:   { publicadores:true, grupos:true, vym:false, metricas:false, inactivos:false, datos:false },
+  };
+
+  const lista = users.map(u => {
+    const esProtegido = u.id === 'admin';
+    const esSuperRol = u.rol === 'admin' || u.rol === 'secretario';
+    const accesos = u.accesos || {};
+
+    // Checkboxes de secciones (solo para anciano/lector)
+    let checkboxes = '';
+    if(!esSuperRol) {
+      const def = DEFAULTS[u.rol] || {};
+      checkboxes = '<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">' +
+        SECCIONES.map(s => {
+          const val = typeof accesos[s.key] !== 'undefined' ? accesos[s.key] : (def[s.key]||false);
+          return `<label style="display:flex;align-items:center;gap:4px;font-size:11px;color:var(--ink-2);cursor:pointer;background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:3px 8px">
+            <input type="checkbox" ${val?'checked':''} onchange="toggleAcceso('${u.id}','${s.key}',this.checked)"
+              style="cursor:pointer;accent-color:var(--accent)">
+            ${s.label}
+          </label>`;
+        }).join('') +
+      '</div>';
+    } else {
+      checkboxes = '<div style="font-size:10px;color:var(--ink-3);margin-top:4px">Acceso completo según rol</div>';
+    }
+
+    return `<div class="usr-item" style="flex-direction:column;align-items:stretch;gap:6px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <div class="usr-av" style="background:${getRolColor(u.rol)}22;color:${getRolColor(u.rol)}">${(u.nombre||'?')[0]}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(u.nombre||'?')}</div>
+          <div style="font-size:11px;color:${getRolColor(u.rol)};font-weight:600">${getRolLabel(u.rol)}${u.grupo?' · '+u.grupo:''}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-3);background:var(--surface-2);padding:3px 8px;border-radius:4px;border:1px solid var(--border)">PIN: ${u.pin}</div>
+          <button onclick="cambiarPin('${u.id}')" style="background:none;border:1px solid var(--border);border-radius:4px;color:var(--ink-2);cursor:pointer;font-size:11px;padding:3px 8px;font-family:var(--font);font-weight:600">✏</button>
+          ${!esProtegido ? `<button onclick="eliminarUsuario('${u.id}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;padding:4px 8px">×</button>` : '<span style="font-size:10px;color:var(--ink-3);padding:0 8px">protegido</span>'}
+        </div>
       </div>
-      <div style="display:flex;align-items:center;gap:6px">
-        <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-3);background:var(--surface-2);padding:3px 8px;border-radius:4px;border:1px solid var(--border)">PIN: ${u.pin}</div>
-        <button onclick="cambiarPin('${u.id}')" title="Cambiar PIN" style="background:none;border:1px solid var(--border);border-radius:4px;color:var(--ink-2);cursor:pointer;font-size:11px;padding:3px 8px;font-family:var(--font);font-weight:600;white-space:nowrap">✏ PIN</button>
-        ${u.id !== 'admin' ? `<button onclick="eliminarUsuario('${u.id}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;padding:4px 8px" title="Eliminar">×</button>` : '<span style="font-size:10px;color:var(--ink-3);padding:0 8px">protegido</span>'}
-      </div>
-    </div>`).join('');
+      ${checkboxes}
+    </div>`;
+  }).join('');
 
   document.getElementById('usuariosLista').innerHTML = lista || '<p style="color:var(--ink-3);font-size:13px">No hay usuarios</p>';
+}
+
+function toggleAcceso(userId, seccion, valor) {
+  const users = getUsuarios();
+  const u = users.find(x => x.id === userId);
+  if(!u) return;
+  if(!u.accesos) u.accesos = {};
+  u.accesos[seccion] = valor;
+  state.usuarios = users;
+  saveStateAndSync();
+  // Si es el usuario actual, refrescar UI
+  if(currentUser && currentUser.id === userId) {
+    currentUser.accesos = u.accesos;
+    applyRoleUI();
+  }
+  toast('Permiso actualizado');
 }
 
 function cambiarPin(id) {
@@ -4954,151 +5146,121 @@ function renderMetricas(tab) {
   if(tab==='publicadores')  renderMetPublicadores();
 }
 
-function getAnioMetrica() { return anioHoy(); }
+function getAnioMetrica() { return mesActual().anio; }
 
 function renderMetResumen() {
-  const anio = getAnioMetrica();
-  const pubs = state.publicadores;
-  const total = pubs.length;
-  if(!total) { document.getElementById('mtab-body-resumen').innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay publicadores registrados.</div>'; return; }
+  const el = document.getElementById('mtab-body-resumen');
+  try {
+    const pubs = state.publicadores;
+    const total = pubs.length;
+    if(!total) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay publicadores registrados.</div>'; return; }
 
-  // KPIs globales
-  const ancianos     = pubs.filter(p=>p.anciano).length;
-  const siervos      = pubs.filter(p=>p.siervo && !p.anciano).length;
-  const precReg      = pubs.filter(p=>p.precursorReg).length;
-  const precEsp      = pubs.filter(p=>p.precursorEsp).length;
-  const misioneros   = pubs.filter(p=>p.misionero).length;
-  const publicadores = pubs.filter(p=>!p.anciano&&!p.siervo&&!p.precursorReg&&!p.precursorEsp&&!p.misionero).length;
+    const anio = getAnioMetrica();
+    const ma = mesActual();
+    const mesCV = ma.mesC, mesNombre = ma.mesNombre, anioMes = ma.anio;
+    const infoMes = mesVencidoInfo();
 
-  // Horas totales año
-  let horasTotal = 0;
-  pubs.forEach(p => {
-    MESES_C.forEach(m => {
+    // Composición
+    const nAncianos   = pubs.filter(p=>p.anciano).length;
+    const nSiervos    = pubs.filter(p=>p.siervo&&!p.anciano).length;
+    const nPrecReg    = pubs.filter(p=>p.precursorReg).length;
+    const nPrecEsp    = pubs.filter(p=>p.precursorEsp).length;
+    const nMisioneros = pubs.filter(p=>p.misionero).length;
+    const nPublicad   = pubs.filter(p=>!p.anciano&&!p.siervo&&!p.precursorReg&&!p.precursorEsp&&!p.misionero).length;
+
+    // Totales año
+    let horasTotal = 0, cursosTotal = 0;
+    pubs.forEach(p => MESES_C.forEach(m => {
       const r = p.registros&&p.registros[anio]&&p.registros[anio][m];
-      if(r&&r.horas) horasTotal += parseFloat(r.horas)||0;
-    });
-  });
-
-  // Cursos totales año
-  let cursosTotal = 0;
-  pubs.forEach(p => {
-    MESES_C.forEach(m => {
-      const r = p.registros&&p.registros[anio]&&p.registros[anio][m];
-      if(r&&r.cursos) cursosTotal += parseInt(r.cursos)||0;
-    });
-  });
-
-  // Mes actual - quiénes participaron
-  const mesActual = MESES_C[new Date().getMonth() >= 8 ? new Date().getMonth()-8 : new Date().getMonth()+4];
-  const participaron = pubs.filter(p=>{
-    const r = p.registros&&p.registros[anio]&&p.registros[anio][mesActual];
-    return r&&r.particip;
-  }).length;
-  const noPredicaron = total - participaron;
-  const pctActivos = total ? Math.round(participaron/total*100) : 0;
-
-  // Precursores auxiliares mes actual
-  const pauxMesActual = pubs.filter(p=>{
-    const r = p.registros&&p.registros[anio]&&p.registros[anio][mesActual];
-    return r&&r.paux;
-  }).length;
-
-  // Barras por categoría
-  const cats = [
-    {label:'Ancianos', n:ancianos, color:'#2563eb'},
-    {label:'Siervos ministeriales', n:siervos, color:'#16a34a'},
-    {label:'Precursores regulares', n:precReg, color:'#b45309'},
-    {label:'Precursores especiales', n:precEsp, color:'#7c3aed'},
-    {label:'Misioneros', n:misioneros, color:'#be185d'},
-    {label:'Publicadores', n:publicadores, color:'#64748b'},
-  ];
-  const maxCat = Math.max(...cats.map(c=>c.n), 1);
-
-  // Promedio horas por tipo
-  const tiposHoras = [
-    {label:'Precursores especiales', pubs: pubs.filter(p=>p.precursorEsp), color:'#7c3aed'},
-    {label:'Precursores regulares',  pubs: pubs.filter(p=>p.precursorReg&&!p.precursorEsp), color:'#b45309'},
-    {label:'Ancianos',               pubs: pubs.filter(p=>p.anciano), color:'#2563eb'},
-    {label:'Siervos ministeriales',  pubs: pubs.filter(p=>p.siervo&&!p.anciano), color:'#16a34a'},
-    {label:'Publicadores',           pubs: pubs.filter(p=>!p.anciano&&!p.siervo&&!p.precursorReg&&!p.precursorEsp&&!p.misionero), color:'#64748b'},
-  ].map(t => {
-    let h = 0;
-    t.pubs.forEach(p => MESES_C.forEach(m=>{
-      const r=p.registros&&p.registros[anio]&&p.registros[anio][m];
-      if(r&&r.horas) h+=parseFloat(r.horas)||0;
+      if(r){ horasTotal += parseFloat(r.horas)||0; cursosTotal += parseInt(r.cursos)||0; }
     }));
-    return {...t, avg: t.pubs.length ? Math.round(h/t.pubs.length*10)/10 : 0};
-  });
-  const maxAvg = Math.max(...tiposHoras.map(t=>t.avg), 1);
 
-  const mesNombre = MESES[new Date().getMonth() >= 8 ? new Date().getMonth()-8 : new Date().getMonth()+4];
+    // Mes vencido
+    const informaron   = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return r&&r.particip; });
+    const noInformaron = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return !r||!r.particip; });
+    const nPaux        = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return r&&r.paux; }).length;
+    const pct = total ? Math.round(informaron.length/total*100) : 0;
 
-  document.getElementById('mtab-body-resumen').innerHTML = `
-    <!-- KPIs principales -->
-    <div class="met-kpi-grid">
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#2563eb">${total}</div>
-        <div class="met-kpi-l">Publicadores</div>
-        <div class="met-kpi-sub">total registrados</div>
-      </div>
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#16a34a">${pctActivos}%</div>
-        <div class="met-kpi-l">Participaron</div>
-        <div class="met-kpi-sub">${participaron} de ${total} en ${mesNombre}</div>
-      </div>
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#b45309">${Math.round(horasTotal)}</div>
-        <div class="met-kpi-l">Horas totales</div>
-        <div class="met-kpi-sub">año de servicio ${anio}-${anio+1}</div>
-      </div>
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#7c3aed">${cursosTotal}</div>
-        <div class="met-kpi-l">Cursos bíblicos</div>
-        <div class="met-kpi-sub">acumulados en el año</div>
-      </div>
-    </div>
+    // Barras composición
+    const cats = [
+      {label:'Ancianos', n:nAncianos, color:'#2563eb'},
+      {label:'Siervos ministeriales', n:nSiervos, color:'#16a34a'},
+      {label:'Precursores regulares', n:nPrecReg, color:'#b45309'},
+      {label:'Precursores especiales', n:nPrecEsp, color:'#7c3aed'},
+      {label:'Misioneros', n:nMisioneros, color:'#be185d'},
+      {label:'Publicadores', n:nPublicad, color:'#64748b'},
+    ].filter(c=>c.n>0);
+    const maxCat = Math.max(...cats.map(c=>c.n), 1);
 
-    <!-- KPIs secundarios -->
-    <div class="met-kpi-grid" style="grid-template-columns:repeat(3,1fr)">
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#be185d">${pauxMesActual}</div>
-        <div class="met-kpi-l">Prec. auxiliares</div>
-        <div class="met-kpi-sub">en ${mesNombre}</div>
-      </div>
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#ef4444">${noPredicaron}</div>
-        <div class="met-kpi-l">No predicaron</div>
-        <div class="met-kpi-sub">en ${mesNombre}</div>
-      </div>
-      <div class="met-kpi">
-        <div class="met-kpi-n" style="color:#0891b2">${precReg + precEsp + misioneros}</div>
-        <div class="met-kpi-l">Precursores</div>
-        <div class="met-kpi-sub">regulares + especiales + misioneros</div>
-      </div>
-    </div>
+    // Construir HTML
+    let html = '';
 
-    <!-- Composición por categoría -->
-    <div class="met-section-title">Composición de la congregación</div>
-    ${cats.map(c=>`
-      <div class="met-bar-row">
-        <div class="met-bar-label">${c.label}</div>
-        <div class="met-bar-track">
-          <div class="met-bar-fill" style="width:${Math.round(c.n/maxCat*100)}%;background:${c.color}"></div>
-        </div>
-        <div class="met-bar-val" style="color:${c.color}">${c.n}</div>
-      </div>`).join('')}
+    // Banner
+    html += '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#1e40af">';
+    html += '&#128203; ' + infoMes;
+    html += '</div>';
 
-    <!-- Promedio horas por categoría -->
-    <div class="met-section-title">Promedio de horas por categoría · año ${anio}-${anio+1}</div>
-    ${tiposHoras.filter(t=>t.pubs.length>0).map(t=>`
-      <div class="met-bar-row">
-        <div class="met-bar-label">${t.label}</div>
-        <div class="met-bar-track">
-          <div class="met-bar-fill" style="width:${Math.round(t.avg/maxAvg*100)}%;background:${t.color}"></div>
-        </div>
-        <div class="met-bar-val" style="color:${t.color}">${t.avg}h</div>
-      </div>`).join('')}
-  `;
+    // KPIs fila 1
+    html += '<div class="met-kpi-grid">';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#2563eb">' + total + '</div><div class="met-kpi-l">Publicadores</div><div class="met-kpi-sub">total registrados</div></div>';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#16a34a">' + pct + '%</div><div class="met-kpi-l">Informaron &middot; ' + mesNombre + '</div><div class="met-kpi-sub">' + informaron.length + ' de ' + total + '</div></div>';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#ef4444">' + noInformaron.length + '</div><div class="met-kpi-l">Sin informe &middot; ' + mesNombre + '</div><div class="met-kpi-sub">' + (noInformaron.length===0?'&#10003; Todos informaron':'Pendientes') + '</div></div>';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#7c3aed">' + nPaux + '</div><div class="met-kpi-l">Prec. auxiliares</div><div class="met-kpi-sub">en ' + mesNombre + '</div></div>';
+    html += '</div>';
+
+    // KPIs fila 2
+    html += '<div class="met-kpi-grid" style="grid-template-columns:repeat(2,1fr)">';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#b45309">' + Math.round(horasTotal) + '</div><div class="met-kpi-l">Horas totales</div><div class="met-kpi-sub">a&ntilde;o ' + anio + '-' + (anio+1) + '</div></div>';
+    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#0891b2">' + cursosTotal + '</div><div class="met-kpi-l">Cursos b&iacute;blicos</div><div class="met-kpi-sub">a&ntilde;o ' + anio + '-' + (anio+1) + '</div></div>';
+    html += '</div>';
+
+    // Listas informaron / no informaron
+    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">';
+
+    // Columna informaron
+    html += '<div>';
+    html += '<div class="met-section-title" style="color:#16a34a">&#10003; Informaron (' + informaron.length + ')</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:2px;max-height:220px;overflow-y:auto">';
+    informaron.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).forEach(p => {
+      const r = p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV];
+      const det = [];
+      if(r&&r.horas) det.push(r.horas+'h');
+      if(r&&r.cursos) det.push(r.cursos+'c');
+      if(r&&r.paux) det.push('PA');
+      html += '<div style="font-size:11px;padding:3px 8px;background:#f0fdf4;border-radius:4px;display:flex;justify-content:space-between">';
+      html += '<span>' + escHtml(p.apellido) + ', ' + escHtml(p.nombre) + '</span>';
+      html += '<span style="color:#16a34a;font-size:10px">' + det.join(' ') + '</span>';
+      html += '</div>';
+    });
+    html += '</div></div>';
+
+    // Columna no informaron
+    html += '<div>';
+    html += '<div class="met-section-title" style="color:#ef4444">&#10007; Sin informe (' + noInformaron.length + ')</div>';
+    html += '<div style="display:flex;flex-direction:column;gap:2px;max-height:220px;overflow-y:auto">';
+    noInformaron.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).forEach(p => {
+      html += '<div style="font-size:11px;padding:3px 8px;background:#fef2f2;border-radius:4px">';
+      html += escHtml(p.apellido) + ', ' + escHtml(p.nombre);
+      html += '</div>';
+    });
+    html += '</div></div>';
+    html += '</div>';
+
+    // Barras composición
+    html += '<div class="met-section-title" style="margin-top:16px">Composici&oacute;n de la congregaci&oacute;n</div>';
+    cats.forEach(c => {
+      html += '<div class="met-bar-row">';
+      html += '<div class="met-bar-label">' + c.label + '</div>';
+      html += '<div class="met-bar-track"><div class="met-bar-fill" style="width:' + Math.round(c.n/maxCat*100) + '%;background:' + c.color + '"></div></div>';
+      html += '<div class="met-bar-val" style="color:' + c.color + '">' + c.n + '</div>';
+      html += '</div>';
+    });
+
+    el.innerHTML = html;
+  } catch(e) {
+    el.innerHTML = '<div style="padding:20px;color:red;font-size:12px">Error: ' + e.message + '</div>';
+    console.error('renderMetResumen error:', e);
+  }
 }
 
 function renderMetMensual() {
@@ -5293,6 +5455,7 @@ function irA(pantalla) {
   if(pantalla === 'grupos')       renderGruposScreen();
   if(pantalla === 'inactivos')    renderInactivos();
   if(pantalla === 'asistencia')   renderAsistenciaScreen();
+  if(pantalla === 'vym')          renderVyM();
   applyRoleUI();
 }
 
@@ -5309,15 +5472,13 @@ function renderDashboard() {
   const anio  = anioHoy();
 
   // Stats del mes actual
-  const mesIdx  = new Date().getMonth() >= 8 ? new Date().getMonth()-8 : new Date().getMonth()+4;
-  const mesActual = MESES_C[mesIdx];
-  const mesNombre = MESES[mesIdx];
+  const { mesC: mesC_v, mesNombre, anio: anioMes } = mesActual();
   const participaron = pubs.filter(p=>{
-    const r=p.registros&&p.registros[anio]&&p.registros[anio][mesActual];
+    const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesC_v];
     return r&&r.particip;
   }).length;
   const paux = pubs.filter(p=>{
-    const r=p.registros&&p.registros[anio]&&p.registros[anio][mesActual];
+    const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesC_v];
     return r&&r.paux;
   }).length;
   const noPredicaron = total - participaron;
@@ -5367,6 +5528,12 @@ function renderDashboard() {
         <div class="dash-banner-title">Registro de Predicación</div>
         <div class="dash-banner-sub">Año de servicio ${anio}-${anio+1}</div>
       </div>
+      <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
+        <span style="background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">
+          📋 Informes: ${mesNombre} ${anioMes}-${anioMes+1}
+        </span>
+        ${new Date().getDate() < 20 ? `<span style="background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">⏰ Envío a sucursal: día 20</span>` : `<span style="background:#d1fae5;color:#065f46;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">✅ Período de envío activo</span>`}
+      </div>
       <div class="dash-banner-stats">
         <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
         <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
@@ -5390,21 +5557,21 @@ function renderDashboard() {
     </div>
     <div class="dash-card c-accent" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
-      <div class="dash-card-label">Predicaron · ${mesNombre}</div>
+      <div class="dash-card-label">Predicaron · ${mesNombre} <span style="font-size:9px;opacity:.7">(informe)</span></div>
       <div class="dash-card-value">${participaron}</div>
-      <div class="dash-card-desc">de ${total} publicadores</div>
+      <div class="dash-card-desc">de ${total} · ${Math.round(participaron/total*100)||0}%</div>
     </div>
     <div class="dash-card ${noPredicaron>0?'c-red':'c-green'}" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
       <div class="dash-card-label">Sin informar · ${mesNombre}</div>
       <div class="dash-card-value">${noPredicaron}</div>
-      <div class="dash-card-desc">${noPredicaron===0?'Todos predicaron este mes':'Pendientes de informe'}</div>
+      <div class="dash-card-desc">${noPredicaron===0?'✓ Todos informaron':'Pendientes de informe'}</div>
     </div>
     <div class="dash-card c-amber" onclick="abrirMetricas()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-star"/></svg></div>
       <div class="dash-card-label">Prec. auxiliares · ${mesNombre}</div>
       <div class="dash-card-value">${paux}</div>
-      <div class="dash-card-desc">Sirviendo este mes</div>
+      <div class="dash-card-desc">Mes vencido ${mesNombre}</div>
     </div>
     <div class="dash-card" onclick="toggleAsistencia()">
       <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
@@ -5440,7 +5607,7 @@ function renderGruposScreen() {
   if(!wrap) return;
 
   const anio = anioHoy();
-  const { mesC, mesNombre } = mesActual ? mesActual() : { mesC: MESES_C[0], mesNombre: MESES[0] };
+  const { mesC, mesNombre } = mesActual();
   const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
 
   // Anciano solo ve su grupo; los demás ven todos
@@ -5628,6 +5795,784 @@ renderGruposPanel();
     setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
   }
 })();
+
+// ══════════════════════════════════════════════════════════════
+// VIDA Y MINISTERIO CRISTIANOS
+// ══════════════════════════════════════════════════════════════
+
+function getVymState() {
+  if(!state.vym) state.vym = { semanas: {} };
+  return state.vym;
+}
+
+function vymUrlPorFecha(fecha) {
+  const ancla = new Date(2026, 2, 16);
+  const anclaId = 202026083;
+  const diffSem = Math.round((fecha - ancla) / (7 * 24 * 3600 * 1000));
+  return anclaId + (diffSem * 7);
+}
+
+function vymLunesDeSemana(offset) {
+  const hoy = new Date();
+  const dia = hoy.getDay();
+  const lunes = new Date(hoy);
+  lunes.setDate(hoy.getDate() - (dia === 0 ? 6 : dia - 1) + offset * 7);
+  lunes.setHours(0,0,0,0);
+  return lunes;
+}
+
+function vymFechaLabel(fecha) {
+  const meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  const fin = new Date(fecha); fin.setDate(fin.getDate() + 6);
+  if(fecha.getMonth() === fin.getMonth())
+    return `${fecha.getDate()}\u2013${fin.getDate()} de ${meses[fecha.getMonth()]} de ${fecha.getFullYear()}`;
+  return `${fecha.getDate()} de ${meses[fecha.getMonth()]} \u2013 ${fin.getDate()} de ${meses[fin.getMonth()]} de ${fecha.getFullYear()}`;
+}
+
+function vymSemanaKey(fecha) {
+  return fecha.toISOString().slice(0,10);
+}
+
+function vymPartesDefecto() {
+  return [
+    { id:'presidente', nombre:'Presidente de la reunión',         mins:null, seccion:'apertura', doble:false, rol:'anciano' },
+    { id:'p2',  nombre:'"Tesoro de la semana"',                   mins:10,   seccion:'tesoros',  doble:false, rol:'anciano_siervo' },
+    { id:'p3',  nombre:'Busquemos perlas escondidas',             mins:10,   seccion:'tesoros',  doble:false, rol:'anciano_siervo' },
+    { id:'p4',  nombre:'Lectura de la Biblia',                    detalle:'',  mins:4,    seccion:'tesoros',  doble:true,  rol:'todos' },
+    { id:'p5',  nombre:'Empiece conversaciones',                  detalle:'',  mins:3,    seccion:'maestros', doble:true,  rol:'todos', conAyudante:true },
+    { id:'p6',  nombre:'Haga revisitas',                          detalle:'',  mins:4,    seccion:'maestros', doble:true,  rol:'todos', conAyudante:true },
+    { id:'p7',  nombre:'Haga discípulos',                         detalle:'',  mins:5,    seccion:'maestros', doble:true,  rol:'todos', conAyudante:true },
+    { id:'p8',  nombre:'Necesidades de la congregación',          detalle:'',  mins:15,   seccion:'vida',     doble:false, rol:'anciano_siervo' },
+    { id:'p9',  nombre:'Estudio bíblico de la congregación',      detalle:'',  mins:30,   seccion:'vida',     doble:false, rol:'anciano', tieneEspecial:'lector' },
+    { id:'p9l', nombre:'Lector (estudio bíblico)',                detalle:'',  mins:null, seccion:'vida',     doble:false, rol:'anciano_siervo', esLector:true },
+    { id:'p10', nombre:'Palabras de conclusión',                  mins:3,    seccion:'cierre',   doble:false, rol:'anciano' },
+  ];
+}
+
+function vymParsearTexto(texto, fechaKey) {
+  const semana = { fechaKey, partes: [], libros: '', cargado: true };
+
+  const lineas = texto.split('\n').map(l=>l.trim());
+
+  // Unir línea de nombre con la siguiente si ésta empieza con (N min
+  const unidas = [];
+  for(let i=0; i<lineas.length; i++) {
+    const l = lineas[i];
+    if(!l) continue;
+    const sig = (lineas[i+1]||'').trim();
+    if(sig && /^\(\d+\s*min/i.test(sig)) {
+      unidas.push(l + '\n' + sig);
+      i++;
+    } else {
+      unidas.push(l);
+    }
+  }
+
+  const partes = [];
+  let seccion = 'tesoros';
+  let orden = 0;
+  partes.push({ id:'presidente', nombre:'Presidente de la reunión', mins:null, seccion:'apertura', doble:false, soloAncianos:false });
+
+  unidas.forEach(linea => {
+    const t = linea.trim();
+    if(!t) return;
+    if(/TESOROS DE LA BIBLIA/i.test(t))   { seccion='tesoros';  return; }
+    if(/SEAMOS MEJORES MAESTROS/i.test(t)) { seccion='maestros'; return; }
+    if(/NUESTRA VIDA CRISTIANA/i.test(t))  { seccion='vida';     return; }
+    // Capturar Canción de apertura (primera que aparece, con "y oración")
+    if(/Canción\s+\d+.*oración/i.test(t) || /^Canción\s+\d+\s*y\s*oración/i.test(t)) {
+      const numMatch = t.match(/Canción\s+(\d+)/i);
+      if(numMatch) {
+        if(!semana.cancionApertura) semana.cancionApertura = numMatch[1];
+        else semana.cancionCierre = numMatch[1];
+      }
+      return;
+    }
+    if(/^Canción\s+\d+$/i.test(t)) return; // Canción intermedia (NVC), ignorar
+
+    // Capturar libros bíblicos (ej: ISAÍAS 45-47)
+    if(/^[A-ZÁÉÍÓÚÑ][A-ZÁÉÍÓÚÑa-záéíóúñ\s]+\s+\d[\d\-,\s]*$/.test(t) && !/min/i.test(t)) {
+      semana.libros = t; return;
+    }
+
+    const minsMatch = t.match(/\((\d+)\s*min/i);
+    if(!minsMatch) return;
+
+    orden++;
+    const mins = parseInt(minsMatch[1]);
+    // Extraer nombre: número inicial + todo antes de los paréntesis de minutos
+    // Nombre: primera línea de la parte (antes del \n con los minutos)
+    const primeraLinea = t.split('\n')[0];
+    let nombre = primeraLinea.replace(/^\d+\.\s*/, '');
+    nombre = nombre.replace(/\s*\(\d+\s*min[^)]*\).*$/i, '').trim();
+    // Quitar pipe y lo que sigue solo si lo que precede es corto (canción/oración)
+    if(/\|\s*(Canción|oración)/i.test(nombre)) {
+      nombre = nombre.replace(/\s*\|\s*(Canción|oración).*$/i,'').trim();
+    }
+    if(!nombre || nombre.length < 3) return;
+
+    const seccionFinal = /Palabras de conclusión/i.test(nombre) ? 'cierre' : seccion;
+    const esEstudio = /Estudio bíblico de la congregación/i.test(nombre);
+
+    // Extraer detalle PRIMERO: texto después de (N mins.) — puede estar en segunda línea
+    let detalle = '';
+    const partsUnida = t.split('\n');
+    const lineaMins = partsUnida.find(l => /\(\d+\s*min/i.test(l)) || '';
+    const detalleMatch = lineaMins.match(/\(\d+\s*min[^)]*\)\s*(.+)$/i);
+    if(detalleMatch) {
+      detalle = detalleMatch[1].trim();
+      detalle = detalle.replace(/\s*\([^)]*lmd[^)]*\)\s*\.?\s*$/i, '').trim();
+      detalle = detalle.replace(/\.$/, '').trim();
+    }
+
+    // Doble sala: partes de maestros EXCEPTO si el detalle dice "Discurso"
+    const esDiscurso = /discurso/i.test(detalle);
+    const esMaestros = /Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(nombre);
+    const doble = /Lectura de la Biblia/.test(nombre) || esMaestros; // siempre doble sala
+    // conAyudante: cada sala tiene estudiante + ayudante, solo cuando es maestros y no discurso
+    const conAyudante = esMaestros && !esDiscurso;
+
+    // Rol por nombre explícito
+    let rol = 'todos';
+    if(/Palabras de (introducción|conclusión)/i.test(nombre)) rol = 'anciano';
+    else if(/Busquemos perlas/i.test(nombre)) rol = 'anciano_siervo';
+    else if(esEstudio) rol = 'anciano';
+    else if(doble) rol = 'todos';
+    else if(seccionFinal === 'tesoros') rol = 'anciano_siervo';
+    else if(seccionFinal === 'vida') rol = 'anciano_siervo';
+    else if(seccionFinal === 'cierre') rol = 'anciano';
+
+    // Limpiar nombre con año + pipe (ej: "2026 | Informe...")
+    const nombreFinal = nombre.replace(/^\d{4}\s*\|\s*/, '').trim();
+
+    partes.push({ id:`p${orden}`, nombre:nombreFinal, detalle, mins, seccion:seccionFinal, doble, conAyudante: conAyudante||false, rol });
+
+    if(esEstudio) {
+      partes.push({ id:`p${orden}l`, nombre:'Lector (estudio bíblico)', detalle:'', mins:null, seccion:seccionFinal, doble:false, rol:'anciano_siervo', esLector:true });
+    }
+  });
+
+  semana.partes = partes.length > 3 ? partes : vymPartesDefecto();
+  return semana;
+}
+
+function vymCargarSemana(fechaKey, fechaISO, semanaIdx) {
+  const fecha = new Date(fechaISO);
+  const urlId = vymUrlPorFecha(fecha);
+  const jwUrl = `https://wol.jw.org/es/wol/d/r4/lp-s/${urlId}`;
+  vymMostrarModalPegar(fechaKey, fechaISO, semanaIdx, jwUrl);
+}
+
+function vymMostrarModalPegar(fechaKey, fechaISO, semanaIdx, jwUrl) {
+  // Restaurar botón
+  const btn = document.getElementById(`vym-load-${semanaIdx}`);
+  if(btn) { btn.textContent = '⬇ Cargar programa'; btn.disabled = false; }
+
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px';
+  overlay.innerHTML = `
+    <div style="background:var(--surface);border-radius:16px;max-width:580px;width:100%;max-height:92vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-weight:700;font-size:15px">Cargar programa</div>
+          <div style="font-size:11px;color:var(--ink-3);margin-top:2px">Pega el texto de jw.org para esta semana</div>
+        </div>
+        <button onclick="this.closest('[style*=fixed]').remove()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-3);line-height:1">×</button>
+      </div>
+      <div style="padding:14px 20px;background:#f0f7ff;border-bottom:1px solid #bfdbfe">
+        <div style="font-size:12px;font-weight:700;color:#1e40af;margin-bottom:6px">📋 Cómo hacerlo:</div>
+        <ol style="font-size:12px;color:#1e3a8a;margin:0;padding-left:18px;line-height:1.7">
+          <li>Abre el programa en <a href="${jwUrl}" target="_blank" style="color:var(--accent);font-weight:700">jw.org ↗</a></li>
+          <li>Selecciona todo el texto de la página (<strong>Ctrl+A</strong>)</li>
+          <li>Cópialo (<strong>Ctrl+C</strong>)</li>
+          <li>Pégalo aquí abajo (<strong>Ctrl+V</strong>) y presiona <strong>Procesar</strong></li>
+        </ol>
+      </div>
+      <div style="padding:14px 20px;flex:1;overflow-y:auto">
+        <textarea id="vym-paste-area" placeholder="Pega aquí el texto copiado de jw.org..."
+          style="width:100%;height:220px;border:1.5px solid var(--border);border-radius:8px;padding:10px;font-size:12px;font-family:var(--font);resize:vertical;box-sizing:border-box;line-height:1.5"></textarea>
+      </div>
+      <div style="padding:12px 20px;border-top:1px solid var(--border);display:flex;gap:8px;justify-content:flex-end">
+        <button onclick="this.closest('[style*=fixed]').remove()" style="padding:9px 18px;border-radius:8px;border:1.5px solid var(--border);background:var(--surface);font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font)">Cancelar</button>
+        <button onclick="vymProcesarPegado('${fechaKey}','${fechaISO}',${semanaIdx},this)"
+          style="padding:9px 18px;border-radius:8px;border:none;background:var(--accent);color:#fff;font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)">
+          ✓ Procesar
+        </button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+}
+
+function vymProcesarPegado(fechaKey, fechaISO, semanaIdx, btn) {
+  const texto = document.getElementById('vym-paste-area')?.value || '';
+  if(!texto.trim()) { toast('Pega el texto primero'); return; }
+  const fecha = new Date(fechaISO);
+  const urlId = vymUrlPorFecha(fecha);
+  const semana = vymParsearTexto(texto, fechaKey);
+  semana.urlId = urlId;
+  const asignExist = (getVymState().semanas[fechaKey]||{}).asign;
+  getVymState().semanas[fechaKey] = semana;
+  if(asignExist) getVymState().semanas[fechaKey].asign = asignExist;
+  saveStateAndSync();
+  btn.closest('[style*=fixed]').remove();
+  renderVyM();
+  toast('✓ Programa cargado');
+}
+
+function vymGetAsign(semKey, parteId, sala) {
+  const s = getVymState().semanas[semKey];
+  if(!s || !s.asign) return '';
+  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud' };
+  return s.asign[parteId + (sufijos[sala]||'')] || '';
+}
+
+function vymSetAsign(semKey, parteId, sala, pubId) {
+  const vym = getVymState();
+  if(!vym.semanas[semKey]) return;
+  if(!vym.semanas[semKey].asign) vym.semanas[semKey].asign = {};
+  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud' };
+  const key = parteId + (sufijos[sala]||'');
+  const anterior = vym.semanas[semKey].asign[key];
+  vym.semanas[semKey].asign[key] = pubId;
+
+  // Guardar en historial global
+  if(!vym.historial) vym.historial = [];
+  // Remover entrada previa de esta combinación semana+parte+sala
+  vym.historial = vym.historial.filter(h => !(h.semKey===semKey && h.parteId===parteId && h.sala===sala));
+  if(pubId) {
+    const semana = vym.semanas[semKey];
+    const parte = (semana?.partes||[]).find(p=>p.id===parteId);
+    vym.historial.push({
+      semKey, parteId, sala, pubId,
+      nombreParte: parte?.nombre || parteId,
+      fecha: semKey
+    });
+  }
+
+  saveStateAndSync();
+  vymMarcarDuplicados();
+}
+
+function vymMarcarDuplicados() {
+  const hist = (getVymState().historial||[]);
+  document.querySelectorAll('.vym-semana').forEach(sEl => {
+    const semKey = sEl.dataset.semkey;
+    if(!semKey) return;
+    const asign = (getVymState().semanas[semKey]||{}).asign || {};
+
+    // Conteo duplicados en misma semana
+    const conteo = {};
+    Object.values(asign).forEach(v => { if(v) conteo[v] = (conteo[v]||0)+1; });
+
+    sEl.querySelectorAll('.vym-select').forEach(sel => {
+      const pubId = sel.value;
+      if(!pubId) { sel.style.borderColor=''; sel.style.background=''; sel.title=''; return; }
+
+      const dup = conteo[pubId] > 1;
+
+      // Verificar si participó hace menos de 3 semanas en OTRA semana
+      const asignReciente = hist.filter(h => h.pubId===pubId && h.semKey!==semKey)
+        .sort((a,b)=>b.fecha.localeCompare(a.fecha))[0];
+      let reciente = false;
+      if(asignReciente) {
+        const semanas = Math.round((new Date(semKey)-new Date(asignReciente.fecha))/(7*24*3600*1000));
+        reciente = Math.abs(semanas) < 3;
+      }
+
+      if(dup) {
+        sel.style.borderColor='#ef4444'; sel.style.background='#fef2f2';
+        sel.title='⚠ Ya tiene otra asignación esta semana';
+      } else if(reciente) {
+        sel.style.borderColor='#f59e0b'; sel.style.background='#fffbeb';
+        sel.title=`⚠ Participó hace menos de 3 semanas (${asignReciente.semKey})`;
+      } else {
+        sel.style.borderColor=''; sel.style.background=''; sel.title='';
+      }
+    });
+  });
+}
+
+function vymOpcionesSelect(rol, valorActual, parteNombre) {
+  let pubs = [...state.publicadores].sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
+  if(rol === 'anciano')             pubs = pubs.filter(p=>p.anciano);
+  else if(rol === 'anciano_siervo') pubs = pubs.filter(p=>p.anciano||p.siervo);
+
+  // Calcular última asignación por pub para ordenar (rotación)
+  const hist = (getVymState().historial||[]);
+  const ultimaAsign = {};
+  hist.forEach(h => {
+    if(!ultimaAsign[h.pubId] || h.fecha > ultimaAsign[h.pubId]) {
+      ultimaAsign[h.pubId] = h.fecha;
+    }
+  });
+
+  // Ordenar: primero los que llevan más tiempo sin asignación
+  pubs.sort((a,b) => {
+    const fa = ultimaAsign[a.id] || '0000-00-00';
+    const fb = ultimaAsign[b.id] || '0000-00-00';
+    if(fa !== fb) return fa < fb ? -1 : 1;
+    return a.apellido.localeCompare(b.apellido,'es');
+  });
+
+  const opts = ['<option value="">— Sin asignar —</option>'];
+  const hoy = new Date().toISOString().slice(0,10);
+  pubs.forEach((p,idx) => {
+    const sel = p.id===valorActual ? ' selected':'';
+    const ultima = ultimaAsign[p.id];
+    let sufijo = '';
+    if(!ultima) sufijo = ' ★';  // nunca asignado
+    else {
+      const semanas = Math.round((new Date(hoy)-new Date(ultima))/(7*24*3600*1000));
+      if(semanas >= 6) sufijo = ` (${semanas}sem)`;
+    }
+    // Primer candidato de rotación
+    const esProximo = idx === 0 && !valorActual;
+    opts.push(`<option value="${p.id}"${sel}>${escHtml(p.apellido)}, ${escHtml(p.nombre)}${sufijo}</option>`);
+  });
+  return opts.join('');
+}
+
+function vymNombrePub(pubId) {
+  if(!pubId) return '________________';
+  const p = state.publicadores.find(x=>x.id===pubId);
+  return p ? `${p.apellido}, ${p.nombre}` : '________________';
+}
+
+function vymFechaLabelSemKey(semKey) {
+  for(let i=-4; i<20; i++) {
+    const f = vymLunesDeSemana(i);
+    if(vymSemanaKey(f) === semKey) return vymFechaLabel(f).toUpperCase();
+  }
+  return semKey;
+}
+
+function vymExportarSemana(semKey) {
+  const vym = getVymState();
+  const semana = vym.semanas[semKey];
+  if(!semana) return;
+  const fechaLabel = vymFechaLabelSemKey(semKey);
+
+  // ── Construir HTML con formato idéntico al PDF oficial ──
+  const grupos = {};
+  (semana.partes||[]).forEach(p => {
+    const s = p.seccion||'tesoros';
+    if(!grupos[s]) grupos[s]=[];
+    grupos[s].push(p);
+  });
+
+  // Colores exactos del PDF
+  const TD = 'padding:5px 8px;vertical-align:top;';
+  const SECC_COLORS = {
+    tesoros:  { bg:'#1a5276', accent:'#d4ac0d', label:'TESOROS DE LA BIBLIA',    icon:'◆' },
+    maestros: { bg:'#1a5276', accent:'#ca6f1e', label:'SEAMOS MEJORES MAESTROS', icon:'◈' },
+    vida:     { bg:'#922b21', accent:'#922b21', label:'NUESTRA VIDA CRISTIANA',  icon:'♥' },
+  };
+
+  // Función para una fila de parte
+  function filaHTML(parte, semKey) {
+    const conAyud = parte.conAyudante ||
+      (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
+       !/discurso/i.test(parte.detalle||''));
+    const prin     = vymNombrePub(vymGetAsign(semKey, parte.id, 'prin'));
+    const prinAyud = conAyud ? vymNombrePub(vymGetAsign(semKey, parte.id, 'prin_ayud')) : '';
+    const aux      = parte.doble ? vymNombrePub(vymGetAsign(semKey, parte.id, 'aux')) : '';
+    const auxAyud  = conAyud && parte.doble ? vymNombrePub(vymGetAsign(semKey, parte.id, 'aux_ayud')) : '';
+
+    const mins = parte.mins ? ` (${parte.mins} mins.)` : '';
+    const detalle = parte.detalle ? `<br><span style="font-size:9.5px;color:#555;font-style:italic">${escHtml(parte.detalle)}</span>` : '';
+
+    // Columna de asignados
+    let asigCol = '';
+    if(conAyud && parte.doble) {
+      asigCol = `<td style="${TD}width:22%">
+        <span style="font-size:8px;font-weight:700;color:#888;display:block;text-transform:uppercase;letter-spacing:.3px">Principal</span>
+        <b>${prin}</b><br>
+        <span style="font-size:9px;color:#666">Ayud: ${prinAyud}</span>
+      </td>
+      <td style="${TD}width:22%">
+        <span style="font-size:8px;font-weight:700;color:#888;display:block;text-transform:uppercase;letter-spacing:.3px">Auxiliar</span>
+        <b>${aux}</b><br>
+        <span style="font-size:9px;color:#666">Ayud: ${auxAyud}</span>
+      </td>`;
+    } else if(parte.doble) {
+      asigCol = `<td style="${TD}width:22%"><b>${prin}</b></td><td style="${TD}width:22%"><b>${aux}</b></td>`;
+    } else if(parte.esLector) {
+      asigCol = `<td colspan="2" style="${TD}"><span style="color:#888;font-style:italic">${prin}</span></td>`;
+    } else {
+      asigCol = `<td colspan="2" style="${TD}"><b>${prin}</b></td>`;
+    }
+
+    const bgRow = parte.esLector ? 'background:#fafafa' : '';
+    const nameStyle = parte.esLector
+      ? `font-size:10px;color:#aaa;font-style:italic`
+      : `font-size:11px;color:#1a1a1a;font-weight:500`;
+
+    return `<tr style="border-bottom:1px solid #e8e8e8;${bgRow}">
+      <td style="${TD}width:56%">
+        <span style="${nameStyle}">${escHtml(parte.nombre)}${mins}</span>${detalle}
+      </td>
+      ${asigCol}
+    </tr>`;
+  }
+
+  // Fila encabezado apertura
+  const canAp = semana.cancionApertura ? `Canción ${semana.cancionApertura} y oración` : '';
+  const canCi = semana.cancionCierre   ? `Canción ${semana.cancionCierre} y oración`   : '';
+
+  let htmlContent = '';
+
+  // ── ENCABEZADO APERTURA ──
+  htmlContent += `<table width="100%" style="border-collapse:collapse;margin-bottom:2px">
+    <tr style="border-bottom:1px solid #ccc">
+      <td style="padding:5px 8px;font-size:10.5px;color:#333">
+        ${canAp ? `<b>♩ ${escHtml(canAp)}</b>  |  ` : ''}
+        <b>Palabras de introducción</b> <span style="font-weight:400">(1 min.)</span>
+      </td>
+      <td style="padding:5px 8px;text-align:right;font-size:10px;color:#888">
+        ${semana.libros ? `<b style="color:#1a5276">${escHtml(semana.libros)}</b>` : ''}
+      </td>
+    </tr>
+  </table>`;
+
+  // ── PRESIDENTE ──
+  const pres = (grupos.apertura||[]).find(p=>p.id==='presidente');
+  if(pres) {
+    const presNombre = vymNombrePub(vymGetAsign(semKey, 'presidente', 'prin'));
+    htmlContent += `<table width="100%" style="border-collapse:collapse;margin-bottom:6px">
+      <tr style="border-bottom:1px solid #eee">
+        <td style="${TD}font-size:11px;width:56%"><b>Presidente de la reunión</b></td>
+        <td colspan="2" style="${TD}font-size:11px"><b>${presNombre}</b></td>
+      </tr>
+    </table>`;
+  }
+
+  // ── SECCIONES PRINCIPALES ──
+  ['tesoros','maestros','vida'].forEach(secId => {
+    const partes = grupos[secId]; if(!partes||!partes.length) return;
+    const cfg = SECC_COLORS[secId];
+
+    htmlContent += `
+    <table width="100%" style="border-collapse:collapse;margin-bottom:8px;border:1px solid #ddd;border-radius:4px;overflow:hidden">
+      <tr>
+        <td colspan="3" style="background:${cfg.bg};padding:5px 8px">
+          <span style="color:#fff;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.8px">${cfg.label}</span>
+        </td>
+      </tr>`;
+
+    partes.forEach(parte => { htmlContent += filaHTML(parte, semKey); });
+    htmlContent += `</table>`;
+  });
+
+  // ── CIERRE ──
+  const cierrePartes = grupos.cierre || [];
+  htmlContent += `<table width="100%" style="border-collapse:collapse;margin-top:4px">
+    <tr style="border-top:1px solid #ccc">
+      <td style="padding:5px 8px;font-size:10.5px;color:#333">
+        <b>Palabras de conclusión</b> <span style="font-weight:400">(3 mins.)</span>
+        ${canCi ? `  |  <b>♩ ${escHtml(canCi)}</b>` : ''}
+      </td>
+      <td style="padding:5px 8px;text-align:right">
+        ${cierrePartes.length ? `<b style="font-size:11px">${vymNombrePub(vymGetAsign(semKey, cierrePartes[0].id, 'prin'))}</b>` : ''}
+      </td>
+    </tr>
+  </table>`;
+
+  const html = `<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<title>Vida y Ministerio — ${fechaLabel}</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:"Arial",sans-serif; background:#fff; color:#111; padding:14px 16px; max-width:720px; margin:0 auto; font-size:11px; }
+  .page-header { border-bottom:3px solid #1a5276; padding-bottom:8px; margin-bottom:10px; }
+  .page-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#555; }
+  .page-fecha { font-size:17px; font-weight:900; color:#1a1a1a; margin:3px 0; letter-spacing:-.3px; }
+  .page-libros { font-size:12px; font-weight:700; color:#1a5276; }
+  .no-print { text-align:center; margin-top:14px; }
+  .btn-print { padding:9px 24px; background:#1a5276; color:#fff; border:none; border-radius:6px; font-size:12px; font-weight:700; cursor:pointer; font-family:Arial,sans-serif; }
+  @media print {
+    body { padding:8px; }
+    .no-print { display:none !important; }
+    table { page-break-inside:avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="page-header">
+    <div class="page-title">VIDA Y MINISTERIO CRISTIANOS</div>
+    <div class="page-fecha">${fechaLabel}</div>
+    ${semana.libros ? `<div class="page-libros">${escHtml(semana.libros)}</div>` : ''}
+  </div>
+  ${htmlContent}
+  <div class="no-print">
+    <button class="btn-print" onclick="window.print()">🖨 Imprimir / Guardar PDF</button>
+  </div>
+</body></html>`;
+
+  const win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  toast('✓ Programa abierto — usa Imprimir para guardar como PDF');
+}
+
+// ── HISTORIAL DE ASIGNACIONES ──
+function vymMostrarHistorial() {
+  const vym = getVymState();
+  const hist = (vym.historial||[]).slice().sort((a,b)=>b.fecha.localeCompare(a.fecha));
+
+  // Agrupar por publicador
+  const porPub = {};
+  hist.forEach(h => {
+    if(!porPub[h.pubId]) porPub[h.pubId] = [];
+    porPub[h.pubId].push(h);
+  });
+
+  // Ordenar pubs: más reciente primero
+  const pubsSorted = Object.entries(porPub).sort((a,b) => {
+    return b[1][0].fecha.localeCompare(a[1][0].fecha);
+  });
+
+  const hoy = new Date();
+
+  let filas = pubsSorted.map(([pubId, asigns]) => {
+    const pub = state.publicadores.find(p=>p.id===pubId);
+    const nombre = pub ? `${pub.apellido}, ${pub.nombre}` : pubId;
+    const ultima = asigns[0].fecha;
+    const semanasAtras = Math.round((hoy - new Date(ultima)) / (7*24*3600*1000));
+    const badge = semanasAtras < 3
+      ? `<span style="background:#fef3c7;color:#92400e;font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px">Reciente (${semanasAtras}sem)</span>`
+      : semanasAtras > 8
+      ? `<span style="background:#d1fae5;color:#065f46;font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px">Disponible</span>`
+      : '';
+    const partes = [...new Set(asigns.map(a=>a.nombreParte))].slice(0,3).join(', ');
+    return `<tr style="border-bottom:1px solid var(--border-2)">
+      <td style="padding:8px 12px;font-size:12px;font-weight:600">${nombre}</td>
+      <td style="padding:8px 8px;font-size:11px;color:var(--ink-3)">${ultima} ${badge}</td>
+      <td style="padding:8px 8px;font-size:11px;color:var(--ink-3)">${asigns.length}x</td>
+      <td style="padding:8px 12px;font-size:10px;color:var(--ink-3);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${partes}</td>
+    </tr>`;
+  }).join('');
+
+  // Hermanos que NUNCA han participado
+  const participaron = new Set(hist.map(h=>h.pubId));
+  const nunca = state.publicadores.filter(p=>!participaron.has(p.id));
+  if(nunca.length) {
+    filas += `<tr><td colspan="4" style="padding:6px 12px;background:#fef2f2;font-size:10px;font-weight:700;color:#991b1b;text-transform:uppercase;letter-spacing:.5px">
+      Sin asignación aún (${nunca.length})
+    </td></tr>`;
+    nunca.forEach(p => {
+      filas += `<tr style="border-bottom:1px solid var(--border-2);background:#fef2f2">
+        <td style="padding:6px 12px;font-size:12px;font-weight:600;color:#991b1b">${p.apellido}, ${p.nombre}</td>
+        <td colspan="3" style="padding:6px 8px;font-size:11px;color:#9ca3af">Nunca asignado ★</td>
+      </tr>`;
+    });
+  }
+
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;display:flex;align-items:center;justify-content:center;padding:16px';
+  overlay.innerHTML = `
+    <div style="background:var(--surface);border-radius:16px;max-width:700px;width:100%;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+      <div style="padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div style="font-weight:700;font-size:15px">Historial de asignaciones</div>
+          <div style="font-size:11px;color:var(--ink-3);margin-top:2px">${hist.length} asignaciones registradas</div>
+        </div>
+        <button onclick="this.closest('[style*=fixed]').remove()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-3)">×</button>
+      </div>
+      <div style="overflow-y:auto;flex:1">
+        <table style="width:100%;border-collapse:collapse">
+          <thead style="position:sticky;top:0;background:var(--surface-2);z-index:1">
+            <tr>
+              <th style="padding:8px 12px;text-align:left;font-size:10px;color:var(--ink-3);font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--border)">Hermano</th>
+              <th style="padding:8px 8px;text-align:left;font-size:10px;color:var(--ink-3);font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--border)">Última vez</th>
+              <th style="padding:8px 8px;text-align:left;font-size:10px;color:var(--ink-3);font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--border)">Total</th>
+              <th style="padding:8px 12px;text-align:left;font-size:10px;color:var(--ink-3);font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--border)">Partes</th>
+            </tr>
+          </thead>
+          <tbody>${filas || '<tr><td colspan="4" style="padding:24px;text-align:center;color:var(--ink-3)">Sin historial aún</td></tr>'}</tbody>
+        </table>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+}
+
+function renderVyM() {
+  const root = document.getElementById('vym-root');
+  if(!root) return;
+  const vym = getVymState();
+
+  const SECCIONES = {
+    apertura: { label:'Apertura',               color:'#6366f1' },
+    tesoros:  { label:'Tesoros de la Biblia',    color:'#d97706' },
+    maestros: { label:'Seamos Mejores Maestros', color:'#059669' },
+    vida:     { label:'Nuestra Vida Cristiana',  color:'#dc2626' },
+    cierre:   { label:'Cierre',                  color:'#6366f1' },
+  };
+
+  let html = `<div class="vym-wrap">
+    <div class="vym-header">
+      <div class="vym-title">Vida y Ministerio</div>
+      <div class="vym-actions">
+        <button class="vym-btn" onclick="vymMostrarHistorial()">📊 Historial</button>
+        <a class="vym-btn" href="https://wol.jw.org/es/wol/meetings/r4/lp-s" target="_blank">📖 jw.org</a>
+      </div>
+    </div>`;
+
+  for(let i=0; i<6; i++) {
+    const fecha = vymLunesDeSemana(i);
+    const key = vymSemanaKey(fecha);
+    const label = vymFechaLabel(fecha);
+    const semana = vym.semanas[key];
+
+    html += `<div class="vym-semana" data-semkey="${key}">
+      <div class="vym-semana-hdr">
+        <div>
+          <div class="vym-semana-fecha">${label}</div>
+          ${semana?.libros ? `<div class="vym-semana-libros">${escHtml(semana.libros)}</div>` : ''}
+        </div>
+        <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+          ${semana ? `<button class="vym-semana-load" style="background:rgba(255,255,255,.25);font-weight:800" onclick="vymExportarSemana('${key}')">📄 PDF</button>` : ''}
+          <button class="vym-semana-load" id="vym-load-${i}"
+            onclick="vymCargarSemana('${key}','${fecha.toISOString()}',${i})">
+            ${semana?.cargado ? '↻ Recargar' : '⬇ Cargar programa'}
+          </button>
+        </div>
+      </div>`;
+
+    if(!semana) {
+      html += `<div class="vym-loading">Presiona "Cargar programa" para obtener el programa de jw.org</div>`;
+    } else {
+      // Agrupar por sección
+      const grupos = {};
+      semana.partes.forEach(p => {
+        const sec = p.seccion||'tesoros';
+        if(!grupos[sec]) grupos[sec]=[];
+        grupos[sec].push(p);
+      });
+
+      ['apertura','tesoros','maestros','vida','cierre'].forEach(secId => {
+        const partes = grupos[secId];
+        if(!partes||!partes.length) return;
+        const cfg = SECCIONES[secId]||SECCIONES.tesoros;
+
+        html += `<div class="vym-seccion">
+          <div class="vym-seccion-hdr">
+            <div class="vym-seccion-dot" style="background:${cfg.color}"></div>
+            <div class="vym-seccion-nombre" style="color:${cfg.color}">${cfg.label}</div>
+          </div>`;
+
+        partes.forEach(parte => {
+          const vPrin     = vymGetAsign(key, parte.id, 'prin');
+          const vAux      = vymGetAsign(key, parte.id, 'aux');
+          const vPrinAyud = vymGetAsign(key, parte.id, 'prin_ayud');
+          const vAuxAyud  = vymGetAsign(key, parte.id, 'aux_ayud');
+          const rol = parte.rol || 'todos';
+          const clsAnc = rol==='anciano' ? ' anciano-only' : (rol==='anciano_siervo' ? ' anciano-siervo-only' : '');
+          const etqLabel = parte.esLector ? 'Lector' : (parte.doble ? 'Sala principal' : 'Asignado');
+          // Recalcular conAyudante en render para no depender del valor guardado
+          const conAyudante = parte.conAyudante ||
+            (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
+             !/discurso/i.test(parte.detalle||''));
+
+          // Bloque de asignación principal
+          const bloquePrin = `
+            <div class="vym-asign-grupo">
+              <div class="vym-asign-grupo-label">${parte.doble ? 'SALA PRINCIPAL' : 'ASIGNADO'}</div>
+              <div class="vym-asign">
+                <div class="vym-asign-label">${parte.conAyudante ? 'Estudiante' : etqLabel}</div>
+                <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">
+                  ${vymOpcionesSelect(rol, vPrin)}
+                </select>
+              </div>
+              ${parte.conAyudante ? `
+              <div class="vym-asign">
+                <div class="vym-asign-label">Ayudante</div>
+                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','prin_ayud',this.value)">
+                  ${vymOpcionesSelect('todos', vPrinAyud)}
+                </select>
+              </div>` : ''}
+            </div>`;
+
+          // Bloque sala auxiliar
+          const bloqueAux = parte.doble ? `
+            <div class="vym-asign-grupo">
+              <div class="vym-asign-grupo-label">SALA AUXILIAR</div>
+              <div class="vym-asign">
+                <div class="vym-asign-label">${parte.conAyudante ? 'Estudiante' : 'Asignado'}</div>
+                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">
+                  ${vymOpcionesSelect('todos', vAux)}
+                </select>
+              </div>
+              ${parte.conAyudante ? `
+              <div class="vym-asign">
+                <div class="vym-asign-label">Ayudante</div>
+                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux_ayud',this.value)">
+                  ${vymOpcionesSelect('todos', vAuxAyud)}
+                </select>
+              </div>` : ''}
+            </div>` : '';
+
+          html += `<div class="vym-parte${parte.esLector?' vym-parte-lector':''}">
+            <div class="vym-parte-info">
+              <div class="vym-parte-nombre">${escHtml(parte.nombre)}</div>
+              ${parte.detalle ? `<div class="vym-parte-detalle">${escHtml(parte.detalle)}</div>` : ''}
+              ${parte.mins ? `<div class="vym-parte-mins">${parte.mins} min.</div>`:''}
+            </div>
+            <div class="vym-asign-wrap">
+              ${conAyudante ? `
+                <div class="vym-sala-bloque">
+                  <div class="vym-sala-titulo">Sala Principal</div>
+                  <div class="vym-sala-fila">
+                    <div class="vym-asign">
+                      <div class="vym-asign-label">Estudiante</div>
+                      <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                    </div>
+                    <div class="vym-asign">
+                      <div class="vym-asign-label">Ayudante</div>
+                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','prin_ayud',this.value)">${vymOpcionesSelect('todos',vPrinAyud)}</select>
+                    </div>
+                  </div>
+                </div>
+                <div class="vym-sala-bloque">
+                  <div class="vym-sala-titulo">Sala Auxiliar</div>
+                  <div class="vym-sala-fila">
+                    <div class="vym-asign">
+                      <div class="vym-asign-label">Estudiante</div>
+                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">${vymOpcionesSelect('todos',vAux)}</select>
+                    </div>
+                    <div class="vym-asign">
+                      <div class="vym-asign-label">Ayudante</div>
+                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux_ayud',this.value)">${vymOpcionesSelect('todos',vAuxAyud)}</select>
+                    </div>
+                  </div>
+                </div>
+              ` : parte.doble ? `
+                <div class="vym-asign">
+                  <div class="vym-asign-label">Sala principal</div>
+                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                </div>
+                <div class="vym-asign">
+                  <div class="vym-asign-label">Sala auxiliar</div>
+                  <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">${vymOpcionesSelect('todos',vAux)}</select>
+                </div>
+              ` : `
+                <div class="vym-asign">
+                  <div class="vym-asign-label">${parte.esLector?'Lector':'Asignado'}</div>
+                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                </div>
+              `}
+            </div>
+          </div>`;
+        });
+        html += `</div>`;
+      });
+    }
+    html += `</div>`;
+  }
+
+  html += `</div>`;
+  root.innerHTML = html;
+  vymMarcarDuplicados();
+}
 
 
 </script>
