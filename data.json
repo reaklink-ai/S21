@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773696070882,
+  "_lastModified": 1773696151986,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23585,7 +23585,8 @@
           "p4": "",
           "p5": "",
           "p4_aux_ayud": "",
-          "p4_aux": ""
+          "p4_aux": "",
+          "p1": "mmm9qi4k5qc0"
         }
       },
       "2026-03-23": {
@@ -23694,6 +23695,15 @@
         "urlId": 202026090
       }
     },
-    "historial": []
+    "historial": [
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p1",
+        "sala": "prin",
+        "pubId": "mmm9qi4k5qc0",
+        "nombreParte": "“Yo soy Dios, y no hay nadie como yo”",
+        "fecha": "2026-03-16"
+      }
+    ]
   }
 }
