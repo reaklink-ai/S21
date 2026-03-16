@@ -21968,7 +21968,14 @@
       "pin": "6718",
       "rol": "anciano",
       "grupo": "Grupo 5"
+    },
+    {
+      "id": "mmtgsdkm",
+      "nombre": "Isaac_G",
+      "pin": "5543",
+      "rol": "anciano",
+      "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773536312009
+  "_lastModified": 1773682539070
 }
