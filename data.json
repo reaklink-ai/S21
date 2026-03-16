@@ -1310,7 +1310,7 @@
           },
           "Feb": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -22313,5 +22313,5 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773684099836
+  "_lastModified": 1773684101753
 }
