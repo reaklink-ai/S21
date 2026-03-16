@@ -22313,7 +22313,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773688513991,
+  "_lastModified": 1773688648668,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22330,6 +22330,7 @@
           {
             "id": "p1",
             "nombre": "“Yo soy Dios, y no hay nadie como yo”",
+            "detalle": "",
             "mins": 10,
             "seccion": "tesoros",
             "doble": false,
@@ -22338,6 +22339,7 @@
           {
             "id": "p2",
             "nombre": "Busquemos perlas escondidas",
+            "detalle": "",
             "mins": 10,
             "seccion": "tesoros",
             "doble": false,
@@ -22346,6 +22348,7 @@
           {
             "id": "p3",
             "nombre": "Lectura de la Biblia",
+            "detalle": "Is 45:1-11 (th lección 5)",
             "mins": 4,
             "seccion": "tesoros",
             "doble": true,
@@ -22354,6 +22357,7 @@
           {
             "id": "p4",
             "nombre": "Empiece conversaciones",
+            "detalle": "PREDICACIÓN PÚBLICA. Explíquele qué es la Conmemoración a una persona que no tiene antecedentes cristianos",
             "mins": 3,
             "seccion": "maestros",
             "doble": true,
@@ -22362,6 +22366,7 @@
           {
             "id": "p5",
             "nombre": "Haga revisitas",
+            "detalle": "DE CASA EN CASA. Ofrézcale un curso de la Biblia a una persona que aceptó la invitación a la Conmemoración en la visita anterior",
             "mins": 4,
             "seccion": "maestros",
             "doble": true,
@@ -22370,6 +22375,7 @@
           {
             "id": "p6",
             "nombre": "Haga discípulos",
+            "detalle": "lff lección 19 introducción y puntos 1-3",
             "mins": 5,
             "seccion": "maestros",
             "doble": true,
@@ -22378,6 +22384,7 @@
           {
             "id": "p7",
             "nombre": "Jehová es el único que siempre nos puede ayudar",
+            "detalle": "Análisis con el auditorio",
             "mins": 7,
             "seccion": "vida",
             "doble": false,
@@ -22386,6 +22393,7 @@
           {
             "id": "p8",
             "nombre": "Informe sobre la actividad del Departamento Local de Diseño y Construcción",
+            "detalle": "Discurso",
             "mins": 8,
             "seccion": "vida",
             "doble": false,
@@ -22394,6 +22402,7 @@
           {
             "id": "p9",
             "nombre": "Estudio bíblico de la congregación",
+            "detalle": "lfb lecciones 70, 71",
             "mins": 30,
             "seccion": "vida",
             "doble": false,
@@ -22402,6 +22411,7 @@
           {
             "id": "p9l",
             "nombre": "Lector (estudio bíblico)",
+            "detalle": "",
             "mins": null,
             "seccion": "vida",
             "doble": false,
@@ -22411,6 +22421,7 @@
           {
             "id": "p10",
             "nombre": "Palabras de conclusión",
+            "detalle": "| Canción 148 y oración",
             "mins": 3,
             "seccion": "cierre",
             "doble": false,
