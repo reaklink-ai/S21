@@ -7504,9 +7504,9 @@
           },
           "Feb": {
             "particip": true,
-            "cursos": "2",
+            "cursos": "",
             "paux": false,
-            "horas": "50",
+            "horas": "",
             "notas": ""
           },
           "Abr": {
@@ -22313,5 +22313,185 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773684071114
+  "_lastModified": 1773684090088,
+  "vym": {
+    "semanas": {
+      "2026-03-16": {
+        "fechaKey": "2026-03-16",
+        "partes": [
+          {
+            "id": "presidente",
+            "nombre": "Presidente de la reunión",
+            "mins": null,
+            "seccion": "apertura",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p2",
+            "nombre": "\"Tesoro de la semana\"",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p3",
+            "nombre": "Busquemos perlas escondidas",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p4",
+            "nombre": "Lectura de la Biblia",
+            "mins": 4,
+            "seccion": "tesoros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p5",
+            "nombre": "Empiece conversaciones",
+            "mins": 3,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p6",
+            "nombre": "Haga revisitas",
+            "mins": 4,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p7",
+            "nombre": "Haga discípulos",
+            "mins": 5,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p8",
+            "nombre": "Necesidades de la congregación",
+            "mins": 15,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p9",
+            "nombre": "Estudio bíblico de la congregación",
+            "mins": 30,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": true
+          },
+          {
+            "id": "p10",
+            "nombre": "Palabras de conclusión",
+            "mins": 3,
+            "seccion": "cierre",
+            "doble": false,
+            "soloAncianos": false
+          }
+        ],
+        "libros": "",
+        "cargado": false,
+        "urlId": 202026083
+      },
+      "2026-03-23": {
+        "fechaKey": "2026-03-23",
+        "partes": [
+          {
+            "id": "presidente",
+            "nombre": "Presidente de la reunión",
+            "mins": null,
+            "seccion": "apertura",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p2",
+            "nombre": "\"Tesoro de la semana\"",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p3",
+            "nombre": "Busquemos perlas escondidas",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p4",
+            "nombre": "Lectura de la Biblia",
+            "mins": 4,
+            "seccion": "tesoros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p5",
+            "nombre": "Empiece conversaciones",
+            "mins": 3,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p6",
+            "nombre": "Haga revisitas",
+            "mins": 4,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p7",
+            "nombre": "Haga discípulos",
+            "mins": 5,
+            "seccion": "maestros",
+            "doble": true,
+            "soloAncianos": false
+          },
+          {
+            "id": "p8",
+            "nombre": "Necesidades de la congregación",
+            "mins": 15,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p9",
+            "nombre": "Estudio bíblico de la congregación",
+            "mins": 30,
+            "seccion": "vida",
+            "doble": false,
+            "soloAncianos": true
+          },
+          {
+            "id": "p10",
+            "nombre": "Palabras de conclusión",
+            "mins": 3,
+            "seccion": "cierre",
+            "doble": false,
+            "soloAncianos": false
+          }
+        ],
+        "libros": "",
+        "cargado": false,
+        "urlId": 202026090
+      }
+    }
+  }
 }
