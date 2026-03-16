@@ -22313,7 +22313,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773687929824,
+  "_lastModified": 1773687931339,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22412,7 +22412,8 @@
         "cargado": true,
         "urlId": 202026083,
         "asign": {
-          "presidente": "mmm9qi4jqz6w"
+          "presidente": "mmm9qi4jqz6w",
+          "p1": "mmm9qi4jfkxs"
         }
       }
     }
