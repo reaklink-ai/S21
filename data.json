@@ -22316,7 +22316,7 @@
       }
     }
   ],
-  "_lastModified": 1773694878459,
+  "_lastModified": 1773695001656,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22435,7 +22435,7 @@
         "cargado": true,
         "urlId": 202026083,
         "asign": {
-          "presidente": "mmm9qi4jw1p2",
+          "presidente": "",
           "p3_aux": "mmm9qi4jbuql",
           "p4": "mmm9qi4jfkxs",
           "p5": "mmm9qi4jaer1"
@@ -22546,6 +22546,7 @@
         "cargado": true,
         "urlId": 202026090
       }
-    }
+    },
+    "historial": []
   }
 }
