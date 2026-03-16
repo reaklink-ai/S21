@@ -23456,11 +23456,12 @@
       "rol": "lector",
       "grupo": null,
       "accesos": {
-        "vym": true
+        "vym": true,
+        "inactivos": true
       }
     }
   ],
-  "_lastModified": 1773695597428,
+  "_lastModified": 1773695598941,
   "vym": {
     "semanas": {
       "2026-03-16": {
