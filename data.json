@@ -22313,7 +22313,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773687284064,
+  "_lastModified": 1773687929824,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22410,7 +22410,10 @@
         ],
         "libros": "ISAÍAS 45-47",
         "cargado": true,
-        "urlId": 202026083
+        "urlId": 202026083,
+        "asign": {
+          "presidente": "mmm9qi4jqz6w"
+        }
       }
     }
   }
