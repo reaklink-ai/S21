@@ -1312,7 +1312,7 @@
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "34",
             "notas": ""
           },
           "Abr": {
@@ -22313,5 +22313,5 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1773684101753
+  "_lastModified": 1773684104701
 }
