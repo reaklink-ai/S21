@@ -69,7 +69,7 @@
             "notas": ""
           },
           "Feb": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773696151986,
+  "_lastModified": 1773696854352,
   "vym": {
     "semanas": {
       "2026-03-16": {
