@@ -23448,20 +23448,9 @@
       "accesos": {
         "vym": false
       }
-    },
-    {
-      "id": "mmtok84e",
-      "nombre": "Roger_R",
-      "pin": "8978",
-      "rol": "lector",
-      "grupo": null,
-      "accesos": {
-        "vym": true,
-        "inactivos": true
-      }
     }
   ],
-  "_lastModified": 1773695635580,
+  "_lastModified": 1773695820107,
   "vym": {
     "semanas": {
       "2026-03-16": {
