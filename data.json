@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769616467,
+  "_lastModified": 1773769623416,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23588,7 +23588,7 @@
           "p5": "",
           "p4_aux_ayud": "",
           "p4_aux": "mmm9qi4j5xl2",
-          "p1": "mmm9qi4k5qc0",
+          "p1": "mmm9qi4jl2r2",
           "p2": "mmm9qi4kqpna",
           "p7": "mmm9qi4kqpna",
           "p9": "mmm9qi4rvhuc",
@@ -23707,14 +23707,6 @@
     "historial": [
       {
         "semKey": "2026-03-16",
-        "parteId": "p1",
-        "sala": "prin",
-        "pubId": "mmm9qi4k5qc0",
-        "nombreParte": "“Yo soy Dios, y no hay nadie como yo”",
-        "fecha": "2026-03-16"
-      },
-      {
-        "semKey": "2026-03-16",
         "parteId": "presidente",
         "sala": "prin",
         "pubId": "mmm9qi4jl2r2",
@@ -23768,6 +23760,14 @@
         "pubId": "mmm9qi4jl2r2",
         "nombreParte": "Presidente de la reunión",
         "fecha": "2026-03-23"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p1",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "“Yo soy Dios, y no hay nadie como yo”",
+        "fecha": "2026-03-16"
       }
     ]
   }
