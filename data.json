@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769537005,
+  "_lastModified": 1773769539125,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23588,7 +23588,8 @@
           "p5": "",
           "p4_aux_ayud": "",
           "p4_aux": "",
-          "p1": "mmm9qi4k5qc0"
+          "p1": "mmm9qi4k5qc0",
+          "p2": "mmm9qi4kqpna"
         }
       },
       "2026-03-23": {
@@ -23712,6 +23713,14 @@
         "sala": "prin",
         "pubId": "mmm9qi4jl2r2",
         "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p2",
+        "sala": "prin",
+        "pubId": "mmm9qi4kqpna",
+        "nombreParte": "Busquemos perlas escondidas",
         "fecha": "2026-03-16"
       }
     ]
