@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773696858930,
+  "_lastModified": 1773769524644,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23482,6 +23482,7 @@
             "mins": 10,
             "seccion": "tesoros",
             "doble": false,
+            "conAyudante": false,
             "rol": "anciano_siervo"
           },
           {
@@ -23491,6 +23492,7 @@
             "mins": 10,
             "seccion": "tesoros",
             "doble": false,
+            "conAyudante": false,
             "rol": "anciano_siervo"
           },
           {
@@ -23500,6 +23502,7 @@
             "mins": 4,
             "seccion": "tesoros",
             "doble": true,
+            "conAyudante": false,
             "rol": "todos"
           },
           {
@@ -23509,6 +23512,7 @@
             "mins": 3,
             "seccion": "maestros",
             "doble": true,
+            "conAyudante": true,
             "rol": "todos"
           },
           {
@@ -23518,6 +23522,7 @@
             "mins": 4,
             "seccion": "maestros",
             "doble": true,
+            "conAyudante": true,
             "rol": "todos"
           },
           {
@@ -23527,6 +23532,7 @@
             "mins": 5,
             "seccion": "maestros",
             "doble": true,
+            "conAyudante": true,
             "rol": "todos"
           },
           {
@@ -23536,6 +23542,7 @@
             "mins": 7,
             "seccion": "vida",
             "doble": false,
+            "conAyudante": false,
             "rol": "anciano_siervo"
           },
           {
@@ -23545,6 +23552,7 @@
             "mins": 8,
             "seccion": "vida",
             "doble": false,
+            "conAyudante": false,
             "rol": "anciano_siervo"
           },
           {
@@ -23554,6 +23562,7 @@
             "mins": 30,
             "seccion": "vida",
             "doble": false,
+            "conAyudante": false,
             "rol": "anciano"
           },
           {
@@ -23565,19 +23574,12 @@
             "doble": false,
             "rol": "anciano_siervo",
             "esLector": true
-          },
-          {
-            "id": "p10",
-            "nombre": "Palabras de conclusión",
-            "detalle": "| Canción 148 y oración",
-            "mins": 3,
-            "seccion": "cierre",
-            "doble": false,
-            "rol": "anciano"
           }
         ],
         "libros": "ISAÍAS 45-47",
         "cargado": true,
+        "cancionApertura": "2",
+        "cancionCierre": "148",
         "urlId": 202026083,
         "asign": {
           "presidente": "",
