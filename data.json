@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769556457,
+  "_lastModified": 1773769558893,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23589,7 +23589,8 @@
           "p4_aux_ayud": "",
           "p4_aux": "mmm9qi4j5xl2",
           "p1": "mmm9qi4k5qc0",
-          "p2": "mmm9qi4kqpna"
+          "p2": "mmm9qi4kqpna",
+          "p7": "mmm9qi4kqpna"
         }
       },
       "2026-03-23": {
@@ -23729,6 +23730,14 @@
         "sala": "aux",
         "pubId": "mmm9qi4j5xl2",
         "nombreParte": "Empiece conversaciones",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p7",
+        "sala": "prin",
+        "pubId": "mmm9qi4kqpna",
+        "nombreParte": "Jehová es el único que siempre nos puede ayudar",
         "fecha": "2026-03-16"
       }
     ]
