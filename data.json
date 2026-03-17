@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769564213,
+  "_lastModified": 1773769616467,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23698,7 +23698,10 @@
         ],
         "libros": "ISAÍAS 45-47",
         "cargado": true,
-        "urlId": 202026090
+        "urlId": 202026090,
+        "asign": {
+          "presidente": "mmm9qi4jl2r2"
+        }
       }
     },
     "historial": [
@@ -23757,6 +23760,14 @@
         "pubId": "mmm9qi4jl2r2",
         "nombreParte": "Lector (estudio bíblico)",
         "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-23",
+        "parteId": "presidente",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-03-23"
       }
     ]
   }
