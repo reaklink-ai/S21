@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769623416,
+  "_lastModified": 1773769638540,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23582,7 +23582,7 @@
         "cancionCierre": "148",
         "urlId": 202026083,
         "asign": {
-          "presidente": "mmm9qi4jl2r2",
+          "presidente": "",
           "p3_aux": "",
           "p4": "",
           "p5": "",
@@ -23705,14 +23705,6 @@
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "presidente",
-        "sala": "prin",
-        "pubId": "mmm9qi4jl2r2",
-        "nombreParte": "Presidente de la reunión",
-        "fecha": "2026-03-16"
-      },
       {
         "semKey": "2026-03-16",
         "parteId": "p2",
