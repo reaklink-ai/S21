@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769672310,
+  "_lastModified": 1773769702699,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23710,19 +23710,11 @@
         "cargado": true,
         "urlId": 202026090,
         "asign": {
-          "presidente": "mmm9qi4jl2r2"
+          "presidente": ""
         }
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-23",
-        "parteId": "presidente",
-        "sala": "prin",
-        "pubId": "mmm9qi4jl2r2",
-        "nombreParte": "Presidente de la reunión",
-        "fecha": "2026-03-23"
-      },
       {
         "semKey": "2026-03-16",
         "parteId": "p1",
