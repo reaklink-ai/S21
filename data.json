@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769524644,
+  "_lastModified": 1773769537005,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23582,7 +23582,7 @@
         "cancionCierre": "148",
         "urlId": 202026083,
         "asign": {
-          "presidente": "",
+          "presidente": "mmm9qi4jl2r2",
           "p3_aux": "",
           "p4": "",
           "p5": "",
@@ -23704,6 +23704,14 @@
         "sala": "prin",
         "pubId": "mmm9qi4k5qc0",
         "nombreParte": "“Yo soy Dios, y no hay nadie como yo”",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "presidente",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "Presidente de la reunión",
         "fecha": "2026-03-16"
       }
     ]
