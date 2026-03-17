@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769561987,
+  "_lastModified": 1773769564213,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23591,7 +23591,8 @@
           "p1": "mmm9qi4k5qc0",
           "p2": "mmm9qi4kqpna",
           "p7": "mmm9qi4kqpna",
-          "p9": "mmm9qi4rvhuc"
+          "p9": "mmm9qi4rvhuc",
+          "p9l": "mmm9qi4jl2r2"
         }
       },
       "2026-03-23": {
@@ -23747,6 +23748,14 @@
         "sala": "prin",
         "pubId": "mmm9qi4rvhuc",
         "nombreParte": "Estudio bíblico de la congregación",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p9l",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "Lector (estudio bíblico)",
         "fecha": "2026-03-16"
       }
     ]
