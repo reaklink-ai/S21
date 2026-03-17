@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769648044,
+  "_lastModified": 1773769649544,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23587,7 +23587,7 @@
           "p4": "",
           "p5": "",
           "p4_aux_ayud": "",
-          "p4_aux": "mmm9qi4j5xl2",
+          "p4_aux": "",
           "p1": "mmm9qi4jl2r2",
           "p2": "",
           "p7": "mmm9qi4kqpna",
@@ -23707,14 +23707,6 @@
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "p4",
-        "sala": "aux",
-        "pubId": "mmm9qi4j5xl2",
-        "nombreParte": "Empiece conversaciones",
-        "fecha": "2026-03-16"
-      },
       {
         "semKey": "2026-03-16",
         "parteId": "p7",
