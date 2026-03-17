@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769664271,
+  "_lastModified": 1773769666265,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23592,7 +23592,7 @@
           "p2": "",
           "p7": "",
           "p9": "",
-          "p9l": "mmm9qi4jl2r2",
+          "p9l": "",
           "p3": "",
           "p4_prin_ayud": "",
           "p5_prin_ayud": "",
@@ -23711,14 +23711,6 @@
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "p9l",
-        "sala": "prin",
-        "pubId": "mmm9qi4jl2r2",
-        "nombreParte": "Lector (estudio bíblico)",
-        "fecha": "2026-03-16"
-      },
       {
         "semKey": "2026-03-23",
         "parteId": "presidente",
