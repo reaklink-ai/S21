@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769639786,
+  "_lastModified": 1773769641132,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23589,7 +23589,7 @@
           "p4_aux_ayud": "",
           "p4_aux": "mmm9qi4j5xl2",
           "p1": "mmm9qi4jl2r2",
-          "p2": "mmm9qi4kqpna",
+          "p2": "",
           "p7": "mmm9qi4kqpna",
           "p9": "mmm9qi4rvhuc",
           "p9l": "mmm9qi4jl2r2"
@@ -23705,14 +23705,6 @@
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "p2",
-        "sala": "prin",
-        "pubId": "mmm9qi4kqpna",
-        "nombreParte": "Busquemos perlas escondidas",
-        "fecha": "2026-03-16"
-      },
       {
         "semKey": "2026-03-16",
         "parteId": "p4",
