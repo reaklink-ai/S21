@@ -26,6 +26,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -111,6 +118,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -205,6 +219,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -291,6 +312,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -369,6 +397,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -449,6 +484,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -528,6 +570,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -551,10 +600,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "20.0",
+            "horas": "20",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 20,
+          "cursos": 0
         }
       }
     },
@@ -637,10 +693,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "20.0",
+            "horas": "20",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 20,
+          "cursos": 1
         }
       }
     },
@@ -728,6 +791,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -814,6 +884,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -858,6 +935,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -901,6 +985,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -952,6 +1043,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -1039,6 +1137,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -1113,10 +1218,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "63.0",
+            "horas": "63",
             "cursos": "2",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 63,
+          "cursos": 2
         }
       }
     },
@@ -1182,6 +1294,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -1268,6 +1387,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -1357,10 +1483,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "34.0",
+            "horas": "34",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "16 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 34,
+          "cursos": 0
         }
       }
     },
@@ -1537,10 +1671,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "35.0",
+            "horas": "35",
             "cursos": "2",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 35,
+          "cursos": 2
         }
       }
     },
@@ -1635,6 +1776,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -1721,6 +1869,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -1799,6 +1954,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -1913,7 +2075,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 2
         }
       }
     },
@@ -1997,9 +2169,16 @@
           "Feb": {
             "particip": true,
             "horas": "",
-            "cursos": "",
+            "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -2082,10 +2261,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 0
         }
       }
     },
@@ -2194,6 +2380,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -2279,6 +2472,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -2452,6 +2652,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -2537,6 +2744,13 @@
             "cursos": "2",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 2
         }
       }
     },
@@ -2624,6 +2838,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -2710,6 +2931,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -2791,10 +3019,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "17.0",
+            "horas": "17",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "34 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 17,
+          "cursos": 0
         }
       }
     },
@@ -2882,6 +3118,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -2963,10 +3206,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "38.0",
+            "horas": "38",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 38,
+          "cursos": 1
         }
       }
     },
@@ -3054,6 +3304,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -3116,7 +3373,18 @@
             "cursos": 1,
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "1"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 6,
+          "horas": 190,
+          "cursos": 8
         }
       }
     },
@@ -3204,6 +3472,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -3289,6 +3564,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -3376,6 +3658,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 2
+        }
       }
     },
     {
@@ -3403,6 +3692,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -3482,6 +3778,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -3564,10 +3867,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "12.0",
+            "horas": "12",
             "cursos": "",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 12,
+          "cursos": 0
         }
       }
     },
@@ -3655,6 +3965,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -3682,6 +3999,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -3769,6 +4093,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -3805,6 +4136,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -3852,10 +4190,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 0
         }
       }
     },
@@ -3931,10 +4276,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "10.0",
+            "horas": "10",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "45 horas SAC"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 10,
+          "cursos": 0
         }
       }
     },
@@ -4022,6 +4375,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -4101,6 +4461,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -4165,6 +4532,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -4419,10 +4793,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "28.0",
+            "horas": "28",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 28,
+          "cursos": 0
         }
       }
     },
@@ -4479,7 +4860,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 4,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -4567,6 +4958,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 7.5,
+          "cursos": 1
+        }
       }
     },
     {
@@ -4646,6 +5044,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -4710,11 +5115,11 @@
             "notas": ""
           },
           "Feb": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "7.5",
+            "notas": "47.5 horas Betel"
           },
           "Abr": {
             "particip": false,
@@ -4751,6 +5156,13 @@
             "horas": "",
             "notas": ""
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 7.5,
+          "cursos": 1
         }
       }
     },
@@ -4838,6 +5250,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -4919,10 +5338,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "51.0",
+            "horas": "51",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 51,
+          "cursos": 1
         }
       }
     },
@@ -5017,6 +5443,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -5103,6 +5536,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -5182,6 +5622,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -5260,6 +5707,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -5342,10 +5796,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "40.0",
+            "horas": "40",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 40,
+          "cursos": 0
         }
       }
     },
@@ -5428,10 +5889,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "42.0",
+            "horas": "42",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 42,
+          "cursos": 0
         }
       }
     },
@@ -5514,10 +5982,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "40.0",
+            "horas": "40",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 40,
+          "cursos": 1
         }
       }
     },
@@ -5590,7 +6065,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -5663,7 +6148,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -5751,6 +6246,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -5832,10 +6334,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "27.0",
+            "horas": "27",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 27,
+          "cursos": 1
         }
       }
     },
@@ -5918,10 +6427,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "1",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 1
         }
       }
     },
@@ -6004,10 +6520,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "38.0",
+            "horas": "38",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 38,
+          "cursos": 0
         }
       }
     },
@@ -6036,6 +6559,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -6123,6 +6653,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -6204,10 +6741,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "2.0",
+            "horas": "2",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "48 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 2,
+          "cursos": 0
         }
       }
     },
@@ -6290,10 +6835,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 0
         }
       }
     },
@@ -6381,6 +6933,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -6424,6 +6983,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -6511,6 +7077,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 2
+        }
       }
     },
     {
@@ -6596,6 +7169,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -6683,6 +7263,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 2
+        }
       }
     },
     {
@@ -6769,6 +7356,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -6826,6 +7420,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -6908,10 +7509,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "20.0",
+            "horas": "20",
             "cursos": "2",
-            "paux": false
+            "paux": false,
+            "notas": "35 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 20,
+          "cursos": 2
         }
       }
     },
@@ -7001,10 +7610,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "16.0",
+            "horas": "16",
             "cursos": "2",
-            "paux": false
+            "paux": false,
+            "notas": "39 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 16,
+          "cursos": 2
         }
       }
     },
@@ -7087,10 +7704,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "47.0",
+            "horas": "47",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 47,
+          "cursos": 1
         }
       }
     },
@@ -7173,10 +7797,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "18.0",
+            "horas": "18",
             "cursos": "1",
-            "paux": false
+            "paux": false,
+            "notas": "37 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 18,
+          "cursos": 1
         }
       }
     },
@@ -7259,10 +7891,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "36.0",
+            "horas": "36",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 36,
+          "cursos": 0
         }
       }
     },
@@ -7350,6 +7989,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -7435,6 +8081,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -7550,6 +8203,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -7631,10 +8291,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "48.0",
+            "horas": "48",
             "cursos": "5",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 48,
+          "cursos": 5
         }
       }
     },
@@ -7722,6 +8389,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -7807,6 +8481,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -7894,6 +8575,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -7980,6 +8668,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -8061,10 +8756,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "46.0",
+            "horas": "46",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 46,
+          "cursos": 0
         }
       }
     },
@@ -8172,7 +8874,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 4,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -8266,7 +8978,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -8353,6 +9075,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -8531,7 +9260,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 5,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -8618,7 +9357,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 3,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -8905,6 +9654,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -8986,10 +9742,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "6.0",
+            "horas": "6",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "56 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 6,
+          "cursos": 0
         }
       }
     },
@@ -9014,10 +9778,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "12",
             "cursos": "1",
-            "paux": false
+            "paux": false,
+            "notas": "29 horas - Construcción"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 12,
+          "cursos": 1
         }
       }
     },
@@ -9042,10 +9814,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "1",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 1
         }
       }
     },
@@ -9190,6 +9969,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -9276,6 +10062,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -9361,6 +10154,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -9628,6 +10428,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -9713,6 +10520,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -9800,6 +10614,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -9886,6 +10707,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -9967,10 +10795,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "53.0",
+            "horas": "53",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 53,
+          "cursos": 1
         }
       }
     },
@@ -9999,6 +10834,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -10081,10 +10923,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "32.0",
+            "horas": "32",
             "cursos": "2",
-            "paux": false
+            "paux": false,
+            "notas": "15 GVP - TRAMITES"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 32,
+          "cursos": 2
         }
       }
     },
@@ -10167,10 +11017,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "50.0",
+            "horas": "50",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 50,
+          "cursos": 1
         }
       }
     },
@@ -10344,6 +11201,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -10430,6 +11294,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -10511,10 +11382,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "20.0",
+            "horas": "20",
             "cursos": "1",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 20,
+          "cursos": 1
         }
       }
     },
@@ -10675,6 +11553,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -10763,10 +11648,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "31.0",
+            "horas": "31",
             "cursos": "",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 31,
+          "cursos": 0
         }
       }
     },
@@ -10854,6 +11746,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -10939,6 +11838,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -11112,6 +12018,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -11193,10 +12106,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "35.0",
+            "horas": "35",
             "cursos": "3",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 35,
+          "cursos": 3
         }
       }
     },
@@ -11338,10 +12258,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "10.0",
+            "horas": "10",
             "cursos": "1",
-            "paux": false
+            "paux": false,
+            "notas": "45 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 10,
+          "cursos": 1
         }
       }
     },
@@ -11463,7 +12391,19 @@
             "cursos": 3,
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "50",
+            "cursos": "3"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 6,
+          "horas": 245,
+          "cursos": 18
         }
       }
     },
@@ -11546,10 +12486,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "48.0",
+            "horas": "48",
             "cursos": "3",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 48,
+          "cursos": 3
         }
       }
     },
@@ -11671,7 +12618,19 @@
             "cursos": 2,
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "40",
+            "cursos": "2"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 6,
+          "horas": 247,
+          "cursos": 12
         }
       }
     },
@@ -11759,6 +12718,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -11845,6 +12811,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -11927,9 +12900,16 @@
           "Feb": {
             "particip": true,
             "horas": "",
-            "cursos": "",
+            "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -12103,6 +13083,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -12189,6 +13176,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -12270,10 +13264,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "53.0",
+            "horas": "53",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 53,
+          "cursos": 1
         }
       }
     },
@@ -12361,6 +13362,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -12442,10 +13450,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "30.0",
+            "horas": "30",
             "cursos": "1",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 30,
+          "cursos": 1
         }
       }
     },
@@ -12535,10 +13550,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "50.0",
+            "horas": "50",
             "cursos": "2",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 50,
+          "cursos": 2
         }
       }
     },
@@ -12626,6 +13648,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 45,
+          "cursos": 1
+        }
       }
     },
     {
@@ -12694,10 +13723,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "31.0",
+            "horas": "31",
             "cursos": "",
             "paux": true
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 31,
+          "cursos": 0
         }
       }
     },
@@ -12871,6 +13907,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -13043,6 +14086,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -13124,10 +14174,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "41.0",
+            "horas": "41",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 41,
+          "cursos": 1
         }
       }
     },
@@ -13215,6 +14272,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -13275,10 +14339,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "50.0",
+            "horas": "50",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 50,
+          "cursos": 0
         }
       }
     },
@@ -13307,6 +14378,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -13342,6 +14420,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -13429,6 +14514,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -13515,6 +14607,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -13586,6 +14685,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -13668,10 +14774,18 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "25.0",
+            "horas": "25",
             "cursos": "1",
-            "paux": false
+            "paux": false,
+            "notas": "30 horas betel"
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 25,
+          "cursos": 1
         }
       }
     },
@@ -13737,6 +14851,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -13819,10 +14940,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "28.0",
+            "horas": "28",
             "cursos": "2",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 28,
+          "cursos": 2
         }
       }
     },
@@ -13905,10 +15033,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "34.0",
+            "horas": "34",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 34,
+          "cursos": 1
         }
       }
     },
@@ -14089,6 +15224,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -14112,10 +15254,17 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "50.0",
+            "horas": "50",
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 50,
+          "cursos": 1
         }
       }
     },
@@ -14202,6 +15351,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -14324,6 +15480,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -14410,6 +15573,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -14474,6 +15644,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -14561,6 +15738,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -14640,6 +15824,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 2
+        }
       }
     },
     {
@@ -14667,6 +15858,13 @@
             "cursos": "1",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
         }
       }
     },
@@ -14761,6 +15959,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 1
+        }
       }
     },
     {
@@ -14789,6 +15994,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -14816,6 +16028,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -14873,6 +16092,13 @@
             "paux": false
           }
         }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
       }
     },
     {
@@ -14895,11 +16121,18 @@
       "registros": {
         "2025": {
           "Feb": {
-            "particip": true,
+            "particip": false,
             "horas": "",
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 0,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -14993,7 +16226,17 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Feb": {
+            "particip": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 3,
+          "horas": 0,
+          "cursos": 0
         }
       }
     },
@@ -15022,6 +16265,13 @@
             "cursos": "",
             "paux": false
           }
+        }
+      },
+      "totales": {
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
         }
       }
     }
@@ -15367,5 +16617,5 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773790034687
+  "_lastModified": 1773790667227
 }
