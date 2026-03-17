@@ -23461,7 +23461,7 @@
       }
     }
   ],
-  "_lastModified": 1773769657127,
+  "_lastModified": 1773769659252,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -23590,7 +23590,7 @@
           "p4_aux": "",
           "p1": "mmm9qi4jl2r2",
           "p2": "",
-          "p7": "mmm9qi4kqpna",
+          "p7": "",
           "p9": "mmm9qi4rvhuc",
           "p9l": "mmm9qi4jl2r2",
           "p3": "",
@@ -23710,14 +23710,6 @@
       }
     },
     "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "p7",
-        "sala": "prin",
-        "pubId": "mmm9qi4kqpna",
-        "nombreParte": "Jehová es el único que siempre nos puede ayudar",
-        "fecha": "2026-03-16"
-      },
       {
         "semKey": "2026-03-16",
         "parteId": "p9",
