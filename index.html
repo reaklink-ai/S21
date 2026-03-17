@@ -2141,7 +2141,9 @@ input, select, button, a { touch-action: manipulation; }
   display: flex; align-items: center; gap: 14px;
   padding: 16px 18px 14px;
   border-bottom: 1px solid var(--border-2);
+  transition: background .12s;
 }
+.prec-card-hdr:hover { background: var(--surface-2); }
 .prec-av {
   width: 42px; height: 42px; border-radius: 12px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
@@ -4645,105 +4647,86 @@ function cargarInformes(e) {
       const data = new Uint8Array(ev.target.result);
       const wb = XLSX.read(data, { type: 'array' });
       const ws = wb.Sheets[wb.SheetNames[0]];
+      const sheetName = wb.SheetNames[0];
       const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: '' });
 
-      // Buscar la fila de encabezados:
-      // nuevo formato tiene "publicador" e "id" | viejo tiene "apellido" e "id"
-      let headerRowIdx = -1;
-      for(let i = 0; i < rows.length; i++) {
-        const row = rows[i].map(c => String(c).toLowerCase().trim());
-        if((row.some(h => h.includes('publicador')) || row.includes('apellido')) && row.includes('id')) {
-          headerRowIdx = i;
-          break;
-        }
-      }
-      if(headerRowIdx < 0) { alert('No se encontró la fila de encabezados en el archivo'); return; }
-
-      const headers = rows[headerRowIdx].map(h =>
-        String(h).toLowerCase().replace(/\s*\(.*\)/,'').trim()
-      );
-
-      // getCol busca por palabra clave en el nombre del encabezado
-      const getCol = (row, ...keys) => {
-        const i = headers.findIndex(h => keys.some(k => h.includes(k)));
-        return i >= 0 ? String(row[i] || '').trim() : '';
+      // ── Detectar mes/año del nombre de la hoja (ej: "FEBRERO 2026") ──
+      const MESES_ES = {
+        'enero':0,'febrero':1,'marzo':2,'abril':3,'mayo':4,'junio':5,
+        'julio':6,'agosto':7,'septiembre':8,'octubre':9,'noviembre':10,'diciembre':11
       };
+      const MES_A_IDX = {8:0,9:1,10:2,11:3,0:4,1:5,2:6,3:7,4:8,5:9,6:10,7:11};
 
-      let ok=0, skip=0, errores=[];
+      let mesCal=-1, anioExcel=-1;
+      sheetName.toLowerCase().split(/[\s_\-]+/).forEach(p => {
+        if(MESES_ES[p]!==undefined) mesCal=MESES_ES[p];
+        if(/^\d{4}$/.test(p)) anioExcel=parseInt(p);
+      });
 
-      for(let i = headerRowIdx + 1; i < rows.length; i++) {
-        const row = rows[i];
-        if(row.every(c => String(c).trim() === '')) continue;
+      // ── Detectar columnas ──
+      let headerRowIdx=0;
+      for(let i=0;i<Math.min(rows.length,5);i++){
+        const r0=rows[i].map(c=>String(c).toUpperCase().trim());
+        if(r0.some(h=>h.includes('PUBLICADOR')||h.includes('APELLIDO'))){headerRowIdx=i;break;}
+      }
+      const headers=rows[headerRowIdx].map(h=>String(h).toUpperCase().trim());
+      const col=key=>headers.findIndex(h=>h.includes(key));
+      const esFormatoCong = col('PUBLICADOR')>=0 && col('PARTICIPO')>=0 && col('ACTIVIDAD')>=0;
 
-        // Leer mes e id de columnas ocultas (nuevo formato) o visibles (viejo)
-        const id      = getCol(row, 'id');
-        const mesC    = getCol(row, 'mes');
-        // Participó: columna visible "participó" o "particip"
-        const particip= getCol(row, 'participó', 'particip').toUpperCase() === 'SI';
-        // Cursos bíblicos
-        const cursos  = getCol(row, 'cursos');
-        // Precursor auxiliar: columna "precursor" o "paux"
-        const paux    = getCol(row, 'precursor', 'paux').toUpperCase() === 'SI';
-        // Horas
-        const horas   = getCol(row, 'horas');
-        // Comentarios o notas
-        const notas   = getCol(row, 'comentarios', 'notas');
+      if(!esFormatoCong || mesCal<0 || anioExcel<0) {
+        // Formato viejo de la app
+        _importarFormatoViejo(rows); return;
+      }
 
-        // Buscar publicador: primero por id, luego por apellido+nombre
-        let pub = null;
-        if(id) pub = state.publicadores.find(p => p.id === id);
-        if(!pub) {
-          // Nuevo formato: columna "publicador" = "Apellido Nombre"
-          const pubCol = getCol(row, 'publicador').toLowerCase();
-          if(pubCol) {
-            pub = state.publicadores.find(p =>
-              `${p.apellido} ${p.nombre}`.toLowerCase() === pubCol ||
-              `${p.nombre} ${p.apellido}`.toLowerCase() === pubCol
-            );
-          }
-        }
-        if(!pub) {
-          const ap = getCol(row, 'apellido').toLowerCase();
-          const nm = getCol(row, 'nombre').toLowerCase();
-          if(ap && nm) {
-            pub = state.publicadores.find(p =>
-              p.apellido.toLowerCase()===ap && p.nombre.toLowerCase()===nm
-            );
-          }
-        }
+      const mesIdx   = MES_A_IDX[mesCal];
+      const mesC     = MESES_C[mesIdx];
+      const anioEsc  = mesCal>=8 ? anioExcel : anioExcel-1;
 
-        if(!pub) { skip++; errores.push(`Fila ${i+1}: no encontrado`); continue; }
+      // ── Búsqueda normalizada ──
+      function normN(s){ return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9\s]/g,'').trim().replace(/\s+/g,' '); }
+      const idx=state.publicadores.map(p=>({pub:p,k1:normN(`${p.apellido} ${p.nombre}`),k2:normN(`${p.nombre} ${p.apellido}`)}));
+      function buscarPub(nombre){
+        const q=normN(nombre); if(!q) return null;
+        let f=idx.find(x=>x.k1===q||x.k2===q); if(f) return f.pub;
+        f=idx.find(x=>q.includes(normN(x.pub.apellido))&&q.includes(normN(x.pub.nombre))); if(f) return f.pub;
+        f=idx.find(x=>x.k1.includes(q)||q.includes(x.k1)); return f?f.pub:null;
+      }
 
-        // Validar mes (si viene vacío usar el mes actual)
-        let mesIdx = MESES_C.findIndex(m => m.toLowerCase() === mesC.toLowerCase());
-        if(mesIdx < 0) {
-          const { mesC: mesHoy } = mesActual();
-          mesIdx = MESES_C.findIndex(m => m === mesHoy);
-        }
-        if(mesIdx < 0) { skip++; errores.push(`Fila ${i+1}: mes inválido "${mesC}"`); continue; }
+      const iAct=col('ACTIVIDAD'), iPub=col('PUBLICADOR'), iPart=col('PARTICIPO');
+      const iHoras=col('HORAS'), iCursos=col('CURSOS'), iComent=col('COMENTARIOS');
 
-        const anio = anioHoy();
-        const reg = getReg(pub, anio, MESES_C[mesIdx]);
-        if(particip || paux) {
-          reg.particip = particip;
-          reg.paux = paux;
-        }
-        if(cursos !== '') reg.cursos = cursos;
-        if(horas  !== '') reg.horas  = horas;
-        if(notas  !== '') reg.notas  = notas;
-
-        actualizarTotales(pub, anio);
+      let ok=0, skip=0, noEnc=[];
+      for(let i=headerRowIdx+1;i<rows.length;i++){
+        const row=rows[i];
+        if(row.every(c=>String(c).trim()==='')) continue;
+        const nombre=String(row[iPub]||'').trim(); if(!nombre) continue;
+        const pub=buscarPub(nombre);
+        if(!pub){skip++;noEnc.push(nombre);continue;}
+        const act=String(row[iAct]||'').toUpperCase();
+        const particip=String(row[iPart]||'').toUpperCase()==='SI';
+        const paux=act.includes('AUXILIAR');
+        const noInf=act.includes('NO INFORM');
+        const horas=row[iHoras]?String(row[iHoras]).trim():'';
+        const cursos=row[iCursos]?String(parseInt(row[iCursos])):'';
+        const notas=iComent>=0&&row[iComent]?String(row[iComent]).trim():'';
+        if(!pub.registros)pub.registros={};
+        if(!pub.registros[anioEsc])pub.registros[anioEsc]={};
+        if(!pub.registros[anioEsc][mesC])pub.registros[anioEsc][mesC]={};
+        const reg=pub.registros[anioEsc][mesC];
+        reg.particip=noInf?false:particip;
+        if(paux)reg.paux=true;
+        if(horas)reg.horas=horas;
+        if(cursos)reg.cursos=cursos;
+        if(notas)reg.notas=notas;
+        actualizarTotales(pub,anioEsc);
         ok++;
       }
 
       saveStateAndSync();
-      if(selId) renderS21();
-      renderDashboard();
-
-      let msg = `✓ ${ok} informes importados`;
-      if(skip > 0) msg += ` · ${skip} omitidos`;
-      toast(msg);
-      if(errores.length > 0) console.warn('Errores importación:', errores);
+      if(selId)renderS21();
+      renderDashboard(); renderLista();
+      toast(`✓ ${ok} informes de ${mesC} ${anioEsc}-${anioEsc+1} importados${skip>0?` · ${skip} no encontrados`:''}`, skip>0?4000:2500);
+      if(noEnc.length>0) console.warn('No encontrados:', noEnc);
 
     } catch(err) {
       alert('Error al leer el archivo Excel: ' + err.message);
@@ -4751,6 +4734,49 @@ function cargarInformes(e) {
   };
   r.readAsArrayBuffer(f);
 }
+
+function _importarFormatoViejo(rows) {
+  let headerRowIdx=-1;
+  for(let i=0;i<rows.length;i++){
+    const row=rows[i].map(c=>String(c).toLowerCase().trim());
+    if((row.some(h=>h.includes('publicador'))||row.includes('apellido'))&&row.includes('id')){headerRowIdx=i;break;}
+  }
+  if(headerRowIdx<0){alert('No se encontró la fila de encabezados');return;}
+  const headers=rows[headerRowIdx].map(h=>String(h).toLowerCase().replace(/\s*\(.*\)/,'').trim());
+  const getCol=(row,...keys)=>{const i=headers.findIndex(h=>keys.some(k=>h.includes(k)));return i>=0?String(row[i]||'').trim():'';};
+  let ok=0,skip=0;
+  for(let i=headerRowIdx+1;i<rows.length;i++){
+    const row=rows[i];
+    if(row.every(c=>String(c).trim()===''))continue;
+    const id=getCol(row,'id');
+    const mesC=getCol(row,'mes');
+    const particip=getCol(row,'participó','particip').toUpperCase()==='SI';
+    const cursos=getCol(row,'cursos');
+    const paux=getCol(row,'precursor','paux').toUpperCase()==='SI';
+    const horas=getCol(row,'horas');
+    const notas=getCol(row,'comentarios','notas');
+    let pub=id?state.publicadores.find(p=>p.id===id):null;
+    if(!pub){const pc=getCol(row,'publicador').toLowerCase();if(pc)pub=state.publicadores.find(p=>`${p.apellido} ${p.nombre}`.toLowerCase()===pc||`${p.nombre} ${p.apellido}`.toLowerCase()===pc);}
+    if(!pub){skip++;continue;}
+    let mesIdx=MESES_C.findIndex(m=>m.toLowerCase()===mesC.toLowerCase());
+    if(mesIdx<0){const{mesC:m}=mesActual();mesIdx=MESES_C.findIndex(x=>x===m);}
+    if(mesIdx<0){skip++;continue;}
+    const anio=anioHoy();
+    const reg=getReg(pub,anio,MESES_C[mesIdx]);
+    if(particip||paux){reg.particip=particip;reg.paux=paux;}
+    if(cursos!=='')reg.cursos=cursos;
+    if(horas!=='')reg.horas=horas;
+    if(notas!=='')reg.notas=notas;
+    actualizarTotales(pub,anio);
+    ok++;
+  }
+  saveStateAndSync();
+  if(selId)renderS21();
+  renderDashboard();
+  toast(`✓ ${ok} informes importados${skip>0?` · ${skip} omitidos`:''}`);
+}
+
+
 
 // Modal selector de grupo para plantilla
 function abrirModalPlantillaInformes() {
@@ -5447,9 +5473,9 @@ function exportarTxt() {
   toast('Exportado ✓');
 }
 
-function toast(msg) {
+function toast(msg, dur=2200) {
   const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2200);
+  setTimeout(()=>t.classList.remove('show'), dur);
 }
 
 // ══════════════════════════════════════════
@@ -5802,43 +5828,204 @@ function renderMetResumen() {
 function renderMetMensual() {
   const anio = getAnioMetrica();
   const pubs = state.publicadores;
-  if(!pubs.length) { document.getElementById('mtab-body-mensual').innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay datos.</div>'; return; }
+  const el = document.getElementById('mtab-body-mensual');
+  if(!pubs.length) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay datos.</div>'; return; }
 
+  // Mes a reportar (vencido)
+  const { mesC: mesCV, mesNombre, anio: anioMes, idx: mesIdx } = mesActual();
+
+  // ── Calcular "Publicadores activos" según regla oficial:
+  // Personas que informaron participación UN MES O MÁS durante los ÚLTIMOS 6 MESES
+  function pubsActivosUltimos6(desdeIdx) {
+    const activos = new Set();
+    for(let i = 0; i <= 5; i++) {
+      const idx = ((desdeIdx - i) + 12) % 12;
+      const m = MESES_C[idx];
+      // Si el mes anterior idx < mesIdx estamos en el mismo año, si no en el anterior
+      const anioMes2 = idx <= mesIdx ? anioMes : anioMes - 1;
+      pubs.forEach(p => {
+        const r = (p.registros||{})[anioMes2]?.[m] || (p.registros||{})[String(anioMes2)]?.[m];
+        if(r && r.particip) activos.add(p.id);
+      });
+    }
+    return activos.size;
+  }
+  const pubsActivos6 = pubsActivosUltimos6(mesIdx);
+
+  // ── Calcular datos del mes actual para el informe ──
+  function calcMes(m, anioR) {
+    const precReg  = pubs.filter(p => p.precursorReg || p.precursorEsp || p.misionero);
+    const precAux  = pubs.filter(p => !p.precursorReg && !p.precursorEsp && !p.misionero);
+
+    const getReg = (p) => (p.registros||{})[anioR]?.[m] || (p.registros||{})[String(anioR)]?.[m];
+
+    // Publicadores (no precursores regulares/especiales/misioneros)
+    const pubsSolo = pubs.filter(p => !p.precursorReg && !p.precursorEsp && !p.misionero && !p.paux);
+    // Precursores auxiliares = publicadores con paux=true ese mes
+    const pauxList = pubs.filter(p => { const r = getReg(p); return r && r.paux && !p.precursorReg && !p.precursorEsp && !p.misionero; });
+
+    // Publicadores (excluye paux del mes, precReg, precEsp, misionero)
+    const pubsInforme = pubs.filter(p => {
+      if(p.precursorReg || p.precursorEsp || p.misionero) return false;
+      const r = getReg(p);
+      if(r && r.paux) return false; // este mes es paux
+      return r && r.particip;
+    });
+
+    let hPub=0, cPub=0;
+    pubsInforme.forEach(p => { const r=getReg(p); if(r){hPub+=parseFloat(r.horas)||0; cPub+=parseInt(r.cursos)||0;} });
+
+    let hPaux=0, cPaux=0;
+    pauxList.forEach(p => { const r=getReg(p); if(r){hPaux+=parseFloat(r.horas)||0; cPaux+=parseInt(r.cursos)||0;} });
+
+    let hPrec=0, cPrec=0;
+    const precInforme = precReg.filter(p => { const r=getReg(p); return r && r.particip; });
+    precInforme.forEach(p => { const r=getReg(p); if(r){hPrec+=parseFloat(r.horas)||0; cPrec+=parseInt(r.cursos)||0;} });
+
+    return {
+      pubsInforme: pubsInforme.length,
+      hPub: Math.round(hPub), cPub,
+      pauxInforme: pauxList.length,
+      hPaux: Math.round(hPaux), cPaux,
+      precInforme: precInforme.length,
+      hPrec: Math.round(hPrec), cPrec,
+    };
+  }
+
+  const d = calcMes(mesCV, anioMes);
+
+  // Asistencia promedio fin de semana (de módulo de asistencia)
+  const asistFDS = (state.asistencia||[])
+    .filter(r => r.tipo === 'Fin de semana')
+    .map(r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0));
+  const promFDS = asistFDS.length ? Math.round(asistFDS.reduce((s,v)=>s+v,0)/asistFDS.length) : null;
+
+  // ── HTML del Informe Oficial ──
+  const TD  = 'padding:9px 14px;border-bottom:1px solid var(--border-2);font-size:13px;';
+  const TDN = 'padding:9px 14px;border-bottom:1px solid var(--border-2);font-size:16px;font-weight:800;font-family:Sora,var(--font);text-align:center;color:var(--accent);';
+  const TH  = 'padding:8px 14px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:var(--ink-3);background:var(--surface-2);border-bottom:1px solid var(--border);';
+  const SEC = 'padding:8px 14px;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--accent);background:var(--accent-lt);border-bottom:1px solid var(--accent-mid);';
+
+  let informe = '';
+  informe += '<div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--sh)">';
+
+  // Header del informe
+  informe += '<div style="background:linear-gradient(135deg,var(--accent),var(--accent-dk));color:#fff;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">';
+  informe += '<div><div style="font-family:Sora,var(--font);font-size:15px;font-weight:800;letter-spacing:-.2px">Informe de la Congregaci\u00f3n</div>';
+  informe += '<div style="font-size:12px;opacity:.8;margin-top:2px">' + mesNombre + ' ' + anioMes + '\u2013' + (anioMes+1) + '</div></div>';
+  informe += '<button onclick="exportarInformeMes()" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.3);color:#fff;padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font)">📋 Exportar</button>';
+  informe += '</div>';
+
+  informe += '<table style="width:100%;border-collapse:collapse">';
+  informe += '<colgroup><col style="width:60%"><col style="width:40%"></colgroup>';
+
+  // Publicadores activos
+  informe += '<tr><td style="' + TDN + 'text-align:left;padding-left:20px;font-size:13px;color:var(--ink);font-weight:700;font-family:var(--font)">Publicadores activos <span style="font-size:11px;color:var(--ink-3);font-weight:500">(informaron 1+ mes en los \u00faltimos 6)</span></td>';
+  informe += '<td style="' + TDN + '">' + pubsActivos6 + '</td></tr>';
+
+  // Asistencia fin de semana
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Promedio de asistencia a las reuniones del fin de semana</td>';
+  informe += '<td style="' + TDN + '">' + (promFDS !== null ? promFDS : '<span style="font-size:12px;color:var(--ink-3)">—</span>') + '</td></tr>';
+
+  // Sección Publicadores
+  informe += '<tr><td colspan="2" style="' + SEC + '">Publicadores</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cantidad de informes</td><td style="' + TDN + '">' + d.pubsInforme + '</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cursos b\u00edblicos</td><td style="' + TDN + '">' + d.cPub + '</td></tr>';
+
+  // Sección Precursores auxiliares
+  informe += '<tr><td colspan="2" style="' + SEC + '">Precursores auxiliares</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cantidad de informes</td><td style="' + TDN + '">' + d.pauxInforme + '</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Horas</td><td style="' + TDN + '">' + d.hPaux + '</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cursos b\u00edblicos</td><td style="' + TDN + '">' + d.cPaux + '</td></tr>';
+
+  // Sección Precursores regulares
+  informe += '<tr><td colspan="2" style="' + SEC + '">Precursores regulares</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cantidad de informes</td><td style="' + TDN + '">' + d.precInforme + '</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Horas</td><td style="' + TDN + '">' + d.hPrec + '</td></tr>';
+  informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Cursos b\u00edblicos</td><td style="' + TDN + '">' + d.cPrec + '</td></tr>';
+
+  informe += '</table>';
+  informe += '<div style="padding:10px 20px;font-size:10px;color:var(--ink-3);border-top:1px solid var(--border-2)">Generado autom\u00e1ticamente · Datos sujetos a los informes registrados en la app</div>';
+  informe += '</div>';
+
+  // ── Historial por mes (cards) ──
   const cards = MESES_C.map((m,i) => {
-    const particip   = pubs.filter(p=>{const r=p.registros&&p.registros[anio]&&p.registros[anio][m]; return r&&r.particip;}).length;
-    const paux       = pubs.filter(p=>{const r=p.registros&&p.registros[anio]&&p.registros[anio][m]; return r&&r.paux;}).length;
-    const noPred     = pubs.length - particip;
-    let horas = 0;
-    pubs.forEach(p=>{const r=p.registros&&p.registros[anio]&&p.registros[anio][m]; if(r&&r.horas) horas+=parseFloat(r.horas)||0;});
-    let cursos = 0;
-    pubs.forEach(p=>{const r=p.registros&&p.registros[anio]&&p.registros[anio][m]; if(r&&r.cursos) cursos+=parseInt(r.cursos)||0;});
-    const pct = pubs.length ? Math.round(particip/pubs.length*100) : 0;
-    return `<div class="met-mes-card">
-      <div class="met-mes-nombre">${MESES[i]}</div>
-      <div class="met-mes-stat">
-        <div class="met-mes-n" style="color:#16a34a">${particip}</div>
-        <div class="met-mes-l">participaron (${pct}%)</div>
-      </div>
-      <div class="met-mes-stat">
-        <div class="met-mes-n" style="color:#7c3aed">${paux}</div>
-        <div class="met-mes-l">prec. auxiliares</div>
-      </div>
-      <div class="met-mes-stat">
-        <div class="met-mes-n" style="color:#b45309">${Math.round(horas)}</div>
-        <div class="met-mes-l">horas</div>
-      </div>
-      <div class="met-mes-stat">
-        <div class="met-mes-n" style="color:#0891b2">${cursos}</div>
-        <div class="met-mes-l">cursos</div>
-      </div>
-      ${noPred>0?`<div class="met-mes-stat"><div class="met-mes-n" style="color:#ef4444">${noPred}</div><div class="met-mes-l">no predicaron</div></div>`:''}
-    </div>`;
+    const r = calcMes(m, anioMes);
+    const esMesActual = i === mesIdx;
+    return '<div class="met-mes-card" style="' + (esMesActual?'border:2px solid var(--accent);':'') + '">'
+      + '<div class="met-mes-nombre">' + MESES[i] + (esMesActual?' <span style="font-size:8px;background:var(--accent);color:#fff;padding:1px 5px;border-radius:10px;vertical-align:middle">actual</span>':'') + '</div>'
+      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:var(--accent)">' + (r.pubsInforme+r.pauxInforme+r.precInforme) + '</div><div class="met-mes-l">informes</div></div>'
+      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#7c3aed">' + r.pauxInforme + '</div><div class="met-mes-l">prec. aux.</div></div>'
+      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#b45309">' + (r.hPub+r.hPaux+r.hPrec) + '</div><div class="met-mes-l">horas</div></div>'
+      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#0891b2">' + (r.cPub+r.cPaux+r.cPrec) + '</div><div class="met-mes-l">cursos</div></div>'
+      + '</div>';
   }).join('');
 
-  document.getElementById('mtab-body-mensual').innerHTML = `
-    <div style="font-size:12px;color:#888;margin-bottom:14px">Año de servicio ${anio}-${anio+1} - ${pubs.length} publicadores</div>
-    <div class="met-mes-grid">${cards}</div>
-  `;
+  el.innerHTML = '<div style="padding:4px 0 16px">' + informe + '</div>'
+    + '<div style="font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin:20px 0 10px">Historial del a\u00f1o ' + anio + '\u2013' + (anio+1) + '</div>'
+    + '<div class="met-mes-grid">' + cards + '</div>';
+}
+
+function exportarInformeMes() {
+  const { mesC: mesCV, mesNombre, anio: anioMes, idx: mesIdx } = mesActual();
+  const pubs = state.publicadores;
+  const anio = getAnioMetrica();
+
+  function getReg(p, m, a) { return (p.registros||{})[a]?.[m] || (p.registros||{})[String(a)]?.[m]; }
+
+  // Publicadores activos últimos 6 meses
+  const activos6 = new Set();
+  for(let i=0; i<=5; i++){
+    const idx = ((mesIdx-i)+12)%12;
+    const m = MESES_C[idx];
+    const a2 = idx<=mesIdx ? anioMes : anioMes-1;
+    pubs.forEach(p=>{ const r=getReg(p,m,a2); if(r&&r.particip) activos6.add(p.id); });
+  }
+
+  const pauxList = pubs.filter(p => { const r=getReg(p,mesCV,anioMes); return r&&r.paux&&!p.precursorReg&&!p.precursorEsp&&!p.misionero; });
+  const precList = pubs.filter(p => (p.precursorReg||p.precursorEsp||p.misionero) && (()=>{ const r=getReg(p,mesCV,anioMes); return r&&r.particip; })() );
+  const pubList  = pubs.filter(p => { if(p.precursorReg||p.precursorEsp||p.misionero) return false; const r=getReg(p,mesCV,anioMes); return r&&r.particip&&!r.paux; });
+
+  let h = (n,v='') => '<tr><td style="padding:7px 12px;border-bottom:1px solid #f0f0f0;font-size:12px;color:#555;width:65%">'+n+'</td><td style="padding:7px 12px;border-bottom:1px solid #f0f0f0;font-size:15px;font-weight:800;text-align:center;color:#3d5a9e">'+v+'</td></tr>';
+  let s = (n) => '<tr><td colspan="2" style="padding:7px 12px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px;color:#3d5a9e;background:#eef1f9;border-bottom:1px solid #b8c4e0">'+n+'</td></tr>';
+
+  const asistFDS = (state.asistencia||[]).filter(r=>r.tipo==='Fin de semana').map(r=>(parseInt(r.presencial)||0)+(parseInt(r.zoom)||0));
+  const promFDS = asistFDS.length ? Math.round(asistFDS.reduce((s,v)=>s+v,0)/asistFDS.length) : '—';
+
+  let sum = (list,f) => list.reduce((s,p)=>{ const r=getReg(p,mesCV,anioMes); return s+(r?f(r):0); },0);
+
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Informe ${mesNombre} ${anioMes}</title>
+<style>body{font-family:Arial,sans-serif;margin:0;padding:20px;color:#111}table{width:100%;border-collapse:collapse}
+.no-print{margin-bottom:16px}@media print{.no-print{display:none}}</style></head>
+<body>
+<div class="no-print"><button onclick="window.print()" style="background:#3d5a9e;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer">🖨 Imprimir / PDF</button></div>
+<div style="border-bottom:3px solid #3d5a9e;padding-bottom:10px;margin-bottom:16px">
+  <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#888">Informe de la Congregación</div>
+  <div style="font-size:22px;font-weight:900;color:#1a1814;margin-top:3px">${mesNombre} ${anioMes}–${anioMes+1}</div>
+</div>
+<table>
+${h('Publicadores activos (1+ mes en últimos 6)', activos6.size)}
+${h('Promedio de asistencia reuniones fin de semana', promFDS)}
+${s('Publicadores')}
+${h('Cantidad de informes', pubList.length)}
+${h('Cursos bíblicos', sum(pubList,r=>parseInt(r.cursos)||0))}
+${s('Precursores auxiliares')}
+${h('Cantidad de informes', pauxList.length)}
+${h('Horas', Math.round(sum(pauxList,r=>parseFloat(r.horas)||0)))}
+${h('Cursos bíblicos', sum(pauxList,r=>parseInt(r.cursos)||0))}
+${s('Precursores regulares')}
+${h('Cantidad de informes', precList.length)}
+${h('Horas', Math.round(sum(precList,r=>parseFloat(r.horas)||0)))}
+${h('Cursos bíblicos', sum(precList,r=>parseInt(r.cursos)||0))}
+</table>
+<p style="margin-top:20px;font-size:10px;color:#aaa;text-align:center">Congregación · S-21 · Generado el ${new Date().toLocaleDateString('es')}</p>
+</body></html>`;
+
+  const win = window.open('','_blank');
+  win.document.write(html);
+  win.document.close();
+  toast('✓ Informe abierto — usa Imprimir para guardar como PDF');
 }
 
 function renderMetPublicadores() {
@@ -7146,6 +7333,17 @@ function precGetDatos(pub, anio) {
            horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado };
 }
 
+function precAbrirRegistro(pubId) {
+  irA('publicadores');
+  // Pequeño delay para que la pantalla cargue antes de seleccionar
+  setTimeout(() => {
+    selPub(pubId);
+    // Scroll al pub en la lista
+    const el = document.getElementById('pub-' + pubId);
+    if(el) el.scrollIntoView({ behavior:'smooth', block:'nearest' });
+  }, 80);
+}
+
 function renderPrecursores() {
   const root = document.getElementById('precursores-root');
   if(!root) return;
@@ -7205,9 +7403,11 @@ function renderPrecursores() {
                     d.estado==='bajo'    ? 'linear-gradient(135deg,#fef3c7,#fed7aa)' :
                     'linear-gradient(135deg,#d1fae5,#6ee7b7)';
     const avTextColor = d.requiereReunion ? '#7f1d1d' : d.estado==='ok' ? '#065f46' : '#78350f';
-    html += '<div class="prec-card-hdr">';
+    html += '<div class="prec-card-hdr" style="cursor:pointer" onclick="precAbrirRegistro(\'' + pub.id + '\')" title="Ver registro S-21">';
     html += '<div class="prec-av" style="background:' + avColor + ';color:' + avTextColor + '">' + init + '</div>';
-    html += '<div style="flex:1;min-width:0"><div class="prec-nombre">' + escHtml(pub.apellido) + ', ' + escHtml(pub.nombre) + '</div>';
+    html += '<div style="flex:1;min-width:0">';
+    html += '<div class="prec-nombre" style="display:flex;align-items:center;gap:6px">' + escHtml(pub.apellido) + ', ' + escHtml(pub.nombre);
+    html += ' <span style="font-size:10px;color:var(--accent);font-weight:600;background:var(--accent-lt);padding:2px 7px;border-radius:10px">Ver S-21 \u2192</span></div>';
     html += '<div class="prec-grupo">\ud83d\udccc ' + escHtml(pub.grupo||'Sin grupo') + '</div></div>';
     html += '<div class="prec-badges">';
     if(d.requiereReunion) html += '<span class="prec-badge rojo">\u26a0 Reuni\u00f3n requerida</span>';
