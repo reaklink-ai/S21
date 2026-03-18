@@ -20818,7 +20818,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773874038673,
+  "_lastModified": 1773874215450,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -20949,7 +20949,17 @@
           "p7": "mmm9qi4k5qc0",
           "p8": "mmm9qi4k6wjw",
           "p9": "mmm9qi4kqpna",
-          "p9l": "mmm9qi4kk1hh"
+          "p9l": "mmm9qi4kk1hh",
+          "p3_aux": "mmm9qi4jfkxs",
+          "p4_prin_ayud": "mmm9qi4jaer1",
+          "p4_aux": "mmm9qi4jigd3",
+          "p4_aux_ayud": "mmm9qi4j8aj2",
+          "p5_prin_ayud": "mmm9qi4jevxb",
+          "p5_aux": "mmm9qi4jl0fy",
+          "p5_aux_ayud": "mmm9qi4k2l0u",
+          "p6_prin_ayud": "mmm9qi4kolhi",
+          "p6_aux": "mmm9qi4kye7q",
+          "p6_aux_ayud": "mmm9qi4k0gox"
         }
       }
     },
@@ -21033,6 +21043,96 @@
         "sala": "prin",
         "pubId": "mmm9qi4kk1hh",
         "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p3",
+        "claveParte": "lectura_de_la_biblia_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4jfkxs",
+        "nombreParte": "Lectura de la Biblia (aux)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p4",
+        "claveParte": "empiece_conversaciones_ayudante",
+        "sala": "prin_ayud",
+        "pubId": "mmm9qi4jaer1",
+        "nombreParte": "Empiece conversaciones (ayudante)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p4",
+        "claveParte": "empiece_conversaciones_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4jigd3",
+        "nombreParte": "Empiece conversaciones (aux)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p4",
+        "claveParte": "empiece_conversaciones_aux_ayudante",
+        "sala": "aux_ayud",
+        "pubId": "mmm9qi4j8aj2",
+        "nombreParte": "Empiece conversaciones (aux ayudante)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p5",
+        "claveParte": "haga_revisitas_ayudante",
+        "sala": "prin_ayud",
+        "pubId": "mmm9qi4jevxb",
+        "nombreParte": "Haga revisitas (ayudante)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p5",
+        "claveParte": "haga_revisitas_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4jl0fy",
+        "nombreParte": "Haga revisitas (aux)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p5",
+        "claveParte": "haga_revisitas_aux_ayudante",
+        "sala": "aux_ayud",
+        "pubId": "mmm9qi4k2l0u",
+        "nombreParte": "Haga revisitas (aux ayudante)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p6",
+        "claveParte": "haga_discipulos_ayudante",
+        "sala": "prin_ayud",
+        "pubId": "mmm9qi4kolhi",
+        "nombreParte": "Haga discípulos (ayudante)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p6",
+        "claveParte": "haga_discipulos_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4kye7q",
+        "nombreParte": "Haga discípulos (aux)",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p6",
+        "claveParte": "haga_discipulos_aux_ayudante",
+        "sala": "aux_ayud",
+        "pubId": "mmm9qi4k0gox",
+        "nombreParte": "Haga discípulos (aux ayudante)",
         "fecha": "2026-03-16"
       }
     ]
