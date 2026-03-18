@@ -20818,7 +20818,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773874033212,
+  "_lastModified": 1773874035144,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -20949,19 +20949,10 @@
           "p7": "",
           "p8": "",
           "p9": "",
-          "p9l": "mmm9qi4k6wjw"
+          "p9l": ""
         }
       }
     },
-    "historial": [
-      {
-        "semKey": "2026-03-16",
-        "parteId": "p9l",
-        "sala": "prin",
-        "pubId": "mmm9qi4k6wjw",
-        "nombreParte": "Lector (estudio bíblico)",
-        "fecha": "2026-03-16"
-      }
-    ]
+    "historial": []
   }
 }
