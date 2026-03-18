@@ -20818,7 +20818,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773875213811,
+  "_lastModified": 1773875222691,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -21047,26 +21047,7 @@
         "cancionApertura": "89",
         "cancionCierre": "134",
         "urlId": 202026090,
-        "asign": {
-          "presidente": "mmm9qi4jq3yf",
-          "p1": "mmm9qi4jnax6",
-          "p2": "mmm9qi4jl2r2",
-          "p3": "mmm9qi4jw1p2",
-          "p3_aux": "mmm9qi4jqz6w",
-          "p4": "mmm9qi4j5xl2",
-          "p4_aux": "mmm9qi4jbuql",
-          "p5": "mmm9qi4jfkxs",
-          "p5_prin_ayud": "mmm9qi4jaer1",
-          "p5_aux": "mmm9qi4jigd3",
-          "p5_aux_ayud": "mmm9qi4j8aj2",
-          "p6": "mmm9qi4jevxb",
-          "p6_prin_ayud": "mmm9qi4jl0fy",
-          "p6_aux": "mmm9qi4k5qc0",
-          "p6_aux_ayud": "mmm9qi4k2l0u",
-          "p7": "mmm9qi4k6wjw",
-          "p8": "mmm9qi4kqpna",
-          "p8l": "mmm9qi4kk1hh"
-        }
+        "asign": {}
       },
       "2026-03-30": {
         "fechaKey": "2026-03-30",
