@@ -3388,12 +3388,17 @@ function _mergeStates(remoto, local) {
   const localAIds = new Set((local.asistencia||[]).map(r=>r.id));
   (remoto.asistencia||[]).forEach(r => { if(!localAIds.has(r.id)) m.asistencia.push(r); });
 
-  // VyM: agregar semanas remotas que local no tiene; preservar asignaciones locales
+  // VyM: agregar semanas remotas que local no tiene; local SIEMPRE gana en asign
+  // Semanas borradas localmente (no en m.vym.semanas) se marcan para no restaurar
   if(remoto.vym && remoto.vym.semanas) {
     if(!m.vym) m.vym = { semanas: {} };
+    const borradas = m.vym._borradas || [];
     Object.entries(remoto.vym.semanas).forEach(([k, sv]) => {
-      if(!m.vym.semanas[k]) { m.vym.semanas[k] = sv; return; }
-      // Preservar asignaciones: local gana sobre remoto en asign
+      if(borradas.includes(k)) return;          // fue borrada intencionalmente, no restaurar
+      if(!m.vym.semanas[k]) {
+        m.vym.semanas[k] = JSON.parse(JSON.stringify(sv));
+        return;
+      }
       if(sv.partes && !m.vym.semanas[k].partes) m.vym.semanas[k].partes = sv.partes;
       if(sv.libros && !m.vym.semanas[k].libros) m.vym.semanas[k].libros = sv.libros;
     });
@@ -6658,10 +6663,12 @@ function vymParsearTexto(texto, fechaKey) {
 
     // Rol por nombre explícito
     let rol = 'todos';
-    if(/Palabras de (introducción|conclusión)/i.test(nombre)) rol = 'anciano';
+    if(/Presidente/i.test(nombre)) rol = 'anciano';
+    else if(/Palabras de (introducción|conclusión)/i.test(nombre)) rol = 'anciano';
     else if(/Busquemos perlas/i.test(nombre)) rol = 'anciano_siervo';
     else if(esEstudio) rol = 'anciano';
     else if(doble) rol = 'todos';
+    else if(seccionFinal === 'apertura') rol = 'anciano';
     else if(seccionFinal === 'tesoros') rol = 'anciano_siervo';
     else if(seccionFinal === 'vida') rol = 'anciano_siervo';
     else if(seccionFinal === 'cierre') rol = 'anciano';
@@ -6756,21 +6763,20 @@ function vymSetAsign(semKey, parteId, sala, pubId) {
   if(!vym.semanas[semKey].asign) vym.semanas[semKey].asign = {};
   const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud' };
   const key = parteId + (sufijos[sala]||'');
-  const anterior = vym.semanas[semKey].asign[key];
   vym.semanas[semKey].asign[key] = pubId;
 
-  // Guardar en historial global
   if(!vym.historial) vym.historial = [];
-  // Remover entrada previa de esta combinación semana+parte+sala
   vym.historial = vym.historial.filter(h => !(h.semKey===semKey && h.parteId===parteId && h.sala===sala));
   if(pubId) {
     const semana = vym.semanas[semKey];
     const parte = (semana?.partes||[]).find(p=>p.id===parteId);
-    vym.historial.push({
-      semKey, parteId, sala, pubId,
-      nombreParte: parte?.nombre || parteId,
-      fecha: semKey
-    });
+    const nombreBase = parte?.nombre || parteId;
+    // Clave estable por nombre de parte + sufijo de sala
+    let claveParte = _vymClave(nombreBase);
+    if(sala === 'aux')      claveParte += '_aux';
+    if(sala === 'prin_ayud') claveParte += '_ayudante';
+    if(sala === 'aux_ayud')  claveParte += '_aux_ayudante';
+    vym.historial.push({ semKey, parteId, claveParte, sala, pubId, nombreParte: nombreBase, fecha: semKey });
   }
 
   saveStateAndSync();
@@ -6816,41 +6822,47 @@ function vymMarcarDuplicados() {
   });
 }
 
-function vymOpcionesSelect(rol, valorActual, parteNombre) {
-  let pubs = [...state.publicadores].sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
+function vymOpcionesSelect(rol, valorActual, claveParte) {
+  let pubs = [...state.publicadores].filter(p => !p.inactivo)
+    .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
   if(rol === 'anciano')             pubs = pubs.filter(p=>p.anciano);
   else if(rol === 'anciano_siervo') pubs = pubs.filter(p=>p.anciano||p.siervo);
 
-  // Calcular última asignación por pub para ordenar (rotación)
+  // Última vez que cada pub tuvo ESTA PARTE específica (por claveParte)
   const hist = (getVymState().historial||[]);
-  const ultimaAsign = {};
+  const ultimaPorPub = {};
+  hist.filter(h => claveParte && (h.claveParte===claveParte||h.parteId===claveParte))
+    .forEach(h => {
+      if(!ultimaPorPub[h.pubId] || h.semKey > ultimaPorPub[h.pubId])
+        ultimaPorPub[h.pubId] = h.semKey;
+    });
+
+  // Si no hay historial de esta parte, usar historial global como desempate
+  const ultimaGlobal = {};
   hist.forEach(h => {
-    if(!ultimaAsign[h.pubId] || h.fecha > ultimaAsign[h.pubId]) {
-      ultimaAsign[h.pubId] = h.fecha;
-    }
+    if(!ultimaGlobal[h.pubId] || h.semKey > ultimaGlobal[h.pubId])
+      ultimaGlobal[h.pubId] = h.semKey;
   });
 
-  // Ordenar: primero los que llevan más tiempo sin asignación
+  // Ordenar: primero nunca asignados a esta parte, luego por más tiempo sin ella
   pubs.sort((a,b) => {
-    const fa = ultimaAsign[a.id] || '0000-00-00';
-    const fb = ultimaAsign[b.id] || '0000-00-00';
+    const fa = ultimaPorPub[a.id] || '0000-00-00';
+    const fb = ultimaPorPub[b.id] || '0000-00-00';
     if(fa !== fb) return fa < fb ? -1 : 1;
     return a.apellido.localeCompare(b.apellido,'es');
   });
 
   const opts = ['<option value="">— Sin asignar —</option>'];
   const hoy = new Date().toISOString().slice(0,10);
-  pubs.forEach((p,idx) => {
+  pubs.forEach(p => {
     const sel = p.id===valorActual ? ' selected':'';
-    const ultima = ultimaAsign[p.id];
+    const ultima = ultimaPorPub[p.id];
     let sufijo = '';
-    if(!ultima) sufijo = ' ★';  // nunca asignado
+    if(!ultima) sufijo = ' ★';
     else {
       const semanas = Math.round((new Date(hoy)-new Date(ultima))/(7*24*3600*1000));
-      if(semanas >= 6) sufijo = ` (${semanas}sem)`;
+      if(semanas >= 4) sufijo = ` (${semanas}sem)`;
     }
-    // Primer candidato de rotación
-    const esProximo = idx === 0 && !valorActual;
     opts.push(`<option value="${p.id}"${sel}>${escHtml(p.apellido)}, ${escHtml(p.nombre)}${sufijo}</option>`);
   });
   return opts.join('');
@@ -6860,6 +6872,158 @@ function vymNombrePub(pubId) {
   if(!pubId) return '________________';
   const p = state.publicadores.find(x=>x.id===pubId);
   return p ? `${p.apellido}, ${p.nombre}` : '________________';
+}
+
+// ── Sugerencia automática completa ──
+// Reglas:
+//   - Presidente / Estudio bíblico / Apertura / Cierre → solo ANCIANOS
+//   - Tesoros / Perlas / Nuestra Vida Cristiana → ANCIANOS + SIERVOS MINISTERIALES
+//   - Lectura Biblia / Seamos Mejores Maestros (estudiante) → todos los publicadores
+//   - Ayudantes → todos los publicadores
+//   - Rotación: ciclo completo por parte (nadie repite hasta que todos hayan pasado)
+//   - Sin repetir en la misma semana
+
+function _vymClave(nombre) {
+  return String(nombre||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^a-z0-9]/g,' ').trim().replace(/\s+/g,'_');
+}
+
+function _vymRolReal(parte) {
+  const n = parte.nombre || '';
+  const s = parte.seccion || '';
+  if(/Presidente/i.test(n))                             return 'anciano';
+  if(/Palabras de (introducci\u00f3n|conclusi\u00f3n)/i.test(n))  return 'anciano';
+  if(/Estudio b\u00edblico de la congregaci\u00f3n/i.test(n))     return 'anciano';
+  if(/Busquemos perlas/i.test(n))                       return 'anciano_siervo';
+  if(s === 'apertura' || s === 'cierre')                return 'anciano';
+  if(s === 'tesoros' && !parte.doble)                   return 'anciano_siervo';
+  if(s === 'vida' && !parte.esLector)                   return 'anciano_siervo';
+  if(parte.esLector)                                    return 'anciano_siervo';
+  return 'todos';
+}
+
+function _vymPool(rol) {
+  const pubs = state.publicadores.filter(p => !p.inactivo && !p.noBautizado);
+  if(rol === 'anciano')         return pubs.filter(p => p.anciano);
+  if(rol === 'anciano_siervo')  return pubs.filter(p => p.anciano || p.siervo);
+  return pubs;
+}
+
+// Construye un mapa de rotacion leyendo DIRECTAMENTE las asignaciones de todas las semanas
+// (no depende del historial separado, que puede perderse en sync)
+function _vymUltimaAsign(clave, semKeyActual) {
+  const vym = getVymState();
+  const ultima = {};
+  // Recorrer todas las semanas guardadas
+  Object.entries(vym.semanas || {}).forEach(([semKey, semana]) => {
+    if(semKey === semKeyActual) return;
+    if(!semana || !semana.partes || !semana.asign) return;
+    semana.partes.forEach(parte => {
+      const c = _vymClave(parte.nombre);
+      const conAyudante = parte.conAyudante ||
+        (/Empiece conversaciones|Haga revisitas|Haga disc\u00edpulos|Explique sus|D\u00e9 discursos/i.test(parte.nombre) &&
+         !/discurso/i.test(parte.detalle||''));
+
+      const registrar = (slot, claveParte) => {
+        const pubId = semana.asign[slot];
+        if(!pubId) return;
+        if(claveParte !== clave) return;
+        if(!ultima[pubId] || semKey > ultima[pubId]) ultima[pubId] = semKey;
+      };
+
+      registrar(parte.id,                 c);
+      registrar(parte.id + '_prin_ayud',  c + '__ayudante');
+      registrar(parte.id + '_aux',        c + '__sala_aux');
+      registrar(parte.id + '_aux_ayud',   c + '__aux_ayudante');
+    });
+  });
+  return ultima;
+}
+
+function _vymElegir(clave, pool, yaAsignados, semKey) {
+  if(!pool.length) return null;
+  const ultima = _vymUltimaAsign(clave, semKey);
+  const ordenados = [...pool].sort((a, b) => {
+    const fa = ultima[a.id] || '0000-00-00';
+    const fb = ultima[b.id] || '0000-00-00';
+    if(fa !== fb) return fa < fb ? -1 : 1;
+    return a.apellido.localeCompare(b.apellido, 'es');
+  });
+  return ordenados.find(p => !yaAsignados.has(p.id)) || null;
+}
+
+function vymSugerirTodo(semKey) {
+  const vym = getVymState();
+  const semana = vym.semanas[semKey];
+  if(!semana) return;
+
+  // Limpiar asignaciones previas para re-sugerir limpio
+  semana.asign = {};
+  const yaAsignados = new Set();
+  const todosPool   = _vymPool('todos');
+
+  semana.partes.forEach(parte => {
+    const rolPrin      = _vymRolReal(parte);
+    const poolPrin     = _vymPool(rolPrin);
+    const clavePrin    = _vymClave(parte.nombre);
+    const claveAyud    = clavePrin + '__ayudante';
+    const claveAux     = clavePrin + '__sala_aux';
+    const claveAuxAyud = clavePrin + '__aux_ayudante';
+
+    const conAyudante = parte.conAyudante ||
+      (/Empiece conversaciones|Haga revisitas|Haga disc\u00edpulos|Explique sus|D\u00e9 discursos/i.test(parte.nombre) &&
+       !/discurso/i.test(parte.detalle||''));
+
+    const asignar = (slot, clave, pool) => {
+      const e = _vymElegir(clave, pool, yaAsignados, semKey);
+      if(!e) return;
+      semana.asign[slot] = e.id;
+      yaAsignados.add(e.id);
+    };
+
+    asignar(parte.id,                   clavePrin,    poolPrin);
+    if(conAyudante)                asignar(parte.id + '_prin_ayud', claveAyud,    todosPool);
+    if(parte.doble)                asignar(parte.id + '_aux',       claveAux,     todosPool);
+    if(conAyudante && parte.doble) asignar(parte.id + '_aux_ayud',  claveAuxAyud, todosPool);
+  });
+
+  saveStateAndSync();
+  renderVyM();
+  vymMarcarDuplicados();
+  toast('\u2713 Sugerencias aplicadas \u2014 revisa y ajusta si necesitas');
+}
+
+function vymRestablecerSemana(semKey) {
+  if(!confirm('¿Borrar el programa y todas las asignaciones de esta semana?')) return;
+  const vym = getVymState();
+  // Marcar como borrada para que el merge no la restaure desde el remoto
+  if(!vym._borradas) vym._borradas = [];
+  if(!vym._borradas.includes(semKey)) vym._borradas.push(semKey);
+  // Limpiar semanas antiguas de la lista (guardar solo las últimas 12)
+  vym._borradas = vym._borradas.slice(-12);
+  delete vym.semanas[semKey];
+  saveStateAndSync();
+  renderVyM();
+  toast('Semana restablecida');
+}
+
+function vymDebugRotacion(semKey) {
+  const vym = getVymState();
+  const semanas = Object.keys(vym.semanas||{}).sort();
+  let txt = `=== ROTACIÓN DEBUG ===\nSemanas guardadas: ${semanas.join(', ')}\n\n`;
+  const partesClave = ['presidente_de_la_reunion','tesoro_de_la_semana','busquemos_perlas_escondidas'];
+  partesClave.forEach(clave => {
+    const ultima = _vymUltimaAsign(clave, semKey);
+    txt += `PARTE: ${clave}\n`;
+    Object.entries(ultima).forEach(([pubId, semK]) => {
+      const p = state.publicadores.find(x=>x.id===pubId);
+      const nombre = p ? `${p.apellido}, ${p.nombre}` : pubId;
+      txt += `  ${nombre} → última vez: ${semK}\n`;
+    });
+    txt += '\n';
+  });
+  alert(txt);
 }
 
 function vymFechaLabelSemKey(semKey) {
@@ -7155,6 +7319,9 @@ function renderVyM() {
         </div>
         <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
           ${semana ? `<button class="vym-semana-load" style="background:rgba(255,255,255,.25);font-weight:800" onclick="vymExportarSemana('${key}')">📄 PDF</button>` : ''}
+          ${semana ? `<button class="vym-semana-load" style="background:linear-gradient(135deg,rgba(124,58,237,.8),rgba(79,70,229,.8));font-weight:700" onclick="vymSugerirTodo('${key}')">✨ Sugerir</button>` : ''}
+          ${semana ? `<button class="vym-semana-load" style="background:rgba(239,68,68,.7);font-weight:700" onclick="vymRestablecerSemana('${key}')">↺ Restablecer</button>` : ''}
+          ${semana && currentUser?.rol==='admin' ? `<button class="vym-semana-load" style="background:rgba(0,0,0,.3);font-size:10px" onclick="vymDebugRotacion('${key}')">🔍 Debug</button>` : ''}
           <button class="vym-semana-load" id="vym-load-${i}"
             onclick="vymCargarSemana('${key}','${fecha.toISOString()}',${i})">
             ${semana?.cargado ? '↻ Recargar' : '⬇ Cargar programa'}
@@ -7192,6 +7359,10 @@ function renderVyM() {
           const rol = parte.rol || 'todos';
           const clsAnc = rol==='anciano' ? ' anciano-only' : (rol==='anciano_siervo' ? ' anciano-siervo-only' : '');
           const etqLabel = parte.esLector ? 'Lector' : (parte.doble ? 'Sala principal' : 'Asignado');
+          // Clave estable para rotación (igual que en vymSugerirTodo)
+          const claveParte = parte.nombre.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+            .replace(/[^a-z0-9]/g,' ').trim().replace(/\s+/g,'_');
           // Recalcular conAyudante en render para no depender del valor guardado
           const conAyudante = parte.conAyudante ||
             (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
@@ -7204,7 +7375,7 @@ function renderVyM() {
               <div class="vym-asign">
                 <div class="vym-asign-label">${parte.conAyudante ? 'Estudiante' : etqLabel}</div>
                 <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">
-                  ${vymOpcionesSelect(rol, vPrin)}
+                  ${vymOpcionesSelect(rol, vPrin, claveParte)}
                 </select>
               </div>
               ${parte.conAyudante ? `
@@ -7248,7 +7419,7 @@ function renderVyM() {
                   <div class="vym-sala-fila">
                     <div class="vym-asign">
                       <div class="vym-asign-label">Estudiante</div>
-                      <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                      <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
                     </div>
                     <div class="vym-asign">
                       <div class="vym-asign-label">Ayudante</div>
@@ -7272,7 +7443,7 @@ function renderVyM() {
               ` : parte.doble ? `
                 <div class="vym-asign">
                   <div class="vym-asign-label">Sala principal</div>
-                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
                 </div>
                 <div class="vym-asign">
                   <div class="vym-asign-label">Sala auxiliar</div>
@@ -7281,7 +7452,7 @@ function renderVyM() {
               ` : `
                 <div class="vym-asign">
                   <div class="vym-asign-label">${parte.esLector?'Lector':'Asignado'}</div>
-                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin)}</select>
+                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
                 </div>
               `}
             </div>
