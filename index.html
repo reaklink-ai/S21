@@ -7306,31 +7306,72 @@ function renderVyM() {
 const PREC_META_MES  = 50;
 const PREC_META_ANIO = 560;
 
+const PREC_LIMITE_BETEL = 55; // horas máx acreditables al combinar predicación + betel
+
 function precGetDatos(pub, anio) {
   const regs = pub.registros || {};
   const meses = [];
   let horasTotal = 0, mesesConDatos = 0;
+  let horasBetelBruto = 0;
+  let horasBetelCredito = 0;
+  let horasTotalCombinado = 0; // predicación + betel crédito
+
   MESES_C.forEach((m, idx) => {
     const r = (regs[anio] || regs[String(anio)] || {})[m];
     const horas = r ? (parseFloat(r.horas) || 0) : null;
     if(horas !== null) { mesesConDatos++; horasTotal += horas; }
-    meses.push({ mes:m, idx, horas, tieneDatos: horas !== null });
+
+    // Betel bruto del comentario
+    const bruto = r?.notas ? _extraerHorasBetel(r.notas) : 0;
+
+    // Crédito acreditable ese mes: min(bruto, max(0, 55 - horas_predicacion))
+    let credito = 0;
+    if(bruto > 0 && horas !== null) {
+      const espacio = Math.max(0, PREC_LIMITE_BETEL - horas);
+      credito = Math.min(bruto, espacio);
+    }
+
+    if(bruto)   horasBetelBruto   += bruto;
+    if(credito) horasBetelCredito += credito;
+
+    // Total combinado por mes (lo que cuenta para la meta)
+    const combinado = horas !== null ? horas + credito : null;
+    if(combinado !== null) horasTotalCombinado += combinado;
+
+    meses.push({ mes:m, idx, horas, tieneDatos: horas !== null, betelBruto: bruto, betelCredito: credito, combinado });
   });
-  const promedio = mesesConDatos > 0 ? horasTotal / mesesConDatos : 0;
+
+  // Todos los cálculos de meta se hacen sobre el total COMBINADO
+  const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
   const mesActualIdx = mesActual().idx;
   const mesesPasados = meses.filter(m => m.idx <= mesActualIdx);
   const mesesRestantes = 12 - mesesPasados.length;
-  const horasRestantes = Math.max(0, PREC_META_ANIO - horasTotal);
+  const horasRestantes = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
   const ultimos3 = mesesPasados.slice(-3).filter(m => m.tieneDatos);
-  const promUlt3 = ultimos3.length > 0 ? ultimos3.reduce((s,m)=>s+m.horas,0)/ultimos3.length : null;
+  const promUlt3 = ultimos3.length > 0
+    ? ultimos3.reduce((s,m) => s + (m.combinado ?? m.horas), 0) / ultimos3.length
+    : null;
   const requiereReunion = promUlt3 !== null && promUlt3 < PREC_META_MES && ultimos3.length >= 2;
   let estado = 'ok';
   if(requiereReunion) estado = 'reunion';
   else if(promedioNecesario > 70) estado = 'riesgo';
   else if(promedio < PREC_META_MES && mesesConDatos >= 2) estado = 'bajo';
-  return { meses, horasTotal, promedio, mesesConDatos, mesesRestantes,
-           horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado };
+
+  return { meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
+           horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
+           horasBetelBruto, horasBetelCredito };
+}
+
+// Extrae horas Betel de un comentario: "48 Betel", "HORAS BETEL 32", "32 horas betel", etc.
+function _extraerHorasBetel(notas) {
+  if(!notas) return 0;
+  const txt = notas.toLowerCase();
+  if(!txt.includes('betel')) return 0;
+  const m = txt.match(/(\d+(?:\.\d+)?)\s*(?:horas?\s*)?betel|betel\s*(?:horas?\s*)?(\d+(?:\.\d+)?)/);
+  if(m) return parseFloat(m[1] || m[2]) || 0;
+  const n = txt.match(/\d+(?:\.\d+)?/);
+  return n ? parseFloat(n[0]) : 0;
 }
 
 function precAbrirRegistro(pubId) {
@@ -7360,6 +7401,8 @@ function renderPrecursores() {
   const nReunion = datos.filter(x=>x.d.requiereReunion).length;
   const nRiesgo  = datos.filter(x=>x.d.estado==='riesgo').length;
   const nOk      = datos.filter(x=>x.d.estado==='ok').length;
+  const totalHorasBetel = datos.reduce((s,x) => s + x.d.horasBetelCredito, 0);
+  const totalHorasBetelBruto = datos.reduce((s,x) => s + x.d.horasBetelBruto, 0);
 
   let html = '<div class="prec-wrap">';
   html += '<div class="prec-header">';
@@ -7372,14 +7415,13 @@ function renderPrecursores() {
   html += '</div>';
   html += '</div>';
 
-  // Resumen
-  // Resumen ejecutivo — 3 cards modernas
+  // Resumen ejecutivo — cards
   const summaryCards = [
     { n:nReunion, lbl:'Reuni\u00f3n requerida', icon:'\u26a0\ufe0f', bg:'linear-gradient(135deg,#fef2f2,#fee2e2)', bc:'#fca5a5', fc:'#7f1d1d', desc:'Con el superintendente' },
     { n:nRiesgo,  lbl:'En riesgo anual',        icon:'\ud83d\udcc9', bg:'linear-gradient(135deg,#fffbeb,#fef3c7)', bc:'#fcd34d', fc:'#78350f', desc:'Menos de 560h proyectadas' },
     { n:nOk,      lbl:'Al d\u00eda',             icon:'\u2705',        bg:'linear-gradient(135deg,#f0faf4,#d1fae5)', bc:'#6ee7b7', fc:'#065f46', desc:'Cumpliendo la meta' },
   ];
-  html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px">';
+  html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">';
   summaryCards.forEach(c => {
     html += '<div style="background:' + c.bg + ';border:1px solid ' + c.bc + ';border-radius:16px;padding:16px 18px;position:relative;overflow:hidden">';
     html += '<div style="font-size:11px;color:' + c.fc + ';font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">' + c.lbl + '</div>';
@@ -7393,7 +7435,7 @@ function renderPrecursores() {
   // Tarjetas
   datos.forEach(({ pub, d }) => {
     const init = (pub.apellido[0]||'')+(pub.nombre[0]||'');
-    const pct = Math.min(100, Math.round(d.horasTotal/PREC_META_ANIO*100));
+    const pct = Math.min(100, Math.round(d.horasTotalCombinado/PREC_META_ANIO*100));
     const colorBarra = pct>=100?'#22c55e':pct>=70?'#f59e0b':'#ef4444';
     const claseCard = d.requiereReunion?'reunion-req':d.estado==='riesgo'?'alerta-anual':d.estado==='bajo'?'alerta-mes':'ok';
 
@@ -7416,13 +7458,38 @@ function renderPrecursores() {
     else html += '<span class="prec-badge verde">\u2713 Al d\u00eda</span>';
     html += '</div></div>';
 
-    // Stats
+    // Stats — basados en total combinado (predicación + betel)
     html += '<div class="prec-stats">';
-    html += '<div class="prec-stat"><div class="prec-stat-n" style="color:#b45309">' + Math.round(d.horasTotal) + '</div><div class="prec-stat-l">Horas totales</div></div>';
+    html += '<div class="prec-stat"><div class="prec-stat-n" style="color:#b45309">' + Math.round(d.horasTotalCombinado) + '</div><div class="prec-stat-l">Horas totales</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.promedio>=PREC_META_MES?'#16a34a':'#ef4444') + '">' + Math.round(d.promedio*10)/10 + '</div><div class="prec-stat-l">Prom. mensual</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.horasRestantes<=0?'#16a34a':'#b45309') + '">' + Math.round(d.horasRestantes) + '</div><div class="prec-stat-l">Faltan</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.promedioNecesario<=PREC_META_MES?'#16a34a':'#ef4444') + '">' + (d.mesesRestantes>0?Math.round(d.promedioNecesario):'\u2014') + '</div><div class="prec-stat-l">Nec./mes</div></div>';
+    if(d.horasBetelCredito > 0) {
+      const difiere = Math.round(d.horasBetelBruto) !== Math.round(d.horasBetelCredito);
+      html += `<div class="prec-stat" style="background:#f5f3ff;border-color:#c4b5fd">
+        <div class="prec-stat-n" style="color:#5b21b6">${Math.round(d.horasBetelCredito)}</div>
+        <div class="prec-stat-l" style="color:#7c3aed">Betel acred.</div>
+        ${difiere ? `<div style="font-size:9px;color:#a78bfa;margin-top:1px">${Math.round(d.horasBetelBruto)} reales</div>` : ''}
+      </div>`;
+    }
     html += '</div>';
+
+    // Detalle Betel mes a mes (solo si tiene Betel)
+    if(d.horasBetelCredito > 0) {
+      const mesCon = d.meses.filter(m => m.betelBruto > 0);
+      html += `<div style="margin:0 0 10px;padding:10px 14px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center">`;
+      html += `<span style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-right:4px">Betel por mes</span>`;
+      mesCon.forEach(m => {
+        const pred = m.horas || 0;
+        const total = pred + m.betelCredito;
+        const limitado = m.betelCredito < m.betelBruto;
+        html += `<span title="Predicación: ${pred}h + Betel: ${m.betelCredito}h = ${total}h${limitado?' (limitado a 55h)':''}" style="background:#ede9fe;color:#5b21b6;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;cursor:default">`;
+        html += `${MESES_C[m.idx]}: ${m.betelCredito}h`;
+        if(limitado) html += ` <span style="color:#a78bfa;font-weight:500">(${m.betelBruto} real)</span>`;
+        html += `</span>`;
+      });
+      html += `</div>`;
+    }
 
     // Chips mes a mes
     html += '<div class="prec-meses">';
@@ -7441,7 +7508,9 @@ function renderPrecursores() {
     // Barra progreso
     html += '<div class="prec-progreso-wrap">';
     html += '<div class="prec-progreso-label"><span>Progreso anual</span>';
-    html += '<span style="font-weight:700;color:' + colorBarra + '">' + Math.round(d.horasTotal) + ' / ' + PREC_META_ANIO + 'h (' + pct + '%)</span></div>';
+    html += '<span style="font-weight:700;color:' + colorBarra + '">' + Math.round(d.horasTotalCombinado) + ' / ' + PREC_META_ANIO + 'h (' + pct + '%)'
+      + (d.horasBetelCredito > 0 ? ` <span style="font-size:10px;font-weight:500;color:#7c3aed">(+${Math.round(d.horasBetelCredito)}h Betel)</span>` : '')
+      + '</span></div>';
     html += '<div class="prec-progreso-bar"><div class="prec-progreso-fill" style="width:' + pct + '%;background:' + colorBarra + '"></div></div>';
     html += '</div>';
 
