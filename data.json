@@ -20818,7 +20818,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773874766529,
+  "_lastModified": 1773874787533,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -21089,6 +21089,114 @@
           "p8": "mmm9qi4kqpna",
           "p8l": "mmm9qi4kk1hh"
         }
+      },
+      "2026-03-30": {
+        "fechaKey": "2026-03-30",
+        "partes": [
+          {
+            "id": "presidente",
+            "nombre": "Presidente de la reunión",
+            "mins": null,
+            "seccion": "apertura",
+            "doble": false,
+            "soloAncianos": false
+          },
+          {
+            "id": "p1",
+            "nombre": "Si le prestamos atención a Jehová, nos irá bien",
+            "detalle": "",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "conAyudante": false,
+            "rol": "anciano_siervo"
+          },
+          {
+            "id": "p2",
+            "nombre": "Busquemos perlas escondidas",
+            "detalle": "",
+            "mins": 10,
+            "seccion": "tesoros",
+            "doble": false,
+            "conAyudante": false,
+            "rol": "anciano_siervo"
+          },
+          {
+            "id": "p3",
+            "nombre": "Lectura de la Biblia",
+            "detalle": "Is 48:9-20 (th lección 11)",
+            "mins": 4,
+            "seccion": "tesoros",
+            "doble": true,
+            "conAyudante": false,
+            "rol": "todos"
+          },
+          {
+            "id": "p4",
+            "nombre": "Empiece conversaciones",
+            "detalle": "PREDICACIÓN INFORMAL. Invite a un familiar inactivo al discurso especial y a la Conmemoración",
+            "mins": 3,
+            "seccion": "maestros",
+            "doble": true,
+            "conAyudante": false,
+            "rol": "todos"
+          },
+          {
+            "id": "p5",
+            "nombre": "Haga revisitas",
+            "detalle": "PREDICACIÓN INFORMAL. La persona está pensando en asistir a la Conmemoración. Explíquele cómo será esta reunión",
+            "mins": 4,
+            "seccion": "maestros",
+            "doble": true,
+            "conAyudante": true,
+            "rol": "todos"
+          },
+          {
+            "id": "p6",
+            "nombre": "Haga revisitas",
+            "detalle": "PREDICACIÓN INFORMAL. Al terminar la Conmemoración, responda las preguntas que le hayan surgido a algún invitado",
+            "mins": 5,
+            "seccion": "maestros",
+            "doble": true,
+            "conAyudante": true,
+            "rol": "todos"
+          },
+          {
+            "id": "p7",
+            "nombre": "Aproveche bien el día más importante del año",
+            "detalle": "Análisis con el auditorio",
+            "mins": 15,
+            "seccion": "vida",
+            "doble": false,
+            "conAyudante": false,
+            "rol": "anciano_siervo"
+          },
+          {
+            "id": "p8",
+            "nombre": "Estudio bíblico de la congregación",
+            "detalle": "lfb lecciones 72, 73",
+            "mins": 30,
+            "seccion": "vida",
+            "doble": false,
+            "conAyudante": false,
+            "rol": "anciano"
+          },
+          {
+            "id": "p8l",
+            "nombre": "Lector (estudio bíblico)",
+            "detalle": "",
+            "mins": null,
+            "seccion": "vida",
+            "doble": false,
+            "rol": "anciano_siervo",
+            "esLector": true
+          }
+        ],
+        "libros": "ISAÍAS 48, 49",
+        "cargado": true,
+        "cancionApertura": "89",
+        "cancionCierre": "134",
+        "urlId": 202026097
       }
     },
     "historial": [
