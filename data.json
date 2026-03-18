@@ -20818,7 +20818,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773874035144,
+  "_lastModified": 1773874038673,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -20939,20 +20939,102 @@
         "cancionCierre": "148",
         "urlId": 202026083,
         "asign": {
-          "presidente": "",
+          "presidente": "mmm9qi4jl2r2",
           "p1": "mmm9qi4jnax6",
           "p2": "mmm9qi4jq3yf",
-          "p3": "",
-          "p4": "",
-          "p5": "",
-          "p6": "",
-          "p7": "",
-          "p8": "",
-          "p9": "",
-          "p9l": ""
+          "p3": "mmm9qi4jqz6w",
+          "p4": "mmm9qi4jw1p2",
+          "p5": "mmm9qi4j5xl2",
+          "p6": "mmm9qi4jbuql",
+          "p7": "mmm9qi4k5qc0",
+          "p8": "mmm9qi4k6wjw",
+          "p9": "mmm9qi4kqpna",
+          "p9l": "mmm9qi4kk1hh"
         }
       }
     },
-    "historial": []
+    "historial": [
+      {
+        "semKey": "2026-03-16",
+        "parteId": "presidente",
+        "claveParte": "presidente_de_la_reunion",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p3",
+        "claveParte": "lectura_de_la_biblia",
+        "sala": "prin",
+        "pubId": "mmm9qi4jqz6w",
+        "nombreParte": "Lectura de la Biblia",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p4",
+        "claveParte": "empiece_conversaciones",
+        "sala": "prin",
+        "pubId": "mmm9qi4jw1p2",
+        "nombreParte": "Empiece conversaciones",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p5",
+        "claveParte": "haga_revisitas",
+        "sala": "prin",
+        "pubId": "mmm9qi4j5xl2",
+        "nombreParte": "Haga revisitas",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p6",
+        "claveParte": "haga_discipulos",
+        "sala": "prin",
+        "pubId": "mmm9qi4jbuql",
+        "nombreParte": "Haga discípulos",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p7",
+        "claveParte": "jehova_es_el_unico_que_siempre_nos_puede_ayudar",
+        "sala": "prin",
+        "pubId": "mmm9qi4k5qc0",
+        "nombreParte": "Jehová es el único que siempre nos puede ayudar",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p8",
+        "claveParte": "informe_sobre_la_actividad_del_departamento_local_de_diseno_y_construccion",
+        "sala": "prin",
+        "pubId": "mmm9qi4k6wjw",
+        "nombreParte": "Informe sobre la actividad del Departamento Local de Diseño y Construcción",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p9",
+        "claveParte": "estudio_biblico_de_la_congregacion",
+        "sala": "prin",
+        "pubId": "mmm9qi4kqpna",
+        "nombreParte": "Estudio bíblico de la congregación",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p9l",
+        "claveParte": "lector_estudio_biblico",
+        "sala": "prin",
+        "pubId": "mmm9qi4kk1hh",
+        "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-03-16"
+      }
+    ]
   }
 }
