@@ -2093,7 +2093,7 @@
             "cursos": "",
             "paux": false,
             "horas": "18",
-            "notas": "40 Betel"
+            "notas": "40 horas Betel"
           },
           "Nov": {
             "particip": true,
@@ -2103,7 +2103,7 @@
             "notas": "32 horas betel"
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -20888,7 +20888,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773935581951,
+  "_lastModified": 1773935587409,
   "vym": {
     "semanas": {},
     "historial": [
