@@ -19064,7 +19064,7 @@
             "particip": true,
             "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "28",
             "notas": ""
           },
           "Dic": {
@@ -21140,7 +21140,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947476409,
+  "_lastModified": 1773947479890,
   "vym": {
     "semanas": {},
     "historial": [
