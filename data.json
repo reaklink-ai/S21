@@ -15463,7 +15463,7 @@
           },
           "Feb": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "27",
             "notas": ""
@@ -21000,7 +21000,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947294183,
+  "_lastModified": 1773947295907,
   "vym": {
     "semanas": {},
     "historial": [
