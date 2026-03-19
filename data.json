@@ -15459,7 +15459,7 @@
             "cursos": "1",
             "paux": false,
             "horas": "33",
-            "notas": ""
+            "notas": "16 horas LDC"
           },
           "Feb": {
             "particip": false,
@@ -21000,7 +21000,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947269892,
+  "_lastModified": 1773947281161,
   "vym": {
     "semanas": {},
     "historial": [
