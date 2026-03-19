@@ -15451,7 +15451,7 @@
             "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": ""
           },
           "Ene": {
@@ -21000,7 +21000,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947244328,
+  "_lastModified": 1773947253655,
   "vym": {
     "semanas": {},
     "historial": [
