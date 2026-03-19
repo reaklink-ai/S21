@@ -19899,7 +19899,7 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "50.0",
+            "horas": "50",
             "cursos": "",
             "paux": false
           },
@@ -19948,7 +19948,7 @@
           "Abr": {
             "particip": false,
             "cursos": "",
-            "paux": false,
+            "paux": true,
             "horas": "",
             "notas": ""
           },
@@ -21455,7 +21455,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947830048,
+  "_lastModified": 1773947832770,
   "vym": {
     "semanas": {},
     "historial": [
