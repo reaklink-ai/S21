@@ -17556,7 +17556,7 @@
           },
           "Ene": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -21070,7 +21070,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947398967,
+  "_lastModified": 1773947407646,
   "vym": {
     "semanas": {},
     "historial": [
