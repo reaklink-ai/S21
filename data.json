@@ -2121,7 +2121,7 @@
             "cursos": "",
             "paux": false,
             "horas": "32",
-            "notas": ""
+            "notas": "16 horas betel"
           },
           "Abr": {
             "particip": false,
@@ -20888,7 +20888,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773935772092,
+  "_lastModified": 1773935776815,
   "vym": {
     "semanas": {},
     "historial": [
