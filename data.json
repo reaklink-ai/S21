@@ -17542,7 +17542,7 @@
           },
           "Nov": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "47",
             "notas": ""
@@ -21070,7 +21070,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1773947381731,
+  "_lastModified": 1773947383311,
   "vym": {
     "semanas": {},
     "historial": [
