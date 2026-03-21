@@ -22685,9 +22685,16 @@
       "pin": "6718",
       "rol": "anciano",
       "grupo": "Grupo 5"
+    },
+    {
+      "id": "mn0unrhh",
+      "nombre": "Roger_R",
+      "pin": "7867",
+      "rol": "anciano",
+      "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1774128982225,
+  "_lastModified": 1774129101861,
   "vym": {
     "semanas": {
       "2026-03-16": {
