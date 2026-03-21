@@ -36,6 +36,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -144,6 +151,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -270,6 +284,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -383,6 +404,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -500,6 +528,13 @@
             "paux": true,
             "horas": "30",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -609,6 +644,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -722,6 +764,13 @@
             "particip": true,
             "paux": true,
             "horas": "30"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -831,6 +880,13 @@
           "Ene": {
             "particip": true,
             "horas": "34"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -956,6 +1012,13 @@
             "particip": true,
             "horas": "32",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1069,6 +1132,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1182,6 +1252,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1253,6 +1330,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1329,6 +1413,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1411,6 +1502,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1526,6 +1624,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1639,6 +1744,13 @@
           "Ene": {
             "particip": true,
             "horas": "62"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1731,6 +1843,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -1848,6 +1967,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -2322,6 +2448,13 @@
             "particip": true,
             "horas": "35",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -2447,6 +2580,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -2560,6 +2700,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -2673,6 +2820,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -2929,6 +3083,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3048,6 +3209,13 @@
           "Ene": {
             "particip": true,
             "horas": "40"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3088,6 +3256,13 @@
             "horas": "",
             "cursos": "",
             "paux": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       }
@@ -3185,6 +3360,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3298,6 +3480,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3419,6 +3608,13 @@
           "Ene": {
             "particip": true,
             "horas": "43"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3532,6 +3728,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3648,6 +3851,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3761,6 +3971,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -3878,6 +4095,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4002,6 +4226,13 @@
             "particip": true,
             "horas": "13",
             "notas": "38 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4115,6 +4346,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4241,6 +4479,13 @@
             "particip": true,
             "horas": "35",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4354,6 +4599,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4542,6 +4794,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4655,6 +4914,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4773,6 +5039,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4825,6 +5098,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -4929,6 +5209,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5052,6 +5339,13 @@
             "particip": true,
             "paux": true,
             "horas": "16"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5167,6 +5461,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5222,6 +5523,48 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5330,6 +5673,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5416,6 +5766,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5500,6 +5857,13 @@
           "Ene": {
             "particip": true,
             "horas": "30"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5773,6 +6137,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5882,6 +6253,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5983,6 +6361,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6096,6 +6481,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6209,6 +6601,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6328,6 +6727,13 @@
           "Ene": {
             "particip": true,
             "horas": "35"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6522,6 +6928,13 @@
             "horas": "11",
             "cursos": "1",
             "notas": "44 horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6632,6 +7045,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6858,6 +7278,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -6981,6 +7408,13 @@
             "particip": true,
             "horas": "51",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7104,6 +7538,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7217,6 +7658,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7326,6 +7774,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7435,6 +7890,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7553,6 +8015,13 @@
           "Ene": {
             "particip": true,
             "horas": "30"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7671,6 +8140,13 @@
           "Ene": {
             "particip": true,
             "horas": "40"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7794,6 +8270,13 @@
             "particip": true,
             "horas": "42",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8129,6 +8612,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8246,6 +8736,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8374,6 +8871,13 @@
             "paux": true,
             "horas": "30",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8494,6 +8998,13 @@
           "Ene": {
             "particip": true,
             "horas": "45"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8546,6 +9057,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8654,6 +9172,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8778,6 +9303,13 @@
             "horas": "4",
             "cursos": "1",
             "notas": "46 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8898,6 +9430,13 @@
             "particip": true,
             "horas": "16",
             "notas": "La mamá estuvo bastante indispuesta de salud y estuvo hospitalizada"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9011,6 +9550,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9086,6 +9632,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9203,6 +9756,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9316,6 +9876,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9436,6 +10003,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9556,6 +10130,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9653,6 +10234,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9782,6 +10370,13 @@
             "horas": "10",
             "cursos": "2",
             "notas": "45 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -9917,6 +10512,13 @@
             "horas": "26",
             "cursos": "2",
             "notas": "29 horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10040,6 +10642,13 @@
             "particip": true,
             "horas": "47",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10169,6 +10778,13 @@
             "horas": "20",
             "cursos": "1",
             "notas": "35 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10287,6 +10903,13 @@
           "Ene": {
             "particip": true,
             "horas": "36"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10400,6 +11023,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10513,6 +11143,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10553,6 +11190,13 @@
             "horas": "",
             "cursos": "2",
             "paux": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       }
@@ -10654,6 +11298,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10777,6 +11428,13 @@
             "particip": true,
             "horas": "50",
             "cursos": "4"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -10890,6 +11548,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -11003,6 +11668,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -11116,6 +11788,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -11229,6 +11908,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -11347,6 +12033,13 @@
           "Ene": {
             "particip": true,
             "horas": "50"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -11713,6 +12406,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12357,6 +13057,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12481,6 +13188,13 @@
             "particip": true,
             "horas": "8",
             "notas": "48 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12522,6 +13236,13 @@
             "cursos": "1",
             "paux": false,
             "notas": "29 horas - Construcción"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12557,6 +13278,13 @@
             "horas": "30",
             "cursos": "1",
             "paux": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12592,6 +13320,13 @@
             "horas": "",
             "cursos": "",
             "paux": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12714,6 +13449,13 @@
             "horas": "",
             "cursos": "1",
             "paux": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12811,6 +13553,13 @@
           "Sep": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12929,6 +13678,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13136,6 +13892,13 @@
           },
           "Sep": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13251,6 +14014,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13370,6 +14140,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13483,6 +14260,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13602,6 +14386,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13723,6 +14514,13 @@
             "particip": true,
             "horas": "48",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13775,6 +14573,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13897,6 +14702,13 @@
             "horas": "25",
             "cursos": "1",
             "notas": "16HR (GVP LDC)"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14020,6 +14832,13 @@
             "particip": true,
             "horas": "45",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14135,6 +14954,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14248,6 +15074,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14361,6 +15194,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14490,6 +15330,13 @@
             "paux": true,
             "horas": "25",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14694,6 +15541,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14824,6 +15678,13 @@
             "particip": true,
             "paux": true,
             "horas": "30"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -14937,6 +15798,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15050,6 +15918,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15165,6 +16040,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15280,6 +16162,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15403,6 +16292,13 @@
             "particip": true,
             "horas": "40",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15673,6 +16569,13 @@
             "horas": "10",
             "cursos": "1",
             "notas": "45 Horas Betel"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -15935,6 +16838,13 @@
             "particip": true,
             "horas": "12",
             "notas": "30 Horas Escuela de Ancianos - 8 Horas LDC"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16187,6 +17097,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16300,6 +17217,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16417,6 +17341,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16519,6 +17450,13 @@
           "Sep": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16633,6 +17571,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16746,6 +17691,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16869,6 +17821,13 @@
             "particip": true,
             "horas": "38",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -16982,6 +17941,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17106,6 +18072,13 @@
             "paux": true,
             "horas": "30",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17236,6 +18209,13 @@
             "particip": true,
             "horas": "50",
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17358,6 +18338,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17471,6 +18458,13 @@
             "particip": true,
             "paux": true,
             "horas": "30"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17757,6 +18751,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17858,6 +18859,13 @@
           },
           "Sep": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -17971,6 +18979,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18094,6 +19109,13 @@
             "particip": true,
             "horas": "35",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18207,6 +19229,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18309,6 +19338,13 @@
             "particip": true,
             "horas": "50",
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18365,6 +19401,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18422,6 +19465,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18533,6 +19583,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -18646,6 +19703,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -19571,6 +20635,13 @@
           },
           "Sep": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -19690,6 +20761,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -19904,6 +20982,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20134,6 +21219,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20256,6 +21348,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20353,6 +21452,13 @@
           "Ene": {
             "particip": true,
             "cursos": "1"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20466,6 +21572,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20579,6 +21692,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20631,6 +21751,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20752,6 +21879,13 @@
           "Ene": {
             "particip": true,
             "cursos": "2"
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20807,6 +21941,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20848,6 +21989,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20889,6 +22037,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20933,6 +22088,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -20978,6 +22140,13 @@
           },
           "Ene": {
             "particip": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -21013,6 +22182,13 @@
             "horas": "",
             "cursos": "",
             "paux": false
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       }
@@ -21141,6 +22317,13 @@
           },
           "Ene": {
             "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -21504,7 +22687,7 @@
       "grupo": "Grupo 5"
     }
   ],
-  "_lastModified": 1774053307036,
+  "_lastModified": 1774128982225,
   "vym": {
     "semanas": {
       "2026-03-16": {
