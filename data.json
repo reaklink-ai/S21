@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774200348106,
+  "_lastModified": 1774200369987,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22825,7 +22825,8 @@
           "presidente": "mmm9qi4ol4i0",
           "p2": "mmm9qi4kqpna",
           "p3": "mmm9qi4sgwb2",
-          "p4": "mmm9qi4qfkhc"
+          "p4": "mmm9qi4qfkhc",
+          "p4_aux": "mmm9qi4jw1p2"
         }
       }
     },
@@ -23376,6 +23377,15 @@
         "claveParte": "lectura_de_la_biblia",
         "sala": "prin",
         "pubId": "mmm9qi4qfkhc",
+        "nombreParte": "Lectura de la Biblia",
+        "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "p4",
+        "claveParte": "lectura_de_la_biblia_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4jw1p2",
         "nombreParte": "Lectura de la Biblia",
         "fecha": "2026-03-16"
       }
