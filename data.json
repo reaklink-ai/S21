@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774219392238,
+  "_lastModified": 1774219575570,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -22942,7 +22942,8 @@
           "p6": "mmm9qi4spx52",
           "p6_prin_ayud": "mmm9qi4n7oq9",
           "p6_aux": "mmm9qi4m97a4",
-          "p6_aux_ayud": "mmm9qi4r9s54"
+          "p6_aux_ayud": "mmm9qi4r9s54",
+          "p9": "mmm9qi4jq3yf"
         }
       }
     },
@@ -23620,6 +23621,15 @@
         "sala": "aux_ayud",
         "pubId": "mmm9qi4r9s54",
         "nombreParte": "Haga revisitas",
+        "fecha": "2026-04-06"
+      },
+      {
+        "semKey": "2026-04-06",
+        "parteId": "p9",
+        "claveParte": "estudio_biblico_de_la_congregacion",
+        "sala": "prin",
+        "pubId": "mmm9qi4jq3yf",
+        "nombreParte": "Estudio bíblico de la congregación",
         "fecha": "2026-04-06"
       }
     ],
