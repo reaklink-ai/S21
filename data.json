@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774222666691,
+  "_lastModified": 1774222709297,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23199,7 +23199,8 @@
           "p5": "mmm9qi4k7c8y",
           "p5_prin_ayud": "mmm9qi4tnkh4",
           "p5_aux": "mmm9qi4rigm6",
-          "p5_aux_ayud": "mmm9qi4qxdzp"
+          "p5_aux_ayud": "mmm9qi4qxdzp",
+          "p6": "mmm9qi4jl2r2"
         }
       }
     },
@@ -24210,6 +24211,15 @@
         "sala": "aux_ayud",
         "pubId": "mmm9qi4qxdzp",
         "nombreParte": "Empiece conversaciones",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p6",
+        "claveParte": "haga_revisitas",
+        "sala": "prin",
+        "pubId": "mmm9qi4jl2r2",
+        "nombreParte": "Haga revisitas",
         "fecha": "2026-04-20"
       }
     ],
