@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774223595140,
+  "_lastModified": 1774223614181,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23076,7 +23076,7 @@
           "p7": "mmm9qi4n3s74",
           "p7_prin_ayud": "mmm9qi4o3na7",
           "p7_aux": "mmm9qi4ndhnb",
-          "p7_aux_ayud": "mmm9qi4nc993",
+          "p7_aux_ayud": "mmm9qi4mz3i4",
           "p8": "mmm9qi4s0lt4",
           "p9": "mmm9qi4r1pju",
           "p9l": "mmm9qi4q1iwb",
@@ -24082,15 +24082,6 @@
       },
       {
         "semKey": "2026-04-13",
-        "parteId": "p7",
-        "claveParte": "haga_discipulos_aux_ayudante",
-        "sala": "aux_ayud",
-        "pubId": "mmm9qi4nc993",
-        "nombreParte": "Haga discípulos",
-        "fecha": "2026-04-13"
-      },
-      {
-        "semKey": "2026-04-13",
         "parteId": "p8",
         "claveParte": "necesidades_de_la_congregacion",
         "sala": "prin",
@@ -24330,6 +24321,15 @@
         "sala": "aux_ayud",
         "pubId": "mmm9qi4twt9q",
         "nombreParte": "Haga revisitas",
+        "fecha": "2026-04-13"
+      },
+      {
+        "semKey": "2026-04-13",
+        "parteId": "p7",
+        "claveParte": "haga_discipulos_aux_ayudante",
+        "sala": "aux_ayud",
+        "pubId": "mmm9qi4mz3i4",
+        "nombreParte": "Haga discípulos",
         "fecha": "2026-04-13"
       }
     ],
