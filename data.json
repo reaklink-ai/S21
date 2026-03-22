@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774221612249,
+  "_lastModified": 1774221649071,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23074,7 +23074,7 @@
           "p6_prin_ayud": "mmm9qi4nsqsw",
           "p6_aux": "mmm9qi4nts9j",
           "p7": "mmm9qi4n3s74",
-          "p7_prin_ayud": "mmm9qi4nhqsp"
+          "p7_prin_ayud": "mmm9qi4o3na7"
         }
       }
     },
@@ -23948,7 +23948,7 @@
         "parteId": "p7",
         "claveParte": "haga_discipulos_ayudante",
         "sala": "prin_ayud",
-        "pubId": "mmm9qi4nhqsp",
+        "pubId": "mmm9qi4o3na7",
         "nombreParte": "Haga discípulos",
         "fecha": "2026-04-13"
       }
