@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774222244485,
+  "_lastModified": 1774222284711,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23192,7 +23192,8 @@
         "urlId": 202026118,
         "asign": {
           "presidente": "mmm9qi4s3c4f",
-          "p2": "mmm9qi4rtrpu"
+          "p2": "mmm9qi4rtrpu",
+          "p3": "mmm9qi4rtrpu"
         }
       }
     },
@@ -24140,6 +24141,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4rtrpu",
         "nombreParte": "\"Tesoro de la semana\"",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p3",
+        "claveParte": "busquemos_perlas_escondidas",
+        "sala": "prin",
+        "pubId": "mmm9qi4rtrpu",
+        "nombreParte": "Busquemos perlas escondidas",
         "fecha": "2026-04-20"
       }
     ],
