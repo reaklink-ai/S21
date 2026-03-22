@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774220311147,
+  "_lastModified": 1774220336059,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23061,7 +23061,8 @@
         "cargado": true,
         "urlId": 202026111,
         "asign": {
-          "presidente": "mmm9qi4nd6my"
+          "presidente": "mmm9qi4nd6my",
+          "p2": "mmm9qi4ttlv0"
         }
       }
     },
@@ -23811,6 +23812,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4nd6my",
         "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-04-13"
+      },
+      {
+        "semKey": "2026-04-13",
+        "parteId": "p2",
+        "claveParte": "tesoro_de_la_semana",
+        "sala": "prin",
+        "pubId": "mmm9qi4ttlv0",
+        "nombreParte": "\"Tesoro de la semana\"",
         "fecha": "2026-04-13"
       }
     ],
