@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774199840016,
+  "_lastModified": 1774199869351,
   "vym": {
     "semanas": {
       "2026-03-16": {
@@ -22820,7 +22820,10 @@
         ],
         "libros": "",
         "cargado": true,
-        "urlId": 202026083
+        "urlId": 202026083,
+        "asign": {
+          "presidente": "mmm9qi4ol4i0"
+        }
       }
     },
     "historial": [
@@ -23336,6 +23339,15 @@
         "pubId": "mmm9qi4l7kbw",
         "nombreParte": "Lector (estudio bíblico)",
         "fecha": "2026-03-30"
+      },
+      {
+        "semKey": "2026-03-16",
+        "parteId": "presidente",
+        "claveParte": "presidente_de_la_reunion",
+        "sala": "prin",
+        "pubId": "mmm9qi4ol4i0",
+        "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-03-16"
       }
     ],
     "_borradas": [
