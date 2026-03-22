@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774218622901,
+  "_lastModified": 1774218661722,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -22928,7 +22928,10 @@
         ],
         "libros": "",
         "cargado": true,
-        "urlId": 202026104
+        "urlId": 202026104,
+        "asign": {
+          "presidente": "mmm9qi4ol4i0"
+        }
       }
     },
     "historial": [
@@ -23489,6 +23492,15 @@
         "pubId": "mmm9qi4tbtlk",
         "nombreParte": "Lectura de la Biblia",
         "fecha": "2026-03-16"
+      },
+      {
+        "semKey": "2026-04-06",
+        "parteId": "presidente",
+        "claveParte": "presidente_de_la_reunion",
+        "sala": "prin",
+        "pubId": "mmm9qi4ol4i0",
+        "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-04-06"
       }
     ],
     "_borradas": [
