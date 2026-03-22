@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774222180169,
+  "_lastModified": 1774222209605,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23061,7 +23061,7 @@
         "cargado": true,
         "urlId": 202026111,
         "asign": {
-          "presidente": "mmm9qi4nd6my",
+          "presidente": "mmm9qi4l1oio",
           "p2": "mmm9qi4ttlv0",
           "p3": "mmm9qi4n3qgi",
           "p4": "mmm9qi4shgsr",
@@ -23936,15 +23936,6 @@
       },
       {
         "semKey": "2026-04-13",
-        "parteId": "presidente",
-        "claveParte": "presidente_de_la_reunion",
-        "sala": "prin",
-        "pubId": "mmm9qi4nd6my",
-        "nombreParte": "Presidente de la reunión",
-        "fecha": "2026-04-13"
-      },
-      {
-        "semKey": "2026-04-13",
         "parteId": "p2",
         "claveParte": "tesoro_de_la_semana",
         "sala": "prin",
@@ -24131,6 +24122,15 @@
         "pubId": "mmm9qi4rhmxc",
         "nombreParte": "Presidente de la reunión",
         "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-13",
+        "parteId": "presidente",
+        "claveParte": "presidente_de_la_reunion",
+        "sala": "prin",
+        "pubId": "mmm9qi4l1oio",
+        "nombreParte": "Presidente de la reunión",
+        "fecha": "2026-04-13"
       }
     ],
     "_borradas": [
