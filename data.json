@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774234357036,
+  "_lastModified": 1774234504758,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23194,7 +23194,7 @@
         "asign": {
           "presidente": "mmm9qi4s3c4f",
           "p2": "mmm9qi4rtrpu",
-          "p3": "mmm9qi4ttlv0",
+          "p3": "mmm9qi4s0lt4",
           "p4": "mmm9qi4si0is",
           "p4_aux": "mmm9qi4k6yoa",
           "p5": "mmm9qi4k7c8y",
@@ -24128,15 +24128,6 @@
       },
       {
         "semKey": "2026-04-20",
-        "parteId": "p3",
-        "claveParte": "busquemos_perlas_escondidas",
-        "sala": "prin",
-        "pubId": "mmm9qi4ttlv0",
-        "nombreParte": "Busquemos perlas escondidas",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
         "parteId": "p4",
         "claveParte": "lectura_de_la_biblia",
         "sala": "prin",
@@ -24341,6 +24332,15 @@
         "pubId": "mmm9qi4s4eyz",
         "nombreParte": "\"Tesoro de la semana\"",
         "fecha": "2026-04-13"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p3",
+        "claveParte": "busquemos_perlas_escondidas",
+        "sala": "prin",
+        "pubId": "mmm9qi4s0lt4",
+        "nombreParte": "Busquemos perlas escondidas",
+        "fecha": "2026-04-20"
       }
     ],
     "_borradas": [
