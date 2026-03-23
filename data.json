@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774231073383,
+  "_lastModified": 1774234307659,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23209,7 +23209,7 @@
           "p7_prin_ayud": "mmm9qi4ocyur",
           "p7_aux": "mmm9qi4r3xys",
           "p7_aux_ayud": "mmm9qi4qg4ch",
-          "p8": "mmm9qi4s4eyz",
+          "p8": "mmm9qi4nr0kx",
           "p9": "mmm9qi4nsgsv",
           "p9l": "mmm9qi4n3qgi",
           "p10": "mmm9qi4s3c4f"
@@ -24263,15 +24263,6 @@
       },
       {
         "semKey": "2026-04-20",
-        "parteId": "p8",
-        "claveParte": "necesidades_de_la_congregacion",
-        "sala": "prin",
-        "pubId": "mmm9qi4s4eyz",
-        "nombreParte": "Necesidades de la congregación",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
         "parteId": "p9",
         "claveParte": "estudio_biblico_de_la_congregacion",
         "sala": "prin",
@@ -24340,6 +24331,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4n3qgi",
         "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p8",
+        "claveParte": "necesidades_de_la_congregacion",
+        "sala": "prin",
+        "pubId": "mmm9qi4nr0kx",
+        "nombreParte": "Necesidades de la congregación",
         "fecha": "2026-04-20"
       }
     ],
