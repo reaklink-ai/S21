@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774231023248,
+  "_lastModified": 1774231073383,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23211,7 +23211,7 @@
           "p7_aux_ayud": "mmm9qi4qg4ch",
           "p8": "mmm9qi4s4eyz",
           "p9": "mmm9qi4nsgsv",
-          "p9l": "mmm9qi4kk1hh",
+          "p9l": "mmm9qi4n3qgi",
           "p10": "mmm9qi4s3c4f"
         }
       }
@@ -24280,15 +24280,6 @@
         "fecha": "2026-04-20"
       },
       {
-        "semKey": "2026-04-20",
-        "parteId": "p9l",
-        "claveParte": "lector_estudio_biblico",
-        "sala": "prin",
-        "pubId": "mmm9qi4kk1hh",
-        "nombreParte": "Lector (estudio bíblico)",
-        "fecha": "2026-04-20"
-      },
-      {
         "semKey": "2026-04-13",
         "parteId": "p6",
         "claveParte": "haga_revisitas_aux",
@@ -24341,6 +24332,15 @@
         "pubId": "mmm9qi4s4eyz",
         "nombreParte": "Lector (estudio bíblico)",
         "fecha": "2026-04-13"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p9l",
+        "claveParte": "lector_estudio_biblico",
+        "sala": "prin",
+        "pubId": "mmm9qi4n3qgi",
+        "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-04-20"
       }
     ],
     "_borradas": [
