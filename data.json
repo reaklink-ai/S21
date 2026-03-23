@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774223933165,
+  "_lastModified": 1774231023248,
   "vym": {
     "semanas": {
       "2026-03-23": {
@@ -23079,7 +23079,7 @@
           "p7_aux_ayud": "mmm9qi4mz3i4",
           "p8": "mmm9qi4s0lt4",
           "p9": "mmm9qi4r1pju",
-          "p9l": "mmm9qi4q1iwb",
+          "p9l": "mmm9qi4s4eyz",
           "p10": "mmm9qi4n4dj1",
           "p6_aux_ayud": "mmm9qi4twt9q"
         }
@@ -24101,15 +24101,6 @@
       },
       {
         "semKey": "2026-04-13",
-        "parteId": "p9l",
-        "claveParte": "lector_estudio_biblico",
-        "sala": "prin",
-        "pubId": "mmm9qi4q1iwb",
-        "nombreParte": "Lector (estudio bíblico)",
-        "fecha": "2026-04-13"
-      },
-      {
-        "semKey": "2026-04-13",
         "parteId": "p10",
         "claveParte": "palabras_de_conclusion",
         "sala": "prin",
@@ -24341,6 +24332,15 @@
         "pubId": "mmm9qi4s3c4f",
         "nombreParte": "Palabras de conclusión",
         "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-13",
+        "parteId": "p9l",
+        "claveParte": "lector_estudio_biblico",
+        "sala": "prin",
+        "pubId": "mmm9qi4s4eyz",
+        "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-04-13"
       }
     ],
     "_borradas": [
