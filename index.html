@@ -6637,7 +6637,8 @@ function vymSemanaKey(fecha) {
 
 function vymPartesDefecto() {
   return [
-    { id:'presidente', nombre:'Presidente de la reunión',         mins:null, seccion:'apertura', doble:false, rol:'anciano' },
+    { id:'presidente',      nombre:'Presidente de la reunión',        mins:null, seccion:'apertura', doble:false, rol:'anciano' },
+    { id:'oracion_apertura',nombre:'Oración de apertura',              mins:null, seccion:'apertura', doble:false, rol:'anciano' },
     { id:'p2',  nombre:'"Tesoro de la semana"',                   mins:10,   seccion:'tesoros',  doble:false, rol:'anciano_siervo' },
     { id:'p3',  nombre:'Busquemos perlas escondidas',             mins:10,   seccion:'tesoros',  doble:false, rol:'anciano_siervo' },
     { id:'p4',  nombre:'Lectura de la Biblia',                    detalle:'',  mins:4,    seccion:'tesoros',  doble:true,  rol:'todos' },
@@ -6648,6 +6649,7 @@ function vymPartesDefecto() {
     { id:'p9',  nombre:'Estudio bíblico de la congregación',      detalle:'',  mins:30,   seccion:'vida',     doble:false, rol:'anciano', tieneEspecial:'lector' },
     { id:'p9l', nombre:'Lector (estudio bíblico)',                detalle:'',  mins:null, seccion:'vida',     doble:false, rol:'anciano_siervo', esLector:true },
     { id:'p10', nombre:'Palabras de conclusión',                  mins:3,    seccion:'cierre',   doble:false, rol:'anciano' },
+    { id:'oracion_cierre',  nombre:'Oración de cierre',                mins:null, seccion:'cierre',   doble:false, rol:'anciano' },
   ];
 }
 
@@ -6673,7 +6675,8 @@ function vymParsearTexto(texto, fechaKey) {
   const partes = [];
   let seccion = 'tesoros';
   let orden = 0;
-  partes.push({ id:'presidente', nombre:'Presidente de la reunión', mins:null, seccion:'apertura', doble:false, soloAncianos:false });
+  partes.push({ id:'presidente',       nombre:'Presidente de la reunión', mins:null, seccion:'apertura', doble:false, rol:'anciano' });
+  partes.push({ id:'oracion_apertura', nombre:'Oración de apertura',       mins:null, seccion:'apertura', doble:false, rol:'anciano' });
 
   unidas.forEach(linea => {
     const t = linea.trim();
@@ -6756,7 +6759,10 @@ function vymParsearTexto(texto, fechaKey) {
     }
   });
 
-  semana.partes = partes.length > 3 ? partes : vymPartesDefecto();
+  // Agregar oración de cierre al final
+  partes.push({ id:'oracion_cierre', nombre:'Oración de cierre', mins:null, seccion:'cierre', doble:false, rol:'anciano' });
+
+  semana.partes = partes.length > 4 ? partes : vymPartesDefecto();
   return semana;
 }
 
@@ -6826,7 +6832,7 @@ function vymProcesarPegado(fechaKey, fechaISO, semanaIdx, btn) {
 function vymGetAsign(semKey, parteId, sala) {
   const s = getVymState().semanas[semKey];
   if(!s || !s.asign) return '';
-  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud' };
+  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud', aux_conductor:'_aux_conductor' };
   return s.asign[parteId + (sufijos[sala]||'')] || '';
 }
 
@@ -6834,7 +6840,7 @@ function vymSetAsign(semKey, parteId, sala, pubId) {
   const vym = getVymState();
   if(!vym.semanas[semKey]) return;
   if(!vym.semanas[semKey].asign) vym.semanas[semKey].asign = {};
-  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud' };
+  const sufijos = { prin:'', aux:'_aux', prin_ayud:'_prin_ayud', aux_ayud:'_aux_ayud', aux_conductor:'_aux_conductor' };
   const key = parteId + (sufijos[sala]||'');
   vym.semanas[semKey].asign[key] = pubId;
 
@@ -6849,6 +6855,7 @@ function vymSetAsign(semKey, parteId, sala, pubId) {
     if(sala === 'aux')      claveParte += '_aux';
     if(sala === 'prin_ayud') claveParte += '_ayudante';
     if(sala === 'aux_ayud')  claveParte += '_aux_ayudante';
+    if(sala === 'aux_conductor') claveParte += '_aux_conductor';
     vym.historial.push({ semKey, parteId, claveParte, sala, pubId, nombreParte: nombreBase, fecha: semKey });
   }
 
@@ -6895,11 +6902,13 @@ function vymMarcarDuplicados() {
   });
 }
 
-function vymOpcionesSelect(rol, valorActual, claveParte) {
+function vymOpcionesSelect(rol, valorActual, claveParte, genero) {
   let pubs = [...state.publicadores].filter(p => !p.inactivo)
     .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
   if(rol === 'anciano')             pubs = pubs.filter(p=>p.anciano);
   else if(rol === 'anciano_siervo') pubs = pubs.filter(p=>p.anciano||p.siervo);
+  // Filtrar por género si se especifica (para evitar mezcla en sala auxiliar)
+  if(genero) pubs = pubs.filter(p=>(p.genero||'M')===genero);
 
   // Última vez que cada pub tuvo ESTA PARTE específica (por claveParte)
   const hist = (getVymState().historial||[]);
@@ -6966,8 +6975,9 @@ function _vymRolReal(parte) {
   const n = parte.nombre || '';
   const s = parte.seccion || '';
   if(/Presidente/i.test(n))                             return 'anciano';
-  if(/Palabras de (introducci\u00f3n|conclusi\u00f3n)/i.test(n))  return 'anciano';
-  if(/Estudio b\u00edblico de la congregaci\u00f3n/i.test(n))     return 'anciano';
+  if(/Oración de (apertura|cierre)/i.test(n))           return 'anciano';
+  if(/Palabras de (introducción|conclusión)/i.test(n))  return 'anciano';
+  if(/Estudio bíblico de la congregación/i.test(n))     return 'anciano';
   if(/Busquemos perlas/i.test(n))                       return 'anciano_siervo';
   if(s === 'apertura' || s === 'cierre')                return 'anciano';
   if(s === 'tesoros' && !parte.doble)                   return 'anciano_siervo';
@@ -6976,11 +6986,15 @@ function _vymRolReal(parte) {
   return 'todos';
 }
 
-function _vymPool(rol) {
+function _vymPool(rol, genero) {
   const pubs = state.publicadores.filter(p => !p.inactivo && !p.noBautizado);
-  if(rol === 'anciano')         return pubs.filter(p => p.anciano);
-  if(rol === 'anciano_siervo')  return pubs.filter(p => p.anciano || p.siervo);
-  return pubs;
+  let pool;
+  if(rol === 'anciano')         pool = pubs.filter(p => p.anciano);
+  else if(rol === 'anciano_siervo') pool = pubs.filter(p => p.anciano || p.siervo);
+  else pool = pubs;
+  // Filtrar por género si se especifica
+  if(genero) pool = pool.filter(p => (p.genero || 'M') === genero);
+  return pool;
 }
 
 // Construye un mapa de rotacion leyendo DIRECTAMENTE las asignaciones de todas las semanas
@@ -6988,27 +7002,25 @@ function _vymPool(rol) {
 function _vymUltimaAsign(clave, semKeyActual) {
   const vym = getVymState();
   const ultima = {};
-  // Recorrer todas las semanas guardadas
   Object.entries(vym.semanas || {}).forEach(([semKey, semana]) => {
     if(semKey === semKeyActual) return;
     if(!semana || !semana.partes || !semana.asign) return;
     semana.partes.forEach(parte => {
       const c = _vymClave(parte.nombre);
       const conAyudante = parte.conAyudante ||
-        (/Empiece conversaciones|Haga revisitas|Haga disc\u00edpulos|Explique sus|D\u00e9 discursos/i.test(parte.nombre) &&
+        (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
          !/discurso/i.test(parte.detalle||''));
-
       const registrar = (slot, claveParte) => {
         const pubId = semana.asign[slot];
         if(!pubId) return;
         if(claveParte !== clave) return;
         if(!ultima[pubId] || semKey > ultima[pubId]) ultima[pubId] = semKey;
       };
-
-      registrar(parte.id,                 c);
-      registrar(parte.id + '_prin_ayud',  c + '__ayudante');
-      registrar(parte.id + '_aux',        c + '__sala_aux');
-      registrar(parte.id + '_aux_ayud',   c + '__aux_ayudante');
+      registrar(parte.id,                   c);
+      registrar(parte.id + '_prin_ayud',    c + '__ayudante');
+      registrar(parte.id + '_aux',          c + '__sala_aux');
+      registrar(parte.id + '_aux_ayud',     c + '__aux_ayudante');
+      registrar(parte.id + '_aux_conductor',c + '__aux_conductor');
     });
   });
   return ultima;
@@ -7031,40 +7043,65 @@ function vymSugerirTodo(semKey) {
   const semana = vym.semanas[semKey];
   if(!semana) return;
 
-  // Limpiar asignaciones previas para re-sugerir limpio
   semana.asign = {};
   const yaAsignados = new Set();
-  const todosPool   = _vymPool('todos');
 
   semana.partes.forEach(parte => {
-    const rolPrin      = _vymRolReal(parte);
-    const poolPrin     = _vymPool(rolPrin);
-    const clavePrin    = _vymClave(parte.nombre);
-    const claveAyud    = clavePrin + '__ayudante';
-    const claveAux     = clavePrin + '__sala_aux';
-    const claveAuxAyud = clavePrin + '__aux_ayudante';
+    const rolPrin        = _vymRolReal(parte);
+    const clavePrin      = _vymClave(parte.nombre);
+    const claveAyud      = clavePrin + '__ayudante';
+    const claveAux       = clavePrin + '__sala_aux';
+    const claveAuxAyud   = clavePrin + '__aux_ayudante';
+    const claveAuxCond   = clavePrin + '__aux_conductor';
 
     const conAyudante = parte.conAyudante ||
-      (/Empiece conversaciones|Haga revisitas|Haga disc\u00edpulos|Explique sus|D\u00e9 discursos/i.test(parte.nombre) &&
+      (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
        !/discurso/i.test(parte.detalle||''));
 
+    // Elegir y asignar respetando yaAsignados (no repite en la misma semana)
     const asignar = (slot, clave, pool) => {
       const e = _vymElegir(clave, pool, yaAsignados, semKey);
-      if(!e) return;
+      if(!e) return null;
       semana.asign[slot] = e.id;
       yaAsignados.add(e.id);
+      return e;
     };
 
-    asignar(parte.id,                   clavePrin,    poolPrin);
-    if(conAyudante)                asignar(parte.id + '_prin_ayud', claveAyud,    todosPool);
-    if(parte.doble)                asignar(parte.id + '_aux',       claveAux,     todosPool);
-    if(conAyudante && parte.doble) asignar(parte.id + '_aux_ayud',  claveAuxAyud, todosPool);
+    // Sala principal — estudiante
+    const estudiantePrin = asignar(parte.id, clavePrin, _vymPool(rolPrin));
+
+    // Ayudante sala principal — mismo género que estudiante principal
+    if(conAyudante) {
+      const genPrin = estudiantePrin ? (estudiantePrin.genero || 'M') : null;
+      const poolAyud = genPrin ? _vymPool('todos', genPrin) : _vymPool('todos');
+      asignar(parte.id + '_prin_ayud', claveAyud, poolAyud);
+    }
+
+    // Sala auxiliar
+    if(parte.doble) {
+      const genPrin = estudiantePrin ? (estudiantePrin.genero || 'M') : null;
+
+      // Conductor sala auxiliar — anciano o siervo ministerial, no repite el mismo día
+      const poolCond = _vymPool('anciano_siervo');
+      asignar(parte.id + '_aux_conductor', claveAuxCond, poolCond);
+
+      // Estudiante sala auxiliar — mismo género que sala principal
+      const poolAux = genPrin ? _vymPool('todos', genPrin) : _vymPool('todos');
+      const estudianteAux = asignar(parte.id + '_aux', claveAux, poolAux);
+
+      // Ayudante sala auxiliar — mismo género que estudiante auxiliar
+      if(conAyudante) {
+        const genAux = estudianteAux ? (estudianteAux.genero || 'M') : genPrin;
+        const poolAuxAyud = genAux ? _vymPool('todos', genAux) : _vymPool('todos');
+        asignar(parte.id + '_aux_ayud', claveAuxAyud, poolAuxAyud);
+      }
+    }
   });
 
   saveStateAndSync();
   renderVyM();
   vymMarcarDuplicados();
-  toast('\u2713 Sugerencias aplicadas \u2014 revisa y ajusta si necesitas');
+  toast('✓ Sugerencias aplicadas — revisa y ajusta si necesitas');
 }
 
 function vymRestablecerSemana(semKey) {
@@ -7081,24 +7118,6 @@ function vymRestablecerSemana(semKey) {
   toast('Semana restablecida');
 }
 
-function vymDebugRotacion(semKey) {
-  const vym = getVymState();
-  const semanas = Object.keys(vym.semanas||{}).sort();
-  let txt = `=== ROTACIÓN DEBUG ===\nSemanas guardadas: ${semanas.join(', ')}\n\n`;
-  const partesClave = ['presidente_de_la_reunion','tesoro_de_la_semana','busquemos_perlas_escondidas'];
-  partesClave.forEach(clave => {
-    const ultima = _vymUltimaAsign(clave, semKey);
-    txt += `PARTE: ${clave}\n`;
-    Object.entries(ultima).forEach(([pubId, semK]) => {
-      const p = state.publicadores.find(x=>x.id===pubId);
-      const nombre = p ? `${p.apellido}, ${p.nombre}` : pubId;
-      txt += `  ${nombre} → última vez: ${semK}\n`;
-    });
-    txt += '\n';
-  });
-  alert(txt);
-}
-
 function vymFechaLabelSemKey(semKey) {
   for(let i=-4; i<20; i++) {
     const f = vymLunesDeSemana(i);
@@ -7107,172 +7126,260 @@ function vymFechaLabelSemKey(semKey) {
   return semKey;
 }
 
-function vymExportarSemana(semKey) {
-  const vym = getVymState();
-  const semana = vym.semanas[semKey];
-  if(!semana) return;
-  const fechaLabel = vymFechaLabelSemKey(semKey);
-
-  // ── Construir HTML con formato idéntico al PDF oficial ──
-  const grupos = {};
-  (semana.partes||[]).forEach(p => {
-    const s = p.seccion||'tesoros';
-    if(!grupos[s]) grupos[s]=[];
-    grupos[s].push(p);
-  });
-
-  // Colores exactos del PDF
-  const TD = 'padding:5px 8px;vertical-align:top;';
-  const SECC_COLORS = {
-    tesoros:  { bg:'#1a5276', accent:'#d4ac0d', label:'TESOROS DE LA BIBLIA',    icon:'◆' },
-    maestros: { bg:'#1a5276', accent:'#ca6f1e', label:'SEAMOS MEJORES MAESTROS', icon:'◈' },
-    vida:     { bg:'#922b21', accent:'#922b21', label:'NUESTRA VIDA CRISTIANA',  icon:'♥' },
-  };
-
-  // Función para una fila de parte
-  function filaHTML(parte, semKey) {
-    const conAyud = parte.conAyudante ||
-      (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
-       !/discurso/i.test(parte.detalle||''));
-    const prin     = vymNombrePub(vymGetAsign(semKey, parte.id, 'prin'));
-    const prinAyud = conAyud ? vymNombrePub(vymGetAsign(semKey, parte.id, 'prin_ayud')) : '';
-    const aux      = parte.doble ? vymNombrePub(vymGetAsign(semKey, parte.id, 'aux')) : '';
-    const auxAyud  = conAyud && parte.doble ? vymNombrePub(vymGetAsign(semKey, parte.id, 'aux_ayud')) : '';
-
-    const mins = parte.mins ? ` (${parte.mins} mins.)` : '';
-    const detalle = parte.detalle ? `<br><span style="font-size:9.5px;color:#555;font-style:italic">${escHtml(parte.detalle)}</span>` : '';
-
-    // Columna de asignados
-    let asigCol = '';
-    if(conAyud && parte.doble) {
-      asigCol = `<td style="${TD}width:22%">
-        <span style="font-size:8px;font-weight:700;color:#888;display:block;text-transform:uppercase;letter-spacing:.3px">Principal</span>
-        <b>${prin}</b><br>
-        <span style="font-size:9px;color:#666">Ayud: ${prinAyud}</span>
-      </td>
-      <td style="${TD}width:22%">
-        <span style="font-size:8px;font-weight:700;color:#888;display:block;text-transform:uppercase;letter-spacing:.3px">Auxiliar</span>
-        <b>${aux}</b><br>
-        <span style="font-size:9px;color:#666">Ayud: ${auxAyud}</span>
-      </td>`;
-    } else if(parte.doble) {
-      asigCol = `<td style="${TD}width:22%"><b>${prin}</b></td><td style="${TD}width:22%"><b>${aux}</b></td>`;
-    } else if(parte.esLector) {
-      asigCol = `<td colspan="2" style="${TD}"><span style="color:#888;font-style:italic">${prin}</span></td>`;
-    } else {
-      asigCol = `<td colspan="2" style="${TD}"><b>${prin}</b></td>`;
-    }
-
-    const bgRow = parte.esLector ? 'background:#fafafa' : '';
-    const nameStyle = parte.esLector
-      ? `font-size:10px;color:#aaa;font-style:italic`
-      : `font-size:11px;color:#1a1a1a;font-weight:500`;
-
-    return `<tr style="border-bottom:1px solid #e8e8e8;${bgRow}">
-      <td style="${TD}width:56%">
-        <span style="${nameStyle}">${escHtml(parte.nombre)}${mins}</span>${detalle}
-      </td>
-      ${asigCol}
-    </tr>`;
-  }
-
-  // Fila encabezado apertura
-  const canAp = semana.cancionApertura ? `Canción ${semana.cancionApertura} y oración` : '';
-  const canCi = semana.cancionCierre   ? `Canción ${semana.cancionCierre} y oración`   : '';
-
-  let htmlContent = '';
-
-  // ── ENCABEZADO APERTURA ──
-  htmlContent += `<table width="100%" style="border-collapse:collapse;margin-bottom:2px">
-    <tr style="border-bottom:1px solid #ccc">
-      <td style="padding:5px 8px;font-size:10.5px;color:#333">
-        ${canAp ? `<b>♩ ${escHtml(canAp)}</b>  |  ` : ''}
-        <b>Palabras de introducción</b> <span style="font-weight:400">(1 min.)</span>
-      </td>
-      <td style="padding:5px 8px;text-align:right;font-size:10px;color:#888">
-        ${semana.libros ? `<b style="color:#1a5276">${escHtml(semana.libros)}</b>` : ''}
-      </td>
-    </tr>
-  </table>`;
-
-  // ── PRESIDENTE ──
-  const pres = (grupos.apertura||[]).find(p=>p.id==='presidente');
-  if(pres) {
-    const presNombre = vymNombrePub(vymGetAsign(semKey, 'presidente', 'prin'));
-    htmlContent += `<table width="100%" style="border-collapse:collapse;margin-bottom:6px">
-      <tr style="border-bottom:1px solid #eee">
-        <td style="${TD}font-size:11px;width:56%"><b>Presidente de la reunión</b></td>
-        <td colspan="2" style="${TD}font-size:11px"><b>${presNombre}</b></td>
-      </tr>
-    </table>`;
-  }
-
-  // ── SECCIONES PRINCIPALES ──
-  ['tesoros','maestros','vida'].forEach(secId => {
-    const partes = grupos[secId]; if(!partes||!partes.length) return;
-    const cfg = SECC_COLORS[secId];
-
-    htmlContent += `
-    <table width="100%" style="border-collapse:collapse;margin-bottom:8px;border:1px solid #ddd;border-radius:4px;overflow:hidden">
-      <tr>
-        <td colspan="3" style="background:${cfg.bg};padding:5px 8px">
-          <span style="color:#fff;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.8px">${cfg.label}</span>
-        </td>
-      </tr>`;
-
-    partes.forEach(parte => { htmlContent += filaHTML(parte, semKey); });
-    htmlContent += `</table>`;
-  });
-
-  // ── CIERRE ──
-  const cierrePartes = grupos.cierre || [];
-  htmlContent += `<table width="100%" style="border-collapse:collapse;margin-top:4px">
-    <tr style="border-top:1px solid #ccc">
-      <td style="padding:5px 8px;font-size:10.5px;color:#333">
-        <b>Palabras de conclusión</b> <span style="font-weight:400">(3 mins.)</span>
-        ${canCi ? `  |  <b>♩ ${escHtml(canCi)}</b>` : ''}
-      </td>
-      <td style="padding:5px 8px;text-align:right">
-        ${cierrePartes.length ? `<b style="font-size:11px">${vymNombrePub(vymGetAsign(semKey, cierrePartes[0].id, 'prin'))}</b>` : ''}
-      </td>
-    </tr>
-  </table>`;
-
-  const html = `<!DOCTYPE html>
-<html lang="es"><head><meta charset="UTF-8">
-<title>Vida y Ministerio — ${fechaLabel}</title>
-<style>
+// ── CSS y estilos compartidos para exportación PDF ──
+function _vymPdfStyles() {
+  return `
   * { box-sizing:border-box; margin:0; padding:0; }
-  body { font-family:"Arial",sans-serif; background:#fff; color:#111; padding:14px 16px; max-width:720px; margin:0 auto; font-size:11px; }
-  .page-header { border-bottom:3px solid #1a5276; padding-bottom:8px; margin-bottom:10px; }
-  .page-title { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; color:#555; }
-  .page-fecha { font-size:17px; font-weight:900; color:#1a1a1a; margin:3px 0; letter-spacing:-.3px; }
-  .page-libros { font-size:12px; font-weight:700; color:#1a5276; }
-  .no-print { text-align:center; margin-top:14px; }
+  body { font-family:"Arial",sans-serif; background:#fff; color:#111; font-size:11px; }
+  .semana-page { padding:10px 14px; max-width:760px; margin:0 auto; }
+  .pdf-titulo { text-align:center; font-size:12px; font-weight:900; letter-spacing:1px; border:1px solid #999; padding:3px 0; margin-bottom:0; }
+  .pdf-fecha { text-align:center; font-size:13px; font-weight:700; background:#cfe2f3; border:1px solid #999; border-top:none; padding:4px 0; margin-bottom:6px; }
+  .secc-wrap { border:1px solid #999; margin-bottom:0; }
+  .secc-hdr { display:flex; align-items:center; gap:8px; padding:4px 8px; background:#fff; border-bottom:1px solid #999; }
+  .secc-ico-img { width:30px; height:30px; object-fit:contain; flex-shrink:0; }
+  .secc-nombre { font-size:13px; font-weight:900; text-transform:uppercase; }
+  .secc-nombre.tesoros { color:#1a5276; }
+  .secc-nombre.maestros { color:#7d6608; }
+  .secc-nombre.vida { color:#922b21; }
+  .secc-libros { font-size:11px; font-weight:700; color:#1a5276; margin-left:16px; }
+  table.partes { border-collapse:collapse; width:100%; }
+  table.partes td { padding:3px 6px; vertical-align:middle; border:1px solid #999; font-size:10px; }
+  .td-mins { width:42px; text-align:right; font-size:10px; color:#333; white-space:nowrap; padding-right:6px; }
+  .td-parte { font-size:10px; }
+  .td-parte b { font-weight:700; }
+  .td-asig-a { font-size:10px; width:25%; }
+  .td-asig-b { font-size:10px; width:25%; }
+  .td-asig-full { font-size:10px; }
+  .fila-cancion td { font-style:italic; color:#444; font-size:10px; }
+  .fila-lector td { font-style:italic; color:#666; background:#fafafa; }
+  .no-print { text-align:center; margin:14px 0 4px; }
   .btn-print { padding:9px 24px; background:#1a5276; color:#fff; border:none; border-radius:6px; font-size:12px; font-weight:700; cursor:pointer; font-family:Arial,sans-serif; }
   @media print {
-    body { padding:8px; }
     .no-print { display:none !important; }
-    table { page-break-inside:avoid; }
+    .semana-page { padding:6px 10px; }
+    .page-break { page-break-after:always; }
+    .page-break:last-child { page-break-after:avoid; }
+  }`;
+}
+
+// ── Construye el bloque HTML de UNA semana ──
+function _vymSemanaHTML(semKey) {
+  const vym = getVymState();
+  const semana = vym.semanas[semKey];
+  if(!semana) return '';
+
+  const mesesEs = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const diasEs  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
+  let fechaLabel = semKey;
+  for(let i=-4; i<24; i++) {
+    const f = vymLunesDeSemana(i);
+    if(vymSemanaKey(f) === semKey) {
+      const mierc = new Date(f); mierc.setDate(f.getDate() + 2);
+      fechaLabel = `${diasEs[mierc.getDay()]} ${mierc.getDate()} de ${mesesEs[mierc.getMonth()]} / ${mierc.getFullYear()}`;
+      break;
+    }
   }
-</style>
-</head>
+
+  const grupos = {};
+  (semana.partes||[]).forEach(p => {
+    const s = p.seccion||'tesoros'; if(!grupos[s]) grupos[s]=[]; grupos[s].push(p);
+  });
+
+  const nPub = id => vymNombrePub(id);
+  const ga   = (sk,id,sala) => vymGetAsign(sk,id,sala);
+  const blank = '________________';
+  const val = v => (v && v !== blank) ? escHtml(v) : '';
+
+  // SVG icons
+  const icoTesoros = `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><polygon points="20,2 38,14 30,38 10,38 2,14" fill="none" stroke="#1a5276" stroke-width="2.5"/><polygon points="20,2 38,14 20,20" fill="#d4e6f1"/><polygon points="20,2 2,14 20,20" fill="#aed6f1"/><polygon points="2,14 10,38 20,20" fill="#5dade2"/><polygon points="38,14 30,38 20,20" fill="#3498db"/><polygon points="10,38 30,38 20,20" fill="#1a5276"/></svg>`;
+  const icoMaestros = `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><rect x="4" y="6" width="24" height="30" rx="2" fill="#f5cba7" stroke="#ca6f1e" stroke-width="1.5"/><rect x="8" y="6" width="24" height="30" rx="2" fill="#fdebd0" stroke="#ca6f1e" stroke-width="1.5"/><line x1="13" y1="16" x2="27" y2="16" stroke="#ca6f1e" stroke-width="1.5"/><line x1="13" y1="21" x2="27" y2="21" stroke="#ca6f1e" stroke-width="1.5"/><line x1="13" y1="26" x2="22" y2="26" stroke="#ca6f1e" stroke-width="1.5"/></svg>`;
+  const icoVida = `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M20 36 C10 28, 2 20, 2 13 C2 7, 7 4, 12 6 C15 7, 18 10, 20 13 C22 10, 25 7, 28 6 C33 4, 38 7, 38 13 C38 20, 30 28, 20 36Z" fill="#c0392b" stroke="#922b21" stroke-width="1"/><ellipse cx="16" cy="18" rx="4" ry="6" fill="white" opacity="0.5" transform="rotate(-30 16 18)"/></svg>`;
+
+  let html = '';
+
+  // Título y fecha
+  html += `<div class="pdf-titulo">VIDA Y MINISTERIO CRISTIANOS</div>
+  <div class="pdf-fecha">${fechaLabel}</div>`;
+
+  // ─ Helper para tabla de partes ─
+  const abrirTabla = () => { html += '<table class="partes">'; };
+  const cerrarTabla = () => { html += '</table>'; };
+
+  // ── TESOROS ──
+  html += `<div class="secc-wrap">
+    <div class="secc-hdr">
+      ${icoTesoros}
+      <span class="secc-nombre tesoros">TESOROS DE LA BIBLIA</span>
+      ${semana.libros ? `<span class="secc-libros">${escHtml(semana.libros)}</span>` : ''}
+    </div>`;
+  abrirTabla();
+
+  // Canción apertura
+  html += `<tr class="fila-cancion"><td class="td-mins"></td>
+    <td colspan="2"><i>( Canción ${semana.cancionApertura ? escHtml(semana.cancionApertura) : '??'} )</i> Oración.</td></tr>`;
+
+  // Presidente
+  const pres = (grupos.apertura||[]).find(p=>p.id==='presidente');
+  if(pres) {
+    html += `<tr><td class="td-mins">1 min.</td>
+      <td class="td-parte"><b>Presidente, palabras de introducción.</b></td>
+      <td class="td-asig-a" colspan="2">${val(nPub(ga(semKey,'presidente','prin')))}</td></tr>`;
+  }
+
+  (grupos.tesoros||[]).forEach(parte => {
+    const minsLbl = parte.mins ? `${parte.mins} min.` : '';
+    const detExt = parte.detalle ? `: <i>${escHtml(parte.detalle)}</i>` : '';
+    if(parte.esLector) {
+      html += `<tr class="fila-lector"><td class="td-mins"></td>
+        <td class="td-parte"><i>Lector:</i></td>
+        <td class="td-asig-a" colspan="2">${val(nPub(ga(semKey,parte.id,'prin')))}</td></tr>`;
+      return;
+    }
+    const prin    = val(nPub(ga(semKey,parte.id,'prin')));
+    const aux     = parte.doble ? val(nPub(ga(semKey,parte.id,'aux'))) : '';
+    const auxCond = parte.doble ? val(nPub(ga(semKey,parte.id,'aux_conductor'))) : '';
+    // Col4: encargado sala B (si existe) + estudiante auxiliar (si existe)
+    let col4 = '';
+    if(parte.doble) {
+      const partes4 = [];
+      if(auxCond) partes4.push(`Encargado sala B : ${auxCond}`);
+      if(aux) partes4.push(aux);
+      col4 = partes4.join('<br>');
+    }
+
+    html += `<tr><td class="td-mins">${minsLbl}</td>
+      <td class="td-parte"><b>${escHtml(parte.nombre)}</b>${detExt}</td>
+      <td class="td-asig-a">${prin}</td>
+      <td class="td-asig-b">${col4}</td></tr>`;
+  });
+
+  cerrarTabla();
+  html += '</div>';
+
+  // ── SEAMOS MEJORES MAESTROS ──
+  html += `<div class="secc-wrap" style="margin-top:6px">
+    <div class="secc-hdr">
+      ${icoMaestros}
+      <span class="secc-nombre maestros">SEAMOS MEJORES MAESTROS</span>
+    </div>`;
+  abrirTabla();
+
+  (grupos.maestros||[]).forEach(parte => {
+    // En Maestros, siempre hay al menos el estudiante; ayudante solo si conAyudante
+    const conAyud = parte.conAyudante ||
+      (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
+       !/discurso/i.test(parte.detalle||'')) ||
+      parte.doble; // forzar siempre en doble
+    const minsLbl  = parte.mins ? `${parte.mins} min.` : '';
+    const detExt   = parte.detalle ? `: <i>${escHtml(parte.detalle)}</i>` : '';
+    const prin     = val(nPub(ga(semKey,parte.id,'prin')));
+    const prinAyud = val(nPub(ga(semKey,parte.id,'prin_ayud')));
+    const aux      = parte.doble ? val(nPub(ga(semKey,parte.id,'aux'))) : '';
+    const auxAyud  = parte.doble ? val(nPub(ga(semKey,parte.id,'aux_ayud'))) : '';
+    // Sala A: "Estudiante - Ayudante" (ayudante solo si existe)
+    const colA = [prin, prinAyud].filter(Boolean).join(' - ');
+    // Sala B: "Estudiante - Ayudante" (ayudante solo si existe)
+    const colB = parte.doble ? [aux, auxAyud].filter(Boolean).join(' - ') : '';
+
+    html += `<tr><td class="td-mins">${minsLbl}</td>
+      <td class="td-parte"><b>${escHtml(parte.nombre)}</b>${detExt}</td>
+      <td class="td-asig-a">${colA}</td>
+      <td class="td-asig-b">${colB}</td></tr>`;
+  });
+
+  cerrarTabla();
+  html += '</div>';
+
+  // ── NUESTRA VIDA CRISTIANA ──
+  html += `<div class="secc-wrap" style="margin-top:6px">
+    <div class="secc-hdr">
+      ${icoVida}
+      <span class="secc-nombre vida">NUESTRA VIDA CRISTIANA</span>
+    </div>`;
+  abrirTabla();
+
+  if(semana.cancionVida) {
+    html += `<tr class="fila-cancion"><td class="td-mins"></td>
+      <td colspan="2"><i>( Canción ${escHtml(semana.cancionVida)} )</i></td></tr>`;
+  }
+
+  (grupos.vida||[]).forEach(parte => {
+    const minsLbl = parte.mins ? `${parte.mins} min.` : '';
+    const detExt = parte.detalle ? `  <i>${escHtml(parte.detalle)}</i>` : '';
+    if(parte.esLector) {
+      html += `<tr class="fila-lector"><td class="td-mins"></td>
+        <td class="td-parte"><i>Lector:</i></td>
+        <td class="td-asig-full">${val(nPub(ga(semKey,parte.id,'prin')))}</td></tr>`;
+      return;
+    }
+    html += `<tr><td class="td-mins">${minsLbl}</td>
+      <td class="td-parte"><b>${escHtml(parte.nombre)}</b>${detExt}</td>
+      <td class="td-asig-full">${val(nPub(ga(semKey,parte.id,'prin')))}</td></tr>`;
+  });
+
+  // Cierre — palabras de conclusión siempre las da el presidente (3 min.)
+  const cierrePartes = grupos.cierre || [];
+  const palabrasConcl = cierrePartes.find(p=>!/oracion/i.test(p.id));
+  const orCi = cierrePartes.find(p=>p.id==='oracion_cierre');
+  // El presidente es quien da las palabras de conclusión
+  const presNomCierre = val(nPub(ga(semKey,'presidente','prin')));
+  // Nombre asignado explícito a palabras de conclusión (si existe), si no usar presidente
+  const conclNom = palabrasConcl ? val(nPub(ga(semKey,palabrasConcl.id,'prin'))) || presNomCierre : presNomCierre;
+  html += `<tr><td class="td-mins">3 min.</td>
+    <td class="td-parte"><b>Palabras de conclusión.</b>${semana.cancionCierre ? ` <i>( Canción ${escHtml(semana.cancionCierre)} )</i>` : ''}</td>
+    <td class="td-asig-full" colspan="2">${conclNom}</td></tr>`;
+  if(orCi) {
+    const oraNom = val(nPub(ga(semKey,'oracion_cierre','prin')));
+    html += `<tr class="fila-cancion"><td class="td-mins"></td>
+      <td class="td-parte"><i>Oración</i></td>
+      <td class="td-asig-full" colspan="2">${oraNom}</td></tr>`;
+  }
+
+  cerrarTabla();
+  html += '</div>';
+
+  return `<div class="semana-page page-break">${html}</div>`;
+}
+
+function vymExportarSemana(semKey) {
+  const bloque = _vymSemanaHTML(semKey);
+  if(!bloque) return;
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Vida y Ministerio</title><style>${_vymPdfStyles()}</style></head>
 <body>
-  <div class="page-header">
-    <div class="page-title">VIDA Y MINISTERIO CRISTIANOS</div>
-    <div class="page-fecha">${fechaLabel}</div>
-    ${semana.libros ? `<div class="page-libros">${escHtml(semana.libros)}</div>` : ''}
-  </div>
-  ${htmlContent}
+  ${bloque}
   <div class="no-print">
     <button class="btn-print" onclick="window.print()">🖨 Imprimir / Guardar PDF</button>
   </div>
 </body></html>`;
-
   const win = window.open('', '_blank');
-  win.document.write(html);
-  win.document.close();
+  win.document.write(html); win.document.close();
   toast('✓ Programa abierto — usa Imprimir para guardar como PDF');
+}
+
+function vymExportarMes() {
+  const vym = getVymState();
+  // Recopilar todas las semanas cargadas de las próximas ~8 semanas + pasadas ~4
+  const semanasCargadas = [];
+  for(let i=-4; i<12; i++) {
+    const f = vymLunesDeSemana(i);
+    const key = vymSemanaKey(f);
+    if(vym.semanas[key]) semanasCargadas.push(key);
+  }
+  if(!semanasCargadas.length) { toast('No hay semanas cargadas para exportar'); return; }
+
+  const bloques = semanasCargadas.map(k => _vymSemanaHTML(k)).filter(Boolean);
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Vida y Ministerio — Mes completo</title><style>${_vymPdfStyles()}</style></head>
+<body>
+  ${bloques.join('\n')}
+  <div class="no-print" style="padding:14px 0">
+    <button class="btn-print" onclick="window.print()">🖨 Imprimir / Guardar PDF (${bloques.length} semanas)</button>
+  </div>
+</body></html>`;
+  const win = window.open('', '_blank');
+  win.document.write(html); win.document.close();
+  toast(`✓ ${bloques.length} semanas abiertas — usa Imprimir para guardar como PDF`);
 }
 
 // ── HISTORIAL DE ASIGNACIONES ──
@@ -7356,6 +7463,92 @@ function vymMostrarHistorial() {
   document.body.appendChild(overlay);
 }
 
+// ── Helper: renderiza una parte como HTML para el UI ──
+function _renderParte(parte, key, cb) {
+  const vPrin        = vymGetAsign(key, parte.id, 'prin');
+  const vAux         = vymGetAsign(key, parte.id, 'aux');
+  const vPrinAyud    = vymGetAsign(key, parte.id, 'prin_ayud');
+  const vAuxAyud     = vymGetAsign(key, parte.id, 'aux_ayud');
+  const vAuxCond     = vymGetAsign(key, parte.id, 'aux_conductor');
+  const rol = parte.rol || 'todos';
+  const clsAnc = rol==='anciano' ? ' anciano-only' : (rol==='anciano_siervo' ? ' anciano-siervo-only' : '');
+  const claveParte = parte.nombre.toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g,'')
+    .replace(/[^a-z0-9]/g,' ').trim().replace(/\s+/g,'_');
+  // En Maestros siempre hay Estudiante+Ayudante en ambas salas (aunque sea discurso u otro tipo)
+  const esMaestros = parte.seccion === 'maestros';
+  const conAyudante = parte.conAyudante ||
+    (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
+     !/discurso/i.test(parte.detalle||'')) ||
+    (esMaestros && parte.doble);
+  const esTesoros = parte.seccion === 'tesoros';
+  const pubPrin = vPrin ? state.publicadores.find(p=>p.id===vPrin) : null;
+  const genPrinSala = pubPrin ? (pubPrin.genero||'M') : null;
+  const pubAux = vAux ? state.publicadores.find(p=>p.id===vAux) : null;
+  const genAuxSala = pubAux ? (pubAux.genero||'M') : genPrinSala;
+
+  let html = `<div class="vym-parte${parte.esLector?' vym-parte-lector':''}">
+    <div class="vym-parte-info">
+      <div class="vym-parte-nombre">${escHtml(parte.nombre)}</div>
+      ${parte.detalle ? `<div class="vym-parte-detalle">${escHtml(parte.detalle)}</div>` : ''}
+      ${parte.mins ? `<div class="vym-parte-mins">${parte.mins} min.</div>`:''}
+    </div>
+    <div class="vym-asign-wrap">
+      ${conAyudante ? `
+        <div class="vym-sala-bloque">
+          <div class="vym-sala-titulo">Sala Principal</div>
+          <div class="vym-sala-fila">
+            <div class="vym-asign">
+              <div class="vym-asign-label">Estudiante</div>
+              <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value);renderVyM()">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
+            </div>
+            <div class="vym-asign">
+              <div class="vym-asign-label">Ayudante</div>
+              <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','prin_ayud',this.value)">${vymOpcionesSelect('todos',vPrinAyud,null,pubPrin?(pubPrin.genero||'M'):null)}</select>
+            </div>
+          </div>
+        </div>
+        <div class="vym-sala-bloque">
+          <div class="vym-sala-titulo">Sala Auxiliar</div>
+          <div class="vym-sala-fila">
+            <div class="vym-asign">
+              <div class="vym-asign-label">Estudiante</div>
+              <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value);renderVyM()">${vymOpcionesSelect('todos',vAux,null,genPrinSala)}</select>
+            </div>
+            <div class="vym-asign">
+              <div class="vym-asign-label">Ayudante</div>
+              <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux_ayud',this.value)">${vymOpcionesSelect('todos',vAuxAyud,null,genAuxSala)}</select>
+            </div>
+          </div>
+        </div>
+      ` : parte.doble ? `
+        <div class="vym-asign">
+          <div class="vym-asign-label">Sala principal</div>
+          <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
+        </div>
+        <div class="vym-sala-bloque" style="flex:1">
+          ${esTesoros ? `
+            <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3);margin-bottom:4px">
+              <span>Sala Auxiliar &mdash; Dirige:</span>
+              <select class="vym-select anciano-siervo-only" style="flex:1;min-width:110px" onchange="vymSetAsign('${key}','${parte.id}','aux_conductor',this.value)">${vymOpcionesSelect('anciano_siervo',vAuxCond,claveParte+'_aux_conductor')}</select>
+            </div>
+          ` : '<div class="vym-sala-titulo">Sala Auxiliar</div>'}
+          <div class="vym-asign">
+            <div class="vym-asign-label">Asignado</div>
+            <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">${vymOpcionesSelect('todos',vAux)}</select>
+          </div>
+        </div>
+      ` : `
+        <div class="vym-asign">
+          <div class="vym-asign-label">${parte.esLector?'Lector':'Asignado'}</div>
+          <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
+        </div>
+      `}
+    </div>
+  </div>`;
+  cb(html);
+}
+
 function renderVyM() {
   const root = document.getElementById('vym-root');
   if(!root) return;
@@ -7391,10 +7584,9 @@ function renderVyM() {
           ${semana?.libros ? `<div class="vym-semana-libros">${escHtml(semana.libros)}</div>` : ''}
         </div>
         <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-          ${semana ? `<button class="vym-semana-load" style="background:rgba(255,255,255,.25);font-weight:800" onclick="vymExportarSemana('${key}')">📄 PDF</button>` : ''}
-          ${semana ? `<button class="vym-semana-load" style="background:linear-gradient(135deg,rgba(124,58,237,.8),rgba(79,70,229,.8));font-weight:700" onclick="vymSugerirTodo('${key}')">✨ Sugerir</button>` : ''}
+          ${semana ? `<button class="vym-semana-load" style="background:rgba(255,255,255,.25);font-weight:800" onclick="vymExportarSemana('${key}')">📄 Esta semana</button>` : ''}
+          ${semana ? `<button class="vym-semana-load" style="background:rgba(26,83,118,.85);font-weight:800" onclick="vymExportarMes()">📅 Mes PDF</button>` : ''}
           ${semana ? `<button class="vym-semana-load" style="background:rgba(239,68,68,.7);font-weight:700" onclick="vymRestablecerSemana('${key}')">↺ Restablecer</button>` : ''}
-          ${semana && currentUser?.rol==='admin' ? `<button class="vym-semana-load" style="background:rgba(0,0,0,.3);font-size:10px" onclick="vymDebugRotacion('${key}')">🔍 Debug</button>` : ''}
           <button class="vym-semana-load" id="vym-load-${i}"
             onclick="vymCargarSemana('${key}','${fecha.toISOString()}',${i})">
             ${semana?.cargado ? '↻ Recargar' : '⬇ Cargar programa'}
@@ -7413,126 +7605,86 @@ function renderVyM() {
         grupos[sec].push(p);
       });
 
-      ['apertura','tesoros','maestros','vida','cierre'].forEach(secId => {
+      // ── APERTURA (canción + oración + presidente) ──
+      const partesAp = grupos.apertura || [];
+      if(partesAp.length) {
+        const canAp = semana.cancionApertura;
+        html += `<div class="vym-seccion">
+          <div class="vym-seccion-hdr">
+            <div class="vym-seccion-dot" style="background:#6366f1"></div>
+            <div class="vym-seccion-nombre" style="color:#6366f1">Apertura</div>
+          </div>`;
+        if(canAp) html += `<div class="vym-parte vym-parte-lector"><div class="vym-parte-info"><div class="vym-parte-nombre" style="font-style:italic;color:var(--ink-3)">♩ Canción ${escHtml(canAp)} y Oración</div></div></div>`;
+        partesAp.forEach(parte => { if(parte.id==='oracion_apertura') return; _renderParte(parte, key, html_parts => { html += html_parts; }); });
+        html += `</div>`;
+      }
+
+      // ── TESOROS y MAESTROS (render genérico) ──
+      ['tesoros','maestros'].forEach(secId => {
         const partes = grupos[secId];
         if(!partes||!partes.length) return;
-        const cfg = SECCIONES[secId]||SECCIONES.tesoros;
-
+        const cfg = SECCIONES[secId];
         html += `<div class="vym-seccion">
           <div class="vym-seccion-hdr">
             <div class="vym-seccion-dot" style="background:${cfg.color}"></div>
             <div class="vym-seccion-nombre" style="color:${cfg.color}">${cfg.label}</div>
           </div>`;
-
-        partes.forEach(parte => {
-          const vPrin     = vymGetAsign(key, parte.id, 'prin');
-          const vAux      = vymGetAsign(key, parte.id, 'aux');
-          const vPrinAyud = vymGetAsign(key, parte.id, 'prin_ayud');
-          const vAuxAyud  = vymGetAsign(key, parte.id, 'aux_ayud');
-          const rol = parte.rol || 'todos';
-          const clsAnc = rol==='anciano' ? ' anciano-only' : (rol==='anciano_siervo' ? ' anciano-siervo-only' : '');
-          const etqLabel = parte.esLector ? 'Lector' : (parte.doble ? 'Sala principal' : 'Asignado');
-          // Clave estable para rotación (igual que en vymSugerirTodo)
-          const claveParte = parte.nombre.toLowerCase()
-            .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
-            .replace(/[^a-z0-9]/g,' ').trim().replace(/\s+/g,'_');
-          // Recalcular conAyudante en render para no depender del valor guardado
-          const conAyudante = parte.conAyudante ||
-            (/Empiece conversaciones|Haga revisitas|Haga discípulos|Explique sus|Dé discursos/i.test(parte.nombre) &&
-             !/discurso/i.test(parte.detalle||''));
-
-          // Bloque de asignación principal
-          const bloquePrin = `
-            <div class="vym-asign-grupo">
-              <div class="vym-asign-grupo-label">${parte.doble ? 'SALA PRINCIPAL' : 'ASIGNADO'}</div>
-              <div class="vym-asign">
-                <div class="vym-asign-label">${parte.conAyudante ? 'Estudiante' : etqLabel}</div>
-                <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">
-                  ${vymOpcionesSelect(rol, vPrin, claveParte)}
-                </select>
-              </div>
-              ${parte.conAyudante ? `
-              <div class="vym-asign">
-                <div class="vym-asign-label">Ayudante</div>
-                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','prin_ayud',this.value)">
-                  ${vymOpcionesSelect('todos', vPrinAyud)}
-                </select>
-              </div>` : ''}
-            </div>`;
-
-          // Bloque sala auxiliar
-          const bloqueAux = parte.doble ? `
-            <div class="vym-asign-grupo">
-              <div class="vym-asign-grupo-label">SALA AUXILIAR</div>
-              <div class="vym-asign">
-                <div class="vym-asign-label">${parte.conAyudante ? 'Estudiante' : 'Asignado'}</div>
-                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">
-                  ${vymOpcionesSelect('todos', vAux)}
-                </select>
-              </div>
-              ${parte.conAyudante ? `
-              <div class="vym-asign">
-                <div class="vym-asign-label">Ayudante</div>
-                <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux_ayud',this.value)">
-                  ${vymOpcionesSelect('todos', vAuxAyud)}
-                </select>
-              </div>` : ''}
-            </div>` : '';
-
-          html += `<div class="vym-parte${parte.esLector?' vym-parte-lector':''}">
-            <div class="vym-parte-info">
-              <div class="vym-parte-nombre">${escHtml(parte.nombre)}</div>
-              ${parte.detalle ? `<div class="vym-parte-detalle">${escHtml(parte.detalle)}</div>` : ''}
-              ${parte.mins ? `<div class="vym-parte-mins">${parte.mins} min.</div>`:''}
-            </div>
-            <div class="vym-asign-wrap">
-              ${conAyudante ? `
-                <div class="vym-sala-bloque">
-                  <div class="vym-sala-titulo">Sala Principal</div>
-                  <div class="vym-sala-fila">
-                    <div class="vym-asign">
-                      <div class="vym-asign-label">Estudiante</div>
-                      <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
-                    </div>
-                    <div class="vym-asign">
-                      <div class="vym-asign-label">Ayudante</div>
-                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','prin_ayud',this.value)">${vymOpcionesSelect('todos',vPrinAyud)}</select>
-                    </div>
-                  </div>
-                </div>
-                <div class="vym-sala-bloque">
-                  <div class="vym-sala-titulo">Sala Auxiliar</div>
-                  <div class="vym-sala-fila">
-                    <div class="vym-asign">
-                      <div class="vym-asign-label">Estudiante</div>
-                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">${vymOpcionesSelect('todos',vAux)}</select>
-                    </div>
-                    <div class="vym-asign">
-                      <div class="vym-asign-label">Ayudante</div>
-                      <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux_ayud',this.value)">${vymOpcionesSelect('todos',vAuxAyud)}</select>
-                    </div>
-                  </div>
-                </div>
-              ` : parte.doble ? `
-                <div class="vym-asign">
-                  <div class="vym-asign-label">Sala principal</div>
-                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
-                </div>
-                <div class="vym-asign">
-                  <div class="vym-asign-label">Sala auxiliar</div>
-                  <select class="vym-select" onchange="vymSetAsign('${key}','${parte.id}','aux',this.value)">${vymOpcionesSelect('todos',vAux)}</select>
-                </div>
-              ` : `
-                <div class="vym-asign">
-                  <div class="vym-asign-label">${parte.esLector?'Lector':'Asignado'}</div>
-                  <select class="vym-select${clsAnc}" onchange="vymSetAsign('${key}','${parte.id}','prin',this.value)">${vymOpcionesSelect(rol,vPrin,claveParte)}</select>
-                </div>
-              `}
-            </div>
-          </div>`;
-        });
+        partes.forEach(parte => { _renderParte(parte, key, h => { html += h; }); });
         html += `</div>`;
       });
+
+      // ── NUESTRA VIDA CRISTIANA (vida + cierre juntos) ──
+      {
+        const partesVida   = grupos.vida   || [];
+        const partesCierre = grupos.cierre || [];
+        if(partesVida.length || partesCierre.length) {
+          html += `<div class="vym-seccion">
+            <div class="vym-seccion-hdr">
+              <div class="vym-seccion-dot" style="background:#dc2626"></div>
+              <div class="vym-seccion-nombre" style="color:#dc2626">Nuestra Vida Cristiana</div>
+            </div>`;
+          // Canción intermedia
+          if(semana.cancionVida) html += `<div class="vym-parte vym-parte-lector"><div class="vym-parte-info"><div class="vym-parte-nombre" style="font-style:italic;color:var(--ink-3)">♩ Canción ${escHtml(semana.cancionVida)}</div></div></div>`;
+          // Partes de vida
+          partesVida.forEach(parte => { _renderParte(parte, key, h => { html += h; }); });
+          // Palabras de conclusión
+          const pConc = partesCierre.find(p => !/oracion/i.test(p.id));
+          if(pConc) {
+            const vConc = vymGetAsign(key, pConc.id, 'prin');
+            const canCi = semana.cancionCierre;
+            html += `<div class="vym-parte">
+              <div class="vym-parte-info">
+                <div class="vym-parte-nombre">Palabras de conclusión${canCi ? ` · ♩ Canción ${escHtml(canCi)}` : ''}</div>
+              </div>
+              <div class="vym-asign-wrap">
+                <div class="vym-asign">
+                  <div class="vym-asign-label">Asignado</div>
+                  <select class="vym-select anciano-only" onchange="vymSetAsign('${key}','${pConc.id}','prin',this.value)">${vymOpcionesSelect('anciano',vConc,'palabras_conclusion')}</select>
+                </div>
+              </div>
+            </div>`;
+          }
+          // Oración de cierre
+          const pOra = partesCierre.find(p => p.id === 'oracion_cierre');
+          if(pOra) {
+            const vOra = vymGetAsign(key, 'oracion_cierre', 'prin');
+            html += `<div class="vym-parte">
+              <div class="vym-parte-info">
+                <div class="vym-parte-nombre" style="font-style:italic">Oración de cierre</div>
+              </div>
+              <div class="vym-asign-wrap">
+                <div class="vym-asign">
+                  <div class="vym-asign-label">Asignado</div>
+                  <select class="vym-select anciano-only" onchange="vymSetAsign('${key}','oracion_cierre','prin',this.value)">${vymOpcionesSelect('anciano',vOra,'oracion_cierre')}</select>
+                </div>
+              </div>
+            </div>`;
+          }
+          html += `</div>`;
+        }
+      }
+
+      // Fin — no procesar cierre por separado (ya incluido arriba)
     }
     html += `</div>`;
   }
