@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774457181115,
+  "_lastModified": 1774458401417,
   "vym": {
     "semanas": {
       "2026-04-06": {
@@ -22975,137 +22975,6 @@
           "p9l": "mmm9qi4s4eyz",
           "p10": "mmm9qi4n4dj1",
           "p6_aux_ayud": "mmm9qi4twt9q"
-        }
-      },
-      "2026-04-20": {
-        "fechaKey": "2026-04-20",
-        "partes": [
-          {
-            "id": "presidente",
-            "nombre": "Presidente de la reunión",
-            "mins": null,
-            "seccion": "apertura",
-            "doble": false,
-            "rol": "anciano"
-          },
-          {
-            "id": "p2",
-            "nombre": "\"Tesoro de la semana\"",
-            "mins": 10,
-            "seccion": "tesoros",
-            "doble": false,
-            "rol": "anciano_siervo"
-          },
-          {
-            "id": "p3",
-            "nombre": "Busquemos perlas escondidas",
-            "mins": 10,
-            "seccion": "tesoros",
-            "doble": false,
-            "rol": "anciano_siervo"
-          },
-          {
-            "id": "p4",
-            "nombre": "Lectura de la Biblia",
-            "detalle": "",
-            "mins": 4,
-            "seccion": "tesoros",
-            "doble": true,
-            "rol": "todos"
-          },
-          {
-            "id": "p5",
-            "nombre": "Empiece conversaciones",
-            "detalle": "",
-            "mins": 3,
-            "seccion": "maestros",
-            "doble": true,
-            "rol": "todos",
-            "conAyudante": true
-          },
-          {
-            "id": "p6",
-            "nombre": "Haga revisitas",
-            "detalle": "",
-            "mins": 4,
-            "seccion": "maestros",
-            "doble": true,
-            "rol": "todos",
-            "conAyudante": true
-          },
-          {
-            "id": "p7",
-            "nombre": "Haga discípulos",
-            "detalle": "",
-            "mins": 5,
-            "seccion": "maestros",
-            "doble": true,
-            "rol": "todos",
-            "conAyudante": true
-          },
-          {
-            "id": "p8",
-            "nombre": "Necesidades de la congregación",
-            "detalle": "",
-            "mins": 15,
-            "seccion": "vida",
-            "doble": false,
-            "rol": "anciano_siervo"
-          },
-          {
-            "id": "p9",
-            "nombre": "Estudio bíblico de la congregación",
-            "detalle": "",
-            "mins": 30,
-            "seccion": "vida",
-            "doble": false,
-            "rol": "anciano",
-            "tieneEspecial": "lector"
-          },
-          {
-            "id": "p9l",
-            "nombre": "Lector (estudio bíblico)",
-            "detalle": "",
-            "mins": null,
-            "seccion": "vida",
-            "doble": false,
-            "rol": "anciano_siervo",
-            "esLector": true
-          },
-          {
-            "id": "p10",
-            "nombre": "Palabras de conclusión",
-            "mins": 3,
-            "seccion": "cierre",
-            "doble": false,
-            "rol": "anciano"
-          }
-        ],
-        "libros": "",
-        "cargado": true,
-        "urlId": 202026118,
-        "asign": {
-          "presidente": "mmm9qi4s3c4f",
-          "p2": "mmm9qi4rtrpu",
-          "p3": "mmm9qi4q1iwb",
-          "p4": "mmm9qi4si0is",
-          "p4_aux": "mmm9qi4k6yoa",
-          "p5": "mmm9qi4k7c8y",
-          "p5_prin_ayud": "mmm9qi4tnkh4",
-          "p5_aux": "mmm9qi4rigm6",
-          "p5_aux_ayud": "mmm9qi4qxdzp",
-          "p6": "mmm9qi4lxrtx",
-          "p6_prin_ayud": "mmm9qi4qzr2s",
-          "p6_aux": "mmm9qi4tl3oj",
-          "p6_aux_ayud": "mmm9qi4lgiwv",
-          "p7": "mmm9qi4qp27l",
-          "p7_prin_ayud": "mmm9qi4ocyur",
-          "p7_aux": "mmm9qi4r3xys",
-          "p7_aux_ayud": "mmm9qi4qg4ch",
-          "p8": "mmm9qi4s4eyz",
-          "p9": "mmm9qi4nsgsv",
-          "p9l": "mmm9qi4n3qgi",
-          "p10": "mmm9qi4s3c4f"
         }
       }
     },
@@ -24249,7 +24118,8 @@
       "2026-03-16",
       "2026-03-23",
       "2026-03-30",
-      "2026-04-06"
+      "2026-04-06",
+      "2026-04-20"
     ]
   }
 }
