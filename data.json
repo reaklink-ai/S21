@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458878320,
+  "_lastModified": 1774458881003,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22849,7 +22849,8 @@
           "p4_aux_ayud": "mmm9qi4qnxk5",
           "p6_aux": "mmm9qi4k6yoa",
           "p6": "mmm9qi4rre7b",
-          "p8l": "mmm9qi4l7kbw"
+          "p8l": "mmm9qi4l7kbw",
+          "oracion_cierre": "mmm9qi4jq3yf"
         }
       }
     },
@@ -24031,6 +24032,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4l7kbw",
         "nombreParte": "Lector (estudio bíblico)",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "oracion_cierre",
+        "claveParte": "oracion_de_cierre",
+        "sala": "prin",
+        "pubId": "mmm9qi4jq3yf",
+        "nombreParte": "Oración de cierre",
         "fecha": "2026-04-20"
       }
     ],
