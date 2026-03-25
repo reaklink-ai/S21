@@ -2270,6 +2270,94 @@ input, select, button, a { touch-action: manipulation; }
   .prec-stat-n { font-size: 18px; }
 }
 
+/* ── Gráfico de barras precursor ── */
+.prec-chart-wrap {
+  padding: 14px 18px 4px;
+  background: var(--surface-3);
+  border-bottom: 1px solid var(--border-2);
+}
+.prec-chart-title {
+  font-size: 9px; font-weight: 800; color: var(--ink-3);
+  text-transform: uppercase; letter-spacing: .8px; margin-bottom: 10px;
+}
+.prec-chart-bars {
+  display: flex; align-items: flex-end; gap: 4px;
+  height: 72px; position: relative;
+}
+.prec-chart-bar-wrap {
+  display: flex; flex-direction: column; align-items: center;
+  flex: 1; gap: 3px;
+}
+.prec-chart-bar-outer {
+  width: 100%; background: var(--border-2);
+  border-radius: 4px 4px 0 0; position: relative;
+  height: 60px; display: flex; align-items: flex-end;
+}
+.prec-chart-bar-fill {
+  width: 100%; border-radius: 4px 4px 0 0;
+  transition: height .4s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.prec-chart-bar-val {
+  position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+  font-size: 8px; font-weight: 800; font-family: 'Sora', var(--font);
+  white-space: nowrap; color: var(--ink-2);
+}
+.prec-chart-bar-lbl {
+  font-size: 7.5px; color: var(--ink-3); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .3px;
+}
+.prec-chart-meta-line {
+  position: absolute; left: 0; right: 0;
+  border-top: 1.5px dashed #f59e0b;
+  pointer-events: none;
+}
+
+/* ── Botones de acción tarjeta precursor ── */
+.prec-actions {
+  display: flex; gap: 8px; padding: 10px 18px 14px;
+  flex-wrap: wrap;
+}
+.prec-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 13px; border-radius: 8px;
+  font-size: 11px; font-weight: 700;
+  border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--ink-2);
+  cursor: pointer; transition: all .13s; font-family: var(--font);
+}
+.prec-btn:hover { background: var(--border-2); color: var(--ink); border-color: var(--ink-3); }
+.prec-btn.prim { background: var(--accent); color: #fff; border-color: var(--accent); }
+.prec-btn.prim:hover { background: var(--accent-dk); border-color: var(--accent-dk); }
+.prec-btn.grn  { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+.prec-btn.grn:hover { background: #a7f3d0; }
+
+/* ── Modal historial ── */
+.prec-hist-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.prec-hist-table th {
+  background: var(--surface-2); padding: 7px 10px;
+  text-align: center; font-size: 10px; font-weight: 700;
+  color: var(--ink-3); text-transform: uppercase; letter-spacing: .6px;
+  border-bottom: 1.5px solid var(--border);
+  position: sticky; top: 0;
+}
+.prec-hist-table td {
+  padding: 8px 10px; text-align: center;
+  border-bottom: 1px solid var(--border-2); color: var(--ink);
+}
+.prec-hist-table tr:hover td { background: var(--surface-2); }
+.prec-hist-anio-row td {
+  background: var(--accent-lt); font-weight: 800;
+  color: var(--accent); font-size: 11px;
+}
+.prec-hist-chip {
+  display: inline-block; padding: 2px 7px;
+  border-radius: 10px; font-size: 10px; font-weight: 700;
+}
+.prec-hist-chip.ok  { background: #d1fae5; color: #065f46; }
+.prec-hist-chip.low { background: #fef3c7; color: #78350f; }
+.prec-hist-chip.bad { background: #fee2e2; color: #7f1d1d; }
+
 /* ══ MEJORAS VISUALES v3 ══ */
 
 /* Appbar refinada */
@@ -7714,7 +7802,10 @@ function precGetDatos(pub, anio) {
 
   MESES_C.forEach((m, idx) => {
     const r = (regs[anio] || regs[String(anio)] || {})[m];
-    const horas = r ? (parseFloat(r.horas) || 0) : null;
+    // Un mes tiene datos solo si existe el registro Y el campo horas tiene un valor real (no vacío)
+    const horasRaw = r ? r.horas : undefined;
+    const tieneHoras = horasRaw !== undefined && horasRaw !== null && horasRaw !== '';
+    const horas = tieneHoras ? (parseFloat(horasRaw) || 0) : null;
     if(horas !== null) { mesesConDatos++; horasTotal += horas; }
 
     // Betel bruto del comentario
@@ -7737,11 +7828,13 @@ function precGetDatos(pub, anio) {
     meses.push({ mes:m, idx, horas, tieneDatos: horas !== null, betelBruto: bruto, betelCredito: credito, combinado });
   });
 
-  // Todos los cálculos de meta se hacen sobre el total COMBINADO
+  // Promedio: solo sobre meses con informe real (mesesConDatos)
   const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
+
   const mesActualIdx = mesActual().idx;
   const mesesPasados = meses.filter(m => m.idx <= mesActualIdx);
-  const mesesRestantes = 12 - mesesPasados.length;
+  // Meses restantes = meses del año de servicio que aún no han llegado
+  const mesesRestantes = meses.filter(m => m.idx > mesActualIdx).length;
   const horasRestantes = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
   const ultimos3 = mesesPasados.slice(-3).filter(m => m.tieneDatos);
@@ -7917,15 +8010,314 @@ function renderPrecursores() {
     } else if(d.estado==='riesgo') {
       html += '<div class="prec-alerta ambar"><strong>\u26a0 Riesgo de no alcanzar la meta anual.</strong> Necesita <strong>' + Math.round(d.promedioNecesario) + 'h/mes</strong> en los ' + d.mesesRestantes + ' meses restantes para llegar a ' + PREC_META_ANIO + 'h.</div>';
     }
+
+    // Gráfico de barras
+    html += precChartHTML(d);
+
+    // Botones de acción por tarjeta
+    html += '<div class="prec-actions">';
+    html += '<button class="prec-btn" onclick="precVerHistorial(\'' + pub.id + '\')">📅 Ver historial años</button>';
+    html += '<button class="prec-btn grn" onclick="precExportarExcelUno(\'' + pub.id + '\')">⬇ Excel individual</button>';
+    html += '<button class="prec-btn" onclick="precExportarPDFUno(\'' + pub.id + '\')">🖨 PDF individual</button>';
+    html += '</div>';
+
     html += '</div>';
   });
 
   // Nota legal
   html += '<div style="margin-top:20px;background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--ink-3);line-height:1.6">';
   html += '<strong style="color:var(--ink-2)">\ud83d\udcd6 Reglamento:</strong> Si un precursor no informa habitualmente un promedio de 50 horas mensuales, el superintendente de servicio y el de grupo deben reunirse con \u00e9l para ofrecerle ayuda. Al terminar el a\u00f1o de servicio, si llega por lo menos a <strong>560 horas</strong> puede seguir siendo precursor. Si no, el Comit\u00e9 de Servicio determinar\u00e1 si debe continuar.';
-  html += '</div></div>';
+  html += '</div>';
 
+  // Botón exportar informe general
+  html += '<div style="display:flex;justify-content:flex-end;gap:8px;margin-top:14px">';
+  html += '<button class="prec-btn prim" onclick="precExportarExcel()">⬇ Exportar Excel</button>';
+  html += '<button class="prec-btn" onclick="precExportarPDF()">⬇ Exportar PDF</button>';
+  html += '</div>';
+
+  html += '</div>';
   root.innerHTML = html;
+}
+
+// ══════════════════════════════════════════════════════════════
+// GRÁFICO DE BARRAS — inline por tarjeta precursor
+// ══════════════════════════════════════════════════════════════
+function precChartHTML(d) {
+  const mesActualIdx = mesActual().idx;
+  const mesesVis = d.meses.filter(m => m.idx <= mesActualIdx);
+  if(!mesesVis.length) return '';
+
+  const maxH = Math.max(PREC_META_MES * 1.2, ...mesesVis.map(m => m.combinado || 0));
+  const barH = 60; // px altura total del área de barras
+
+  let bars = '';
+  mesesVis.forEach(m => {
+    const h = m.combinado !== null ? m.combinado : 0;
+    const fillPct = maxH > 0 ? (h / maxH) * 100 : 0;
+    const color = !m.tieneDatos ? '#e5e7eb' : h >= PREC_META_MES ? '#22c55e' : h >= PREC_META_MES * 0.8 ? '#f59e0b' : '#ef4444';
+    const valLabel = m.tieneDatos ? Math.round(h) : '?';
+    bars += `<div class="prec-chart-bar-wrap">
+      <div class="prec-chart-bar-outer">
+        <div class="prec-chart-bar-fill" style="height:${fillPct}%;background:${color}">
+          <span class="prec-chart-bar-val">${valLabel}</span>
+        </div>
+      </div>
+      <div class="prec-chart-bar-lbl">${m.mes}</div>
+    </div>`;
+  });
+
+  // Línea de meta (posición relativa)
+  const metaPct = Math.min(100, (PREC_META_MES / maxH) * 100);
+  const lineBottom = Math.round((metaPct / 100) * barH);
+
+  return `<div class="prec-chart-wrap">
+    <div class="prec-chart-title">📊 Horas por mes · línea punteada = meta ${PREC_META_MES}h</div>
+    <div class="prec-chart-bars" style="height:${barH + 16}px">
+      ${bars}
+      <div class="prec-chart-meta-line" style="bottom:${lineBottom + 16}px"></div>
+    </div>
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════════════════
+// HISTORIAL COMPARATIVO ENTRE AÑOS
+// ══════════════════════════════════════════════════════════════
+function precVerHistorial(pubId) {
+  const pub = state.publicadores.find(p => p.id === pubId);
+  if(!pub) return;
+  const regs = pub.registros || {};
+  const anios = Object.keys(regs).map(Number).filter(n => !isNaN(n)).sort((a,b)=>b-a);
+
+  let html = '';
+  if(!anios.length) {
+    html = '<p style="color:var(--ink-3);font-size:13px">Sin registros históricos.</p>';
+  } else {
+    anios.forEach(anio => {
+      const d = precGetDatos(pub, anio);
+      const pct = Math.min(100, Math.round(d.horasTotalCombinado / PREC_META_ANIO * 100));
+      const colorPct = pct >= 100 ? '#22c55e' : pct >= 70 ? '#f59e0b' : '#ef4444';
+      const chip = pct >= 100
+        ? '<span class="prec-hist-chip ok">✓ Meta alcanzada</span>'
+        : pct >= 70
+          ? '<span class="prec-hist-chip low">⚠ Parcial</span>'
+          : '<span class="prec-hist-chip bad">✗ Bajo meta</span>';
+
+      html += `<div style="margin-bottom:22px">`;
+      html += `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">`;
+      html += `<span style="font-weight:800;font-size:14px;color:var(--ink)">Año ${anio}–${anio+1}</span>`;
+      html += `<div style="display:flex;align-items:center;gap:8px">${chip}`;
+      html += `<span style="font-weight:700;color:${colorPct};font-size:13px">${Math.round(d.horasTotalCombinado)}h / ${PREC_META_ANIO}h (${pct}%)</span>`;
+      html += `</div></div>`;
+
+      // Barra de progreso del año
+      html += `<div style="height:8px;background:var(--border-2);border-radius:10px;overflow:hidden;margin-bottom:10px">`;
+      html += `<div style="height:100%;width:${pct}%;background:${colorPct};border-radius:10px;transition:width .5s"></div></div>`;
+
+      // Tabla mes a mes
+      html += `<table class="prec-hist-table"><thead><tr>`;
+      MESES_C.forEach(m => { html += `<th>${m}</th>`; });
+      html += `<th>Prom.</th></tr></thead><tbody><tr>`;
+      d.meses.forEach(m => {
+        const h = m.combinado !== null ? Math.round(m.combinado) : '—';
+        const bg = !m.tieneDatos ? '' : (m.combinado >= PREC_META_MES ? 'background:#d1fae5' : 'background:#fef3c7');
+        html += `<td style="${bg}">${h}</td>`;
+      });
+      html += `<td style="font-weight:800;color:var(--accent)">${Math.round(d.promedio * 10) / 10}</td>`;
+      html += `</tr></tbody></table></div>`;
+    });
+  }
+
+  document.getElementById('modalHistPrecNombre').textContent = `Historial · ${pub.apellido}, ${pub.nombre}`;
+  document.getElementById('modalHistPrecBody').innerHTML = html;
+  document.getElementById('modalHistorialPrec').style.display = 'flex';
+}
+
+// ══════════════════════════════════════════════════════════════
+// EXPORTAR EXCEL — informe general precursores
+// ══════════════════════════════════════════════════════════════
+function precExportarExcel() {
+  if(typeof XLSX === 'undefined') { alert('La librería XLSX no está disponible.'); return; }
+  const anio = anioHoy();
+  const precursores = state.publicadores.filter(p => p.precursorReg)
+    .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+  if(!precursores.length) { alert('No hay precursores registrados.'); return; }
+
+  const wb = XLSX.utils.book_new();
+
+  // Hoja resumen
+  const resHead = ['Apellido','Nombre','Grupo','Horas Totales','Promedio Mensual','Meses con Informe','Horas Restantes','Nec./mes','Estado'];
+  const resRows = precursores.map(p => {
+    const d = precGetDatos(p, anio);
+    return [
+      p.apellido, p.nombre, p.grupo||'',
+      Math.round(d.horasTotalCombinado),
+      Math.round(d.promedio * 10) / 10,
+      d.mesesConDatos,
+      Math.round(d.horasRestantes),
+      d.mesesRestantes > 0 ? Math.round(d.promedioNecesario) : '—',
+      d.requiereReunion ? 'Reunión requerida' : d.estado === 'riesgo' ? 'Riesgo anual' : d.estado === 'bajo' ? 'Bajo meta' : 'Al día'
+    ];
+  });
+  const wsRes = XLSX.utils.aoa_to_sheet([resHead, ...resRows]);
+  wsRes['!cols'] = [18,16,14,14,16,16,14,10,18].map(w=>({wch:w}));
+  XLSX.utils.book_append_sheet(wb, wsRes, 'Resumen');
+
+  // Hoja detalle mes a mes
+  const detHead = ['Apellido','Nombre', ...MESES_C, 'Total','Promedio'];
+  const detRows = precursores.map(p => {
+    const d = precGetDatos(p, anio);
+    const hMeses = d.meses.map(m => m.combinado !== null ? Math.round(m.combinado) : '');
+    return [p.apellido, p.nombre, ...hMeses, Math.round(d.horasTotalCombinado), Math.round(d.promedio*10)/10];
+  });
+  const wsDet = XLSX.utils.aoa_to_sheet([detHead, ...detRows]);
+  wsDet['!cols'] = [18,16,...MESES_C.map(()=>({wch:6})),{wch:8},{wch:10}].map(v=>typeof v==='number'?{wch:v}:v);
+  XLSX.utils.book_append_sheet(wb, wsDet, 'Mes a mes');
+
+  XLSX.writeFile(wb, `Precursores_${anio}-${anio+1}.xlsx`);
+}
+
+// ══════════════════════════════════════════════════════════════
+// EXPORTAR PDF — tabla de precursores via ventana de impresión
+// ══════════════════════════════════════════════════════════════
+function precExportarPDF() {
+  const anio = anioHoy();
+  const precursores = state.publicadores.filter(p => p.precursorReg)
+    .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+  if(!precursores.length) { alert('No hay precursores registrados.'); return; }
+
+  const fechaHoy = new Date().toLocaleDateString('es-CO', {year:'numeric',month:'long',day:'numeric'});
+
+  let rows = precursores.map(p => {
+    const d = precGetDatos(p, anio);
+    const estadoTxt = d.requiereReunion ? '⚠ Reunión req.' : d.estado==='riesgo' ? '📉 Riesgo' : d.estado==='bajo' ? '▽ Bajo meta' : '✓ Al día';
+    const estadoColor = d.requiereReunion ? '#7f1d1d' : d.estado==='riesgo'||d.estado==='bajo' ? '#78350f' : '#065f46';
+    const estadoBg = d.requiereReunion ? '#fee2e2' : d.estado==='riesgo'||d.estado==='bajo' ? '#fef3c7' : '#d1fae5';
+    const mesesCells = MESES_C.map((_, i) => {
+      const m = d.meses[i];
+      const h = m.combinado !== null ? Math.round(m.combinado) : '—';
+      const bg = !m.tieneDatos ? '' : m.combinado >= PREC_META_MES ? '#d1fae5' : '#fef3c7';
+      return `<td style="background:${bg};text-align:center;padding:4px 6px;font-size:10px">${h}</td>`;
+    }).join('');
+    return `<tr>
+      <td style="padding:5px 8px;font-size:11px;font-weight:600">${p.apellido}, ${p.nombre}</td>
+      <td style="padding:5px 8px;font-size:11px;color:#555">${p.grupo||''}</td>
+      ${mesesCells}
+      <td style="text-align:center;padding:5px 8px;font-size:11px;font-weight:800;color:#3d5a9e">${Math.round(d.horasTotalCombinado)}</td>
+      <td style="text-align:center;padding:5px 8px;font-size:11px;font-weight:700">${Math.round(d.promedio*10)/10}</td>
+      <td style="text-align:center;padding:5px 8px"><span style="background:${estadoBg};color:${estadoColor};font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px">${estadoTxt}</span></td>
+    </tr>`;
+  }).join('');
+
+  const thMeses = MESES_C.map(m => `<th style="padding:5px 4px;font-size:9px;background:#eef1f9;color:#3d5a9e">${m}</th>`).join('');
+
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8">
+  <title>Precursores ${anio}–${anio+1}</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 24px; color: #1a1814; }
+    h1 { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+    .sub { font-size: 11px; color: #57534e; margin-bottom: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { padding: 6px 6px; font-size: 10px; text-align: left; background: #3d5a9e; color: #fff; }
+    td { border-bottom: 1px solid #e4e2dd; }
+    tr:nth-child(even) td { background: #fafaf9; }
+    @media print { body { margin: 12px; } }
+  </style></head><body>
+  <h1>📋 Precursores Regulares — Año de Servicio ${anio}–${anio+1}</h1>
+  <div class="sub">Generado el ${fechaHoy} · Meta mensual: ${PREC_META_MES}h · Meta anual: ${PREC_META_ANIO}h</div>
+  <table>
+    <thead><tr>
+      <th>Nombre</th><th>Grupo</th>${thMeses}
+      <th style="background:#3d5a9e">Total</th>
+      <th style="background:#3d5a9e">Prom.</th>
+      <th style="background:#3d5a9e">Estado</th>
+    </tr></thead>
+    <tbody>${rows}</tbody>
+  </table>
+  <script>window.onload=()=>{window.print();}<\/script>
+  </body></html>`;
+
+  const w = window.open('','_blank','width=1100,height=800');
+  if(w) { w.document.write(html); w.document.close(); }
+  else alert('Activa las ventanas emergentes para exportar PDF.');
+}
+
+// ── Excel individual ──
+function precExportarExcelUno(pubId) {
+  if(typeof XLSX === 'undefined') { alert('La librería XLSX no está disponible.'); return; }
+  const pub = state.publicadores.find(p => p.id === pubId);
+  if(!pub) return;
+  const regs = pub.registros || {};
+  const anios = Object.keys(regs).map(Number).filter(n=>!isNaN(n)).sort((a,b)=>b-a);
+
+  const wb = XLSX.utils.book_new();
+  const head = ['Año de servicio', ...MESES_C, 'Total', 'Promedio', 'Estado'];
+  const rows = anios.map(anio => {
+    const d = precGetDatos(pub, anio);
+    const hMeses = d.meses.map(m => m.combinado !== null ? Math.round(m.combinado) : '');
+    const est = d.requiereReunion ? 'Reunión requerida' : d.estado==='riesgo' ? 'Riesgo anual' : d.estado==='bajo' ? 'Bajo meta' : 'Al día';
+    return [`${anio}–${anio+1}`, ...hMeses, Math.round(d.horasTotalCombinado), Math.round(d.promedio*10)/10, est];
+  });
+  const ws = XLSX.utils.aoa_to_sheet([head, ...rows]);
+  ws['!cols'] = [{wch:16},...MESES_C.map(()=>({wch:6})),{wch:8},{wch:10},{wch:18}];
+  XLSX.utils.book_append_sheet(wb, ws, 'Historial');
+  XLSX.writeFile(wb, `Precursor_${pub.apellido}_${pub.nombre}.xlsx`);
+}
+
+// ── PDF individual ──
+function precExportarPDFUno(pubId) {
+  const pub = state.publicadores.find(p => p.id === pubId);
+  if(!pub) return;
+  const anio = anioHoy();
+  const d = precGetDatos(pub, anio);
+  const fechaHoy = new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
+  const pct = Math.min(100, Math.round(d.horasTotalCombinado / PREC_META_ANIO * 100));
+
+  const mesesRows = MESES_C.map((_, i) => {
+    const m = d.meses[i];
+    const h = m.combinado !== null ? Math.round(m.combinado) : '—';
+    const bg = !m.tieneDatos ? '' : m.combinado >= PREC_META_MES ? '#d1fae5' : '#fef3c7';
+    const est = !m.tieneDatos ? '' : m.combinado >= PREC_META_MES ? '✓' : '▽';
+    return `<tr><td>${MESES_C[i]}</td><td style="background:${bg};font-weight:700;text-align:center">${h}</td><td style="text-align:center;color:${bg?'#065f46':'#78350f'}">${est}</td></tr>`;
+  }).join('');
+
+  const estadoTxt = d.requiereReunion ? '⚠ Reunión requerida' : d.estado==='riesgo' ? '📉 Riesgo anual' : d.estado==='bajo' ? '▽ Bajo meta' : '✓ Al día';
+
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8">
+  <title>Informe Precursor ${pub.apellido}</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 30px; color: #1a1814; max-width: 500px; }
+    h1 { font-size: 20px; font-weight: 800; margin-bottom: 2px; }
+    .sub { font-size: 11px; color: #57534e; margin-bottom: 20px; }
+    .kpi-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 20px; }
+    .kpi { background: #f8f7f5; border: 1px solid #e4e2dd; border-radius: 10px; padding: 12px; text-align: center; }
+    .kpi-n { font-size: 26px; font-weight: 800; color: #3d5a9e; }
+    .kpi-l { font-size: 9px; color: #a8a29e; text-transform: uppercase; letter-spacing: .6px; margin-top: 3px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th { background: #3d5a9e; color: #fff; padding: 7px 10px; font-size: 11px; text-align: left; }
+    td { border-bottom: 1px solid #e4e2dd; padding: 6px 10px; font-size: 12px; }
+    .prog-bar { height: 10px; background: #e4e2dd; border-radius: 10px; margin: 8px 0; }
+    .prog-fill { height: 100%; background: ${pct>=100?'#22c55e':pct>=70?'#f59e0b':'#ef4444'}; border-radius: 10px; width: ${pct}%; }
+    @media print { body { margin: 12px; } }
+  </style></head><body>
+  <h1>📋 ${pub.apellido}, ${pub.nombre}</h1>
+  <div class="sub">Precursor regular · Grupo: ${pub.grupo||'—'} · Año ${anio}–${anio+1} · ${fechaHoy}</div>
+  <div class="kpi-row">
+    <div class="kpi"><div class="kpi-n">${Math.round(d.horasTotalCombinado)}</div><div class="kpi-l">Horas totales</div></div>
+    <div class="kpi"><div class="kpi-n">${Math.round(d.promedio*10)/10}</div><div class="kpi-l">Prom. mensual</div></div>
+    <div class="kpi"><div class="kpi-n">${Math.round(d.horasRestantes)}</div><div class="kpi-l">Horas restantes</div></div>
+  </div>
+  <div style="font-size:11px;font-weight:600;color:#57534e">Progreso anual: ${pct}% · Estado: <strong>${estadoTxt}</strong></div>
+  <div class="prog-bar"><div class="prog-fill"></div></div>
+  <table>
+    <thead><tr><th>Mes</th><th>Horas</th><th>Meta</th></tr></thead>
+    <tbody>${mesesRows}</tbody>
+  </table>
+  <script>window.onload=()=>{window.print();}<\/script>
+  </body></html>`;
+
+  const w = window.open('','_blank','width=700,height=900');
+  if(w) { w.document.write(html); w.document.close(); }
+  else alert('Activa las ventanas emergentes para exportar PDF.');
 }
 
 
@@ -8084,6 +8476,22 @@ function renderPrecursores() {
     </div>
     <div class="modal-ft">
       <button class="btn-cancel" onclick="cerrarGestionUsuarios()">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL HISTORIAL PRECURSOR -->
+<div class="overlay" id="modalHistorialPrec" style="display:none">
+  <div class="modal" style="max-width:660px;max-height:90vh;display:flex;flex-direction:column">
+    <div class="modal-hd">
+      <span class="modal-hd-title" id="modalHistPrecNombre">Historial comparativo</span>
+      <button class="modal-x" onclick="document.getElementById('modalHistorialPrec').style.display='none'">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;flex:1;overflow-y:auto">
+      <div id="modalHistPrecBody"></div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="document.getElementById('modalHistorialPrec').style.display='none'">Cerrar</button>
     </div>
   </div>
 </div>
