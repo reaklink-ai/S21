@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458925037,
+  "_lastModified": 1774458929364,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22856,7 +22856,8 @@
           "p5_aux": "mmm9qi4kye7q",
           "p5_aux_ayud": "mmm9qi4jl0fy",
           "p6_prin_ayud": "mmm9qi4kye7q",
-          "p6_aux_ayud": "mmm9qi4smpf8"
+          "p6_aux_ayud": "mmm9qi4smpf8",
+          "p7": "mmm9qi4jnax6"
         }
       }
     },
@@ -23755,15 +23756,6 @@
       {
         "semKey": "2026-04-20",
         "parteId": "p7",
-        "claveParte": "haga_discipulos",
-        "sala": "prin",
-        "pubId": "mmm9qi4qp27l",
-        "nombreParte": "Haga discípulos",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
-        "parteId": "p7",
         "claveParte": "haga_discipulos_ayudante",
         "sala": "prin_ayud",
         "pubId": "mmm9qi4ocyur",
@@ -24047,6 +24039,15 @@
         "sala": "aux_ayud",
         "pubId": "mmm9qi4smpf8",
         "nombreParte": "Haga revisitas",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p7",
+        "claveParte": "aproveche_bien_el_dia_mas_importante_del_ano",
+        "sala": "prin",
+        "pubId": "mmm9qi4jnax6",
+        "nombreParte": "Aproveche bien el día más importante del año",
         "fecha": "2026-04-20"
       }
     ],
