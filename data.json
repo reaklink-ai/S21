@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458929364,
+  "_lastModified": 1774458932127,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22857,7 +22857,8 @@
           "p5_aux_ayud": "mmm9qi4jl0fy",
           "p6_prin_ayud": "mmm9qi4kye7q",
           "p6_aux_ayud": "mmm9qi4smpf8",
-          "p7": "mmm9qi4jnax6"
+          "p7": "mmm9qi4jnax6",
+          "p8": "mmm9qi4nr0kx"
         }
       }
     },
@@ -23844,15 +23845,6 @@
         "fecha": "2026-04-20"
       },
       {
-        "semKey": "2026-04-20",
-        "parteId": "p8",
-        "claveParte": "necesidades_de_la_congregacion",
-        "sala": "prin",
-        "pubId": "mmm9qi4s4eyz",
-        "nombreParte": "Necesidades de la congregación",
-        "fecha": "2026-04-20"
-      },
-      {
         "semKey": "2026-04-13",
         "parteId": "p2",
         "claveParte": "tesoro_de_la_semana",
@@ -24048,6 +24040,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4jnax6",
         "nombreParte": "Aproveche bien el día más importante del año",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p8",
+        "claveParte": "estudio_biblico_de_la_congregacion",
+        "sala": "prin",
+        "pubId": "mmm9qi4nr0kx",
+        "nombreParte": "Estudio bíblico de la congregación",
         "fecha": "2026-04-20"
       }
     ],
