@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458914667,
+  "_lastModified": 1774458918550,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22854,7 +22854,8 @@
           "p3": "mmm9qi4jbuql",
           "p5_prin_ayud": "mmm9qi4jevxb",
           "p5_aux": "mmm9qi4kye7q",
-          "p5_aux_ayud": "mmm9qi4jl0fy"
+          "p5_aux_ayud": "mmm9qi4jl0fy",
+          "p6_prin_ayud": "mmm9qi4kye7q"
         }
       }
     },
@@ -23833,15 +23834,6 @@
       },
       {
         "semKey": "2026-04-20",
-        "parteId": "p6",
-        "claveParte": "haga_revisitas_ayudante",
-        "sala": "prin_ayud",
-        "pubId": "mmm9qi4qzr2s",
-        "nombreParte": "Haga revisitas",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
         "parteId": "p10",
         "claveParte": "palabras_de_conclusion",
         "sala": "prin",
@@ -24044,6 +24036,15 @@
         "claveParte": "haga_revisitas_aux_ayudante",
         "sala": "aux_ayud",
         "pubId": "mmm9qi4jl0fy",
+        "nombreParte": "Haga revisitas",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p6",
+        "claveParte": "haga_revisitas_ayudante",
+        "sala": "prin_ayud",
+        "pubId": "mmm9qi4kye7q",
         "nombreParte": "Haga revisitas",
         "fecha": "2026-04-20"
       }
