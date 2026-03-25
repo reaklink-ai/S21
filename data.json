@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458902952,
+  "_lastModified": 1774458908704,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22851,7 +22851,8 @@
           "p6": "mmm9qi4rre7b",
           "p8l": "mmm9qi4l7kbw",
           "oracion_cierre": "mmm9qi4jq3yf",
-          "p3": "mmm9qi4jbuql"
+          "p3": "mmm9qi4jbuql",
+          "p5_prin_ayud": "mmm9qi4jevxb"
         }
       }
     },
@@ -23750,15 +23751,6 @@
       {
         "semKey": "2026-04-20",
         "parteId": "p5",
-        "claveParte": "empiece_conversaciones_ayudante",
-        "sala": "prin_ayud",
-        "pubId": "mmm9qi4tnkh4",
-        "nombreParte": "Empiece conversaciones",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
-        "parteId": "p5",
         "claveParte": "empiece_conversaciones_aux",
         "sala": "aux",
         "pubId": "mmm9qi4rigm6",
@@ -24042,6 +24034,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4jbuql",
         "nombreParte": "Lectura de la Biblia",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p5",
+        "claveParte": "haga_revisitas_ayudante",
+        "sala": "prin_ayud",
+        "pubId": "mmm9qi4jevxb",
+        "nombreParte": "Haga revisitas",
         "fecha": "2026-04-20"
       }
     ],
