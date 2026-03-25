@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458601810,
+  "_lastModified": 1774458604843,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22840,7 +22840,8 @@
         "asign": {
           "presidente": "mmm9qi4kqpna",
           "p1": "mmm9qi4k6wjw",
-          "p2": "mmm9qi4kqpna"
+          "p2": "mmm9qi4kqpna",
+          "p3_aux_conductor": "mmm9qi4jq3yf"
         }
       }
     },
@@ -23986,6 +23987,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4kqpna",
         "nombreParte": "Busquemos perlas escondidas",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p3",
+        "claveParte": "lectura_de_la_biblia_aux_conductor",
+        "sala": "aux_conductor",
+        "pubId": "mmm9qi4jq3yf",
+        "nombreParte": "Lectura de la Biblia",
         "fecha": "2026-04-20"
       }
     ],
