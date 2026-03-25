@@ -22709,9 +22709,16 @@
       "pin": "5645",
       "rol": "anciano",
       "grupo": "Grupo 14"
+    },
+    {
+      "id": "mn6c0veo",
+      "nombre": "Alfonso_C",
+      "pin": "8900",
+      "rol": "secretario",
+      "grupo": null
     }
   ],
-  "_lastModified": 1774458949690,
+  "_lastModified": 1774460597912,
   "vym": {
     "semanas": {
       "2026-04-20": {
