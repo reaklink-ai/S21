@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458932127,
+  "_lastModified": 1774458949690,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22858,7 +22858,8 @@
           "p6_prin_ayud": "mmm9qi4kye7q",
           "p6_aux_ayud": "mmm9qi4smpf8",
           "p7": "mmm9qi4jnax6",
-          "p8": "mmm9qi4nr0kx"
+          "p8": "mmm9qi4nr0kx",
+          "p3_aux": "mmm9qi4m86kf"
         }
       }
     },
@@ -24049,6 +24050,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4nr0kx",
         "nombreParte": "Estudio bíblico de la congregación",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p3",
+        "claveParte": "lectura_de_la_biblia_aux",
+        "sala": "aux",
+        "pubId": "mmm9qi4m86kf",
+        "nombreParte": "Lectura de la Biblia",
         "fecha": "2026-04-20"
       }
     ],
