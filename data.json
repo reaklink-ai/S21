@@ -22711,7 +22711,7 @@
       "grupo": "Grupo 14"
     }
   ],
-  "_lastModified": 1774458600208,
+  "_lastModified": 1774458601810,
   "vym": {
     "semanas": {
       "2026-04-20": {
@@ -22839,7 +22839,8 @@
         "urlId": 202026118,
         "asign": {
           "presidente": "mmm9qi4kqpna",
-          "p1": "mmm9qi4k6wjw"
+          "p1": "mmm9qi4k6wjw",
+          "p2": "mmm9qi4kqpna"
         }
       }
     },
@@ -23737,15 +23738,6 @@
       },
       {
         "semKey": "2026-04-20",
-        "parteId": "p2",
-        "claveParte": "tesoro_de_la_semana",
-        "sala": "prin",
-        "pubId": "mmm9qi4rtrpu",
-        "nombreParte": "\"Tesoro de la semana\"",
-        "fecha": "2026-04-20"
-      },
-      {
-        "semKey": "2026-04-20",
         "parteId": "p4",
         "claveParte": "lectura_de_la_biblia",
         "sala": "prin",
@@ -23985,6 +23977,15 @@
         "sala": "prin",
         "pubId": "mmm9qi4k6wjw",
         "nombreParte": "Si le prestamos atención a Jehová, nos irá bien",
+        "fecha": "2026-04-20"
+      },
+      {
+        "semKey": "2026-04-20",
+        "parteId": "p2",
+        "claveParte": "busquemos_perlas_escondidas",
+        "sala": "prin",
+        "pubId": "mmm9qi4kqpna",
+        "nombreParte": "Busquemos perlas escondidas",
         "fecha": "2026-04-20"
       }
     ],
