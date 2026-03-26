@@ -18,6 +18,8 @@
 
 <title>S-21 · Congregación</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Sora:wght@600;700;800&display=swap');
 
@@ -1282,6 +1284,42 @@ input, select, textarea { font-family: var(--font); }
   .layout { display: block; }
   .main { padding: 0; }
   .s21-wrap { box-shadow: none; }
+}
+
+/* Print S-21 individual — se activa vía clase en body */
+body.print-s21 .appbar,
+body.print-s21 .sidebar,
+body.print-s21 .mobile-nav,
+body.print-s21 .panel,
+body.print-s21 .s21-actions,
+body.print-s21 .anio-nav-btn,
+body.print-s21 .s21-toolbar,
+body.print-s21 .pub-scroll-top { display: none !important; }
+
+body.print-s21 .layout { display: block !important; }
+body.print-s21 .main    { padding: 0 !important; }
+body.print-s21 .screen  { display: none !important; }
+body.print-s21 #screen-publicadores { display: block !important; }
+body.print-s21 .pub-list-panel { display: none !important; }
+body.print-s21 .s21-wrap { box-shadow: none; border: none; }
+body.print-s21 .s21-anio-bar { border-bottom: 1px solid #ccc; }
+
+@media print {
+  body.print-s21 .appbar,
+  body.print-s21 .sidebar,
+  body.print-s21 .mobile-nav,
+  body.print-s21 .panel,
+  body.print-s21 .s21-actions,
+  body.print-s21 .anio-nav-btn,
+  body.print-s21 .s21-toolbar,
+  body.print-s21 .pub-scroll-top { display: none !important; }
+
+  body.print-s21 .layout  { display: block !important; }
+  body.print-s21 .main    { padding: 0 !important; }
+  body.print-s21 .screen  { display: none !important; }
+  body.print-s21 #screen-publicadores { display: block !important; }
+  body.print-s21 .pub-list-panel { display: none !important; }
+  body.print-s21 .s21-wrap { box-shadow: none; }
 }
 
 /* ══════════════════════════════════════════
@@ -3865,7 +3903,8 @@ function renderS21() {
       <button class="anio-nav-btn" onclick="cambiarAnio(1)">▶</button>
       <div class="s21-actions">
         <button class="s21-act-btn" onclick="exportarTxt()">↓ Exportar TXT</button>
-        <button class="s21-act-btn" onclick="window.print()">⎙ Imprimir</button>
+        <button class="s21-act-btn" onclick="imprimirS21()">⬇ PDF Individual</button>
+        <button class="s21-act-btn" onclick="descargarS21Grupo()">⬇ PDF por Grupo</button>
       </div>
     </div>
 
@@ -4559,7 +4598,7 @@ function exportarEmergencias() {
   </div>
 </div>
 
-</div><!-- /appWrap -->
+
 
 </body>
 </html>`;
@@ -5622,6 +5661,342 @@ function exportarTxt() {
   a.download=`S21_${pub.apellido}_${pub.nombre}_${anioVer}.txt`; a.click();
   toast('Exportado ✓');
 }
+
+function s21HtmlOficial(pub, anio) {
+  // Genera HTML que replica fielmente el formato oficial S-21-S 11/23
+  const MESES_FULL = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
+  const MESES_K    = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
+  const regAnio = ((pub.registros||{})[anio] || (pub.registros||{})[String(anio)] || {});
+
+  let tP=0, tC=0, tPA=0, tH=0;
+  const filas = MESES_FULL.map((mes, i) => {
+    const r = regAnio[MESES_K[i]] || {};
+    if(r.particip) tP++;
+    if(r.paux)     tPA++;
+    tH += parseFloat(r.horas)||0;
+    tC += parseInt(r.cursos)||0;
+    return `<tr>
+      <td class="mes-cel">${mes}</td>
+      <td class="centro">${r.particip ? '<span class="chk-marca">&#10003;</span>' : ''}</td>
+      <td class="centro">${r.cursos  || ''}</td>
+      <td class="centro">${r.paux    ? '<span class="chk-marca">&#10003;</span>' : ''}</td>
+      <td class="centro">${r.horas   || ''}</td>
+      <td class="notas-cel">${(r.notas||'').substring(0,60)}</td>
+    </tr>`;
+  }).join('');
+
+  const chk = (val) => `<span class="chk-box">${val ? '&#10003;' : '&nbsp;'}</span>`;
+
+  const totalHoras = tH % 1 === 0 ? String(tH) : tH.toFixed(1);
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>S-21 &mdash; ${escHtml(pub.apellido)}, ${escHtml(pub.nombre)} &mdash; ${anio}&ndash;${anio+1}</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #000;
+    background: #fff;
+    padding: 14mm 14mm 10mm 14mm;
+  }
+
+  /* ── Título ── */
+  .titulo {
+    text-align: center;
+    font-size: 11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-bottom: 5mm;
+  }
+
+  /* ── Filas de datos personales ── */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+  }
+  .info-table td {
+    border: 1px solid #000;
+    padding: 2.5mm 3mm;
+    vertical-align: middle;
+    font-size: 9pt;
+    line-height: 1.3;
+  }
+  .info-table .lbl {
+    font-weight: bold;
+    white-space: nowrap;
+    width: 1%;
+    padding-right: 2mm;
+  }
+  .info-table .val {
+    font-size: 9.5pt;
+  }
+  .chk-box {
+    display: inline-block;
+    width: 3.5mm; height: 3.5mm;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 3.3mm;
+    font-size: 8pt;
+    vertical-align: middle;
+    margin-right: 1mm;
+  }
+  .chk-lbl {
+    vertical-align: middle;
+    margin-right: 5mm;
+    white-space: nowrap;
+    font-size: 8.5pt;
+  }
+
+  /* ── Tabla mensual ── */
+  .reg-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+    table-layout: fixed;
+  }
+  .reg-table th {
+    border: 1px solid #000;
+    background: #d4dff0;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 1.5mm 1mm;
+    line-height: 1.35;
+  }
+  .reg-table td {
+    border: 1px solid #000;
+    padding: 1.2mm 1.5mm;
+    vertical-align: middle;
+    font-size: 9pt;
+    height: 7.2mm;
+  }
+  .mes-cel   { font-size: 9pt; padding-left: 2mm; }
+  .centro    { text-align: center; }
+  .notas-cel { font-size: 8pt; }
+  .chk-marca { font-size: 11pt; font-weight: bold; line-height: 1; }
+
+  /* Anchos de columna */
+  .col-mes   { width: 21%; }
+  .col-part  { width: 13%; }
+  .col-cur   { width: 11%; }
+  .col-paux  { width: 12%; }
+  .col-hor   { width: 13%; }
+  .col-not   { width: 30%; }
+
+  /* Fila total */
+  .fila-total td {
+    background: #e8eef8;
+    font-weight: bold;
+    font-size: 9pt;
+  }
+
+  /* Código formulario */
+  .cod-form {
+    text-align: right;
+    font-size: 7.5pt;
+    color: #555;
+    margin-top: 3mm;
+  }
+
+  /* Botón imprimir — oculto al imprimir */
+  .btn-wrap { text-align: center; margin-bottom: 6mm; }
+  .btn-imp {
+    background: #3d5a9e; color: #fff;
+    border: none; padding: 8px 28px;
+    border-radius: 6px; font-size: 13px;
+    font-weight: 700; cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  @media print {
+    .btn-wrap { display: none; }
+    body { padding: 10mm 12mm 8mm 12mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="btn-wrap">
+  <button class="btn-imp" onclick="window.print()">&#128438; Imprimir / Guardar como PDF</button>
+</div>
+
+<div class="titulo">Registro de Publicador de la Congregaci&oacute;n</div>
+
+<table class="info-table">
+  <tr>
+    <td class="lbl">Nombre:</td>
+    <td class="val" colspan="3">${escHtml(pub.apellido||'')}, ${escHtml(pub.nombre||'')}</td>
+  </tr>
+  <tr>
+    <td class="lbl">Fecha de nacimiento:</td>
+    <td class="val">${pub.nacimiento||''}</td>
+    <td style="border-left:1px solid #000;padding:2.5mm 3mm;white-space:nowrap">
+      <span class="chk-lbl">${chk(pub.genero==='M')} Hombre</span>
+      <span class="chk-lbl">${chk(pub.genero!=='M')} Mujer</span>
+    </td>
+    <td style="width:1px;padding:0;border:none"></td>
+  </tr>
+  <tr>
+    <td class="lbl">Fecha de bautismo:</td>
+    <td class="val">${pub.bautismo||''}</td>
+    <td style="border-left:1px solid #000;padding:2.5mm 3mm;white-space:nowrap">
+      <span class="chk-lbl">${chk(pub.otrasOvejas)} Otras ovejas</span>
+      <span class="chk-lbl">${chk(pub.ungido)} Ungido</span>
+    </td>
+    <td style="width:1px;padding:0;border:none"></td>
+  </tr>
+  <tr>
+    <td colspan="4" style="padding:2.5mm 3mm">
+      <span class="chk-lbl">${chk(pub.anciano)} Anciano</span>
+      <span class="chk-lbl">${chk(pub.siervo)} Siervo ministerial</span>
+      <span class="chk-lbl">${chk(pub.precursorReg)} Precursor regular</span>
+      <span class="chk-lbl">${chk(pub.precursorEsp)} Precursor especial</span>
+      <span class="chk-lbl">${chk(pub.misionero)} Misionero que sirve en el campo</span>
+    </td>
+  </tr>
+</table>
+
+<table class="reg-table">
+  <colgroup>
+    <col class="col-mes"><col class="col-part"><col class="col-cur">
+    <col class="col-paux"><col class="col-hor"><col class="col-not">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>A&ntilde;o de servicio<br><span style="font-weight:normal;font-size:7pt">${anio}&ndash;${anio+1}</span></th>
+      <th>Participaci&oacute;n<br>en el<br>ministerio</th>
+      <th>Cursos<br>b&iacute;blicos</th>
+      <th>Precursor<br>auxiliar</th>
+      <th>Horas<br><span style="font-weight:normal;font-size:6.5pt">(Si es precursor o<br>misionero que<br>sirve en el campo)</span></th>
+      <th>Notas</th>
+    </tr>
+  </thead>
+  <tbody>
+    ${filas}
+  </tbody>
+  <tfoot>
+    <tr class="fila-total">
+      <td colspan="3" style="text-align:right;padding-right:3mm">Total</td>
+      <td class="centro">${tPA||''}</td>
+      <td class="centro">${tH > 0 ? totalHoras : ''}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+
+<div class="cod-form">S-21-S &nbsp; 11/23</div>
+
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() { window.print(); }, 500);
+  });
+<\/script>
+</body>
+</html>`;
+}
+
+function generarPDFS21(pub, anio) {
+  // Ahora abre ventana con HTML fiel al oficial
+  const html = s21HtmlOficial(pub, anio);
+  const w = window.open('', '_blank', 'width=850,height=1000');
+  if(w) { w.document.write(html); w.document.close(); }
+  else   { toast('&#9888; Activa las ventanas emergentes para generar el PDF'); }
+}
+
+function imprimirS21() {
+  const pub = getPub(selId);
+  if(!pub) { toast('Selecciona un publicador primero'); return; }
+  generarPDFS21(pub, anioVer);
+  toast('&#10003; Ventana de impresion abierta');
+}
+
+function descargarS21Grupo() {
+  const sel = document.getElementById('selectGrupoDescarga');
+  sel.innerHTML = '<option value="">&#8212; Todos los publicadores &#8212;</option>';
+  const grupos = [...new Set(state.publicadores.filter(p=>!p.inactivo).map(p=>p.grupo||'Sin grupo'))].sort();
+  grupos.forEach(g => { const o = document.createElement('option'); o.value=g; o.textContent=g; sel.appendChild(o); });
+  document.getElementById('modalDescargaGrupo').style.display = 'flex';
+}
+
+function confirmarDescargaGrupo() {
+  const grupoSel = document.getElementById('selectGrupoDescarga').value;
+  const anio = anioVer || anioHoy();
+  const lista = state.publicadores.filter(p => {
+    if(p.inactivo) return false;
+    if(grupoSel) return (p.grupo||'Sin grupo') === grupoSel;
+    return true;
+  }).sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  if(!lista.length) { toast('No hay publicadores en ese grupo'); return; }
+  document.getElementById('modalDescargaGrupo').style.display = 'none';
+
+  // Generar un HTML con todas las páginas (una por publicador, separadas con page-break)
+  const pages = lista.map((pub, idx) => {
+    const html = s21HtmlOficial(pub, anio);
+    // Extraer solo el body content
+    const bodyMatch = html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+    const bodyContent = bodyMatch ? bodyMatch[1] : html;
+    // Quitar el script de auto-print y el botón en cada página individual
+    const clean = bodyContent
+      .replace(/<div class="btn-wrap">[\s\S]*?<\/div>/,'')
+      .replace(/<script>[\s\S]*?<\/script>/i,'');
+    return `<div style="page-break-after:${idx < lista.length-1 ? 'always' : 'auto'}">${clean}</div>`;
+  }).join('\n');
+
+  const nombre = grupoSel ? `Grupo_${grupoSel.replace(/\s+/g,'_')}` : 'Todos_los_publicadores';
+
+  const fullHtml = `<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="UTF-8">
+<title>S-21 &mdash; ${nombre} &mdash; ${anio}&ndash;${anio+1}</title>
+<style>
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:Arial,Helvetica,sans-serif; font-size:9pt; color:#000; background:#fff; }
+  .titulo { text-align:center; font-size:11pt; font-weight:bold; text-transform:uppercase; letter-spacing:.4px; margin-bottom:5mm; }
+  .info-table { width:100%; border-collapse:collapse; }
+  .info-table td { border:1px solid #000; padding:2.5mm 3mm; vertical-align:middle; font-size:9pt; }
+  .info-table .lbl { font-weight:bold; white-space:nowrap; width:1%; }
+  .chk-box { display:inline-block; width:3.5mm; height:3.5mm; border:1px solid #000; text-align:center; line-height:3.3mm; font-size:8pt; vertical-align:middle; margin-right:1mm; }
+  .chk-lbl { vertical-align:middle; margin-right:5mm; white-space:nowrap; font-size:8.5pt; }
+  .reg-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+  .reg-table th { border:1px solid #000; background:#d4dff0; text-align:center; vertical-align:middle; font-size:7.5pt; font-weight:bold; padding:1.5mm 1mm; line-height:1.35; }
+  .reg-table td { border:1px solid #000; padding:1.2mm 1.5mm; vertical-align:middle; font-size:9pt; height:7.2mm; }
+  .mes-cel { font-size:9pt; padding-left:2mm; }
+  .centro { text-align:center; }
+  .notas-cel { font-size:8pt; }
+  .chk-marca { font-size:11pt; font-weight:bold; }
+  .col-mes { width:21%; } .col-part { width:13%; } .col-cur { width:11%; }
+  .col-paux { width:12%; } .col-hor { width:13%; } .col-not { width:30%; }
+  .fila-total td { background:#e8eef8; font-weight:bold; }
+  .cod-form { text-align:right; font-size:7.5pt; color:#555; margin-top:3mm; }
+  .page-wrap { padding:10mm 12mm 8mm 12mm; }
+  .btn-wrap { text-align:center; margin-bottom:6mm; }
+  .btn-imp { background:#3d5a9e; color:#fff; border:none; padding:8px 28px; border-radius:6px; font-size:13px; font-weight:700; cursor:pointer; font-family:Arial,sans-serif; }
+  @media print { .btn-wrap { display:none !important; } }
+  @media screen { .page-wrap { border-bottom:3px solid #3d5a9e; margin-bottom:8mm; } }
+</style>
+</head><body>
+<div class="btn-wrap">
+  <button class="btn-imp" onclick="window.print()">&#128438; Imprimir / Guardar como PDF (${lista.length} registros)</button>
+</div>
+${pages.replace(/class="page-wrap"/g, 'class="page-wrap"')}
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();},600);});<\/script>
+</body></html>`;
+
+  const w = window.open('', '_blank', 'width=870,height=1000');
+  if(w) { w.document.write(fullHtml); w.document.close(); }
+  else { toast('&#9888; Activa las ventanas emergentes para generar el PDF'); }
+  toast(`&#10003; PDF con ${lista.length} registro${lista.length>1?'s':''} listo para imprimir`);
+}
+
+function _dibujarS21EnDoc() { /* deprecated — usar s21HtmlOficial */ }
+
 
 function toast(msg, dur=2200) {
   const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
@@ -8496,7 +8871,34 @@ function precExportarPDFUno(pubId) {
   </div>
 </div>
 
+<!-- MODAL DESCARGA S-21 POR GRUPO -->
+<div class="overlay" id="modalDescargaGrupo" style="display:none">
+  <div class="modal" style="max-width:420px">
+    <div class="modal-hd">
+      <span class="modal-hd-title">⬇ Descargar S-21 por Grupo</span>
+      <button class="modal-x" onclick="document.getElementById('modalDescargaGrupo').style.display='none'">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <p style="font-size:13px;color:var(--ink-2)">Selecciona el grupo para descargar todos sus registros S-21 en un solo PDF, o descarga todos.</p>
+      <div class="form-group">
+        <label class="form-label">Grupo</label>
+        <select id="selectGrupoDescarga" class="form-input form-select">
+          <option value="">— Todos los publicadores —</option>
+        </select>
+      </div>
+      <div style="background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:var(--r);padding:10px 14px;font-size:11px;color:var(--accent)">
+        Cada publicador ocupará una página. El PDF seguirá el formato oficial <strong>S-21-S 11/23</strong>.
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="document.getElementById('modalDescargaGrupo').style.display='none'">Cancelar</button>
+      <button class="btn-save" onclick="confirmarDescargaGrupo()">⬇ Descargar PDF</button>
+    </div>
+  </div>
+</div>
+
 </div><!-- /appWrap -->
+
 
 <script>
 // ── Service Worker inline (PWA offline) ──
