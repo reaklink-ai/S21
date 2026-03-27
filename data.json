@@ -13262,7 +13262,7 @@
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Dic": {
@@ -22795,7 +22795,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633358277,
+  "_lastModified": 1774633360025,
   "vym": {
     "semanas": {},
     "historial": [
