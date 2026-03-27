@@ -13621,7 +13621,7 @@
             "cursos": "1",
             "paux": false,
             "horas": "11",
-            "notas": ""
+            "notas": "24 horas SAC"
           },
           "Feb": {
             "particip": true,
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634048466,
+  "_lastModified": 1774634053713,
   "vym": {
     "semanas": {},
     "historial": [
