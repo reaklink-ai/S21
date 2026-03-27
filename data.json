@@ -13490,7 +13490,7 @@
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -23019,7 +23019,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633608545,
+  "_lastModified": 1774633611591,
   "vym": {
     "semanas": {},
     "historial": [
