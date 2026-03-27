@@ -20120,7 +20120,7 @@
           "Dic": {
             "particip": true,
             "horas": "",
-            "cursos": "1"
+            "cursos": ""
           },
           "Ene": {
             "particip": true,
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634235605,
+  "_lastModified": 1774634239544,
   "vym": {
     "semanas": {},
     "historial": [
