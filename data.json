@@ -7116,7 +7116,7 @@
             "notas": "39 horas Betel"
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "",
@@ -22725,7 +22725,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633143143,
+  "_lastModified": 1774633147566,
   "vym": {
     "semanas": {},
     "historial": [
