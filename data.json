@@ -13607,7 +13607,7 @@
             "cursos": "1",
             "paux": false,
             "horas": "17",
-            "notas": ""
+            "notas": "15 horas SAC y 18 horas Proyecto"
           },
           "Dic": {
             "particip": true,
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634016511,
+  "_lastModified": 1774634029421,
   "vym": {
     "semanas": {},
     "historial": [
