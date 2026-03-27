@@ -20125,7 +20125,7 @@
           "Ene": {
             "particip": true,
             "horas": "",
-            "cursos": "1"
+            "cursos": ""
           },
           "Mar": {
             "particip": false,
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634239544,
+  "_lastModified": 1774634245913,
   "vym": {
     "semanas": {},
     "historial": [
