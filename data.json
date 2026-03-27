@@ -20108,7 +20108,7 @@
           },
           "Oct": {
             "particip": true,
-            "horas": "33",
+            "horas": "",
             "cursos": "1",
             "notas": "Su estado de salud estuvo complejo"
           },
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634179587,
+  "_lastModified": 1774634209028,
   "vym": {
     "semanas": {},
     "historial": [
