@@ -7109,7 +7109,7 @@
             "notas": "35 horas Betel"
           },
           "Nov": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "16",
@@ -22725,7 +22725,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633123179,
+  "_lastModified": 1774633143143,
   "vym": {
     "semanas": {},
     "historial": [
