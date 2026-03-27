@@ -13252,7 +13252,7 @@
             "notas": "Vacaciones"
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "3",
             "paux": false,
             "horas": "50",
@@ -22865,7 +22865,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633437870,
+  "_lastModified": 1774633444429,
   "vym": {
     "semanas": {},
     "historial": [
