@@ -13469,7 +13469,7 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -23019,7 +23019,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633540253,
+  "_lastModified": 1774633596141,
   "vym": {
     "semanas": {},
     "historial": [
