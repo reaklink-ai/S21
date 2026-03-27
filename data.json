@@ -13269,7 +13269,7 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "35",
             "notas": ""
           },
           "Ene": {
@@ -22795,7 +22795,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633360025,
+  "_lastModified": 1774633366160,
   "vym": {
     "semanas": {},
     "historial": [
