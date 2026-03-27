@@ -13259,21 +13259,21 @@
             "notas": ""
           },
           "Nov": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Ene": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -22795,7 +22795,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633328208,
+  "_lastModified": 1774633330846,
   "vym": {
     "semanas": {},
     "historial": [
