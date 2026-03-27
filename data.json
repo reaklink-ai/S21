@@ -7123,7 +7123,7 @@
             "notas": "45 horas Betel"
           },
           "Ene": {
-            "particip": false,
+            "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "11",
@@ -22725,7 +22725,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633147566,
+  "_lastModified": 1774633152663,
   "vym": {
     "semanas": {},
     "historial": [
