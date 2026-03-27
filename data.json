@@ -13467,6 +13467,76 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -13489,15 +13559,99 @@
       "genero": "F",
       "anciano": false,
       "siervo": false,
-      "precursorReg": true,
+      "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -22865,7 +23019,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774633456797,
+  "_lastModified": 1774633499350,
   "vym": {
     "semanas": {},
     "historial": [
