@@ -20100,7 +20100,7 @@
           "Feb": {
             "particip": true,
             "horas": "",
-            "cursos": "1",
+            "cursos": "",
             "paux": false
           },
           "Sep": {
@@ -23026,7 +23026,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1774634245913,
+  "_lastModified": 1774634250776,
   "vym": {
     "semanas": {},
     "historial": [
