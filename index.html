@@ -8171,72 +8171,152 @@ function precGetDatos(pub, anio) {
   const regs = pub.registros || {};
   const meses = [];
   let horasTotal = 0, mesesConDatos = 0;
-  let horasBetelBruto = 0;
-  let horasBetelCredito = 0;
-  let horasTotalCombinado = 0; // predicación + betel crédito
+  let horasExtraBruto = 0;    // suma bruta de TODAS las horas adicionales en notas
+  let horasExtraCredito = 0;  // suma acreditable (limitada a 55h combinado por mes)
+  let horasTotalCombinado = 0;
+  // Desglose por categoría: { betel: N, construccion: N, especial: N, ... }
+  const desgloseCategorias = {};
 
   MESES_C.forEach((m, idx) => {
     const r = (regs[anio] || regs[String(anio)] || {})[m];
-    // Un mes tiene datos solo si existe el registro Y el campo horas tiene un valor real (no vacío)
+
+    // Mes con datos: horas existe, no vacía, y > 0
     const horasRaw = r ? r.horas : undefined;
-    const tieneHoras = horasRaw !== undefined && horasRaw !== null && horasRaw !== '';
-    const horas = tieneHoras ? (parseFloat(horasRaw) || 0) : null;
+    const tieneHoras = horasRaw !== undefined && horasRaw !== null && horasRaw !== ''
+                       && parseFloat(horasRaw) > 0;
+    const horas = tieneHoras ? parseFloat(horasRaw) : null;
     if(horas !== null) { mesesConDatos++; horasTotal += horas; }
 
-    // Betel bruto del comentario
-    const bruto = r?.notas ? _extraerHorasBetel(r.notas) : 0;
+    // Extraer TODAS las horas adicionales del campo notas
+    const extraccion = r?.notas ? _extraerHorasNotas(r.notas) : { total: 0, detalle: [] };
+    const brutoMes = extraccion.total;
 
-    // Crédito acreditable ese mes: min(bruto, max(0, 55 - horas_predicacion))
-    let credito = 0;
-    if(bruto > 0 && horas !== null) {
-      const espacio = Math.max(0, PREC_LIMITE_BETEL - horas);
-      credito = Math.min(bruto, espacio);
+    // Acumular desglose por categoría
+    extraccion.detalle.forEach(d => {
+      desgloseCategorias[d.tipo] = (desgloseCategorias[d.tipo] || 0) + d.horas;
+    });
+
+    // Crédito acreditable ese mes: la suma de horas adicionales no puede llevar
+    // el total mensual más allá de PREC_LIMITE_BETEL (55h)
+    let creditoMes = 0;
+    if(brutoMes > 0 && horas !== null) {
+      creditoMes = Math.min(brutoMes, Math.max(0, PREC_LIMITE_BETEL - horas));
     }
 
-    if(bruto)   horasBetelBruto   += bruto;
-    if(credito) horasBetelCredito += credito;
+    horasExtraBruto   += brutoMes;
+    horasExtraCredito += creditoMes;
 
-    // Total combinado por mes (lo que cuenta para la meta)
-    const combinado = horas !== null ? horas + credito : null;
+    const combinado = horas !== null ? horas + creditoMes : null;
+    const combinadoCompleto = horas !== null ? horas + brutoMes : null; // sin límite (info)
+
+    meses.push({
+      mes: m, idx, horas, tieneDatos: horas !== null,
+      extraBruto: brutoMes, extraCredito: creditoMes,
+      extraDetalle: extraccion.detalle,
+      combinado,
+      combinadoCompleto,
+      // compatibilidad con código anterior que usa betelBruto/betelCredito
+      betelBruto:   extraccion.detalle.find(d=>d.tipo==='betel')?.horas || 0,
+      betelCredito: extraccion.detalle.find(d=>d.tipo==='betel') ? Math.min(extraccion.detalle.find(d=>d.tipo==='betel').horas, Math.max(0, PREC_LIMITE_BETEL - (horas||0))) : 0,
+    });
+
     if(combinado !== null) horasTotalCombinado += combinado;
-
-    meses.push({ mes:m, idx, horas, tieneDatos: horas !== null, betelBruto: bruto, betelCredito: credito, combinado });
   });
 
-  // Promedio: solo sobre meses con informe real (mesesConDatos)
+  // ── Promedio general ──
   const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
 
+  // ── Meses pasados / restantes ──
   const mesActualIdx = mesActual().idx;
-  const mesesPasados = meses.filter(m => m.idx <= mesActualIdx);
-  // Meses restantes = meses del año de servicio que aún no han llegado
-  const mesesRestantes = meses.filter(m => m.idx > mesActualIdx).length;
-  const horasRestantes = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
+  const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx);
+  const mesesRestantes = meses.filter(m => m.idx >  mesActualIdx).length;
+
+  const horasRestantes    = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
-  const ultimos3 = mesesPasados.slice(-3).filter(m => m.tieneDatos);
+
+  // ── Promedio últimos 3 meses CON datos ──
+  const pasadosConDatos = mesesPasados.filter(m => m.tieneDatos);
+  const ultimos3        = pasadosConDatos.slice(-3);
   const promUlt3 = ultimos3.length > 0
-    ? ultimos3.reduce((s,m) => s + (m.combinado ?? m.horas), 0) / ultimos3.length
+    ? ultimos3.reduce((s, m) => s + (m.combinado ?? m.horas ?? 0), 0) / ultimos3.length
     : null;
+
   const requiereReunion = promUlt3 !== null && promUlt3 < PREC_META_MES && ultimos3.length >= 2;
+
   let estado = 'ok';
-  if(requiereReunion) estado = 'reunion';
-  else if(promedioNecesario > 70) estado = 'riesgo';
+  if(requiereReunion)                                     estado = 'reunion';
+  else if(promedioNecesario > 70)                         estado = 'riesgo';
   else if(promedio < PREC_META_MES && mesesConDatos >= 2) estado = 'bajo';
 
-  return { meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
-           horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
-           horasBetelBruto, horasBetelCredito };
+  return {
+    meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
+    horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
+    // Horas adicionales (todas las categorías)
+    horasExtraBruto, horasExtraCredito, desgloseCategorias,
+    // Compatibilidad con código que usa horasBetelCredito/Bruto
+    horasBetelBruto:   desgloseCategorias.betel || 0,
+    horasBetelCredito: meses.reduce((s,m) => s + m.betelCredito, 0),
+  };
 }
 
-// Extrae horas Betel de un comentario: "48 Betel", "HORAS BETEL 32", "32 horas betel", etc.
-function _extraerHorasBetel(notas) {
-  if(!notas) return 0;
-  const txt = notas.toLowerCase();
-  if(!txt.includes('betel')) return 0;
-  const m = txt.match(/(\d+(?:\.\d+)?)\s*(?:horas?\s*)?betel|betel\s*(?:horas?\s*)?(\d+(?:\.\d+)?)/);
-  if(m) return parseFloat(m[1] || m[2]) || 0;
-  const n = txt.match(/\d+(?:\.\d+)?/);
-  return n ? parseFloat(n[0]) : 0;
+// ── Extractor de horas adicionales desde el campo Notas ──
+// Soporta formatos libres como los de Jaime:
+//   "38 HRS (GVP + LDC)"   → 38h
+//   "23 HORAS LDC+GVP"     → 23h
+//   "10 HORAS GVP LDC"     → 10h
+//   "16HR (GVP LDC)"       → 16h
+//   "15 GVP - TRAMITES"    → 15h
+//   "48 betel, 10 construccion" → 58h total
+// Devuelve { total, detalle: [{tipo, horas, raw}] }
+function _extraerHorasNotas(notas) {
+  if(!notas) return { total: 0, detalle: [] };
+  const txt = notas.trim();
+
+  const detalle = [];
+  let totalExtraido = 0;
+
+  // ── Estrategia 1: número + unidad (h / hr / hrs / horas / horas)
+  // Captura: "38 HRS (...)", "23 HORAS LDC+GVP", "16HR (GVP LDC)"
+  // El número va ANTES de la unidad; la etiqueta es lo que viene después (hasta coma o fin)
+  const reUnidad = /(\d+(?:[.,]\d+)?)\s*(h(?:rs?|oras?)?)([^,;\n]*)?/gi;
+  let m;
+  while((m = reUnidad.exec(txt)) !== null) {
+    const num = parseFloat(m[1].replace(',', '.'));
+    if(num <= 0 || num > 300) continue;
+    // Etiqueta: texto después de la unidad, limpio
+    const etiqueta = (m[3] || '').replace(/^[\s()\-–:]+|[\s()\-–:]+$/g, '').trim();
+    const tipo = etiqueta.length > 0 ? etiqueta.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_+]/g, '').slice(0, 30) || 'extra' : 'extra';
+    detalle.push({ tipo, horas: num, raw: (m[1] + ' ' + m[2] + (etiqueta?' '+etiqueta:'')).trim() });
+    totalExtraido += num;
+  }
+
+  // ── Estrategia 2: número al inicio de la nota, sin unidad, seguido de texto
+  // Captura: "15 GVP - TRAMITES"
+  // Solo si estrategia 1 no encontró nada
+  if(detalle.length === 0) {
+    const reInicio = /^(\d+(?:[.,]\d+)?)\s+([A-Za-z].{0,40})/;
+    const mi = txt.match(reInicio);
+    if(mi) {
+      const num = parseFloat(mi[1].replace(',', '.'));
+      if(num > 0 && num <= 300) {
+        const etiqueta = mi[2].replace(/[-–]+$/, '').trim();
+        const tipo = etiqueta.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_+]/g,'').slice(0,30) || 'extra';
+        detalle.push({ tipo, horas: num, raw: mi[0].trim() });
+        totalExtraido += num;
+      }
+    }
+  }
+
+  return { total: totalExtraido, detalle };
 }
+
+// Compatibilidad — extrae solo horas Betel (para código legado)
+function _extraerHorasBetel(notas) {
+  const resultado = _extraerHorasNotas(notas);
+  const betel = resultado.detalle.find(d => d.tipo === 'betel');
+  return betel ? betel.horas : 0;
+}
+
 
 function precAbrirRegistro(pubId) {
   irA('publicadores');
@@ -8322,37 +8402,66 @@ function renderPrecursores() {
     else html += '<span class="prec-badge verde">\u2713 Al d\u00eda</span>';
     html += '</div></div>';
 
-    // Stats — basados en total combinado (predicación + betel)
+    // Stats — basados en total combinado (predicación + horas adicionales)
     html += '<div class="prec-stats">';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:#b45309">' + Math.round(d.horasTotalCombinado) + '</div><div class="prec-stat-l">Horas totales</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.promedio>=PREC_META_MES?'#16a34a':'#ef4444') + '">' + Math.round(d.promedio*10)/10 + '</div><div class="prec-stat-l">Prom. mensual</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.horasRestantes<=0?'#16a34a':'#b45309') + '">' + Math.round(d.horasRestantes) + '</div><div class="prec-stat-l">Faltan</div></div>';
     html += '<div class="prec-stat"><div class="prec-stat-n" style="color:' + (d.promedioNecesario<=PREC_META_MES?'#16a34a':'#ef4444') + '">' + (d.mesesRestantes>0?Math.round(d.promedioNecesario):'\u2014') + '</div><div class="prec-stat-l">Nec./mes</div></div>';
-    if(d.horasBetelCredito > 0) {
-      const difiere = Math.round(d.horasBetelBruto) !== Math.round(d.horasBetelCredito);
+    if(d.horasExtraCredito > 0) {
+      const difiere = Math.round(d.horasExtraBruto) !== Math.round(d.horasExtraCredito);
       html += `<div class="prec-stat" style="background:#f5f3ff;border-color:#c4b5fd">
-        <div class="prec-stat-n" style="color:#5b21b6">${Math.round(d.horasBetelCredito)}</div>
-        <div class="prec-stat-l" style="color:#7c3aed">Betel acred.</div>
-        ${difiere ? `<div style="font-size:9px;color:#a78bfa;margin-top:1px">${Math.round(d.horasBetelBruto)} reales</div>` : ''}
+        <div class="prec-stat-n" style="color:#5b21b6">${Math.round(d.horasExtraCredito)}</div>
+        <div class="prec-stat-l" style="color:#7c3aed">Hs. extra acred.</div>
+        ${difiere ? `<div style="font-size:9px;color:#a78bfa;margin-top:1px">${Math.round(d.horasExtraBruto)} reales</div>` : ''}
       </div>`;
     }
     html += '</div>';
 
-    // Detalle Betel mes a mes (solo si tiene Betel)
-    if(d.horasBetelCredito > 0) {
-      const mesCon = d.meses.filter(m => m.betelBruto > 0);
-      html += `<div style="margin:0 0 10px;padding:10px 14px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:10px;display:flex;flex-wrap:wrap;gap:6px;align-items:center">`;
-      html += `<span style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-right:4px">Betel por mes</span>`;
-      mesCon.forEach(m => {
-        const pred = m.horas || 0;
-        const total = pred + m.betelCredito;
-        const limitado = m.betelCredito < m.betelBruto;
-        html += `<span title="Predicación: ${pred}h + Betel: ${m.betelCredito}h = ${total}h${limitado?' (limitado a 55h)':''}" style="background:#ede9fe;color:#5b21b6;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;cursor:default">`;
-        html += `${MESES_C[m.idx]}: ${m.betelCredito}h`;
-        if(limitado) html += ` <span style="color:#a78bfa;font-weight:500">(${m.betelBruto} real)</span>`;
+    // Detalle horas adicionales por categoría y mes
+    if(d.horasExtraBruto > 0) {
+      // Nombres legibles por categoría
+      const NOMBRES_CAT = { betel:'Betel', construccion:'Construcción', especial:'Especial',
+        voluntaria:'Voluntaria', extra:'Extra', adicional:'Adicional',
+        asamblea:'Asamblea', convencion:'Convención', membresia:'Membresía' };
+      const CAT_COLOR = { betel:'#7c3aed', construccion:'#0369a1', especial:'#b45309',
+        voluntaria:'#065f46', extra:'#374151', adicional:'#374151',
+        asamblea:'#9a3412', convencion:'#9a3412', membresia:'#374151' };
+      const CAT_BG = { betel:'#ede9fe', construccion:'#e0f2fe', especial:'#fef3c7',
+        voluntaria:'#d1fae5', extra:'#f3f4f6', adicional:'#f3f4f6',
+        asamblea:'#fee2e2', convencion:'#fee2e2', membresia:'#f3f4f6' };
+
+      // Resumen por categoría (totales del año)
+      html += `<div style="margin:0 0 8px;padding:10px 14px;background:#faf5ff;border:1px solid #e9d5ff;border-radius:10px">`;
+      html += `<div style="font-size:10px;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.5px;margin-bottom:7px">Horas adicionales en notas</div>`;
+      html += `<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px">`;
+      Object.entries(d.desgloseCategorias).forEach(([cat, total]) => {
+        const nom = NOMBRES_CAT[cat] || cat;
+        const col = CAT_COLOR[cat] || '#374151';
+        const bg  = CAT_BG[cat]  || '#f3f4f6';
+        html += `<span style="background:${bg};color:${col};font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px">${nom}: ${Math.round(total*10)/10}h</span>`;
+      });
+      if(d.horasExtraBruto !== d.horasExtraCredito) {
+        html += `<span style="font-size:10px;color:#a78bfa;align-self:center;margin-left:4px">⚠ Acreditado: ${Math.round(d.horasExtraCredito)}h (límite 55h/mes)</span>`;
+      }
+      html += `</div>`;
+
+      // Detalle mes a mes (solo meses con horas extra)
+      const mesesConExtra = d.meses.filter(m => m.extraBruto > 0);
+      html += `<div style="display:flex;flex-wrap:wrap;gap:5px">`;
+      mesesConExtra.forEach(m => {
+        const detalleStr = m.extraDetalle.map(d => {
+          const nom = NOMBRES_CAT[d.tipo] || d.tipo;
+          return `${nom}: ${d.horas}h`;
+        }).join(' + ');
+        const limitado = m.extraCredito < m.extraBruto;
+        const tooltip = `Predicación: ${m.horas||0}h + Extra: ${m.extraBruto}h${limitado?' → acreditado: '+m.extraCredito+'h (límite 55h)':''}`;
+        html += `<span title="${tooltip}" style="background:#f3e8ff;color:#6d28d9;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;cursor:default">`;
+        html += `${MESES_C[m.idx]}: ${detalleStr}`;
+        if(limitado) html += ` <span style="color:#a78bfa">(acred. ${m.extraCredito}h)</span>`;
         html += `</span>`;
       });
-      html += `</div>`;
+      html += `</div></div>`;
     }
 
     // Chips mes a mes
