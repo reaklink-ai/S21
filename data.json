@@ -22925,6 +22925,16 @@
       "notas": ""
     },
     {
+      "id": "r1775944737400",
+      "fecha": "2026-04-08",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 125,
+      "zoom": 58,
+      "total": 183,
+      "notas": ""
+    },
+    {
       "id": "r1775498826382",
       "fecha": "2026-04-04",
       "tipo": "Fin de semana",
@@ -23056,7 +23066,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1775944686418,
+  "_lastModified": 1775944738249,
   "vym": {
     "semanas": {},
     "historial": [
