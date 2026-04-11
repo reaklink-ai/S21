@@ -22915,6 +22915,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1775944685700",
+      "fecha": "2026-04-11",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 143,
+      "zoom": 34,
+      "total": 177,
+      "notas": ""
+    },
+    {
       "id": "r1775498826382",
       "fecha": "2026-04-04",
       "tipo": "Fin de semana",
@@ -23046,7 +23056,7 @@
       "grupo": null
     }
   ],
-  "_lastModified": 1775498827072,
+  "_lastModified": 1775944686418,
   "vym": {
     "semanas": {},
     "historial": [
