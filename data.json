@@ -23064,9 +23064,16 @@
       "pin": "2144",
       "rol": "secretario",
       "grupo": null
+    },
+    {
+      "id": "mnw4rm5n",
+      "nombre": "Isaac_G",
+      "pin": "5543",
+      "rol": "anciano",
+      "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1775944738249,
+  "_lastModified": 1776020528782,
   "vym": {
     "semanas": {},
     "historial": [
