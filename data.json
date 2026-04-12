@@ -882,7 +882,7 @@
             "horas": "34"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -23458,7 +23458,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776023371461,
+  "_lastModified": 1776023553540,
   "vym": {
     "semanas": {},
     "historial": [
