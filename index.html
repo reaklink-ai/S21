@@ -2695,6 +2695,63 @@ input:focus, select:focus, textarea:focus {
 /* Hover en botón de login */
 .login-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(61,90,158,.5) !important; }
 .login-btn:active { transform: translateY(0); }
+
+/* ── Botón guardar flotante ── */
+#btn-guardar-flotante {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: var(--font);
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(22,163,74,.45);
+  transition: all .2s cubic-bezier(.4,0,.2,1);
+  white-space: nowrap;
+}
+#btn-guardar-flotante:hover {
+  background: #15803d;
+  box-shadow: 0 6px 28px rgba(22,163,74,.55);
+  transform: translateY(-2px);
+}
+#btn-guardar-flotante.visible { display: flex; }
+#btn-guardar-flotante .save-dot {
+  width: 8px; height: 8px;
+  background: #bbf7d0;
+  border-radius: 50%;
+  animation: save-pulse 1.4s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes save-pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: .5; transform: scale(.7); }
+}
+/* Indicador en appbar */
+#appbar-cambios-badge {
+  display: none;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+#appbar-cambios-badge.visible { display: inline-flex; align-items: center; gap: 5px; }
+@media (min-width: 768px) {
+  #btn-guardar-flotante { bottom: 30px; right: 28px; }
+}
 </style>
 </head>
 <body>
@@ -3297,6 +3354,13 @@ input:focus, select:focus, textarea:focus {
 </div>
 
 <div class="toast" id="toast"></div>
+
+<button id="btn-guardar-flotante" onclick="guardarAhora()" title="Guardar cambios">
+  <span class="save-dot"></span>
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+  Guardar cambios
+</button>
+
 
 <!-- MODAL GRUPOS -->
 <div class="overlay" id="modalGrupos" style="display:none">
@@ -3975,13 +4039,13 @@ function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;'
 function toggleBool(pid,anio,mes,campo) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
   r[campo]=!r[campo];
-  saveStateAndSync(); renderS21();
+  marcarCambios(); renderS21();
 }
 
 function setV(pid,anio,mes,campo,val) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
   r[campo]=val;
-  saveStateAndSync(); actualizarTotales(pub,anio);
+  marcarCambios(); actualizarTotales(pub,anio);
 }
 
 function actualizarTotales(pub,anio) {
@@ -4050,7 +4114,7 @@ function agregarReunion() {
   };
   state.asistencia.push(reg);
   state.asistencia.sort((a,b) => b.fecha.localeCompare(a.fecha));
-  saveStateAndSync();
+  marcarCambios();
   ['aFecha','aTema','aPresencial','aZoom','aNotas'].forEach(id => {
     const el = document.getElementById(id); if(el) el.value = '';
   });
@@ -4061,7 +4125,7 @@ function agregarReunion() {
 function eliminarReunion(id) {
   if(!confirm('¿Eliminar este registro?')) return;
   state.asistencia = (state.asistencia||[]).filter(r => r.id !== id);
-  saveStateAndSync(); renderAsistenciaScreen(); toast('Eliminado');
+  marcarCambios(); renderAsistenciaScreen(); toast('Eliminado');
 }
 
 function renderAsistenciaScreen() {
@@ -4434,7 +4498,7 @@ function guardarPub() {
   };
   if(editId){ Object.assign(getPub(editId),datos); }
   else { const p={id:'p'+Date.now(),registros:{},...datos}; state.publicadores.push(p); selId=p.id; }
-  saveStateAndSync(); cerrarModal(); renderLista();
+  marcarCambios(); cerrarModal(); renderLista();
   if(selId) renderS21();
   toast('Guardado ✓');
 }
@@ -4443,7 +4507,7 @@ function eliminarPub() {
   if(!confirm('¿Eliminar este publicador y todo su historial?')) return;
   state.publicadores=state.publicadores.filter(p=>p.id!==editId);
   if(selId===editId){ selId=null; document.getElementById('mainArea').innerHTML='<div class="empty"><div class="empty-icon"></div><div class="empty-txt">Selecciona un publicador.</div></div>'; }
-  saveStateAndSync(); cerrarModal(); renderLista(); toast('Eliminado');
+  marcarCambios(); cerrarModal(); renderLista(); toast('Eliminado');
 }
 
 // ══════════════════════════════════════════
@@ -4909,7 +4973,7 @@ function cargarInformes(e) {
         ok++;
       }
 
-      saveStateAndSync();
+      marcarCambios();
       if(selId)renderS21();
       renderDashboard(); renderLista();
       toast(`✓ ${ok} informes de ${mesC} ${anioEsc}-${anioEsc+1} importados${skip>0?` · ${skip} no encontrados`:''}`, skip>0?4000:2500);
@@ -4957,7 +5021,7 @@ function _importarFormatoViejo(rows) {
     actualizarTotales(pub,anio);
     ok++;
   }
-  saveStateAndSync();
+  marcarCambios();
   if(selId)renderS21();
   renderDashboard();
   toast(`✓ ${ok} informes importados${skip>0?` · ${skip} omitidos`:''}`);
@@ -5054,7 +5118,7 @@ function confirmarInactivo() {
   const hoy = new Date().toISOString().slice(0,10);
   state.inactivos.push({ ...pub, fechaInactivo: hoy, motivoInactivo: motivo });
 
-  saveStateAndSync();
+  marcarCambios();
   selId = null;
   cerrarModalInactivo();
   renderLista();
@@ -5071,7 +5135,7 @@ function reactivarPub(id) {
   delete pub.motivoInactivo;
   state.inactivos.splice(idx, 1);
   state.publicadores.push(pub);
-  saveStateAndSync();
+  marcarCambios();
   renderInactivos();
   renderDashboard();
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
@@ -5323,7 +5387,7 @@ function toggleAcceso(userId, seccion, valor) {
   if(!u.accesos) u.accesos = {};
   u.accesos[seccion] = valor;
   state.usuarios = users;
-  saveStateAndSync();
+  marcarCambios();
   // Si es el usuario actual, refrescar UI
   if(currentUser && currentUser.id === userId) {
     currentUser.accesos = u.accesos;
@@ -5343,7 +5407,7 @@ function cambiarPin(id) {
   if(users.find(x => x.id !== id && x.pin === pinLimpio)) { toast('Ese PIN ya está en uso por otro usuario'); return; }
   u.pin = pinLimpio;
   state.usuarios = users;
-  saveStateAndSync();
+  marcarCambios();
   renderUsuariosModal();
   toast(`PIN de "${u.nombre}" actualizado`);
 }
@@ -5363,7 +5427,7 @@ function agregarUsuario() {
   const id = Date.now().toString(36);
   users.push({ id, nombre, pin, rol, grupo: grupo || null });
   state.usuarios = users;
-  saveStateAndSync();
+  marcarCambios();
   renderUsuariosModal();
   document.getElementById('nuevoNombre').value = '';
   document.getElementById('nuevoPin').value = '';
@@ -5373,7 +5437,7 @@ function agregarUsuario() {
 function eliminarUsuario(id) {
   if(!confirm('¿Eliminar este usuario?')) return;
   state.usuarios = getUsuarios().filter(u => u.id !== id);
-  saveStateAndSync();
+  marcarCambios();
   renderUsuariosModal();
   toast('Usuario eliminado');
 }
@@ -5386,7 +5450,7 @@ function cerrarModalReset() {
 }
 function confirmarReset() {
   state = { publicadores: [], grupos: {} };
-  saveStateAndSync();
+  marcarCambios();
   selId = null;
   cerrarModalReset();
   irA('inicio');
@@ -5625,7 +5689,7 @@ function cargarCSV(e) {
         }
       }
 
-      saveStateAndSync();
+      marcarCambios();
       renderLista();
       if(selId && getPub(selId)) renderS21();
       toast(`CSV importado: ${nuevos} nuevos, ${actualizados} actualizados${errores?', '+errores+' omitidos':''}`);
@@ -6085,7 +6149,7 @@ function abrirModalGrupos() {
 function cerrarModalGrupos() {
   document.getElementById('modalGrupos').style.display = 'none';
   renderGruposPanel();
-  saveStateAndSync();
+  marcarCambios();
 }
 
 function switchGTab(tab) {
@@ -6188,7 +6252,7 @@ function toggleMiembro(grupo, pubId, checked) {
   } else {
     if(pub.grupo === grupo) pub.grupo = '';
   }
-  saveStateAndSync();
+  marcarCambios();
   renderGruposPanel();
   renderGruposMiembros(); // re-render to update all checkboxes
   toast(`${pub.apellido} asignado a ${checked?grupo:'sin grupo'}`);
@@ -6198,7 +6262,7 @@ function guardarGrupo(grupo, campo, valor) {
   initGrupos();
   if(!state.grupos[grupo]) state.grupos[grupo] = {};
   state.grupos[grupo][campo] = valor;
-  saveStateAndSync();
+  marcarCambios();
   // Feedback visual
   const key = grupo.replace(' ','_');
   const el = document.getElementById('gSaved-'+key);
@@ -7286,7 +7350,7 @@ function vymProcesarPegado(fechaKey, fechaISO, semanaIdx, btn) {
   const asignExist = (getVymState().semanas[fechaKey]||{}).asign;
   getVymState().semanas[fechaKey] = semana;
   if(asignExist) getVymState().semanas[fechaKey].asign = asignExist;
-  saveStateAndSync();
+  marcarCambios();
   btn.closest('[style*=fixed]').remove();
   renderVyM();
   toast('✓ Programa cargado');
@@ -7322,7 +7386,7 @@ function vymSetAsign(semKey, parteId, sala, pubId) {
     vym.historial.push({ semKey, parteId, claveParte, sala, pubId, nombreParte: nombreBase, fecha: semKey });
   }
 
-  saveStateAndSync();
+  marcarCambios();
   vymMarcarDuplicados();
 }
 
@@ -7561,7 +7625,7 @@ function vymSugerirTodo(semKey) {
     }
   });
 
-  saveStateAndSync();
+  marcarCambios();
   renderVyM();
   vymMarcarDuplicados();
   toast('✓ Sugerencias aplicadas — revisa y ajusta si necesitas');
@@ -7576,7 +7640,7 @@ function vymRestablecerSemana(semKey) {
   // Limpiar semanas antiguas de la lista (guardar solo las últimas 12)
   vym._borradas = vym._borradas.slice(-12);
   delete vym.semanas[semKey];
-  saveStateAndSync();
+  marcarCambios();
   renderVyM();
   toast('Semana restablecida');
 }
@@ -9024,6 +9088,53 @@ function precExportarPDFUno(pubId) {
 
 
 <script>
+
+// ══════════════════════════════════════════
+// SISTEMA DE GUARDADO MANUAL
+// ══════════════════════════════════════════
+let _hayCambios = false;
+
+function marcarCambios() {
+  // Guarda localmente de inmediato (sin sync remoto) y muestra el botón
+  state._lastModified = Date.now();
+  localStorage.setItem(KEY, JSON.stringify(state));
+  if(!_hayCambios) {
+    _hayCambios = true;
+    const btn = document.getElementById('btn-guardar-flotante');
+    if(btn) btn.classList.add('visible');
+    const badge = document.getElementById('appbar-cambios-badge');
+    if(badge) badge.classList.add('visible');
+  }
+}
+
+function guardarAhora() {
+  if(!_hayCambios) return;
+  _hayCambios = false;
+  const btn = document.getElementById('btn-guardar-flotante');
+  if(btn) {
+    btn.classList.remove('visible');
+    btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Guardado';
+    btn.style.background = '#0f766e';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="save-dot"></span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Guardar cambios';
+      btn.style.background = '';
+    }, 1500);
+  }
+  const badge = document.getElementById('appbar-cambios-badge');
+  if(badge) badge.classList.remove('visible');
+  // Ahora sí sincronizar con el servidor
+  _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+  toast('✓ Guardado');
+}
+
+// Advertir si hay cambios sin guardar al cerrar/navegar
+window.addEventListener('beforeunload', function(e) {
+  if(_hayCambios) {
+    e.preventDefault();
+    e.returnValue = '¿Salir sin guardar los cambios?';
+  }
+});
+
 // ── Service Worker inline (PWA offline) ──
 if('serviceWorker' in navigator) {
   const swLines = [
