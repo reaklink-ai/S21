@@ -23498,9 +23498,19 @@
       "pin": "5543",
       "rol": "anciano",
       "grupo": "Grupo 9"
+    },
+    {
+      "id": "mnyqfr1k",
+      "nombre": "Miguel_R",
+      "pin": "1234",
+      "rol": "anciano",
+      "grupo": "Grupo 4",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1776177774836,
+  "_lastModified": 1776177869658,
   "vym": {
     "semanas": {},
     "historial": [
