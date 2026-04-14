@@ -20645,7 +20645,7 @@
             "particip": true,
             "horas": "30",
             "cursos": "1",
-            "notas": "CREDITO DE HORAS DE BETEL 25"
+            "notas": "HORAS DE BETEL 25"
           },
           "Mar": {
             "particip": false,
@@ -23458,7 +23458,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776137381889,
+  "_lastModified": 1776137385445,
   "vym": {
     "semanas": {},
     "historial": [
