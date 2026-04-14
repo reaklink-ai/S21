@@ -8260,61 +8260,75 @@ function precGetDatos(pub, anio) {
 }
 
 // ── Extractor de horas adicionales desde el campo Notas ──
-// Soporta formatos libres como los de Jaime:
+// Cubre todos los formatos reales observados:
+//   "HORAS DE BETEL 15"     → 15h  (unidad antes del número)
+//   "30 horas betel"        → 30h  (número antes de unidad)
 //   "38 HRS (GVP + LDC)"   → 38h
 //   "23 HORAS LDC+GVP"     → 23h
-//   "10 HORAS GVP LDC"     → 10h
 //   "16HR (GVP LDC)"       → 16h
-//   "15 GVP - TRAMITES"    → 15h
-//   "48 betel, 10 construccion" → 58h total
+//   "15 GVP - TRAMITES"    → 15h  (número al inicio sin unidad)
 // Devuelve { total, detalle: [{tipo, horas, raw}] }
 function _extraerHorasNotas(notas) {
   if(!notas) return { total: 0, detalle: [] };
   const txt = notas.trim();
-
   const detalle = [];
-  let totalExtraido = 0;
+  let total = 0;
 
-  // ── Estrategia 1: número + unidad (h / hr / hrs / horas / horas)
-  // Captura: "38 HRS (...)", "23 HORAS LDC+GVP", "16HR (GVP LDC)"
-  // El número va ANTES de la unidad; la etiqueta es lo que viene después (hasta coma o fin)
-  const reUnidad = /(\d+(?:[.,]\d+)?)\s*(h(?:rs?|oras?)?)([^,;\n]*)?/gi;
+  // Patrón 1: número ANTES de unidad → "38 HRS ...", "30 horas betel", "16HR ..."
+  // Captura el número seguido de h/hr/hrs/horas (con o sin "de" después)
+  const re1 = /(\d+(?:[.,]\d+)?)\s*h(?:rs?|oras?(?:\s+de)?)?(?:\b|(?=[^a-z]))/gi;
   let m;
-  while((m = reUnidad.exec(txt)) !== null) {
+  while((m = re1.exec(txt)) !== null) {
     const num = parseFloat(m[1].replace(',', '.'));
-    if(num <= 0 || num > 300) continue;
-    // Etiqueta: texto después de la unidad, limpio
-    const etiqueta = (m[3] || '').replace(/^[\s()\-–:]+|[\s()\-–:]+$/g, '').trim();
-    const tipo = etiqueta.length > 0 ? etiqueta.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_+]/g, '').slice(0, 30) || 'extra' : 'extra';
-    detalle.push({ tipo, horas: num, raw: (m[1] + ' ' + m[2] + (etiqueta?' '+etiqueta:'')).trim() });
-    totalExtraido += num;
+    if(num > 0 && num <= 300) {
+      // Etiqueta: texto que sigue (ej: "betel", "GVP LDC", etc.)
+      const resto = txt.slice(m.index + m[0].length).replace(/^[\s()\-:]+/, '').split(/[,;]/)[0].trim();
+      const tipo = resto.length > 0 ? resto.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_+]/g,'').slice(0,30) || 'extra' : 'extra';
+      detalle.push({ tipo, horas: num, raw: (m[0] + (resto ? ' ' + resto : '')).trim() });
+      total += num;
+    }
   }
 
-  // ── Estrategia 2: número al inicio de la nota, sin unidad, seguido de texto
-  // Captura: "15 GVP - TRAMITES"
-  // Solo si estrategia 1 no encontró nada
+  // Patrón 2: unidad ANTES del número → "HORAS DE BETEL 15"
+  // Solo si el patrón 1 no encontró nada
   if(detalle.length === 0) {
-    const reInicio = /^(\d+(?:[.,]\d+)?)\s+([A-Za-z].{0,40})/;
-    const mi = txt.match(reInicio);
-    if(mi) {
-      const num = parseFloat(mi[1].replace(',', '.'));
+    const re2 = /h(?:rs?|oras?)\s+(?:\w+\s+){0,2}(\d+(?:[.,]\d+)?)/gi;
+    while((m = re2.exec(txt)) !== null) {
+      const num = parseFloat(m[1].replace(',', '.'));
       if(num > 0 && num <= 300) {
-        const etiqueta = mi[2].replace(/[-–]+$/, '').trim();
-        const tipo = etiqueta.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_+]/g,'').slice(0,30) || 'extra';
-        detalle.push({ tipo, horas: num, raw: mi[0].trim() });
-        totalExtraido += num;
+        // Etiqueta: palabras entre la unidad y el número
+        const entre = m[0].replace(/^h(?:rs?|oras?)\s+/i,'').replace(/\s*\d[\d.,]*$/,'').trim();
+        const tipo = entre.length > 0 ? entre.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'').slice(0,30) : 'extra';
+        detalle.push({ tipo, horas: num, raw: m[0].trim() });
+        total += num;
       }
     }
   }
 
-  return { total: totalExtraido, detalle };
+  // Patrón 3: número al inicio sin unidad → "15 GVP - TRAMITES"
+  // Solo si los patrones anteriores no encontraron nada
+  if(detalle.length === 0) {
+    const re3 = /^(\d+(?:[.,]\d+)?)\s+([A-Za-z])/;
+    const mi = txt.match(re3);
+    if(mi) {
+      const num = parseFloat(mi[1].replace(',', '.'));
+      if(num > 0 && num <= 300) {
+        const etiqueta = txt.slice(mi[1].length).replace(/^[\s]+/, '').replace(/[-]+$/, '').trim();
+        const tipo = etiqueta.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_+]/g,'').slice(0,30) || 'extra';
+        detalle.push({ tipo, horas: num, raw: txt.trim() });
+        total += num;
+      }
+    }
+  }
+
+  return { total, detalle };
 }
 
 // Compatibilidad — extrae solo horas Betel (para código legado)
 function _extraerHorasBetel(notas) {
-  const resultado = _extraerHorasNotas(notas);
-  const betel = resultado.detalle.find(d => d.tipo === 'betel');
-  return betel ? betel.horas : 0;
+  const r = _extraerHorasNotas(notas);
+  const b = r.detalle.find(d => d.tipo === 'betel' || /betel/.test(d.raw||''));
+  return b ? b.horas : 0;
 }
 
 
