@@ -1306,8 +1306,36 @@ input, select, textarea { font-family: var(--font); }
 .vym-cancion { padding: 6px 16px 6px 36px; font-size: 11px; color: var(--ink-3); font-style: italic; border-top: 1px solid var(--border-2); }
 .vym-loading { padding: 20px; text-align: center; color: var(--ink-3); font-size: 12px; }
 .vym-warn { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 8px 12px; font-size: 11px; color: #92400e; margin: 8px 16px; }
+/* ── Banner KPI bar ── */
+.dash-kpi-bar {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: rgba(0,0,0,.2);
+  backdrop-filter: blur(4px);
+}
+.dash-kpi-main {
+  padding: 16px 24px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  cursor: pointer;
+}
+.dash-kpi-cell {
+  padding: 16px 18px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  cursor: pointer;
+}
+.dash-kpi-cell:last-child { border-right: none; }
+
+/* ── Tabla directorio de grupos ── */
+.dir-grupos-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  min-width: 700px;
+}
+
 /* ══════════════════════════════════════════
    RESPONSIVE MÓVIL — iPhone / Android
+
    Breakpoint principal: 599px
 ══════════════════════════════════════════ */
 @media (max-width: 599px) {
@@ -1417,6 +1445,29 @@ input, select, textarea { font-family: var(--font); }
   /* ── Forms ── */
   .form-row { grid-template-columns: 1fr !important; }
   input, select, textarea { font-size: 16px !important; } /* evita zoom automático en iOS */
+
+  /* ── Banner KPIs ── */
+  .dash-kpi-bar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .dash-kpi-main {
+    grid-column: 1 / -1;
+    padding: 14px 18px !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .dash-kpi-main > div:first-child { font-size: 9px !important; }
+  .dash-kpi-main .sora-num { font-size: 32px !important; }
+  .dash-kpi-cell {
+    padding: 12px 16px !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .dash-kpi-cell:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.1) !important; }
+
+  /* ── Tabla grupos en móvil: scroll horizontal ── */
+  .dir-grupos-table { min-width: 480px !important; }
+  .dir-grupos-table th, .dir-grupos-table td { font-size: 11px !important; padding: 5px 8px !important; }
 }
 
 /* Pantalla muy pequeña (SE, Mini) */
@@ -7580,7 +7631,7 @@ function renderDashboard() {
 
       return `<div style="overflow-x:auto;margin-bottom:20px;border-radius:14px;
         box-shadow:0 1px 3px rgba(26,24,20,.05),0 4px 16px rgba(26,24,20,.07);overflow:hidden">
-        <table style="width:100%;border-collapse:collapse;table-layout:auto;min-width:700px">
+        <table class="dir-grupos-table">
           <thead>
             <tr>${thGrupos}</tr>
             <tr>${trSG}</tr>
@@ -7647,9 +7698,9 @@ function renderDashboard() {
         </div>
       </div>
       <!-- Fila inferior: KPIs de participación con sparkline -->
-      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;background:rgba(0,0,0,.2);backdrop-filter:blur(4px)">
+      <div class="dash-kpi-bar">
         <!-- Participación grande con sparkline -->
-        <div style="padding:16px 24px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+        <div class="dash-kpi-main" onclick="abrirMetricas()">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Participación · ${mesNombre}</div>
           <div style="display:flex;align-items:flex-end;gap:16px">
             <div>
@@ -7663,19 +7714,19 @@ function renderDashboard() {
           </div>
         </div>
         <!-- Sin informar -->
-        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+        <div class="dash-kpi-cell" onclick="abrirMetricas()">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Sin informe</div>
           <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:${noPredicaron===0?'#86efac':'#fca5a5'};line-height:1;letter-spacing:-1.5px">${noPredicaron}</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">${noPredicaron===0?'✓ Todos':'pendientes'}</div>
         </div>
         <!-- Prec. auxiliares -->
-        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+        <div class="dash-kpi-cell" onclick="abrirMetricas()">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. auxiliares</div>
           <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#c4b5fd;line-height:1;letter-spacing:-1.5px">${paux}</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">este mes</div>
         </div>
         <!-- Precursores regulares -->
-        <div style="padding:16px 20px;cursor:pointer" onclick="irA('precursores')">
+        <div class="dash-kpi-cell" onclick="irA('precursores')">
           <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. regulares</div>
           <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#fcd34d;line-height:1;letter-spacing:-1.5px">${precursores}</div>
           <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">activos</div>
