@@ -14501,12 +14501,19 @@
       "genero": "M",
       "anciano": false,
       "siervo": true,
-      "precursorReg": false,
+      "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -14516,11 +14523,11 @@
             "paux": true
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "INICIA PRECURSOR REGULAR"
           },
           "Sep": {
             "particip": true,
@@ -25325,7 +25332,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776275960498,
+  "_lastModified": 1776275988624,
   "vym": {
     "semanas": {},
     "historial": [
