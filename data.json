@@ -45,7 +45,7 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -24607,7 +24607,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1776226452026,
+  "_lastModified": 1776228274786,
   "vym": {
     "semanas": {},
     "historial": [
