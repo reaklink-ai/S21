@@ -24459,71 +24459,71 @@
     {
       "id": "admin",
       "nombre": "Administrador",
-      "pin": "4535",
       "rol": "admin",
-      "grupo": null
+      "grupo": null,
+      "pinHash": "0cf24f11659c87aaa80beaddb488cd868800cad9f312ee5066981ced67938c3b"
     },
     {
       "id": "mmnourlz",
       "nombre": "Harold_La",
-      "pin": "3212",
       "rol": "anciano",
-      "grupo": "Grupo 5"
+      "grupo": "Grupo 5",
+      "pinHash": "5c0435fc7af45a80aa236693aa029dd9104e71da1af286be5a93cdb9454424c0"
     },
     {
       "id": "mmnvz44s",
       "nombre": "Samuel_Ga",
-      "pin": "6718",
       "rol": "anciano",
-      "grupo": "Grupo 5"
+      "grupo": "Grupo 5",
+      "pinHash": "5f054b9f96b34092356119bc8051f550712467c25cb4fa8e71560b96b6a1ac11"
     },
     {
       "id": "mn0unrhh",
       "nombre": "Roger_R",
-      "pin": "7867",
       "rol": "anciano",
-      "grupo": "Grupo 10"
+      "grupo": "Grupo 10",
+      "pinHash": "c04c726c57f9449faf8ff727243174850f257377ec94350251493c0753184ca9"
     },
     {
       "id": "mn0uppul",
       "nombre": "Oscar_R",
-      "pin": "5645",
       "rol": "anciano",
-      "grupo": "Grupo 14"
+      "grupo": "Grupo 14",
+      "pinHash": "e6a92607de07c8306bd82ad4c7a1595e0e47912c5a6c1a06a749fc391d3b3235"
     },
     {
       "id": "mn6c0veo",
       "nombre": "Alfonso_C",
-      "pin": "8900",
       "rol": "secretario",
-      "grupo": null
+      "grupo": null,
+      "pinHash": "e6f14c7582f98fc8e735f6d399af50bf0a439cbcd7b5bf6b801b11ed8fbbb786"
     },
     {
       "id": "mn6c16i0",
       "nombre": "Ruben_P",
-      "pin": "2144",
       "rol": "secretario",
-      "grupo": null
+      "grupo": null,
+      "pinHash": "3226019a8803f77caf2783636bb5fbf8c6ca7c8a815a19a3633b57853742d6db"
     },
     {
       "id": "mnw4rm5n",
       "nombre": "Isaac_G",
-      "pin": "5543",
       "rol": "anciano",
-      "grupo": "Grupo 9"
+      "grupo": "Grupo 9",
+      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     },
     {
       "id": "mnyqfr1k",
       "nombre": "Miguel_R",
-      "pin": "3423",
       "rol": "anciano",
       "grupo": "Grupo 4",
       "accesos": {
         "vym": false
-      }
+      },
+      "pinHash": "fb2c6b2578437aaa44934be81015dc0d8cc0c5a1f295f553e94f2e6375a75ad6"
     }
   ],
-  "_lastModified": 1776221325427,
+  "_lastModified": 1776221864124,
   "vym": {
     "semanas": {},
     "historial": [
