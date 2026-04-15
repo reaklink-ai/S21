@@ -380,63 +380,92 @@ input, select, textarea { font-family: var(--font); }
 .dash-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+  gap: 14px;
   margin-bottom: 28px;
 }
-@media (min-width: 600px) { .dash-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 900px) { .dash-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 600px) { .dash-grid { grid-template-columns: repeat(4, 1fr); } }
 
+/* ── Tarjeta de acceso rápido ── */
 .dash-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 20px 18px;
+  border-radius: 18px;
+  padding: 20px 20px 18px;
   cursor: pointer;
-  transition: border-color .15s var(--ease), box-shadow .15s var(--ease), transform .12s var(--ease);
-  display: flex; flex-direction: column; gap: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.03), 0 2px 8px rgba(0,0,0,.03);
+  transition: box-shadow .18s var(--ease), transform .14s var(--ease);
+  display: flex; flex-direction: column; gap: 0;
+  box-shadow: 0 1px 2px rgba(26,24,20,.04), 0 3px 12px rgba(26,24,20,.05);
+  position: relative; overflow: hidden;
+}
+.dash-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 18px;
+  opacity: 0;
+  transition: opacity .18s;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 2px var(--accent);
 }
 .dash-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-lt), 0 4px 16px rgba(79,70,229,.1);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(26,24,20,.1), 0 2px 8px rgba(26,24,20,.06);
+  transform: translateY(-3px);
 }
-.dash-card:active { transform: scale(.98); }
+.dash-card:hover::after { opacity: 1; }
+.dash-card:active { transform: scale(.97); }
+
+/* Icono */
 .dash-card-ico {
-  width: 36px; height: 36px;
-  background: var(--surface-2);
-  border-radius: 10px;
+  width: 42px; height: 42px;
+  border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 6px;
+  margin-bottom: 14px;
   flex-shrink: 0;
+  background: var(--surface-2);
 }
-.dash-card.c-accent .dash-card-ico { background: linear-gradient(135deg, var(--accent-lt), #e0e8f8); }
+.dash-card-ico svg { width: 20px; height: 20px; }
+
+/* Colores de icono por variante */
+.dash-card.c-accent .dash-card-ico { background: #eef1f9; }
 .dash-card.c-accent .dash-card-ico svg { color: var(--accent); }
-.dash-card.c-red .dash-card-ico { background: var(--red-lt); }
-.dash-card.c-red .dash-card-ico svg { color: var(--red); }
-.dash-card.c-green .dash-card-ico { background: var(--green-lt); }
-.dash-card.c-green .dash-card-ico svg { color: var(--green); }
-.dash-card.c-amber .dash-card-ico { background: var(--amber-lt); }
-.dash-card.c-amber .dash-card-ico svg { color: var(--amber); }
-.dash-card.c-violet .dash-card-ico { background: var(--violet-lt); }
+.dash-card.c-red    .dash-card-ico { background: #fef2f2; }
+.dash-card.c-red    .dash-card-ico svg { color: var(--red); }
+.dash-card.c-green  .dash-card-ico { background: #f0fdf4; }
+.dash-card.c-green  .dash-card-ico svg { color: var(--green); }
+.dash-card.c-amber  .dash-card-ico { background: #fffbeb; }
+.dash-card.c-amber  .dash-card-ico svg { color: var(--amber); }
+.dash-card.c-violet .dash-card-ico { background: #faf5ff; }
 .dash-card.c-violet .dash-card-ico svg { color: var(--violet); }
-.dash-card.c-teal .dash-card-ico { background: var(--teal-lt); }
-.dash-card.c-teal .dash-card-ico svg { color: var(--teal); }
-.dash-card-label { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: .1px; }
+.dash-card.c-teal   .dash-card-ico { background: #f0fdfa; }
+.dash-card.c-teal   .dash-card-ico svg { color: var(--teal); }
+
+/* Borde superior de color por variante */
+.dash-card.c-accent { border-top: 3px solid var(--accent); }
+.dash-card.c-red    { border-top: 3px solid var(--red); }
+.dash-card.c-green  { border-top: 3px solid var(--green); }
+.dash-card.c-amber  { border-top: 3px solid var(--amber); }
+.dash-card.c-violet { border-top: 3px solid var(--violet); }
+.dash-card.c-teal   { border-top: 3px solid var(--teal); }
+
+/* Texto */
+.dash-card-label {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11px; font-weight: 600;
+  color: var(--ink-3); letter-spacing: .2px;
+  text-transform: uppercase; margin-bottom: 5px;
+}
 .dash-card-value {
   font-family: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
-  font-size: 30px; font-weight: 800;
+  font-size: 32px; font-weight: 800;
   color: var(--ink); line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px; margin-bottom: 4px;
 }
-.dash-card-label {
-  font-size: 11.5px; font-weight: 600;
-  color: var(--ink-3); letter-spacing: .1px;
+.dash-card-desc {
   font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 11.5px; color: var(--ink-3);
+  line-height: 1.4; font-weight: 400;
 }
-.dash-card-desc { font-size: 11px; color: var(--ink-3); line-height: 1.4; margin-top: 2px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
 
-.dash-card.wide { grid-column: span 2; flex-direction: row; align-items: center; gap: 14px; }
+.dash-card.wide { grid-column: span 2; }
 @media (max-width: 599px) { .dash-card.wide { grid-column: span 2; } }
 
 /* ══════════════════════════════════════════
@@ -1277,6 +1306,127 @@ input, select, textarea { font-family: var(--font); }
 .vym-cancion { padding: 6px 16px 6px 36px; font-size: 11px; color: var(--ink-3); font-style: italic; border-top: 1px solid var(--border-2); }
 .vym-loading { padding: 20px; text-align: center; color: var(--ink-3); font-size: 12px; }
 .vym-warn { background: #fef3c7; border: 1px solid #fcd34d; border-radius: 8px; padding: 8px 12px; font-size: 11px; color: #92400e; margin: 8px 16px; }
+/* ══════════════════════════════════════════
+   RESPONSIVE MÓVIL — iPhone / Android
+   Breakpoint principal: 599px
+══════════════════════════════════════════ */
+@media (max-width: 599px) {
+
+  /* ── Layout general ── */
+  :root { --appbar-h: 56px; }
+  body { font-size: 14px; }
+
+  .dashboard-wrap,
+  .grupos-screen-wrap,
+  .prec-wrap,
+  .asist-screen,
+  .inact-list,
+  .mud-list { padding-left: 12px !important; padding-right: 12px !important; }
+
+  .main { padding: 16px 12px 80px !important; }
+
+  /* ── Banner dashboard ── */
+  .dash-banner { flex-direction: column !important; gap: 0 !important; border-radius: 16px !important; }
+  .dash-banner > div:first-child { padding: 20px 20px 14px !important; }
+  .dash-banner > div:last-child { grid-template-columns: 1fr 1fr !important; }
+  .dash-banner > div:last-child > div:first-child { grid-column: 1 / -1; }
+  .dw-stat { text-align: left; }
+
+  /* ── Cards acceso rápido ── */
+  .dash-grid { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .dash-card { padding: 16px 14px 14px !important; border-radius: 14px !important; }
+  .dash-card-ico { width: 36px !important; height: 36px !important; margin-bottom: 10px !important; }
+  .dash-card-value { font-size: 26px !important; }
+  .dash-card-label { font-size: 10px !important; }
+  .dash-card-desc { font-size: 10.5px !important; }
+
+  /* ── S-21 tabla ── */
+  .s21-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .s21-tabla { min-width: 380px !important; font-size: 11.5px !important; }
+  .s21-anio-bar { flex-wrap: wrap; gap: 8px; padding: 10px 12px !important; }
+  .s21-actions { flex-wrap: wrap; gap: 6px; }
+  .s21-act-btn { font-size: 11px !important; padding: 5px 10px !important; }
+  .s21-toolbar { padding: 8px 12px !important; gap: 6px; }
+  .s21-toolbar-name { font-size: 13px !important; }
+  .s21-form { padding: 12px 10px 4px !important; }
+  .s21-info-row { flex-wrap: wrap; }
+  .s21-info-cell { padding: 4px 8px !important; }
+  .s21-info-val { font-size: 13px !important; }
+
+  /* ── Modal ── */
+  .modal { max-height: 96vh !important; }
+  .modal-body { max-height: calc(96vh - 160px) !important; padding: 16px !important; }
+  .mf-row { grid-template-columns: 1fr !important; }
+  .modal-ft { padding: 12px 16px !important; gap: 8px; }
+  .btn-save, .btn-cancel { font-size: 13px !important; padding: 9px 16px !important; }
+
+  /* ── Métricas ── */
+  .met-kpi-grid { grid-template-columns: repeat(2,1fr) !important; gap: 8px !important; }
+  .met-kpi { padding: 14px 12px 10px !important; }
+  .met-kpi-n { font-size: 28px !important; }
+  .met-kpi-l { font-size: 10px !important; }
+  .met-mes-grid { grid-template-columns: repeat(3,1fr) !important; gap: 6px !important; }
+  .met-mes-card { padding: 10px 6px !important; }
+  .met-mes-n { font-size: 16px !important; }
+  .met-bar-label { width: 110px !important; font-size: 11px !important; }
+  .met-pub-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* ── Precursores ── */
+  .prec-stats { grid-template-columns: repeat(2,1fr) !important; }
+  .prec-stat-n { font-size: 20px !important; }
+  .prec-card { border-radius: 14px !important; }
+  .prec-actions { gap: 6px !important; padding: 8px 12px 12px !important; flex-wrap: wrap; }
+  .prec-btn { font-size: 10.5px !important; padding: 5px 10px !important; }
+  .prec-meses { gap: 4px !important; padding: 10px 12px !important; }
+  .prec-mes-chip { min-width: 34px !important; padding: 4px 5px !important; }
+  .prec-mes-chip-n { font-size: 11px !important; }
+
+  /* ── VyM ── */
+  .vym-wrap { padding: 12px 10px 80px !important; }
+  .vym-semana { border-radius: 12px !important; }
+  .vym-semana-hd { padding: 10px 14px !important; }
+  .vym-tabla td { font-size: 11.5px !important; }
+  .vym-select { font-size: 11px !important; padding: 5px 7px !important; min-width: 100px !important; }
+  .vym-parte-nombre { font-size: 12px !important; }
+
+  /* ── Grupos ── */
+  .gs-card { border-radius: 14px !important; }
+  .gs-card-hd { padding: 12px 14px !important; }
+
+  /* ── Inactivos / Mudados ── */
+  .inact-item, .mud-item { padding: 12px 14px !important; gap: 10px; }
+
+  /* ── Appbar ── */
+  .appbar { padding: 0 12px !important; }
+  .appbar-btn span { display: none; }
+  .appbar-btn { padding: 6px 10px !important; }
+
+  /* ── Sidebar ── */
+  .sidebar { display: none !important; }
+
+  /* ── Directorio de grupos (dashboard) ── */
+  .dash-section-label { font-size: 10px !important; }
+  table[style*="min-width:700px"] { min-width: 500px !important; }
+
+  /* ── Pub list panel ── */
+  .pub-list-panel { width: 100% !important; min-width: 100% !important; }
+
+  /* ── Botón guardar flotante ── */
+  #btn-guardar-flotante { bottom: 74px !important; right: 14px !important; font-size: 12px !important; padding: 10px 16px !important; }
+
+  /* ── Forms ── */
+  .form-row { grid-template-columns: 1fr !important; }
+  input, select, textarea { font-size: 16px !important; } /* evita zoom automático en iOS */
+}
+
+/* Pantalla muy pequeña (SE, Mini) */
+@media (max-width: 380px) {
+  .dash-card-value { font-size: 22px !important; }
+  .met-kpi-n { font-size: 24px !important; }
+  .prec-stat-n { font-size: 18px !important; }
+  .dash-grid { gap: 8px !important; }
+}
+
 @media print {
   .vym-actions, .vym-semana-load, .vym-select, .sidebar, .appbar, .mobile-nav, .panel-footer, .pub-scroll-top { display: none !important; }
   .vym-wrap { padding: 0; max-width: 100%; }
@@ -7539,52 +7689,52 @@ function renderDashboard() {
     </div>
     <div class="dash-grid">
       <div class="dash-card c-accent" onclick="irA('publicadores')">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-users"/></svg></div>
+        <div class="dash-card-ico"><svg><use href="#ico-users"/></svg></div>
         <div class="dash-card-label">Publicadores</div>
         <div class="dash-card-value">${total}</div>
         <div class="dash-card-desc">Registros S-21 individuales</div>
       </div>
       <div class="dash-card c-accent" onclick="irA('grupos')">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-grid"/></svg></div>
+        <div class="dash-card-ico"><svg><use href="#ico-grid"/></svg></div>
         <div class="dash-card-label">Por grupo</div>
         <div class="dash-card-value">${gruposActivos.length}</div>
-        <div class="dash-card-desc">Grupos con miembros</div>
+        <div class="dash-card-desc">Grupos con miembros asignados</div>
       </div>
-      <div class="dash-card c-accent" onclick="abrirMetricas()">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
-        <div class="dash-card-label">Métricas</div>
-        <div class="dash-card-value" style="font-size:28px;letter-spacing:-1px">${pctParticip}%</div>
-        <div class="dash-card-desc">Participación ${mesNombre}</div>
+      <div class="dash-card c-green" onclick="abrirMetricas()">
+        <div class="dash-card-ico"><svg><use href="#ico-chart"/></svg></div>
+        <div class="dash-card-label">Participación · ${mesNombre}</div>
+        <div class="dash-card-value">${pctParticip}%</div>
+        <div class="dash-card-desc">${participaron} de ${total} informaron</div>
       </div>
-      <div class="dash-card c-teal" onclick="toggleAsistencia()">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
-        <div class="dash-card-label">Asistencia</div>
-        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">Asist.</div>
-        <div class="dash-card-desc">Registro de asistencia</div>
+      <div class="dash-card c-red" onclick="abrirMetricas()">
+        <div class="dash-card-ico"><svg><use href="#ico-alert"/></svg></div>
+        <div class="dash-card-label">Sin informe · ${mesNombre}</div>
+        <div class="dash-card-value">${noPredicaron}</div>
+        <div class="dash-card-desc">${noPredicaron===0?'✓ Todos informaron':'Pendientes de informe'}</div>
       </div>
       <div class="dash-card c-amber" onclick="irA('precursores')">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-star"/></svg></div>
-        <div class="dash-card-label">Precursores</div>
+        <div class="dash-card-ico"><svg><use href="#ico-star"/></svg></div>
+        <div class="dash-card-label">Precursores regulares</div>
         <div class="dash-card-value">${precursores}</div>
-        <div class="dash-card-desc">Regulares activos</div>
+        <div class="dash-card-desc">Activos este año</div>
       </div>
       <div class="dash-card c-violet" onclick="irA('vym')">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-book"/></svg></div>
+        <div class="dash-card-ico"><svg><use href="#ico-book"/></svg></div>
         <div class="dash-card-label">Vida y Ministerio</div>
-        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">VyM</div>
-        <div class="dash-card-desc">Programa semanal</div>
+        <div class="dash-card-value">${paux}</div>
+        <div class="dash-card-desc">Prec. auxiliares este mes</div>
       </div>
-      <div class="dash-card" onclick="exportarEmergencias()">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
-        <div class="dash-card-label">Emergencias</div>
-        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">${total}</div>
-        <div class="dash-card-desc">Directorio de contacto</div>
+      <div class="dash-card c-teal" onclick="toggleAsistencia()">
+        <div class="dash-card-ico"><svg><use href="#ico-cal"/></svg></div>
+        <div class="dash-card-label">Asistencia</div>
+        <div class="dash-card-value">${(state.asistencia||[]).length}</div>
+        <div class="dash-card-desc">Reuniones registradas</div>
       </div>
       <div class="dash-card" onclick="abrirModalGrupos()">
-        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-gear"/></svg></div>
+        <div class="dash-card-ico"><svg><use href="#ico-gear"/></svg></div>
         <div class="dash-card-label">Gestión de grupos</div>
-        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">${GRUPOS_LISTA.length}</div>
-        <div class="dash-card-desc">Asignar miembros</div>
+        <div class="dash-card-value">${GRUPOS_LISTA.length}</div>
+        <div class="dash-card-desc">Grupos configurados</div>
       </div>
     </div>
     ${bloqueSuper}
