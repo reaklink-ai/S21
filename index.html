@@ -5293,6 +5293,29 @@ async function verificarLogin() {
   }
   applyRoleUI();
   irA('inicio');
+
+  // Siempre jalar datos remotos al hacer login — crítico en dominio nuevo o dispositivo nuevo
+  setTimeout(async () => {
+    try {
+      const res = await fetch(SYNC_URL + '?t=' + Date.now());
+      if(!res.ok) return;
+      const json   = await res.json();
+      const remoto = json.data;
+      if(!remoto) return;
+      const tsLocal  = state._lastModified || 0;
+      const tsRemoto = remoto._lastModified || 0;
+      // Si el remoto tiene datos más recientes O el local está vacío → usar remoto
+      const localVacio = !state.publicadores || state.publicadores.length === 0;
+      if(localVacio || tsRemoto > tsLocal) {
+        state = _mergeStates(state, remoto);
+        if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [{...DEFAULT_ADMIN}];
+        migrarUsuariosLegacy();
+        localStorage.setItem(KEY, JSON.stringify(state));
+        renderDashboard(); renderLista();
+        toast('✓ Datos sincronizados');
+      }
+    } catch(e) {}
+  }, 300);
 }
 
 function logout(motivo) {
