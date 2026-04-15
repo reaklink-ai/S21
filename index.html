@@ -3763,6 +3763,7 @@ function renderLista() {
 
   // Filtro base — búsqueda por nombre, apellido o grupo
   let lista = state.publicadores.filter(p => {
+    if((state.mudados||[]).some(m => m.id === p.id)) return false; // excluir mudados
     const haystack = (p.apellido+' '+p.nombre+' '+(p.grupo||'')).toLowerCase();
     return !q || haystack.includes(q);
   });
@@ -3779,7 +3780,9 @@ function renderLista() {
   lista = lista.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
 
   // Contadores
-  const pubsBase = esAnciano ? state.publicadores.filter(p=>p.grupo===currentUser.grupo) : state.publicadores;
+  const _mudadosIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubsActivos = state.publicadores.filter(p => !_mudadosIds.has(p.id));
+  const pubsBase = esAnciano ? pubsActivos.filter(p=>p.grupo===currentUser.grupo) : pubsActivos;
   document.getElementById('statTotal').textContent = pubsBase.length;
   const grupos = new Set(pubsBase.map(p=>p.grupo).filter(Boolean));
   document.getElementById('statGrupos').textContent = grupos.size;
@@ -6549,7 +6552,8 @@ function renderMetResumen() {
   const el = document.getElementById('mtab-body-resumen');
   try {
     const _gf = (can('soloGrupo') && currentUser && currentUser.grupo) ? currentUser.grupo : null;
-    const pubs = state.publicadores.filter(p => !_gf || p.grupo === _gf);
+    const _mudIdsM = new Set((state.mudados||[]).map(m=>m.id));
+    const pubs = state.publicadores.filter(p => !_mudIdsM.has(p.id) && (!_gf || p.grupo === _gf));
     const total = pubs.length;
     if(!total) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay publicadores registrados.</div>'; return; }
 
@@ -6663,7 +6667,8 @@ function renderMetResumen() {
 
 function renderMetMensual() {
   const anio = getAnioMetrica();
-  const pubs = state.publicadores;
+  const _mudIdsMen = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !_mudIdsMen.has(p.id));
   const el = document.getElementById('mtab-body-mensual');
   if(!pubs.length) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay datos.</div>'; return; }
 
@@ -6804,7 +6809,8 @@ function renderMetMensual() {
 
 function exportarInformeMes() {
   const { mesC: mesCV, mesNombre, anio: anioMes, idx: mesIdx } = mesActual();
-  const pubs = state.publicadores;
+  const _mudIdsExp = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !_mudIdsExp.has(p.id));
   const anio = getAnioMetrica();
 
   function getReg(p, m, a) { return (p.registros||{})[a]?.[m] || (p.registros||{})[String(a)]?.[m]; }
@@ -7044,7 +7050,8 @@ function closeMobDrawer() {
 // DASHBOARD (INICIO)
 // ══════════════════════════════════════════
 function renderDashboard() {
-  const pubs  = state.publicadores;
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs  = state.publicadores.filter(p => !_mudIds.has(p.id));
   const total = pubs.length;
   const anio  = anioHoy();
 
@@ -7763,7 +7770,8 @@ function _vymRolReal(parte) {
 }
 
 function _vymPool(rol, genero) {
-  const pubs = state.publicadores.filter(p => !p.inactivo && !p.noBautizado);
+  const _mudIdsVym = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !p.inactivo && !p.noBautizado && !_mudIdsVym.has(p.id));
   let pool;
   if(rol === 'anciano')         pool = pubs.filter(p => p.anciano);
   else if(rol === 'anciano_siervo') pool = pubs.filter(p => p.anciano || p.siervo);
