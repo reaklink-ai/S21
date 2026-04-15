@@ -23849,6 +23849,119 @@
         "direccion": "",
         "notasMed": ""
       }
+    },
+    {
+      "id": "p1776221052712",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "30",
+            "notas": "LDC: 3 SKE: 20"
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "5",
+            "notas": "SKE: 70"
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "6",
+            "notas": "SKE: 70"
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "33",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Serna Rivadeneira",
+      "nombre": "Cristina Alexandra",
+      "nacimiento": "1993-12-12",
+      "bautismo": "2012-03-18",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      }
     }
   ],
   "grupos": {
@@ -24308,7 +24421,7 @@
       }
     }
   ],
-  "_lastModified": 1776220977978,
+  "_lastModified": 1776221113983,
   "vym": {
     "semanas": {},
     "historial": [
