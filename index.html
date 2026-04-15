@@ -424,12 +424,17 @@ input, select, textarea { font-family: var(--font); }
 .dash-card.c-teal .dash-card-ico svg { color: var(--teal); }
 .dash-card-label { font-size: 11px; font-weight: 600; color: var(--ink-3); letter-spacing: .1px; }
 .dash-card-value {
-  font-family: var(--font);
+  font-family: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
   font-size: 30px; font-weight: 800;
   color: var(--ink); line-height: 1;
   letter-spacing: -1px;
 }
-.dash-card-desc { font-size: 11px; color: var(--ink-3); line-height: 1.4; margin-top: 2px; }
+.dash-card-label {
+  font-size: 11.5px; font-weight: 600;
+  color: var(--ink-3); letter-spacing: .1px;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+.dash-card-desc { font-size: 11px; color: var(--ink-3); line-height: 1.4; margin-top: 2px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
 
 .dash-card.wide { grid-column: span 2; flex-direction: row; align-items: center; gap: 14px; }
 @media (max-width: 599px) { .dash-card.wide { grid-column: span 2; } }
@@ -2838,6 +2843,7 @@ input:focus, select:focus, textarea:focus {
   <symbol id="ico-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
   <symbol id="ico-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
   <symbol id="ico-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="ico-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
 </svg>
 
 <!-- APPBAR -->
@@ -7454,78 +7460,134 @@ function renderDashboard() {
       ${bloquesHtml}`;
   })() : '';
 
-  document.getElementById('dashboardGrid').innerHTML = `
-    <!-- Banner bienvenida -->
-    <div class="dash-banner">
-      <div>
-        <div class="dash-banner-title">Registro de Predicación</div>
-        <div class="dash-banner-sub">Año de servicio ${anio}-${anio+1}</div>
-      </div>
-      <div style="margin-top:6px;display:flex;gap:6px;flex-wrap:wrap">
-        <span style="background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">
-          📋 Informes: ${mesNombre} ${anioMes}-${anioMes+1}
-        </span>
-        ${new Date().getDate() < 20 ? `<span style="background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">⏰ Envío a sucursal: día 20</span>` : `<span style="background:#d1fae5;color:#065f46;font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px">✅ Período de envío activo</span>`}
-      </div>
-      <div class="dash-banner-stats">
-        <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
-        <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
-        <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
-      </div>
-    </div>
-    <div style="margin-top:20px" class="dash-section-label">Accesos rápidos</div>
-    <div class="dash-grid">
+  // Calcular datos adicionales para el nuevo dashboard
+  const pctParticip = total ? Math.round(participaron/total*100) : 0;
+  const pctColor = pctParticip>=80?'#16a34a':pctParticip>=60?'#f59e0b':'#ef4444';
 
-    <div class="dash-card c-accent" onclick="irA('publicadores')">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-users"/></svg></div>
-      <div class="dash-card-label">Publicadores</div>
-      <div class="dash-card-value">${total}</div>
-      <div class="dash-card-desc">Registros S-21 individuales</div>
+  // Mini sparkline de últimos 6 meses
+  const spark = Array.from({length:6},(_,i) => {
+    const idx = ((mesActual().idx - (5-i)) + 12) % 12;
+    const m   = MESES_C[idx];
+    const a   = idx <= mesActual().idx ? anioMes : anioMes - 1;
+    return total ? Math.round(pubs.filter(p=>{ const r=(p.registros||{})[a]?.[m]; return r&&r.particip; }).length/total*100) : 0;
+  });
+  const sparkMax = Math.max(...spark, 1);
+  const sparkBars = spark.map((v,i) => {
+    const h = Math.max(3, Math.round(v/sparkMax*28));
+    const isLast = i===spark.length-1;
+    return `<div style="width:6px;height:${h}px;border-radius:3px;background:${isLast?'#fff':'rgba(255,255,255,.45)'};align-self:flex-end"></div>`;
+  }).join('');
+
+  document.getElementById('dashboardGrid').innerHTML = `
+    <!-- ── BANNER REDISEÑADO ── -->
+    <div class="dash-banner" style="padding:0;overflow:hidden;border-radius:var(--r-xl)">
+      <!-- Fila superior: título + stats -->
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 32px 20px;flex-wrap:wrap;gap:16px;width:100%">
+        <div>
+          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.5);margin-bottom:4px">
+            ${new Date().getDate()<20?'⏰ Envío a sucursal: día 20':'✅ Período de envío activo'}
+          </div>
+          <div class="dash-banner-title">Registro de Predicación</div>
+          <div class="dash-banner-sub">Año de servicio ${anio}–${anio+1} · Informe ${mesNombre}</div>
+        </div>
+        <div style="display:flex;gap:24px;flex-shrink:0">
+          <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
+          <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
+          <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
+        </div>
+      </div>
+      <!-- Fila inferior: KPIs de participación con sparkline -->
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;background:rgba(0,0,0,.2);backdrop-filter:blur(4px)">
+        <!-- Participación grande con sparkline -->
+        <div style="padding:16px 24px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Participación · ${mesNombre}</div>
+          <div style="display:flex;align-items:flex-end;gap:16px">
+            <div>
+              <div style="font-family:'Sora',var(--font);font-size:40px;font-weight:800;color:#fff;line-height:1;letter-spacing:-2px">${pctParticip}<span style="font-size:22px;font-weight:600;opacity:.7">%</span></div>
+              <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:3px">${participaron} de ${total} publicadores</div>
+            </div>
+            <div style="display:flex;align-items:flex-end;gap:3px;height:32px;margin-bottom:4px">${sparkBars}</div>
+          </div>
+          <div style="margin-top:10px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden">
+            <div style="height:100%;width:${pctParticip}%;background:${pctColor};border-radius:4px;transition:width .6s"></div>
+          </div>
+        </div>
+        <!-- Sin informar -->
+        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Sin informe</div>
+          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:${noPredicaron===0?'#86efac':'#fca5a5'};line-height:1;letter-spacing:-1.5px">${noPredicaron}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">${noPredicaron===0?'✓ Todos':'pendientes'}</div>
+        </div>
+        <!-- Prec. auxiliares -->
+        <div style="padding:16px 20px;border-right:1px solid rgba(255,255,255,.1);cursor:pointer" onclick="abrirMetricas()">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. auxiliares</div>
+          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#c4b5fd;line-height:1;letter-spacing:-1.5px">${paux}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">este mes</div>
+        </div>
+        <!-- Precursores regulares -->
+        <div style="padding:16px 20px;cursor:pointer" onclick="irA('precursores')">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. regulares</div>
+          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#fcd34d;line-height:1;letter-spacing:-1.5px">${precursores}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">activos</div>
+        </div>
+      </div>
     </div>
-    <div class="dash-card c-accent" onclick="irA('grupos')">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-grid"/></svg></div>
-      <div class="dash-card-label">Grupos activos</div>
-      <div class="dash-card-value">${gruposActivos.length}</div>
-      <div class="dash-card-desc">Con miembros asignados</div>
+
+    <!-- ── ACCESOS RÁPIDOS ── -->
+    <div style="margin-top:24px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between">
+      <span class="dash-section-label" style="margin:0">Accesos rápidos</span>
     </div>
-    <div class="dash-card c-accent" onclick="abrirMetricas()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
-      <div class="dash-card-label">Predicaron · ${mesNombre} <span style="font-size:9px;opacity:.7">(informe)</span></div>
-      <div class="dash-card-value">${participaron}</div>
-      <div class="dash-card-desc">de ${total} · ${Math.round(participaron/total*100)||0}%</div>
+    <div class="dash-grid">
+      <div class="dash-card c-accent" onclick="irA('publicadores')">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-users"/></svg></div>
+        <div class="dash-card-label">Publicadores</div>
+        <div class="dash-card-value">${total}</div>
+        <div class="dash-card-desc">Registros S-21 individuales</div>
+      </div>
+      <div class="dash-card c-accent" onclick="irA('grupos')">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-grid"/></svg></div>
+        <div class="dash-card-label">Por grupo</div>
+        <div class="dash-card-value">${gruposActivos.length}</div>
+        <div class="dash-card-desc">Grupos con miembros</div>
+      </div>
+      <div class="dash-card c-accent" onclick="abrirMetricas()">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
+        <div class="dash-card-label">Métricas</div>
+        <div class="dash-card-value" style="font-size:28px;letter-spacing:-1px">${pctParticip}%</div>
+        <div class="dash-card-desc">Participación ${mesNombre}</div>
+      </div>
+      <div class="dash-card c-teal" onclick="toggleAsistencia()">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
+        <div class="dash-card-label">Asistencia</div>
+        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">Asist.</div>
+        <div class="dash-card-desc">Registro de asistencia</div>
+      </div>
+      <div class="dash-card c-amber" onclick="irA('precursores')">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-star"/></svg></div>
+        <div class="dash-card-label">Precursores</div>
+        <div class="dash-card-value">${precursores}</div>
+        <div class="dash-card-desc">Regulares activos</div>
+      </div>
+      <div class="dash-card c-violet" onclick="irA('vym')">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-book"/></svg></div>
+        <div class="dash-card-label">Vida y Ministerio</div>
+        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">VyM</div>
+        <div class="dash-card-desc">Programa semanal</div>
+      </div>
+      <div class="dash-card" onclick="exportarEmergencias()">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
+        <div class="dash-card-label">Emergencias</div>
+        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">${total}</div>
+        <div class="dash-card-desc">Directorio de contacto</div>
+      </div>
+      <div class="dash-card" onclick="abrirModalGrupos()">
+        <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-gear"/></svg></div>
+        <div class="dash-card-label">Gestión de grupos</div>
+        <div class="dash-card-value" style="font-size:22px;letter-spacing:-.5px">${GRUPOS_LISTA.length}</div>
+        <div class="dash-card-desc">Asignar miembros</div>
+      </div>
     </div>
-    <div class="dash-card ${noPredicaron>0?'c-red':'c-green'}" onclick="abrirMetricas()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
-      <div class="dash-card-label">Sin informar · ${mesNombre}</div>
-      <div class="dash-card-value">${noPredicaron}</div>
-      <div class="dash-card-desc">${noPredicaron===0?'✓ Todos informaron':'Pendientes de informe'}</div>
-    </div>
-    <div class="dash-card c-amber" onclick="abrirMetricas()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-star"/></svg></div>
-      <div class="dash-card-label">Prec. auxiliares · ${mesNombre}</div>
-      <div class="dash-card-value">${paux}</div>
-      <div class="dash-card-desc">Mes vencido ${mesNombre}</div>
-    </div>
-    <div class="dash-card" onclick="toggleAsistencia()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-cal"/></svg></div>
-      <div class="dash-card-label">Asistencia</div>
-      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">Reuniones</div>
-      <div class="dash-card-desc">Registro de asistencia</div>
-    </div>
-    <div class="dash-card" onclick="exportarEmergencias()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
-      <div class="dash-card-label">Emergencias</div>
-      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${total} fichas</div>
-      <div class="dash-card-desc">Directorio de contacto</div>
-    </div>
-    <div class="dash-card" onclick="abrirModalGrupos()">
-      <div class="dash-card-ico"><svg width="20" height="20"><use href="#ico-gear"/></svg></div>
-      <div class="dash-card-label">Gestión de grupos</div>
-      <div class="dash-card-value dash-card-desc" style="font-family:var(--font);font-size:13px;color:var(--ink-2)">${GRUPOS_LISTA.length} grupos</div>
-      <div class="dash-card-desc">Asignar miembros</div>
-    </div>
-  </div>
-  ${bloqueSuper}
+    ${bloqueSuper}
   `;
   // Update sidebar badge
   const badge = document.getElementById('sbBadgePubs');
