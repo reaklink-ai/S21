@@ -14755,11 +14755,11 @@
       "registros": {
         "2025": {
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "28",
+            "notas": "Voluntaria SAC : 24 Horas"
           },
           "Sep": {
             "particip": true,
@@ -25332,7 +25332,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776276019536,
+  "_lastModified": 1776276036162,
   "vym": {
     "semanas": {},
     "historial": [
