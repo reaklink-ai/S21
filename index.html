@@ -1325,13 +1325,16 @@ input, select, textarea { font-family: var(--font); }
 }
 .dash-kpi-cell:last-child { border-right: none; }
 
-/* ── Tabla directorio de grupos ── */
-.dir-grupos-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-  min-width: 700px;
+/* ── Grid directorio de grupos ── */
+.dir-grupos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 32px;
 }
+@media (max-width: 1024px) { .dir-grupos-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px)  { .dir-grupos-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+@media (max-width: 420px)  { .dir-grupos-grid { grid-template-columns: 1fr; } }
 
 /* ══════════════════════════════════════════
    RESPONSIVE MÓVIL — iPhone / Android
@@ -1466,8 +1469,7 @@ input, select, textarea { font-family: var(--font); }
   .dash-kpi-cell:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.1) !important; }
 
   /* ── Tabla grupos en móvil: scroll horizontal ── */
-  .dir-grupos-table { min-width: 480px !important; }
-  .dir-grupos-table th, .dir-grupos-table td { font-size: 11px !important; padding: 5px 8px !important; }
+
 }
 
 /* Pantalla muy pequeña (SE, Mini) */
@@ -7561,104 +7563,72 @@ function renderDashboard() {
     const _mudIds2 = new Set((state.mudados||[]).map(m=>m.id));
     const pubsVis  = pubs.filter(p => !_mudIds2.has(p.id));
 
-    const cols = gruposActivos.map(g => {
+    // Opciones comunes para selects
+    const optsPubs = '<option value="">— Sin asignar —</option>' +
+      pubsVis.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'))
+        .map(p=>`<option value="${p.id}">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</option>`)
+        .join('');
+
+    // Tarjetas por grupo — layout responsivo
+    const tarjetasGrupo = gruposActivos.map(g => {
       const cfg      = state.grupos?.[g] || {};
       const superPub = cfg.super ? pubsVis.find(p=>p.id===cfg.super) : null;
       const auxPub   = cfg.aux   ? pubsVis.find(p=>p.id===cfg.aux)   : null;
-      const miembros = pubsVis.filter(p=>p.grupo===g)
-        .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
-      const sgNom  = superPub ? `${superPub.apellido}, ${superPub.nombre}` : '—';
-      const auxNom = auxPub   ? `${auxPub.apellido}, ${auxPub.nombre}`     : '—';
+      const cnt      = pubsVis.filter(p=>p.grupo===g).length;
+      const sgNom    = superPub ? `${superPub.apellido}, ${superPub.nombre}` : null;
+      const auxNom   = auxPub   ? `${auxPub.apellido}, ${auxPub.nombre}`     : null;
 
-      const memHtml = miembros.map(p =>
-        `<div style="padding:3.5px 12px;font-size:12px;color:var(--ink-2);border-bottom:1px solid var(--border-2);
-          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.45">
-          ${escHtml(p.apellido)}, ${escHtml(p.nombre)}
-        </div>`
-      ).join('');
+      const sgHtml  = sgNom  ? `<strong style="font-size:13px;color:#1e3a6e">${escHtml(sgNom)}</strong>`
+                             : `<span style="font-size:12px;color:var(--ink-3);font-style:italic">Sin asignar</span>`;
+      const auxHtml = auxNom ? `<strong style="font-size:13px;color:#1a5c38">${escHtml(auxNom)}</strong>`
+                             : `<span style="font-size:12px;color:var(--ink-3);font-style:italic">Sin asignar</span>`;
 
-      return { g, sgNom, auxNom, memHtml, cnt: miembros.length };
-    });
-
-    // Dividir en filas de 7
-    const COLS = 7;
-    const bloques = [];
-    for(let i=0; i<cols.length; i+=COLS) bloques.push(cols.slice(i,i+COLS));
-
-    const bloquesHtml = bloques.map(bloque => {
-      const thGrupos = bloque.map(d =>
-        `<th style="background:linear-gradient(135deg,#3d5a9e,#2d4580);color:#fff;
-          padding:8px 12px;font-size:12px;font-weight:800;text-align:left;
-          letter-spacing:-.1px;border-right:2px solid #fff;min-width:160px">
-          ${d.g}
-          <span style="font-size:10px;font-weight:500;opacity:.7;margin-left:4px">${d.cnt}</span>
-        </th>`
-      ).join('');
-
-      // Opciones para modal de edición inline
-      const optsPubs = '<option value="">— Sin asignar —</option>' +
-        pubsVis.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'))
-          .map(p=>`<option value="${p.id}">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</option>`)
-          .join('');
-
-      const trSG = bloque.map(d => {
-        const cfg = state.grupos?.[d.g] || {};
-        const sgNom = d.sgNom === '—' ? '<span style="color:var(--ink-3);font-style:italic">Sin asignar</span>' : `<strong>${escHtml(d.sgNom)}</strong>`;
-        const sel = optsPubs.replace(`value="${cfg.super||''}"`, `value="${cfg.super||''}" selected`);
-        const gKey = d.g.replace(/\s+/g,'_');
-        return `<td style="background:#eef1f9;padding:8px 14px;border-right:1px solid var(--border);
-          border-bottom:1px solid var(--border-2);cursor:pointer;transition:background .12s"
+      return `<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;
+        overflow:hidden;box-shadow:0 1px 3px rgba(26,24,20,.04),0 3px 10px rgba(26,24,20,.05)">
+        <!-- Header -->
+        <div style="background:linear-gradient(135deg,#3d5a9e,#2d4580);color:#fff;
+          padding:9px 14px;display:flex;justify-content:space-between;align-items:center">
+          <span style="font-size:13px;font-weight:800;letter-spacing:-.1px">${g}</span>
+          <span style="font-size:10px;opacity:.7;font-weight:500">${cnt} miembros</span>
+        </div>
+        <!-- SG -->
+        <div style="padding:9px 14px;background:#eef1f9;border-bottom:1px solid var(--border-2);
+          cursor:pointer;transition:background .12s"
           onmouseover="this.style.background='#dce8f8'" onmouseout="this.style.background='#eef1f9'"
-          onclick="dashEditGrupo('${d.g}','super')" title="Clic para cambiar">
-          <span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
-            color:#3d5a9e;display:block;margin-bottom:3px">Superintendente ✎</span>
-          <span style="font-size:13px;color:#1e3a6e;display:block;line-height:1.3">${sgNom}</span>
-        </td>`;
-      }).join('');
-
-      const trAux = bloque.map(d => {
-        const cfg = state.grupos?.[d.g] || {};
-        const auxNom = d.auxNom === '—' ? '<span style="color:var(--ink-3);font-style:italic">Sin asignar</span>' : `<strong>${escHtml(d.auxNom)}</strong>`;
-        return `<td style="background:#f0faf4;padding:8px 14px;border-right:1px solid var(--border);
-          border-bottom:2px solid var(--border);cursor:pointer;transition:background .12s"
+          onclick="dashEditGrupo('${g}','super')">
+          <span style="font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+            color:#3d5a9e;display:block;margin-bottom:2px">Superintendente ✎</span>
+          ${sgHtml}
+        </div>
+        <!-- Aux -->
+        <div style="padding:9px 14px;background:#f0faf4;cursor:pointer;transition:background .12s"
           onmouseover="this.style.background='#d8f0e0'" onmouseout="this.style.background='#f0faf4'"
-          onclick="dashEditGrupo('${d.g}','aux')" title="Clic para cambiar">
-          <span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
-            color:#1a7a4a;display:block;margin-bottom:3px">Auxiliar ✎</span>
-          <span style="font-size:13px;color:#1a5c38;display:block;line-height:1.3">${auxNom}</span>
-        </td>`;
-      }).join('');
-
-      return `<div style="overflow-x:auto;margin-bottom:20px;border-radius:14px;
-        box-shadow:0 1px 3px rgba(26,24,20,.05),0 4px 16px rgba(26,24,20,.07);overflow:hidden">
-        <table class="dir-grupos-table">
-          <thead>
-            <tr>${thGrupos}</tr>
-            <tr>${trSG}</tr>
-            <tr>${trAux}</tr>
-          </thead>
-        </table>
+          onclick="dashEditGrupo('${g}','aux')">
+          <span style="font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+            color:#1a7a4a;display:block;margin-bottom:2px">Auxiliar ✎</span>
+          ${auxHtml}
+        </div>
       </div>`;
     }).join('');
 
     return `
-      <div style="margin-top:32px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+      <div style="margin-top:32px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px">
         <div>
           <div style="font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-.3px">Directorio de grupos</div>
           <div style="font-size:12px;color:var(--ink-3);margin-top:2px">
-            ${gruposActivos.length} grupos · superintendentes, auxiliares y miembros
+            ${gruposActivos.length} grupos · toca para editar superintendente o auxiliar
           </div>
         </div>
         <button onclick="exportarPDFGrupos()"
           style="display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;
           border:none;padding:8px 16px;border-radius:10px;font-size:12px;font-weight:700;
-          cursor:pointer;font-family:var(--font);box-shadow:0 2px 10px rgba(61,90,158,.3);
-          transition:background .15s"
-          onmouseover="this.style.background='#2d4580'" onmouseout="this.style.background='#3d5a9e'">
+          cursor:pointer;font-family:var(--font);box-shadow:0 2px 10px rgba(61,90,158,.3)">
           🖨 PDF grupos
         </button>
       </div>
-      ${bloquesHtml}`;
+      <div class="dir-grupos-grid">
+        ${tarjetasGrupo}
+      </div>`;
   })() : '';
 
   // Calcular datos adicionales para el nuevo dashboard
@@ -7772,8 +7742,8 @@ function renderDashboard() {
       <div class="dash-card c-violet" onclick="irA('vym')">
         <div class="dash-card-ico"><svg><use href="#ico-book"/></svg></div>
         <div class="dash-card-label">Vida y Ministerio</div>
-        <div class="dash-card-value">${paux}</div>
-        <div class="dash-card-desc">Prec. auxiliares este mes</div>
+        <div class="dash-card-value">${Object.keys((state.vym&&state.vym.semanas)||{}).filter(k=>k.slice(0,4)===String(anio)||k.slice(0,4)===String(anio+1)).length}</div>
+        <div class="dash-card-desc">Semanas programadas</div>
       </div>
       <div class="dash-card c-teal" onclick="toggleAsistencia()">
         <div class="dash-card-ico"><svg><use href="#ico-cal"/></svg></div>
