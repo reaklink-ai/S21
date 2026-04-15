@@ -14642,11 +14642,11 @@
             "paux": false
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "SERVICIO MULTIPROPOSITO BOGOTA: 48 HORAS"
           },
           "Sep": {
             "particip": true,
@@ -25332,7 +25332,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776276003684,
+  "_lastModified": 1776276019536,
   "vym": {
     "semanas": {},
     "historial": [
