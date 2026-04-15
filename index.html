@@ -86,8 +86,10 @@ body {
   font-family: var(--font);
   background: var(--bg);
   color: var(--ink);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 14.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -2849,7 +2851,7 @@ input:focus, select:focus, textarea:focus {
     </div>
     S‑21 <span>· Registro de Predicación</span>
   </div>
-  <button class="appbar-btn prim sb-add-btn sb-perm-edit" onclick="abrirModalNuevo()">
+  <button class="appbar-btn prim sb-add-btn sb-perm-crear" onclick="abrirModalNuevo()">
     <svg width="12" height="12"><use href="#ico-plus"/></svg>
     Nuevo
   </button>
@@ -2919,6 +2921,9 @@ input:focus, select:focus, textarea:focus {
         <button class="sb-nav-item sb-perm-export" onclick="exportarHistoricoExcel()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-download"/></svg></span>Histórico Excel
         </button>
+        <button class="sb-nav-item sb-perm-export" onclick="exportarPDFGrupos()">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-move"/></svg></span>PDF Estructura grupos
+        </button>
       </nav>
       <div class="sb-section-label">Publicadores</div>
       <nav class="sb-nav">
@@ -2961,7 +2966,7 @@ input:focus, select:focus, textarea:focus {
       </nav>
     </div>
     <div class="sb-sep"></div>
-    <button class="sb-add-btn sb-perm-edit" onclick="abrirModalNuevo()">
+    <button class="sb-add-btn sb-perm-crear" onclick="abrirModalNuevo()">
       <svg width="14" height="14"><use href="#ico-plus"/></svg>Nuevo publicador
     </button>
   </div>
@@ -3034,7 +3039,7 @@ input:focus, select:focus, textarea:focus {
             <button class="pub-scroll-top" id="scrollTopBtn" onclick="pubListScrollTop()" title="Volver al inicio">↑</button>
           </div>
           <div class="panel-footer">
-            <button class="add-btn" onclick="abrirModalNuevo()">
+            <button class="add-btn sb-perm-crear" onclick="abrirModalNuevo()">
               <svg width="14" height="14"><use href="#ico-plus"/></svg>Nuevo publicador
             </button>
           </div>
@@ -3983,6 +3988,13 @@ function renderS21() {
         </div>
         <div class="s21-info-cell grow">
           <span class="s21-info-val">${pub.nacimiento||''}</span>
+          ${pub.nacimiento ? `<span style="margin-left:10px;background:var(--accent-lt);color:var(--accent);
+            font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap">
+            ${(() => { const d=new Date(pub.nacimiento); const hoy=new Date();
+              let a=hoy.getFullYear()-d.getFullYear();
+              if(hoy.getMonth()<d.getMonth()||(hoy.getMonth()===d.getMonth()&&hoy.getDate()<d.getDate())) a--;
+              return a>0?a+' años':''; })()}
+          </span>` : ''}
         </div>
         <div class="s21-info-cell" style="gap:16px">
           ${chk('Hombre', pub.genero==='M')}
@@ -3997,6 +4009,13 @@ function renderS21() {
         </div>
         <div class="s21-info-cell grow">
           <span class="s21-info-val">${pub.bautismo||''}</span>
+          ${pub.bautismo ? `<span style="margin-left:10px;background:var(--green-lt);color:var(--green);
+            font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;white-space:nowrap">
+            ${(() => { const d=new Date(pub.bautismo); const hoy=new Date();
+              let a=hoy.getFullYear()-d.getFullYear();
+              if(hoy.getMonth()<d.getMonth()||(hoy.getMonth()===d.getMonth()&&hoy.getDate()<d.getDate())) a--;
+              return a>0?a+' año'+(a===1?'':'s')+' bautizado'+(pub.genero==='F'?'a':''):''; })()}
+          </span>` : ''}
         </div>
         <div class="s21-info-cell" style="gap:16px">
           ${chk('Otras ovejas', !!pub.otrasOvejas)}
@@ -5314,6 +5333,137 @@ function regresarMudado(id) {
 }
 
 // ══════════════════════════════════════════
+// PDF ESTRUCTURA DE GRUPOS
+// ══════════════════════════════════════════
+function exportarPDFGrupos() {
+  const fechaHoy = new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
+  const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+  const pubsAct  = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const grupos   = GRUPOS_LISTA.filter(g => pubsAct.some(p=>p.grupo===g));
+
+  // Datos por grupo
+  const datosG = grupos.map(g => {
+    const cfg      = state.grupos?.[g] || {};
+    const superPub = cfg.super ? pubsAct.find(p=>p.id===cfg.super) : null;
+    const auxPub   = cfg.aux   ? pubsAct.find(p=>p.id===cfg.aux)   : null;
+    const miembros = pubsAct.filter(p=>p.grupo===g)
+      .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
+    return {
+      g,
+      sg:  superPub ? `${superPub.apellido}, ${superPub.nombre}` : '—',
+      aux: auxPub   ? `${auxPub.apellido}, ${auxPub.nombre}`     : '—',
+      miembros
+    };
+  });
+
+  // Bloques de 7 columnas por fila
+  const COLS = 7;
+  const bloques = [];
+  for(let i=0; i<datosG.length; i+=COLS) bloques.push(datosG.slice(i,i+COLS));
+
+  const tablasHTML = bloques.map(bloque => {
+    const maxF = Math.max(...bloque.map(d=>d.miembros.length), 0);
+    const pct  = (100/bloque.length).toFixed(2);
+
+    const thG = bloque.map(d =>
+      `<th class="th-g">${d.g} <span class="cnt">${d.miembros.length}</span></th>`
+    ).join('');
+
+    const trSG = bloque.map(d =>
+      `<td class="sg"><span class="lbl">Superintendente</span>${d.sg}</td>`
+    ).join('');
+
+    const trAux = bloque.map(d =>
+      `<td class="aux"><span class="lbl">Auxiliar</span>${d.aux}</td>`
+    ).join('');
+
+    const filas = Array.from({length:maxF},(_,i) =>
+      `<tr>${bloque.map(d => {
+        const p = d.miembros[i];
+        return `<td class="mem${i%2===1?' even':''}">${p ? `${p.apellido}, ${p.nombre}` : ''}</td>`;
+      }).join('')}</tr>`
+    ).join('');
+
+    return `<table class="gt" style="--pct:${pct}%">
+      <colgroup>${bloque.map(()=>`<col style="width:${pct}%">`).join('')}</colgroup>
+      <thead>
+        <tr>${thG}</tr>
+        <tr class="tr-sg">${trSG}</tr>
+        <tr class="tr-aux">${trAux}</tr>
+      </thead>
+      <tbody>${filas}</tbody>
+    </table>`;
+  }).join('<div class="gap"></div>');
+
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Grupos · ${fechaHoy}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',Arial,sans-serif;color:#111;background:#fff;padding:8mm 7mm 6mm;font-size:8pt}
+
+  .hd{display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:8px;padding-bottom:6px;border-bottom:2.5px solid #3d5a9e}
+  .hd-t{font-size:15pt;font-weight:800;color:#3d5a9e;letter-spacing:-.4px}
+  .hd-s{font-size:8pt;color:#888;margin-top:3px;font-weight:400}
+  .hd-r{text-align:right;font-size:8pt;color:#666;line-height:1.7}
+
+  .gt{width:100%;border-collapse:collapse;table-layout:fixed}
+
+  /* Encabezado grupo */
+  .th-g{background:linear-gradient(135deg,#3d5a9e,#2d4580);color:#fff;
+    padding:6px 7px;font-size:9pt;font-weight:800;text-align:left;
+    border-right:2px solid #fff;letter-spacing:-.1px}
+  .cnt{font-size:7pt;font-weight:500;opacity:.7;margin-left:3px}
+
+  /* SG */
+  .sg{background:#eef1f9;padding:4px 7px;border-right:1px solid #c8d4ee;
+    border-bottom:1px solid #c8d4ee;font-size:8pt;font-weight:700;color:#1e3a6e}
+  /* Aux */
+  .aux{background:#f0faf4;padding:4px 7px;border-right:1px solid #b8d9c8;
+    border-bottom:2px solid #3d5a9e;font-size:8pt;font-weight:700;color:#1a5c38}
+
+  .lbl{display:block;font-size:6.5pt;font-weight:700;text-transform:uppercase;
+    letter-spacing:.6px;opacity:.65;margin-bottom:1px}
+
+  /* Miembros */
+  .mem{padding:2.5px 7px;font-size:7.5pt;color:#333;border-right:1px solid #e8ecf5;
+    border-bottom:1px solid #f2f4f8;white-space:normal;word-break:break-word;line-height:1.4}
+  .mem.even{background:#f5f7fc}
+
+  .gap{height:10px}
+  .ft{margin-top:7px;border-top:1px solid #e5e7eb;padding-top:4px;
+    font-size:7pt;color:#bbb;text-align:center}
+  .no-print{text-align:center;margin-bottom:9px}
+  .btn{background:#3d5a9e;color:#fff;border:none;padding:8px 24px;border-radius:7px;
+    font-size:11pt;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;
+    box-shadow:0 2px 10px rgba(61,90,158,.3)}
+  @media print{
+    .no-print{display:none}
+    body{padding:5mm 5mm}
+    @page{size:landscape;margin:4mm}
+  }
+</style></head><body>
+<div class="no-print"><button class="btn" onclick="window.print()">🖨 Imprimir / Guardar PDF</button></div>
+<div class="hd">
+  <div>
+    <div class="hd-t">Estructura de Grupos &mdash; Congregación</div>
+    <div class="hd-s">Año de servicio ${anioHoy()}&ndash;${anioHoy()+1} &nbsp;·&nbsp; ${grupos.length} grupos &nbsp;·&nbsp; ${pubsAct.length} publicadores</div>
+  </div>
+  <div class="hd-r"><strong>${fechaHoy}</strong></div>
+</div>
+${tablasHTML}
+<div class="ft">S-21 · Registro de Predicación · Generado el ${fechaHoy}</div>
+<script>window.addEventListener('load',()=>setTimeout(()=>window.print(),400));<\/script>
+</body></html>`;
+
+  const w = window.open('','_blank','width=1200,height=950');
+  if(w){w.document.write(html);w.document.close();}
+  else toast('⚠ Activa las ventanas emergentes');
+}
+
+
+// ══════════════════════════════════════════
 //  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
 // ══════════════════════════════════════════
 function getUsuarios() {
@@ -5478,6 +5628,10 @@ function applyRoleUI() {
   // Elementos por permiso de clase CSS
   document.querySelectorAll('.sb-perm-edit').forEach(el => {
     el.style.display = canEdit() ? '' : 'none';
+  });
+  // Crear nuevos publicadores — solo admin y secretario
+  document.querySelectorAll('.sb-perm-crear').forEach(el => {
+    el.style.display = can('editarTodo') ? '' : 'none';
   });
   document.querySelectorAll('.sb-perm-export').forEach(el => {
     el.style.display = can('exportar') ? '' : 'none';
@@ -6520,6 +6674,56 @@ function guardarGrupo(grupo, campo, valor) {
 }
 
 
+// Editar SG/Aux desde el dashboard con popup inline
+function dashEditGrupo(grupo, campo) {
+  // Crear overlay simple de selección
+  const existing = document.getElementById('dashEditOverlay');
+  if(existing) existing.remove();
+
+  const pubsVis = state.publicadores.filter(p => !((state.mudados||[]).some(m=>m.id===p.id)));
+  const opts = '<option value="">— Sin asignar —</option>' +
+    pubsVis.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'))
+      .map(p=>`<option value="${p.id}">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</option>`)
+      .join('');
+
+  const cfg     = state.grupos?.[grupo] || {};
+  const current = campo === 'super' ? (cfg.super||'') : (cfg.aux||'');
+  const label   = campo === 'super' ? 'Superintendente' : 'Auxiliar';
+  const color   = campo === 'super' ? '#3d5a9e' : '#1a7a4a';
+
+  const ov = document.createElement('div');
+  ov.id = 'dashEditOverlay';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:800;display:flex;align-items:center;justify-content:center';
+  ov.innerHTML = `
+    <div style="background:#fff;border-radius:16px;padding:24px;width:340px;
+      box-shadow:0 20px 60px rgba(0,0,0,.2);font-family:var(--font)">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.7px;
+        color:${color};margin-bottom:6px">${label}</div>
+      <div style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:16px">${grupo}</div>
+      <select id="dashEditSel" style="width:100%;padding:10px 12px;border:1.5px solid #dde3f0;
+        border-radius:10px;font-size:13px;font-family:var(--font);color:var(--ink);
+        background:#fff;outline:none;cursor:pointer;margin-bottom:16px">
+        ${opts.replace(`value="${current}"`,`value="${current}" selected`)}
+      </select>
+      <div style="display:flex;gap:10px;justify-content:flex-end">
+        <button onclick="document.getElementById('dashEditOverlay').remove()"
+          style="padding:8px 18px;border-radius:8px;border:1px solid var(--border);
+          background:var(--surface-2);font-family:var(--font);font-size:13px;
+          font-weight:600;color:var(--ink-2);cursor:pointer">Cancelar</button>
+        <button onclick="
+          guardarGrupo('${grupo}','${campo}',document.getElementById('dashEditSel').value);
+          document.getElementById('dashEditOverlay').remove();
+          renderDashboard();"
+          style="padding:8px 20px;border-radius:8px;border:none;background:${color};
+          color:#fff;font-family:var(--font);font-size:13px;font-weight:700;cursor:pointer">
+          Guardar</button>
+      </div>
+    </div>`;
+  // Cerrar al clic fuera
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
 // ══════════════════════════════════════════
 // MÉTRICAS
 // ══════════════════════════════════════════
@@ -6555,115 +6759,162 @@ function renderMetResumen() {
     const _mudIdsM = new Set((state.mudados||[]).map(m=>m.id));
     const pubs = state.publicadores.filter(p => !_mudIdsM.has(p.id) && (!_gf || p.grupo === _gf));
     const total = pubs.length;
-    if(!total) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay publicadores registrados.</div>'; return; }
+    if(!total) { el.innerHTML = '<div style="padding:60px;text-align:center;color:var(--ink-3);font-size:14px">No hay publicadores registrados.</div>'; return; }
 
     const anio = getAnioMetrica();
     const ma = mesActual();
     const mesCV = ma.mesC, mesNombre = ma.mesNombre, anioMes = ma.anio;
-    const infoMes = mesVencidoInfo();
 
-    // Composición
-    const nAncianos   = pubs.filter(p=>p.anciano).length;
-    const nSiervos    = pubs.filter(p=>p.siervo&&!p.anciano).length;
-    const nPrecReg    = pubs.filter(p=>p.precursorReg).length;
-    const nPrecEsp    = pubs.filter(p=>p.precursorEsp).length;
-    const nMisioneros = pubs.filter(p=>p.misionero).length;
-    const nPublicad   = pubs.filter(p=>!p.anciano&&!p.siervo&&!p.precursorReg&&!p.precursorEsp&&!p.misionero).length;
-
-    // Totales año
-    let horasTotal = 0, cursosTotal = 0;
-    pubs.forEach(p => MESES_C.forEach(m => {
-      const r = p.registros&&p.registros[anio]&&p.registros[anio][m];
-      if(r){ horasTotal += parseFloat(r.horas)||0; cursosTotal += parseInt(r.cursos)||0; }
-    }));
-
-    // Mes vencido
-    const informaron   = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return r&&r.particip; });
-    const noInformaron = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return !r||!r.particip; });
-    const nPaux        = pubs.filter(p => { const r=p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV]; return r&&r.paux; }).length;
+    // ── Datos del mes vencido ──
+    const informaron   = pubs.filter(p => { const r=(p.registros||{})[anioMes]?.[mesCV]; return r&&r.particip; });
+    const noInformaron = pubs.filter(p => { const r=(p.registros||{})[anioMes]?.[mesCV]; return !r||!r.particip; });
+    const nPaux        = pubs.filter(p => { const r=(p.registros||{})[anioMes]?.[mesCV]; return r&&r.paux; }).length;
     const pct = total ? Math.round(informaron.length/total*100) : 0;
 
-    // Barras composición
-    const cats = [
-      {label:'Ancianos', n:nAncianos, color:'#2563eb'},
-      {label:'Siervos ministeriales', n:nSiervos, color:'#16a34a'},
-      {label:'Precursores regulares', n:nPrecReg, color:'#b45309'},
-      {label:'Precursores especiales', n:nPrecEsp, color:'#7c3aed'},
-      {label:'Misioneros', n:nMisioneros, color:'#be185d'},
-      {label:'Publicadores', n:nPublicad, color:'#64748b'},
-    ].filter(c=>c.n>0);
-    const maxCat = Math.max(...cats.map(c=>c.n), 1);
+    // ── Totales del año ──
+    let horasAnio = 0, cursosAnio = 0;
+    pubs.forEach(p => MESES_C.forEach(m => {
+      const r = (p.registros||{})[anio]?.[m];
+      if(r){ horasAnio += parseFloat(r.horas)||0; cursosAnio += parseInt(r.cursos)||0; }
+    }));
 
-    // Construir HTML
+    // ── Composición ──
+    const comp = [
+      { label:'Ancianos',             n: pubs.filter(p=>p.anciano).length,                                          color:'#2563eb', bg:'#eff6ff' },
+      { label:'Siervos',              n: pubs.filter(p=>p.siervo&&!p.anciano).length,                               color:'#16a34a', bg:'#f0fdf4' },
+      { label:'Prec. regulares',      n: pubs.filter(p=>p.precursorReg).length,                                     color:'#b45309', bg:'#fffbeb' },
+      { label:'Prec. especiales',     n: pubs.filter(p=>p.precursorEsp).length,                                     color:'#7c3aed', bg:'#faf5ff' },
+      { label:'Misioneros',           n: pubs.filter(p=>p.misionero).length,                                        color:'#be185d', bg:'#fdf2f8' },
+      { label:'Publicadores',         n: pubs.filter(p=>!p.anciano&&!p.siervo&&!p.precursorReg&&!p.precursorEsp&&!p.misionero).length, color:'#64748b', bg:'#f8fafc' },
+    ].filter(c=>c.n>0);
+    const maxComp = Math.max(...comp.map(c=>c.n), 1);
+
+    // ── Tendencia últimos 6 meses ──
+    const tendencia = Array.from({length:6},(_,i) => {
+      const idx = ((ma.idx - i) + 12) % 12;
+      const m   = MESES_C[idx];
+      const a   = idx <= ma.idx ? anioMes : anioMes - 1;
+      const inf = pubs.filter(p => { const r=(p.registros||{})[a]?.[m]; return r&&r.particip; }).length;
+      return { mes: MESES[idx].substring(0,3), pct: total ? Math.round(inf/total*100) : 0, n: inf };
+    }).reverse();
+
     let html = '';
 
-    // Banner
-    html += '<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:8px 14px;margin-bottom:14px;font-size:11px;color:#1e40af">';
-    html += '&#128203; ' + infoMes;
-    html += '</div>';
+    // ── KPIs principales ──
+    html += `<div class="met-kpi-grid">
+      <div class="met-kpi" style="color:#2563eb">
+        <div class="met-kpi-n" style="color:#2563eb">${total}</div>
+        <div class="met-kpi-l">Publicadores</div>
+        <div class="met-kpi-sub">registrados activos</div>
+      </div>
+      <div class="met-kpi" style="color:${pct>=80?'#16a34a':pct>=60?'#b45309':'#ef4444'}">
+        <div class="met-kpi-n" style="color:${pct>=80?'#16a34a':pct>=60?'#b45309':'#ef4444'}">${pct}%</div>
+        <div class="met-kpi-l">Informaron · ${mesNombre}</div>
+        <div class="met-kpi-sub">${informaron.length} de ${total} publicadores</div>
+      </div>
+      <div class="met-kpi" style="color:${noInformaron.length===0?'#16a34a':'#ef4444'}">
+        <div class="met-kpi-n" style="color:${noInformaron.length===0?'#16a34a':'#ef4444'}">${noInformaron.length}</div>
+        <div class="met-kpi-l">Sin informe · ${mesNombre}</div>
+        <div class="met-kpi-sub">${noInformaron.length===0?'✓ Todos informaron':'pendientes de informe'}</div>
+      </div>
+      <div class="met-kpi" style="color:#7c3aed">
+        <div class="met-kpi-n" style="color:#7c3aed">${nPaux}</div>
+        <div class="met-kpi-l">Prec. auxiliares</div>
+        <div class="met-kpi-sub">en ${mesNombre}</div>
+      </div>
+    </div>`;
 
-    // KPIs fila 1
-    html += '<div class="met-kpi-grid">';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#2563eb">' + total + '</div><div class="met-kpi-l">Publicadores</div><div class="met-kpi-sub">total registrados</div></div>';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#16a34a">' + pct + '%</div><div class="met-kpi-l">Informaron &middot; ' + mesNombre + '</div><div class="met-kpi-sub">' + informaron.length + ' de ' + total + '</div></div>';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#ef4444">' + noInformaron.length + '</div><div class="met-kpi-l">Sin informe &middot; ' + mesNombre + '</div><div class="met-kpi-sub">' + (noInformaron.length===0?'&#10003; Todos informaron':'Pendientes') + '</div></div>';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#7c3aed">' + nPaux + '</div><div class="met-kpi-l">Prec. auxiliares</div><div class="met-kpi-sub">en ' + mesNombre + '</div></div>';
-    html += '</div>';
+    // ── KPIs anuales ──
+    html += `<div class="met-kpi-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:24px">
+      <div class="met-kpi" style="color:#b45309">
+        <div class="met-kpi-n" style="color:#b45309">${Math.round(horasAnio).toLocaleString('es')}</div>
+        <div class="met-kpi-l">Horas totales del año</div>
+        <div class="met-kpi-sub">año ${anio}–${anio+1} · todos los publicadores</div>
+      </div>
+      <div class="met-kpi" style="color:#0891b2">
+        <div class="met-kpi-n" style="color:#0891b2">${cursosAnio}</div>
+        <div class="met-kpi-l">Cursos bíblicos del año</div>
+        <div class="met-kpi-sub">año ${anio}–${anio+1} · todos los publicadores</div>
+      </div>
+    </div>`;
 
-    // KPIs fila 2
-    html += '<div class="met-kpi-grid" style="grid-template-columns:repeat(2,1fr)">';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#b45309">' + Math.round(horasTotal) + '</div><div class="met-kpi-l">Horas totales</div><div class="met-kpi-sub">a&ntilde;o ' + anio + '-' + (anio+1) + '</div></div>';
-    html += '<div class="met-kpi"><div class="met-kpi-n" style="color:#0891b2">' + cursosTotal + '</div><div class="met-kpi-l">Cursos b&iacute;blicos</div><div class="met-kpi-sub">a&ntilde;o ' + anio + '-' + (anio+1) + '</div></div>';
-    html += '</div>';
+    // ── Tendencia 6 meses ──
+    const maxTend = Math.max(...tendencia.map(t=>t.pct), 1);
+    html += `<div class="met-section-title">Tendencia de participación · últimos 6 meses</div>`;
+    html += `<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:24px">`;
+    tendencia.forEach(t => {
+      const color = t.pct>=80?'#16a34a':t.pct>=60?'#b45309':'#ef4444';
+      html += `<div style="text-align:center;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px 6px">
+        <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);margin-bottom:8px">${t.mes}</div>
+        <div style="height:50px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:6px">
+          <div style="width:28px;border-radius:6px 6px 0 0;background:${color};opacity:.85;
+            height:${Math.max(4,Math.round(t.pct/maxTend*50))}px;transition:height .4s"></div>
+        </div>
+        <div style="font-size:16px;font-weight:800;color:${color};font-family:'Sora',var(--font);letter-spacing:-1px">${t.pct}%</div>
+        <div style="font-size:9px;color:var(--ink-3);margin-top:1px">${t.n} publ.</div>
+      </div>`;
+    });
+    html += `</div>`;
 
-    // Listas informaron / no informaron
-    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">';
+    // ── Listas informaron / no informaron ──
+    html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px">`;
 
-    // Columna informaron
-    html += '<div>';
-    html += '<div class="met-section-title" style="color:#16a34a">&#10003; Informaron (' + informaron.length + ')</div>';
-    html += '<div style="display:flex;flex-direction:column;gap:2px;max-height:220px;overflow-y:auto">';
+    // Informaron
+    html += `<div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:11px;font-weight:800;color:#16a34a;text-transform:uppercase;letter-spacing:.6px">✓ Informaron</span>
+        <span style="background:#f0fdf4;color:#16a34a;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;border:1px solid #bbf7d0">${informaron.length}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3px;max-height:240px;overflow-y:auto;padding-right:2px">`;
     informaron.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).forEach(p => {
-      const r = p.registros&&p.registros[anioMes]&&p.registros[anioMes][mesCV];
+      const r = (p.registros||{})[anioMes]?.[mesCV];
       const det = [];
-      if(r&&r.horas) det.push(r.horas+'h');
-      if(r&&r.cursos) det.push(r.cursos+'c');
-      if(r&&r.paux) det.push('PA');
-      html += '<div style="font-size:11px;padding:3px 8px;background:#f0fdf4;border-radius:4px;display:flex;justify-content:space-between">';
-      html += '<span>' + escHtml(p.apellido) + ', ' + escHtml(p.nombre) + '</span>';
-      html += '<span style="color:#16a34a;font-size:10px">' + det.join(' ') + '</span>';
-      html += '</div>';
+      if(r?.horas)  det.push(`${r.horas}h`);
+      if(r?.cursos) det.push(`${r.cursos}c`);
+      if(r?.paux)   det.push('PA');
+      html += `<div class="met-persona-card" style="background:#f0fdf4">
+        <span style="font-size:12px;color:var(--ink-2)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</span>
+        <span style="font-size:10px;font-weight:700;color:#16a34a">${det.join(' ')}</span>
+      </div>`;
     });
-    html += '</div></div>';
+    html += `</div></div>`;
 
-    // Columna no informaron
-    html += '<div>';
-    html += '<div class="met-section-title" style="color:#ef4444">&#10007; Sin informe (' + noInformaron.length + ')</div>';
-    html += '<div style="display:flex;flex-direction:column;gap:2px;max-height:220px;overflow-y:auto">';
+    // No informaron
+    html += `<div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:11px;font-weight:800;color:#ef4444;text-transform:uppercase;letter-spacing:.6px">✗ Sin informe</span>
+        <span style="background:#fef2f2;color:#ef4444;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;border:1px solid #fca5a5">${noInformaron.length}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:3px;max-height:240px;overflow-y:auto;padding-right:2px">`;
     noInformaron.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).forEach(p => {
-      html += '<div style="font-size:11px;padding:3px 8px;background:#fef2f2;border-radius:4px">';
-      html += escHtml(p.apellido) + ', ' + escHtml(p.nombre);
-      html += '</div>';
+      html += `<div class="met-persona-card" style="background:#fef2f2">
+        <span style="font-size:12px;color:var(--ink-2)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</span>
+        <span style="font-size:10px;color:var(--ink-3)">${p.grupo||''}</span>
+      </div>`;
     });
-    html += '</div></div>';
-    html += '</div>';
+    html += `</div></div></div>`;
 
-    // Barras composición
-    html += '<div class="met-section-title" style="margin-top:16px">Composici&oacute;n de la congregaci&oacute;n</div>';
-    cats.forEach(c => {
-      html += '<div class="met-bar-row">';
-      html += '<div class="met-bar-label">' + c.label + '</div>';
-      html += '<div class="met-bar-track"><div class="met-bar-fill" style="width:' + Math.round(c.n/maxCat*100) + '%;background:' + c.color + '"></div></div>';
-      html += '<div class="met-bar-val" style="color:' + c.color + '">' + c.n + '</div>';
-      html += '</div>';
+    // ── Composición ──
+    html += `<div class="met-section-title">Composición de la congregación</div>`;
+    html += `<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px">`;
+    comp.forEach(c => {
+      html += `<div class="met-bar-row">
+        <div class="met-bar-label" style="color:${c.color};font-weight:600">${c.label}</div>
+        <div class="met-bar-track">
+          <div class="met-bar-fill" style="width:${Math.round(c.n/maxComp*100)}%;background:${c.color}"></div>
+        </div>
+        <div class="met-bar-val" style="color:${c.color}">${c.n}</div>
+        <div style="font-size:10px;color:var(--ink-3);width:36px;text-align:right">${Math.round(c.n/total*100)}%</div>
+      </div>`;
     });
+    html += `</div>`;
 
     el.innerHTML = html;
   } catch(e) {
     el.innerHTML = '<div style="padding:20px;color:red;font-size:12px">Error: ' + e.message + '</div>';
-    console.error('renderMetResumen error:', e);
   }
 }
+
 
 function renderMetMensual() {
   const anio = getAnioMetrica();
@@ -6789,21 +7040,43 @@ function renderMetMensual() {
   informe += '<div style="padding:10px 20px;font-size:10px;color:var(--ink-3);border-top:1px solid var(--border-2)">Generado autom\u00e1ticamente · Datos sujetos a los informes registrados en la app</div>';
   informe += '</div>';
 
-  // ── Historial por mes (cards) ──
+  // ── Historial por mes (cards mejoradas) ──
+  const totalPubs = pubs.length;
   const cards = MESES_C.map((m,i) => {
     const r = calcMes(m, anioMes);
     const esMesActual = i === mesIdx;
-    return '<div class="met-mes-card" style="' + (esMesActual?'border:2px solid var(--accent);':'') + '">'
-      + '<div class="met-mes-nombre">' + MESES[i] + (esMesActual?' <span style="font-size:8px;background:var(--accent);color:#fff;padding:1px 5px;border-radius:10px;vertical-align:middle">actual</span>':'') + '</div>'
-      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:var(--accent)">' + (r.pubsInforme+r.pauxInforme+r.precInforme) + '</div><div class="met-mes-l">informes</div></div>'
-      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#7c3aed">' + r.pauxInforme + '</div><div class="met-mes-l">prec. aux.</div></div>'
-      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#b45309">' + (r.hPub+r.hPaux+r.hPrec) + '</div><div class="met-mes-l">horas</div></div>'
-      + '<div class="met-mes-stat"><div class="met-mes-n" style="color:#0891b2">' + (r.cPub+r.cPaux+r.cPrec) + '</div><div class="met-mes-l">cursos</div></div>'
-      + '</div>';
+    const esFuturo = i > mesIdx;
+    const totalInf = r.pubsInforme + r.pauxInforme + r.precInforme;
+    const pctInf = totalPubs ? Math.round(totalInf/totalPubs*100) : 0;
+    const barColor = pctInf>=80?'#16a34a':pctInf>=60?'#f59e0b':'#ef4444';
+    const hTotal = r.hPub+r.hPaux+r.hPrec;
+    const cTotal = r.cPub+r.cPaux+r.cPrec;
+
+    return `<div class="met-mes-card" style="${esMesActual?'border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-lt);':''}${esFuturo?'opacity:.4;':''}">
+      <div class="met-mes-nombre">${MESES[i].substring(0,3).toUpperCase()}
+        ${esMesActual?'<span style="display:block;background:var(--accent);color:#fff;font-size:7px;padding:1px 5px;border-radius:10px;margin-top:2px">actual</span>':''}
+      </div>
+      <div style="margin:4px 0 6px">
+        <div style="height:4px;background:var(--border-2);border-radius:4px;overflow:hidden">
+          <div style="height:100%;width:${esFuturo?0:pctInf}%;background:${barColor};border-radius:4px"></div>
+        </div>
+        <div style="font-size:10px;color:${esFuturo?'var(--ink-3)':barColor};font-weight:700;margin-top:2px">${esFuturo?'—':pctInf+'%'}</div>
+      </div>
+      <div class="met-mes-stat"><div class="met-mes-n" style="color:var(--accent)">${esFuturo?'—':totalInf}</div><div class="met-mes-l">informes</div></div>
+      <div class="met-mes-stat"><div class="met-mes-n" style="color:#b45309;font-size:15px">${esFuturo||!hTotal?'—':hTotal}</div><div class="met-mes-l">horas</div></div>
+      <div class="met-mes-stat"><div class="met-mes-n" style="color:#0891b2;font-size:15px">${esFuturo||!cTotal?'—':cTotal}</div><div class="met-mes-l">cursos</div></div>
+    </div>`;
   }).join('');
 
   el.innerHTML = '<div style="padding:4px 0 16px">' + informe + '</div>'
-    + '<div style="font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.8px;margin:20px 0 10px">Historial del a\u00f1o ' + anio + '\u2013' + (anio+1) + '</div>'
+    + `<div style="display:flex;align-items:center;justify-content:space-between;margin:24px 0 12px">
+        <div style="font-size:13px;font-weight:800;color:var(--ink)">Historial ${anio}–${anio+1}</div>
+        <div style="display:flex;gap:12px;font-size:10px;color:var(--ink-3)">
+          <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:2px;background:#16a34a;display:inline-block"></span>≥ 80%</span>
+          <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:2px;background:#f59e0b;display:inline-block"></span>60–79%</span>
+          <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:2px;background:#ef4444;display:inline-block"></span>&lt; 60%</span>
+        </div>
+       </div>`
     + '<div class="met-mes-grid">' + cards + '</div>';
 }
 
@@ -6872,7 +7145,11 @@ ${h('Cursos bíblicos', sum(precList,r=>parseInt(r.cursos)||0))}
 
 function renderMetPublicadores() {
   const anio = getAnioMetrica();
-  const pubs = [...state.publicadores].sort((a,b)=>a.apellido.localeCompare(b.apellido));
+  const _gfPub = (can('soloGrupo') && currentUser && currentUser.grupo) ? currentUser.grupo : null;
+  const _mudIdsPub2 = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores
+    .filter(p => !_mudIdsPub2.has(p.id) && (!_gfPub || p.grupo === _gfPub))
+    .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
   if(!pubs.length) { document.getElementById('mtab-body-publicadores').innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay datos.</div>'; return; }
 
   const filas = pubs.map(p => {
@@ -7074,36 +7351,107 @@ function renderDashboard() {
   // Bloque superintendentes — solo admin
   const esAdmin = currentUser && currentUser.rol === 'admin';
   const bloqueSuper = esAdmin ? (() => {
-    const filas = gruposActivos.map(g => {
-      const cfg = state.grupos?.[g] || {};
-      const superPub = cfg.super ? pubs.find(p=>p.id===cfg.super) : null;
-      const superNombre = superPub ? `${superPub.apellido}, ${superPub.nombre}` : '—';
-      const miembros = pubs.filter(p=>p.grupo===g).length;
-      const color = superPub ? 'var(--ink)' : 'var(--ink-3)';
-      return `<tr>
-        <td style="padding:9px 12px;font-weight:700;font-size:13px;color:var(--ink);white-space:nowrap">${g}</td>
-        <td style="padding:9px 12px;font-size:13px;color:${color};font-weight:${superPub?'500':'400'}">${superNombre}</td>
-        <td style="padding:9px 12px;font-size:12px;color:var(--ink-3);text-align:right">${miembros} miembros</td>
-        <td style="padding:9px 12px;text-align:right">
-          <button onclick="abrirModalGrupos()" style="font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);cursor:pointer;transition:all .12s" onmouseover="this.style.background='var(--accent-lt)';this.style.color='var(--accent)';this.style.borderColor='var(--accent-mid)'" onmouseout="this.style.background='var(--surface-2)';this.style.color='var(--ink-2)';this.style.borderColor='var(--border)'">Editar</button>
-        </td>
-      </tr>`;
-    }).join('');
-    return `
-      <div style="margin-top:28px" class="dash-section-label">Superintendentes por grupo</div>
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.03);margin-bottom:28px">
-        <table style="width:100%;border-collapse:collapse">
+    const _mudIds2 = new Set((state.mudados||[]).map(m=>m.id));
+    const pubsVis  = pubs.filter(p => !_mudIds2.has(p.id));
+
+    const cols = gruposActivos.map(g => {
+      const cfg      = state.grupos?.[g] || {};
+      const superPub = cfg.super ? pubsVis.find(p=>p.id===cfg.super) : null;
+      const auxPub   = cfg.aux   ? pubsVis.find(p=>p.id===cfg.aux)   : null;
+      const miembros = pubsVis.filter(p=>p.grupo===g)
+        .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
+      const sgNom  = superPub ? `${superPub.apellido}, ${superPub.nombre}` : '—';
+      const auxNom = auxPub   ? `${auxPub.apellido}, ${auxPub.nombre}`     : '—';
+
+      const memHtml = miembros.map(p =>
+        `<div style="padding:3.5px 12px;font-size:12px;color:var(--ink-2);border-bottom:1px solid var(--border-2);
+          white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.45">
+          ${escHtml(p.apellido)}, ${escHtml(p.nombre)}
+        </div>`
+      ).join('');
+
+      return { g, sgNom, auxNom, memHtml, cnt: miembros.length };
+    });
+
+    // Dividir en filas de 7
+    const COLS = 7;
+    const bloques = [];
+    for(let i=0; i<cols.length; i+=COLS) bloques.push(cols.slice(i,i+COLS));
+
+    const bloquesHtml = bloques.map(bloque => {
+      const thGrupos = bloque.map(d =>
+        `<th style="background:linear-gradient(135deg,#3d5a9e,#2d4580);color:#fff;
+          padding:8px 12px;font-size:12px;font-weight:800;text-align:left;
+          letter-spacing:-.1px;border-right:2px solid #fff;min-width:160px">
+          ${d.g}
+          <span style="font-size:10px;font-weight:500;opacity:.7;margin-left:4px">${d.cnt}</span>
+        </th>`
+      ).join('');
+
+      // Opciones para modal de edición inline
+      const optsPubs = '<option value="">— Sin asignar —</option>' +
+        pubsVis.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'))
+          .map(p=>`<option value="${p.id}">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</option>`)
+          .join('');
+
+      const trSG = bloque.map(d => {
+        const cfg = state.grupos?.[d.g] || {};
+        const sgNom = d.sgNom === '—' ? '<span style="color:var(--ink-3);font-style:italic">Sin asignar</span>' : `<strong>${escHtml(d.sgNom)}</strong>`;
+        const sel = optsPubs.replace(`value="${cfg.super||''}"`, `value="${cfg.super||''}" selected`);
+        const gKey = d.g.replace(/\s+/g,'_');
+        return `<td style="background:#eef1f9;padding:8px 14px;border-right:1px solid var(--border);
+          border-bottom:1px solid var(--border-2);cursor:pointer;transition:background .12s"
+          onmouseover="this.style.background='#dce8f8'" onmouseout="this.style.background='#eef1f9'"
+          onclick="dashEditGrupo('${d.g}','super')" title="Clic para cambiar">
+          <span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+            color:#3d5a9e;display:block;margin-bottom:3px">Superintendente ✎</span>
+          <span style="font-size:13px;color:#1e3a6e;display:block;line-height:1.3">${sgNom}</span>
+        </td>`;
+      }).join('');
+
+      const trAux = bloque.map(d => {
+        const cfg = state.grupos?.[d.g] || {};
+        const auxNom = d.auxNom === '—' ? '<span style="color:var(--ink-3);font-style:italic">Sin asignar</span>' : `<strong>${escHtml(d.auxNom)}</strong>`;
+        return `<td style="background:#f0faf4;padding:8px 14px;border-right:1px solid var(--border);
+          border-bottom:2px solid var(--border);cursor:pointer;transition:background .12s"
+          onmouseover="this.style.background='#d8f0e0'" onmouseout="this.style.background='#f0faf4'"
+          onclick="dashEditGrupo('${d.g}','aux')" title="Clic para cambiar">
+          <span style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;
+            color:#1a7a4a;display:block;margin-bottom:3px">Auxiliar ✎</span>
+          <span style="font-size:13px;color:#1a5c38;display:block;line-height:1.3">${auxNom}</span>
+        </td>`;
+      }).join('');
+
+      return `<div style="overflow-x:auto;margin-bottom:20px;border-radius:14px;
+        box-shadow:0 1px 3px rgba(26,24,20,.05),0 4px 16px rgba(26,24,20,.07);overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;table-layout:auto;min-width:700px">
           <thead>
-            <tr style="background:var(--surface-2);border-bottom:1px solid var(--border)">
-              <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Grupo</th>
-              <th style="padding:9px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Superintendente</th>
-              <th style="padding:9px 12px;text-align:right;font-size:10px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--ink-3)">Miembros</th>
-              <th style="padding:9px 12px"></th>
-            </tr>
+            <tr>${thGrupos}</tr>
+            <tr>${trSG}</tr>
+            <tr>${trAux}</tr>
           </thead>
-          <tbody>${filas}</tbody>
         </table>
       </div>`;
+    }).join('');
+
+    return `
+      <div style="margin-top:32px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
+        <div>
+          <div style="font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-.3px">Directorio de grupos</div>
+          <div style="font-size:12px;color:var(--ink-3);margin-top:2px">
+            ${gruposActivos.length} grupos · superintendentes, auxiliares y miembros
+          </div>
+        </div>
+        <button onclick="exportarPDFGrupos()"
+          style="display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;
+          border:none;padding:8px 16px;border-radius:10px;font-size:12px;font-weight:700;
+          cursor:pointer;font-family:var(--font);box-shadow:0 2px 10px rgba(61,90,158,.3);
+          transition:background .15s"
+          onmouseover="this.style.background='#2d4580'" onmouseout="this.style.background='#3d5a9e'">
+          🖨 PDF grupos
+        </button>
+      </div>
+      ${bloquesHtml}`;
   })() : '';
 
   document.getElementById('dashboardGrid').innerHTML = `
