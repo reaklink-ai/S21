@@ -23736,6 +23736,119 @@
         "direccion": "",
         "notasMed": ""
       }
+    },
+    {
+      "id": "p1776220868449",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "31",
+            "notas": "SKE: 50"
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "4",
+            "notas": "SKE: 50"
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "4",
+            "notas": "SKE: 60"
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "30",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LDC"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Serna Mosquera",
+      "nombre": "Cristian Yamir",
+      "nacimiento": "1990-07-19",
+      "bautismo": "2013-11-30",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      }
     }
   ],
   "grupos": {
@@ -24195,7 +24308,7 @@
       }
     }
   ],
-  "_lastModified": 1776220488874,
+  "_lastModified": 1776220977978,
   "vym": {
     "semanas": {},
     "historial": [
