@@ -4409,6 +4409,34 @@
             "cursos": "",
             "paux": false,
             "notas": "37 Betel"
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         },
         "2025": {
@@ -4445,6 +4473,41 @@
             "notas": "38 Horas Betel"
           },
           "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -23447,6 +23510,119 @@
           "cursos": 0
         }
       }
+    },
+    {
+      "id": "p1776219747113",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "17",
+            "notas": "Permiso Circunstancias Familiares"
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "40",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "51",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "6",
+            "paux": false,
+            "horas": "101",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "7",
+            "paux": false,
+            "horas": "100",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "8",
+            "paux": false,
+            "horas": "74",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "20",
+            "notas": "Permiso Circunstancias Familiares"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Garcia",
+      "nombre": "Laura Johana",
+      "nacimiento": "2002-04-30",
+      "bautismo": "2013-03-30",
+      "grupo": "Grupo 7",
+      "telefono": "3024198781",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": true,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      }
     }
   ],
   "grupos": {
@@ -23895,7 +24071,7 @@
       }
     }
   ],
-  "_lastModified": 1776184033751,
+  "_lastModified": 1776219895219,
   "vym": {
     "semanas": {},
     "historial": [
