@@ -21404,11 +21404,11 @@
             "notas": "HORAS DE BETEL 25"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "13",
+            "notas": "HORAS DE BETEL 40"
           },
           "Abr": {
             "particip": false,
@@ -25402,7 +25402,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776276053325,
+  "_lastModified": 1776276084709,
   "vym": {
     "semanas": {},
     "historial": [
