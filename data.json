@@ -24521,9 +24521,16 @@
         "vym": false
       },
       "pinHash": "fb2c6b2578437aaa44934be81015dc0d8cc0c5a1f295f553e94f2e6375a75ad6"
+    },
+    {
+      "id": "mnziisyf",
+      "nombre": "Felipe_C",
+      "pinHash": "299bcf34fc45cabaf98dd4a422e55f6fdb3f8e8cfa0cf2f9fe84ff87c63d8545",
+      "rol": "auxiliar",
+      "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1776224652628,
+  "_lastModified": 1776225034082,
   "vym": {
     "semanas": {},
     "historial": [
