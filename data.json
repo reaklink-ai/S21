@@ -24583,13 +24583,6 @@
       "pinHash": "3226019a8803f77caf2783636bb5fbf8c6ca7c8a815a19a3633b57853742d6db"
     },
     {
-      "id": "mnw4rm5n",
-      "nombre": "Isaac_G",
-      "rol": "anciano",
-      "grupo": "Grupo 9",
-      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
-    },
-    {
       "id": "mnyqfr1k",
       "nombre": "Miguel_R",
       "rol": "anciano",
@@ -24605,9 +24598,16 @@
       "pinHash": "299bcf34fc45cabaf98dd4a422e55f6fdb3f8e8cfa0cf2f9fe84ff87c63d8545",
       "rol": "auxiliar",
       "grupo": "Grupo 10"
+    },
+    {
+      "id": "mnzktpcx",
+      "nombre": "Isaac_G",
+      "pinHash": "63110353e353278fef7c3f8f37a111877929355ab61772348b32e45800bfd5b6",
+      "rol": "auxiliar",
+      "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776228274786,
+  "_lastModified": 1776228904120,
   "vym": {
     "semanas": {},
     "historial": [
