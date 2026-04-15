@@ -1893,6 +1893,18 @@ body.print-s21 .s21-anio-bar { border-bottom: 1px solid #ccc; }
 }
 .inact-item:hover { box-shadow:0 2px 12px rgba(0,0,0,.08); }
 
+/* ── Mudados ── */
+.mud-list { display:flex; flex-direction:column; gap:10px; }
+.mud-item {
+  display:flex; align-items:center; gap:14px;
+  background:var(--surface); border:1px solid var(--border);
+  border-left: 4px solid #0e7490;
+  border-radius:var(--r); padding:14px 16px;
+  box-shadow:var(--sh);
+  transition:box-shadow .15s;
+}
+.mud-item:hover { box-shadow:0 2px 12px rgba(0,0,0,.08); }
+
 /* ══════════════════════════════════════════
    PANTALLA ASISTENCIA (full-screen)
 ══════════════════════════════════════════ */
@@ -2916,6 +2928,9 @@ input:focus, select:focus, textarea:focus {
         <button class="sb-nav-item" onclick="irA('inactivos')">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-inactive"/></svg></span>Inactivos
         </button>
+        <button class="sb-nav-item" id="sbnav-mudados" onclick="irA('mudados')">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-move"/></svg></span>Mudados
+        </button>
       </nav>
       <div class="sb-section-label">Sistema</div>
       <nav class="sb-nav">
@@ -3041,6 +3056,11 @@ input:focus, select:focus, textarea:focus {
     <!-- INACTIVOS -->
     <div class="screen" id="screen-inactivos" style="display:none">
       <div class="grupos-screen-wrap" id="inactivosWrap"></div>
+    </div>
+
+    <!-- MUDADOS -->
+    <div class="screen" id="screen-mudados" style="display:none">
+      <div class="grupos-screen-wrap" id="mudadosWrap"></div>
     </div>
 
     <!-- ASISTENCIA -->
@@ -3936,6 +3956,7 @@ function renderS21() {
       <span class="s21-toolbar-name">${escHtml(pub.apellido)}, ${escHtml(pub.nombre)}</span>
       <button class="s21-toolbar-btn edit" onclick="abrirModalEditar('${pub.id}')" style="display:${canEditPub(pub)?'':'none'}">Editar</button>
       <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5;display:${can('editarTodo')?'':'none'}" onclick="moverAInactivos('${pub.id}')">Sacar</button>
+      <button class="s21-toolbar-btn" style="background:rgba(14,116,144,.12);border-color:rgba(14,116,144,.3);color:#0e7490;display:${can('editarTodo')?'':'none'}" onclick="moverAMudados('${pub.id}')">✈ Mudado</button>
     </div>
 
     <!-- Formulario oficial -->
@@ -4632,6 +4653,31 @@ function exportarEmergencias() {
 </table>
 <div class="pie">S-21 · Registro de Publicadores · ${fecha}</div>
 
+<!-- MODAL MUDADO -->
+<div class="overlay" id="modalMudadoOverlay" style="display:none">
+  <div class="modal" style="max-width:420px">
+    <div class="modal-hd" style="border-bottom:2px solid #a5f3fc">
+      <span class="modal-hd-title" style="color:#0e7490">✈ Registrar mudanza</span>
+      <button class="modal-x" onclick="cerrarModalMudado()">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <input type="hidden" id="mudadoIdTarget">
+      <p style="font-size:14px;color:var(--ink);font-weight:600" id="mudadoNombre"></p>
+      <p style="font-size:13px;color:var(--ink-2);line-height:1.5">
+        Este publicador será movido al módulo de <strong>Mudados</strong>. Sus registros se conservan y puede regresar en cualquier momento.
+      </p>
+      <div class="mf-group">
+        <label>Congregación o ciudad de destino (opcional)</label>
+        <input id="mudadoDireccion" placeholder="Ej: Congregación Norte, Medellín" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="cerrarModalMudado()">Cancelar</button>
+      <button style="background:#0e7490;color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="confirmarMudado()">✈ Mover a Mudados</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL GESTIÓN USUARIOS -->
 <div class="overlay" id="modalUsuariosOverlay" style="display:none">
   <div class="modal" style="max-width:560px;max-height:90vh;display:flex;flex-direction:column">
@@ -5174,6 +5220,95 @@ function reactivarPub(id) {
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
 }
 
+
+// ══════════════════════════════════════════
+// MÓDULO MUDADOS
+// ══════════════════════════════════════════
+function renderMudados() {
+  const wrap = document.getElementById('mudadosWrap');
+  if(!wrap) return;
+  const lista = (state.mudados || []).sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  const items = lista.length === 0
+    ? `<div style="text-align:center;padding:60px 20px;color:var(--ink-3)">
+        <div style="font-size:40px;margin-bottom:12px;opacity:.3">✈</div>
+        <div style="font-size:15px;font-weight:600">Sin publicadores mudados</div>
+        <div style="font-size:13px;margin-top:6px">Marca publicadores como mudados desde su registro S-21</div>
+       </div>`
+    : lista.map(p => {
+        const tipo = tipoPrincipal(p);
+        const color = TIPO_COLOR[tipo] || '#64748b';
+        const ini = (p.apellido[0]||'')+(p.nombre[0]||'');
+        const fechaMud = p.fechaMudado
+          ? `<span style="font-size:11px;color:var(--ink-3);margin-left:8px">Desde ${p.fechaMudado}</span>` : '';
+        const direc = p.direccionMudado
+          ? `<div style="font-size:11px;color:#0e7490;margin-top:2px">✈ ${escHtml(p.direccionMudado)}</div>` : '';
+        return `<div class="mud-item">
+          <div class="pub-av" style="background:#0e749018;color:#0e7490;flex-shrink:0">${ini}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}${fechaMud}</div>
+            <div style="font-size:12px;color:${color};font-weight:600">${tipo} · ${p.grupo||'Sin grupo'}</div>
+            ${direc}
+          </div>
+          <button class="gs-btn gs-btn-prim" onclick="regresarMudado('${p.id}')" style="white-space:nowrap;flex-shrink:0">↩ Regresar</button>
+        </div>`;
+      }).join('');
+
+  wrap.innerHTML = `
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-family:var(--font-serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.4px">Mudados</div>
+        <div style="font-size:13px;color:var(--ink-3);margin-top:3px">${lista.length} publicador${lista.length!==1?'es':''} mudado${lista.length!==1?'s':''}</div>
+      </div>
+    </div>
+    <div class="mud-list">${items}</div>`;
+}
+
+function moverAMudados(id) {
+  document.getElementById('modalMudadoOverlay').style.display = 'flex';
+  document.getElementById('mudadoIdTarget').value = id;
+  document.getElementById('mudadoDireccion').value = '';
+  const pub = getPub(id);
+  document.getElementById('mudadoNombre').textContent = pub ? `${pub.apellido}, ${pub.nombre}` : '';
+}
+
+function cerrarModalMudado() {
+  document.getElementById('modalMudadoOverlay').style.display = 'none';
+}
+
+function confirmarMudado() {
+  const id        = document.getElementById('mudadoIdTarget').value;
+  const direccion = document.getElementById('mudadoDireccion').value.trim();
+  const pub       = getPub(id);
+  if(!pub) return;
+
+  state.publicadores = state.publicadores.filter(p => p.id !== id);
+  if(!state.mudados) state.mudados = [];
+  const hoy = new Date().toISOString().slice(0,10);
+  state.mudados.push({ ...pub, fechaMudado: hoy, direccionMudado: direccion });
+
+  marcarCambios();
+  selId = null;
+  cerrarModalMudado();
+  renderLista();
+  renderDashboard();
+  toast(`${pub.apellido}, ${pub.nombre} movido a Mudados`);
+}
+
+function regresarMudado(id) {
+  if(!state.mudados) return;
+  const idx = state.mudados.findIndex(p => p.id === id);
+  if(idx < 0) return;
+  const pub = { ...state.mudados[idx] };
+  delete pub.fechaMudado;
+  delete pub.direccionMudado;
+  state.mudados.splice(idx, 1);
+  state.publicadores.push(pub);
+  marcarCambios();
+  renderMudados();
+  renderDashboard();
+  toast(`${pub.apellido}, ${pub.nombre} regresado a la congregación`);
+}
 
 // ══════════════════════════════════════════
 //  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
@@ -6878,6 +7013,7 @@ function irA(pantalla) {
   if(pantalla === 'publicadores') renderLista();
   if(pantalla === 'grupos')       renderGruposScreen();
   if(pantalla === 'inactivos')    renderInactivos();
+  if(pantalla === 'mudados')      renderMudados();
   if(pantalla === 'asistencia')   renderAsistenciaScreen();
   if(pantalla === 'vym')          renderVyM();
   if(pantalla === 'precursores')  renderPrecursores();
@@ -6926,6 +7062,7 @@ function renderDashboard() {
   const gruposActivos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g));
   const ancianos = pubs.filter(p=>p.anciano).length;
   const precursores = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).length;
+  const mudados     = (state.mudados||[]).length;
 
   // Bloque superintendentes — solo admin
   const esAdmin = currentUser && currentUser.rol === 'admin';
@@ -9096,6 +9233,31 @@ function precExportarPDFUno(pubId) {
     <div class="modal-ft">
       <button class="btn-cancel" onclick="cerrarModalInactivo()">Cancelar</button>
       <button style="background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="confirmarInactivo()">Mover a Inactivos</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL MUDADO -->
+<div class="overlay" id="modalMudadoOverlay" style="display:none">
+  <div class="modal" style="max-width:420px">
+    <div class="modal-hd" style="border-bottom:2px solid #a5f3fc">
+      <span class="modal-hd-title" style="color:#0e7490">✈ Registrar mudanza</span>
+      <button class="modal-x" onclick="cerrarModalMudado()">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <input type="hidden" id="mudadoIdTarget">
+      <p style="font-size:14px;color:var(--ink);font-weight:600" id="mudadoNombre"></p>
+      <p style="font-size:13px;color:var(--ink-2);line-height:1.5">
+        Este publicador será movido al módulo de <strong>Mudados</strong>. Sus registros se conservan y puede regresar en cualquier momento.
+      </p>
+      <div class="mf-group">
+        <label>Congregación o ciudad de destino (opcional)</label>
+        <input id="mudadoDireccion" placeholder="Ej: Congregación Norte, Medellín" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="cerrarModalMudado()">Cancelar</button>
+      <button style="background:#0e7490;color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="confirmarMudado()">✈ Mover a Mudados</button>
     </div>
   </div>
 </div>
