@@ -7776,20 +7776,24 @@ function renderGruposScreen() {
   const { mesC, mesNombre } = mesActual();
   const esAnciano = currentUser && (currentUser.rol === 'anciano' || currentUser.rol === 'auxiliar') && currentUser.grupo;
 
+  // Excluir mudados de todo el módulo de grupos
+  const _mudIdsGS = new Set((state.mudados||[]).map(m=>m.id));
+  const _pubsGS   = state.publicadores.filter(p => !_mudIdsGS.has(p.id));
+
   // Anciano solo ve su grupo; los demás ven todos
   const gruposActivos = GRUPOS_LISTA.filter(g => {
     if(esAnciano) return g === currentUser.grupo;
-    return state.publicadores.some(p => p.grupo === g);
+    return _pubsGS.some(p => p.grupo === g);
   });
-  const sinGrupo = esAnciano ? [] : state.publicadores.filter(p => !p.grupo || p.grupo === '');
+  const sinGrupo = esAnciano ? [] : _pubsGS.filter(p => !p.grupo || p.grupo === '');
 
   // Paleta de colores para grupos — cíclica
   const tarjetas = gruposActivos.map((g) => {
-    const miembros = state.publicadores.filter(p => p.grupo === g)
+    const miembros = _pubsGS.filter(p => p.grupo === g)
       .sort((a,b) => a.apellido.localeCompare(b.apellido));
     const info = state.grupos?.[g] || {};
-    const superPub = info.super ? state.publicadores.find(p=>p.id===info.super) : null;
-    const auxPub   = info.aux   ? state.publicadores.find(p=>p.id===info.aux)   : null;
+    const superPub = info.super ? _pubsGS.find(p=>p.id===info.super) : null;
+    const auxPub   = info.aux   ? _pubsGS.find(p=>p.id===info.aux)   : null;
     const superNombre = superPub ? `${superPub.apellido.split(' ')[0]}, ${superPub.nombre.split(' ')[0]}` : null;
     const auxNombre   = auxPub   ? `${auxPub.apellido.split(' ')[0]}, ${auxPub.nombre.split(' ')[0]}`   : null;
 
