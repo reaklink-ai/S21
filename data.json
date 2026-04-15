@@ -24182,9 +24182,19 @@
       "accesos": {
         "vym": false
       }
+    },
+    {
+      "id": "mnzfq6ut",
+      "nombre": "Felipe_C",
+      "pin": "0987",
+      "rol": "anciano",
+      "grupo": "Grupo 10",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1776220316517,
+  "_lastModified": 1776220382197,
   "vym": {
     "semanas": {},
     "historial": [
