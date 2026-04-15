@@ -2790,7 +2790,7 @@ input:focus, select:focus, textarea:focus {
           onkeydown="if(event.key==='Enter')verificarLogin()">
       </div>
       <div id="loginError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:10px 14px;font-size:12px;color:#991b1b;text-align:center;font-weight:600">
-        ⚠ Nombre o PIN incorrecto
+        ⚠ PIN incorrecto
       </div>
       <button onclick="verificarLogin()"
         style="height:46px;background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);margin-top:2px;transition:opacity .15s,box-shadow .15s;box-shadow:0 4px 16px rgba(79,70,229,.35);letter-spacing:-.1px"
@@ -3463,23 +3463,53 @@ const SYNC_URL = 'https://mute-grass-cc8b.reaklink.workers.dev/sync';
 // Los usuarios y contraseñas se guardan en state.usuarios
 // Usuario admin por defecto (solo si no hay ninguno)
 const DEFAULT_ADMIN = { id:'admin', nombre:'Administrador', pin:'4535', rol:'admin', grupo:null };
-// admin123 → 240be518... | secretario123 → e9cee71ab932fde863338d08be4de9dfe39ea049bdafb342ce659ec5450b69ae
 
-let currentUser = null; // usuario logueado
+let currentUser = null;
+
+// ── Seguridad: control de intentos de login ──
+const _loginAttempts = {};
+const MAX_INTENTOS = 5;
+const BLOQUEO_MS   = 5 * 60 * 1000; // 5 min
+
+function _registrarIntentoFallido(n) {
+  const k = n.toLowerCase();
+  if(!_loginAttempts[k]) _loginAttempts[k] = {count:0, blockedUntil:0};
+  _loginAttempts[k].count++;
+  if(_loginAttempts[k].count >= MAX_INTENTOS) {
+    _loginAttempts[k].blockedUntil = Date.now() + BLOQUEO_MS;
+    _loginAttempts[k].count = 0;
+  }
+}
+function _estaBloqueado(n) {
+  const a = _loginAttempts[n.toLowerCase()];
+  if(!a) return false;
+  if(a.blockedUntil > Date.now()) return Math.ceil((a.blockedUntil - Date.now()) / 1000);
+  return false;
+}
+function _limpiarIntentos(n) { delete _loginAttempts[n.toLowerCase()]; }
+function _mostrarErrorLogin(msg) {
+  const err = document.getElementById('loginError');
+  if(err) {
+    err.textContent = '⚠ ' + msg;
+    err.style.display = 'block';
+    setTimeout(() => { if(err) err.style.display = 'none'; }, 4000);
+  }
+}
 
 function getRolLabel(rol) {
-  return {admin:'Administrador',secretario:'Secretario',anciano:'Anciano',lector:'Solo lectura'}[rol] || rol;
+  return {admin:'Administrador',secretario:'Secretario',anciano:'Anciano',auxiliar:'Auxiliar',lector:'Solo lectura'}[rol] || rol;
 }
 function getRolColor(rol) {
-  return {admin:'#1a3fcb',secretario:'#1a6b3c',anciano:'#b45309',lector:'#64748b'}[rol] || '#64748b';
+  return {admin:'#1a3fcb',secretario:'#1a6b3c',anciano:'#b45309',auxiliar:'#0e7490',lector:'#64748b'}[rol] || '#64748b';
 }
 
 // Permisos por rol
 const PERMS = {
-  admin:      { editarTodo:true,  borrar:true,  exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true  },
-  secretario: { editarTodo:true,  borrar:false, exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true  },
-  anciano:    { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true,  asistencia:false, vym:true },
-  lector:     { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:false, asistencia:false },
+  admin:      { editarTodo:true,  borrar:true,  exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true,  vym:true  },
+  secretario: { editarTodo:true,  borrar:false, exportar:true,  verEmerg:true,  soloGrupo:false, asistencia:true,  vym:true  },
+  anciano:    { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true,  asistencia:false, vym:true  },
+  auxiliar:   { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:true,  asistencia:false, vym:false },
+  lector:     { editarTodo:false, borrar:false, exportar:false, verEmerg:false, soloGrupo:false, asistencia:false, vym:false },
 };
 function can(perm) {
   if(!currentUser) return false;
@@ -3499,15 +3529,17 @@ function puedeVerSeccion(seccion) {
   }
   // Defaults por rol
   const defaults = {
-    anciano: { publicadores:true, grupos:true, vym:true, metricas:false, datos:false, inactivos:false },
-    lector:  { publicadores:true, grupos:true, vym:false, metricas:false, datos:false, inactivos:false },
+    anciano:  { publicadores:true, grupos:true, vym:true,  metricas:true,  datos:false, inactivos:false },
+    auxiliar: { publicadores:true, grupos:false, vym:false, metricas:true, datos:false, inactivos:false },
+    lector:   { publicadores:true, grupos:true, vym:false,  metricas:false, datos:false, inactivos:false },
   };
   return !!(defaults[rol] && defaults[rol][seccion]);
 }
 function canEditPub(pub) {
   if(!currentUser) return false;
   if(can('editarTodo')) return true;
-  if(can('soloGrupo') && pub && pub.grupo === currentUser.grupo) return true;
+  // anciano y auxiliar: solo pueden editar publicadores de su grupo asignado
+  if(can('soloGrupo') && currentUser.grupo && pub && pub.grupo === currentUser.grupo) return true;
   return false;
 }
 
@@ -3707,7 +3739,7 @@ function getReg(pub, anio, mes) {
 // ══════════════════════════════════════════
 function renderLista() {
   const q = document.getElementById('searchBox').value.toLowerCase().trim();
-  const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
+  const esAnciano = currentUser && (currentUser.rol === 'anciano' || currentUser.rol === 'auxiliar') && currentUser.grupo;
 
   // Filtro base — búsqueda por nombre, apellido o grupo
   let lista = state.publicadores.filter(p => {
@@ -4635,6 +4667,7 @@ function exportarEmergencias() {
             <label>Rol</label>
             <select id="nuevoRol" onchange="toggleGrupoSelect()" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
               <option value="lector">Solo lectura</option>
+              <option value="auxiliar">Auxiliar</option>
               <option value="anciano">Anciano</option>
               <option value="secretario">Secretario</option>
               <option value="admin">Administrador</option>
@@ -5155,16 +5188,27 @@ function getUsuarios() {
 function migrarUsuariosLegacy() {
   if(!state.usuarios) return;
   state.usuarios.forEach(u => {
-    // Normalizar nombre: si solo tiene 'usuario', usarlo como nombre
     if(!u.nombre && u.usuario) u.nombre = u.usuario;
-    // Asignar PIN si no tiene
-    if(!u.pin) {
-      u.pin = (u.id === 'admin') ? '4535' : '0000';
-    }
-    // Limpiar campos legacy
+    if(!u.pin && !u.pinHash) u.pin = (u.id === 'admin') ? '4535' : '0000';
     delete u.passHash;
     delete u.usuario;
   });
+  _migrarPinsAHash();
+}
+async function _migrarPinsAHash() {
+  if(!state.usuarios) return;
+  let cambios = false;
+  for(const u of state.usuarios) {
+    if(u.pin && !u.pinHash) {
+      u.pinHash = await sha256(u.pin + (u.id || ''));
+      delete u.pin;
+      cambios = true;
+    }
+  }
+  if(cambios) {
+    localStorage.setItem(KEY, JSON.stringify(state));
+    _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+  }
 }
 
 async function sha256(str) {
@@ -5179,15 +5223,21 @@ async function verificarLogin() {
   const pin         = (document.getElementById('loginPass')?.value || '').trim();
   if(!nombreInput || !pin) { toast('Ingresa nombre y PIN'); return; }
 
-  // Mostrar "Verificando..."
+  // Verificar bloqueo
+  const bloqueado = _estaBloqueado(nombreInput);
+  if(bloqueado) {
+    const t = bloqueado < 60 ? bloqueado + 's' : Math.ceil(bloqueado/60) + ' min';
+    _mostrarErrorLogin('Cuenta bloqueada. Intenta en ' + t);
+    return;
+  }
+
   const btnLogin = document.querySelector('#loginScreen button[onclick="verificarLogin()"]');
   if(btnLogin) { btnLogin.textContent = 'Verificando...'; btnLogin.disabled = true; }
 
-  // Cargar usuarios frescos desde el Worker antes de comparar
   try {
     const res = await fetch(SYNC_URL + '?t=' + Date.now());
     if(res.ok) {
-      const json   = await res.json();
+      const json = await res.json();
       const remoto = json.data;
       if(remoto) {
         state = remoto;
@@ -5196,24 +5246,40 @@ async function verificarLogin() {
         localStorage.setItem(KEY, JSON.stringify(state));
       }
     }
-  } catch(e) { /* continuar con datos locales si el Worker no responde */ }
+  } catch(e) {}
 
   if(btnLogin) { btnLogin.textContent = 'Ingresar'; btnLogin.disabled = false; }
 
+  // Comparar PIN: hash (nuevo) o texto plano (legacy aun no migrado)
   const users = getUsuarios();
-  const user  = users.find(u => u.nombre.toLowerCase() === nombreInput.toLowerCase() && u.pin === pin);
+  let user = null;
+  for(const u of users) {
+    if(u.nombre.toLowerCase() !== nombreInput.toLowerCase()) continue;
+    if(u.pinHash) {
+      const h = await sha256(pin + (u.id || ''));
+      if(h === u.pinHash) { user = u; break; }
+    } else if(u.pin && u.pin === pin) { user = u; break; }
+  }
 
   if(!user) {
-    const err = document.getElementById('loginError');
-    if(err) { err.style.display='block'; setTimeout(()=>err.style.display='none', 2500); }
+    _registrarIntentoFallido(nombreInput);
+    const a = _loginAttempts[nombreInput.toLowerCase()] || {};
+    const restantes = MAX_INTENTOS - (a.count || 0);
+    _mostrarErrorLogin(restantes > 0
+      ? 'PIN incorrecto. ' + restantes + ' intento' + (restantes===1?'':'s') + ' restante' + (restantes===1?'':'s')
+      : 'Cuenta bloqueada por ' + (BLOQUEO_MS/60000) + ' minutos');
     document.getElementById('loginPass').value = '';
     document.getElementById('loginPass').focus();
     return;
   }
 
   // Login exitoso
+  _limpiarIntentos(nombreInput);
   currentUser = user;
-  sessionStorage.setItem('s21_user', JSON.stringify(user));
+  const userSafe = Object.assign({}, user);
+  delete userSafe.pin; delete userSafe.pinHash;
+  sessionStorage.setItem('s21_user', JSON.stringify(userSafe));
+  _reiniciarTimeoutSesion();
   document.getElementById('loginScreen').style.display = 'none';
   document.getElementById('appWrap').style.display = 'block';
   document.getElementById('appbar').style.display = 'flex';
@@ -5229,7 +5295,8 @@ async function verificarLogin() {
   irA('inicio');
 }
 
-function logout() {
+function logout(motivo) {
+  if(typeof _sessionTimer !== 'undefined' && _sessionTimer) clearTimeout(_sessionTimer);
   currentUser = null;
   sessionStorage.removeItem('s21_user');
   document.getElementById('loginScreen').style.display = 'flex';
@@ -5237,13 +5304,15 @@ function logout() {
   if(document.getElementById('loginUser')) document.getElementById('loginUser').value = '';
   if(document.getElementById('loginPass')) document.getElementById('loginPass').value = '';
   if(document.getElementById('loginError')) document.getElementById('loginError').style.display = 'none';
+  if(motivo) setTimeout(() => _mostrarErrorLogin(motivo), 200);
   setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
 }
 
 function applyRoleUI() {
   if(!currentUser) return;
   const rol = currentUser.rol;
-  const esAnciano = rol === 'anciano' && currentUser.grupo;
+  const esAnciano  = (rol === 'anciano' || rol === 'auxiliar') && currentUser.grupo;
+  const esAuxiliar = rol === 'auxiliar';
 
   // Elementos por permiso de clase CSS
   document.querySelectorAll('.sb-perm-edit').forEach(el => {
@@ -5296,6 +5365,22 @@ function applyRoleUI() {
   // Formulario de asistencia — solo admin/secretario
   const fc = document.getElementById('asistFormCard');
   if(fc) fc.style.display = can('asistencia') ? '' : 'none';
+
+  // Asistencia nav — auxiliar no la ve
+  ['sbnav-asistencia','mobnav-asistencia'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.style.display = (rol==='auxiliar') ? 'none' : '';
+  });
+
+  // Precursores nav — auxiliar no la ve
+  const precNav = document.getElementById('sbnav-precursores');
+  if(precNav) precNav.style.display = (rol==='auxiliar') ? 'none' : '';
+
+  // Inactivos nav — auxiliar no la ve
+  ['sbnav-inactivos','mobnav-inactivos'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.style.display = (rol==='auxiliar') ? 'none' : '';
+  });
 }
 
 // ── Gestión usuarios (solo admin) ──
@@ -5307,8 +5392,8 @@ function abrirGestionUsuarios() {
 function toggleGrupoSelect() {
   const rol = document.getElementById('nuevoRol').value;
   const wrap = document.getElementById('grupoSelectWrap');
-  wrap.style.display = rol === 'anciano' ? '' : 'none';
-  if(rol === 'anciano') {
+  wrap.style.display = (rol === 'anciano' || rol === 'auxiliar') ? '' : 'none';
+  if(rol === 'anciano' || rol === 'auxiliar') {
     const sel = document.getElementById('nuevoGrupo');
     sel.innerHTML = '<option value="">— Selecciona —</option>' +
       GRUPOS_LISTA.map(g => `<option value="${g}">${g}</option>`).join('');
@@ -5333,8 +5418,9 @@ function renderUsuariosModal() {
 
   // Defaults de acceso por rol (admin/secretario siempre ven todo)
   const DEFAULTS = {
-    anciano:  { publicadores:true, grupos:true, vym:true, metricas:false, inactivos:false, datos:false },
-    lector:   { publicadores:true, grupos:true, vym:false, metricas:false, inactivos:false, datos:false },
+    anciano:  { publicadores:true, grupos:true,  vym:true,  metricas:true,  inactivos:false, datos:false },
+    auxiliar: { publicadores:true, grupos:false, vym:false, metricas:true,  inactivos:false, datos:false },
+    lector:   { publicadores:true, grupos:true,  vym:false, metricas:false, inactivos:false, datos:false },
   };
 
   const lista = users.map(u => {
@@ -5368,7 +5454,7 @@ function renderUsuariosModal() {
           <div style="font-size:11px;color:${getRolColor(u.rol)};font-weight:600">${getRolLabel(u.rol)}${u.grupo?' · '+u.grupo:''}</div>
         </div>
         <div style="display:flex;align-items:center;gap:6px">
-          <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-3);background:var(--surface-2);padding:3px 8px;border-radius:4px;border:1px solid var(--border)">PIN: ${u.pin}</div>
+          <div style="font-family:var(--font-mono);font-size:12px;color:var(--ink-3);background:var(--surface-2);padding:3px 8px;border-radius:4px;border:1px solid var(--border)">PIN: ${u.pinHash ? '••••••' : (u.pin||'——')}</div>
           <button onclick="cambiarPin('${u.id}')" style="background:none;border:1px solid var(--border);border-radius:4px;color:var(--ink-2);cursor:pointer;font-size:11px;padding:3px 8px;font-family:var(--font);font-weight:600">✏</button>
           ${!esProtegido ? `<button onclick="eliminarUsuario('${u.id}')" style="background:none;border:none;color:var(--red);cursor:pointer;font-size:16px;padding:4px 8px">×</button>` : '<span style="font-size:10px;color:var(--ink-3);padding:0 8px">protegido</span>'}
         </div>
@@ -5396,7 +5482,7 @@ function toggleAcceso(userId, seccion, valor) {
   toast('Permiso actualizado');
 }
 
-function cambiarPin(id) {
+async function cambiarPin(id) {
   const users = getUsuarios();
   const u = users.find(x => x.id === id);
   if(!u) return;
@@ -5405,14 +5491,15 @@ function cambiarPin(id) {
   if(!nuevo || nuevo.trim().length < 4) { toast('El PIN debe tener al menos 4 caracteres'); return; }
   const pinLimpio = nuevo.trim();
   if(users.find(x => x.id !== id && x.pin === pinLimpio)) { toast('Ese PIN ya está en uso por otro usuario'); return; }
-  u.pin = pinLimpio;
+  u.pinHash = await _hashPin(pinLimpio, u.id);
+  delete u.pin;
   state.usuarios = users;
   marcarCambios();
   renderUsuariosModal();
   toast(`PIN de "${u.nombre}" actualizado`);
 }
 
-function agregarUsuario() {
+async function agregarUsuario() {
   const nombre = document.getElementById('nuevoNombre').value.trim();
   const pin    = document.getElementById('nuevoPin').value.trim();
   const rol    = document.getElementById('nuevoRol').value;
@@ -5425,7 +5512,8 @@ function agregarUsuario() {
   if(users.find(u => u.pin === pin)) { toast('Ese PIN ya está en uso'); return; }
 
   const id = Date.now().toString(36);
-  users.push({ id, nombre, pin, rol, grupo: grupo || null });
+  const pinHash = await _hashPin(pin, id);
+  users.push({ id, nombre, pinHash, rol, grupo: grupo || null });
   state.usuarios = users;
   marcarCambios();
   renderUsuariosModal();
@@ -6302,7 +6390,8 @@ function getAnioMetrica() { return mesActual().anio; }
 function renderMetResumen() {
   const el = document.getElementById('mtab-body-resumen');
   try {
-    const pubs = state.publicadores;
+    const _gf = (can('soloGrupo') && currentUser && currentUser.grupo) ? currentUser.grupo : null;
+    const pubs = state.publicadores.filter(p => !_gf || p.grupo === _gf);
     const total = pubs.length;
     if(!total) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay publicadores registrados.</div>'; return; }
 
@@ -6937,7 +7026,7 @@ function renderGruposScreen() {
 
   const anio = anioHoy();
   const { mesC, mesNombre } = mesActual();
-  const esAnciano = currentUser && currentUser.rol === 'anciano' && currentUser.grupo;
+  const esAnciano = currentUser && (currentUser.rol === 'anciano' || currentUser.rol === 'auxiliar') && currentUser.grupo;
 
   // Anciano solo ve su grupo; los demás ven todos
   const gruposActivos = GRUPOS_LISTA.filter(g => {
@@ -9015,6 +9104,7 @@ function precExportarPDFUno(pubId) {
             <label>Rol</label>
             <select id="nuevoRol" onchange="toggleGrupoSelect()" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box;background:#fff">
               <option value="lector">Solo lectura</option>
+              <option value="auxiliar">Auxiliar</option>
               <option value="anciano">Anciano</option>
               <option value="secretario">Secretario</option>
               <option value="admin">Administrador</option>
@@ -9032,7 +9122,7 @@ function precExportarPDFUno(pubId) {
     </div>
     <div style="padding:0 20px 16px">
       <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:6px;padding:10px 14px;font-size:12px;color:#0369a1;line-height:1.6">
-        <strong>Login:</strong> Nombre del usuario + PIN · PIN por defecto del admin: <strong>4535</strong><br>
+        <strong>Login:</strong> Nombre del usuario + PIN · PINs cifrados con SHA-256 · Bloqueo tras 5 intentos (5 min)<br>
         Botón ✏ junto a cada usuario para cambiar su PIN.
       </div>
     </div>
@@ -9134,6 +9224,22 @@ window.addEventListener('beforeunload', function(e) {
     e.returnValue = '¿Salir sin guardar los cambios?';
   }
 });
+
+// ═════════════════════════
+// SEGURIDAD — TIMEOUT DE SESIÓN (30 min inactividad)
+// ═════════════════════════
+const SESSION_TIMEOUT_MS = 30 * 60 * 1000;
+let _sessionTimer = null;
+function _reiniciarTimeoutSesion() {
+  if(_sessionTimer) clearTimeout(_sessionTimer);
+  _sessionTimer = setTimeout(() => {
+    if(currentUser) logout('Sesión cerrada por inactividad (30 min)');
+  }, SESSION_TIMEOUT_MS);
+}
+['click','keydown','touchstart'].forEach(ev => {
+  document.addEventListener(ev, () => { if(currentUser) _reiniciarTimeoutSesion(); }, {passive:true});
+});
+async function _hashPin(pin, userId) { return await sha256(pin + (userId||'')); }
 
 // ── Service Worker inline (PWA offline) ──
 if('serviceWorker' in navigator) {
