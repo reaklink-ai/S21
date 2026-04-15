@@ -21425,10 +21425,10 @@
             "notas": ""
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": ""
           },
           "Abr": {
@@ -24898,7 +24898,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776275733580,
+  "_lastModified": 1776275745306,
   "vym": {
     "semanas": {},
     "historial": [
