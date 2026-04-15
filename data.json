@@ -14404,10 +14404,10 @@
             "notas": "29 horas - Construcción"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": ""
           },
           "Sep": {
@@ -25332,7 +25332,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776275988624,
+  "_lastModified": 1776276003684,
   "vym": {
     "semanas": {},
     "historial": [
