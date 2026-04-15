@@ -24190,11 +24190,12 @@
       "rol": "anciano",
       "grupo": "Grupo 10",
       "accesos": {
-        "vym": false
+        "vym": false,
+        "publicadores": false
       }
     }
   ],
-  "_lastModified": 1776220387344,
+  "_lastModified": 1776220488874,
   "vym": {
     "semanas": {},
     "historial": [
