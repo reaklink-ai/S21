@@ -19120,6 +19120,41 @@
             "horas": "30"
           },
           "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "52",
+            "notas": "NUEVA PRECURSORA REGULAR"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -28548,7 +28583,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776304137394,
+  "_lastModified": 1776304157085,
   "vym": {
     "semanas": {},
     "historial": [
