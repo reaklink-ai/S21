@@ -2714,10 +2714,10 @@
         },
         "2025": {
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Sep": {
@@ -28333,7 +28333,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776304080598,
+  "_lastModified": 1776304087080,
   "vym": {
     "semanas": {},
     "historial": [
