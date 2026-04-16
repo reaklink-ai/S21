@@ -15386,7 +15386,7 @@
         },
         "2025": {
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15400,35 +15400,35 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Nov": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Ene": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Feb": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -27505,7 +27505,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303353498,
+  "_lastModified": 1776303365487,
   "vym": {
     "semanas": {},
     "historial": [
