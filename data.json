@@ -2456,7 +2456,7 @@
     },
     {
       "id": "mmm9qi4kqpna",
-      "apellido": "BeleñO",
+      "apellido": "Beleño",
       "nombre": "Isaac",
       "nacimiento": "",
       "bautismo": "2015-02-08",
@@ -2573,10 +2573,10 @@
             "notas": "32 HORAS BETEL"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Abr": {
@@ -2631,7 +2631,7 @@
     },
     {
       "id": "mmm9qi4k0gox",
-      "apellido": "BeleñO",
+      "apellido": "Beleño",
       "nombre": "Laura",
       "nacimiento": "1996-04-05",
       "bautismo": "2014-07-05",
@@ -2645,7 +2645,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -6334,6 +6341,48 @@
             "particip": true
           },
           "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -6610,6 +6659,41 @@
             "horas": "16"
           },
           "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -28249,7 +28333,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303865353,
+  "_lastModified": 1776304080598,
   "vym": {
     "semanas": {},
     "historial": [
