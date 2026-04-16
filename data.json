@@ -19828,7 +19828,7 @@
             "cursos": "1",
             "paux": false,
             "horas": "10",
-            "notas": "45 Horas de Betel "
+            "notas": "45 Horas de Betel"
           },
           "Abr": {
             "particip": false,
@@ -28144,7 +28144,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303716689,
+  "_lastModified": 1776303723311,
   "vym": {
     "semanas": {},
     "historial": [
