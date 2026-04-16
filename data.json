@@ -22271,7 +22271,7 @@
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "2",
             "paux": false,
             "horas": "47",
@@ -28186,7 +28186,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303796034,
+  "_lastModified": 1776303802464,
   "vym": {
     "semanas": {},
     "historial": [
