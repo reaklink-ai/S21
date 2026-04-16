@@ -11210,7 +11210,7 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "44",
             "notas": ""
           },
           "Abr": {
@@ -27293,7 +27293,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303233176,
+  "_lastModified": 1776303238502,
   "vym": {
     "semanas": {},
     "historial": [
