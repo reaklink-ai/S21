@@ -2573,6 +2573,53 @@ input, select, button, a { touch-action: manipulation; }
   pointer-events: none;
 }
 
+/* ── KPI cards de estado precursores ── */
+.prec-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+@media (max-width: 599px) { .prec-kpi-grid { grid-template-columns: 1fr; gap: 10px; } }
+
+.prec-kpi {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px 22px 18px;
+  transition: box-shadow .15s, transform .12s;
+  box-shadow: 0 1px 3px rgba(26,24,20,.04), 0 3px 10px rgba(26,24,20,.05);
+  user-select: none;
+}
+.prec-kpi-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+.prec-kpi-titulo {
+  font-size: 11px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: .7px;
+}
+.prec-kpi-n {
+  font-family: 'Sora', var(--font);
+  font-size: 40px; font-weight: 800;
+  line-height: 1; letter-spacing: -2px;
+  flex-shrink: 0;
+}
+.prec-kpi-sub {
+  font-size: 11.5px; color: var(--ink-3);
+  line-height: 1.5; margin-bottom: 12px;
+}
+.prec-kpi-link {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: .2px;
+}
+
+/* ── Panel de estado precursores ── */
+/* prec-col/rf CSS removed — replaced by prec-kpi */
+
 /* ── Botones de acción tarjeta precursor ── */
 .prec-actions {
   display: flex; gap: 8px; padding: 10px 18px 14px;
@@ -7803,10 +7850,12 @@ function renderGruposScreen() {
     const pct = miembros.length ? Math.round((predicaron/miembros.length)*100) : 0;
     const progClass = pct === 100 ? 'ok' : noInf > 0 ? 'warn' : '';
 
+    const nPrecReg = miembros.filter(p => p.precursorReg || p.precursorEsp || p.misionero).length;
     const chips = [];
     if(noInf > 0) chips.push(`<span class="gs-chip gs-chip-warn"><span class="gs-chip-dot"></span>${noInf} sin informe</span>`);
     else          chips.push(`<span class="gs-chip gs-chip-ok"><span class="gs-chip-dot"></span>Al día</span>`);
-    if(paux > 0)  chips.push(`<span class="gs-chip gs-chip-amber"><span class="gs-chip-dot"></span>${paux} prec. aux.</span>`);
+    if(paux > 0)     chips.push(`<span class="gs-chip gs-chip-amber"><span class="gs-chip-dot"></span>${paux} prec. aux.</span>`);
+    if(nPrecReg > 0) chips.push(`<span class="gs-chip" style="background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#7c3aed;margin-right:5px;vertical-align:middle"></span>${nPrecReg} prec. reg.</span>`);
 
     const items = miembros.map(p => {
       const tipo = tipoPrincipal(p);
@@ -9147,12 +9196,24 @@ function precGetDatos(pub, anio) {
     ? ultimos3.reduce((s, m) => s + (m.combinado ?? m.horas ?? 0), 0) / ultimos3.length
     : null;
 
-  const requiereReunion = promUlt3 !== null && promUlt3 < PREC_META_MES && ultimos3.length >= 2;
+  // Reunión requerida: patrón habitual de incumplimiento claro (< 40h promedio)
+  // El reglamento dice "no informar habitualmente" — no aplica por estar 1-2h bajo la meta.
+  // Umbral: promedio últimos 3 meses < 40h (80% de la meta), con al menos 2 meses de datos.
+  const UMBRAL_REUNION = 40;
+  const requiereReunion = promUlt3 !== null && promUlt3 < UMBRAL_REUNION && ultimos3.length >= 2;
 
   let estado = 'ok';
-  if(requiereReunion)                                     estado = 'reunion';
-  else if(promedioNecesario > 70)                         estado = 'riesgo';
-  else if(promedio < PREC_META_MES && mesesConDatos >= 2) estado = 'bajo';
+  if(requiereReunion) {
+    // Incumplimiento habitual claro — promedio < 40h
+    estado = 'reunion';
+  } else if(promedioNecesario > PREC_META_MES * 1.4) {
+    // Necesita >70h/mes para completar 560h → riesgo de no llegar
+    estado = 'riesgo';
+  } else if((promUlt3 !== null && promUlt3 < PREC_META_MES && mesesConDatos >= 2)
+         || promedioNecesario > PREC_META_MES) {
+    // Promedio entre 40-50h, o necesita más de 50h/mes para la meta anual
+    estado = 'bajo';
+  }
 
   return {
     meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
@@ -9264,46 +9325,64 @@ function renderPrecursores() {
   const datos = precursores.map(p => ({ pub:p, d:precGetDatos(p, anio) }));
   const nReunion = datos.filter(x=>x.d.requiereReunion).length;
   const nRiesgo  = datos.filter(x=>x.d.estado==='riesgo').length;
-  const nOk      = datos.filter(x=>x.d.estado==='ok').length;
-  const totalHorasBetel = datos.reduce((s,x) => s + x.d.horasBetelCredito, 0);
-  const totalHorasBetelBruto = datos.reduce((s,x) => s + x.d.horasBetelBruto, 0);
+  const nOk      = datos.filter(x=>!x.d.requiereReunion && x.d.estado==='ok').length;
+
+  // ── Clasificación ──
+  const grupoMal   = datos.filter(x => x.d.requiereReunion);
+  const grupoAlerta= datos.filter(x => !x.d.requiereReunion && (x.d.estado==='bajo' || x.d.estado==='riesgo'));
+  const grupoBien  = datos.filter(x => !x.d.requiereReunion && x.d.estado==='ok');
 
   let html = '<div class="prec-wrap">';
-  html += '<div class="prec-header">';
-  html += '<div>';
-  html += '<div class="prec-title">Precursores Regulares</div>';
-  html += '<div class="prec-subtitle">A\u00f1o de servicio ' + anio + '\u2013' + (anio+1) + ' \u00b7 Meta mensual: <strong>' + PREC_META_MES + 'h</strong> \u00b7 Meta anual: <strong>' + PREC_META_ANIO + 'h</strong></div>';
-  html += '</div>';
-  html += '<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-3)">';
-  html += '<span style="background:var(--accent-lt);color:var(--accent);padding:4px 10px;border-radius:20px;font-weight:700;font-size:11px">' + precursores.length + ' precursore' + (precursores.length===1?'':'s') + '</span>';
-  html += '</div>';
-  html += '</div>';
 
-  // Resumen ejecutivo — cards
-  const summaryCards = [
-    { n:nReunion, lbl:'Reuni\u00f3n requerida', icon:'\u26a0\ufe0f', bg:'linear-gradient(135deg,#fef2f2,#fee2e2)', bc:'#fca5a5', fc:'#7f1d1d', desc:'Con el superintendente' },
-    { n:nRiesgo,  lbl:'En riesgo anual',        icon:'\ud83d\udcc9', bg:'linear-gradient(135deg,#fffbeb,#fef3c7)', bc:'#fcd34d', fc:'#78350f', desc:'Menos de 560h proyectadas' },
-    { n:nOk,      lbl:'Al d\u00eda',             icon:'\u2705',        bg:'linear-gradient(135deg,#f0faf4,#d1fae5)', bc:'#6ee7b7', fc:'#065f46', desc:'Cumpliendo la meta' },
-  ];
-  html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px">';
-  summaryCards.forEach(c => {
-    html += '<div style="background:' + c.bg + ';border:1px solid ' + c.bc + ';border-radius:16px;padding:16px 18px;position:relative;overflow:hidden">';
-    html += '<div style="font-size:11px;color:' + c.fc + ';font-weight:700;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">' + c.lbl + '</div>';
-    html += '<div style="font-size:36px;font-weight:800;color:' + c.fc + ';font-family:Sora,var(--font);letter-spacing:-1px;line-height:1">' + c.n + '</div>';
-    html += '<div style="font-size:10px;color:' + c.fc + ';opacity:.7;margin-top:4px">' + c.desc + '</div>';
-    html += '<div style="position:absolute;top:-10px;right:-10px;font-size:48px;opacity:.08">' + c.icon + '</div>';
-    html += '</div>';
-  });
-  html += '</div>';
+  // ── Header ──
+  html += `<div class="prec-header">
+    <div>
+      <div class="prec-title">Precursores Regulares</div>
+      <div class="prec-subtitle">Año de servicio ${anio}–${anio+1} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></div>
+    </div>
+    <span class="prec-count-badge">${precursores.length} precursores</span>
+  </div>`;
+
+  // ── 3 KPI cards clickeables ──
+  // IDs de cada grupo para filtrar al hacer click
+  window._precGrupoMal    = grupoMal.map(x=>x.pub.id);
+  window._precGrupoAlerta = grupoAlerta.map(x=>x.pub.id);
+  window._precGrupoBien   = grupoBien.map(x=>x.pub.id);
+
+  const mkKpi = (titulo, subtitulo, count, color, bgColor, borderColor, filtroKey) => `
+    <div class="prec-kpi" style="border-top:4px solid ${borderColor};cursor:pointer"
+      onclick="precFiltrarGrupo('${filtroKey}')"
+      data-filtro="${filtroKey}"
+      onmouseover="this.style.boxShadow='0 6px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-2px)'"
+      onmouseout="this.style.boxShadow='';this.style.transform=''">
+      <div class="prec-kpi-top">
+        <span class="prec-kpi-titulo" style="color:${color}">${titulo}</span>
+        <span class="prec-kpi-n" style="color:${color}">${count}</span>
+      </div>
+      <div class="prec-kpi-sub">${subtitulo}</div>
+      <div class="prec-kpi-link" style="color:${color}">Ver registros →</div>
+    </div>`;
+
+  html += `<div class="prec-kpi-grid">
+    ${mkKpi('Reunión requerida', 'Promedio habitual < 40h/mes · requiere atención del superintendente',
+      grupoMal.length, '#dc2626', '#fef2f2', '#ef4444', 'mal')}
+    ${mkKpi('Bajo la meta', 'Promedio entre 40–50h o en riesgo de no llegar a 560h anuales',
+      grupoAlerta.length, '#b45309', '#fffbeb', '#f59e0b', 'alerta')}
+    ${mkKpi('Al día', 'Promedio ≥ 50h/mes y proyección anual en orden',
+      grupoBien.length, '#15803d', '#f0fdf4', '#22c55e', 'bien')}
+  </div>`;
+
+  // Ordenar tarjetas: primero mal, luego alerta, luego bien
+  const datosOrdenados = [...grupoMal, ...grupoAlerta, ...grupoBien];
 
   // Tarjetas
-  datos.forEach(({ pub, d }) => {
+  datosOrdenados.forEach(({ pub, d }) => {
     const init = (pub.apellido[0]||'')+(pub.nombre[0]||'');
     const pct = Math.min(100, Math.round(d.horasTotalCombinado/PREC_META_ANIO*100));
     const colorBarra = pct>=100?'#22c55e':pct>=70?'#f59e0b':'#ef4444';
     const claseCard = d.requiereReunion?'reunion-req':d.estado==='riesgo'?'alerta-anual':d.estado==='bajo'?'alerta-mes':'ok';
 
-    html += '<div class="prec-card ' + claseCard + '">';
+    html += `<div class="prec-card ${claseCard}" data-pub-id="${pub.id}">`;
     const avColor = d.requiereReunion ? 'linear-gradient(135deg,#fee2e2,#fca5a5)' :
                     d.estado==='riesgo'  ? 'linear-gradient(135deg,#fef3c7,#fcd34d)' :
                     d.estado==='bajo'    ? 'linear-gradient(135deg,#fef3c7,#fed7aa)' :
@@ -9314,7 +9393,10 @@ function renderPrecursores() {
     html += '<div style="flex:1;min-width:0">';
     html += '<div class="prec-nombre" style="display:flex;align-items:center;gap:6px">' + escHtml(pub.apellido) + ', ' + escHtml(pub.nombre);
     html += ' <span style="font-size:10px;color:var(--accent);font-weight:600;background:var(--accent-lt);padding:2px 7px;border-radius:10px">Ver S-21 \u2192</span></div>';
-    html += '<div class="prec-grupo">\ud83d\udccc ' + escHtml(pub.grupo||'Sin grupo') + '</div></div>';
+    const grupoSG = state.grupos?.[pub.grupo];
+    const sgPub = grupoSG?.super ? state.publicadores.find(p=>p.id===grupoSG.super) : null;
+    const sgStr = sgPub ? `${sgPub.apellido.split(' ')[0]}, ${sgPub.nombre.split(' ')[0]}` : null;
+    html += `<div class="prec-grupo">📌 ${escHtml(pub.grupo||'Sin grupo')}${sgStr ? ` · <span style="color:var(--accent);font-weight:600">${escHtml(sgStr)}</span>` : ''}</div></div>`;
     html += '<div class="prec-badges">';
     if(d.requiereReunion) html += '<span class="prec-badge rojo">\u26a0 Reuni\u00f3n requerida</span>';
     else if(d.estado==='riesgo') html += '<span class="prec-badge ambar">\u26a0 Riesgo anual</span>';
@@ -9398,21 +9480,55 @@ function renderPrecursores() {
     });
     html += '</div>';
 
-    // Barra progreso
+    // Barra progreso anual con criterio explícito
+    const metaLabel = pct >= 100
+      ? '✓ Meta alcanzada — puede continuar como precursor'
+      : (d.mesesRestantes === 0
+          ? (d.horasTotalCombinado >= PREC_META_ANIO
+              ? '✓ Año completado — meta alcanzada'
+              : '✗ Año completado — no alcanzó 560h')
+          : 'Para continuar como precursor necesita llegar a ' + PREC_META_ANIO + 'h al finalizar el año');
+    const metaColor = pct >= 100 ? '#16a34a' : (d.mesesRestantes === 0 ? (d.horasTotalCombinado >= PREC_META_ANIO ? '#16a34a' : '#dc2626') : colorBarra);
+
     html += '<div class="prec-progreso-wrap">';
-    html += '<div class="prec-progreso-label"><span>Progreso anual</span>';
-    html += '<span style="font-weight:700;color:' + colorBarra + '">' + Math.round(d.horasTotalCombinado) + ' / ' + PREC_META_ANIO + 'h (' + pct + '%)'
-      + (d.horasBetelCredito > 0 ? ` <span style="font-size:10px;font-weight:500;color:#7c3aed">(+${Math.round(d.horasBetelCredito)}h Betel)</span>` : '')
+    html += '<div class="prec-progreso-label">';
+    html += '<span style="font-weight:700;color:var(--ink)">Progreso hacia 560h anuales</span>';
+    html += '<span style="font-weight:800;color:' + metaColor + ';font-family:Sora,var(--font);font-size:13px">'
+      + Math.round(d.horasTotalCombinado) + '<span style="font-size:10px;font-weight:600;opacity:.7"> / ' + PREC_META_ANIO + 'h</span>'
       + '</span></div>';
-    html += '<div class="prec-progreso-bar"><div class="prec-progreso-fill" style="width:' + pct + '%;background:' + colorBarra + '"></div></div>';
+    html += '<div class="prec-progreso-bar"><div class="prec-progreso-fill" style="width:' + pct + '%;background:' + metaColor + '"></div></div>';
+    html += '<div style="font-size:10px;color:' + metaColor + ';margin-top:5px;font-weight:600">' + metaLabel + '</div>';
+    if(d.horasExtraCredito > 0) {
+      html += '<div style="font-size:10px;color:#7c3aed;margin-top:2px">Incluye ' + Math.round(d.horasExtraCredito) + 'h adicionales acreditadas (predicación + horas extra)</div>';
+    }
     html += '</div>';
 
-    // Alertas
+    // Alertas reglamentarias
     if(d.requiereReunion) {
-      html += '<div class="prec-alerta"><strong>\u26a0 Reuni\u00f3n requerida</strong> con el superintendente de servicio y de grupo.<br>';
-      html += 'Promedio \u00faltimos meses: <strong>' + Math.round((d.promUlt3||0)*10)/10 + 'h</strong> (meta: ' + PREC_META_MES + 'h). Evaluar circunstancias y si es realista continuar.</div>';
+      html += `<div class="prec-alerta">
+        <strong>⚠ Reunión requerida</strong> con el superintendente de servicio y de grupo.<br>
+        Promedio últimos meses con datos: <strong>${Math.round((d.promUlt3||0)*10)/10}h</strong> — por debajo del umbral habitual (40h). Meta mensual: ${PREC_META_MES}h.
+        Evaluar circunstancias y si es realista continuar como precursor.
+        <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fca5a5;font-size:10px;color:#9f1239">
+          📖 Reglamento: Al terminar el año debe tener al menos <strong>560h</strong> (predicación + horas acreditadas) para poder continuar.
+          Proyección actual: <strong>${Math.round(d.horasTotalCombinado + (d.promUlt3||0) * d.mesesRestantes)}h</strong>.
+        </div>
+      </div>`;
     } else if(d.estado==='riesgo') {
-      html += '<div class="prec-alerta ambar"><strong>\u26a0 Riesgo de no alcanzar la meta anual.</strong> Necesita <strong>' + Math.round(d.promedioNecesario) + 'h/mes</strong> en los ' + d.mesesRestantes + ' meses restantes para llegar a ' + PREC_META_ANIO + 'h.</div>';
+      html += `<div class="prec-alerta ambar">
+        <strong>⚠ En riesgo de no alcanzar las 560h anuales.</strong>
+        Necesita <strong>${Math.round(d.promedioNecesario)}h/mes</strong> en los ${d.mesesRestantes} meses restantes.
+        <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fcd34d;font-size:10px;color:#92400e">
+          📖 Reglamento: Debe completar <strong>560h</strong> al finalizar el año de servicio para continuar como precursor regular.
+          Le faltan <strong>${Math.round(d.horasRestantes)}h</strong>.
+        </div>
+      </div>`;
+    } else if(d.mesesRestantes === 0 && d.horasTotalCombinado < PREC_META_ANIO) {
+      html += `<div class="prec-alerta">
+        <strong>✗ Año finalizado — no alcanzó la meta.</strong>
+        Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de 560h requeridas.
+        El Comité de Servicio determinará si puede continuar como precursor regular.
+      </div>`;
     }
 
     // Gráfico de barras
@@ -9428,10 +9544,13 @@ function renderPrecursores() {
     html += '</div>';
   });
 
-  // Nota legal
-  html += '<div style="margin-top:20px;background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:11px;color:var(--ink-3);line-height:1.6">';
-  html += '<strong style="color:var(--ink-2)">\ud83d\udcd6 Reglamento:</strong> Si un precursor no informa habitualmente un promedio de 50 horas mensuales, el superintendente de servicio y el de grupo deben reunirse con \u00e9l para ofrecerle ayuda. Al terminar el a\u00f1o de servicio, si llega por lo menos a <strong>560 horas</strong> puede seguir siendo precursor. Si no, el Comit\u00e9 de Servicio determinar\u00e1 si debe continuar.';
-  html += '</div>';
+  // Nota reglamentaria
+  html += `<div style="margin-top:20px;background:var(--accent-lt);border:1px solid var(--accent-mid);border-radius:12px;padding:14px 18px;font-size:11.5px;color:var(--ink-2);line-height:1.7">
+    <div style="font-size:12px;font-weight:800;color:var(--accent);margin-bottom:6px">📖 Criterio oficial para continuar como precursor regular</div>
+    <div>• Si un precursor <strong>no informa habitualmente</strong> un promedio de 50h mensuales (patrón consistente por debajo de ~40h), el superintendente de servicio y el de grupo deben reunirse con él para ofrecerle ayuda.</div>
+    <div>• Al terminar el año de servicio, si llega por lo menos a <strong>560 horas</strong> (predicación + horas acreditadas) puede seguir siendo precursor regular.</div>
+    <div>• Si no alcanza las 560h, el <strong>Comité de Servicio</strong> determinará si puede continuar como precursor.</div>
+  </div>`;
 
   // Botón exportar informe general
   html += '<div style="display:flex;justify-content:flex-end;gap:8px;margin-top:14px">';
@@ -9444,6 +9563,43 @@ function renderPrecursores() {
 }
 
 // ══════════════════════════════════════════════════════════════
+// ══════════════════════════════════════════
+// FILTRO PRECURSORES POR ESTADO
+// ══════════════════════════════════════════
+let _precFiltroActivo = null;
+
+function precFiltrarGrupo(filtro) {
+  // Toggle — si ya está activo quitar filtro
+  _precFiltroActivo = (_precFiltroActivo === filtro) ? null : filtro;
+
+  const ids = _precFiltroActivo === 'mal'    ? (window._precGrupoMal    || [])
+            : _precFiltroActivo === 'alerta' ? (window._precGrupoAlerta || [])
+            : _precFiltroActivo === 'bien'   ? (window._precGrupoBien   || [])
+            : null;
+
+  // Resaltar KPI activo
+  document.querySelectorAll('.prec-kpi').forEach(el => {
+    const esteFilto = el.getAttribute('data-filtro');
+    el.style.opacity  = (!_precFiltroActivo || esteFilto === _precFiltroActivo) ? '1' : '0.35';
+    el.style.transform = (esteFilto === _precFiltroActivo) ? 'translateY(-3px)' : '';
+    el.style.boxShadow = (esteFilto === _precFiltroActivo) ? '0 8px 28px rgba(0,0,0,.14)' : '';
+  });
+
+  // Mostrar/ocultar tarjetas
+  let primera = null;
+  document.querySelectorAll('.prec-card').forEach(el => {
+    const pubId = el.getAttribute('data-pub-id');
+    const visible = !ids || ids.includes(pubId);
+    el.style.display = visible ? '' : 'none';
+    if(visible && !primera) primera = el;
+  });
+
+  // Scroll suave a la primera tarjeta visible
+  if(_precFiltroActivo && primera) {
+    setTimeout(() => primera.scrollIntoView({ behavior:'smooth', block:'start' }), 80);
+  }
+}
+
 // GRÁFICO DE BARRAS — inline por tarjeta precursor
 // ══════════════════════════════════════════════════════════════
 function precChartHTML(d) {
@@ -9451,34 +9607,74 @@ function precChartHTML(d) {
   const mesesVis = d.meses.filter(m => m.idx <= mesActualIdx);
   if(!mesesVis.length) return '';
 
-  const maxH = Math.max(PREC_META_MES * 1.2, ...mesesVis.map(m => m.combinado || 0));
-  const barH = 60; // px altura total del área de barras
+  const BAR_H = 72; // px altura área barras
+  const maxH  = Math.max(PREC_META_MES * 1.3, ...mesesVis.map(m => m.combinado || 0));
 
   let bars = '';
   mesesVis.forEach(m => {
-    const h = m.combinado !== null ? m.combinado : 0;
-    const fillPct = maxH > 0 ? (h / maxH) * 100 : 0;
-    const color = !m.tieneDatos ? '#e5e7eb' : h >= PREC_META_MES ? '#22c55e' : h >= PREC_META_MES * 0.8 ? '#f59e0b' : '#ef4444';
-    const valLabel = m.tieneDatos ? Math.round(h) : '?';
-    bars += `<div class="prec-chart-bar-wrap">
-      <div class="prec-chart-bar-outer">
-        <div class="prec-chart-bar-fill" style="height:${fillPct}%;background:${color}">
-          <span class="prec-chart-bar-val">${valLabel}</span>
-        </div>
+    const h        = m.combinado !== null ? m.combinado : 0;
+    const fillPct  = maxH > 0 ? Math.min(100, (h / maxH) * 100) : 0;
+    const sinDatos = !m.tieneDatos;
+    const color    = sinDatos ? '#e2e8f0'
+                   : h >= PREC_META_MES       ? '#22c55e'
+                   : h >= PREC_META_MES * 0.8 ? '#f59e0b'
+                   : '#ef4444';
+    const textColor= sinDatos ? '#94a3b8'
+                   : h >= PREC_META_MES       ? '#15803d'
+                   : h >= PREC_META_MES * 0.8 ? '#b45309'
+                   : '#b91c1c';
+    const val      = sinDatos ? '?' : Math.round(h);
+    const isOver   = !sinDatos && h >= PREC_META_MES;
+
+    bars += `<div style="display:flex;flex-direction:column;align-items:center;gap:3px;flex:1">
+      <!-- Valor encima -->
+      <div style="font-size:9px;font-weight:800;color:${textColor};font-family:'Sora',var(--font);
+        min-height:13px;text-align:center;line-height:1">${val}${isOver?'<span style="font-size:7px">✓</span>':''}</div>
+      <!-- Barra -->
+      <div style="width:100%;height:${BAR_H}px;background:#f1f5f9;border-radius:6px;
+        display:flex;align-items:flex-end;overflow:hidden;position:relative">
+        <div style="width:100%;height:${fillPct}%;background:${color};border-radius:6px;
+          transition:height .5s cubic-bezier(.4,0,.2,1);min-height:${sinDatos?0:3}px"></div>
       </div>
-      <div class="prec-chart-bar-lbl">${m.mes}</div>
+      <!-- Mes label -->
+      <div style="font-size:8.5px;font-weight:700;color:#94a3b8;text-transform:uppercase;
+        letter-spacing:.3px;text-align:center">${m.mes}</div>
     </div>`;
   });
 
-  // Línea de meta (posición relativa)
-  const metaPct = Math.min(100, (PREC_META_MES / maxH) * 100);
-  const lineBottom = Math.round((metaPct / 100) * barH);
+  // Línea de meta como porcentaje visual
+  const metaPct  = Math.min(100, (PREC_META_MES / maxH) * 100);
+  const metaBot  = Math.round((metaPct / 100) * BAR_H) + 13; // +13px del label superior
 
-  return `<div class="prec-chart-wrap">
-    <div class="prec-chart-title">📊 Horas por mes · línea punteada = meta ${PREC_META_MES}h</div>
-    <div class="prec-chart-bars" style="height:${barH + 16}px">
+  return `<div style="background:#f8fafc;border:1px solid var(--border);border-radius:12px;
+    padding:12px 14px 8px;margin-bottom:10px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <span style="font-size:10px;font-weight:800;color:var(--ink-3);text-transform:uppercase;
+        letter-spacing:.6px">Horas por mes</span>
+      <div style="display:flex;align-items:center;gap:10px;font-size:9px">
+        <span style="display:flex;align-items:center;gap:3px">
+          <span style="width:8px;height:8px;border-radius:2px;background:#22c55e;display:inline-block"></span>
+          ≥${PREC_META_MES}h
+        </span>
+        <span style="display:flex;align-items:center;gap:3px">
+          <span style="width:8px;height:8px;border-radius:2px;background:#f59e0b;display:inline-block"></span>
+          ≥${Math.round(PREC_META_MES*.8)}h
+        </span>
+        <span style="display:flex;align-items:center;gap:3px">
+          <span style="width:8px;height:8px;border-radius:2px;background:#ef4444;display:inline-block"></span>
+          &lt;${Math.round(PREC_META_MES*.8)}h
+        </span>
+      </div>
+    </div>
+    <div style="position:relative;display:flex;gap:4px;align-items:flex-end">
       ${bars}
-      <div class="prec-chart-meta-line" style="bottom:${lineBottom + 16}px"></div>
+      <!-- Línea de meta -->
+      <div style="position:absolute;left:0;right:0;
+        bottom:${metaBot}px;
+        border-top:1.5px dashed #f59e0b;pointer-events:none;z-index:1">
+        <span style="position:absolute;right:0;top:-10px;font-size:8px;
+          font-weight:700;color:#b45309;background:#f8fafc;padding:0 3px">meta</span>
+      </div>
     </div>
   </div>`;
 }
