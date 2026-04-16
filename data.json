@@ -14808,10 +14808,12 @@
             "particip": true
           },
           "Dic": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Ene": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Mar": {
             "particip": true,
@@ -27503,7 +27505,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303341470,
+  "_lastModified": 1776303353498,
   "vym": {
     "semanas": {},
     "historial": [
