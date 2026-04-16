@@ -9189,29 +9189,41 @@ function precGetDatos(pub, anio) {
   const horasRestantes    = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
 
-  // ── Promedio últimos 3 meses CON datos ──
+  // ── Promedios para clasificación ──
   const pasadosConDatos = mesesPasados.filter(m => m.tieneDatos);
-  const ultimos3        = pasadosConDatos.slice(-3);
+  const ultimos3 = pasadosConDatos.slice(-3);
+
+  // promUlt3: promedio últimos 3 meses con datos (combinado)
   const promUlt3 = ultimos3.length > 0
     ? ultimos3.reduce((s, m) => s + (m.combinado ?? m.horas ?? 0), 0) / ultimos3.length
     : null;
 
-  // Reunión requerida: patrón habitual de incumplimiento claro (< 40h promedio)
-  // El reglamento dice "no informar habitualmente" — no aplica por estar 1-2h bajo la meta.
-  // Umbral: promedio últimos 3 meses < 40h (80% de la meta), con al menos 2 meses de datos.
-  const UMBRAL_REUNION = 40;
-  const requiereReunion = promUlt3 !== null && promUlt3 < UMBRAL_REUNION && ultimos3.length >= 2;
+  // promGeneral: promedio de TODOS los meses con datos del año (combinado)
+  const promGeneral = pasadosConDatos.length > 0
+    ? pasadosConDatos.reduce((s, m) => s + (m.combinado ?? m.horas ?? 0), 0) / pasadosConDatos.length
+    : null;
+
+  // Reunión requerida: incumplimiento habitual claro de la meta mensual.
+  // Umbral: promedio anual combinado < 90% de la meta (45h sobre 50h).
+  // Esto da un margen real — alguien con 49h NO requiere reunión, solo está "bajo meta".
+  // Se requieren 3+ meses con datos para tener un patrón real.
+  const UMBRAL_REUNION = PREC_META_MES * 0.9; // 45h
+  const requiereReunion = promGeneral !== null
+    && promGeneral < UMBRAL_REUNION
+    && pasadosConDatos.length >= 3;
 
   let estado = 'ok';
   if(requiereReunion) {
-    // Incumplimiento habitual claro — promedio < 40h
+    // Promedio anual < 45h con 3+ meses → incumplimiento habitual
     estado = 'reunion';
   } else if(promedioNecesario > PREC_META_MES * 1.4) {
-    // Necesita >70h/mes para completar 560h → riesgo de no llegar
+    // Necesita >70h/mes para completar 560h → riesgo real
     estado = 'riesgo';
-  } else if((promUlt3 !== null && promUlt3 < PREC_META_MES && mesesConDatos >= 2)
-         || promedioNecesario > PREC_META_MES) {
-    // Promedio entre 40-50h, o necesita más de 50h/mes para la meta anual
+  } else if(promGeneral !== null && promGeneral < PREC_META_MES && pasadosConDatos.length >= 2) {
+    // Promedio entre 45-50h: cerca de la meta pero sin cumplirla
+    estado = 'bajo';
+  } else if(promedioNecesario > PREC_META_MES) {
+    // Necesita más de 50h/mes para la meta anual
     estado = 'bajo';
   }
 
