@@ -9376,11 +9376,14 @@ function renderPrecursores() {
     </div>`;
 
   html += `<div class="prec-kpi-grid">
-    ${mkKpi('Reunión requerida', 'Promedio habitual < 40h/mes · requiere atención del superintendente',
+    ${mkKpi('Reunión requerida',
+      'Promedio anual combinado < 45h · incumplimiento habitual · requiere reunión con el superintendente',
       grupoMal.length, '#dc2626', '#fef2f2', '#ef4444', 'mal')}
-    ${mkKpi('Bajo la meta', 'Promedio entre 40–50h o en riesgo de no llegar a 560h anuales',
+    ${mkKpi('Bajo la meta',
+      'Promedio anual entre 45–50h · cerca de la meta pero sin cumplirla de forma consistente',
       grupoAlerta.length, '#b45309', '#fffbeb', '#f59e0b', 'alerta')}
-    ${mkKpi('Al día', 'Promedio ≥ 50h/mes y proyección anual en orden',
+    ${mkKpi('Al día',
+      'Promedio anual ≥ 50h · cumpliendo la meta mensual y en buen camino hacia las 560h anuales',
       grupoBien.length, '#15803d', '#f0fdf4', '#22c55e', 'bien')}
   </div>`;
 
