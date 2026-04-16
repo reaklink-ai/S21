@@ -27314,7 +27314,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -29402,7 +29402,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776307500584,
+  "_lastModified": 1776307502757,
   "vym": {
     "semanas": {},
     "historial": [
