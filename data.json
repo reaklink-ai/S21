@@ -12800,6 +12800,41 @@
             "notas": "35 Horas Betel"
           },
           "Mar": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "19",
+            "notas": "36 horas Betel"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -27398,7 +27433,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776303298246,
+  "_lastModified": 1776303313182,
   "vym": {
     "semanas": {},
     "historial": [
