@@ -29297,6 +29297,161 @@
           "cursos": 8
         }
       }
+    },
+    {
+      "id": "mmm9qi4qlkxi",
+      "apellido": "Mory",
+      "nombre": "Isaias",
+      "nacimiento": "2009-08-27",
+      "bautismo": "",
+      "grupo": "Grupo 6",
+      "telefono": "318 8097333",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      }
     }
   ],
   "grupos": {
@@ -29752,7 +29907,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776308169091,
+  "_lastModified": 1776606936501,
   "vym": {
     "semanas": {},
     "historial": [
@@ -31281,163 +31436,6 @@
           "participaron": 6,
           "horas": 16,
           "cursos": 6
-        }
-      },
-      "fechaMudado": "2026-04-15",
-      "direccionMudado": "cucuta"
-    },
-    {
-      "id": "mmm9qi4qlkxi",
-      "apellido": "Mory",
-      "nombre": "Isaias",
-      "nacimiento": "2009-08-27",
-      "bautismo": "",
-      "grupo": "Grupo 6",
-      "telefono": "318 8097333",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true
-          },
-          "Oct": {
-            "particip": true
-          },
-          "Nov": {
-            "particip": true
-          },
-          "Dic": {
-            "particip": true
-          },
-          "Ene": {
-            "particip": true
-          },
-          "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 0
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 0,
-          "cursos": 0
         }
       },
       "fechaMudado": "2026-04-15",
