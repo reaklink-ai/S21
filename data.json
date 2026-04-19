@@ -28904,7 +28904,7 @@
       "ungido": false,
       "anciano": false,
       "siervo": false,
-      "precursorReg": true,
+      "precursorReg": false,
       "precursorEsp": true,
       "misionero": false,
       "emergencia": {
@@ -30393,7 +30393,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776609407154,
+  "_lastModified": 1776609762177,
   "vym": {
     "semanas": {},
     "historial": [
