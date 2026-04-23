@@ -30228,10 +30228,10 @@
       "notas": ""
     },
     {
-      "id": "r1776927876791",
+      "id": "r1776933778534",
       "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
       "presencial": 155,
       "zoom": 47,
       "total": 202,
@@ -30336,6 +30336,16 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
     }
   ],
   "usuarios": [
@@ -30413,7 +30423,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776927929440,
+  "_lastModified": 1776933814255,
   "vym": {
     "semanas": {},
     "historial": [
