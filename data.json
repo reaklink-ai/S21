@@ -30218,6 +30218,26 @@
   ],
   "asistencia": [
     {
+      "id": "r1776927924868",
+      "fecha": "2026-04-22",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 132,
+      "zoom": 89,
+      "total": 221,
+      "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
       "id": "r1775944685700",
       "fecha": "2026-04-11",
       "tipo": "Fin de semana",
@@ -30393,7 +30413,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776609781174,
+  "_lastModified": 1776927929440,
   "vym": {
     "semanas": {},
     "historial": [
