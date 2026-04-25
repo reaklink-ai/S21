@@ -30218,6 +30218,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1777152270683",
+      "fecha": "2026-04-25",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 120,
+      "zoom": 69,
+      "total": 189,
+      "notas": ""
+    },
+    {
       "id": "r1776927924868",
       "fecha": "2026-04-22",
       "tipo": "Entre semana",
@@ -30232,6 +30242,16 @@
       "fecha": "2026-04-18",
       "tipo": "Fin de semana",
       "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
       "presencial": 155,
       "zoom": 47,
       "total": 202,
@@ -30336,16 +30356,6 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
-    },
-    {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
     }
   ],
   "usuarios": [
@@ -30423,7 +30433,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1776933814255,
+  "_lastModified": 1777152278105,
   "vym": {
     "semanas": {},
     "historial": [
