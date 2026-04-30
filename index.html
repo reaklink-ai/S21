@@ -895,14 +895,15 @@ input, select, textarea { font-family: var(--font); }
 
 /* ── FOOTER ── */
 .gs-card-footer {
-  padding: 10px 12px; background: var(--surface-2);
-  border-top: 1px solid var(--border-2); display: flex; gap: 6px; margin-top: auto;
+  padding: 8px 10px; background: var(--surface-2);
+  border-top: 1px solid var(--border-2); display: flex; gap: 4px; margin-top: auto;
 }
 .gs-btn {
-  flex: 1; padding: 8px 8px;
+  flex: 1; padding: 7px 4px; min-width: 0;
   background: var(--surface); border: 1px solid var(--border);
-  border-radius: var(--r); font-size: 11px; font-weight: 600; color: var(--ink-2);
-  transition: all .12s var(--ease);
+  border-radius: var(--r); font-size: 10px; font-weight: 600; color: var(--ink-2);
+  transition: all .12s var(--ease); white-space: nowrap; overflow: hidden;
+  text-overflow: ellipsis; text-align: center; cursor: pointer;
 }
 .gs-btn:hover { background: var(--accent-lt); color: var(--accent); border-color: var(--accent-mid); }
 
