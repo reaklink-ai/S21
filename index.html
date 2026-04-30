@@ -1,7 +1,11 @@
 <!DOCTYPE html>
+<!-- S21 v20260430-151708 -->
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <!-- PWA / App nativa -->
@@ -82,6 +86,15 @@
 /* ── RESET ── */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html { -webkit-text-size-adjust:100%; }
+/* ── Tokens de color unificados ── */
+:root {
+  --c-red:    #ef4444; --c-red-lt:    #fef2f2; --c-red-border:    #fca5a5;
+  --c-green:  #22c55e; --c-green-lt:  #f0fdf4; --c-green-border:  #86efac;
+  --c-amber:  #f59e0b; --c-amber-lt:  #fffbeb; --c-amber-border:  #fcd34d;
+  --c-violet: #7c3aed; --c-violet-lt: #faf5ff; --c-violet-border: #c4b5fd;
+  --c-teal:   #0891b2; --c-teal-lt:   #f0fdfa; --c-teal-border:   #a5f3fc;
+  --c-blue:   #3d5a9e; --c-blue-lt:   #eef1f9; --c-blue-border:   #b8c4e0;
+}
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -1480,6 +1493,95 @@ input, select, textarea { font-family: var(--font); }
   .dash-grid { gap: 8px !important; }
 }
 
+
+/* ── Búsqueda global ── */
+.global-search-wrap {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,.45); backdrop-filter: blur(4px);
+  z-index: 900; display: flex; align-items: flex-start;
+  justify-content: center; padding-top: 80px;
+}
+.global-search-box {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 18px; width: 100%; max-width: 580px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.2); overflow: hidden;
+  margin: 0 16px;
+}
+.global-search-input {
+  width: 100%; padding: 16px 20px; font-size: 16px;
+  font-family: var(--font); border: none; outline: none;
+  background: var(--surface); color: var(--ink);
+  border-bottom: 1px solid var(--border-2);
+}
+.global-search-results { max-height: 420px; overflow-y: auto; }
+.gs-result-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 20px; cursor: pointer; transition: background .1s;
+  border-bottom: 1px solid var(--border-2);
+}
+.gs-result-item:hover { background: var(--surface-2); }
+.gs-result-item:last-child { border-bottom: none; }
+.gs-result-av {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--accent-lt); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; flex-shrink: 0;
+}
+.gs-result-name { font-size: 13px; font-weight: 600; color: var(--ink); }
+.gs-result-meta { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
+.gs-result-badge {
+  margin-left: auto; font-size: 9px; font-weight: 700;
+  padding: 2px 8px; border-radius: 10px; flex-shrink: 0;
+}
+.gs-empty { padding: 28px 20px; text-align: center; color: var(--ink-3); font-size: 13px; }
+
+/* ── Historial de cambios ── */
+.changelog-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 11px 16px; border-bottom: 1px solid var(--border-2);
+}
+.changelog-item:last-child { border-bottom: none; }
+.changelog-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 5px;
+}
+.changelog-msg { font-size: 12.5px; color: var(--ink-2); flex: 1; }
+.changelog-time { font-size: 10px; color: var(--ink-3); flex-shrink: 0; margin-top: 2px; }
+
+/* ── Panel de alertas dashboard ── */
+.alerta-panel {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden; margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(26,24,20,.04);
+}
+.alerta-panel-hd {
+  padding: 12px 18px; background: var(--surface-2);
+  border-bottom: 1px solid var(--border-2);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.alerta-panel-hd-title {
+  font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .7px; color: var(--ink-2);
+}
+.alerta-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 18px; border-bottom: 1px solid var(--border-2);
+  cursor: pointer; transition: background .1s;
+}
+.alerta-item:last-child { border-bottom: none; }
+.alerta-item:hover { background: var(--surface-2); }
+.alerta-ico {
+  width: 32px; height: 32px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; flex-shrink: 0;
+}
+.alerta-txt { flex: 1; }
+.alerta-titulo { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+.alerta-desc { font-size: 11px; color: var(--ink-3); margin-top: 1px; }
+.alerta-badge {
+  font-size: 10px; font-weight: 700; padding: 2px 9px;
+  border-radius: 20px; flex-shrink: 0;
+}
 @media print {
   .vym-actions, .vym-semana-load, .vym-select, .sidebar, .appbar, .mobile-nav, .panel-footer, .pub-scroll-top { display: none !important; }
   .vym-wrap { padding: 0; max-width: 100%; }
@@ -3111,12 +3213,53 @@ input:focus, select:focus, textarea:focus {
     <svg width="12" height="12"><use href="#ico-plus"/></svg>
     Nuevo
   </button>
+  <!-- Botón búsqueda global -->
+  <button onclick="abrirBusqueda()" style="display:flex;align-items:center;gap:7px;background:var(--surface-2);
+    border:1px solid var(--border);border-radius:10px;padding:7px 14px;font-size:12.5px;
+    color:var(--ink-2);cursor:pointer;font-family:var(--font);transition:all .15s"
+    onmouseover="this.style.borderColor='var(--accent-mid)'" onmouseout="this.style.borderColor='var(--border)'"
+    title="Búsqueda global (Ctrl+K)" id="btn-busqueda-global">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <span class="hide-mobile">Buscar</span>
+  </button>
   <div class="appbar-user-wrap">
     <div style="display:flex;flex-direction:column;align-items:flex-end;line-height:1.2">
       <span class="appbar-user-name" id="appbar-user"></span>
       <span class="appbar-user-rol" id="appbar-rol"></span>
     </div>
     <button class="appbar-logout" onclick="logout()">Salir</button>
+  </div>
+</div>
+
+<!-- MODAL BÚSQUEDA GLOBAL -->
+<div id="globalSearchOverlay" style="display:none" class="global-search-wrap" onclick="if(event.target===this)cerrarBusqueda()">
+  <div class="global-search-box">
+    <input class="global-search-input" id="globalSearchInput" placeholder="Buscar publicador, precursor, inactivo, mudado..." 
+      oninput="buscarGlobal(this.value)" onkeydown="buscarGlobalKey(event)" autocomplete="off" spellcheck="false">
+    <div class="global-search-results" id="globalSearchResults">
+      <div class="gs-empty">Escribe para buscar en todos los módulos</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL HISTORIAL DE CAMBIOS -->
+<div class="overlay" id="modalChangelogOverlay" style="display:none">
+  <div class="modal" style="max-width:520px">
+    <div class="modal-hd">
+      <span class="modal-hd-title">Historial de cambios</span>
+      <button class="modal-x" onclick="document.getElementById('modalChangelogOverlay').style.display='none'">×</button>
+    </div>
+    <div class="modal-body" style="padding:0;max-height:480px;overflow-y:auto" id="changelogBody">
+      <div class="gs-empty">Sin cambios registrados</div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="document.getElementById('modalChangelogOverlay').style.display='none'">Cerrar</button>
+      <button onclick="limpiarChangelog()" style="background:var(--surface-2);border:1px solid var(--border);
+        padding:9px 16px;border-radius:var(--r);font-size:12px;font-weight:600;
+        color:var(--ink-2);cursor:pointer;font-family:var(--font)">Limpiar historial</button>
+    </div>
   </div>
 </div>
 
@@ -3200,6 +3343,9 @@ input:focus, select:focus, textarea:focus {
         </button>
         <button class="sb-nav-item sb-perm-admin" onclick="importarDatos()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-db"/></svg></span>Restaurar JSON
+        </button>
+        <button class="sb-nav-item" onclick="abrirChangelog()" style="display:flex;align-items:center;gap:8px">
+          <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg></span>Historial
         </button>
         <button class="sb-nav-item sb-perm-admin" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-gear"/></svg></span>Usuarios
@@ -4221,6 +4367,7 @@ function renderS21() {
       <button class="s21-toolbar-btn edit" onclick="abrirModalEditar('${pub.id}')" style="display:${canEditPub(pub)?'':'none'}">Editar</button>
       <button class="s21-toolbar-btn" style="background:rgba(192,57,43,.15);border-color:rgba(192,57,43,.3);color:#fca5a5;display:${can('editarTodo')?'':'none'}" onclick="moverAInactivos('${pub.id}')">Sacar</button>
       <button class="s21-toolbar-btn" style="background:rgba(14,116,144,.12);border-color:rgba(14,116,144,.3);color:#0e7490;display:${can('editarTodo')?'':'none'}" onclick="moverAMudados('${pub.id}')">✈ Mudado</button>
+
     </div>
 
     <!-- Formulario oficial -->
@@ -4827,8 +4974,16 @@ function guardarPub() {
       notasMed:document.getElementById('fNotasMed').value.trim(),
     }
   };
-  if(editId){ Object.assign(getPub(editId),datos); }
-  else { const p={id:'p'+Date.now(),registros:{},...datos}; state.publicadores.push(p); selId=p.id; }
+  if(editId){
+    const prev = getPub(editId);
+    Object.assign(prev, datos);
+    registrarCambio('Publicador editado', `${datos.apellido}, ${datos.nombre}`, '#3d5a9e');
+  } else {
+    const p={id:'p'+Date.now(),registros:{},...datos};
+    state.publicadores.push(p);
+    selId=p.id;
+    registrarCambio('Nuevo publicador', `${datos.apellido}, ${datos.nombre} · ${datos.grupo||'Sin grupo'}`, '#16a34a');
+  }
   marcarCambios(); cerrarModal(); renderLista();
   if(selId) renderS21();
   toast('Guardado ✓');
@@ -4836,6 +4991,8 @@ function guardarPub() {
 
 function eliminarPub() {
   if(!confirm('¿Eliminar este publicador y todo su historial?')) return;
+  const pubEl = getPub(editId);
+  if(pubEl) registrarCambio('Publicador eliminado', `${pubEl.apellido}, ${pubEl.nombre}`, '#dc2626');
   state.publicadores=state.publicadores.filter(p=>p.id!==editId);
   if(selId===editId){ selId=null; document.getElementById('mainArea').innerHTML='<div class="empty"><div class="empty-icon"></div><div class="empty-txt">Selecciona un publicador.</div></div>'; }
   marcarCambios(); cerrarModal(); renderLista(); toast('Eliminado');
@@ -5718,6 +5875,356 @@ ${tablasHTML}
   else toast('⚠ Activa las ventanas emergentes');
 }
 
+
+// ══════════════════════════════════════════
+// BÚSQUEDA GLOBAL
+// ══════════════════════════════════════════
+function abrirBusqueda() {
+  document.getElementById('globalSearchOverlay').style.display = 'flex';
+  setTimeout(() => document.getElementById('globalSearchInput').focus(), 80);
+}
+function cerrarBusqueda() {
+  document.getElementById('globalSearchOverlay').style.display = 'none';
+  document.getElementById('globalSearchInput').value = '';
+  document.getElementById('globalSearchResults').innerHTML = '<div class="gs-empty">Escribe para buscar en todos los módulos</div>';
+}
+function buscarGlobalKey(e) {
+  if(e.key === 'Escape') cerrarBusqueda();
+}
+document.addEventListener('keydown', e => {
+  if((e.ctrlKey || e.metaKey) && e.key === 'k') {
+    e.preventDefault();
+    if(document.getElementById('globalSearchOverlay').style.display === 'flex') cerrarBusqueda();
+    else abrirBusqueda();
+  }
+});
+
+function buscarGlobal(q) {
+  const el = document.getElementById('globalSearchResults');
+  q = q.trim().toLowerCase();
+  if(!q) { el.innerHTML = '<div class="gs-empty">Escribe para buscar en todos los módulos</div>'; return; }
+
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const resultados = [];
+
+  // Publicadores activos
+  state.publicadores.filter(p => !_mudIds.has(p.id)).forEach(p => {
+    const hay = `${p.apellido} ${p.nombre} ${p.grupo||''}`.toLowerCase();
+    if(hay.includes(q)) resultados.push({ p, tipo:'Publicador', modulo:'publicadores', color:'var(--accent)', bg:'var(--accent-lt)' });
+  });
+  // Precursores (subconjunto)
+  const precIds = new Set(state.publicadores.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).map(p=>p.id));
+  resultados.filter(r=>precIds.has(r.p.id)).forEach(r => { r.tipo = 'Precursor'; r.modulo = 'precursores'; r.color='#b45309'; r.bg='#fffbeb'; });
+  // Inactivos
+  (state.publicadores.filter(p=>p.inactivo)||[]).forEach(p => {
+    const hay = `${p.apellido} ${p.nombre}`.toLowerCase();
+    if(hay.includes(q)) resultados.push({ p, tipo:'Inactivo', modulo:'inactivos', color:'var(--red)', bg:'var(--red-lt)' });
+  });
+  // Mudados
+  (state.mudados||[]).forEach(p => {
+    const hay = `${p.apellido} ${p.nombre} ${p.grupo||''} ${p.direccionMudado||''}`.toLowerCase();
+    if(hay.includes(q)) resultados.push({ p, tipo:'Mudado', modulo:'mudados', color:'#0e7490', bg:'#f0fdfa' });
+  });
+
+  if(!resultados.length) { el.innerHTML = '<div class="gs-empty">Sin resultados para "' + escHtml(q) + '"</div>'; return; }
+
+  const MAX = 12;
+  const items = resultados.slice(0, MAX).map(r => {
+    const ini = (r.p.apellido[0]||'')+(r.p.nombre[0]||'');
+    return `<div class="gs-result-item" onclick="buscarGlobalIr('${r.p.id}','${r.modulo}')">
+      <div class="gs-result-av" style="background:${r.bg};color:${r.color}">${ini}</div>
+      <div>
+        <div class="gs-result-name">${escHtml(r.p.apellido)}, ${escHtml(r.p.nombre)}</div>
+        <div class="gs-result-meta">${r.p.grupo||'Sin grupo'}</div>
+      </div>
+      <span class="gs-result-badge" style="background:${r.bg};color:${r.color}">${r.tipo}</span>
+    </div>`;
+  }).join('');
+  const extra = resultados.length > MAX ? `<div class="gs-empty">${resultados.length-MAX} más — afina la búsqueda</div>` : '';
+  el.innerHTML = items + extra;
+}
+
+function buscarGlobalIr(id, modulo) {
+  cerrarBusqueda();
+  irA(modulo);
+  setTimeout(() => {
+    if(modulo === 'publicadores') {
+      selPub(id);
+    }
+  }, 150);
+}
+
+// ══════════════════════════════════════════
+// HISTORIAL DE CAMBIOS
+// ══════════════════════════════════════════
+const CHANGELOG_KEY = 's21_changelog';
+const CHANGELOG_MAX = 50;
+
+function registrarCambio(accion, detalle, color) {
+  const log = JSON.parse(localStorage.getItem(CHANGELOG_KEY) || '[]');
+  const user = (currentUser?.nombre || currentUser?.id || 'Sistema');
+  log.unshift({
+    ts: Date.now(),
+    accion, detalle,
+    user, color: color || '#3d5a9e'
+  });
+  localStorage.setItem(CHANGELOG_KEY, JSON.stringify(log.slice(0, CHANGELOG_MAX)));
+}
+
+function abrirChangelog() {
+  const log = JSON.parse(localStorage.getItem(CHANGELOG_KEY) || '[]');
+  const el = document.getElementById('changelogBody');
+  if(!log.length) { el.innerHTML = '<div class="gs-empty">Sin cambios registrados aún</div>'; }
+  else {
+    el.innerHTML = log.map(e => {
+      const fecha = new Date(e.ts);
+      const rel = _tiempoRelativo(fecha);
+      return `<div class="changelog-item">
+        <div class="changelog-dot" style="background:${e.color}"></div>
+        <div class="changelog-msg">
+          <strong>${escHtml(e.accion)}</strong> ${escHtml(e.detalle)}
+          <div style="font-size:10px;color:var(--ink-3);margin-top:2px">${escHtml(e.user)} · ${rel}</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('modalChangelogOverlay').style.display = 'flex';
+}
+
+function limpiarChangelog() {
+  if(!confirm('¿Eliminar todo el historial de cambios?')) return;
+  localStorage.removeItem(CHANGELOG_KEY);
+  document.getElementById('changelogBody').innerHTML = '<div class="gs-empty">Sin cambios registrados aún</div>';
+}
+
+function _tiempoRelativo(fecha) {
+  const diff = Date.now() - fecha.getTime();
+  const min  = Math.floor(diff/60000);
+  const hrs  = Math.floor(diff/3600000);
+  const dias = Math.floor(diff/86400000);
+  if(min < 1)   return 'Ahora mismo';
+  if(min < 60)  return `Hace ${min} min`;
+  if(hrs < 24)  return `Hace ${hrs}h`;
+  if(dias < 7)  return `Hace ${dias} día${dias!==1?'s':''}`;
+  return fecha.toLocaleDateString('es-CO', {day:'numeric',month:'short'});
+}
+
+// ══════════════════════════════════════════
+// PANEL DE ALERTAS — dashboard
+// ══════════════════════════════════════════
+function _generarAlertas() {
+  const alertas = [];
+  const hoy = new Date();
+  const dia = hoy.getDate();
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const { mesC, mesNombre, anio: anioMes } = mesActual();
+
+  // 1. Envío a sucursal
+  if(dia <= 20) {
+    const diasRestantes = 20 - dia;
+    alertas.push({
+      color: diasRestantes <= 3 ? '#dc2626' : '#b45309',
+      bg:    diasRestantes <= 3 ? '#fef2f2' : '#fffbeb',
+      ico:   '📅',
+      titulo: diasRestantes === 0 ? 'Hoy es el día de envío a sucursal' : `Envío a sucursal en ${diasRestantes} día${diasRestantes!==1?'s':''}`,
+      desc:   `Informe de ${mesNombre} — preparar resumen mensual`,
+      accion: () => abrirMetricas()
+    });
+  }
+
+  // 2. Sin informe
+  const sinInf = pubs.filter(p => { const r=(p.registros||{})[anioMes]?.[mesC]; return !r||!r.particip; });
+  if(sinInf.length > 0) {
+    alertas.push({
+      color: sinInf.length > 10 ? '#dc2626' : '#b45309',
+      bg: sinInf.length > 10 ? '#fef2f2' : '#fffbeb',
+      ico: '⚠',
+      titulo: `${sinInf.length} publicador${sinInf.length!==1?'es':''} sin informe`,
+      desc: `Mes de ${mesNombre} — pendientes de registrar`,
+      accion: () => abrirMetricas()
+    });
+  }
+
+  // 3. Precursores que requieren reunión
+  const anio = anioHoy();
+  const precs = pubs.filter(p => p.precursorReg);
+  const precsMal = precs.filter(p => {
+    const d = precGetDatos(p, anio);
+    return d.requiereReunion;
+  });
+  if(precsMal.length > 0) {
+    alertas.push({
+      color: '#dc2626', bg: '#fef2f2', ico: '🔔',
+      titulo: `${precsMal.length} precursor${precsMal.length!==1?'es':''} requieren reunión`,
+      desc: 'Reunión con superintendente de servicio y de grupo',
+      accion: () => irA('precursores')
+    });
+  }
+
+  // 4. Publicadores sin grupo
+  const sinGrupo = pubs.filter(p => !p.grupo).length;
+  if(sinGrupo > 0) {
+    alertas.push({
+      color: '#0e7490', bg: '#f0fdfa', ico: 'ℹ',
+      titulo: `${sinGrupo} publicador${sinGrupo!==1?'es':''} sin grupo asignado`,
+      desc: 'Asignar a un grupo de campo',
+      accion: () => abrirModalGrupos()
+    });
+  }
+
+  return alertas;
+}
+
+function _renderAlertasPanel() {
+  const alertas = _generarAlertas();
+  if(!alertas.length) return '';
+  const items = alertas.map((a, i) => `
+    <div class="alerta-item" onclick="_alertaAccion(${i})">
+      <div class="alerta-ico" style="background:${a.bg};font-size:16px">${a.ico}</div>
+      <div class="alerta-txt">
+        <div class="alerta-titulo">${a.titulo}</div>
+        <div class="alerta-desc">${a.desc}</div>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </div>`).join('');
+  return `<div class="alerta-panel">
+    <div class="alerta-panel-hd">
+      <span class="alerta-panel-hd-title">Atención requerida</span>
+      <span style="background:#fef2f2;color:#dc2626;font-size:10px;font-weight:700;
+        padding:2px 9px;border-radius:20px">${alertas.length}</span>
+    </div>
+    ${items}
+  </div>`;
+}
+
+// Guardar acciones para ejecutar desde HTML
+window._alertasAcciones = [];
+function _alertaAccion(i) { if(window._alertasAcciones[i]) window._alertasAcciones[i](); }
+
+// ══════════════════════════════════════════
+// WHATSAPP — PLANTILLA DE INFORME
+// ══════════════════════════════════════════
+// Número de Twilio Sandbox (cambiar por número real en producción)
+const WP_NUMERO_TWILIO = '14155238886'; // sin + para el link
+
+function enviarPlantillaWP(pubId) {
+  const pub = getPub(pubId);
+  if(!pub) return;
+
+  // Calcular mes vencido
+  const hoy = new Date();
+  const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const mesCodigos = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const mesIdx = hoy.getDate() <= 20
+    ? (hoy.getMonth() === 0 ? 11 : hoy.getMonth() - 1)
+    : hoy.getMonth();
+  const mesNombre = meses[mesIdx];
+  const mesCodigo = mesCodigos[mesIdx];
+
+  // Verificar si tiene teléfono registrado
+  if(!pub.telefono) {
+    if(confirm(`${pub.apellido}, ${pub.nombre} no tiene teléfono registrado.\n\n¿Deseas copiar la plantilla para enviarla manualmente?`)) {
+      const plantilla = 'INFORME\nHoras: \nCursos: \nAuxiliar: no\n\n_Mes: ' + mesNombre + '_';
+      navigator.clipboard?.writeText(plantilla.replace(/\n/g,'\n'));
+      toast('📋 Plantilla copiada al portapapeles');
+    }
+    return;
+  }
+
+  // Limpiar número: quitar +, espacios, guiones
+  const tel = pub.telefono.replace(/[\s\-\(\)\+]/g,'');
+
+  // Plantilla pre-llenada
+  const msg = encodeURIComponent(
+    `INFORME
+Horas: 
+Cursos: 
+Auxiliar: no
+
+_Mes ${mesNombre} — ${pub.apellido}, ${pub.nombre}_`
+  );
+
+  // Abrir WhatsApp
+  const url = `https://wa.me/${tel}?text=${msg}`;
+  window.open(url, '_blank');
+}
+
+// Función para el secretario: enviar plantilla a todos los de un grupo
+function enviarPlantillaGrupoWP(grupo) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const miembros = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && p.grupo === grupo && p.telefono
+  );
+
+  if(!miembros.length) {
+    toast('⚠ Ningún miembro del grupo tiene teléfono registrado');
+    return;
+  }
+
+  const hoy = new Date();
+  const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio',
+                 'Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const mesIdx = hoy.getDate() <= 20
+    ? (hoy.getMonth() === 0 ? 11 : hoy.getMonth() - 1)
+    : hoy.getMonth();
+  const mesNombre = meses[mesIdx];
+
+  // Abrir todos en secuencia con delay
+  miembros.forEach((pub, i) => {
+    setTimeout(() => {
+      const tel = pub.telefono.replace(/[\s\-\(\)\+]/g,'');
+      const msg = encodeURIComponent(
+        `INFORME
+Horas: 
+Cursos: 
+Auxiliar: no
+
+_Mes ${mesNombre} — ${pub.apellido}, ${pub.nombre}_`
+      );
+      window.open(`https://wa.me/${tel}?text=${msg}`, '_blank');
+    }, i * 600); // 600ms entre cada uno para no bloquear el navegador
+  });
+
+  toast(`📲 Abriendo WhatsApp para ${miembros.length} publicadores...`);
+}
+
+// ══════════════════════════════════════════
+// WHATSAPP — PLANTILLA CSV POR GRUPO
+// ══════════════════════════════════════════
+function descargarPlantillaCSV(grupo) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const miembros = state.publicadores
+    .filter(p => !_mudIds.has(p.id) && p.grupo === grupo)
+    .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  if(!miembros.length) { toast('No hay miembros en este grupo'); return; }
+
+  const mv   = mesActual();
+  const anio = anioHoy();
+  const filas = ['Apellido,Nombre,Horas,Cursos,Auxiliar,Notas'];
+  miembros.forEach(p => {
+    const reg   = (p.registros?.[anio]?.[mv.mesC]) || {};
+    const horas  = reg.horas  || '';
+    const cursos = reg.cursos || '';
+    const aux    = reg.paux   ? 'si' : '';
+    const notas  = reg.notas  || '';
+    filas.push(`"${p.apellido}","${p.nombre}",${horas},${cursos},${aux},"${notas}"`);
+  });
+
+  const csv  = filas.join('\n');
+  const blob = new Blob(['﻿'+csv], { type: 'text/csv;charset=utf-8' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url;
+  a.download = 'Informe_' + grupo.replace(/ /g,'_') + '_' + mv.mesNombre + '_' + anio + '.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('Plantilla de ' + grupo + ' descargada');
+}
 
 // ══════════════════════════════════════════
 //  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
@@ -7903,7 +8410,14 @@ function renderGruposScreen() {
       <div class="gs-miembros">${items}</div>
       <div class="gs-card-footer">
         <button class="gs-btn" onclick="_descargarPlantillaGrupo('${g}')">↓ Plantilla</button>
+        <button class="gs-btn" onclick="descargarPlantillaCSV('${g}')" style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.4);color:#128c45" title="Descargar plantilla CSV para WP">📥 Plantilla WP</button>
         <button class="gs-btn" onclick="importarInformes()" title="Importar informe de este grupo">↑ Importar</button>
+        <button class="gs-btn" onclick="enviarPlantillaGrupoWP('${g}')"
+          style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.4);color:#128c45"
+          title="Enviar plantilla WP a todos los del grupo">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L0 24l6.302-1.498A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 0 1-5.001-1.374l-.358-.214-3.722.885.925-3.613-.234-.371A9.77 9.77 0 0 1 2.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
+          WP grupo
+        </button>
         <button class="gs-btn gs-btn-prim" onclick="filtrarYVerGrupo('${g}')">Ver registros →</button>
       </div>
     </div>`;
@@ -9352,7 +9866,15 @@ function renderPrecursores() {
       <div class="prec-title">Precursores Regulares</div>
       <div class="prec-subtitle">Año de servicio ${anio}–${anio+1} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></div>
     </div>
-    <span class="prec-count-badge">${precursores.length} precursores</span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <button onclick="precToggleVista()" id="btn-prec-vista"
+        style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;
+        padding:6px 12px;font-size:11px;font-weight:700;color:var(--ink-2);cursor:pointer;
+        font-family:var(--font)" title="Cambiar vista">
+        ☰ Compacta
+      </button>
+      <span class="prec-count-badge">${precursores.length} precursores</span>
+    </div>
   </div>`;
 
   // ── 3 KPI cards clickeables ──
@@ -9579,6 +10101,80 @@ function renderPrecursores() {
 
 // ══════════════════════════════════════════════════════════════
 // ══════════════════════════════════════════
+// ══════════════════════════════════════════
+// VISTA COMPACTA PRECURSORES
+// ══════════════════════════════════════════
+let _precVistaCompacta = false;
+
+function precToggleVista() {
+  _precVistaCompacta = !_precVistaCompacta;
+  const btn = document.getElementById('btn-prec-vista');
+  if(btn) btn.textContent = _precVistaCompacta ? '⊞ Tarjetas' : '☰ Compacta';
+  // Mostrar/ocultar tarjetas
+  document.querySelectorAll('.prec-card').forEach(el => {
+    el.style.display = _precVistaCompacta ? 'none' : '';
+  });
+  // Mostrar/ocultar tabla compacta
+  let tabla = document.getElementById('prec-tabla-compacta');
+  if(_precVistaCompacta) {
+    if(!tabla) {
+      tabla = document.createElement('div');
+      tabla.id = 'prec-tabla-compacta';
+      // Insertar después de los KPI cards
+      const wrap = document.querySelector('.prec-wrap');
+      if(wrap) wrap.appendChild(tabla);
+    }
+    _renderTablaCompactaPrec(tabla);
+    tabla.style.display = '';
+  } else {
+    if(tabla) tabla.style.display = 'none';
+  }
+}
+
+function _renderTablaCompactaPrec(el) {
+  const anio = anioHoy();
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const precs = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && (p.precursorReg||p.precursorEsp||p.misionero)
+  ).sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
+
+  const filas = precs.map(p => {
+    const d = precGetDatos(p, anio);
+    const prom = Math.round((d.promUlt3??d.promedio??0)*10)/10;
+    const estado = d.requiereReunion ? 'reunion' : d.estado;
+    const color = estado==='reunion'?'#dc2626':estado==='riesgo'||estado==='bajo'?'#b45309':'#16a34a';
+    const bg    = estado==='reunion'?'#fef2f2':estado==='riesgo'||estado==='bajo'?'#fffbeb':'#f0fdf4';
+    const lbl   = estado==='reunion'?'Reunión':estado==='riesgo'?'Riesgo':estado==='bajo'?'Bajo meta':'Al día';
+    return `<tr style="border-bottom:1px solid var(--border-2);transition:background .1s"
+      onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+      <td style="padding:8px 14px;font-size:12.5px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</td>
+      <td style="padding:8px 14px;font-size:11.5px;color:var(--ink-3)">${escHtml(p.grupo||'—')}</td>
+      <td style="padding:8px 14px;font-family:'Sora',var(--font);font-size:13px;font-weight:700;color:${color}">${prom}h/mes</td>
+      <td style="padding:8px 14px;font-family:'Sora',var(--font);font-size:13px;font-weight:700;color:${color}">${Math.round(d.horasTotalCombinado)}h</td>
+      <td style="padding:8px 14px">
+        <span style="background:${bg};color:${color};font-size:9.5px;font-weight:700;
+          padding:2px 8px;border-radius:10px">${lbl}</span>
+      </td>
+    </tr>`;
+  }).join('');
+
+  el.innerHTML = `<div style="border:1px solid var(--border);border-radius:14px;overflow:hidden;
+    box-shadow:0 1px 3px rgba(26,24,20,.04);margin-bottom:28px">
+    <table style="width:100%;border-collapse:collapse">
+      <thead>
+        <tr style="background:var(--ink);color:#fff">
+          <th style="padding:10px 14px;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase">Nombre</th>
+          <th style="padding:10px 14px;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase">Grupo</th>
+          <th style="padding:10px 14px;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase">Prom/mes</th>
+          <th style="padding:10px 14px;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase">Total año</th>
+          <th style="padding:10px 14px;text-align:left;font-size:9.5px;font-weight:700;letter-spacing:.8px;text-transform:uppercase">Estado</th>
+        </tr>
+      </thead>
+      <tbody>${filas}</tbody>
+    </table>
+  </div>`;
+}
+
 // FILTRO PRECURSORES POR ESTADO
 // ══════════════════════════════════════════
 let _precFiltroActivo = null;
