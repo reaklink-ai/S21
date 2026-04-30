@@ -6205,16 +6205,42 @@ function descargarPlantillaCSV(grupo) {
 
   const mv   = mesActual();
   const anio = anioHoy();
+
+  // Intentar generar Excel con SheetJS si está disponible
+  if(typeof XLSX !== 'undefined') {
+    const filas = [['Apellido','Nombre','Horas','Cursos','Auxiliar','Notas']];
+    miembros.forEach(p => {
+      const reg  = (p.registros?.[anio]?.[mv.mesC]) || {};
+      filas.push([
+        p.apellido,
+        p.nombre,
+        reg.horas  || '',
+        reg.cursos || '',
+        reg.paux   ? 'si' : '',
+        reg.notas  || ''
+      ]);
+    });
+
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(filas);
+
+    // Estilo de encabezado — ancho de columnas
+    ws['!cols'] = [
+      {wch:22},{wch:22},{wch:8},{wch:8},{wch:10},{wch:30}
+    ];
+
+    XLSX.utils.book_append_sheet(wb, ws, 'Informe');
+    XLSX.writeFile(wb, 'Informe_' + grupo.replace(/ /g,'_') + '_' + mv.mesNombre + '_' + anio + '.xlsx');
+    toast('📥 Plantilla Excel de ' + grupo + ' descargada');
+    return;
+  }
+
+  // Fallback CSV si SheetJS no cargó
   const filas = ['Apellido,Nombre,Horas,Cursos,Auxiliar,Notas'];
   miembros.forEach(p => {
-    const reg   = (p.registros?.[anio]?.[mv.mesC]) || {};
-    const horas  = reg.horas  || '';
-    const cursos = reg.cursos || '';
-    const aux    = reg.paux   ? 'si' : '';
-    const notas  = reg.notas  || '';
-    filas.push(`"${p.apellido}","${p.nombre}",${horas},${cursos},${aux},"${notas}"`);
+    const reg  = (p.registros?.[anio]?.[mv.mesC]) || {};
+    filas.push('"'+p.apellido+'","'+p.nombre+'",'+(reg.horas||'')+','+(reg.cursos||'')+','+(reg.paux?'si':'')+','+(reg.notas||''));
   });
-
   const csv  = filas.join('\n');
   const blob = new Blob(['﻿'+csv], { type: 'text/csv;charset=utf-8' });
   const url  = URL.createObjectURL(blob);
@@ -6223,7 +6249,7 @@ function descargarPlantillaCSV(grupo) {
   a.download = 'Informe_' + grupo.replace(/ /g,'_') + '_' + mv.mesNombre + '_' + anio + '.csv';
   a.click();
   URL.revokeObjectURL(url);
-  toast('Plantilla de ' + grupo + ' descargada');
+  toast('📥 Plantilla de ' + grupo + ' descargada');
 }
 
 // ══════════════════════════════════════════
@@ -8409,17 +8435,12 @@ function renderGruposScreen() {
       <div class="gs-chips">${chips.join('')}</div>
       <div class="gs-miembros">${items}</div>
       <div class="gs-card-footer">
-        <button class="gs-btn" onclick="_descargarPlantillaGrupo('${g}')">↓ Plantilla</button>
-        <button class="gs-btn" onclick="descargarPlantillaCSV('${g}')" style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.4);color:#128c45" title="Descargar plantilla CSV para WP">📥 Plantilla WP</button>
-        <button class="gs-btn" onclick="importarInformes()" title="Importar informe de este grupo">↑ Importar</button>
-        <button class="gs-btn" onclick="enviarPlantillaGrupoWP('${g}')"
+        <button class="gs-btn" onclick="importarInformes()" title="Importar informe">↑ Importar</button>
+        <button class="gs-btn" onclick="descargarPlantillaCSV('${g}')"
           style="background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.4);color:#128c45"
-          title="Enviar plantilla WP a todos los del grupo">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.524 5.847L0 24l6.302-1.498A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 0 1-5.001-1.374l-.358-.214-3.722.885.925-3.613-.234-.371A9.77 9.77 0 0 1 2.182 12c0-5.413 4.405-9.818 9.818-9.818 5.413 0 9.818 4.405 9.818 9.818 0 5.413-4.405 9.818-9.818 9.818z"/></svg>
-          WP grupo
-        </button>
+          title="Descargar plantilla Excel para WhatsApp">📥 Plantilla WP</button>
         <button class="gs-btn gs-btn-prim" onclick="filtrarYVerGrupo('${g}')">Ver registros →</button>
-      </div>
+      </div>      </div>
     </div>`;
   }).join('');
 
