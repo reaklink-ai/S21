@@ -6207,40 +6207,18 @@ function descargarPlantillaCSV(grupo) {
   const mv   = mesActual();
   const anio = anioHoy();
 
-  // Intentar generar Excel con SheetJS si está disponible
-  if(typeof XLSX !== 'undefined') {
-    const filas = [['Apellido','Nombre','Horas','Cursos','Auxiliar','Notas']];
-    miembros.forEach(p => {
-      const reg  = (p.registros?.[anio]?.[mv.mesC]) || {};
-      filas.push([
-        p.apellido,
-        p.nombre,
-        reg.horas  || '',
-        reg.cursos || '',
-        reg.paux   ? 'si' : '',
-        reg.notas  || ''
-      ]);
-    });
-
-    const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet(filas);
-
-    // Estilo de encabezado — ancho de columnas
-    ws['!cols'] = [
-      {wch:22},{wch:22},{wch:8},{wch:8},{wch:10},{wch:30}
-    ];
-
-    XLSX.utils.book_append_sheet(wb, ws, 'Informe');
-    XLSX.writeFile(wb, 'Informe_' + grupo.replace(/ /g,'_') + '_' + mv.mesNombre + '_' + anio + '.xlsx');
-    toast('📥 Plantilla Excel de ' + grupo + ' descargada');
-    return;
-  }
-
-  // Fallback CSV si SheetJS no cargó
+  // Generar CSV — abre en Excel/Numbers/Google Sheets y se envía como .csv
   const filas = ['Apellido,Nombre,Horas,Cursos,Auxiliar,Notas'];
   miembros.forEach(p => {
     const reg  = (p.registros?.[anio]?.[mv.mesC]) || {};
-    filas.push('"'+p.apellido+'","'+p.nombre+'",'+(reg.horas||'')+','+(reg.cursos||'')+','+(reg.paux?'si':'')+','+(reg.notas||''));
+    filas.push(
+      '"'+p.apellido+'",' +
+      '"'+p.nombre+'",' +
+      (reg.horas  || '') + ',' +
+      (reg.cursos || '') + ',' +
+      (reg.paux   ? 'si' : '') + ',' +
+      '"'+(reg.notas||'')+'"'
+    );
   });
   const csv  = filas.join('\n');
   const blob = new Blob(['﻿'+csv], { type: 'text/csv;charset=utf-8' });
@@ -6250,7 +6228,7 @@ function descargarPlantillaCSV(grupo) {
   a.download = 'Informe_' + grupo.replace(/ /g,'_') + '_' + mv.mesNombre + '_' + anio + '.csv';
   a.click();
   URL.revokeObjectURL(url);
-  toast('📥 Plantilla de ' + grupo + ' descargada');
+  toast('📥 Plantilla CSV de ' + grupo + ' — ábrela en Excel, llénala y envíala como CSV por WhatsApp');
 }
 
 // ══════════════════════════════════════════
