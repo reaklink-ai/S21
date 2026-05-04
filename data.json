@@ -23625,7 +23625,7 @@
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "2",
             "paux": false,
             "horas": "47",
@@ -23639,10 +23639,10 @@
             "notas": ""
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Abr": {
@@ -30425,7 +30425,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933506956,
+  "_lastModified": 1777933518645,
   "vym": {
     "semanas": {},
     "historial": [
