@@ -3207,6 +3207,9 @@ input:focus, select:focus, textarea:focus {
         <button class="sb-nav-item sb-perm-admin" id="sbnav-usuarios-btn" onclick="abrirGestionUsuarios()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-gear"/></svg></span>Usuarios
         </button>
+        <button class="sb-nav-item sb-perm-admin" onclick="abrirAuditoria()">
+          <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg></span>Auditoría
+        </button>
         <button class="sb-nav-item sb-perm-admin" style="color:var(--red)" onclick="resetTodo()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Borrar todo
         </button>
@@ -4664,11 +4667,104 @@ function renderAsistenciaTabla() {
           <span class="asist-bar" style="width:${pct}px;background:${col}40"></span>
         </td>
         <td style="font-size:11px;color:var(--ink-3);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(r.notas||'')}</td>
-        <td><button class="asist-del" onclick="eliminarReunion('${r.id}')" title="Eliminar" style="${can('asistencia')?'':'display:none'}">✕</button></td>
+        <td style="display:flex;gap:4px;align-items:center">
+          <button class="asist-del" onclick="editarReunion('${r.id}')" title="Editar"
+            style="${can('asistencia')?'':'display:none'};background:var(--accent-lt);color:var(--accent);border-color:var(--accent-mid)">✎</button>
+          <button class="asist-del" onclick="eliminarReunion('${r.id}')" title="Eliminar" style="${can('asistencia')?'':'display:none'}">✕</button>
+        </td>
       </tr>`;
     }).join('')}
     </tbody>
   </table>`;
+}
+
+function editarReunion(id) {
+  const r = (state.asistencia||[]).find(x => x.id === id);
+  if(!r) return;
+
+  let ov = document.getElementById('modalEditAsistOverlay');
+  if(!ov) {
+    ov = document.createElement('div');
+    ov.id = 'modalEditAsistOverlay';
+    ov.className = 'overlay';
+    ov.innerHTML = `
+      <div class="modal" style="max-width:440px">
+        <div class="modal-hd">
+          <span class="modal-hd-title">Editar reunión</span>
+          <button class="modal-x" onclick="document.getElementById('modalEditAsistOverlay').style.display='none'">×</button>
+        </div>
+        <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
+          <input type="hidden" id="editAsistId">
+          <div class="mf-group">
+            <label>Fecha</label>
+            <input type="date" id="editAsistFecha" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+          </div>
+          <div class="mf-group">
+            <label>Tipo</label>
+            <select id="editAsistTipo" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+              <option value="Entre semana">Entre semana</option>
+              <option value="Fin de semana">Fin de semana</option>
+            </select>
+          </div>
+          <div class="mf-group">
+            <label>Tema</label>
+            <input type="text" id="editAsistTema" placeholder="Tema de la reunión" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div class="mf-group">
+              <label>Presencial</label>
+              <input type="number" id="editAsistPresencial" min="0" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+            </div>
+            <div class="mf-group">
+              <label>Zoom</label>
+              <input type="number" id="editAsistZoom" min="0" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+            </div>
+          </div>
+          <div class="mf-group">
+            <label>Notas</label>
+            <input type="text" id="editAsistNotas" placeholder="Observaciones" style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:14px;font-family:var(--font);width:100%;box-sizing:border-box">
+          </div>
+        </div>
+        <div class="modal-ft">
+          <button class="btn-cancel" onclick="document.getElementById('modalEditAsistOverlay').style.display='none'">Cancelar</button>
+          <button class="btn-save" onclick="guardarEditAsist()">Guardar</button>
+        </div>
+      </div>`;
+    document.body.appendChild(ov);
+  }
+
+  // Llenar campos
+  document.getElementById('editAsistId').value       = r.id;
+  document.getElementById('editAsistFecha').value    = r.fecha;
+  document.getElementById('editAsistTipo').value     = r.tipo;
+  document.getElementById('editAsistTema').value     = r.tema || '';
+  document.getElementById('editAsistPresencial').value = r.presencial;
+  document.getElementById('editAsistZoom').value     = r.zoom;
+  document.getElementById('editAsistNotas').value    = r.notas || '';
+  ov.style.display = 'flex';
+}
+
+function guardarEditAsist() {
+  const id         = document.getElementById('editAsistId').value;
+  const fecha      = document.getElementById('editAsistFecha').value;
+  const tipo       = document.getElementById('editAsistTipo').value;
+  const tema       = document.getElementById('editAsistTema').value.trim();
+  const presencial = parseInt(document.getElementById('editAsistPresencial').value) || 0;
+  const zoom       = parseInt(document.getElementById('editAsistZoom').value) || 0;
+  const notas      = document.getElementById('editAsistNotas').value.trim();
+
+  if(!fecha) { toast('⚠ La fecha es requerida'); return; }
+
+  const idx = (state.asistencia||[]).findIndex(x => x.id === id);
+  if(idx < 0) return;
+
+  state.asistencia[idx] = { ...state.asistencia[idx], fecha, tipo, tema, presencial, zoom, total: presencial + zoom, notas };
+  state.asistencia.sort((a,b) => b.fecha.localeCompare(a.fecha));
+
+  marcarCambios();
+  document.getElementById('modalEditAsistOverlay').style.display = 'none';
+  renderAsistenciaScreen();
+  toast('✓ Reunión actualizada');
 }
 
 function exportarAsistenciaExcel() {
@@ -5841,6 +5937,122 @@ function abrirModalNoInformaron() {
 }
 
 // ══════════════════════════════════════════
+// AUDITORÍA CENTRALIZADA
+// ══════════════════════════════════════════
+const AUDIT_MAX = 200;
+
+function auditLog(accion, detalle, pubId) {
+  if(!state.auditoria) state.auditoria = [];
+  const user = currentUser ? (currentUser.nombre || currentUser.id || currentUser.rol) : 'Sistema';
+  state.auditoria.unshift({
+    ts:     Date.now(),
+    user,
+    rol:    currentUser?.rol || '',
+    accion,
+    detalle,
+    pubId:  pubId || null
+  });
+  // Mantener solo los últimos AUDIT_MAX registros
+  if(state.auditoria.length > AUDIT_MAX) state.auditoria = state.auditoria.slice(0, AUDIT_MAX);
+}
+
+function abrirAuditoria() {
+  let ov = document.getElementById('modalAuditoriaOverlay');
+  if(!ov) {
+    ov = document.createElement('div');
+    ov.id = 'modalAuditoriaOverlay';
+    ov.className = 'overlay';
+    ov.innerHTML = `
+      <div class="modal" style="max-width:640px">
+        <div class="modal-hd" style="border-bottom:2px solid var(--accent)">
+          <span class="modal-hd-title">Registro de Auditoría</span>
+          <button class="modal-x" onclick="document.getElementById('modalAuditoriaOverlay').style.display='none'">×</button>
+        </div>
+        <div style="padding:12px 18px;background:var(--surface-2);border-bottom:1px solid var(--border-2);display:flex;gap:8px;align-items:center">
+          <input id="auditFiltro" placeholder="Buscar usuario, acción..." 
+            style="flex:1;padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:12px;font-family:var(--font);outline:none"
+            oninput="_renderAuditLista()">
+          <button onclick="_limpiarAuditoria()"
+            style="padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:var(--surface);
+            font-size:11px;font-weight:600;color:var(--red);cursor:pointer;font-family:var(--font)">
+            Limpiar
+          </button>
+        </div>
+        <div id="auditListaWrap" style="max-height:500px;overflow-y:auto"></div>
+        <div class="modal-ft">
+          <button class="btn-cancel" onclick="document.getElementById('modalAuditoriaOverlay').style.display='none'">Cerrar</button>
+        </div>
+      </div>`;
+    document.body.appendChild(ov);
+  }
+  ov.style.display = 'flex';
+  _renderAuditLista();
+}
+
+function _renderAuditLista() {
+  const wrap = document.getElementById('auditListaWrap');
+  if(!wrap) return;
+  const q = (document.getElementById('auditFiltro')?.value || '').toLowerCase().trim();
+  const logs = (state.auditoria || []).filter(e => {
+    if(!q) return true;
+    return (e.user+e.accion+e.detalle+e.rol).toLowerCase().includes(q);
+  });
+
+  if(!logs.length) {
+    wrap.innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-3);font-size:13px">Sin registros de auditoría</div>';
+    return;
+  }
+
+  const colores = {
+    'Nuevo publicador':     '#16a34a',
+    'Publicador editado':   '#3d5a9e',
+    'Publicador eliminado': '#dc2626',
+    'Marcado inactivo':     '#b45309',
+    'Reactivado':           '#16a34a',
+    'Marcado mudado':       '#0e7490',
+    'Regresó de mudados':   '#0e7490',
+    'Horas editadas':       '#7c3aed',
+    'Grupo editado':        '#3d5a9e',
+    'Login':                '#64748b',
+  };
+
+  wrap.innerHTML = logs.map(e => {
+    const color  = colores[e.accion] || '#64748b';
+    const fecha  = new Date(e.ts);
+    const rel    = _tiempoRelativo(fecha);
+    const hora   = fecha.toLocaleTimeString('es-CO', {hour:'2-digit', minute:'2-digit'});
+    const dia    = fecha.toLocaleDateString('es-CO', {day:'numeric', month:'short'});
+    const pubBtn = e.pubId ? `<button onclick="document.getElementById('modalAuditoriaOverlay').style.display='none';selPubYAbrir('${e.pubId}')"
+      style="font-size:10px;color:var(--accent);background:none;border:none;cursor:pointer;font-family:var(--font);padding:0;text-decoration:underline">Ver registro</button>` : '';
+
+    return `<div style="display:flex;gap:12px;padding:10px 18px;border-bottom:1px solid var(--border-2);transition:background .1s"
+      onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+      <div style="width:3px;border-radius:2px;background:${color};flex-shrink:0;min-height:36px"></div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px">
+          <span style="font-size:12.5px;font-weight:700;color:${color}">${escHtml(e.accion)}</span>
+          <span style="font-size:10px;background:var(--surface-2);color:var(--ink-3);padding:1px 7px;border-radius:10px;flex-shrink:0">${escHtml(e.rol)}</span>
+        </div>
+        <div style="font-size:12px;color:var(--ink-2)">${escHtml(e.detalle)}</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:3px">
+          <span style="font-size:10px;color:var(--ink-3)">👤 ${escHtml(e.user)}</span>
+          <span style="font-size:10px;color:var(--ink-3)">·</span>
+          <span style="font-size:10px;color:var(--ink-3)" title="${dia} ${hora}">${rel}</span>
+          ${pubBtn}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function _limpiarAuditoria() {
+  if(!confirm('¿Eliminar todo el registro de auditoría? Esta acción no se puede deshacer.')) return;
+  state.auditoria = [];
+  marcarCambios();
+  _renderAuditLista();
+}
+
+// ══════════════════════════════════════════
 //  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
 // ══════════════════════════════════════════
 function getUsuarios() {
@@ -5957,6 +6169,7 @@ async function verificarLogin() {
     document.getElementById('appbar-rol').style.color = getRolColor(user.rol);
   }
   applyRoleUI();
+  auditLog('Login', 'Ingresó al sistema desde ' + (navigator.userAgent.includes('Mobile')?'móvil':'escritorio'));
   irA('inicio');
 
   // Siempre jalar datos remotos al hacer login — crítico en dominio nuevo o dispositivo nuevo
