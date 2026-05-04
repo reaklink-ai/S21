@@ -23310,8 +23310,8 @@
       "registros": {
         "2025": {
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -30425,7 +30425,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933486067,
+  "_lastModified": 1777933498220,
   "vym": {
     "semanas": {},
     "historial": [
