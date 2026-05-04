@@ -38,7 +38,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -21461,21 +21461,21 @@
             "notas": ""
           },
           "Dic": {
-            "particip": true,
+            "particip": false,
             "cursos": "1",
             "paux": false,
             "horas": "38",
             "notas": ""
           },
           "Ene": {
-            "particip": true,
+            "particip": false,
             "cursos": "1",
             "paux": false,
             "horas": "33",
             "notas": "16 horas LDC"
           },
           "Feb": {
-            "particip": true,
+            "particip": false,
             "cursos": "1",
             "paux": false,
             "horas": "27",
@@ -30399,23 +30399,10 @@
       "nombre": "Isaac_G",
       "rol": "anciano",
       "grupo": "Grupo 9",
-      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c",
-      "accesos": {
-        "vym": false
-      }
-    },
-    {
-      "id": "mornxvuk",
-      "nombre": "Miguel_R",
-      "pinHash": "c7028387f72a54f9e8410fc5db7d1c8d18f9134b8c9a6c49ae3beeb7a66d0d44",
-      "rol": "anciano",
-      "grupo": "Grupo 4",
-      "accesos": {
-        "vym": false
-      }
+      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777928264961,
+  "_lastModified": 1777928668612,
   "vym": {
     "semanas": {},
     "historial": [
