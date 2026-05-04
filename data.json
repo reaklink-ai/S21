@@ -30194,6 +30194,56 @@
   ],
   "asistencia": [
     {
+      "id": "r1777510643067",
+      "fecha": "2026-04-29",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 123,
+      "zoom": 102,
+      "total": 225,
+      "notas": ""
+    },
+    {
+      "id": "r1777152270683",
+      "fecha": "2026-04-25",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 120,
+      "zoom": 69,
+      "total": 189,
+      "notas": ""
+    },
+    {
+      "id": "r1776927924868",
+      "fecha": "2026-04-22",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 132,
+      "zoom": 89,
+      "total": 221,
+      "notas": ""
+    },
+    {
+      "id": "r1776933778534",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1777932017999",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
       "id": "r1775944685700",
       "fecha": "2026-04-11",
       "tipo": "Fin de semana",
@@ -30294,46 +30344,6 @@
       "notas": ""
     },
     {
-      "id": "r1777510643067",
-      "fecha": "2026-04-29",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 123,
-      "zoom": 102,
-      "total": 225,
-      "notas": ""
-    },
-    {
-      "id": "r1777152270683",
-      "fecha": "2026-04-25",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 120,
-      "zoom": 69,
-      "total": 189,
-      "notas": ""
-    },
-    {
-      "id": "r1776927924868",
-      "fecha": "2026-04-22",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 132,
-      "zoom": 89,
-      "total": 221,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
       "id": "r1776927876791",
       "fecha": "2026-04-18",
       "tipo": "Entre semana",
@@ -30402,7 +30412,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777931961308,
+  "_lastModified": 1777932049693,
   "vym": {
     "semanas": {},
     "historial": [
