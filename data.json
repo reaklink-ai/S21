@@ -13228,11 +13228,11 @@
             "notas": "45 Horas Betel"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "14",
+            "notas": "41 Horas Betel"
           },
           "Abr": {
             "particip": false,
@@ -30445,7 +30445,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777935381222,
+  "_lastModified": 1777935403175,
   "vym": {
     "semanas": {},
     "historial": [
