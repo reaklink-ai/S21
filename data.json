@@ -19864,11 +19864,11 @@
             "horas": "30"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "52",
+            "notas": "NUEVO PRECURSOR REGULAR"
           },
           "Abr": {
             "particip": false,
@@ -30445,7 +30445,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933820494,
+  "_lastModified": 1777933836030,
   "vym": {
     "semanas": {},
     "historial": [
