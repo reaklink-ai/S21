@@ -16849,11 +16849,11 @@
             "notas": "48 Horas Betel"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "12",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "48 Horas Betel"
           },
           "Abr": {
             "particip": true,
@@ -30418,7 +30418,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933114138,
+  "_lastModified": 1777933129483,
   "vym": {
     "semanas": {},
     "historial": [
