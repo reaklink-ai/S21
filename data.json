@@ -13570,10 +13570,10 @@
             "cursos": "2"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "55",
             "notas": ""
           },
           "Abr": {
@@ -30445,7 +30445,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777935427812,
+  "_lastModified": 1777935436872,
   "vym": {
     "semanas": {},
     "historial": [
