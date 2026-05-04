@@ -28143,7 +28143,8 @@
             "particip": false,
             "horas": "",
             "cursos": "",
-            "paux": false
+            "paux": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Nov": {
             "particip": true,
@@ -28153,14 +28154,15 @@
             "particip": true
           },
           "Ene": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Mar": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES"
           },
           "Sep": {
             "particip": false,
@@ -28181,7 +28183,7 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO PREDICO EN EL MES"
+            "notas": "NO INFORMO EN EL MES"
           },
           "May": {
             "particip": false,
@@ -30425,7 +30427,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933619057,
+  "_lastModified": 1777933639655,
   "vym": {
     "semanas": {},
     "historial": [
