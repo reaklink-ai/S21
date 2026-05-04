@@ -38,7 +38,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -677,10 +677,10 @@
             "cursos": "1"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
             "notas": ""
           },
           "Abr": {
@@ -30238,6 +30238,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1777937122758",
+      "fecha": "2026-05-02",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 110,
+      "zoom": 87,
+      "total": 197,
+      "notas": ""
+    },
+    {
       "id": "r1777510643067",
       "fecha": "2026-04-29",
       "tipo": "Entre semana",
@@ -30269,6 +30279,26 @@
     },
     {
       "id": "r1777932017999",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776933778534",
       "fecha": "2026-04-18",
       "tipo": "Fin de semana",
       "tema": "Estudio de la Atalaya",
@@ -30376,26 +30406,6 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
-    },
-    {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
     }
   ],
   "usuarios": [
@@ -30456,7 +30466,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777936586155,
+  "_lastModified": 1777937265272,
   "vym": {
     "semanas": {},
     "historial": [
