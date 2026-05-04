@@ -2629,7 +2629,7 @@
     },
     {
       "id": "mmm9qi4kqpna",
-      "apellido": "BeleñO",
+      "apellido": "Beleño",
       "nombre": "Isaac",
       "nacimiento": "",
       "bautismo": "2015-02-08",
@@ -2804,7 +2804,7 @@
     },
     {
       "id": "mmm9qi4k0gox",
-      "apellido": "BeleñO",
+      "apellido": "Beleño",
       "nombre": "Laura",
       "nacimiento": "1996-04-05",
       "bautismo": "2014-07-05",
@@ -2818,7 +2818,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -30433,7 +30440,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933728176,
+  "_lastModified": 1777933744414,
   "vym": {
     "semanas": {},
     "historial": [
