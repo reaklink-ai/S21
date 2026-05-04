@@ -4810,7 +4810,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8807,7 +8807,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -9391,7 +9391,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14386,7 +14386,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14646,7 +14646,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14811,10 +14811,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "5",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "May": {
@@ -14966,7 +14966,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15591,10 +15591,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "May": {
@@ -18949,10 +18949,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "60",
             "notas": ""
           },
           "May": {
@@ -19261,7 +19261,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -19413,10 +19413,10 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO INFORMO EN EL MES"
+            "notas": "NO INFORMO EN EL MES - CIRUGIA"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -19587,10 +19587,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "24",
             "notas": ""
           },
           "May": {
@@ -26716,7 +26716,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30626,7 +30626,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1777914478743,
+  "_lastModified": 1777914554642,
   "vym": {
     "semanas": {},
     "historial": [
