@@ -15537,7 +15537,7 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES"
           },
           "Oct": {
             "particip": true,
@@ -15568,10 +15568,12 @@
             "notas": ""
           },
           "Feb": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Sep": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Abr": {
             "particip": true,
@@ -30414,7 +30416,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933088699,
+  "_lastModified": 1777933102416,
   "vym": {
     "semanas": {},
     "historial": [
