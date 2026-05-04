@@ -1141,10 +1141,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "60",
+            "horas": "",
             "notas": ""
           },
           "May": {
@@ -1308,10 +1308,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "37",
+            "horas": "",
             "notas": ""
           },
           "May": {
@@ -1456,7 +1456,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -1611,14 +1611,14 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Abr": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -4787,7 +4787,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8737,7 +8737,7 @@
       "registros": {
         "2025": {
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8772,7 +8772,7 @@
             "notas": ""
           },
           "Feb": {
-            "particip": true
+            "particip": false
           },
           "Sep": {
             "particip": false,
@@ -9359,7 +9359,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14351,7 +14351,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14611,7 +14611,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -14776,10 +14776,10 @@
             "cursos": "4"
           },
           "Mar": {
-            "particip": true,
-            "cursos": "5",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "50",
+            "horas": "",
             "notas": ""
           },
           "Abr": {
@@ -14931,7 +14931,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15556,7 +15556,7 @@
             "horas": "50"
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -18466,13 +18466,6 @@
             "paux": false,
             "horas": "",
             "notas": ""
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
           }
         }
       },
@@ -18594,13 +18587,6 @@
             "cursos": "1"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -18882,13 +18868,6 @@
             "cursos": "2"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -30402,7 +30381,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777928668612,
+  "_lastModified": 1777919742776,
   "vym": {
     "semanas": {},
     "historial": [
