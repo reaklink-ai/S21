@@ -1309,7 +1309,7 @@ input, select, textarea { font-family: var(--font); }
 /* ── Banner KPI bar ── */
 .dash-kpi-bar {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   background: rgba(0,0,0,.2);
   backdrop-filter: blur(4px);
 }
@@ -1319,10 +1319,12 @@ input, select, textarea { font-family: var(--font); }
   cursor: pointer;
 }
 .dash-kpi-cell {
-  padding: 16px 18px;
+  padding: 18px 20px;
   border-right: 1px solid rgba(255,255,255,.1);
   cursor: pointer;
+  transition: background .15s;
 }
+.dash-kpi-cell:hover { background: rgba(255,255,255,.05); }
 .dash-kpi-cell:last-child { border-right: none; }
 
 /* ── Grid directorio de grupos ── */
@@ -1452,6 +1454,7 @@ input, select, textarea { font-family: var(--font); }
   /* ── Banner KPIs ── */
   .dash-kpi-bar {
     grid-template-columns: 1fr 1fr !important;
+    font-size: 10px;
   }
   .dash-kpi-main {
     grid-column: 1 / -1;
@@ -1460,13 +1463,13 @@ input, select, textarea { font-family: var(--font); }
     border-bottom: 1px solid rgba(255,255,255,.1);
   }
   .dash-kpi-main > div:first-child { font-size: 9px !important; }
-  .dash-kpi-main .sora-num { font-size: 32px !important; }
   .dash-kpi-cell {
-    padding: 12px 16px !important;
+    padding: 10px 12px !important;
     border-right: none !important;
     border-bottom: 1px solid rgba(255,255,255,.08);
   }
   .dash-kpi-cell:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.1) !important; }
+  .dash-kpi-cell:last-child { border-right: none !important; border-bottom: none !important; }
 
   /* ── Tabla grupos en móvil: scroll horizontal ── */
 
@@ -5720,6 +5723,118 @@ ${tablasHTML}
 
 
 // ══════════════════════════════════════════
+// HELPERS DASHBOARD
+// ══════════════════════════════════════════
+function _renderDashNoInf() {
+  const col = document.getElementById('dash-noInf-col');
+  if(!col) return;
+  const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const ma = mesActual();
+  const ultimos3 = Array.from({length:3},(_,i)=>{
+    const idx = ((ma.idx-i)+12)%12;
+    const a = idx<=ma.idx ? ma.anio : ma.anio-1;
+    return { m: MESES_C[idx], a };
+  });
+  const encontrados = pubs.filter(p =>
+    ultimos3.some(({m,a}) => { const r=p.registros?.[a]?.[m]; return r?.notas && PATRON.test(r.notas); })
+  );
+  const n = encontrados.length;
+
+  if(n===0) {
+    col.innerHTML = `<div style="padding:20px 22px;display:flex;flex-direction:column;justify-content:center;height:100%">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:6px">Irregularidades</div>
+      <div style="font-family:'Sora',var(--font);font-size:38px;font-weight:800;color:#86efac;line-height:1">0</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:3px">sin irregularidades</div>
+    </div>`;
+    return;
+  }
+
+  const lista = encontrados.slice(0,4).map(({apellido,nombre,registros,id})=>{
+    let ultimoMes = '';
+    ultimos3.forEach(({m,a})=>{ const r=registros?.[a]?.[m]; if(r?.notas&&PATRON.test(r.notas)&&!ultimoMes) ultimoMes=m; });
+    return `<div onclick="selPubYAbrir('${id}')"
+      style="display:flex;align-items:center;gap:8px;padding:5px 10px;cursor:pointer;border-radius:6px;transition:background .12s"
+      onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background=''">
+      <span style="font-size:11px;color:rgba(255,255,255,.75);font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(apellido)}, ${escHtml(nombre.split(' ')[0])}</span>
+      <span style="font-size:9px;background:rgba(239,68,68,.25);color:#fca5a5;padding:1px 6px;border-radius:10px;white-space:nowrap">${ultimoMes}</span>
+    </div>`;
+  }).join('');
+
+  const masLabel = n>4 ? `<div style="font-size:9px;color:rgba(255,255,255,.35);padding:4px 10px;cursor:pointer" onclick="abrirModalNoInformaron()">+${n-4} más → ver todos</div>` : '';
+
+  col.innerHTML = `
+    <div style="padding:14px 16px 8px;cursor:pointer" onclick="abrirModalNoInformaron()">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:4px">Sin informar (notas)</div>
+      <div style="font-family:'Sora',var(--font);font-size:34px;font-weight:800;color:#fca5a5;line-height:1;letter-spacing:-1.5px">${n}</div>
+      <div style="font-size:9.5px;color:rgba(255,255,255,.35);margin-top:2px;margin-bottom:8px">últimos 3 meses · clic para ver</div>
+    </div>
+    <div style="flex:1;overflow-y:auto;padding:0 6px 10px">${lista}${masLabel}</div>`;
+}
+// ══════════════════════════════════════════
+function selPubYAbrir(id) {
+  irA('publicadores');
+  setTimeout(() => selPub(id), 150);
+}
+
+function abrirModalNoInformaron() {
+  const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const ma = mesActual();
+  const ultimos3 = Array.from({length:3},(_,i)=>{
+    const idx = ((ma.idx-i)+12)%12;
+    const a = idx<=ma.idx ? ma.anio : ma.anio-1;
+    return { m: MESES_C[idx], a };
+  });
+
+  const encontrados = pubs.filter(p =>
+    ultimos3.some(({m,a}) => {
+      const r = p.registros?.[a]?.[m];
+      return r?.notas && PATRON.test(r.notas);
+    })
+  );
+
+  const filas = encontrados.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).map(p => {
+    const notas = ultimos3.map(({m,a})=>{
+      const r = p.registros?.[a]?.[m];
+      return r?.notas && PATRON.test(r.notas) ? `<span style="background:#fef2f2;color:#b91c1c;font-size:10px;padding:1px 7px;border-radius:10px;margin-left:4px">${m}: ${escHtml(r.notas.slice(0,20))}</span>` : '';
+    }).filter(Boolean).join('');
+    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border-2);cursor:pointer;transition:background .1s"
+      onclick="document.getElementById('modalNoInfOverlay').style.display='none';selPubYAbrir('${p.id}')"
+      onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+      <div style="flex:1">
+        <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">${p.grupo||'Sin grupo'} ${notas}</div>
+      </div>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>`;
+  }).join('');
+
+  // Crear overlay si no existe
+  let ov = document.getElementById('modalNoInfOverlay');
+  if(!ov) {
+    ov = document.createElement('div');
+    ov.id = 'modalNoInfOverlay';
+    ov.className = 'overlay';
+    ov.innerHTML = `<div class="modal" style="max-width:500px">
+      <div class="modal-hd">
+        <span class="modal-hd-title" style="color:var(--red)">Sin informar — últimos 3 meses</span>
+        <button class="modal-x" onclick="document.getElementById('modalNoInfOverlay').style.display='none'">×</button>
+      </div>
+      <div class="modal-body" style="padding:0;max-height:480px;overflow-y:auto" id="modalNoInfBody"></div>
+      <div class="modal-ft">
+        <button class="btn-cancel" onclick="document.getElementById('modalNoInfOverlay').style.display='none'">Cerrar</button>
+      </div>
+    </div>`;
+    document.body.appendChild(ov);
+  }
+  document.getElementById('modalNoInfBody').innerHTML = filas || '<div style="padding:24px;text-align:center;color:var(--ink-3)">Ningún publicador tiene notas de irregularidades</div>';
+  ov.style.display = 'flex';
+}
+
+// ══════════════════════════════════════════
 //  AUTH — LOGIN / LOGOUT / GESTIÓN USUARIOS
 // ══════════════════════════════════════════
 function getUsuarios() {
@@ -6989,6 +7104,16 @@ function abrirMetricas() {
   document.getElementById('modalMetricas').style.display = 'flex';
   renderMetricas('resumen');
 }
+
+function abrirMetricasGrupos() {
+  document.getElementById('modalMetricas').style.display = 'flex';
+  switchMTab('resumen');
+  // Scroll al panel de grupos después de renderizar
+  setTimeout(() => {
+    const el = document.getElementById('met-grupos-panel');
+    if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 200);
+}
 function cerrarMetricas() {
   document.getElementById('modalMetricas').style.display = 'none';
 }
@@ -7164,6 +7289,67 @@ function renderMetResumen() {
       </div>`;
     });
     html += `</div>`;
+
+    // ── Panel de grupos por mes ──
+    const mv2 = mesActual();
+    const gruposConDatos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g));
+    const gruposSiInf = [], gruposNoInf = [];
+
+    gruposConDatos.forEach(g => {
+      const miembros = pubs.filter(p => p.grupo === g);
+      const informaron = miembros.filter(p => {
+        const r = (p.registros||{})[mv2.anio]?.[mv2.mesC];
+        return r?.particip;
+      });
+      const info = { g, total: miembros.length, informaron: informaron.length };
+      if(informaron.length > 0) gruposSiInf.push(info);
+      else gruposNoInf.push(info);
+    });
+
+    html += `<div id="met-grupos-panel" style="margin-top:24px">`;
+    html += `<div class="met-section-title">Informe por grupo · ${mv2.mesNombre}</div>`;
+    html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">`;
+
+    // Grupos que SÍ informaron
+    html += `<div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:11px;font-weight:800;color:#16a34a;text-transform:uppercase;letter-spacing:.6px">✓ Informaron</span>
+        <span style="background:#f0fdf4;color:#16a34a;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;border:1px solid #bbf7d0">${gruposSiInf.length}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">`;
+    gruposSiInf.sort((a,b)=>b.informaron/b.total - a.informaron/a.total).forEach(({g, total, informaron}) => {
+      const pct = Math.round(informaron/total*100);
+      const barColor = pct===100?'#16a34a':pct>=70?'#86efac':'#bbf7d0';
+      html += `<div style="background:#f0fdf4;border:1px solid #dcfce7;border-radius:10px;padding:8px 12px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:5px">
+          <span style="font-size:12px;font-weight:700;color:var(--ink)">${escHtml(g)}</span>
+          <span style="font-size:11px;font-weight:700;color:#16a34a">${informaron}/${total}</span>
+        </div>
+        <div style="height:4px;background:#dcfce7;border-radius:4px;overflow:hidden">
+          <div style="height:100%;width:${pct}%;background:${barColor};border-radius:4px"></div>
+        </div>
+      </div>`;
+    });
+    if(!gruposSiInf.length) html += `<div style="font-size:12px;color:var(--ink-3);font-style:italic;padding:12px">Ningún grupo ha informado aún</div>`;
+    html += `</div></div>`;
+
+    // Grupos que NO informaron
+    html += `<div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <span style="font-size:11px;font-weight:800;color:#ef4444;text-transform:uppercase;letter-spacing:.6px">✗ Sin informe</span>
+        <span style="background:#fef2f2;color:#ef4444;font-size:11px;font-weight:700;padding:2px 10px;border-radius:20px;border:1px solid #fca5a5">${gruposNoInf.length}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4px">`;
+    gruposNoInf.forEach(({g, total}) => {
+      html += `<div style="background:#fef2f2;border:1px solid #fee2e2;border-radius:10px;padding:8px 12px;
+        display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:12px;font-weight:700;color:var(--ink)">${escHtml(g)}</span>
+        <span style="font-size:11px;color:var(--ink-3)">${total} miembros</span>
+      </div>`;
+    });
+    if(!gruposNoInf.length) html += `<div style="font-size:12px;color:#16a34a;font-weight:600;padding:12px">✓ Todos los grupos han informado</div>`;
+    html += `</div></div>`;
+    html += `</div></div>`;
 
     el.innerHTML = html;
   } catch(e) {
@@ -7600,6 +7786,17 @@ function renderDashboard() {
   }).length;
   const noPredicaron = total - participaron;
   const gruposActivos = GRUPOS_LISTA.filter(g => pubs.some(p=>p.grupo===g));
+
+  // Grupos que han informado: al menos 1 miembro del grupo informó este mes
+  const gruposInformaron = gruposActivos.filter(g => {
+    return pubs.some(p => {
+      if(p.grupo !== g) return false;
+      const r = p.registros?.[anioMes]?.[mesC_v];
+      return r?.particip;
+    });
+  }).length;
+  const gruposTotal = gruposActivos.length;
+  const pctGrupos = gruposTotal ? Math.round(gruposInformaron/gruposTotal*100) : 0;
   const ancianos = pubs.filter(p=>p.anciano).length;
   const precursores = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).length;
   const mudados     = (state.mudados||[]).length;
@@ -7697,58 +7894,80 @@ function renderDashboard() {
   }).join('');
 
   document.getElementById('dashboardGrid').innerHTML = `
-    <!-- ── BANNER REDISEÑADO ── -->
+    <!-- ── BANNER ── -->
     <div class="dash-banner" style="padding:0;overflow:hidden;border-radius:var(--r-xl)">
-      <!-- Fila superior: título + stats -->
-      <div style="display:flex;align-items:center;justify-content:space-between;padding:26px 32px 20px;flex-wrap:wrap;gap:16px;width:100%">
-        <div>
-          <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.5);margin-bottom:4px">
-            ${new Date().getDate()<20?'⏰ Envío a sucursal: día 20':'✅ Período de envío activo'}
-          </div>
-          <div class="dash-banner-title">Registro de Predicación</div>
-          <div class="dash-banner-sub">Año de servicio ${anio}–${anio+1} · Informe ${mesNombre}</div>
-        </div>
-        <div style="display:flex;gap:24px;flex-shrink:0">
-          <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
-          <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
-          <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
-        </div>
-      </div>
-      <!-- Fila inferior: KPIs de participación con sparkline -->
-      <div class="dash-kpi-bar">
-        <!-- Participación grande con sparkline -->
-        <div class="dash-kpi-main" onclick="abrirMetricas()">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Participación · ${mesNombre}</div>
-          <div style="display:flex;align-items:flex-end;gap:16px">
-            <div>
-              <div style="font-family:'Sora',var(--font);font-size:40px;font-weight:800;color:#fff;line-height:1;letter-spacing:-2px">${pctParticip}<span style="font-size:22px;font-weight:600;opacity:.7">%</span></div>
-              <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:3px">${participaron} de ${total} publicadores</div>
+      <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr;min-height:180px">
+
+        <!-- Columna izquierda: identidad + stats -->
+        <div style="padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.45);margin-bottom:6px">
+              ${new Date().getDate()<20?'⏰ Envío a sucursal: día 20':'✅ Período de envío activo'}
             </div>
-            <div style="display:flex;align-items:flex-end;gap:3px;height:32px;margin-bottom:4px">${sparkBars}</div>
+            <div class="dash-banner-title" style="font-size:22px">Registro de Predicación</div>
+            <div class="dash-banner-sub">Año ${anio}–${anio+1} · Informe ${mesNombre}</div>
           </div>
-          <div style="margin-top:10px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden">
-            <div style="height:100%;width:${pctParticip}%;background:${pctColor};border-radius:4px;transition:width .6s"></div>
+          <div style="display:flex;gap:28px;margin-top:16px">
+            <div class="dw-stat"><div class="dw-stat-n">${total}</div><div class="dw-stat-l">Publicadores</div></div>
+            <div class="dw-stat"><div class="dw-stat-n">${gruposActivos.length}</div><div class="dw-stat-l">Grupos</div></div>
+            <div class="dw-stat"><div class="dw-stat-n">${precursores}</div><div class="dw-stat-l">Precursores</div></div>
           </div>
         </div>
-        <!-- Sin informar -->
-        <div class="dash-kpi-cell" onclick="abrirMetricas()">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Sin informe</div>
-          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:${noPredicaron===0?'#86efac':'#fca5a5'};line-height:1;letter-spacing:-1.5px">${noPredicaron}</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">${noPredicaron===0?'✓ Todos':'pendientes'}</div>
+
+        <!-- Columna derecha: KPIs en grid 2x2 -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;background:rgba(0,0,0,.2)">
+
+          <!-- Participación — ocupa toda la columna izquierda del grid 2x2 -->
+          <div style="grid-row:span 2;padding:20px 22px;border-right:1px solid rgba(255,255,255,.1);
+            cursor:pointer;display:flex;flex-direction:column;justify-content:center;transition:background .15s"
+            onclick="abrirMetricas()"
+            onmouseover="this.style.background='rgba(255,255,255,.05)'"
+            onmouseout="this.style.background=''">
+            <div style="font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.45);margin-bottom:8px">Participación · ${mesNombre}</div>
+            <div style="font-family:'Sora',var(--font);font-size:46px;font-weight:800;color:#fff;line-height:1;letter-spacing:-2px">${pctParticip}<span style="font-size:24px;opacity:.6">%</span></div>
+            <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px;margin-bottom:12px">${participaron} de ${total}</div>
+            <div style="display:flex;align-items:flex-end;gap:3px;height:28px;margin-bottom:8px">${sparkBars}</div>
+            <div style="height:3px;background:rgba(255,255,255,.15);border-radius:3px;overflow:hidden">
+              <div style="height:100%;width:${pctParticip}%;background:${pctColor};border-radius:3px"></div>
+            </div>
+          </div>
+
+          <!-- Sin informe -->
+          <div style="padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.1);cursor:pointer;transition:background .15s"
+            onclick="abrirMetricas()"
+            onmouseover="this.style.background='rgba(255,255,255,.05)'"
+            onmouseout="this.style.background=''">
+            <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:4px">Sin informe</div>
+            <div style="font-family:'Sora',var(--font);font-size:34px;font-weight:800;color:${noPredicaron===0?'#86efac':'#fca5a5'};line-height:1;letter-spacing:-1.5px">${noPredicaron}</div>
+            <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:3px">${noPredicaron===0?'✓ Todos':'pendientes'}</div>
+          </div>
+
+          <!-- Grupos informaron / Prec. auxiliares -->
+          <div style="padding:8px 18px 0;display:grid;grid-template-columns:1fr 1fr;gap:0">
+            <div style="padding:8px 0;border-right:1px solid rgba(255,255,255,.1);cursor:pointer;transition:background .15s;padding-right:14px"
+              onclick="abrirMetricasGrupos()"
+              onmouseover="this.style.background='rgba(255,255,255,.05)'"
+              onmouseout="this.style.background=''">
+              <div style="font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:3px">Grupos</div>
+              <div style="font-family:'Sora',var(--font);font-size:26px;font-weight:800;color:${pctGrupos===100?'#86efac':pctGrupos>=50?'#fcd34d':'#fca5a5'};line-height:1;letter-spacing:-1px">${gruposInformaron}<span style="font-size:13px;opacity:.6">/${gruposTotal}</span></div>
+              <div style="font-size:9.5px;color:rgba(255,255,255,.4);margin-top:2px">${pctGrupos}% inf.</div>
+            </div>
+            <div style="padding:8px 0 8px 14px;cursor:pointer;transition:background .15s"
+              onclick="abrirMetricas()"
+              onmouseover="this.style.background='rgba(255,255,255,.05)'"
+              onmouseout="this.style.background=''">
+              <div style="font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.4);margin-bottom:3px">Prec. aux.</div>
+              <div style="font-family:'Sora',var(--font);font-size:26px;font-weight:800;color:#c4b5fd;line-height:1;letter-spacing:-1px">${paux}</div>
+              <div style="font-size:9.5px;color:rgba(255,255,255,.4);margin-top:2px">este mes</div>
+            </div>
+          </div>
+
         </div>
-        <!-- Prec. auxiliares -->
-        <div class="dash-kpi-cell" onclick="abrirMetricas()">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. auxiliares</div>
-          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#c4b5fd;line-height:1;letter-spacing:-1.5px">${paux}</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">este mes</div>
-        </div>
-        <!-- Precursores regulares -->
-        <div class="dash-kpi-cell" onclick="irA('precursores')">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:rgba(255,255,255,.5);margin-bottom:6px">Prec. regulares</div>
-          <div style="font-family:'Sora',var(--font);font-size:32px;font-weight:800;color:#fcd34d;line-height:1;letter-spacing:-1.5px">${precursores}</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:4px">activos</div>
-        </div>
-      </div>
+
+        <!-- Columna 3: No han informado recientemente -->
+        <div style="background:rgba(0,0,0,.15);display:flex;flex-direction:column;overflow:hidden"
+          id="dash-noInf-col">
+        </div>      </div>
     </div>
 
     <!-- ── ACCESOS RÁPIDOS ── -->
@@ -7807,6 +8026,8 @@ function renderDashboard() {
     </div>
     ${bloqueSuper}
   `;
+  // Renderizar columna de irregularidades
+  _renderDashNoInf();
   // Update sidebar badge
   const badge = document.getElementById('sbBadgePubs');
   if(badge) badge.textContent = total;
@@ -9326,11 +9547,19 @@ function renderPrecursores() {
   const root = document.getElementById('precursores-root');
   if(!root) return;
   const anio = anioHoy();
-  const precursores = state.publicadores.filter(p=>p.precursorReg)
+
+  // Filtrar por grupo si es anciano o auxiliar
+  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const precursores = state.publicadores
+    .filter(p => p.precursorReg && !_mudIds.has(p.id))
+    .filter(p => _soloGrupo ? p.grupo === currentUser.grupo : true)
     .sort((a,b)=>a.apellido.localeCompare(b.apellido,'es'));
 
   if(!precursores.length) {
-    root.innerHTML = '<div style="padding:60px;text-align:center;color:var(--ink-3)">No hay precursores regulares registrados.</div>';
+    root.innerHTML = _soloGrupo
+      ? '<div style="padding:60px;text-align:center;color:var(--ink-3)">No hay precursores regulares en ' + currentUser.grupo + '.</div>'
+      : '<div style="padding:60px;text-align:center;color:var(--ink-3)">No hay precursores regulares registrados.</div>';
     return;
   }
 
@@ -9349,7 +9578,7 @@ function renderPrecursores() {
   // ── Header ──
   html += `<div class="prec-header">
     <div>
-      <div class="prec-title">Precursores Regulares</div>
+      <div class="prec-title">Precursores Regulares${_soloGrupo ? ' · ' + currentUser.grupo : ''}</div>
       <div class="prec-subtitle">Año de servicio ${anio}–${anio+1} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></div>
     </div>
     <span class="prec-count-badge">${precursores.length} precursores</span>
