@@ -17051,12 +17051,19 @@
       "genero": "M",
       "anciano": false,
       "siervo": true,
-      "precursorReg": false,
+      "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -30449,7 +30456,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777935521767,
+  "_lastModified": 1777935859743,
   "vym": {
     "semanas": {},
     "historial": [
