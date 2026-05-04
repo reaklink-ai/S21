@@ -21315,10 +21315,10 @@
             "notas": "30 Horas Escuela de Ancianos - 8 Horas LDC"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": ""
           },
           "Abr": {
@@ -30466,7 +30466,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777937315733,
+  "_lastModified": 1777937330024,
   "vym": {
     "semanas": {},
     "historial": [
