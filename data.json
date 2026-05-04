@@ -8750,41 +8750,41 @@
         "2025": {
           "Feb": {
             "particip": true,
-            "horas": "7",
-            "cursos": "1",
+            "horas": "",
+            "cursos": "",
             "paux": false,
-            "notas": "47.5 horas Betel"
+            "notas": ""
           },
           "Sep": {
             "particip": true,
-            "notas": "27 HORAS BETEL",
-            "horas": "12"
+            "notas": "",
+            "horas": ""
           },
           "Oct": {
             "particip": true,
-            "horas": "20",
-            "notas": "35 horas Betel"
+            "horas": "",
+            "notas": ""
           },
           "Nov": {
             "particip": true,
-            "horas": "16",
-            "cursos": "1",
-            "notas": "39 horas Betel"
+            "horas": "",
+            "cursos": "",
+            "notas": ""
           },
           "Dic": {
             "particip": true,
-            "horas": "10",
-            "cursos": "1",
-            "notas": "45 horas Betel"
+            "horas": "",
+            "cursos": "",
+            "notas": ""
           },
           "Ene": {
             "particip": true,
-            "horas": "11",
-            "cursos": "1",
-            "notas": "44 horas Betel"
+            "horas": "1.5",
+            "cursos": "",
+            "notas": ""
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30412,7 +30412,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777932260946,
+  "_lastModified": 1777932288368,
   "vym": {
     "semanas": {},
     "historial": [
