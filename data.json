@@ -17440,8 +17440,8 @@
             "paux": false
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -30412,7 +30412,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777932479337,
+  "_lastModified": 1777932488645,
   "vym": {
     "semanas": {},
     "historial": [
