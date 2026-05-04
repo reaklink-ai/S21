@@ -3409,7 +3409,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30425,7 +30425,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933445228,
+  "_lastModified": 1777933448885,
   "vym": {
     "semanas": {},
     "historial": [
