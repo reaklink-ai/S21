@@ -16697,16 +16697,18 @@
             "particip": true
           },
           "Dic": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Ene": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "33",
             "notas": ""
           },
           "Abr": {
@@ -30447,7 +30449,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777935489013,
+  "_lastModified": 1777935504384,
   "vym": {
     "semanas": {},
     "historial": [
