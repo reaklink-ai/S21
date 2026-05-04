@@ -5730,7 +5730,10 @@ function _renderDashNoInf() {
   if(!col) return;
   const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
   const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const pubs = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const pubs = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true)
+  );
   const ma = mesActual();
   const ultimos3 = Array.from({length:3},(_,i)=>{
     const idx = ((ma.idx-i)+12)%12;
@@ -5781,7 +5784,10 @@ function selPubYAbrir(id) {
 function abrirModalNoInformaron() {
   const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
   const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const pubs = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const pubs = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true)
+  );
   const ma = mesActual();
   const ultimos3 = Array.from({length:3},(_,i)=>{
     const idx = ((ma.idx-i)+12)%12;
