@@ -1463,8 +1463,8 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -1479,7 +1479,7 @@
           "Jun": {
             "particip": false,
             "cursos": "",
-            "paux": true,
+            "paux": false,
             "horas": "",
             "notas": ""
           },
@@ -30626,7 +30626,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1777914444729,
+  "_lastModified": 1777914478743,
   "vym": {
     "semanas": {},
     "historial": [
