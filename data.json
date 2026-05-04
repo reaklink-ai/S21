@@ -12150,7 +12150,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -12267,8 +12267,8 @@
             "cursos": "1"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -14280,8 +14280,8 @@
             "paux": false
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -20947,11 +20947,11 @@
             "notas": "45 Horas Betel"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "10",
+            "notas": "45 horas betel"
           },
           "Abr": {
             "particip": false,
@@ -30425,7 +30425,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933459849,
+  "_lastModified": 1777933486067,
   "vym": {
     "semanas": {},
     "historial": [
