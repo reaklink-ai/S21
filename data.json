@@ -25967,11 +25967,11 @@
             "notas": "CREDITO DE HORAS DE BETHEL: 25"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "13",
+            "notas": "CREDITO DE HORAS DE BETHEL : 40"
           },
           "Abr": {
             "particip": false,
@@ -30412,7 +30412,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777932488645,
+  "_lastModified": 1777932507554,
   "vym": {
     "semanas": {},
     "historial": [
