@@ -11272,7 +11272,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11604,10 +11604,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "43",
             "notas": ""
           },
           "May": {
@@ -15756,7 +15756,7 @@
             "particip": false
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16506,7 +16506,7 @@
             "particip": false
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -17043,11 +17043,11 @@
             "notas": "48 Horas betel"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "48 Horas betel"
           },
           "May": {
             "particip": false,
@@ -20671,7 +20671,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -23271,10 +23271,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "May": {
@@ -23435,10 +23435,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
+            "particip": true,
+            "cursos": "3",
+            "paux": true,
+            "horas": "25",
             "notas": ""
           },
           "May": {
@@ -30626,7 +30626,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1777914385347,
+  "_lastModified": 1777914444729,
   "vym": {
     "semanas": {},
     "historial": [
