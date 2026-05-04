@@ -29951,53 +29951,53 @@
       "registros": {
         "2025": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "78",
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "75",
             "notas": ""
           },
           "Nov": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "78",
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "69",
             "notas": ""
           },
           "Ene": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "75",
             "notas": ""
           },
           "Feb": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": ""
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "Baja como precursora regular"
           },
           "Abr": {
             "particip": false,
@@ -30563,7 +30563,7 @@
       "grupo": "Grupo 9"
     }
   ],
-  "_lastModified": 1777912962414,
+  "_lastModified": 1777913019416,
   "vym": {
     "semanas": {},
     "historial": [
