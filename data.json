@@ -3564,7 +3564,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -3694,7 +3694,7 @@
         },
         "2025": {
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -3897,8 +3897,8 @@
             "cursos": "1"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -4058,8 +4058,8 @@
             "horas": "40"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "50",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -30402,7 +30402,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777930767131,
+  "_lastModified": 1777930974171,
   "vym": {
     "semanas": {},
     "historial": [
