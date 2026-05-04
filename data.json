@@ -6605,7 +6605,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -6923,10 +6923,10 @@
             "horas": "16"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "14",
             "notas": ""
           },
           "Abr": {
@@ -30425,7 +30425,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933527035,
+  "_lastModified": 1777933604679,
   "vym": {
     "semanas": {},
     "historial": [
