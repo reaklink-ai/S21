@@ -6351,7 +6351,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -6511,8 +6511,8 @@
             "cursos": "2"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -8345,162 +8345,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 0
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 0,
-          "cursos": 0
-        }
-      }
-    },
-    {
-      "id": "mmm9qi4me0oy",
-      "apellido": "Fuentes",
-      "nombre": "Saray",
-      "nacimiento": "2000-09-04",
-      "bautismo": "2018-10-06",
-      "grupo": "Grupo 7",
-      "telefono": "",
-      "genero": "F",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2024": {
-          "Ene": {
             "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true
-          },
-          "Oct": {
-            "particip": true
-          },
-          "Nov": {
-            "particip": true
-          },
-          "Dic": {
-            "particip": true
-          },
-          "Ene": {
-            "particip": true
-          },
-          "Mar": {
-            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -29914,6 +29759,161 @@
         "direccion": "",
         "notasMed": ""
       }
+    },
+    {
+      "id": "mmm9qi4me0oy",
+      "apellido": "Fuentes",
+      "nombre": "Saray",
+      "nacimiento": "2000-09-04",
+      "bautismo": "2018-10-06",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      }
     }
   ],
   "grupos": {
@@ -30412,7 +30412,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777932226856,
+  "_lastModified": 1777932260946,
   "vym": {
     "semanas": {},
     "historial": [
@@ -31622,5 +31622,164 @@
       "2026-04-20",
       "2026-04-13"
     ]
-  }
+  },
+  "mudados": [
+    {
+      "id": "mmm9qi4me0oy",
+      "apellido": "Fuentes",
+      "nombre": "Saray",
+      "nacimiento": "2000-09-04",
+      "bautismo": "2018-10-06",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      },
+      "fechaMudado": "2026-05-04",
+      "direccionMudado": "Madrid España"
+    }
+  ]
 }
