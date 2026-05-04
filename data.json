@@ -30399,10 +30399,23 @@
       "nombre": "Isaac_G",
       "rol": "anciano",
       "grupo": "Grupo 9",
-      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
+      "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c",
+      "accesos": {
+        "vym": false
+      }
+    },
+    {
+      "id": "mornxvuk",
+      "nombre": "Miguel_R",
+      "pinHash": "c7028387f72a54f9e8410fc5db7d1c8d18f9134b8c9a6c49ae3beeb7a66d0d44",
+      "rol": "anciano",
+      "grupo": "Grupo 4",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1777926516904,
+  "_lastModified": 1777927204349,
   "vym": {
     "semanas": {},
     "historial": [
