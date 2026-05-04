@@ -21924,7 +21924,7 @@
           "Feb": {
             "particip": true,
             "horas": "",
-            "cursos": "1",
+            "cursos": "",
             "paux": false
           },
           "Sep": {
@@ -21932,22 +21932,22 @@
           },
           "Oct": {
             "particip": true,
-            "cursos": "1"
+            "cursos": ""
           },
           "Nov": {
             "particip": true,
-            "cursos": "1"
+            "cursos": ""
           },
           "Dic": {
             "particip": true,
-            "cursos": "1"
+            "cursos": ""
           },
           "Ene": {
             "particip": true,
-            "cursos": "1"
+            "cursos": ""
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30445,7 +30445,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777933850144,
+  "_lastModified": 1777933860238,
   "vym": {
     "semanas": {},
     "historial": [
