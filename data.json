@@ -21461,21 +21461,21 @@
             "notas": ""
           },
           "Dic": {
-            "particip": false,
+            "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "38",
             "notas": ""
           },
           "Ene": {
-            "particip": false,
+            "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "33",
             "notas": "16 horas LDC"
           },
           "Feb": {
-            "particip": false,
+            "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "27",
@@ -30402,7 +30402,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777930250913,
+  "_lastModified": 1777930392851,
   "vym": {
     "semanas": {},
     "historial": [
