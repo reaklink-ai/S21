@@ -9022,10 +9022,10 @@
         "2025": {
           "Mar": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "4",
+            "notas": "40 horas Betel"
           },
           "Sep": {
             "particip": true,
@@ -30445,7 +30445,7 @@
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
     }
   ],
-  "_lastModified": 1777935324129,
+  "_lastModified": 1777935340590,
   "vym": {
     "semanas": {},
     "historial": [
