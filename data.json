@@ -30557,9 +30557,19 @@
       "pinHash": "729dd8efa649efecae7c65f3071da882a5bf070bc6a6dea393926ee32d57c026",
       "rol": "auxiliar",
       "grupo": "Grupo 10"
+    },
+    {
+      "id": "mosu2w9i",
+      "nombre": "Miguel_R",
+      "pinHash": "0ac75135f84865e5b29e2c498c4c833ddbe05ac43e93a2132f66a96de2adbc76",
+      "rol": "anciano",
+      "grupo": "Grupo 4",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1777992617180,
+  "_lastModified": 1777997967591,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32572,6 +32582,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777997942300,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1777989232790,
       "user": "Administrador",
