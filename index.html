@@ -5968,17 +5968,26 @@ function abrirAuditoria() {
           <span class="modal-hd-title">Registro de Auditoría</span>
           <button class="modal-x" onclick="document.getElementById('modalAuditoriaOverlay').style.display='none'">×</button>
         </div>
-        <div style="padding:12px 18px;background:var(--surface-2);border-bottom:1px solid var(--border-2);display:flex;gap:8px;align-items:center">
-          <input id="auditFiltro" placeholder="Buscar usuario, acción..." 
-            style="flex:1;padding:7px 12px;border:1px solid var(--border);border-radius:8px;font-size:12px;font-family:var(--font);outline:none"
+        <div style="padding:10px 18px;background:var(--surface-2);border-bottom:1px solid var(--border-2);display:flex;gap:8px;align-items:center">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2" style="flex-shrink:0">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <input id="auditFiltro" placeholder="Filtrar por usuario o acción..."
+            style="flex:1;padding:6px 10px;border:1px solid var(--border);border-radius:8px;font-size:12px;
+            font-family:var(--font);outline:none;background:var(--surface)"
             oninput="_renderAuditLista()">
           <button onclick="_limpiarAuditoria()"
-            style="padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:var(--surface);
+            style="padding:5px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surface);
             font-size:11px;font-weight:600;color:var(--red);cursor:pointer;font-family:var(--font)">
-            Limpiar
+            Limpiar todo
           </button>
         </div>
-        <div id="auditListaWrap" style="max-height:500px;overflow-y:auto"></div>
+        <div style="padding:8px 18px;background:var(--accent-lt);border-bottom:1px solid var(--accent-mid)">
+          <span style="font-size:11px;color:var(--accent);font-weight:600">
+            ℹ️ El registro captura automáticamente cada acción realizada en la app por cualquier usuario.
+          </span>
+        </div>
+        <div id="auditListaWrap" style="max-height:460px;overflow-y:auto"></div>
         <div class="modal-ft">
           <button class="btn-cancel" onclick="document.getElementById('modalAuditoriaOverlay').style.display='none'">Cerrar</button>
         </div>
@@ -5999,7 +6008,19 @@ function _renderAuditLista() {
   });
 
   if(!logs.length) {
-    wrap.innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-3);font-size:13px">Sin registros de auditoría</div>';
+    wrap.innerHTML = `<div style="padding:40px;text-align:center">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="1.5" style="margin-bottom:12px">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+      </svg>
+      <div style="font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px">Sin registros aún</div>
+      <div style="font-size:12px;color:var(--ink-3);line-height:1.6">
+        El historial se irá llenando automáticamente<br>
+        con cada acción que realicen los usuarios:<br>
+        <strong>logins, ediciones, nuevos publicadores, etc.</strong>
+      </div>
+    </div>`;
     return;
   }
 
