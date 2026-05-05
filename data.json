@@ -13057,14 +13057,14 @@
             "particip": false
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777944096267,
+  "_lastModified": 1777944100151,
   "vym": {
     "semanas": {},
     "historial": [
