@@ -363,15 +363,15 @@
             "cursos": "1"
           },
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777941519450,
+  "_lastModified": 1777943580281,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32486,6 +32486,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777943501134,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1777941438664,
       "user": "Felipe_C",
