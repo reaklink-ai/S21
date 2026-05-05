@@ -10160,17 +10160,17 @@
             "horas": "30"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "62",
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "54",
             "notas": ""
           },
           "May": {
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777943807772,
+  "_lastModified": 1777943949764,
   "vym": {
     "semanas": {},
     "historial": [
