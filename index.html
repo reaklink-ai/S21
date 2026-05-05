@@ -4046,6 +4046,14 @@ function _mergeStates(remoto, local) {
     });
   }
 
+  // Auditoría: fusionar eventos de ambos lados sin duplicados
+  const auditoriaLocal  = local.auditoria  || [];
+  const auditoriaRemota = remoto.auditoria || [];
+  const tsRemoto = new Set(auditoriaRemota.map(e=>e.ts));
+  const auditoriaMerged = [...auditoriaRemota, ...auditoriaLocal.filter(e=>!tsRemoto.has(e.ts))];
+  auditoriaMerged.sort((a,b)=>b.ts-a.ts);
+  m.auditoria = auditoriaMerged.slice(0, AUDIT_MAX);
+
   return m;
 }
 
@@ -4065,7 +4073,7 @@ async function ghPull() {
 
     if(tsLocal > tsRemoto) {
       toast('Sincronizando cambios locales...');
-      await _mergeAndPush();
+      await _mergeAndPush(0, true); // silencioso — auto-sync al cargar
       return;
     }
 
@@ -6220,9 +6228,17 @@ async function verificarLogin() {
       const json = await res.json();
       const remoto = json.data;
       if(remoto) {
+        // Preservar auditoría local antes de sobrescribir con el remoto
+        const auditoriaLocal = state.auditoria || [];
         state = remoto;
         if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [ { ...DEFAULT_ADMIN } ];
         migrarUsuariosLegacy();
+        // Fusionar auditoría: combinar local + remota sin duplicados (por ts)
+        const auditoriaRemota = state.auditoria || [];
+        const tsRemoto = new Set(auditoriaRemota.map(e=>e.ts));
+        const auditoriaMerged = [...auditoriaRemota, ...auditoriaLocal.filter(e=>!tsRemoto.has(e.ts))];
+        auditoriaMerged.sort((a,b)=>b.ts-a.ts);
+        state.auditoria = auditoriaMerged.slice(0, AUDIT_MAX);
         localStorage.setItem(KEY, JSON.stringify(state));
       }
     }
@@ -10750,7 +10766,7 @@ function guardarAhora() {
   }
   const badge = document.getElementById('appbar-cambios-badge');
   if(badge) badge.classList.remove('visible');
-  // Ahora sí sincronizar con _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});tch(() => {});
+  // Ahora sí sincronizar con _syncQueue = _syncQueue.then(() => _mergeAndPush(0, false)).catch(() => {}); // false = mostrar bannertch(() => {});
   toast('✓ Guardado');
 }
 
