@@ -12373,8 +12373,8 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -30569,7 +30569,7 @@
       }
     }
   ],
-  "_lastModified": 1778008961971,
+  "_lastModified": 1778008966448,
   "vym": {
     "semanas": {},
     "historial": [
