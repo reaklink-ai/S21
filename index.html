@@ -8017,7 +8017,11 @@ function renderDashboard() {
   const gruposTotal = gruposActivos.length;
   const pctGrupos = gruposTotal ? Math.round(gruposInformaron/gruposTotal*100) : 0;
   const ancianos = pubs.filter(p=>p.anciano).length;
-  const precursores = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero).length;
+  // Excluir también inactivos del conteo de precursores
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const precursores = pubs.filter(p=>
+    !_inacIds.has(p.id) && (p.precursorReg||p.precursorEsp||p.misionero)
+  ).length;
   const mudados     = (state.mudados||[]).length;
 
   // Bloque superintendentes — solo admin
