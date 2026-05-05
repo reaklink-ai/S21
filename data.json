@@ -21449,10 +21449,10 @@
         },
         "2025": {
           "Mar": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": ""
           },
           "Sep": {
@@ -21496,10 +21496,10 @@
             "cursos": "2"
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": ""
           },
           "May": {
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777944123091,
+  "_lastModified": 1777944160537,
   "vym": {
     "semanas": {},
     "historial": [
