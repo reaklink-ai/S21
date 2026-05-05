@@ -30464,9 +30464,16 @@
       "rol": "anciano",
       "grupo": "Grupo 9",
       "pinHash": "5bd4aa96ad6c9227437e8ed3d663ee4417fdb8c32869520f0374c11e89e7920c"
+    },
+    {
+      "id": "morw9scq",
+      "nombre": "Felipe_C",
+      "pinHash": "729dd8efa649efecae7c65f3071da882a5bf070bc6a6dea393926ee32d57c026",
+      "rol": "auxiliar",
+      "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777937341116,
+  "_lastModified": 1777941180554,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32476,6 +32483,16 @@
       },
       "fechaMudado": "2026-05-04",
       "direccionMudado": "Cucuta"
+    }
+  ],
+  "auditoria": [
+    {
+      "ts": 1777941142249,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
     }
   ]
 }
