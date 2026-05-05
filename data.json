@@ -66,11 +66,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778009994536
           },
           "Jun": {
             "particip": false,
@@ -30689,7 +30690,7 @@
       }
     }
   ],
-  "_lastModified": 1778009799708,
+  "_lastModified": 1778009997617,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32702,6 +32703,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778009990597,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1778008831117,
       "user": "Administrador",
