@@ -1096,9 +1096,16 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -31288,7 +31295,7 @@
       }
     }
   ],
-  "_lastModified": 1778014096506,
+  "_lastModified": 1778014317319,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33301,6 +33308,22 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778014147735,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Prueba",
+      "detalle": "Este es un evento de prueba",
+      "pubId": null
+    },
+    {
+      "ts": 1778014141508,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Alba, Geraldine · Grupo 9",
+      "pubId": "mmm9qi4jigd3"
+    },
     {
       "ts": 1778011330632,
       "user": "Administrador",
