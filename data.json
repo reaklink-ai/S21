@@ -23761,10 +23761,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "46",
             "notas": ""
           },
           "May": {
@@ -30569,7 +30569,7 @@
       }
     }
   ],
-  "_lastModified": 1778009008476,
+  "_lastModified": 1778009033780,
   "vym": {
     "semanas": {},
     "historial": [
