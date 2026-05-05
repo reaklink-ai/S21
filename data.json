@@ -5615,14 +5615,14 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777941180554,
+  "_lastModified": 1777941486682,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32486,6 +32486,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777941438664,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
     {
       "ts": 1777941142249,
       "user": "Administrador",
