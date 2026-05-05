@@ -3509,7 +3509,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30569,7 +30569,7 @@
       }
     }
   ],
-  "_lastModified": 1778008941926,
+  "_lastModified": 1778008945079,
   "vym": {
     "semanas": {},
     "historial": [
