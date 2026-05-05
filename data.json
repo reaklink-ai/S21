@@ -30421,7 +30421,7 @@
       "nombre": "Harold_La",
       "rol": "anciano",
       "grupo": "Grupo 5",
-      "pinHash": "5c0435fc7af45a80aa236693aa029dd9104e71da1af286be5a93cdb9454424c0"
+      "pinHash": "f8e373c982f5dfe71ba91fd11133c1f7b71fe233db144351144f98853f481f7f"
     },
     {
       "id": "mmnvz44s",
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777944270103,
+  "_lastModified": 1777947578989,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32486,6 +32486,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777947556711,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
     {
       "ts": 1777943501134,
       "user": "Felipe_C",
