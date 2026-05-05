@@ -7191,7 +7191,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -7755,10 +7755,10 @@
             "notas": "40 horas SAC"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": ""
           },
           "May": {
@@ -9070,11 +9070,11 @@
             "notas": "47.5 horas Betel"
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "4",
+            "notas": "12 horas Betel - Fallecimiento de la mamá"
           },
           "May": {
             "particip": false,
@@ -10945,7 +10945,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11537,7 +11537,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11687,7 +11687,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11853,11 +11853,11 @@
             "notas": "42 horas betel"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Horas Betel"
           },
           "May": {
             "particip": false,
@@ -12015,10 +12015,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "May": {
@@ -13235,11 +13235,11 @@
             "notas": "41 Horas Betel"
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "13",
+            "notas": "42 Horas Betel"
           },
           "May": {
             "particip": false,
@@ -13412,11 +13412,11 @@
             "notas": "42 horas betel"
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "36",
+            "notas": "16 Horas Betel"
           },
           "May": {
             "particip": false,
@@ -13577,10 +13577,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": ""
           },
           "May": {
@@ -13748,11 +13748,11 @@
             "notas": "36 horas betel"
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "34",
+            "notas": "16 Horas Betel"
           },
           "May": {
             "particip": false,
@@ -13908,10 +13908,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": ""
           },
           "May": {
@@ -15910,7 +15910,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16524,7 +16524,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -20671,10 +20671,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "5",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": ""
           },
           "May": {
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777947578989,
+  "_lastModified": 1777948329730,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32486,6 +32486,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777947700163,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1777947556711,
       "user": "Administrador",
