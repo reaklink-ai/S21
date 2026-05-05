@@ -52,7 +52,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -684,10 +684,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
             "notas": ""
           },
           "May": {
@@ -835,7 +835,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -990,10 +990,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "30",
             "notas": ""
           },
           "May": {
@@ -9942,7 +9942,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -10093,7 +10093,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15039,7 +15039,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15194,7 +15194,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -15349,7 +15349,7 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16168,7 +16168,7 @@
             "particip": true
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -20898,11 +20898,11 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "22",
+            "notas": "8 horas betel"
           },
           "May": {
             "particip": false,
@@ -21408,11 +21408,11 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "30",
+            "notas": "16 horas"
           },
           "May": {
             "particip": false,
@@ -23020,10 +23020,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
+            "particip": true,
+            "cursos": "2",
+            "paux": true,
+            "horas": "30",
             "notas": ""
           },
           "May": {
@@ -29281,7 +29281,7 @@
             "notas": "Baja como precursora regular"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30569,7 +30569,7 @@
       }
     }
   ],
-  "_lastModified": 1777997967591,
+  "_lastModified": 1778001833693,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32582,6 +32582,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778001569092,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1777997942300,
       "user": "Administrador",
