@@ -1141,10 +1141,10 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "37",
             "notas": ""
           },
           "May": {
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777948626058,
+  "_lastModified": 1777978898197,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32486,6 +32486,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777977439910,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
     {
       "ts": 1777947700163,
       "user": "Harold_La",
