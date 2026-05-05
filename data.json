@@ -30165,6 +30165,446 @@
         "direccion": "",
         "notasMed": ""
       }
+    },
+    {
+      "id": "p1778011389849",
+      "registros": {
+        "2024": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011536827
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011537189
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011537504
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011537826
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011538176
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011538508
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011538875
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011539200
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011539535
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011539934
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011540331
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011540795
+          }
+        },
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011542753
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011543076
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011543518
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011544070
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011566144
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778011561760
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778011563175
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES -LLEGAN A LA CONGREGACION",
+            "_ts": 1778011591425
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011581012
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011590154
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Ahumada Correa",
+      "nombre": "Amy Valeria",
+      "nacimiento": "2010-04-23",
+      "bautismo": "2020-12-12",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      }
+    },
+    {
+      "id": "p1778011460356",
+      "registros": {
+        "2024": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011485949
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011486265
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011486615
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011486960
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011487267
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011487643
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011487988
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011488356
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011488663
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011489098
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011489548
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011492769
+          }
+        },
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011481654
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011483287
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011473581
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011473957
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011474458
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778011504760
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778011509790
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES -LLEGAN A LA CONGREGACION",
+            "_ts": 1778011598617
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Vargas",
+      "nombre": "Juliana",
+      "nacimiento": "2014-10-12",
+      "bautismo": "2025-05-04",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      }
     }
   ],
   "grupos": {
@@ -30441,6 +30881,129 @@
       },
       "fechaInactivo": "2026-03-11",
       "motivoInactivo": "Sacado de la congregación"
+    },
+    {
+      "id": "p1778011735655",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1778011757054
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "3",
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1778011760257
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011760362
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011760745
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778011783445
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778011781529
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "SACADA DE LA CONGREGACIÓN",
+            "_ts": 1778011794215
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "LLEGA A LA CONGREGACION",
+            "_ts": 1778011801336
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Vargas",
+      "nombre": "Sonia Magaly",
+      "nacimiento": "1990-05-05",
+      "bautismo": "2011-12-17",
+      "grupo": "Grupo 12",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "fechaInactivo": "2026-05-05",
+      "motivoInactivo": "SACADA DE LA CONGREGACIÓN"
     }
   ],
   "asistencia": [
@@ -30690,7 +31253,7 @@
       }
     }
   ],
-  "_lastModified": 1778011247259,
+  "_lastModified": 1778011955812,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32703,6 +33266,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778011330632,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1778009990597,
       "user": "Administrador",
