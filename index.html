@@ -3870,10 +3870,10 @@ let _lastSha   = null; // SHA cacheado para reducir llamadas
 
 function saveStateAndSync() {
   saveState();
-  _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+  _syncQueue = _syncQueue.then(() => _mergeAndPush(0, true)).catch(() => {});
 }
 
-async function _mergeAndPush(intentos = 0) {
+async function _mergeAndPush(intentos = 0, silencioso = false) {
   try {
     // 1. Descargar versión remota fresca via Worker (GET /sync)
     const res = await fetch(SYNC_URL + '?t=' + Date.now());
@@ -3903,8 +3903,8 @@ async function _mergeAndPush(intentos = 0) {
       if(putJson.sha) _lastSha = putJson.sha;
       state = merged;
       saveState();
-      // Feedback visual claro de éxito
-      _mostrarConfirmGuardado();
+      // Feedback visual claro de éxito (solo si fue guardado manualmente)
+      if(!silencioso) _mostrarConfirmGuardado();
       return;
     }
 
@@ -3916,10 +3916,10 @@ async function _mergeAndPush(intentos = 0) {
       return _mergeAndPush(intentos + 1);
     }
     // Error definitivo — avisar claramente
-    _mostrarErrorGuardado(err.error || ('HTTP ' + putRes.status));
+    if(!silencioso) _mostrarErrorGuardado(err.error || ('HTTP ' + putRes.status));
   } catch(e) {
     if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1); }
-    _mostrarErrorGuardado('Sin conexión — verifica tu internet');
+    if(!silencioso) _mostrarErrorGuardado('Sin conexión — verifica tu internet');
   }
 }
 
@@ -6034,6 +6034,8 @@ function auditLog(accion, detalle, pubId) {
   });
   // Mantener solo los últimos AUDIT_MAX registros
   if(state.auditoria.length > AUDIT_MAX) state.auditoria = state.auditoria.slice(0, AUDIT_MAX);
+  // Persistir en localStorage inmediatamente (sin esperar a que el usuario presione Guardar)
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {}
 }
 
 function abrirAuditoria() {
@@ -6185,7 +6187,7 @@ async function _migrarPinsAHash() {
   }
   if(cambios) {
     localStorage.setItem(KEY, JSON.stringify(state));
-    _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+    _syncQueue = _syncQueue.then(() => _mergeAndPush(0, true)).catch(() => {});
   }
 }
 
@@ -10748,8 +10750,7 @@ function guardarAhora() {
   }
   const badge = document.getElementById('appbar-cambios-badge');
   if(badge) badge.classList.remove('visible');
-  // Ahora sí sincronizar con el servidor
-  _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});
+  // Ahora sí sincronizar con _syncQueue = _syncQueue.then(() => _mergeAndPush()).catch(() => {});tch(() => {});
   toast('✓ Guardado');
 }
 
