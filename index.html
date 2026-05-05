@@ -5061,8 +5061,19 @@ function guardarPub() {
     }
   };
   if(editId){
+    const _antes = {...getPub(editId)};
     Object.assign(getPub(editId),datos);
-    auditLog('Publicador editado', `${datos.apellido}, ${datos.nombre} · ${datos.grupo||'Sin grupo'}`, editId);
+    // Detectar qué cambió
+    const _cambios = [];
+    if(_antes.apellido !== datos.apellido || _antes.nombre !== datos.nombre) _cambios.push(`Nombre: ${_antes.apellido} → ${datos.apellido}`);
+    if(_antes.grupo !== datos.grupo) _cambios.push(`Grupo: ${_antes.grupo||'ninguno'} → ${datos.grupo||'ninguno'}`);
+    if(_antes.precursorReg !== datos.precursorReg) _cambios.push(datos.precursorReg ? 'Asignado como precursor regular' : 'Removido de precursor regular');
+    if(_antes.anciano !== datos.anciano) _cambios.push(datos.anciano ? 'Asignado como anciano' : 'Removido de anciano');
+    if(_antes.siervo !== datos.siervo) _cambios.push(datos.siervo ? 'Asignado como siervo' : 'Removido de siervo');
+    if(_antes.telefono !== datos.telefono) _cambios.push(`Teléfono actualizado`);
+    if(_antes.nacimiento !== datos.nacimiento) _cambios.push(`Nacimiento: ${datos.nacimiento||'—'}`);
+    const _detalle = `${datos.apellido}, ${datos.nombre}` + (_cambios.length ? ` · ${_cambios.join(', ')}` : ' · datos generales');
+    auditLog('Publicador editado', _detalle, editId);
   } else {
     const p={id:'p'+Date.now(),registros:{},...datos};
     state.publicadores.push(p);
