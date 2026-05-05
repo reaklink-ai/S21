@@ -7173,7 +7173,7 @@
             "particip": true
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -30682,7 +30682,7 @@
       }
     }
   ],
-  "_lastModified": 1778009610489,
+  "_lastModified": 1778009618457,
   "vym": {
     "semanas": {},
     "historial": [
