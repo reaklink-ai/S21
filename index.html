@@ -1451,6 +1451,51 @@ input, select, textarea { font-family: var(--font); }
   .form-row { grid-template-columns: 1fr !important; }
   input, select, textarea { font-size: 16px !important; } /* evita zoom automático en iOS */
 
+  /* ── S-21 tabla en móvil ── */
+  .s21-table { min-width: unset; font-size: 11px; }
+  .s21-table th, .s21-table td { padding: 8px 6px; }
+  .s21-table-wrap { -webkit-overflow-scrolling: touch; }
+  .s21-doc { margin: 0; border-radius: 0; }
+  .s21-toolbar { padding: 8px 12px; gap: 6px; flex-wrap: wrap; }
+  .s21-toolbar-name { font-size: 13px; }
+  .s21-toolbar-btn { padding: 7px 10px; font-size: 11px; }
+  .s21-form { padding: 0; }
+  .s21-anio-bar { padding: 10px 14px; }
+  .td-input { width: 38px !important; padding: 4px 2px !important; font-size: 11px !important; }
+  .td-chk-box { width: 22px !important; height: 22px !important; font-size: 13px !important; }
+
+  /* ── Tabla de asistencia ── */
+  .asist-tbl { font-size: 11px; }
+  .asist-tbl th, .asist-tbl td { padding: 7px 8px; }
+
+  /* ── Módulo grupos ── */
+  .gs-grid { grid-template-columns: 1fr !important; }
+  .gs-card-footer { flex-wrap: wrap; }
+  .gs-btn { font-size: 10px; padding: 7px 6px; min-width: 60px; }
+
+  /* ── Precursores ── */
+  .prec-kpi-grid { grid-template-columns: 1fr !important; }
+  .prec-kpi-n { font-size: 32px !important; }
+
+  /* ── Botón flotante guardar ── */
+  #btn-guardar-flotante { 
+    bottom: 74px !important; right: 14px !important; 
+    font-size: 12px !important; padding: 10px 16px !important;
+    border-radius: 24px !important;
+  }
+
+  /* ── Modales ── */
+  .modal { margin: 8px; max-height: 92vh; border-radius: 16px !important; }
+  .modal-body { max-height: 60vh; }
+
+  /* ── Dashboard banner ── */
+  .dash-banner > div { grid-template-columns: 1fr !important; }
+  .dash-banner > div > div:last-child { grid-template-columns: 1fr 1fr !important; }
+
+  /* ── Búsqueda global ── */
+  .global-search-box { margin: 0 8px; }
+  .global-search-input { font-size: 16px; padding: 14px 16px; }
+
   /* ── Banner KPIs ── */
   .dash-kpi-bar {
     grid-template-columns: 1fr 1fr !important;
@@ -4469,7 +4514,8 @@ function toggleBool(pid,anio,mes,campo) {
 function setV(pid,anio,mes,campo,val) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
   r[campo]=val;
-  r._ts = Date.now(); // timestamp para resolver conflictos en merge
+  r._ts = Date.now();
+  if(campo==='horas'||campo==='cursos') auditLog('Horas editadas', `${pub.apellido}, ${pub.nombre} · ${mes} ${anio}: ${campo}=${val}`, pid); // timestamp para resolver conflictos en merge
   marcarCambios(); actualizarTotales(pub,anio);
 }
 
@@ -5014,8 +5060,15 @@ function guardarPub() {
       notasMed:document.getElementById('fNotasMed').value.trim(),
     }
   };
-  if(editId){ Object.assign(getPub(editId),datos); }
-  else { const p={id:'p'+Date.now(),registros:{},...datos}; state.publicadores.push(p); selId=p.id; }
+  if(editId){
+    Object.assign(getPub(editId),datos);
+    auditLog('Publicador editado', `${datos.apellido}, ${datos.nombre} · ${datos.grupo||'Sin grupo'}`, editId);
+  } else {
+    const p={id:'p'+Date.now(),registros:{},...datos};
+    state.publicadores.push(p);
+    selId=p.id;
+    auditLog('Nuevo publicador', `${datos.apellido}, ${datos.nombre} · ${datos.grupo||'Sin grupo'}`, p.id);
+  }
   marcarCambios(); cerrarModal(); renderLista();
   if(selId) renderS21();
   toast('Guardado ✓');
@@ -5023,6 +5076,8 @@ function guardarPub() {
 
 function eliminarPub() {
   if(!confirm('¿Eliminar este publicador y todo su historial?')) return;
+  const _pubElim = getPub(editId);
+  if(_pubElim) auditLog('Publicador eliminado', `${_pubElim.apellido}, ${_pubElim.nombre}`);
   state.publicadores=state.publicadores.filter(p=>p.id!==editId);
   if(selId===editId){ selId=null; document.getElementById('mainArea').innerHTML='<div class="empty"><div class="empty-icon"></div><div class="empty-txt">Selecciona un publicador.</div></div>'; }
   marcarCambios(); cerrarModal(); renderLista(); toast('Eliminado');
@@ -5661,6 +5716,7 @@ function confirmarInactivo() {
   if(!state.inactivos) state.inactivos = [];
   const hoy = new Date().toISOString().slice(0,10);
   state.inactivos.push({ ...pub, fechaInactivo: hoy, motivoInactivo: motivo });
+  auditLog('Marcado inactivo', `${pub.apellido}, ${pub.nombre}`, id);
 
   marcarCambios();
   selId = null;
@@ -5682,6 +5738,7 @@ function reactivarPub(id) {
   marcarCambios();
   renderInactivos();
   renderDashboard();
+  auditLog('Reactivado', `${pub.apellido}, ${pub.nombre}`, pub.id);
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
 }
 
@@ -5751,6 +5808,7 @@ function confirmarMudado() {
   if(!state.mudados) state.mudados = [];
   const hoy = new Date().toISOString().slice(0,10);
   state.mudados.push({ ...pub, fechaMudado: hoy, direccionMudado: direccion });
+  auditLog('Marcado mudado', `${pub.apellido}, ${pub.nombre}${direccion ? ' → ' + direccion : ''}`, id);
 
   marcarCambios();
   selId = null;
@@ -5772,6 +5830,7 @@ function regresarMudado(id) {
   marcarCambios();
   renderMudados();
   renderDashboard();
+  auditLog('Regresó de mudados', `${pub.apellido}, ${pub.nombre}`, pub.id);
   toast(`${pub.apellido}, ${pub.nombre} regresado a la congregación`);
 }
 
