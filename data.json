@@ -5460,18 +5460,18 @@
             "notas": "38 Horas Betel"
           },
           "Mar": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "21",
+            "notas": "30 horas betel"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "21",
+            "notas": "34 horas betel"
           },
           "May": {
             "particip": false,
@@ -30473,7 +30473,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777943698526,
+  "_lastModified": 1777943757546,
   "vym": {
     "semanas": {},
     "historial": [
