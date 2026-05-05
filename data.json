@@ -30374,26 +30374,6 @@
       "notas": ""
     },
     {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
       "id": "r1775944685700",
       "fecha": "2026-04-11",
       "tipo": "Fin de semana",
@@ -30492,6 +30472,26 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776933778534",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
     }
   ],
   "usuarios": [
@@ -30559,7 +30559,7 @@
       "grupo": "Grupo 10"
     }
   ],
-  "_lastModified": 1777978920346,
+  "_lastModified": 1777989251051,
   "vym": {
     "semanas": {},
     "historial": [
@@ -32572,6 +32572,14 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1777989232790,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1777977439910,
       "user": "Administrador",
