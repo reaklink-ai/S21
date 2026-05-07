@@ -28712,7 +28712,7 @@
         }
       },
       "apellido": "Serna Mosquera",
-      "nombre": "Cristian Yamir",
+      "nombre": "Cristian",
       "nacimiento": "1990-07-19",
       "bautismo": "2013-11-30",
       "grupo": "Grupo 13",
@@ -28825,7 +28825,7 @@
         }
       },
       "apellido": "Serna Rivadeneira",
-      "nombre": "Cristina Alexandra",
+      "nombre": "Cristina",
       "nacimiento": "1993-12-12",
       "bautismo": "2012-03-18",
       "grupo": "Grupo 13",
@@ -31697,7 +31697,7 @@
       }
     }
   ],
-  "_lastModified": 1778160263391,
+  "_lastModified": 1778160318400,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33711,6 +33711,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1778160304748,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Serna Rivadeneira, Cristina · Nombre: Serna Rivadeneira → Serna Rivadeneira",
+      "pubId": "p1776221052712"
+    },
+    {
+      "ts": 1778160297803,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Serna Mosquera, Cristian · Nombre: Serna Mosquera → Serna Mosquera",
+      "pubId": "p1776220868449"
+    },
+    {
       "ts": 1778160258135,
       "user": "Administrador",
       "rol": "admin",
@@ -35293,22 +35309,6 @@
       "accion": "Horas editadas",
       "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
       "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778085162143,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778070992202,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ]
 }
