@@ -30731,6 +30731,173 @@
           "cursos": 9
         }
       }
+    },
+    {
+      "id": "mmm9qi4jq3yf",
+      "apellido": "Alba",
+      "nombre": "Nicolas",
+      "nacimiento": "1996-06-24",
+      "bautismo": "2008-12-08",
+      "grupo": "Grupo 9",
+      "telefono": "3204590342",
+      "genero": "M",
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "8",
+            "cursos": "1",
+            "paux": false,
+            "notas": "8 HORAS BETEL"
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "22",
+            "cursos": "2",
+            "paux": false,
+            "notas": "28 Horas Betel"
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "34",
+            "cursos": "1",
+            "paux": false,
+            "notas": "24 HORAS BETEL"
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "23",
+            "cursos": "2",
+            "paux": false,
+            "notas": "HORAS BETEL 24"
+          },
+          "May": {
+            "particip": true,
+            "horas": "21",
+            "cursos": "2",
+            "paux": false,
+            "notas": "23 Horas Betel"
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "26",
+            "cursos": "3",
+            "paux": false,
+            "notas": "24 HORAS BETEL"
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "29",
+            "cursos": "2",
+            "paux": false,
+            "notas": "16 HORAS BETEL"
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "12",
+            "cursos": "2",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "20",
+            "cursos": "1",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true,
+            "horas": "23",
+            "cursos": "2",
+            "notas": "8 HORAS BETEL"
+          },
+          "Oct": {
+            "particip": true,
+            "horas": "27",
+            "cursos": "1",
+            "notas": "16 HORAS BETEL"
+          },
+          "Nov": {
+            "particip": true,
+            "horas": "31",
+            "cursos": "2"
+          },
+          "Dic": {
+            "particip": true,
+            "horas": "19",
+            "cursos": "2"
+          },
+          "Ene": {
+            "particip": true,
+            "horas": "32",
+            "cursos": "1"
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "20",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "29",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 175,
+          "cursos": 15
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 152,
+          "cursos": 9
+        }
+      }
     }
   ],
   "grupos": {
@@ -30792,6 +30959,114 @@
     }
   },
   "inactivos": [
+    {
+      "id": "mmm9qi4u9kvo",
+      "apellido": "Galeado",
+      "nombre": "Santiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES - SACADO DE LA CONGREGACIÓN",
+            "_ts": 1778157843110
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "fechaInactivo": "2026-05-07",
+      "motivoInactivo": "SACADO DE LA CONGREGACIÓN 6 MAYO 2026"
+    },
     {
       "id": "mmm9qi4ovmh3",
       "apellido": "Lugo",
@@ -30899,6 +31174,171 @@
       },
       "fechaInactivo": "2026-03-11",
       "motivoInactivo": "Sacado de la congregación"
+    },
+    {
+      "id": "mmm9qi4qdgc9",
+      "apellido": "Martinez",
+      "nombre": "Jose Manuel",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": "NUEVO PUBLICADOR NO BAUTIZADO"
+          }
+        },
+        "2025": {
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Sep": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Oct": {
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Nov": {
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Dic": {
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Ene": {
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778157709853
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778157714378
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 1,
+          "horas": 0,
+          "cursos": 0
+        }
+      },
+      "fechaInactivo": "2026-05-07",
+      "motivoInactivo": "INACTIVO 8 MESES SIN INFORMAR"
     },
     {
       "id": "mmm9qi4sayrz",
@@ -31130,448 +31570,6 @@
       },
       "fechaInactivo": "2026-05-05",
       "motivoInactivo": "SACADA DE LA CONGREGACIÓN"
-    },
-    {
-      "id": "mmm9qi4u9kvo",
-      "apellido": "Galeado",
-      "nombre": "Santiago",
-      "nacimiento": "",
-      "bautismo": "",
-      "grupo": "Grupo 13",
-      "telefono": "",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Sep": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Oct": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES - SACADO DE LA CONGREGACIÓN",
-            "_ts": 1778157843110
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "fechaInactivo": "2026-05-07",
-      "motivoInactivo": "SACADO DE LA CONGREGACIÓN 6 MAYO 2026"
-    },
-    {
-      "id": "mmm9qi4qdgc9",
-      "apellido": "Martinez",
-      "nombre": "Jose Manuel",
-      "nacimiento": "",
-      "bautismo": "",
-      "grupo": "Grupo 14",
-      "telefono": "",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": "NUEVO PUBLICADOR NO BAUTIZADO"
-          }
-        },
-        "2025": {
-          "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Sep": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": false,
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Oct": {
-            "particip": false,
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Nov": {
-            "particip": false,
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Dic": {
-            "particip": false,
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Ene": {
-            "particip": false,
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES",
-            "_ts": 1778157709853
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES",
-            "_ts": 1778157714378
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 0
-        },
-        "2025": {
-          "participaron": 1,
-          "horas": 0,
-          "cursos": 0
-        }
-      },
-      "fechaInactivo": "2026-05-07",
-      "motivoInactivo": "INACTIVO 8 MESES SIN INFORMAR"
-    },
-    {
-      "id": "mmm9qi4jq3yf",
-      "apellido": "Alba",
-      "nombre": "Nicolas",
-      "nacimiento": "1996-06-24",
-      "bautismo": "2008-12-08",
-      "grupo": "Grupo 9",
-      "telefono": "3204590342",
-      "genero": "M",
-      "anciano": true,
-      "siervo": false,
-      "precursorReg": true,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "8",
-            "cursos": "1",
-            "paux": false,
-            "notas": "8 HORAS BETEL"
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "22",
-            "cursos": "2",
-            "paux": false,
-            "notas": "28 Horas Betel"
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "34",
-            "cursos": "1",
-            "paux": false,
-            "notas": "24 HORAS BETEL"
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "23",
-            "cursos": "2",
-            "paux": false,
-            "notas": "HORAS BETEL 24"
-          },
-          "May": {
-            "particip": true,
-            "horas": "21",
-            "cursos": "2",
-            "paux": false,
-            "notas": "23 Horas Betel"
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "26",
-            "cursos": "3",
-            "paux": false,
-            "notas": "24 HORAS BETEL"
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "29",
-            "cursos": "2",
-            "paux": false,
-            "notas": "16 HORAS BETEL"
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "12",
-            "cursos": "2",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "20",
-            "cursos": "1",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true,
-            "horas": "23",
-            "cursos": "2",
-            "notas": "8 HORAS BETEL"
-          },
-          "Oct": {
-            "particip": true,
-            "horas": "27",
-            "cursos": "1",
-            "notas": "16 HORAS BETEL"
-          },
-          "Nov": {
-            "particip": true,
-            "horas": "31",
-            "cursos": "2"
-          },
-          "Dic": {
-            "particip": true,
-            "horas": "19",
-            "cursos": "2"
-          },
-          "Ene": {
-            "particip": true,
-            "horas": "32",
-            "cursos": "1"
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "1",
-            "paux": false,
-            "horas": "20",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "cursos": "1",
-            "paux": false,
-            "horas": "29",
-            "notas": ""
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 175,
-          "cursos": 15
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 152,
-          "cursos": 9
-        }
-      },
-      "fechaInactivo": "2026-05-07",
-      "motivoInactivo": "PRUEBA"
     }
   ],
   "asistencia": [
@@ -31831,7 +31829,7 @@
       }
     }
   ],
-  "_lastModified": 1778158127980,
+  "_lastModified": 1778158144733,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33845,6 +33843,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778158133856,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Alba, Nicolas",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
       "ts": 1778158120802,
       "user": "Administrador",
       "rol": "admin",
@@ -35434,14 +35440,6 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1777947556711,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     }
   ]
