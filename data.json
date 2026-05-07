@@ -8065,11 +8065,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157295763
           },
           "May": {
             "particip": false,
@@ -12921,11 +12922,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157301871
           },
           "May": {
             "particip": false,
@@ -13083,11 +13085,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157306248
           },
           "May": {
             "particip": false,
@@ -19724,7 +19727,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778157315919
           },
           "May": {
             "particip": false,
@@ -22458,11 +22462,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157317062
           },
           "May": {
             "particip": false,
@@ -22613,11 +22618,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157318925
           },
           "May": {
             "particip": false,
@@ -22778,11 +22784,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1778157324963
           },
           "May": {
             "particip": false,
@@ -22933,11 +22940,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157327153
           },
           "May": {
             "particip": false,
@@ -24786,11 +24794,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "PROBLEMAS DE SALUD",
+            "_ts": 1778157340926
           },
           "May": {
             "particip": false,
@@ -27296,11 +27305,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157345403
           },
           "May": {
             "particip": false,
@@ -27709,11 +27719,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157346569
           },
           "May": {
             "particip": false,
@@ -27872,11 +27883,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157350458
           },
           "May": {
             "particip": false,
@@ -31350,7 +31362,7 @@
       }
     }
   ],
-  "_lastModified": 1778156768153,
+  "_lastModified": 1778157359756,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33363,6 +33375,134 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778157350458,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttbx6"
+    },
+    {
+      "ts": 1778157350453,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttbx6"
+    },
+    {
+      "ts": 1778157345403,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1778157345399,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1778157335340,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: horas=45",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778157335334,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: horas=45",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778157332675,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778157332668,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778157324963,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778157324958,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778157323333,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778157323328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778157306248,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1778157306242,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1778157301871,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
+      "ts": 1778157301868,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
     {
       "ts": 1778156760665,
       "user": "Administrador",
