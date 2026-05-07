@@ -16775,7 +16775,7 @@
     },
     {
       "id": "mmm9qi4qp27l",
-      "apellido": "MilláN",
+      "apellido": "Millán",
       "nombre": "Andrea Carolina",
       "nacimiento": "1976-12-05",
       "bautismo": "1993-12-18",
@@ -16789,7 +16789,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -17009,7 +17016,7 @@
     },
     {
       "id": "mmm9qi4qf90z",
-      "apellido": "MilláN",
+      "apellido": "Millán",
       "nombre": "Laura Camila",
       "nacimiento": "1999-03-31",
       "bautismo": "2012-07-01",
@@ -17130,7 +17137,7 @@
     },
     {
       "id": "mmm9qi4qve1a",
-      "apellido": "MilláN",
+      "apellido": "Millán",
       "nombre": "Valentina",
       "nacimiento": "1998-02-02",
       "bautismo": "2009-12-26",
@@ -28161,7 +28168,7 @@
     },
     {
       "id": "mmm9qi4ulvrs",
-      "apellido": "GarcíA",
+      "apellido": "García",
       "nombre": "Bobadilla Alicia",
       "nacimiento": "",
       "bautismo": "",
@@ -28175,7 +28182,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Jul": {
@@ -31683,7 +31697,7 @@
       }
     }
   ],
-  "_lastModified": 1778160104594,
+  "_lastModified": 1778160263391,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33697,6 +33711,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1778160258135,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "García, Bobadilla Alicia · Nombre: GarcíA → García",
+      "pubId": "mmm9qi4ulvrs"
+    },
+    {
+      "ts": 1778160247906,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Valentina · Nombre: MilláN → Millán",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1778160243370,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Laura Camila · Nombre: MilláN → Millán",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
+      "ts": 1778160239207,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Andrea Carolina · Nombre: MilláN → Millán",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
       "ts": 1778160033228,
       "user": "Administrador",
       "rol": "admin",
@@ -35263,38 +35309,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1778036712768,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1778014508507,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Beleño, Laura · datos generales",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1778014147735,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Prueba",
-      "detalle": "Este es un evento de prueba",
-      "pubId": null
-    },
-    {
-      "ts": 1778014141508,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Alba, Geraldine · Grupo 9",
-      "pubId": "mmm9qi4jigd3"
     }
   ]
 }
