@@ -31050,6 +31050,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1778115364785",
+      "fecha": "2026-05-06",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 143,
+      "zoom": 74,
+      "total": 217,
+      "notas": ""
+    },
+    {
       "id": "r1777937122758",
       "fecha": "2026-05-02",
       "tipo": "Fin de semana",
@@ -31091,6 +31101,26 @@
     },
     {
       "id": "r1777932017999",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776933778534",
       "fecha": "2026-04-18",
       "tipo": "Fin de semana",
       "tema": "Estudio de la Atalaya",
@@ -31198,26 +31228,6 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
-    },
-    {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
     }
   ],
   "usuarios": [
@@ -31295,7 +31305,7 @@
       }
     }
   ],
-  "_lastModified": 1778014490262,
+  "_lastModified": 1778115383011,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33309,6 +33319,62 @@
   ],
   "auditoria": [
     {
+      "ts": 1778115343732,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778112382265,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778111589755,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778111589743,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778111560562,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778111534504,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778036712768,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1778014147735,
       "user": "Administrador",
       "rol": "admin",
@@ -33323,6 +33389,14 @@
       "accion": "Publicador editado",
       "detalle": "Alba, Geraldine · Grupo 9",
       "pubId": "mmm9qi4jigd3"
+    },
+    {
+      "ts": 1778013220511,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
     },
     {
       "ts": 1778011330632,
