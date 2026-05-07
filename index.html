@@ -4040,6 +4040,14 @@ function _mostrarErrorGuardado(detalle) {
 function _mergeStates(remoto, local) {
   const m = JSON.parse(JSON.stringify(local));
 
+  // Eliminar duplicados de publicadores por ID antes de hacer merge
+  const seenIds = new Set();
+  m.publicadores = (m.publicadores||[]).filter(p => {
+    if(seenIds.has(p.id)) return false;
+    seenIds.add(p.id);
+    return true;
+  });
+
   // Publicadores: agregar los del remoto que local no tiene
   const localIds = new Set((local.publicadores||[]).map(p=>p.id));
   (remoto.publicadores||[]).forEach(rp => {
@@ -4124,6 +4132,13 @@ async function ghPull() {
 
     if(tsLocal > tsRemoto) {
       // Local tiene cambios más recientes — hacer merge y subir a GitHub
+      // Eliminar duplicados antes de guardar
+      const _seenPull = new Set();
+      merged.publicadores = (merged.publicadores||[]).filter(p => {
+        if(_seenPull.has(p.id)) return false;
+        _seenPull.add(p.id);
+        return true;
+      });
       state = merged;
       localStorage.setItem(KEY, JSON.stringify(state));
       await _mergeAndPush(0, true); // silencioso
