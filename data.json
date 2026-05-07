@@ -3715,11 +3715,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156732359
           },
           "May": {
             "particip": false,
@@ -3883,11 +3884,12 @@
             "particip": true
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156734233
           },
           "May": {
             "particip": false,
@@ -4048,11 +4050,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156737449
           },
           "May": {
             "particip": false,
@@ -4203,17 +4206,19 @@
           },
           "Mar": {
             "particip": true,
-            "cursos": "50",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778156743650
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "34",
+            "notas": "",
+            "_ts": 1778156745714
           },
           "May": {
             "particip": false,
@@ -4465,11 +4470,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156748187
           },
           "May": {
             "particip": false,
@@ -6916,11 +6922,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156749780
           },
           "May": {
             "particip": false,
@@ -16342,11 +16349,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156752375
           },
           "May": {
             "particip": false,
@@ -25449,11 +25457,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156754880
           },
           "May": {
             "particip": false,
@@ -25765,11 +25774,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156756875
           },
           "May": {
             "particip": false,
@@ -27597,11 +27607,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156760665
           },
           "May": {
             "particip": false,
@@ -31339,7 +31350,7 @@
       }
     }
   ],
-  "_lastModified": 1778156666462,
+  "_lastModified": 1778156768153,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33352,6 +33363,94 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778156760665,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1778156760662,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1778156745714,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156745708,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156743650,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156743645,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156741116,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156741111,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156739949,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: cursos=50",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778156737449,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1778156737445,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
     {
       "ts": 1778156657785,
       "user": "Administrador",
