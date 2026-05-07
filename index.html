@@ -7231,20 +7231,61 @@ function imprimirS21() {
 
 function descargarS21Grupo() {
   const sel = document.getElementById('selectGrupoDescarga');
-  sel.innerHTML = '<option value="">&#8212; Todos los publicadores &#8212;</option>';
-  const grupos = [...new Set(state.publicadores.filter(p=>!p.inactivo).map(p=>p.grupo||'Sin grupo'))].sort();
-  grupos.forEach(g => { const o = document.createElement('option'); o.value=g; o.textContent=g; sel.appendChild(o); });
+  // Todos los grupos de todos los publicadores (activos + inactivos + mudados)
+  const todosGrupos = new Set([
+    ...state.publicadores.map(p => p.grupo||'Sin grupo'),
+    ...(state.inactivos||[]).map(p => p.grupo||'Sin grupo'),
+    ...(state.mudados||[]).map(p => p.grupo||'Sin grupo'),
+  ]);
+  sel.innerHTML = '<option value="">&#8212; Todos &#8212;</option>' +
+    [...todosGrupos].sort().map(g => `<option value="${g}">${g}</option>`).join('');
   document.getElementById('modalDescargaGrupo').style.display = 'flex';
 }
 
 function confirmarDescargaGrupo() {
-  const grupoSel = document.getElementById('selectGrupoDescarga').value;
+  const grupoSel    = document.getElementById('selectGrupoDescarga').value;
+  const incActivos  = document.getElementById('descIncActivos')?.checked  ?? true;
+  const incInactivos= document.getElementById('descIncInactivos')?.checked ?? false;
+  const incSacados  = document.getElementById('descIncSacados')?.checked   ?? false;
+  const incMudados  = document.getElementById('descIncMudados')?.checked   ?? false;
   const anio = anioVer || anioHoy();
-  const lista = state.publicadores.filter(p => {
-    if(p.inactivo) return false;
-    if(grupoSel) return (p.grupo||'Sin grupo') === grupoSel;
-    return true;
-  }).sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const PATRON_SACADO = /sacad|desasocia|disfellow|excluido/i;
+
+  let lista = [];
+
+  // Activos
+  if(incActivos) {
+    lista.push(...state.publicadores.filter(p =>
+      !_mudIds.has(p.id) && !_inacIds.has(p.id) &&
+      (!grupoSel || (p.grupo||'Sin grupo') === grupoSel)
+    ));
+  }
+  // Inactivos (solo tipo inactivo, no sacados)
+  if(incInactivos) {
+    lista.push(...(state.inactivos||[]).filter(p => {
+      const tipo = p.tipoInactivo || (PATRON_SACADO.test(p.motivoInactivo||'') ? 'sacado' : 'inactivo');
+      return tipo === 'inactivo' && (!grupoSel || (p.grupo||'Sin grupo') === grupoSel);
+    }));
+  }
+  // Sacados / Desasociados
+  if(incSacados) {
+    lista.push(...(state.inactivos||[]).filter(p => {
+      const tipo = p.tipoInactivo || (PATRON_SACADO.test(p.motivoInactivo||'') ? 'sacado' : 'inactivo');
+      return (tipo === 'sacado' || tipo === 'desasociado') &&
+        (!grupoSel || (p.grupo||'Sin grupo') === grupoSel);
+    }));
+  }
+  // Mudados
+  if(incMudados) {
+    lista.push(...(state.mudados||[]).filter(p =>
+      !grupoSel || (p.grupo||'Sin grupo') === grupoSel
+    ));
+  }
+
+  lista.sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
 
   if(!lista.length) { toast('No hay publicadores en ese grupo'); return; }
   document.getElementById('modalDescargaGrupo').style.display = 'none';
@@ -10886,21 +10927,39 @@ document.addEventListener('change', e => {
 
 <!-- MODAL DESCARGA S-21 POR GRUPO -->
 <div class="overlay" id="modalDescargaGrupo" style="display:none">
-  <div class="modal" style="max-width:420px">
+  <div class="modal" style="max-width:440px">
     <div class="modal-hd">
       <span class="modal-hd-title">⬇ Descargar S-21 por Grupo</span>
       <button class="modal-x" onclick="document.getElementById('modalDescargaGrupo').style.display='none'">×</button>
     </div>
     <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
-      <p style="font-size:13px;color:var(--ink-2)">Selecciona el grupo para descargar todos sus registros S-21 en un solo PDF, o descarga todos.</p>
       <div class="form-group">
         <label class="form-label">Grupo</label>
-        <select id="selectGrupoDescarga" class="form-input form-select">
-          <option value="">— Todos los publicadores —</option>
-        </select>
+        <select id="selectGrupoDescarga" class="form-input form-select"></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" style="margin-bottom:8px">Incluir</label>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="descIncActivos" checked style="width:15px;height:15px;accent-color:var(--accent)">
+            <span>Activos</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="descIncInactivos" style="width:15px;height:15px;accent-color:#b45309">
+            <span style="color:#b45309;font-weight:600">Inactivos</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="descIncSacados" style="width:15px;height:15px;accent-color:#dc2626">
+            <span style="color:#dc2626;font-weight:600">Sacados / Desasociados</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer">
+            <input type="checkbox" id="descIncMudados" style="width:15px;height:15px;accent-color:#0e7490">
+            <span style="color:#0e7490;font-weight:600">Mudados</span>
+          </label>
+        </div>
       </div>
       <div style="background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:var(--r);padding:10px 14px;font-size:11px;color:var(--accent)">
-        Cada publicador ocupará una página. El PDF seguirá el formato oficial <strong>S-21-S 11/23</strong>.
+        Cada publicador ocupará una página en formato oficial <strong>S-21-S 11/23</strong>.
       </div>
     </div>
     <div class="modal-ft">
