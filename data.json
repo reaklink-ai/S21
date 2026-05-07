@@ -1867,11 +1867,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1778156295689
           },
           "May": {
             "particip": false,
@@ -4619,11 +4620,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156299879
           },
           "May": {
             "particip": false,
@@ -7597,7 +7599,8 @@
           },
           "Ene": {
             "particip": false,
-            "notas": "NO INFORMO EN EL MES"
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778156307362
           },
           "Mar": {
             "particip": true,
@@ -7607,11 +7610,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156304400
           },
           "May": {
             "particip": false,
@@ -8203,7 +8207,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778156311784
           },
           "May": {
             "particip": false,
@@ -24612,11 +24617,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156320120
           },
           "May": {
             "particip": false,
@@ -24854,11 +24860,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156322346
           },
           "May": {
             "particip": false,
@@ -24960,11 +24967,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156325179
           },
           "May": {
             "particip": false,
@@ -25912,11 +25920,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "28",
+            "notas": "",
+            "_ts": 1778156333271
           },
           "May": {
             "particip": false,
@@ -26085,11 +26094,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "41",
+            "notas": "",
+            "_ts": 1778156341470
           },
           "May": {
             "particip": false,
@@ -26424,11 +26434,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156344764
           },
           "May": {
             "particip": false,
@@ -26530,11 +26541,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778156352085
           },
           "May": {
             "particip": false,
@@ -26804,11 +26816,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778156356728
           },
           "May": {
             "particip": false,
@@ -29218,11 +29231,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778156317804
           },
           "May": {
             "particip": false,
@@ -31305,7 +31319,7 @@
       }
     }
   ],
-  "_lastModified": 1778115383011,
+  "_lastModified": 1778156367879,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33319,6 +33333,214 @@
   ],
   "auditoria": [
     {
+      "ts": 1778156356728,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778156356721,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778156354571,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778156354567,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778156352085,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778156352079,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778156348222,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778156348217,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778156344764,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1778156344760,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1778156341470,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: horas=41",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778156341466,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: horas=41",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778156339310,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778156339305,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778156333271,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778156333268,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778156330276,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: horas=0.5",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778156330169,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778156330163,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778156325179,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Suarez, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s08s9"
+    },
+    {
+      "ts": 1778156325175,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Suarez, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s08s9"
+    },
+    {
+      "ts": 1778156295689,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778156295685,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778156294336,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778156294327,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778156111876,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778115343732,
       "user": "Administrador",
       "rol": "admin",
@@ -33367,12 +33589,628 @@
       "pubId": null
     },
     {
+      "ts": 1778097089017,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778086366701,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1778086366695,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1778086341613,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086341609,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086339897,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Abr 2025: cursos=",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086335876,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086335871,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086333595,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086333588,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1778086328691,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1778086328687,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1778086289464,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttbx6"
+    },
+    {
+      "ts": 1778086289460,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4ttbx6"
+    },
+    {
+      "ts": 1778086279317,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1778086279312,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1778086269358,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: horas=45",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778086269353,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: horas=45",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778086267875,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Abr 2025: cursos=",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778086259664,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778086259658,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778086258312,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778086258306,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778086235487,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1778086235483,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1778086230327,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
+      "ts": 1778086230322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
+      "ts": 1778086223477,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Erazo, Virluz · May 2025: cursos=",
+      "pubId": "mmm9qi4m97a4"
+    },
+    {
+      "ts": 1778086085865,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Abr 2025: horas=16",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1778086085859,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Abr 2025: horas=16",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1778086067173,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Abr 2025: horas=18",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1778086067168,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Abr 2025: horas=18",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1778086065892,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1778086065886,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1778086059175,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MontañEz, Ana · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1778086059166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MontañEz, Ana · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1778086042023,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MilláN, Valentina · Abr 2025: horas=25",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1778086042017,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MilláN, Valentina · Abr 2025: horas=25",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1778086024296,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MilláN, Andrea Carolina · Abr 2025: horas=40",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1778086024292,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MilláN, Andrea Carolina · Abr 2025: horas=40",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1778086021234,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "MilláN, Andrea Carolina · Abr 2025: cursos=",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1778086008159,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Abr 2025: horas=38",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1778086008154,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Abr 2025: horas=38",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1778086005663,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Abr 2025: cursos=",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1778085997096,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
+      "ts": 1778085997088,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
+      "ts": 1778085958952,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
+      "ts": 1778085958946,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
+      "ts": 1778085540273,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
+      "ts": 1778085540269,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
+      "ts": 1778085265339,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778085265334,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778085263441,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778085263435,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778085256151,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778085256147,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778085253918,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778085253912,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1778085246873,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1778085246869,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1778085240324,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: horas=48",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778085240320,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: horas=48",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778085237249,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778085237245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1778085230628,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778085230624,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778085227800,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778085227795,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1778085221896,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Suarez, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s08s9"
+    },
+    {
+      "ts": 1778085221893,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Suarez, Laura · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4s08s9"
+    },
+    {
+      "ts": 1778085183358,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778085183352,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778085181029,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778085181025,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778085162143,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778070992202,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778036712768,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
+    },
+    {
+      "ts": 1778014508507,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beleño, Laura · datos generales",
+      "pubId": "mmm9qi4k0gox"
     },
     {
       "ts": 1778014147735,
