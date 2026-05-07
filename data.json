@@ -2422,11 +2422,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "62",
+            "notas": "",
+            "_ts": 1778157553379
           },
           "May": {
             "particip": false,
@@ -2556,11 +2557,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157555202
           },
           "May": {
             "particip": false,
@@ -2890,11 +2892,12 @@
             "notas": "1"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1778157687559
           },
           "May": {
             "particip": false,
@@ -3073,11 +3076,12 @@
             "notas": "16 horas betel"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "",
+            "_ts": 1778157694520
           },
           "May": {
             "particip": false,
@@ -7750,11 +7754,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "22",
+            "notas": "",
+            "_ts": 1778157700858
           },
           "May": {
             "particip": false,
@@ -15915,14 +15920,16 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO INFORMO EN EL MES"
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778157709853
           },
           "May": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1778157714378
           },
           "Jun": {
             "particip": false,
@@ -17852,11 +17859,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157721895
           },
           "May": {
             "particip": false,
@@ -18012,11 +18020,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157724184
           },
           "May": {
             "particip": false,
@@ -18188,11 +18197,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157567909
           },
           "May": {
             "particip": false,
@@ -18359,11 +18369,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157569498
           },
           "May": {
             "particip": false,
@@ -18522,11 +18533,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778157579678
           },
           "May": {
             "particip": false,
@@ -18623,11 +18635,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157582202
           },
           "May": {
             "particip": false,
@@ -18787,11 +18800,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "29",
+            "notas": "",
+            "_ts": 1778157589940
           },
           "May": {
             "particip": false,
@@ -19109,11 +19123,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157592934
           },
           "May": {
             "particip": false,
@@ -20051,11 +20066,12 @@
             "notas": "NUEVO PRECURSOR REGULAR"
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "48",
+            "notas": "",
+            "_ts": 1778157734727
           },
           "May": {
             "particip": false,
@@ -20206,11 +20222,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157736868
           },
           "May": {
             "particip": false,
@@ -20361,11 +20378,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157739020
           },
           "May": {
             "particip": false,
@@ -20518,11 +20536,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157655948
           },
           "May": {
             "particip": false,
@@ -21820,11 +21839,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157741203
           },
           "May": {
             "particip": false,
@@ -21975,11 +21995,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157745003
           },
           "May": {
             "particip": false,
@@ -22134,11 +22155,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157748283
           },
           "May": {
             "particip": false,
@@ -27002,11 +27024,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157750875
           },
           "May": {
             "particip": false,
@@ -28092,11 +28115,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157565970
           },
           "May": {
             "particip": false,
@@ -28196,11 +28220,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157560239
           },
           "May": {
             "particip": false,
@@ -28723,11 +28748,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157702592
           },
           "May": {
             "particip": false,
@@ -28821,11 +28847,12 @@
             "notas": ""
           },
           "Abr": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1778157610792
           },
           "May": {
             "particip": false,
@@ -31362,7 +31389,7 @@
       }
     }
   ],
-  "_lastModified": 1778157359756,
+  "_lastModified": 1778157758969,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33375,6 +33402,206 @@
     }
   ],
   "auditoria": [
+    {
+      "ts": 1778157734727,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Abr 2025: horas=48",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1778157734722,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Abr 2025: horas=48",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1778157724184,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
+      "ts": 1778157724180,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
+      "ts": 1778157721895,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
+      "ts": 1778157721890,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
+      "ts": 1778157700858,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Abr 2025: horas=22",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
+      "ts": 1778157700853,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Abr 2025: horas=22",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
+      "ts": 1778157694520,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Abr 2025: horas=35",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1778157694515,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Abr 2025: horas=35",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1778157687560,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Abr 2025: horas=45",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1778157687554,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Abr 2025: horas=45",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1778157685516,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Abr 2025: cursos=",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1778157589940,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Abr 2025: horas=29",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1778157589936,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Abr 2025: horas=29",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1778157587406,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Abr 2025: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1778157587399,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Abr 2025: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1778157579678,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Abr 2025: horas=50",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1778157579674,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Abr 2025: horas=50",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1778157576922,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1778157576916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Abr 2025: cursos=1",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1778157553379,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Abr 2025: horas=62",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1778157553374,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Abr 2025: horas=62",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1778157551495,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1778157551490,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4k6wjw"
+    },
     {
       "ts": 1778157350458,
       "user": "Administrador",
