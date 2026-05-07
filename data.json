@@ -31829,7 +31829,7 @@
       }
     }
   ],
-  "_lastModified": 1778159439280,
+  "_lastModified": 1778159610257,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33843,6 +33843,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778159603824,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador eliminado",
+      "detalle": "Alba, Nicolas",
+      "pubId": null
+    },
+    {
       "ts": 1778159317499,
       "user": "Administrador",
       "rol": "admin",
@@ -35428,14 +35436,6 @@
     },
     {
       "ts": 1778009990597,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778008831117,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
