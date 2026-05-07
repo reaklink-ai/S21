@@ -28570,7 +28570,7 @@
       "grupo": "Grupo 7",
       "telefono": "3024198781",
       "genero": "F",
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "anciano": false,
       "siervo": false,
@@ -31829,7 +31829,7 @@
       }
     }
   ],
-  "_lastModified": 1778158380549,
+  "_lastModified": 1778159432149,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33843,6 +33843,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1778159317499,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Laura Johana · datos generales",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1778159299653,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778159165501,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778158866824,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778158758483,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778158133856,
       "user": "Administrador",
       "rol": "admin",
@@ -35398,46 +35438,6 @@
       "ts": 1778008831117,
       "user": "Administrador",
       "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778001569092,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1777997942300,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1777989232790,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1777977439910,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1777947700163,
-      "user": "Harold_La",
-      "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
