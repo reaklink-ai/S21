@@ -4113,23 +4113,28 @@ async function ghPull() {
     const remoto = json.data;
     _lastSha = json.sha;
 
+    // SIEMPRE hacer merge — nunca sobreescribir con datos locales más viejos
+    // El merge usa timestamps por registro (_ts) para determinar cuál versión es más reciente
+    const merged = _mergeStates(state, remoto);
+    if(!merged.usuarios || merged.usuarios.length === 0) merged.usuarios = [{ ...DEFAULT_ADMIN }];
+    migrarUsuariosLegacy();
+
     const tsLocal  = state._lastModified || 0;
     const tsRemoto = remoto._lastModified || 0;
 
     if(tsLocal > tsRemoto) {
-      toast('Sincronizando cambios locales...');
-      await _mergeAndPush(0, true); // silencioso — auto-sync al cargar
-      return;
+      // Local tiene cambios más recientes — hacer merge y subir a GitHub
+      state = merged;
+      localStorage.setItem(KEY, JSON.stringify(state));
+      await _mergeAndPush(0, true); // silencioso
+    } else {
+      // Remoto es más reciente o igual — tomar el merge
+      state = merged;
+      localStorage.setItem(KEY, JSON.stringify(state));
+      selId = null;
+      renderDashboard();
+      renderLista();
     }
-
-    state = _mergeStates(state, remoto);
-    if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [{ ...DEFAULT_ADMIN }];
-    migrarUsuariosLegacy();
-    localStorage.setItem(KEY, JSON.stringify(state));
-    selId = null;
-    renderDashboard();
-    renderLista();
-    toast('✓ Datos actualizados');
   } catch(e) { toast('Error al cargar: ' + e.message); }
 }
 
@@ -4160,8 +4165,11 @@ function renderLista() {
   const esAnciano = currentUser && (currentUser.rol === 'anciano' || currentUser.rol === 'auxiliar') && currentUser.grupo;
 
   // Filtro base — búsqueda por nombre, apellido o grupo
+  const _mudIdsL = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIdsL = new Set((state.inactivos||[]).map(i=>i.id));
   let lista = state.publicadores.filter(p => {
-    if((state.mudados||[]).some(m => m.id === p.id)) return false; // excluir mudados
+    if(_mudIdsL.has(p.id)) return false;  // excluir mudados
+    if(_inacIdsL.has(p.id)) return false; // excluir inactivos
     const haystack = (p.apellido+' '+p.nombre+' '+(p.grupo||'')).toLowerCase();
     return !q || haystack.includes(q);
   });
@@ -4179,7 +4187,8 @@ function renderLista() {
 
   // Contadores
   const _mudadosIds = new Set((state.mudados||[]).map(m=>m.id));
-  const pubsActivos = state.publicadores.filter(p => !_mudadosIds.has(p.id));
+  const _inacIdsC   = new Set((state.inactivos||[]).map(i=>i.id));
+  const pubsActivos = state.publicadores.filter(p => !_mudadosIds.has(p.id) && !_inacIdsC.has(p.id));
   const pubsBase = esAnciano ? pubsActivos.filter(p=>p.grupo===currentUser.grupo) : pubsActivos;
   document.getElementById('statTotal').textContent = pubsBase.length;
   const grupos = new Set(pubsBase.map(p=>p.grupo).filter(Boolean));
@@ -5667,39 +5676,73 @@ function confirmarDescargaPlantilla() {
 function renderInactivos() {
   const wrap = document.getElementById('inactivosWrap');
   if(!wrap) return;
-  const inact = (state.inactivos || []).sort((a,b) => a.apellido.localeCompare(b.apellido));
+  const todos = (state.inactivos || []).sort((a,b) => a.apellido.localeCompare(b.apellido));
 
-  const items = inact.length === 0
-    ? `<div style="text-align:center;padding:60px 20px;color:var(--ink-3)">
-        <div style="font-size:40px;margin-bottom:12px;opacity:.3">○</div>
-        <div style="font-size:15px;font-weight:600">Sin publicadores inactivos</div>
-        <div style="font-size:13px;margin-top:6px">Mueve publicadores aquí desde la lista principal</div>
-       </div>`
-    : inact.map(p => {
-        const tipo = tipoPrincipal(p);
-        const color = TIPO_COLOR[tipo] || '#64748b';
-        const ini = (p.apellido[0]||'')+(p.nombre[0]||'');
-        const fechaInact = p.fechaInactivo ? `<span style="font-size:11px;color:var(--ink-3);margin-left:8px">Desde ${p.fechaInactivo}</span>` : '';
-        const motivo = p.motivoInactivo ? `<div style="font-size:11px;color:var(--ink-3);margin-top:2px">${escHtml(p.motivoInactivo)}</div>` : '';
-        return `<div class="inact-item">
-          <div class="pub-av" style="background:${color}18;color:${color};flex-shrink:0">${ini}</div>
-          <div style="flex:1;min-width:0">
-            <div style="font-size:14px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}${fechaInact}</div>
-            <div style="font-size:12px;color:${color};font-weight:600">${tipo} · ${p.grupo||'Sin grupo'}</div>
-            ${motivo}
-          </div>
-          <button class="gs-btn gs-btn-prim" onclick="reactivarPub('${p.id}')" style="white-space:nowrap;flex-shrink:0">↩ Reactivar</button>
-        </div>`;
-      }).join('');
+  // Separar por tipo
+  const grupos = [
+    { tipo: 'inactivo',     label: 'Inactivos',      color: '#b45309', bg: '#fffbeb', border: '#fcd34d' },
+    { tipo: 'sacado',       label: 'Sacados',        color: '#dc2626', bg: '#fef2f2', border: '#fca5a5' },
+    { tipo: 'desasociado',  label: 'Desasociados',   color: '#7c3aed', bg: '#faf5ff', border: '#c4b5fd' },
+  ];
 
-  wrap.innerHTML = `
-    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;gap:12px;flex-wrap:wrap">
-      <div>
-        <div style="font-family:var(--font-serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.4px">Inactivos</div>
-        <div style="font-size:13px;color:var(--ink-3);margin-top:3px">${inact.length} publicador${inact.length!==1?'es':''} sacado${inact.length!==1?'s':''} de la congregación</div>
+  // Detectar tipo automáticamente si no está definido
+  const _detectarTipo = (p) => {
+    if(p.tipoInactivo) return p.tipoInactivo;
+    const motivo = (p.motivoInactivo||'').toLowerCase();
+    if(motivo.includes('sacad') || motivo.includes('disfellow') || motivo.includes('excluido')) return 'sacado';
+    if(motivo.includes('desasocia')) return 'desasociado';
+    return 'inactivo';
+  };
+
+  const mkItem = (p, color) => {
+    const tipoPub = tipoPrincipal(p);
+    const colorPub = TIPO_COLOR[tipoPub] || '#64748b';
+    const ini = (p.apellido[0]||'')+(p.nombre[0]||'');
+    const fecha = p.fechaInactivo ? `<span style="font-size:10px;color:var(--ink-3);margin-left:6px">${p.fechaInactivo}</span>` : '';
+    const motivo = p.motivoInactivo ? `<div style="font-size:11px;color:var(--ink-3);margin-top:1px">${escHtml(p.motivoInactivo)}</div>` : '';
+    return `<div class="inact-item">
+      <div class="pub-av" style="background:${colorPub}18;color:${colorPub};flex-shrink:0">${ini}</div>
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}${fecha}</div>
+        <div style="font-size:11.5px;color:${colorPub};font-weight:600">${tipoPub} · ${p.grupo||'Sin grupo'}</div>
+        ${motivo}
       </div>
+      <button class="gs-btn gs-btn-prim" onclick="reactivarPub('${p.id}')" style="white-space:nowrap;flex-shrink:0;font-size:11px">↩ Reactivar</button>
+    </div>`;
+  };
+
+  if(todos.length === 0) {
+    wrap.innerHTML = `<div style="text-align:center;padding:60px 20px;color:var(--ink-3)">
+      <div style="font-size:40px;margin-bottom:12px;opacity:.3">○</div>
+      <div style="font-size:15px;font-weight:600">Sin registros</div>
+      <div style="font-size:13px;margin-top:6px">Mueve publicadores aquí desde la lista principal</div>
+    </div>`;
+    return;
+  }
+
+  let html = `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px">
+    <div>
+      <div style="font-family:var(--font-serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.4px">Publicadores no activos</div>
+      <div style="font-size:13px;color:var(--ink-3);margin-top:3px">${todos.length} en total</div>
     </div>
-    <div class="inact-list">${items}</div>`;
+  </div>`;
+
+  grupos.forEach(({ tipo, label, emoji, color, bg, border }) => {
+    const lista = todos.filter(p => _detectarTipo(p) === tipo);
+    if(!lista.length) return;
+    html += `<div style="margin-bottom:24px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;padding:8px 14px;
+        background:${bg};border:1px solid ${border};border-radius:10px">
+        <span style="font-size:16px"></span>
+        <span style="font-size:12px;font-weight:800;color:${color};text-transform:uppercase;letter-spacing:.6px">${label}</span>
+        <span style="margin-left:auto;background:${color};color:#fff;font-size:10px;font-weight:700;
+          padding:2px 9px;border-radius:20px">${lista.length}</span>
+      </div>
+      <div class="inact-list">${lista.map(p => mkItem(p, color)).join('')}</div>
+    </div>`;
+  });
+
+  wrap.innerHTML = html;
 }
 
 function moverAInactivos(id) {
@@ -5717,6 +5760,7 @@ function cerrarModalInactivo() {
 function confirmarInactivo() {
   const id     = document.getElementById('inactivoIdTarget').value;
   const motivo = document.getElementById('inactivoMotivo').value.trim();
+  const tipo   = document.querySelector('input[name="tipoInactivo"]:checked')?.value || 'inactivo';
   const pub    = getPub(id);
   if(!pub) return;
 
@@ -5726,8 +5770,9 @@ function confirmarInactivo() {
   // Add to inactivos
   if(!state.inactivos) state.inactivos = [];
   const hoy = new Date().toISOString().slice(0,10);
-  state.inactivos.push({ ...pub, fechaInactivo: hoy, motivoInactivo: motivo });
-  auditLog('Marcado inactivo', `${pub.apellido}, ${pub.nombre}`, id);
+  state.inactivos.push({ ...pub, fechaInactivo: hoy, motivoInactivo: motivo, tipoInactivo: tipo });
+  const tipoLabel = tipo==='sacado'?'Sacado':tipo==='desasociado'?'Desasociado':'Inactivo';
+  auditLog(tipoLabel, `${pub.apellido}, ${pub.nombre}${motivo?' · '+motivo:''}`, id);
 
   marcarCambios();
   selId = null;
@@ -5851,7 +5896,8 @@ function regresarMudado(id) {
 function exportarPDFGrupos() {
   const fechaHoy = new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
   const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
-  const pubsAct  = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const pubsAct  = state.publicadores.filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id));
   const grupos   = GRUPOS_LISTA.filter(g => pubsAct.some(p=>p.grupo===g));
 
   // Datos por grupo
@@ -6310,17 +6356,11 @@ async function verificarLogin() {
       const json = await res.json();
       const remoto = json.data;
       if(remoto) {
-        // Preservar auditoría local antes de sobrescribir con el remoto
-        const auditoriaLocal = state.auditoria || [];
-        state = remoto;
-        if(!state.usuarios || state.usuarios.length === 0) state.usuarios = [ { ...DEFAULT_ADMIN } ];
+        // SIEMPRE hacer merge al login — preserva cambios de ambos dispositivos
+        const merged = _mergeStates(state, remoto);
+        if(!merged.usuarios || merged.usuarios.length === 0) merged.usuarios = [ { ...DEFAULT_ADMIN } ];
         migrarUsuariosLegacy();
-        // Fusionar auditoría: combinar local + remota sin duplicados (por ts)
-        const auditoriaRemota = state.auditoria || [];
-        const tsRemoto = new Set(auditoriaRemota.map(e=>e.ts));
-        const auditoriaMerged = [...auditoriaRemota, ...auditoriaLocal.filter(e=>!tsRemoto.has(e.ts))];
-        auditoriaMerged.sort((a,b)=>b.ts-a.ts);
-        state.auditoria = auditoriaMerged.slice(0, AUDIT_MAX);
+        state = merged;
         localStorage.setItem(KEY, JSON.stringify(state));
       }
     }
@@ -7557,8 +7597,9 @@ function renderMetResumen() {
   const el = document.getElementById('mtab-body-resumen');
   try {
     const _gf = (can('soloGrupo') && currentUser && currentUser.grupo) ? currentUser.grupo : null;
-    const _mudIdsM = new Set((state.mudados||[]).map(m=>m.id));
-    const pubs = state.publicadores.filter(p => !_mudIdsM.has(p.id) && (!_gf || p.grupo === _gf));
+    const _mudIdsM  = new Set((state.mudados||[]).map(m=>m.id));
+    const _inacIdsM = new Set((state.inactivos||[]).map(i=>i.id));
+    const pubs = state.publicadores.filter(p => !_mudIdsM.has(p.id) && !_inacIdsM.has(p.id) && (!_gf || p.grupo === _gf));
     const total = pubs.length;
     if(!total) { el.innerHTML = '<div style="padding:60px;text-align:center;color:var(--ink-3);font-size:14px">No hay publicadores registrados.</div>'; return; }
 
@@ -7780,8 +7821,9 @@ function renderMetResumen() {
 
 function renderMetMensual() {
   const anio = getAnioMetrica();
-  const _mudIdsMen = new Set((state.mudados||[]).map(m=>m.id));
-  const pubs = state.publicadores.filter(p => !_mudIdsMen.has(p.id));
+  const _mudIdsMen  = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIdsMen = new Set((state.inactivos||[]).map(i=>i.id));
+  const pubs = state.publicadores.filter(p => !_mudIdsMen.has(p.id) && !_inacIdsMen.has(p.id));
   const el = document.getElementById('mtab-body-mensual');
   if(!pubs.length) { el.innerHTML = '<div style="padding:40px;text-align:center;color:#aaa">No hay datos.</div>'; return; }
 
@@ -8189,8 +8231,9 @@ function closeMobDrawer() {
 // DASHBOARD (INICIO)
 // ══════════════════════════════════════════
 function renderDashboard() {
-  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const pubs  = state.publicadores.filter(p => !_mudIds.has(p.id));
+  const _mudIds   = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacDash = new Set((state.inactivos||[]).map(i=>i.id));
+  const pubs  = state.publicadores.filter(p => !_mudIds.has(p.id) && !_inacDash.has(p.id));
   const total = pubs.length;
   const anio  = anioHoy();
 
@@ -10665,28 +10708,70 @@ function precExportarPDFUno(pubId) {
 
 <!-- MODAL INACTIVO -->
 <div class="overlay" id="modalInactivoOverlay" style="display:none">
-  <div class="modal" style="max-width:420px">
+  <div class="modal" style="max-width:440px">
     <div class="modal-hd" style="border-bottom:2px solid #fca5a5">
-      <span class="modal-hd-title" style="color:var(--red)">Sacar de la congregación</span>
+      <span class="modal-hd-title" style="color:var(--red)">Cambiar estado del publicador</span>
       <button class="modal-x" onclick="cerrarModalInactivo()">×</button>
     </div>
     <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
       <input type="hidden" id="inactivoIdTarget">
       <p style="font-size:14px;color:var(--ink);font-weight:600" id="inactivoNombre"></p>
-      <p style="font-size:13px;color:var(--ink-2);line-height:1.5">
-        Este publicador será movido a la lista de <strong>Inactivos</strong>. Sus registros se conservan y puede ser reactivado en cualquier momento.
-      </p>
+
+      <!-- Tipo de estado -->
+      <div class="mf-group">
+        <label style="font-weight:700;font-size:12px">Tipo</label>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:6px">
+          <label id="tipoInac_inactivo" style="display:flex;align-items:center;justify-content:center;padding:10px 8px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:12px;font-weight:700;color:var(--ink-2);text-align:center;transition:all .15s">
+            <input type="radio" name="tipoInactivo" value="inactivo" checked style="display:none">
+            Inactivo
+          </label>
+          <label id="tipoInac_sacado" style="display:flex;align-items:center;justify-content:center;padding:10px 8px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:12px;font-weight:700;color:var(--ink-2);text-align:center;transition:all .15s">
+            <input type="radio" name="tipoInactivo" value="sacado" style="display:none">
+            Sacado
+          </label>
+          <label id="tipoInac_desasociado" style="display:flex;align-items:center;justify-content:center;padding:10px 8px;border:2px solid var(--border);border-radius:10px;cursor:pointer;font-size:12px;font-weight:700;color:var(--ink-2);text-align:center;transition:all .15s">
+            <input type="radio" name="tipoInactivo" value="desasociado" style="display:none">
+            Desasociado
+          </label>
+        </div>
+      </div>
+
       <div class="mf-group">
         <label>Motivo (opcional)</label>
-        <input id="inactivoMotivo" placeholder="Ej: Se mudó, disfellowshipped, etc." style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
+        <input id="inactivoMotivo" placeholder="Ej: Problemas personales, decisión propia..." style="height:38px;padding:0 11px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;width:100%;box-sizing:border-box">
       </div>
+      <p style="font-size:11.5px;color:var(--ink-3);line-height:1.5">
+        Sus registros se conservan y puede ser reactivado en cualquier momento.
+      </p>
     </div>
     <div class="modal-ft">
       <button class="btn-cancel" onclick="cerrarModalInactivo()">Cancelar</button>
-      <button style="background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="confirmarInactivo()">Mover a Inactivos</button>
+      <button style="background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:var(--r);font-size:13px;font-weight:700;cursor:pointer;font-family:var(--font)" onclick="confirmarInactivo()">Confirmar</button>
     </div>
   </div>
 </div>
+
+<script>
+// Highlight radio buttons
+document.addEventListener('change', e => {
+  if(e.target.name === 'tipoInactivo') {
+    ['inactivo','sacado','desasociado'].forEach(t => {
+      const el = document.getElementById('tipoInac_' + t);
+      if(!el) return;
+      const colors = { inactivo:'#b45309', sacado:'#dc2626', desasociado:'#7c3aed' };
+      if(e.target.value === t) {
+        el.style.borderColor = colors[t];
+        el.style.background = t==='inactivo'?'#fffbeb':t==='sacado'?'#fef2f2':'#faf5ff';
+        el.style.color = colors[t];
+      } else {
+        el.style.borderColor = 'var(--border)';
+        el.style.background = '';
+        el.style.color = 'var(--ink-2)';
+      }
+    });
+  }
+});
+</script>
 
 <!-- MODAL MUDADO -->
 <div class="overlay" id="modalMudadoOverlay" style="display:none">
