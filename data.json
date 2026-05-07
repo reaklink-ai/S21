@@ -28469,111 +28469,6 @@
       }
     },
     {
-      "id": "mmm9qi4u9kvo",
-      "apellido": "Galeado",
-      "nombre": "Santiago",
-      "nacimiento": "",
-      "bautismo": "",
-      "grupo": "Grupo 13",
-      "telefono": "",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {},
-      "registros": {
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Sep": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Oct": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      }
-    },
-    {
       "id": "mmm9qi4ulvrs",
       "apellido": "GarcíA",
       "nombre": "Bobadilla Alicia",
@@ -30731,6 +30626,111 @@
         "direccion": "",
         "notasMed": ""
       }
+    },
+    {
+      "id": "mmm9qi4u9kvo",
+      "apellido": "Galeado",
+      "nombre": "Santiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      }
     }
   ],
   "grupos": {
@@ -31130,6 +31130,114 @@
       },
       "fechaInactivo": "2026-05-05",
       "motivoInactivo": "SACADA DE LA CONGREGACIÓN"
+    },
+    {
+      "id": "mmm9qi4u9kvo",
+      "apellido": "Galeado",
+      "nombre": "Santiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {},
+      "registros": {
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES - SACADO DE LA CONGREGACIÓN",
+            "_ts": 1778157843110
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "fechaInactivo": "2026-05-07",
+      "motivoInactivo": "SACADO DE LA CONGREGACIÓN 6 MAYO 2026"
     }
   ],
   "asistencia": [
@@ -31389,7 +31497,7 @@
       }
     }
   ],
-  "_lastModified": 1778157758969,
+  "_lastModified": 1778158016393,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33403,6 +33511,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778157855874,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado inactivo",
+      "detalle": "Galeado, Santiago",
+      "pubId": "mmm9qi4u9kvo"
+    },
+    {
       "ts": 1778157734727,
       "user": "Administrador",
       "rol": "admin",
@@ -34990,14 +35106,6 @@
       "ts": 1777941438664,
       "user": "Felipe_C",
       "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1777941142249,
-      "user": "Administrador",
-      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
