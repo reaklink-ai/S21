@@ -31480,7 +31480,7 @@
     },
     "Grupo 13": {
       "super": "mmm9qi4s3c4f",
-      "aux": "mmm9qi4rvhuc"
+      "aux": "mmm9qi4swquo"
     },
     "Grupo 14": {
       "super": "mmm9qi4rvhuc",
@@ -32246,7 +32246,7 @@
       "id": "r1773278679953",
       "fecha": "2026-03-11",
       "tipo": "Entre semana",
-      "tema": "",
+      "tema": "Vida y Ministerio Cristiano",
       "presencial": 129,
       "zoom": 58,
       "total": 187,
@@ -32358,7 +32358,7 @@
       }
     }
   ],
-  "_lastModified": 1778262588639,
+  "_lastModified": 1778268330372,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34372,6 +34372,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778268057101,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778262573057,
       "user": "Administrador",
       "rol": "admin",
@@ -35957,14 +35965,6 @@
     },
     {
       "ts": 1778111560562,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1778111534504,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
