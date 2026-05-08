@@ -603,7 +603,7 @@
       "nacimiento": "1960-12-12",
       "bautismo": "1996-07-20",
       "grupo": "Grupo 4",
-      "telefono": "317 651 1346",
+      "telefono": "3176511346",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -613,11 +613,11 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Víctor David Alarcón Camelo",
+        "relacion": "Hijo",
+        "tel": "3507365588",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
         "notasMed": ""
       },
       "registros": {
@@ -769,7 +769,7 @@
       "nacimiento": "1999-09-13",
       "bautismo": "2012-07-07",
       "grupo": "Grupo 4",
-      "telefono": "310 876 0263",
+      "telefono": "3108760263",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -779,11 +779,11 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Victor David Alarcón Camelo",
+        "relacion": "Hermano",
+        "tel": "3507365588",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
         "notasMed": ""
       },
       "registros": {
@@ -927,7 +927,7 @@
       "nacimiento": "1960-04-17",
       "bautismo": "1996-07-20",
       "grupo": "Grupo 4",
-      "telefono": "315 895 8866",
+      "telefono": "3158958866",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -937,11 +937,11 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Tatiana Tapiero",
+        "relacion": "Nuera",
+        "tel": "3143191316",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
         "notasMed": ""
       },
       "registros": {
@@ -1099,11 +1099,11 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Nubia Gutierrez",
+        "relacion": "Mamá",
+        "tel": "3138720868",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Novaterra ciprés torre 9 apt 234",
         "notasMed": ""
       },
       "registros": {
@@ -2782,7 +2782,7 @@
       "nacimiento": "1996-04-05",
       "bautismo": "2014-07-05",
       "grupo": "Grupo 14",
-      "telefono": "",
+      "telefono": "3012999176",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -2792,11 +2792,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Isaac Beleño",
+        "relacion": "Esposo",
+        "tel": "3013629170",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carrera 17 Sur # 5 - 66 torre 14 apartamento 256 Cerezo Novaterra. Mosquera - Cundinamarca.",
         "notasMed": ""
       },
       "registros": {
@@ -2966,7 +2966,7 @@
       "nacimiento": "",
       "bautismo": "",
       "grupo": "Grupo 12",
-      "telefono": "313 4051048",
+      "telefono": "3134051048",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -2975,7 +2975,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 14a # 10-27 sur Torre 8 apt 604",
+        "nombre": "Martha Forero",
+        "tel": "3142943968",
+        "relacion": "Mamá"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -3131,7 +3136,7 @@
       "nacimiento": "",
       "bautismo": "",
       "grupo": "Grupo 12",
-      "telefono": "300 8258079",
+      "telefono": "3008258079",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -3141,11 +3146,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Orlando Fernandez",
+        "relacion": "Suegro",
+        "tel": "3142942708",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Cra 14a # 10-27 sur Torre 8 apt 604",
         "notasMed": ""
       },
       "registros": {
@@ -3298,7 +3303,7 @@
       "nacimiento": "",
       "bautismo": "",
       "grupo": "Grupo 12",
-      "telefono": "",
+      "telefono": "3008258079",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -3307,7 +3312,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 14a # 10-27 sur Torre 8 apt 604",
+        "nombre": "Martha Forero",
+        "tel": "3142943868",
+        "relacion": "Abuela"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -3453,7 +3463,7 @@
       "nacimiento": "1968-10-27",
       "bautismo": "1984-01-07",
       "grupo": "Grupo 2",
-      "telefono": "320  849 4251",
+      "telefono": "3208494251",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -3462,7 +3472,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10 #1A-18 int 3 casa 25 el trébol",
+        "nombre": "Carlos Torres",
+        "tel": "3124693588",
+        "relacion": "nan"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -3609,7 +3624,7 @@
       "nacimiento": "",
       "bautismo": "2012-03-24",
       "grupo": "Grupo 2",
-      "telefono": "322 346 2780",
+      "telefono": "3228097724",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -3618,7 +3633,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cll 10 #1a-18",
+        "nombre": "Gustavo Rodríguez",
+        "tel": "3008518148",
+        "relacion": "Tío"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -3778,7 +3798,7 @@
       "nacimiento": "",
       "bautismo": "2012-03-24",
       "grupo": "Grupo 2",
-      "telefono": "322 346 2780",
+      "telefono": "3223462780",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -3788,11 +3808,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Carlos Torres",
+        "relacion": "nan",
+        "tel": "3124693588",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 10 #1A-18",
         "notasMed": ""
       },
       "registros": {
@@ -3944,7 +3964,7 @@
       "nacimiento": "1998-10-27",
       "bautismo": "2009-08-17",
       "grupo": "Grupo 2",
-      "telefono": "310 319 6069",
+      "telefono": "3103196069",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -3953,7 +3973,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10#1A-18",
+        "nombre": "Carlos Torres",
+        "tel": "3124693588",
+        "relacion": "Tio"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -4527,7 +4552,7 @@
       "nacimiento": "1964-09-01",
       "bautismo": "1991-06-08",
       "grupo": "Grupo 12",
-      "telefono": "",
+      "telefono": "3227162446",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -4536,7 +4561,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10 sur # 14 A 77 apto 501 torre 13 Cerezo. Hacienda Alcalá",
+        "nombre": "Karen Valderrama",
+        "tel": "310340431",
+        "relacion": "Hija"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -4690,7 +4720,7 @@
       "nacimiento": "1968-03-31",
       "bautismo": "2007-09-29",
       "grupo": "Grupo 1",
-      "telefono": "305 7893355",
+      "telefono": "3057893355",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -4699,7 +4729,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 11 E # 16A-16 Int 9 Casa 7 Trebol del guali 2",
+        "nombre": "David Ramirez",
+        "tel": "3213894401",
+        "relacion": "Sobrino"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -4854,7 +4889,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "CRA 7B No 13-00",
+        "nombre": "Liz sierra",
+        "tel": "3152332963",
+        "relacion": "Mamá"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -5169,7 +5209,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10 # 14a 85 sur torre 13 apto 550",
+        "nombre": "Lida Chacón",
+        "tel": "3102474833",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -6258,7 +6303,7 @@
       "nacimiento": "1957-09-17",
       "bautismo": "2004-10-22",
       "grupo": "Grupo 7",
-      "telefono": "312 317 9826",
+      "telefono": "3212790055",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -6267,7 +6312,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 16 #09e14",
+        "nombre": "Victor gomez",
+        "tel": "3212430550",
+        "relacion": "Hermano"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -6988,7 +7038,7 @@
       "nacimiento": "1991-02-02",
       "bautismo": "2025-06-19",
       "grupo": "Grupo 13",
-      "telefono": "",
+      "telefono": "3112680573",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -6997,7 +7047,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 17s# 6-22 Torre 6 Apartamento 1022",
+        "nombre": "Mayra Delgado Herrera",
+        "tel": "3204946508",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -7401,7 +7456,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 5 N° 8-26",
+        "nombre": "Martha Cecilia Beltrán",
+        "tel": "3228465968",
+        "relacion": "Madre"
+      },
       "registros": {
         "2024": {
           "Mar": {
@@ -7651,7 +7711,7 @@
       "nacimiento": "1980-11-03",
       "bautismo": "2000-12-17",
       "grupo": "Grupo 5",
-      "telefono": "310 7620502",
+      "telefono": "3107620502",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -7660,7 +7720,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 1a A este 19 53 La Esperanza",
+        "nombre": "Damaris Duarte Hernández",
+        "tel": "3125753134",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -7818,7 +7883,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cl 10#1a-01 int,6 casa 11",
+        "nombre": "Virgilio Bolaños Quiñones",
+        "tel": "573104984907",
+        "relacion": "Padre"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -7976,7 +8046,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "CRA 10 #15-84; torre , Apto 234, puerto luna Mosquera",
+        "nombre": "Alfredo Moncaleano",
+        "tel": "3107769360",
+        "relacion": "Hermano cristiano"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -8262,7 +8337,7 @@
       "nacimiento": "1982-01-24",
       "bautismo": "2002-08-01",
       "grupo": "Grupo 7",
-      "telefono": "",
+      "telefono": "3043296278",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -8271,7 +8346,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 20#4b-43, Villanueva",
+        "nombre": "María Piña",
+        "tel": "573133869309",
+        "relacion": "Prima"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -8418,7 +8498,7 @@
       "nacimiento": "",
       "bautismo": "",
       "grupo": "Grupo 8",
-      "telefono": "",
+      "telefono": "3118317856",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -8427,7 +8507,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10 # 14a 85 sur T 13. Apto550",
+        "nombre": "Alfonso Chacon",
+        "tel": "3208386196",
+        "relacion": "Esposo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -9011,7 +9096,7 @@
       "nacimiento": "2004-04-04",
       "bautismo": "2013-03-30",
       "grupo": "Grupo 5",
-      "telefono": "301 649 0432",
+      "telefono": "3008161198",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -9020,7 +9105,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 5 #7a-44 Alejandría Real 4 T.5 Apto 203",
+        "nombre": "Javier García",
+        "tel": "3174339729",
+        "relacion": "Tío"
+      },
       "registros": {
         "2025": {
           "Mar": {
@@ -9764,7 +9854,7 @@
       "nacimiento": "1996-06-15",
       "bautismo": "2007-11-05",
       "grupo": "Grupo 4",
-      "telefono": "313 4701213",
+      "telefono": "3172271079",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -9773,7 +9863,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 13 A n 1 b este 80 Mz 2 Int 7 casa 26",
+        "nombre": "Octavio Grisales",
+        "tel": "3142977645",
+        "relacion": "Tío"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -9915,7 +10010,7 @@
       "nacimiento": "1971-02-02",
       "bautismo": "1998-06-04",
       "grupo": "Grupo 4",
-      "telefono": "313 4701213",
+      "telefono": "3134701213",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -9924,7 +10019,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 12 A N 1 B este 80 Int 7 casa 26",
+        "nombre": "Marina Grisales",
+        "tel": "3202659192",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -10386,7 +10486,7 @@
       "nacimiento": "1952-05-09",
       "bautismo": "1993-12-18",
       "grupo": "Grupo 8",
-      "telefono": "310 337 0338",
+      "telefono": "3174856881",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -10395,7 +10495,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10sur #11-23",
+        "nombre": "Ximena Martinez",
+        "tel": "3002719383",
+        "relacion": "Amiga"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -10551,7 +10656,7 @@
       "nacimiento": "1998-04-03",
       "bautismo": "2008-05-24",
       "grupo": "Grupo 13",
-      "telefono": "311 318 2008",
+      "telefono": "3113182008",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -10560,7 +10665,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 23#11c-03",
+        "nombre": "Fanny Muñoz",
+        "tel": "3115277781",
+        "relacion": "Abuela"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -10849,7 +10959,7 @@
       "nacimiento": "1980-03-05",
       "bautismo": "2018-04-29",
       "grupo": "Grupo 5",
-      "telefono": "302 4411301",
+      "telefono": "3024411301",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -10858,7 +10968,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cll 17 b # 1-04  mosquera",
+        "nombre": "Rosaira orozco bilbao",
+        "tel": "3134882336",
+        "relacion": "Mama"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11004,7 +11119,7 @@
       "nacimiento": "1961-01-29",
       "bautismo": "1994-02-27",
       "grupo": "Grupo 8",
-      "telefono": "318 2260968",
+      "telefono": "3143629851",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -11013,7 +11128,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 8 #15-02 apto 402 barrio Alicante",
+        "nombre": "Danna Hernandez de Bulic",
+        "tel": "584166152627",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11163,7 +11283,7 @@
       "nacimiento": "1975-01-06",
       "bautismo": "1991-07-13",
       "grupo": "Grupo 13",
-      "telefono": "3212682183",
+      "telefono": "3106996870",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -11172,7 +11292,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 6a #14-41 sur torre 3 apartamento 111 arrayan",
+        "nombre": "John Hernández Mendoza",
+        "tel": "3202971761",
+        "relacion": "Hermano carnal"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11333,7 +11458,7 @@
       "nacimiento": "1961-08-16",
       "bautismo": "1992-07-18",
       "grupo": "Grupo 8",
-      "telefono": "310 791 9867",
+      "telefono": "3164705377",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -11342,7 +11467,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Sol Naciente Torre 10 apt 203",
+        "nombre": "Carolina Moreno Hernandez",
+        "tel": "3017913181",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11912,7 +12042,7 @@
       "nacimiento": "1973-05-18",
       "bautismo": "2015-06-14",
       "grupo": "Grupo 5",
-      "telefono": "314 761 7961",
+      "telefono": "3147617961",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -11921,7 +12051,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Callé 17b # 1-04 Mosquera",
+        "nombre": "Leila Guzmán montaña",
+        "tel": "3152979027",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -12670,7 +12805,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 3E # 11-60 Manzana 6 interior 12 casa 6",
+        "nombre": "Oscar Hernando Jiménez Ruíz",
+        "tel": "3153551106",
+        "relacion": "Hijo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -13297,7 +13437,7 @@
       "nacimiento": "",
       "bautismo": "2009-12-27",
       "grupo": "Grupo 5",
-      "telefono": "312 4429277",
+      "telefono": "3124429277",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -13307,11 +13447,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Liliana Andrea Larrota",
+        "relacion": "Hermana",
+        "tel": "3102997321",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 6sur #23-137 Torre 10 Apto 102",
         "notasMed": ""
       },
       "registros": {
@@ -13474,7 +13614,7 @@
       "nacimiento": "1955-09-01",
       "bautismo": "1985-07-15",
       "grupo": "Grupo 5",
-      "telefono": "313 344 4417",
+      "telefono": "3133444417",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -13483,7 +13623,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 1a. A # 16-31 casa 22b zerresuelita.",
+        "nombre": "Ricardo Talero cortés.",
+        "tel": "3132725785",
+        "relacion": "Hermano."
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -13639,7 +13784,7 @@
       "nacimiento": "",
       "bautismo": "2017-12-23",
       "grupo": "Grupo 5",
-      "telefono": "321 3028502",
+      "telefono": "3213028502",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -13648,7 +13793,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cll 6 sur # 23. - 137 torre 10 apto 102",
+        "nombre": "Esperanza Morera",
+        "tel": "3118281937",
+        "relacion": "Mamá"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -13970,7 +14120,7 @@
       "nacimiento": "1977-02-08",
       "bautismo": "2023-06-03",
       "grupo": "Grupo 13",
-      "telefono": "",
+      "telefono": "3125176360",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -13979,7 +14129,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10 No.11-18 Sur To 13 Apto 749 Conj. Puerto del Sol",
+        "nombre": "William Andrés Leon B.",
+        "tel": "3122298999",
+        "relacion": "Hijo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -14385,7 +14540,7 @@
       "nacimiento": "2013-07-30",
       "bautismo": "2023-04-16",
       "grupo": "Grupo 1",
-      "telefono": "322 8377193",
+      "telefono": "3228377193",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -14394,7 +14549,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 8a Este # 1b -49 el trebol manzana 9 interior 2 casa 23",
+        "nombre": "Oscar Lugo",
+        "tel": "3228377193",
+        "relacion": "Padre"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -14705,7 +14865,7 @@
       "nacimiento": "2013-02-15",
       "bautismo": "",
       "grupo": "Grupo 1",
-      "telefono": "",
+      "telefono": "3228377193",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -14714,7 +14874,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 8a Este # 1b -49 el trebol manzana 9 interior 2 casa 23",
+        "nombre": "Oscar Lugo",
+        "tel": "3228377193",
+        "relacion": "Padre"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15015,7 +15180,7 @@
       "nacimiento": "1971-04-08",
       "bautismo": "1992-12-12",
       "grupo": "Grupo 4",
-      "telefono": "300 413 9472",
+      "telefono": "3004139472",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -15024,7 +15189,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 1b este #17a-21",
+        "nombre": "Roger Lugo",
+        "tel": "3004139472",
+        "relacion": "Padre"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15325,7 +15495,7 @@
       "nacimiento": "1991-12-14",
       "bautismo": "2019-10-20",
       "grupo": "Grupo 1",
-      "telefono": "314 2759381",
+      "telefono": "3142759381",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -15334,7 +15504,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 8a Este # 1b -49 el trebol manzana 9 interior 2 casa 23",
+        "nombre": "Oscar Lugo",
+        "tel": "3228377193",
+        "relacion": "Esposo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15485,7 +15660,7 @@
       "nacimiento": "1983-10-27",
       "bautismo": "2012-07-07",
       "grupo": "Grupo 8",
-      "telefono": "317 339 2555",
+      "telefono": "3173392555",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -15494,7 +15669,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "CRA 8 # 15 -09",
+        "nombre": "ODILIA MARTINEZ",
+        "tel": "3107919867",
+        "relacion": "MADRE"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -16088,7 +16268,7 @@
       "nacimiento": "1947-10-12",
       "bautismo": "1965-11-05",
       "grupo": "Grupo 8",
-      "telefono": "310 791 9867",
+      "telefono": "3107919867",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -16097,7 +16277,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "CRA 8 #15 -09",
+        "nombre": "DIANA MILENA MARTINEZ",
+        "tel": "3123392555",
+        "relacion": "HIJA"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -16614,7 +16799,7 @@
       "nacimiento": "1987-08-01",
       "bautismo": "2015-07-19",
       "grupo": "Grupo 8",
-      "telefono": "319 4501016",
+      "telefono": "3194501016",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -16623,7 +16808,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 8 # 14-33 piso 3 barrio Alicante",
+        "nombre": "Never Mesa",
+        "tel": "3138127469",
+        "relacion": "Papa"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -17256,7 +17446,7 @@
       "nacimiento": "1960-10-20",
       "bautismo": "1985-06-30",
       "grupo": "Grupo 7",
-      "telefono": "316 827 7557",
+      "telefono": "3168277557",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -17266,11 +17456,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Harvey Andrés Rodríguez M / Ana Carolina Rodríguez M",
+        "relacion": "Hijos",
+        "tel": "3165374701/3158427954",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carreras 5 NRO 7 A 44 Alejandria 4",
         "notasMed": ""
       },
       "registros": {
@@ -17768,7 +17958,7 @@
       "nacimiento": "1990-10-31",
       "bautismo": "2002-06-13",
       "grupo": "Grupo 11",
-      "telefono": "318 3979892",
+      "telefono": "3183979892",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -17777,7 +17967,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Sol Naciente torre 10 apt 203",
+        "nombre": "Carlos Rodriguez Moreno",
+        "tel": "3155146070",
+        "relacion": "Hermano"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -19648,7 +19843,7 @@
       "nacimiento": "",
       "bautismo": "2016-07-31",
       "grupo": "Grupo 14",
-      "telefono": "318 7274363",
+      "telefono": "3187274363",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -19658,11 +19853,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Bentura Agudelo",
+        "relacion": "Tío",
+        "tel": "573132657526",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carrera 9 # 17-24 sur Conjunto Zapan Novaterra To 10 apto 1037",
         "notasMed": ""
       },
       "registros": {
@@ -19977,7 +20172,7 @@
       "nacimiento": "1973-07-13",
       "bautismo": "1998-08-01",
       "grupo": "Grupo 14",
-      "telefono": "316 8531096",
+      "telefono": "3168531096",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -19986,7 +20181,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cr 9 N 17.24... .Sur Conjunto Zapan Novaterra",
+        "nombre": "Giovanni Javier Pérez Carreño",
+        "tel": "3025689478",
+        "relacion": "Herman0"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20754,7 +20954,7 @@
       "nacimiento": "2004-04-20",
       "bautismo": "2018-01-11",
       "grupo": "Grupo 12",
-      "telefono": "3213237986",
+      "telefono": "3132553599",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -20763,7 +20963,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10#11-18 sur Mosquera",
+        "nombre": "Bryan Ramos",
+        "tel": "3118901960",
+        "relacion": "Hermano"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -21099,7 +21304,7 @@
       "nacimiento": "2000-12-14",
       "bautismo": "2018-11-18",
       "grupo": "Grupo 4",
-      "telefono": "310 4947409",
+      "telefono": "3104947409",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -21108,7 +21313,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 15#7c-11",
+        "nombre": "Sandra Rivera",
+        "tel": "3178109633",
+        "relacion": "Madre"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -21273,7 +21483,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "CLL 10#11-18 sur (Mosquera)",
+        "nombre": "William Quiceno",
+        "tel": "3166183022",
+        "relacion": "Hermano"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -22726,7 +22941,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 15#7c-11",
+        "nombre": "Miguel Ramos",
+        "tel": "3104947409",
+        "relacion": "Hijo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -22883,7 +23103,7 @@
       "nacimiento": "",
       "bautismo": "2022-08-24",
       "grupo": "Grupo 8",
-      "telefono": "350 565 1069",
+      "telefono": "3505651069",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -22893,11 +23113,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "José Luis Rodríguez Garzon",
+        "relacion": "Hermano",
+        "tel": "3102673695",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 15 No. 7C-11",
         "notasMed": ""
       },
       "registros": {
@@ -23055,7 +23275,7 @@
       "nacimiento": "1979-05-31",
       "bautismo": "2014-03-23",
       "grupo": "Grupo 8",
-      "telefono": "313 292 0625",
+      "telefono": "3132920625",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -23064,7 +23284,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 15 # 7C-11",
+        "nombre": "Brenda Sofía García",
+        "tel": "3175701789",
+        "relacion": "Hija"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -23451,7 +23676,7 @@
       "nacimiento": "1955-02-10",
       "bautismo": "1999-02-06",
       "grupo": "Grupo 12",
-      "telefono": "312 469 4436",
+      "telefono": "3124694436",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -23460,7 +23685,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cra 14a 9-03 sur",
+        "nombre": "Johana Rojas",
+        "tel": "3114553814",
+        "relacion": "Hija"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -23624,7 +23854,7 @@
       "nacimiento": "1979-11-05",
       "bautismo": "2012-07-07",
       "grupo": "Grupo 13",
-      "telefono": "",
+      "telefono": "3108068572",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -23633,7 +23863,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Cll 23#11c-03 torre 6 apto 401",
+        "nombre": "Yuli Obando",
+        "tel": "3104843619",
+        "relacion": "Cuñada"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -24930,7 +25165,7 @@
       "nacimiento": "1986-11-19",
       "bautismo": "2001-12-01",
       "grupo": "Grupo 9",
-      "telefono": "316 397 1693",
+      "telefono": "3163971693",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -24939,7 +25174,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 4#1-17sur Barrio Las Villas",
+        "nombre": "Miguel Camargo Rincon",
+        "tel": "3112676230",
+        "relacion": "Tío"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -25243,7 +25483,7 @@
       "nacimiento": "2004-06-20",
       "bautismo": "2016-05-29",
       "grupo": "Grupo 7",
-      "telefono": "",
+      "telefono": "3219705723",
       "genero": "M",
       "anciano": false,
       "siervo": true,
@@ -25252,7 +25492,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Kr 5 este no 18-50 Torre 3 in 1 apto 404 mosquera",
+        "nombre": "Fabian Barragan",
+        "tel": "3168947893",
+        "relacion": "Cuñado.."
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -25569,7 +25814,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "kr 5 este No 18-50 Torre 3 in 1 Apto 404",
+        "nombre": "Cindy Marcela Tovar Parra",
+        "tel": "3134831302",
+        "relacion": "Hija"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -25743,7 +25993,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "kr 5 este No 18-50 Torre 3 in 1 Apto 404",
+        "nombre": "Fabian Barragan",
+        "tel": "3168947893",
+        "relacion": "Yerno"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -25908,7 +26163,7 @@
       "nacimiento": "",
       "bautismo": "2008-08-02",
       "grupo": "Grupo 12",
-      "telefono": "320 2389100",
+      "telefono": "3202389100",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -25918,11 +26173,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Karen Valderrama",
+        "relacion": "Hermana",
+        "tel": "3103400431",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carrera 14 A # 10-27S conjunto Sauce T:7 apto:804",
         "notasMed": ""
       },
       "registros": {
@@ -26095,7 +26350,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 5# 9 - 30",
+        "nombre": "Jorge Eliecer Rebellon",
+        "tel": "3154785999",
+        "relacion": "Suegro"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -26248,7 +26508,7 @@
       "nacimiento": "1984-06-26",
       "bautismo": "2000-09-09",
       "grupo": "Grupo 6",
-      "telefono": "321 610 7201",
+      "telefono": "3216107201",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -26257,7 +26517,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 5 # 9 - 30",
+        "nombre": "Jorge Eliecer Rebellon",
+        "tel": "3154785999",
+        "relacion": "Papá"
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -26788,7 +27053,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 10#14a-85 Sur Mosquera C/marca",
+        "nombre": "Daymo Miller Ceballos",
+        "tel": "3102223545",
+        "relacion": "Esposo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -27083,7 +27353,7 @@
       "nacimiento": "1972-03-20",
       "bautismo": "2021-11-28",
       "grupo": "Grupo 7",
-      "telefono": "302 277 0213",
+      "telefono": "3022770213",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -27092,7 +27362,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Carrera 12a9c#76",
+        "nombre": "Jorge yanes",
+        "tel": "3042529735",
+        "relacion": "Esposo"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -27239,7 +27514,7 @@
       "nacimiento": "1956-09-15",
       "bautismo": "2001-11-10",
       "grupo": "Grupo 2",
-      "telefono": "320 261 5611",
+      "telefono": "3202615611",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -27248,7 +27523,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Urbanización El Trébol, manzana 13, interior 6, casa 24. Mosquera, Cundinamarca.casa 24. Mosquera, 4. Mo",
+        "nombre": "Brenda Zuleta",
+        "tel": "3175701789",
+        "relacion": "Nieta"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -27395,7 +27675,7 @@
       "nacimiento": "1978-03-08",
       "bautismo": "2010-04-10",
       "grupo": "Grupo 3",
-      "telefono": "310 340 3985",
+      "telefono": "3103403985",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -27404,7 +27684,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 12 a # 1B-85 este El Trebol Manzana 13 interior 6 casa 25",
+        "nombre": "Lizet Maya",
+        "tel": "3148449510",
+        "relacion": "Hermana"
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -27492,7 +27777,7 @@
       "nacimiento": "2002-05-25",
       "bautismo": "2020-02-29",
       "grupo": "Grupo 3",
-      "telefono": "310 340 3985",
+      "telefono": "3212621015",
       "genero": "M",
       "anciano": true,
       "siervo": false,
@@ -27502,11 +27787,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Glenna Zulay Maya Cardona",
+        "relacion": "Madre",
+        "tel": "3103403985",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Facatativá. Avenida Cundinamarca Km 1 Via Ecopetrol.",
         "notasMed": ""
       },
       "registros": {
@@ -29097,7 +29382,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Calle 20 #4b-43 apartamento piso 3",
+        "nombre": "Raidy Piña",
+        "tel": "573043296278",
+        "relacion": "Mama"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -30623,7 +30913,12 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "direccion": "Novaterra Ciprés Torre 9 Apt 234",
+        "nombre": "Baudilio Alba",
+        "tel": "3115572169",
+        "relacion": "Papá"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -31704,7 +31999,7 @@
       }
     }
   ],
-  "_lastModified": 1778160705184,
+  "_lastModified": 1778258119545,
   "vym": {
     "semanas": {},
     "historial": [
@@ -33718,6 +34013,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778257860835,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778160683722,
       "user": "Administrador",
       "rol": "admin",
@@ -35307,14 +35610,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778085181029,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
       "pubId": "mmm9qi4jevxb"
     }
   ]
