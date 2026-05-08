@@ -3207,7 +3207,7 @@ input:focus, select:focus, textarea:focus {
       <button class="sb-nav-item sb-perm-export" id="sbnav-precursores" onclick="irA('precursores')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-star"/></svg></span>Precursores
       </button>
-      <button class="sb-nav-item" id="sbnav-emergencias" onclick="exportarEmergencias()">
+      <button class="sb-nav-item" id="sbnav-emergencias" onclick="irA('emergencias')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Emergencias
       </button>
     </nav>
@@ -3366,6 +3366,35 @@ input:focus, select:focus, textarea:focus {
     </div>
 
     <!-- INACTIVOS -->
+    <div class="screen" id="screen-emergencias" style="display:none">
+      <div style="padding:20px 24px 0">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+          <div>
+            <div style="font-family:var(--font-serif);font-size:26px;font-weight:600;color:var(--ink);letter-spacing:-.4px">Emergencias</div>
+            <div style="font-size:13px;color:var(--ink-3);margin-top:2px" id="emg-subtitle">Directorio de contactos de emergencia</div>
+          </div>
+          <button class="gs-btn gs-btn-prim" onclick="exportarEmergenciasFiltradas()" style="display:flex;align-items:center;gap:6px">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Descargar PDF
+          </button>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+          <select id="emg-filtro-grupo" onchange="renderEmergenciasScreen()"
+            style="height:36px;padding:0 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;background:var(--surface)">
+            <option value="">Todos los grupos</option>
+          </select>
+          <select id="emg-filtro-datos" onchange="renderEmergenciasScreen()"
+            style="height:36px;padding:0 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;background:var(--surface)">
+            <option value="">Con y sin contacto</option>
+            <option value="con">Solo con contacto</option>
+            <option value="sin">Solo sin contacto</option>
+          </select>
+          <input id="emg-buscar" placeholder="Buscar publicador..." oninput="renderEmergenciasScreen()"
+            style="height:36px;padding:0 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;background:var(--surface);min-width:200px">
+        </div>
+      </div>
+      <div id="emg-lista" style="padding:0 24px 40px"></div>
+    </div>
     <div class="screen" id="screen-inactivos" style="display:none">
       <div class="grupos-screen-wrap" id="inactivosWrap"></div>
     </div>
@@ -5124,14 +5153,136 @@ function eliminarPub() {
 // ══════════════════════════════════════════
 // EXPORTAR EMERGENCIAS
 // ══════════════════════════════════════════
-function exportarEmergencias() {
-  const _mudIdsE = new Set((state.mudados||[]).map(m=>m.id));
-  // Incluir activos + inactivos/sacados, excluir solo mudados
-  const inactivosE = (state.inactivos||[]);
+function renderEmergenciasScreen() {
+  const wrap = document.getElementById('emg-lista');
+  if(!wrap) return;
+
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
   const todos = [
-    ...state.publicadores.filter(p => !_mudIdsE.has(p.id)),
-    ...inactivosE
+    ...state.publicadores.filter(p => !_mudIds.has(p.id)),
+    ...(state.inactivos||[])
   ].sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  // Poblar selector de grupos
+  const selGrupo = document.getElementById('emg-filtro-grupo');
+  const grupoActual = selGrupo?.value || '';
+  if(selGrupo && selGrupo.options.length <= 1) {
+    const grupos = [...new Set(todos.map(p=>p.grupo||'Sin grupo'))].sort();
+    grupos.forEach(g => {
+      const o = document.createElement('option');
+      o.value = g; o.textContent = g;
+      selGrupo.appendChild(o);
+    });
+    selGrupo.value = grupoActual;
+  }
+
+  const filtroGrupo = selGrupo?.value || '';
+  const filtroDatos = document.getElementById('emg-filtro-datos')?.value || '';
+  const q = (document.getElementById('emg-buscar')?.value || '').toLowerCase().trim();
+
+  const filtrados = todos.filter(p => {
+    if(filtroGrupo && (p.grupo||'Sin grupo') !== filtroGrupo) return false;
+    const e = p.emergencia||{};
+    const tieneContacto = !!(e.nombre||e.tel||e.direccion);
+    if(filtroDatos === 'con' && !tieneContacto) return false;
+    if(filtroDatos === 'sin' && tieneContacto) return false;
+    if(q) {
+      const hay = (p.apellido+' '+p.nombre+' '+(p.grupo||'')).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Subtitle
+  const sub = document.getElementById('emg-subtitle');
+  if(sub) sub.textContent = `${filtrados.length} publicadores · ${filtrados.filter(p=>{const e=p.emergencia||{};return e.nombre||e.tel}).length} con contacto registrado`;
+
+  if(!filtrados.length) {
+    wrap.innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-3)">Sin resultados para los filtros seleccionados</div>';
+    return;
+  }
+
+  const rows = filtrados.map(p => {
+    const e = p.emergencia||{};
+    const tipo = tipoPrincipal(p);
+    const col = TIPO_COLOR[tipo]||'#64748b';
+    const tieneContacto = !!(e.nombre||e.tel||e.direccion);
+    const ini = (p.apellido[0]||'')+(p.nombre[0]||'');
+    return `<div style="display:grid;grid-template-columns:2fr 2fr 1.5fr 1.5fr;gap:16px;padding:12px 16px;
+      border-bottom:1px solid var(--border-2);align-items:start;transition:background .1s"
+      onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="pub-av" style="background:${col}18;color:${col};flex-shrink:0;font-size:12px">${escHtml(ini)}</div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</div>
+          <div style="font-size:11px;color:${col};font-weight:600">${tipo}</div>
+          <div style="font-size:11px;color:var(--ink-3)">${p.grupo||'Sin grupo'}</div>
+          ${p.telefono?`<div style="font-size:11px;color:var(--ink-3)">📞 ${escHtml(p.telefono)}</div>`:''}
+        </div>
+      </div>
+      <div>
+        ${tieneContacto
+          ? `<div style="font-size:12px;font-weight:600;color:var(--ink)">${escHtml(e.nombre||'—')}</div>
+             ${e.relacion?`<div style="font-size:11px;color:var(--ink-3)">${escHtml(e.relacion)}</div>`:''}
+             ${e.tel?`<div style="font-size:11px;color:var(--ink-2)">📞 ${escHtml(e.tel)}</div>`:''}`
+          : `<span style="font-size:11px;color:#fca5a5;font-weight:600">Sin contacto registrado</span>`
+        }
+      </div>
+      <div style="font-size:11px;color:var(--ink-2)">${escHtml(e.direccion||'—')}</div>
+      <div style="font-size:11px;color:var(--ink-3)">${escHtml(e.notasMed||'—')}</div>
+    </div>`;
+  }).join('');
+
+  wrap.innerHTML = `
+    <div style="display:grid;grid-template-columns:2fr 2fr 1.5fr 1.5fr;gap:16px;padding:8px 16px;
+      background:var(--surface-2);border-bottom:2px solid var(--border);border-radius:var(--r) var(--r) 0 0">
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3)">Publicador</div>
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3)">Contacto de emergencia</div>
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3)">Dirección</div>
+      <div style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--ink-3)">Notas médicas</div>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border-2);border-top:none;border-radius:0 0 var(--r) var(--r)">${rows}</div>`;
+}
+
+function exportarEmergenciasFiltradas() {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const todos = [
+    ...state.publicadores.filter(p => !_mudIds.has(p.id)),
+    ...(state.inactivos||[])
+  ].sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
+  const filtroGrupo = document.getElementById('emg-filtro-grupo')?.value || '';
+  const filtroDatos = document.getElementById('emg-filtro-datos')?.value || '';
+  const q = (document.getElementById('emg-buscar')?.value || '').toLowerCase().trim();
+
+  const filtrados = todos.filter(p => {
+    if(filtroGrupo && (p.grupo||'Sin grupo') !== filtroGrupo) return false;
+    const e = p.emergencia||{};
+    const tieneContacto = !!(e.nombre||e.tel||e.direccion);
+    if(filtroDatos === 'con' && !tieneContacto) return false;
+    if(filtroDatos === 'sin' && tieneContacto) return false;
+    if(q) {
+      const hay = (p.apellido+' '+p.nombre+' '+(p.grupo||'')).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // Reusar exportarEmergencias con la lista filtrada
+  _exportarEmergenciasLista(filtrados, filtroGrupo || 'Todos los grupos');
+}
+
+function exportarEmergencias() {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const todos = [
+    ...state.publicadores.filter(p => !_mudIds.has(p.id)),
+    ...(state.inactivos||[])
+  ].sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+  _exportarEmergenciasLista(todos, 'Todos los grupos');
+}
+
+function _exportarEmergenciasLista(lista, tituloFiltro) {
+  const todos = lista;
   const pubs = todos.filter(p => {
     const e = p.emergencia||{};
     return e.nombre||e.tel||e.direccion;
@@ -8262,6 +8413,7 @@ function irA(pantalla) {
   if(pantalla === 'publicadores') renderLista();
   if(pantalla === 'grupos')       renderGruposScreen();
   if(pantalla === 'inactivos')    renderInactivos();
+  if(pantalla === 'emergencias')  renderEmergenciasScreen();
   if(pantalla === 'mudados')      renderMudados();
   if(pantalla === 'asistencia')   renderAsistenciaScreen();
   if(pantalla === 'vym')          renderVyM();
