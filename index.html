@@ -5125,11 +5125,17 @@ function eliminarPub() {
 // EXPORTAR EMERGENCIAS
 // ══════════════════════════════════════════
 function exportarEmergencias() {
-  const pubs = state.publicadores.filter(p => {
+  const _mudIdsE = new Set((state.mudados||[]).map(m=>m.id));
+  // Incluir activos + inactivos/sacados, excluir solo mudados
+  const inactivosE = (state.inactivos||[]);
+  const todos = [
+    ...state.publicadores.filter(p => !_mudIdsE.has(p.id)),
+    ...inactivosE
+  ].sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+  const pubs = todos.filter(p => {
     const e = p.emergencia||{};
     return e.nombre||e.tel||e.direccion;
   });
-  const todos = state.publicadores;
 
   const fecha = new Date().toLocaleDateString('es-CO', {day:'2-digit',month:'long',year:'numeric'});
 
