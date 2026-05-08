@@ -1342,7 +1342,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Juan Amórtegui",
+        "relacion": "Herman@",
+        "tel": "3045653704",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -1497,7 +1504,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Alcira García",
+        "relacion": "Otro",
+        "tel": "3214055374",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -1652,7 +1666,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Lizeth Katherine Henao Arévalo",
+        "relacion": "Otro",
+        "tel": "+57 322 2929272",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Jul": {
@@ -2008,7 +2029,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Claudia Valencia",
+        "relacion": "Otro",
+        "tel": "3208982856",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -2616,11 +2644,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Laura Beleño",
+        "relacion": "Otro",
+        "tel": "3013629170",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carrera 17 Sur # 5 - 66 torre 14 apartamento 256 Cerezo Novaterra. Mosquera - Cundinamarca.",
         "notasMed": ""
       },
       "registros": {
@@ -4562,10 +4590,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 10 sur # 14 A 77 apto 501 torre 13 Cerezo. Hacienda Alcalá",
         "nombre": "Karen Valderrama",
+        "relacion": "Otro",
         "tel": "310340431",
-        "relacion": "Hija"
+        "tel2": "",
+        "direccion": "Calle 10 sur # 14 A 77 apto 501 torre 13 Cerezo. Hacienda Alcalá",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -5722,7 +5752,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Alfonso Chacon",
+        "relacion": "Otro",
+        "tel": "3208386196",
+        "tel2": "",
+        "direccion": "Mosquera",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -6473,7 +6510,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Victor gomez",
+        "relacion": "Herman@",
+        "tel": "3212430550",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -6730,7 +6774,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "WILLIAM DAVID PEREA PARRADO",
+        "relacion": "Otro",
+        "tel": "320 4880531",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -6882,7 +6933,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "William Andrés Leon B.",
+        "relacion": "Otro",
+        "tel": "3122298999",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -7048,10 +7106,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 17s# 6-22 Torre 6 Apartamento 1022",
         "nombre": "Mayra Delgado Herrera",
+        "relacion": "Herman@",
         "tel": "3204946508",
-        "relacion": "Hermana"
+        "tel2": "",
+        "direccion": "Calle 17s# 6-22 Torre 6 Apartamento 1022",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -8508,10 +8568,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 10 # 14a 85 sur T 13. Apto550",
-        "nombre": "Alfonso Chacon",
-        "tel": "3208386196",
-        "relacion": "Esposo"
+        "nombre": "Claudia Valencia",
+        "relacion": "Herman@",
+        "tel": "320 8982856",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -8782,7 +8844,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Javier García",
+        "relacion": "Herman@",
+        "tel": "3174339729",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -9223,7 +9292,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Lina María Del Río",
+        "relacion": "Otro",
+        "tel": "3204994863",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -10189,7 +10265,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Ximena Martinez",
+        "relacion": "Otro",
+        "tel": "3002719383",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -10680,10 +10763,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 23#11c-03",
         "nombre": "Fanny Muñoz",
+        "relacion": "Abuel@",
         "tel": "3115277781",
-        "relacion": "Abuela"
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -10834,7 +10919,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Fanny Muñoz",
+        "relacion": "Abuel@",
+        "tel": "3115277781",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11648,7 +11740,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Damaris Duarte Hernández",
+        "relacion": "Otro",
+        "tel": "3125753134",
+        "tel2": "",
+        "direccion": "Hija - Mosquera",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -11744,7 +11843,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Liliana Hernandez",
+        "relacion": "Tí@",
+        "tel": "3147187968",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -11899,7 +12005,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Rossana orozco",
+        "relacion": "Abuel@",
+        "tel": "3134882336",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -12987,7 +13100,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Oscar Hernando Jiménez Ruíz",
+        "relacion": "Otro",
+        "tel": "3153551106",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -14144,10 +14264,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 10 No.11-18 Sur To 13 Apto 749 Conj. Puerto del Sol",
         "nombre": "William Andrés Leon B.",
+        "relacion": "",
         "tel": "3122298999",
-        "relacion": "Hijo"
+        "tel2": "",
+        "direccion": "Calle 10 No.11-18 Sur To 13 Apto 749 Conj. Puerto del Sol",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -14303,7 +14425,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Yessica hinojisa",
+        "relacion": "Otro",
+        "tel": "3213488228",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -14458,7 +14587,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Santiago Andrés López Rodríguez",
+        "relacion": "Otro",
+        "tel": "3214680666",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -14723,7 +14859,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Yasmilys",
+        "relacion": "Otro",
+        "tel": "3142759381",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15048,7 +15191,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Luis Lugo",
+        "relacion": "Tí@",
+        "tel": "+58 4249309895",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15363,7 +15513,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Luis Lugo",
+        "relacion": "Tí@",
+        "tel": "+58 4249309895",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -15854,7 +16011,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Doraliz García",
+        "relacion": "Tí@",
+        "tel": "3118008011",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -16452,9 +16616,9 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Doraliz García",
+        "relacion": "Herman@",
+        "tel": "3118008011",
         "tel2": "",
         "direccion": "",
         "notasMed": ""
@@ -16634,7 +16798,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Doraliz García",
+        "relacion": "Tí@",
+        "tel": "3118008011",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Sep": {
@@ -17471,7 +17642,7 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Harvey Andrés Rodríguez M / Ana Carolina Rodríguez M",
-        "relacion": "Hijos",
+        "relacion": "Otro",
         "tel": "3165374701/3158427954",
         "tel2": "",
         "direccion": "Carreras 5 NRO 7 A 44 Alejandria 4",
@@ -17982,10 +18153,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Sol Naciente torre 10 apt 203",
         "nombre": "Carlos Rodriguez Moreno",
+        "relacion": "Herman@",
         "tel": "3155146070",
-        "relacion": "Hermano"
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -18163,7 +18336,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Carolina Moreno Hernandez",
+        "relacion": "Herman@",
+        "tel": "3017913181",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -18335,7 +18515,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Isaura Oviedo",
+        "relacion": "Madre",
+        "tel": "3126554527",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -18499,7 +18686,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Anyela Rivera Oviedo",
+        "relacion": "Madre",
+        "tel": "3217909360",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -18596,7 +18790,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Isaura Oviedo",
+        "relacion": "Otro",
+        "tel": "3126554527",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -18766,7 +18967,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Rene Orozco",
+        "relacion": "Otro",
+        "tel": "3112628222",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -19089,7 +19297,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Bercelio Buitrago",
+        "relacion": "Abuel@",
+        "tel": "3112435826",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -19244,7 +19459,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Jennifer Paola Pelaez",
+        "relacion": "Tí@",
+        "tel": "3185269085",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -19388,7 +19610,7 @@
       "apellido": "Pelaez",
       "nombre": "Neismer",
       "nacimiento": "1984-04-26",
-      "bautismo": "1997-11-",
+      "bautismo": "",
       "grupo": "Grupo 1",
       "telefono": "310 241 8902",
       "genero": "F",
@@ -19399,7 +19621,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Bercelio Buitrago Castillo",
+        "relacion": "Padre",
+        "tel": "3112435826",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -19571,9 +19800,9 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Elizabeth Peña",
+        "relacion": "Madre",
+        "tel": "3012924618",
         "tel2": "",
         "direccion": "",
         "notasMed": ""
@@ -19711,7 +19940,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "William Garzón",
+        "relacion": "Otro",
+        "tel": "3196076439",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20039,7 +20275,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Bentura Agudelo",
+        "relacion": "Otro",
+        "tel": "+57 313 2657526",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20356,7 +20599,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "WILLIAM DAVID PEREA PARRADO",
+        "relacion": "Otro",
+        "tel": "320 4880531",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20514,7 +20764,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Fabián Camilo Guerrero",
+        "relacion": "Herman@",
+        "tel": "3133600764",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20671,7 +20928,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Esteban Salgado y Juan C Salgado",
+        "relacion": "Otro",
+        "tel": "301 3112554--310 8548618",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -20836,7 +21100,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Danna Hernandez de Bulic",
+        "relacion": "Herman@",
+        "tel": "+584166152627",
+        "tel2": "",
+        "direccion": "Venezuela",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Jun": {
@@ -20978,10 +21249,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 10#11-18 sur Mosquera",
         "nombre": "Bryan Ramos",
+        "relacion": "Herman@",
         "tel": "3118901960",
-        "relacion": "Hermano"
+        "tel2": "",
+        "direccion": "Calle 10#11-18 sur Mosquera",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -21153,7 +21426,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Bryan Ramos",
+        "relacion": "Herman@",
+        "tel": "3118901960",
+        "tel2": "",
+        "direccion": "Bogota",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -21328,10 +21608,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 15#7c-11",
         "nombre": "Sandra Rivera",
+        "relacion": "Madre",
         "tel": "3178109633",
-        "relacion": "Madre"
+        "tel2": "",
+        "direccion": "Calle 15#7c-11",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -22633,7 +22915,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Balmore rivera",
+        "relacion": "Otro",
+        "tel": "3105582171",
+        "tel2": "3212283182",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -23128,7 +23417,7 @@
       "ungido": false,
       "emergencia": {
         "nombre": "José Luis Rodríguez Garzon",
-        "relacion": "Hermano",
+        "relacion": "Herman@",
         "tel": "3102673695",
         "tel2": "",
         "direccion": "Calle 15 No. 7C-11",
@@ -23467,7 +23756,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Santiago Andrés López Rodríguez",
+        "relacion": "Otro",
+        "tel": "3214680666",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Mar": {
@@ -24037,7 +24333,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Yuli Obando",
+        "relacion": "Herman@",
+        "tel": "3104843619",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -24361,9 +24664,16 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Adelaida de Sierra",
+        "relacion": "Madre",
+        "tel": "3112064828",
+        "tel2": "",
+        "direccion": "Mosquera",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -24528,7 +24838,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Stefania Campos",
+        "relacion": "Otro",
+        "tel": "3057103690",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -24684,7 +25001,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Brigitte Lorena Infante Silva",
+        "relacion": "Otro",
+        "tel": "3174422979",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Abr": {
@@ -25030,7 +25354,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Froilan Camargo Rincon",
+        "relacion": "Herman@",
+        "tel": "3102624733",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -26188,7 +26519,7 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Karen Valderrama",
-        "relacion": "Hermana",
+        "relacion": "Herman@",
         "tel": "3103400431",
         "tel2": "",
         "direccion": "Carrera 14 A # 10-27S conjunto Sauce T:7 apto:804",
@@ -26638,7 +26969,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Erika Vargas Rojas",
+        "relacion": "Otro",
+        "tel": "3202438247",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -26794,9 +27132,9 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Jorge Eliecer Rebellon",
+        "relacion": "Abuel@",
+        "tel": "315 4785999",
         "tel2": "",
         "direccion": "",
         "notasMed": ""
@@ -28285,7 +28623,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Sandra García",
+        "relacion": "Otro",
+        "tel": "3207004348",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -28919,9 +29264,9 @@
       "precursorEsp": false,
       "misionero": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Javier García",
+        "relacion": "Tí@",
+        "tel": "3174339729",
         "tel2": "",
         "direccion": "",
         "notasMed": ""
@@ -32013,7 +32358,7 @@
       }
     }
   ],
-  "_lastModified": 1778259125118,
+  "_lastModified": 1778262588639,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34027,6 +34372,526 @@
   ],
   "auditoria": [
     {
+      "ts": 1778262573057,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Tibaquicha, Luz Marina · datos generales",
+      "pubId": "mmm9qi4szjx7"
+    },
+    {
+      "ts": 1778262539097,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sierra, Marlen · datos generales",
+      "pubId": "mmm9qi4smpf8"
+    },
+    {
+      "ts": 1778262507143,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sanchez, Maritza · datos generales",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
+      "ts": 1778262468488,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Padilla, Anyela · datos generales",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1778262403500,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pulido, Angela · datos generales",
+      "pubId": "mmm9qi4r9k22"
+    },
+    {
+      "ts": 1778262376578,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Perez, Angelica · datos generales",
+      "pubId": "mmm9qi4rokye"
+    },
+    {
+      "ts": 1778262351514,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Peña, Johana Marcela · datos generales",
+      "pubId": "mmm9qi4rb7p1"
+    },
+    {
+      "ts": 1778262326913,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pelaez, Danna · datos generales",
+      "pubId": "mmm9qi4rlg84"
+    },
+    {
+      "ts": 1778262302410,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Parra, Flor Alba · datos generales",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1778262219867,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Moreno, Marta · datos generales",
+      "pubId": "mmm9qi4qzr2s"
+    },
+    {
+      "ts": 1778262208123,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Moreno, Laura · datos generales",
+      "pubId": "mmm9qi4qbs9d"
+    },
+    {
+      "ts": 1778262169236,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Juan David · datos generales",
+      "pubId": "mmm9qi4q2dwl"
+    },
+    {
+      "ts": 1778262155428,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Yakci · datos generales",
+      "pubId": "mmm9qi4qdi8f"
+    },
+    {
+      "ts": 1778262099726,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lizarazo, Esther · datos generales",
+      "pubId": "mmm9qi4oohcg"
+    },
+    {
+      "ts": 1778262055410,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Jimenez, Flor · datos generales",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1778262016928,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Gutierrez, Mateo · datos generales",
+      "pubId": "mmm9qi4nhqsp"
+    },
+    {
+      "ts": 1778262005257,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Gutierrez, Tatiana · datos generales",
+      "pubId": "mmm9qi4n7oq9"
+    },
+    {
+      "ts": 1778261869105,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Avila, Rosario · datos generales",
+      "pubId": "mmm9qi4k2l0u"
+    },
+    {
+      "ts": 1778261817877,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Arevalo, Mercedes · datos generales",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1778261730592,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Amortegui, Natalia · datos generales",
+      "pubId": "mmm9qi4j8aj2"
+    },
+    {
+      "ts": 1778261713612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Amortegui, Cesar Mauricio · datos generales",
+      "pubId": "mmm9qi4jl2r2"
+    },
+    {
+      "ts": 1778261643803,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Vargas, Samantha · datos generales",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1778261607085,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Vargas, Norely · datos generales",
+      "pubId": "mmm9qi4ta4tn"
+    },
+    {
+      "ts": 1778261575404,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Silva, Jhasleidy · datos generales",
+      "pubId": "mmm9qi4ux55z"
+    },
+    {
+      "ts": 1778261555089,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Rodriguez, Olga · datos generales",
+      "pubId": "mmm9qi4spu34"
+    },
+    {
+      "ts": 1778261538979,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lopez Pardo, Willian · datos generales",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1778261512730,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Godoy, Maria Irene · datos generales",
+      "pubId": "mmm9qi4nm05s"
+    },
+    {
+      "ts": 1778261478627,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Rivera, Patricia · datos generales",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1778261443995,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Silva, Edith · datos generales",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1778261418954,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pelaez, Julian · datos generales",
+      "pubId": "mmm9qi4r96q2"
+    },
+    {
+      "ts": 1778261384845,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Quiroz, Carmen · datos generales",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1778261366120,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Galindo, Estefania · datos generales",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
+      "ts": 1778261335412,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lugo, Rogers · datos generales",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1778261322272,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lugo, Randol · datos generales",
+      "pubId": "mmm9qi4q8ujz"
+    },
+    {
+      "ts": 1778261298352,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Ruth · datos generales",
+      "pubId": "mmm9qi4qzmjj"
+    },
+    {
+      "ts": 1778261247262,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lugo, Oscar · datos generales",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1778261198417,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pelaez, Neismer · datos generales",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1778261170179,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Melanie · datos generales",
+      "pubId": "mmm9qi4nsqsw"
+    },
+    {
+      "ts": 1778261133460,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Sabrina · datos generales",
+      "pubId": "mmm9qi4ntf6r"
+    },
+    {
+      "ts": 1778261097534,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Conde, Martha · datos generales",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
+      "ts": 1778261047173,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pinzon Parrado, Gilma · datos generales",
+      "pubId": "mmm9qi4rqoc2"
+    },
+    {
+      "ts": 1778261036912,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Cuevas, Gilma · datos generales",
+      "pubId": "mmm9qi4mjx72"
+    },
+    {
+      "ts": 1778261000658,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Guerrero, Adriana · datos generales",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1778260922650,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Laura Johana · datos generales",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1778260906544,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Luis Fernando · datos generales",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1778260860486,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Leon, Jose · datos generales",
+      "pubId": "mmm9qi4o3na7"
+    },
+    {
+      "ts": 1778260830921,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "De Leon, Marcela · datos generales",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
+      "ts": 1778260791471,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Chacon, Lina · datos generales",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1778260736946,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Martha Lucia · datos generales",
+      "pubId": "mmm9qi4nge9e"
+    },
+    {
+      "ts": 1778260704327,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Perez, Marisol · datos generales",
+      "pubId": "mmm9qi4r0lk8"
+    },
+    {
+      "ts": 1778260642744,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Padilla, Isabela · datos generales",
+      "pubId": "mmm9qi4qnojt"
+    },
+    {
+      "ts": 1778260632543,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Padilla, Isabela · datos generales",
+      "pubId": "mmm9qi4qnojt"
+    },
+    {
+      "ts": 1778260619818,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Padilla, Jaime · datos generales",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1778260538151,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Rodriguez, Cristian · datos generales",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1778260514534,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Castro De Cruz, Elizabeth · datos generales",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1778260496530,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ramos, Martha · datos generales",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1778260457200,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ramos, Jhonatan · datos generales",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1778260446766,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ramos, Daniela · datos generales",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1778260418206,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ramos, Miguel · datos generales",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1778260405080,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Valderrama, Melissa · datos generales",
+      "pubId": "mmm9qi4tlges"
+    },
+    {
+      "ts": 1778260379392,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Montañez, Ana · datos generales",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1778260355064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Delgado, Diana · datos generales",
+      "pubId": "mmm9qi4mqrls"
+    },
+    {
+      "ts": 1778260339681,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beleño, Isaac · datos generales",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1778260267322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sierra, Lizeth · datos generales",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1778259817163,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778258950383,
       "user": "Administrador",
       "rol": "admin",
@@ -35105,526 +35970,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1778097089017,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778086366701,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1778086366695,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1778086341613,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086341609,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086339897,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Abr 2025: cursos=",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086335876,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086335871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086333595,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086333588,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778086328691,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1778086328687,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1778086289464,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1778086289460,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1778086279317,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1778086279312,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1778086269358,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: horas=45",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778086269353,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: horas=45",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778086267875,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: cursos=",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778086259664,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778086259658,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778086258312,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778086258306,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778086235487,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1778086235483,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1778086230327,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1778086230322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1778086223477,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Erazo, Virluz · May 2025: cursos=",
-      "pubId": "mmm9qi4m97a4"
-    },
-    {
-      "ts": 1778086085865,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Abr 2025: horas=16",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1778086085859,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Abr 2025: horas=16",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1778086067173,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778086067168,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778086065892,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778086065886,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778086059175,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MontañEz, Ana · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1778086059166,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MontañEz, Ana · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1778086042023,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MilláN, Valentina · Abr 2025: horas=25",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1778086042017,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MilláN, Valentina · Abr 2025: horas=25",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1778086024296,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MilláN, Andrea Carolina · Abr 2025: horas=40",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1778086024292,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MilláN, Andrea Carolina · Abr 2025: horas=40",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1778086021234,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "MilláN, Andrea Carolina · Abr 2025: cursos=",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1778086008159,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Abr 2025: horas=38",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1778086008154,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Abr 2025: horas=38",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1778086005663,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Abr 2025: cursos=",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1778085997096,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1778085997088,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1778085958952,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1778085958946,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1778085540273,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1778085540269,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1778085265339,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1778085265334,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Abr 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1778085263441,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1778085263435,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1778085256151,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1778085256147,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Abr 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1778085253918,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1778085253912,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1778085246873,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1778085246869,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1778085240324,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Abr 2025: horas=48",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1778085240320,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Abr 2025: horas=48",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1778085237249,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1778085237245,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1778085230628,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Abr 2025: horas=28",
-      "pubId": "mmm9qi4tcdjz"
     }
   ]
 }
