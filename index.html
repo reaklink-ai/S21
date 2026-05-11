@@ -4489,6 +4489,7 @@ function renderS21() {
       <div class="s21-actions">
         <button class="s21-act-btn" onclick="exportarTxt()">↓ Exportar TXT</button>
         <button class="s21-act-btn" onclick="imprimirS21()">⬇ PDF Individual</button>
+        <button class="s21-act-btn" onclick="abrirModalUlt12()">⬇ Últimos 12 Meses</button>
         <button class="s21-act-btn" onclick="descargarS21Grupo()">⬇ PDF por Grupo</button>
       </div>
     </div>
@@ -7386,6 +7387,194 @@ function imprimirS21() {
   toast('&#10003; Ventana de impresion abierta');
 }
 
+function abrirModalUlt12() {
+  const sel = document.getElementById('ult12GrupoSel');
+  const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const grupos = new Set(
+    state.publicadores
+      .filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id))
+      .map(p => p.grupo||'Sin grupo')
+  );
+  sel.innerHTML = '<option value="">&#8212; Todos los grupos &#8212;</option>' +
+    [...grupos].sort().map(g => `<option value="${g}">${g}</option>`).join('');
+  document.getElementById('modalUlt12').style.display = 'flex';
+  ult12RadioChange();
+}
+
+function ult12RadioChange() {
+  const val = document.querySelector('input[name="ult12tipo"]:checked')?.value;
+  ['pub','paux','preg'].forEach(k => {
+    const lbl = document.getElementById('ult12-lbl-'+k);
+    if(lbl) lbl.style.borderColor = '';
+  });
+  const map = {publicadores:'pub', precaux:'paux', precreg:'preg'};
+  const lbl = document.getElementById('ult12-lbl-'+(map[val]||'pub'));
+  if(lbl) lbl.style.borderColor = 'var(--accent)';
+}
+
+function confirmarDescargaUlt12() {
+  const modo     = document.querySelector('input[name="ult12tipo"]:checked')?.value || 'publicadores';
+  const grupoSel = document.getElementById('ult12GrupoSel').value;
+
+  const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+
+  // Base: publicadores activos filtrados por grupo
+  let lista = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && !_inacIds.has(p.id) &&
+    (!grupoSel || (p.grupo||'Sin grupo') === grupoSel)
+  );
+
+  // Filtrar según tipo
+  if(modo === 'precreg') {
+    lista = lista.filter(p => p.precursorReg || p.precursorEsp || p.misionero);
+  }
+  // precaux y publicadores: todos los activos del grupo
+
+  if(!lista.length) {
+    toast('No hay publicadores que coincidan con los filtros seleccionados');
+    return;
+  }
+
+  // Abrir ventana PRIMERO para que el navegador no la bloquee
+  const w = window.open('', '_blank', 'width=900,height=1000');
+  if(!w) { toast('&#9888; Activa las ventanas emergentes para generar el PDF'); return; }
+
+  document.getElementById('modalUlt12').style.display = 'none';
+
+  // Construir los 12 meses reales
+  const MESES_NOMBRE = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const MESES_K_MAP  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const hoy = new Date();
+  const mesHoy = hoy.getMonth();
+  const anioHoyNum = hoy.getFullYear();
+
+  const meses12 = [];
+  for(let i = 11; i >= 0; i--) {
+    let m = mesHoy - i, a = anioHoyNum;
+    if(m < 0) { m += 12; a -= 1; }
+    const anioSrv = m >= 8 ? a : a - 1;
+    meses12.push({ anio: a, anioSrv, mesK: MESES_K_MAP[m], mesNombre: MESES_NOMBRE[m] });
+  }
+
+  // Sumar totales por mes sobre todos los publicadores de la lista
+  let grandTotalP=0, grandTotalC=0, grandTotalPA=0, grandTotalH=0;
+
+  const filas = meses12.map(({ anio, anioSrv, mesK, mesNombre }) => {
+    let tP=0, tC=0, tPA=0, tH=0;
+    lista.forEach(pub => {
+      const regAnio = ((pub.registros||{})[anioSrv] || (pub.registros||{})[String(anioSrv)] || {});
+      const r = regAnio[mesK] || {};
+      if(r.particip) tP++;
+      if(r.paux)     tPA++;
+      tH += parseFloat(r.horas)||0;
+      tC += parseInt(r.cursos)||0;
+    });
+    grandTotalP  += tP;
+    grandTotalC  += tC;
+    grandTotalPA += tPA;
+    grandTotalH  += tH;
+
+    const horasFila = tH > 0 ? (tH % 1 === 0 ? String(tH) : tH.toFixed(1)) : '';
+
+    if(modo === 'publicadores') {
+      return `<tr>
+        <td class="mes-cel">${mesNombre} ${anio}</td>
+        <td class="centro">${tP||''}</td>
+        <td class="centro">${tC||''}</td>
+        <td class="notas-cel"></td>
+      </tr>`;
+    } else if(modo === 'precaux') {
+      return `<tr>
+        <td class="mes-cel">${mesNombre} ${anio}</td>
+        <td class="centro">${tP||''}</td>
+        <td class="centro">${tC||''}</td>
+        <td class="centro">${tPA||''}</td>
+        <td class="notas-cel"></td>
+      </tr>`;
+    } else {
+      return `<tr>
+        <td class="mes-cel">${mesNombre} ${anio}</td>
+        <td class="centro">${tP||''}</td>
+        <td class="centro">${tC||''}</td>
+        <td class="centro">${horasFila}</td>
+        <td class="notas-cel"></td>
+      </tr>`;
+    }
+  }).join('');
+
+  const gH = grandTotalH > 0 ? (grandTotalH % 1 === 0 ? String(grandTotalH) : grandTotalH.toFixed(1)) : '';
+  const modoLabel = {publicadores:'Publicadores', precaux:'Precursores Auxiliares', precreg:'Precursores Regulares / Especiales'}[modo];
+  const grupoLabel = grupoSel || 'Todos los grupos';
+  const periodo = `${meses12[0].mesNombre} ${meses12[0].anio} \u2013 ${meses12[11].mesNombre} ${meses12[11].anio}`;
+  const nPubs = lista.length;
+
+  // Columnas y totales según modo
+  let colgroup, theadCols, tfootCols;
+  if(modo === 'publicadores') {
+    colgroup   = `<col style="width:25%"><col style="width:18%"><col style="width:17%"><col style="width:40%">`;
+    theadCols  = `<th>Mes</th><th>Participaci&oacute;n<br>en el ministerio</th><th>Cursos<br>b&iacute;blicos</th><th>Notas</th>`;
+    tfootCols  = `<td style="text-align:right;padding-right:4mm;font-weight:700">Total</td>
+                  <td class="centro">${grandTotalP||''}</td>
+                  <td class="centro">${grandTotalC||''}</td><td></td>`;
+  } else if(modo === 'precaux') {
+    colgroup   = `<col style="width:22%"><col style="width:16%"><col style="width:15%"><col style="width:15%"><col style="width:32%">`;
+    theadCols  = `<th>Mes</th><th>Participaci&oacute;n<br>en el ministerio</th><th>Cursos<br>b&iacute;blicos</th><th>Precursor<br>auxiliar</th><th>Notas</th>`;
+    tfootCols  = `<td style="text-align:right;padding-right:4mm;font-weight:700">Total</td>
+                  <td class="centro">${grandTotalP||''}</td>
+                  <td class="centro">${grandTotalC||''}</td>
+                  <td class="centro">${grandTotalPA||''}</td><td></td>`;
+  } else {
+    colgroup   = `<col style="width:22%"><col style="width:16%"><col style="width:15%"><col style="width:15%"><col style="width:32%">`;
+    theadCols  = `<th>Mes</th><th>Participaci&oacute;n<br>en el ministerio</th><th>Cursos<br>b&iacute;blicos</th>
+                  <th>Horas<br><span style="font-weight:normal;font-size:6.5pt">(precursor o<br>misionero)</span></th><th>Notas</th>`;
+    tfootCols  = `<td style="text-align:right;padding-right:4mm;font-weight:700">Total</td>
+                  <td class="centro">${grandTotalP||''}</td>
+                  <td class="centro">${grandTotalC||''}</td>
+                  <td class="centro">${gH}</td><td></td>`;
+  }
+
+  const fullHtml = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>S-21 \u2014 ${modoLabel} \u2014 ${grupoLabel}</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;font-size:9.5pt;color:#000;background:#fff;padding:14mm 14mm 10mm 14mm}
+.titulo{text-align:center;font-size:12pt;font-weight:bold;text-transform:uppercase;letter-spacing:.4px;margin-bottom:3mm}
+.subtitulo{text-align:center;font-size:9pt;color:#444;margin-bottom:1mm}
+.meta{text-align:center;font-size:8.5pt;color:#555;margin-bottom:6mm}
+.reg-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.reg-table th{border:1px solid #000;background:#d4dff0;text-align:center;vertical-align:middle;font-size:8pt;font-weight:bold;padding:2mm 1.5mm;line-height:1.4}
+.reg-table td{border:1px solid #000;padding:1.5mm 2mm;vertical-align:middle;font-size:9.5pt;height:7.5mm}
+.mes-cel{font-size:9.5pt;padding-left:2.5mm;font-weight:600}
+.centro{text-align:center}
+.notas-cel{font-size:8pt}
+.fila-total td{background:#e8eef8;font-weight:bold;font-size:9.5pt}
+.cod-form{text-align:right;font-size:7.5pt;color:#666;margin-top:3mm}
+.btn-wrap{text-align:center;margin-bottom:7mm}
+.btn-imp{background:#3d5a9e;color:#fff;border:none;padding:9px 30px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:Arial,sans-serif}
+@media print{.btn-wrap{display:none !important}body{padding:10mm 12mm 8mm 12mm}}
+</style></head><body>
+<div class="btn-wrap">
+  <button class="btn-imp" onclick="window.print()">&#128438; Imprimir / Guardar como PDF</button>
+</div>
+<div class="titulo">Últimos 12 Meses</div>
+<div class="subtitulo"><strong>Nombre:</strong> ${modoLabel}</div>
+<div class="meta">${grupoLabel} &nbsp;|&nbsp; ${nPubs} publicador${nPubs!==1?'es':''} &nbsp;|&nbsp; ${periodo}</div>
+<table class="reg-table">
+  <colgroup>${colgroup}</colgroup>
+  <thead><tr>${theadCols}</tr></thead>
+  <tbody>${filas}</tbody>
+  <tfoot><tr class="fila-total">${tfootCols}</tr></tfoot>
+</table>
+<div class="cod-form">S-21-S &nbsp; 11/23</div>
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();},500);});<\/script>
+</body></html>`;
+
+  w.document.write(fullHtml);
+  w.document.close();
+  toast(`\u2713 Resumen Últimos 12 Meses \u2014 ${nPubs} publicador${nPubs!==1?'es':''}`);
+}
 function descargarS21Grupo() {
   const sel = document.getElementById('selectGrupoDescarga');
   // Todos los grupos de todos los publicadores (activos + inactivos + mudados)
@@ -11083,7 +11272,55 @@ document.addEventListener('change', e => {
   </div>
 </div>
 
-<!-- MODAL DESCARGA S-21 POR GRUPO -->
+<!-- Modal Últimos 12 Meses -->
+<div class="overlay" id="modalUlt12" style="display:none">
+  <div class="modal" style="max-width:460px">
+    <div class="modal-hd">
+      <span class="modal-hd-title">⬇ Descargar S-21 — Últimos 12 Meses</span>
+      <button class="modal-x" onclick="document.getElementById('modalUlt12').style.display='none'">×</button>
+    </div>
+    <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div class="form-group">
+        <label class="form-label">Tipo de publicadores</label>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:6px">
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r)" id="ult12-lbl-pub">
+            <input type="radio" name="ult12tipo" value="publicadores" id="ult12TipoPub" style="accent-color:var(--accent);width:16px;height:16px" checked onchange="ult12RadioChange()">
+            <div>
+              <div style="font-weight:700;color:var(--ink)">Publicadores</div>
+              <div style="font-size:11px;color:var(--ink-3);margin-top:1px">Todos los publicadores activos del grupo — formato S-21 completo</div>
+            </div>
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r)" id="ult12-lbl-paux">
+            <input type="radio" name="ult12tipo" value="precaux" id="ult12TipoPrecAux" style="accent-color:var(--accent);width:16px;height:16px" onchange="ult12RadioChange()">
+            <div>
+              <div style="font-weight:700;color:var(--ink)">Precursores Auxiliares</div>
+              <div style="font-size:11px;color:var(--ink-3);margin-top:1px">Todos los activos — útil para verificar meses de servicio auxiliar</div>
+            </div>
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r)" id="ult12-lbl-preg">
+            <input type="radio" name="ult12tipo" value="precreg" id="ult12TipoPrecReg" style="accent-color:var(--accent);width:16px;height:16px" onchange="ult12RadioChange()">
+            <div>
+              <div style="font-weight:700;color:var(--ink)">Precursores Regulares / Especiales</div>
+              <div style="font-size:11px;color:var(--ink-3);margin-top:1px">Solo precursores regulares, especiales y misioneros — incluye horas</div>
+            </div>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Grupo</label>
+        <select id="ult12GrupoSel" class="form-input form-select"></select>
+      </div>
+      <div style="background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:var(--r);padding:10px 14px;font-size:11px;color:var(--accent)">
+        Formato oficial S-21 completo (6 columnas) con los <strong>últimos 12 meses reales</strong>, una página por publicador.
+      </div>
+    </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="document.getElementById('modalUlt12').style.display='none'">Cancelar</button>
+      <button class="btn-save" onclick="confirmarDescargaUlt12()">⬇ Descargar PDF</button>
+    </div>
+  </div>
+</div>
+
 <div class="overlay" id="modalDescargaGrupo" style="display:none">
   <div class="modal" style="max-width:440px">
     <div class="modal-hd">
