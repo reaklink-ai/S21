@@ -31386,18 +31386,20 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778687432236
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1778687432662
           },
           "Jul": {
             "particip": false,
@@ -32103,6 +32105,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1778687362899",
+      "fecha": "2026-05-12",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 154,
+      "zoom": 68,
+      "total": 222,
+      "notas": "Visita del Superintendente de Circuito"
+    },
+    {
       "id": "r1778115364785",
       "fecha": "2026-05-06",
       "tipo": "Entre semana",
@@ -32358,7 +32370,7 @@
       }
     }
   ],
-  "_lastModified": 1778268330372,
+  "_lastModified": 1778687443874,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34372,6 +34384,86 @@
   ],
   "auditoria": [
     {
+      "ts": 1778687412139,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: horas=50",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1778687412132,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: horas=50",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1778687408061,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · May 2025: horas=50",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1778687408050,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · May 2025: horas=50",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1778687325960,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778595248772,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778591319860,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778522727533,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778462807368,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778276343635,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778268057101,
       "user": "Administrador",
       "rol": "admin",
@@ -35890,86 +35982,6 @@
       "accion": "Horas editadas",
       "detalle": "Suarez, Laura · Abr 2025: cursos=1",
       "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1778156295689,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778156295685,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778156294336,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778156294327,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778156111876,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778115343732,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1778112382265,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1778111589755,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778111589743,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Abr 2025: horas=15",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1778111560562,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ]
 }
