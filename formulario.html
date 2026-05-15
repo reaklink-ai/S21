@@ -220,7 +220,7 @@
       <input type="text" class="form-input" id="searchPub" placeholder="Buscar por nombre..." oninput="filtrarPubs()">
     </div>
     <div class="cards-grid" id="listaPubs"></div>
-    <div class="btn-row">
+    <div class="btn-row" id="step2Back">
       <button class="btn btn-ghost" onclick="irStep(1)">← Atrás</button>
     </div>
   </div>
@@ -355,7 +355,18 @@
       window._pubs = [];
       snap.forEach(d => window._pubs.push({ id: d.id, ...d.data() }));
       window._pubs.sort((a,b) => (a.apellido||'').localeCompare(b.apellido||'', 'es'));
-      poblarGrupos();
+      if(_urlGrupo) {
+        // Grupo fijado por URL — saltar directo al paso 2
+        poblarGrupos();
+        grupoSel = _urlGrupo;
+        pubsFiltrados = window._pubs.filter(p => p.grupo === grupoSel);
+        renderPubs(pubsFiltrados);
+        // Actualizar top bar con el nombre del grupo
+        document.querySelector('.top-bar-sub').textContent = `Grupo: ${grupoSel}`;
+        irStep(2);
+      } else {
+        poblarGrupos();
+      }
     } catch(e) {
       console.error(e);
       document.getElementById('errorStep1').textContent = 'Error al cargar datos. Intenta de nuevo.';
@@ -372,6 +383,8 @@
   let grupoSel = '';
   let pubSel   = null;
   let pubsFiltrados = [];
+  // Detectar grupo desde URL (?grupo=Grupo+13)
+  const _urlGrupo = new URLSearchParams(window.location.search).get('grupo') || '';
 
   function mostrarLoading(msg) {
     document.getElementById('loadingMsg').textContent = msg || 'Cargando...';
@@ -386,6 +399,10 @@
     const sel = document.getElementById('selGrupo');
     sel.innerHTML = '<option value="">— Seleccionar —</option>' +
       grupos.map(g => `<option value="${g}">${g}</option>`).join('');
+    // Ocultar paso 1 y botón atrás si grupo viene por URL
+    if(_urlGrupo) {
+      document.getElementById('step2Back').style.display = 'none';
+    }
   }
 
   function irStep(n) {
@@ -406,8 +423,9 @@
 
   function filtrarPubs() {
     const q = document.getElementById('searchPub').value.toLowerCase();
+    const grupo = grupoSel || _urlGrupo;
     const lista = (window._pubs||[]).filter(p =>
-      p.grupo === grupoSel &&
+      p.grupo === grupo &&
       (`${p.apellido} ${p.nombre}`).toLowerCase().includes(q)
     );
     renderPubs(lista);
