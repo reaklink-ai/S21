@@ -31046,7 +31046,9 @@
         "direccion": "Novaterra Ciprés Torre 9 Apt 234",
         "nombre": "Baudilio Alba",
         "tel": "3115572169",
-        "relacion": "Papá"
+        "relacion": "Padre",
+        "tel2": "",
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -31198,7 +31200,8 @@
           "horas": 152,
           "cursos": 9
         }
-      }
+      },
+      "_formTs": 1778856397732
     },
     {
       "id": "mmm9qi4ny3mk",
@@ -32412,7 +32415,7 @@
       }
     }
   ],
-  "_lastModified": 1778856408222,
+  "_lastModified": 1778856628806,
   "vym": {
     "semanas": {},
     "historial": [
