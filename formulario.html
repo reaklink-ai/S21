@@ -352,7 +352,17 @@
       window._pubs = [];
       snap.forEach(d => window._pubs.push({ id: d.id, ...d.data() }));
       window._pubs.sort((a,b) => (a.apellido||'').localeCompare(b.apellido||'', 'es'));
-      if(_urlGrupo) {
+      if(_urlId) {
+        // Link individual — cargar directo sin mostrar lista
+        const pub = window._pubs.find(p => p.id === _urlId);
+        if(pub) {
+          await seleccionarPubDirecto(pub);
+        } else {
+          const err = document.getElementById('errorStep1');
+          err.innerHTML = '<span>⚠️</span><span>No se encontró el publicador. Solicita un nuevo link.</span>';
+          err.style.display = 'flex';
+        }
+      } else if(_urlGrupo) {
         poblarGrupos();
         grupoSel = _urlGrupo;
         renderPubs(window._pubs.filter(p => p.grupo === grupoSel));
@@ -373,6 +383,7 @@
 <script>
   let grupoSel = '', pubSel = null;
   const _urlGrupo = new URLSearchParams(window.location.search).get('grupo') || '';
+  const _urlId    = new URLSearchParams(window.location.search).get('id')    || '';
   const PROGRESS = { 1:'25%', 2:'55%', 3:'85%', 4:'100%' };
 
   function setProgress(n) { document.getElementById('progressBar').style.width = PROGRESS[n]||'25%'; }
@@ -399,6 +410,42 @@
     err.style.display = 'none';
     renderPubs((window._pubs||[]).filter(p => p.grupo === grupoSel));
     irStep(2);
+  }
+
+  async function seleccionarPubDirecto(pub) {
+    pubSel = pub;
+    // Intentar cargar datos frescos de Firestore
+    try {
+      const snap = await window._getDoc(window._doc(window._db, 'publicadores', pub.id));
+      if(snap.exists()) pubSel = { ...pubSel, ...snap.data() };
+    } catch(e) {}
+
+    // Actualizar header con nombre del publicador
+    document.getElementById('headerSub').textContent = `${pub.apellido}, ${pub.nombre}`;
+
+    // Poblar formulario
+    document.getElementById('step3Titulo').textContent = `${pubSel.apellido}, ${pubSel.nombre}`;
+    document.getElementById('fNacimiento').value = pubSel.nacimiento || '';
+    document.getElementById('fBautismo').value   = pubSel.bautismo   || '';
+    document.getElementById('fTelefono').value   = pubSel.telefono   || '';
+    const em = pubSel.emergencia || {};
+    document.getElementById('eNombre').value    = em.nombre    || '';
+    document.getElementById('eRelacion').value  = em.relacion  || '';
+    document.getElementById('eTel').value       = em.tel       || '';
+    document.getElementById('eTel2').value      = em.tel2      || '';
+    document.getElementById('eDireccion').value = em.direccion || '';
+    document.getElementById('eNotas').value     = em.notasMed  || '';
+
+    // Ocultar botón atrás (no hay lista a donde regresar)
+    document.querySelectorAll('.btn-row').forEach(r => {
+      if(r.querySelector('button[onclick*="irStep(2)"]')) r.style.display = 'none';
+    });
+
+    cambiarTab('personales');
+    // Saltar directo al paso 3, sin badge de pasos
+    document.querySelectorAll('.step-badge').forEach(b => b.style.display = 'none');
+    setProgress(3);
+    irStep(3);
   }
 
   function filtrarPubs() {
