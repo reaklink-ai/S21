@@ -11280,12 +11280,12 @@ document.addEventListener('change', e => {
 
 <!-- Modal Links por Grupo -->
 <div class="overlay" id="modalLinksGrupos" style="display:none">
-  <div class="modal" style="max-width:520px">
+  <div class="modal" style="max-width:600px;width:95vw;max-height:90vh;display:flex;flex-direction:column">
     <div class="modal-hd">
       <span class="modal-hd-title">🔗 Links del formulario por grupo</span>
       <button class="modal-x" onclick="document.getElementById('modalLinksGrupos').style.display='none'">×</button>
     </div>
-    <div class="modal-body" style="padding:16px 20px;display:flex;flex-direction:column;gap:10px;max-height:70vh;overflow-y:auto" id="linksGruposBody"></div>
+    <div id="linksGruposBody" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px"></div>
     <div class="modal-ft">
       <button class="btn-cancel" onclick="document.getElementById('modalLinksGrupos').style.display='none'">Cerrar</button>
     </div>
@@ -11525,12 +11525,10 @@ document.head.appendChild(mLink);
         const nombre = `${p.apellido}, ${p.nombre}`;
         const urlSafe = url.replace(/'/g, "\\'");
         const nombreSafe = nombre.replace(/'/g, "\\'");
-        return `<div style="display:flex;align-items:center;gap:8px;padding:9px 16px;border-bottom:1px solid var(--border)">
-          <div style="flex:1;min-width:0">
-            <div style="font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${nombre}</div>
-          </div>
-          <button onclick="navigator.clipboard.writeText('${urlSafe}').then(()=>toast('✓ Link de ${nombreSafe} copiado'))"
-            style="flex-shrink:0;height:32px;padding:0 14px;border:1.5px solid var(--border);border-radius:6px;background:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--ink-2)">
+        return `<div style="display:flex;align-items:center;gap:8px;padding:7px 12px;border-bottom:1px solid #f1f5f9">
+          <div style="flex:1;font-size:13px;font-weight:600;color:#0f172a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${nombre}</div>
+          <button onclick="navigator.clipboard.writeText('${urlSafe}').then(()=>toast('✓ Copiado: ${nombreSafe}'))"
+            style="flex-shrink:0;height:30px;padding:0 12px;border:1.5px solid #e2e8f0;border-radius:6px;background:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font);color:#334155">
             📋 Copiar
           </button>
         </div>`;
@@ -11538,15 +11536,15 @@ document.head.appendChild(mLink);
 
       const urlGrupo = `${BASE}?grupo=${encodeURIComponent(grupo)}`;
       const urlGrupoSafe = urlGrupo.replace(/'/g, "\\'");
-      return `<div style="border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:2px">
-        <div style="background:var(--accent-lt);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--accent-md)">
-          <span style="font-weight:800;font-size:13px;color:var(--accent)">${grupo} <span style="font-weight:500;font-size:11px;opacity:.7">(${pubs.length} publicadores)</span></span>
+      return `<div style="border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden">
+        <div style="background:#eef2ff;padding:9px 12px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span style="font-weight:800;font-size:13px;color:#4f46e5">${grupo} <span style="font-weight:500;font-size:11px;opacity:.7">(${pubs.length})</span></span>
           <button onclick="navigator.clipboard.writeText('${urlGrupoSafe}').then(()=>toast('✓ Link del grupo copiado'))"
-            style="flex-shrink:0;height:28px;padding:0 10px;border:1px solid var(--accent-md);border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--accent)">
-            🔗 Link del grupo
+            style="flex-shrink:0;height:26px;padding:0 10px;border:1px solid #c7d2fe;border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:#4f46e5">
+            🔗 Link grupo
           </button>
         </div>
-        ${filas}
+        <div style="background:#fff">${filas}</div>
       </div>`;
     }).join('');
 
