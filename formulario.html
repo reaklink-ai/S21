@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Actualizar mis datos — Congregación</title>
+<style>
+  :root {
+    --accent: #4f46e5;
+    --accent-lt: #eef2ff;
+    --red: #ef4444;
+    --green: #16a34a;
+    --ink: #111827;
+    --ink-2: #374151;
+    --ink-3: #6b7280;
+    --border: #e5e7eb;
+    --bg: #f9fafb;
+    --white: #ffffff;
+    --r: 10px;
+    --font: 'Inter', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font); background: var(--bg); color: var(--ink); min-height: 100vh; }
+
+  .top-bar {
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .top-bar-title { font-size: 16px; font-weight: 700; }
+  .top-bar-sub   { font-size: 12px; opacity: .8; }
+
+  .container { max-width: 560px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  /* Steps */
+  .step { display: none; flex-direction: column; gap: 16px; }
+  .step.active { display: flex; }
+
+  .step-title { font-size: 18px; font-weight: 700; color: var(--ink); }
+  .step-sub   { font-size: 13px; color: var(--ink-3); margin-top: -8px; }
+
+  .form-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: var(--ink-3);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .form-input {
+    width: 100%;
+    height: 44px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--r);
+    padding: 0 14px;
+    font-size: 15px;
+    font-family: var(--font);
+    color: var(--ink);
+    background: var(--white);
+    outline: none;
+    transition: border-color .15s;
+  }
+  .form-input:focus { border-color: var(--accent); }
+  select.form-input { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+  textarea.form-input { height: auto; padding: 12px 14px; resize: vertical; min-height: 80px; }
+
+  .form-group { display: flex; flex-direction: column; gap: 4px; }
+  .form-row   { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .btn {
+    height: 48px;
+    border: none;
+    border-radius: var(--r);
+    font-size: 15px;
+    font-weight: 700;
+    font-family: var(--font);
+    cursor: pointer;
+    transition: opacity .15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .btn:active { opacity: .8; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-ghost   { background: var(--border); color: var(--ink-2); }
+  .btn-success { background: var(--green); color: #fff; }
+  .btn-row     { display: flex; gap: 10px; margin-top: 4px; }
+  .btn-row .btn { flex: 1; }
+
+  .card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: var(--r);
+    padding: 16px;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  .card:hover, .card.selected { border-color: var(--accent); background: var(--accent-lt); }
+  .card-name  { font-size: 15px; font-weight: 700; }
+  .card-sub   { font-size: 12px; color: var(--ink-3); margin-top: 2px; }
+
+  .cards-grid { display: flex; flex-direction: column; gap: 8px; max-height: 55vh; overflow-y: auto; }
+
+  .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: var(--accent);
+    padding: 12px 0 4px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-box {
+    background: var(--accent-lt);
+    border: 1px solid #c7d2fe;
+    border-radius: var(--r);
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--accent);
+    line-height: 1.5;
+  }
+  .info-box.success { background: #f0fdf4; border-color: #86efac; color: var(--green); }
+  .info-box.error   { background: #fef2f2; border-color: #fca5a5; color: var(--red); }
+
+  .spinner {
+    width: 20px; height: 20px;
+    border: 2.5px solid rgba(255,255,255,.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .search-wrap { position: relative; }
+  .search-wrap input { padding-left: 38px; }
+  .search-ico {
+    position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    pointer-events: none; color: var(--ink-3);
+  }
+
+  /* Tabs */
+  .tabs { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 4px; }
+  .tab {
+    flex: 1; padding: 10px; text-align: center; font-size: 13px; font-weight: 600;
+    color: var(--ink-3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px;
+    transition: color .15s, border-color .15s;
+  }
+  .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .tab-panel { display: none; flex-direction: column; gap: 14px; padding-top: 4px; }
+  .tab-panel.active { display: flex; }
+
+  /* Loading overlay */
+  #loadingOverlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,.4); z-index: 999;
+    align-items: center; justify-content: center; flex-direction: column; gap: 14px;
+  }
+  #loadingOverlay.show { display: flex; }
+  .loading-box {
+    background: #fff; border-radius: 16px; padding: 28px 36px;
+    text-align: center; font-size: 14px; font-weight: 600; color: var(--ink);
+  }
+  .loading-spinner {
+    width: 32px; height: 32px; margin: 0 auto 14px;
+    border: 3px solid var(--border); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .7s linear infinite;
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div>
+    <div class="top-bar-title">📋 Mis Datos — Congregación</div>
+    <div class="top-bar-sub">Formulario de actualización de información</div>
+  </div>
+</div>
+
+<!-- Loading overlay -->
+<div id="loadingOverlay">
+  <div class="loading-box">
+    <div class="loading-spinner"></div>
+    <span id="loadingMsg">Cargando...</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- STEP 1: Seleccionar grupo -->
+  <div class="step active" id="step1">
+    <div>
+      <div class="step-title">Selecciona tu grupo</div>
+      <div class="step-sub">Elige el grupo de predicación al que perteneces</div>
+    </div>
+    <div id="errorStep1" class="info-box error" style="display:none"></div>
+    <div class="form-group">
+      <label class="form-label">Grupo</label>
+      <select class="form-input" id="selGrupo">
+        <option value="">— Seleccionar —</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" onclick="irStep2()">Continuar →</button>
+  </div>
+
+  <!-- STEP 2: Seleccionar publicador -->
+  <div class="step" id="step2">
+    <div>
+      <div class="step-title">¿Quién eres?</div>
+      <div class="step-sub">Busca y selecciona tu nombre</div>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-ico" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="form-input" id="searchPub" placeholder="Buscar por nombre..." oninput="filtrarPubs()">
+    </div>
+    <div class="cards-grid" id="listaPubs"></div>
+    <div class="btn-row">
+      <button class="btn btn-ghost" onclick="irStep(1)">← Atrás</button>
+    </div>
+  </div>
+
+  <!-- STEP 3: Llenar datos -->
+  <div class="step" id="step3">
+    <div>
+      <div class="step-title" id="step3Titulo">Mis datos</div>
+      <div class="step-sub">Completa o actualiza tu información</div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" onclick="cambiarTab('personales')">Personales</div>
+      <div class="tab" onclick="cambiarTab('emergencia')">Emergencia</div>
+    </div>
+
+    <!-- Tab personales -->
+    <div class="tab-panel active" id="tab-personales">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Fecha de nacimiento</label>
+          <input type="date" class="form-input" id="fNacimiento">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Fecha de bautismo</label>
+          <input type="date" class="form-input" id="fBautismo">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Teléfono personal</label>
+        <input type="tel" class="form-input" id="fTelefono" placeholder="Ej: 3001234567">
+      </div>
+    </div>
+
+    <!-- Tab emergencia -->
+    <div class="tab-panel" id="tab-emergencia">
+      <div class="info-box">
+        ℹ️ Esta información es <strong>solo para uso interno</strong> de la congregación en caso de emergencia.
+      </div>
+      <div class="form-row">
+        <div class="form-group" style="grid-column:1/-1">
+          <label class="form-label">Nombre del contacto</label>
+          <input type="text" class="form-input" id="eNombre" placeholder="Nombre completo">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Parentesco</label>
+        <select class="form-input" id="eRelacion">
+          <option value="">— Seleccionar —</option>
+          <option>Padre</option><option>Madre</option><option>Espos@</option><option>Hij@</option>
+          <option>Herman@</option><option>Tí@</option><option>Sobrin@</option><option>Prim@</option>
+          <option>Abuel@</option><option>Niet@</option><option>Cuñad@</option><option>Suegr@</option>
+          <option>Yerno / Nuera</option><option>Otro</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Teléfono emergencia</label>
+          <input type="tel" class="form-input" id="eTel" placeholder="3001234567">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Teléfono alternativo</label>
+          <input type="tel" class="form-input" id="eTel2" placeholder="Opcional">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Dirección</label>
+        <input type="text" class="form-input" id="eDireccion" placeholder="Dirección de residencia">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Notas médicas</label>
+        <textarea class="form-input" id="eNotas" placeholder="Alergias, medicamentos, condiciones relevantes..."></textarea>
+      </div>
+    </div>
+
+    <div id="errorStep3" class="info-box error" style="display:none"></div>
+
+    <div class="btn-row">
+      <button class="btn btn-ghost" onclick="irStep(2)">← Atrás</button>
+      <button class="btn btn-primary" id="btnGuardar" onclick="guardarDatos()">
+        <span>Guardar datos</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- STEP 4: Confirmación -->
+  <div class="step" id="step4">
+    <div style="text-align:center;padding:20px 0">
+      <div style="font-size:52px;margin-bottom:12px">✅</div>
+      <div class="step-title" style="text-align:center">¡Datos guardados!</div>
+      <p style="color:var(--ink-3);margin-top:8px;font-size:14px;line-height:1.6">
+        Tu información fue enviada correctamente.<br>
+        El secretario podrá verla en la próxima sincronización.
+      </p>
+    </div>
+    <button class="btn btn-ghost" onclick="irStep(1);reiniciar()">Actualizar otro publicador</button>
+  </div>
+
+</div><!-- /container -->
+
+<!-- Firebase SDK -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+  import { getFirestore, doc, getDoc, setDoc, collection, getDocs }
+    from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCZ5fjBj5_tNFz9a6Ejr8LCVKZlfdi_7tA",
+    authDomain: "fir-21-77687.firebaseapp.com",
+    projectId: "fir-21-77687",
+    storageBucket: "fir-21-77687.firebasestorage.app",
+    messagingSenderId: "843851298036",
+    appId: "1:843851298036:web:76a5ac0ddf913565745aa1"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db  = getFirestore(app);
+
+  // ── Exponer al scope global ──
+  window._db = db;
+  window._doc = doc;
+  window._getDoc = getDoc;
+  window._setDoc = setDoc;
+  window._collection = collection;
+  window._getDocs = getDocs;
+
+  // ── Cargar publicadores desde Firestore ──
+  async function cargarPublicadores() {
+    mostrarLoading('Cargando publicadores...');
+    try {
+      const snap = await getDocs(collection(db, 'publicadores'));
+      window._pubs = [];
+      snap.forEach(d => window._pubs.push({ id: d.id, ...d.data() }));
+      window._pubs.sort((a,b) => (a.apellido||'').localeCompare(b.apellido||'', 'es'));
+      poblarGrupos();
+    } catch(e) {
+      console.error(e);
+      document.getElementById('errorStep1').textContent = 'Error al cargar datos. Intenta de nuevo.';
+      document.getElementById('errorStep1').style.display = 'block';
+    } finally {
+      ocultarLoading();
+    }
+  }
+
+  cargarPublicadores();
+</script>
+
+<script>
+  let grupoSel = '';
+  let pubSel   = null;
+  let pubsFiltrados = [];
+
+  function mostrarLoading(msg) {
+    document.getElementById('loadingMsg').textContent = msg || 'Cargando...';
+    document.getElementById('loadingOverlay').classList.add('show');
+  }
+  function ocultarLoading() {
+    document.getElementById('loadingOverlay').classList.remove('show');
+  }
+
+  function poblarGrupos() {
+    const grupos = [...new Set((window._pubs||[]).map(p => p.grupo||'Sin grupo'))].sort();
+    const sel = document.getElementById('selGrupo');
+    sel.innerHTML = '<option value="">— Seleccionar —</option>' +
+      grupos.map(g => `<option value="${g}">${g}</option>`).join('');
+  }
+
+  function irStep(n) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    document.getElementById('step'+n).classList.add('active');
+    window.scrollTo(0,0);
+  }
+
+  function irStep2() {
+    grupoSel = document.getElementById('selGrupo').value;
+    const err = document.getElementById('errorStep1');
+    if(!grupoSel) { err.textContent = 'Por favor selecciona tu grupo.'; err.style.display='block'; return; }
+    err.style.display = 'none';
+    pubsFiltrados = (window._pubs||[]).filter(p => p.grupo === grupoSel);
+    renderPubs(pubsFiltrados);
+    irStep(2);
+  }
+
+  function filtrarPubs() {
+    const q = document.getElementById('searchPub').value.toLowerCase();
+    const lista = (window._pubs||[]).filter(p =>
+      p.grupo === grupoSel &&
+      (`${p.apellido} ${p.nombre}`).toLowerCase().includes(q)
+    );
+    renderPubs(lista);
+  }
+
+  function renderPubs(lista) {
+    const el = document.getElementById('listaPubs');
+    if(!lista.length) { el.innerHTML = '<div style="text-align:center;color:var(--ink-3);padding:20px">No se encontraron resultados</div>'; return; }
+    el.innerHTML = lista.map(p => `
+      <div class="card" onclick="seleccionarPub('${p.id}')">
+        <div class="card-name">${esc(p.apellido)}, ${esc(p.nombre)}</div>
+        <div class="card-sub">${esc(p.grupo||'')}</div>
+      </div>`).join('');
+  }
+
+  function esc(s) {
+    return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  async function seleccionarPub(id) {
+    pubSel = (window._pubs||[]).find(p => p.id === id);
+    if(!pubSel) return;
+
+    // Marcar seleccionado visualmente
+    document.querySelectorAll('#listaPubs .card').forEach(c => c.classList.remove('selected'));
+    event.currentTarget.classList.add('selected');
+
+    // Intentar cargar datos existentes de Firestore (actualizaciones previas del pub)
+    try {
+      const snap = await window._getDoc(window._doc(window._db, 'publicadores', id));
+      if(snap.exists()) pubSel = { ...pubSel, ...snap.data() };
+    } catch(e) { /* usar datos base */ }
+
+    // Poblar formulario
+    document.getElementById('step3Titulo').textContent = `${pubSel.apellido}, ${pubSel.nombre}`;
+    document.getElementById('fNacimiento').value = pubSel.nacimiento || '';
+    document.getElementById('fBautismo').value   = pubSel.bautismo   || '';
+    document.getElementById('fTelefono').value   = pubSel.telefono   || '';
+    const em = pubSel.emergencia || {};
+    document.getElementById('eNombre').value    = em.nombre    || '';
+    document.getElementById('eRelacion').value  = em.relacion  || '';
+    document.getElementById('eTel').value       = em.tel       || '';
+    document.getElementById('eTel2').value      = em.tel2      || '';
+    document.getElementById('eDireccion').value = em.direccion || '';
+    document.getElementById('eNotas').value     = em.notasMed  || '';
+
+    // Reset tabs
+    cambiarTab('personales');
+    irStep(3);
+  }
+
+  function cambiarTab(tab) {
+    document.querySelectorAll('.tab').forEach((t,i) => {
+      const tabs = ['personales','emergencia'];
+      t.classList.toggle('active', tabs[i] === tab);
+    });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('tab-'+tab).classList.add('active');
+  }
+
+  async function guardarDatos() {
+    if(!pubSel) return;
+    const btn = document.getElementById('btnGuardar');
+    btn.innerHTML = '<div class="spinner"></div>';
+    btn.disabled = true;
+
+    const datos = {
+      id:         pubSel.id,
+      apellido:   pubSel.apellido,
+      nombre:     pubSel.nombre,
+      grupo:      pubSel.grupo,
+      genero:     pubSel.genero,
+      nacimiento: document.getElementById('fNacimiento').value,
+      bautismo:   document.getElementById('fBautismo').value,
+      telefono:   document.getElementById('fTelefono').value,
+      emergencia: {
+        nombre:   document.getElementById('eNombre').value,
+        relacion: document.getElementById('eRelacion').value,
+        tel:      document.getElementById('eTel').value,
+        tel2:     document.getElementById('eTel2').value,
+        direccion:document.getElementById('eDireccion').value,
+        notasMed: document.getElementById('eNotas').value,
+      },
+      _actualizadoPor: 'publicador',
+      _ts: Date.now()
+    };
+
+    try {
+      await window._setDoc(
+        window._doc(window._db, 'actualizaciones', pubSel.id),
+        datos,
+        { merge: true }
+      );
+      irStep(4);
+    } catch(e) {
+      console.error(e);
+      const err = document.getElementById('errorStep3');
+      err.textContent = 'Error al guardar. Verifica tu conexión e intenta de nuevo.';
+      err.style.display = 'block';
+    } finally {
+      btn.innerHTML = '<span>Guardar datos</span>';
+      btn.disabled = false;
+    }
+  }
+
+  function reiniciar() {
+    pubSel = null;
+    grupoSel = '';
+    document.getElementById('selGrupo').value = '';
+    document.getElementById('searchPub').value = '';
+  }
+</script>
+</body>
+</html>
