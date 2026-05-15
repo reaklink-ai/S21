@@ -24516,16 +24516,23 @@
       "nacimiento": "1991-10-22",
       "bautismo": "2004-08-04",
       "grupo": "Grupo 9",
-      "telefono": "",
+      "telefono": "+57 322 9003389",
       "genero": "M",
       "anciano": false,
       "siervo": false,
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Daniel Garzón Castañeda",
+        "relacion": "Padre",
+        "tel": "3018326999",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -24681,9 +24688,9 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "Adelaida de Sierra",
+        "nombre": "María Mercedes Arévalo Pinzón.",
         "relacion": "Madre",
-        "tel": "3112064828",
+        "tel": "3114098561",
         "tel2": "",
         "direccion": "Mosquera",
         "notasMed": ""
@@ -32384,7 +32391,7 @@
       }
     }
   ],
-  "_lastModified": 1778847649728,
+  "_lastModified": 1778847827047,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34398,6 +34405,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1778847765223,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sierra, Lizeth · datos generales",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1778847717709,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sierra, Fabian · Teléfono actualizado",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
       "ts": 1778847500544,
       "user": "Administrador",
       "rol": "admin",
@@ -35979,22 +36002,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Tovar, Brayan · Abr 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778156639524,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778156637947,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
       "pubId": "mmm9qi4s0lt4"
     }
   ]
