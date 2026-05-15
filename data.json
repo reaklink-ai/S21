@@ -1100,7 +1100,7 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Nubia Gutierrez",
-        "relacion": "Mamá",
+        "relacion": "Madre",
         "tel": "3138720868",
         "tel2": "",
         "direccion": "Novaterra ciprés torre 9 apt 234",
@@ -1324,7 +1324,8 @@
           "horas": 173,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1778856839848
     },
     {
       "id": "mmm9qi4jl2r2",
@@ -32415,7 +32416,7 @@
       }
     }
   ],
-  "_lastModified": 1778856711562,
+  "_lastModified": 1778856851043,
   "vym": {
     "semanas": {},
     "historial": [
