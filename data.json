@@ -19144,9 +19144,16 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "WILLIAM DAVID PEREA PARRADO",
+        "relacion": "Otro",
+        "tel": "320 4880531",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -32377,7 +32384,7 @@
       }
     }
   ],
-  "_lastModified": 1778847454428,
+  "_lastModified": 1778847508850,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34391,6 +34398,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778847500544,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Parrado Pinzon, Mercedes · datos generales",
+      "pubId": "mmm9qi4r3xys"
+    },
+    {
       "ts": 1778847432186,
       "user": "Administrador",
       "rol": "admin",
@@ -35976,14 +35991,6 @@
     },
     {
       "ts": 1778156637947,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1778156637942,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
