@@ -6686,7 +6686,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "jhon hernández ",
+        "relacion": "Tí@",
+        "tel": "3202971761",
+        "tel2": "",
+        "direccion": "calle 25b #32a-48",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -6764,7 +6771,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1778887424191
     },
     {
       "id": "mmm9qi4mjx72",
@@ -7652,7 +7660,7 @@
       "nacimiento": "1975-08-30",
       "bautismo": "1993-10-30",
       "grupo": "Grupo 14",
-      "telefono": "",
+      "telefono": "3103343879",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -7661,7 +7669,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Maria Ramírez ",
+        "relacion": "Madre",
+        "tel": "3104251199",
+        "tel2": "",
+        "direccion": "Conjunto Veronese torre 17 apto 404",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Jun": {
@@ -7770,7 +7785,8 @@
           "horas": 175,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1778885161572
     },
     {
       "id": "mmm9qi4m740x",
@@ -17844,7 +17860,7 @@
       "nacimiento": "1991-12-20",
       "bautismo": "2008-07-19",
       "grupo": "Grupo 14",
-      "telefono": "",
+      "telefono": "3214711179",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -17853,7 +17869,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Marco Antonio Montoya Morales",
+        "relacion": "Espos@",
+        "tel": "3167882063",
+        "tel2": "3173878760",
+        "direccion": "El Roble Novaterra",
+        "notasMed": "Alergias - No\nMedicamentos - No\nTipo de sangre - O+"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -17996,7 +18019,8 @@
           "horas": 0,
           "cursos": 6
         }
-      }
+      },
+      "_formTs": 1778886870534
     },
     {
       "id": "mmm9qi4qbs9d",
@@ -28594,10 +28618,10 @@
       "id": "mmm9qi4uprah",
       "apellido": "Garcia",
       "nombre": "Sarha",
-      "nacimiento": "",
+      "nacimiento": "2026-04-29",
       "bautismo": "",
       "grupo": "Grupo 13",
-      "telefono": "",
+      "telefono": "3224427138",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -28606,7 +28630,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Leandro García ",
+        "relacion": "Padre",
+        "tel": "3105330192",
+        "tel2": "3125035159",
+        "direccion": "Transversal 5 sur 16 A14 conjunto Pacifika torre 11 apt 644",
+        "notasMed": "Ninguna "
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -28691,7 +28722,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1778884855701
     },
     {
       "id": "mmm9qi4ulvrs",
@@ -28826,10 +28858,10 @@
       "id": "mmm9qi4uvqhc",
       "apellido": "Dominguez",
       "nombre": "Oscar Javier",
-      "nacimiento": "",
-      "bautismo": "",
+      "nacimiento": "1992-11-14",
+      "bautismo": "2012-07-01",
       "grupo": "Grupo 14",
-      "telefono": "",
+      "telefono": "3162981812",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -28838,7 +28870,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Daniel duitama",
+        "relacion": "Otro",
+        "tel": "3213995684",
+        "tel2": "",
+        "direccion": "Calle 12 9E 58",
+        "notasMed": "B+"
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -28918,7 +28957,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1778887997318
     },
     {
       "id": "p1776220258779",
@@ -32339,6 +32379,16 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
+    },
+    {
+      "id": "r1778634207768",
+      "fecha": "2026-05-12",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 154,
+      "zoom": 68,
+      "total": 222,
+      "notas": "Visita Súper de Circuito"
     }
   ],
   "usuarios": [
@@ -32422,7 +32472,7 @@
       }
     }
   ],
-  "_lastModified": 1778857418142,
+  "_lastModified": 1778888297590,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34591,6 +34641,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778888126894,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1778854512365,
       "user": "Administrador",
       "rol": "admin",
@@ -35007,6 +35065,14 @@
       "pubId": null
     },
     {
+      "ts": 1778634173989,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1778595248772,
       "user": "Administrador",
       "rol": "admin",
@@ -35036,6 +35102,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778364093926,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -35631,6 +35705,14 @@
       "pubId": null
     },
     {
+      "ts": 1778201594447,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1778172704390,
       "user": "Administrador",
       "rol": "admin",
@@ -36156,38 +36238,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Beltran, Stefany · Abr 2025: horas=34",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778156743650,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778156743645,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: cursos=",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778156741116,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778156741111,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Mar 2025: horas=50",
       "pubId": "mmm9qi4lgiwv"
     }
   ]
