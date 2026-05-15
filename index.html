@@ -11717,7 +11717,7 @@ document.head.appendChild(mLink);
       });
 
       if(actualizados > 0) {
-        guardarLocal();
+        saveState();
         // Borrar las actualizaciones procesadas de Firestore
         await Promise.all(borrar.map(id => deleteDoc(doc(_fbDb, 'actualizaciones', id))));
         // También actualizar publicadores en Firestore para que el formulario tenga datos frescos
