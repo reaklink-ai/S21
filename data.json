@@ -4177,11 +4177,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Luz alba quiñones",
+        "relacion": "Madre",
+        "tel": "320 896 21 11",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Carrera 3 este #2 - 113 buenos Aires Villeta  Cundinamarca",
         "notasMed": ""
       },
       "registros": {
@@ -32405,7 +32405,7 @@
       }
     }
   ],
-  "_lastModified": 1778851623341,
+  "_lastModified": 1778852242607,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34574,6 +34574,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1778851904672,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Bolaños Quiñones, Miler · datos generales",
+      "pubId": "mmm9qi4lb847"
+    },
+    {
       "ts": 1778850258461,
       "user": "Administrador",
       "rol": "admin",
@@ -36159,14 +36167,6 @@
     },
     {
       "ts": 1778156737449,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1778156737445,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
