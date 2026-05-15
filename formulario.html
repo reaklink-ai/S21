@@ -321,7 +321,7 @@
         </p>
       </div>
     </div>
-    <button class="btn btn-ghost" onclick="irStep(1);reiniciar()">Actualizar otro publicador</button>
+    <button class="btn btn-ghost" id="btnOtroPub" onclick="irStep(1);reiniciar()">Actualizar otro publicador</button>
   </div>
 
 </div>
@@ -457,6 +457,9 @@
       const atras = r.querySelector('button[onclick*="irStep(2)"]');
       if(atras) atras.style.display = 'none';
     });
+    // Ocultar botón "Actualizar otro publicador" en confirmación
+    const btnOtro = document.getElementById('btnOtroPub');
+    if(btnOtro) btnOtro.style.display = 'none';
 
     cambiarTab('personales');
     // Saltar directo al paso 3, sin badge de pasos
