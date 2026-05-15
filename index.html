@@ -3384,6 +3384,40 @@ input:focus, select:focus, textarea:focus {
             Descargar PDF
           </button>
         </div>
+        <!-- KPIs cobertura -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px">
+          <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);margin-bottom:4px">Total</div>
+            <div style="font-size:22px;font-weight:800;color:var(--ink)" id="emg-kpi-total">—</div>
+          </div>
+          <div style="background:#f0fdf4;border:1.5px solid #86efac;border-radius:var(--r);padding:12px 14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#16a34a;margin-bottom:4px">Con contacto</div>
+            <div style="font-size:22px;font-weight:800;color:#16a34a" id="emg-kpi-con">—</div>
+          </div>
+          <div style="background:#fef2f2;border:1.5px solid #fca5a5;border-radius:var(--r);padding:12px 14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#ef4444;margin-bottom:4px">Sin contacto</div>
+            <div style="font-size:22px;font-weight:800;color:#ef4444" id="emg-kpi-sin">—</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+          <div style="background:#f0f9ff;border:1.5px solid #7dd3fc;border-radius:var(--r);padding:12px 14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0284c7;margin-bottom:4px">Enviaron formulario</div>
+            <div style="font-size:22px;font-weight:800;color:#0284c7" id="emg-kpi-form">—</div>
+          </div>
+          <div style="background:#fafafa;border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--ink-3);margin-bottom:4px">Pendiente formulario</div>
+            <div style="font-size:22px;font-weight:800;color:var(--ink-3)" id="emg-kpi-nform">—</div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);font-weight:600;margin-bottom:5px">
+            <span>Cobertura de contactos</span><span id="emg-kpi-pct">—</span>
+          </div>
+          <div style="height:8px;background:var(--border);border-radius:99px;overflow:hidden">
+            <div id="emg-kpi-bar" style="height:100%;background:linear-gradient(90deg,#16a34a,#4ade80);border-radius:99px;transition:width .5s ease;width:0%"></div>
+          </div>
+        </div>
+
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
           <select id="emg-filtro-grupo" onchange="renderEmergenciasScreen()"
             style="height:36px;padding:0 12px;border:1.5px solid var(--border);border-radius:var(--r);font-size:13px;font-family:var(--font);outline:none;background:var(--surface)">
@@ -5204,6 +5238,27 @@ function renderEmergenciasScreen() {
     }
     return true;
   });
+
+  // KPIs globales (sobre todos, no solo filtrados)
+  const totalGlobal = todos.length;
+  const conContacto = todos.filter(p => { const e=p.emergencia||{}; return e.nombre||e.tel||e.direccion; }).length;
+  const sinContacto = totalGlobal - conContacto;
+  const enviaron    = todos.filter(p => !!p._formTs).length;
+  const pct = totalGlobal > 0 ? Math.round((conContacto/totalGlobal)*100) : 0;
+  const kpiTotal = document.getElementById('emg-kpi-total');
+  const kpiCon   = document.getElementById('emg-kpi-con');
+  const kpiSin   = document.getElementById('emg-kpi-sin');
+  const kpiPct   = document.getElementById('emg-kpi-pct');
+  const kpiBar   = document.getElementById('emg-kpi-bar');
+  const kpiForm  = document.getElementById('emg-kpi-form');
+  const kpiNForm = document.getElementById('emg-kpi-nform');
+  if(kpiTotal) kpiTotal.textContent = totalGlobal;
+  if(kpiCon)   kpiCon.textContent   = conContacto;
+  if(kpiSin)   kpiSin.textContent   = sinContacto;
+  if(kpiPct)   kpiPct.textContent   = `${pct}%`;
+  if(kpiBar)   kpiBar.style.width   = `${pct}%`;
+  if(kpiForm)  kpiForm.textContent  = enviaron;
+  if(kpiNForm) kpiNForm.textContent = totalGlobal - enviaron;
 
   // Subtitle
   const sub = document.getElementById('emg-subtitle');
@@ -11593,6 +11648,8 @@ document.head.appendChild(mLink);
         }
 
         state.publicadores[idx] = pub;
+        // Marcar que este publicador envió el formulario
+        pub._formTs = datos._ts || Date.now();
         borrar.push(d.id);
         actualizados++;
       });
