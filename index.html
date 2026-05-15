@@ -11505,41 +11505,45 @@ document.head.appendChild(mLink);
     const BASE = 'https://s21-congregacion.pages.dev/formulario.html';
     const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
     const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
-    const grupos = [...new Set(
-      state.publicadores
-        .filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id))
-        .map(p => p.grupo||'Sin grupo')
-    )].sort();
+
+    const activos = state.publicadores
+      .filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id))
+      .sort((a,b) => (a.grupo||'').localeCompare(b.grupo||'','es') || a.apellido.localeCompare(b.apellido,'es'));
+
+    // Agrupar por grupo
+    const porGrupo = {};
+    activos.forEach(p => {
+      const g = p.grupo||'Sin grupo';
+      if(!porGrupo[g]) porGrupo[g] = [];
+      porGrupo[g].push(p);
+    });
 
     const body = document.getElementById('linksGruposBody');
-    body.innerHTML = grupos.map(g => {
-      const url = `${BASE}?grupo=${encodeURIComponent(g)}`;
-      return `<div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-        <div style="font-weight:700;font-size:13px;color:var(--ink)">${g}</div>
-        <div style="font-size:11px;color:var(--ink-3);word-break:break-all;background:var(--bg);padding:7px 10px;border-radius:6px;font-family:monospace">${url}</div>
-        <div style="display:flex;gap:8px">
-          <button onclick="navigator.clipboard.writeText('${url}').then(()=>toast('✓ Link copiado'))"
-            style="flex:1;height:34px;border:1.5px solid var(--border);border-radius:6px;background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font);color:var(--ink-2)">
-            📋 Copiar link
+    body.innerHTML = Object.entries(porGrupo).map(([grupo, pubs]) => {
+      const filas = pubs.map(p => {
+        const url = `${BASE}?id=${encodeURIComponent(p.id)}`;
+        const nombre = `${p.apellido}, ${p.nombre}`;
+        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
+          <div style="flex:1;font-size:13px;font-weight:600;color:var(--ink)">${nombre}</div>
+          <button onclick="navigator.clipboard.writeText('${url}').then(()=>toast('✓ Link de ${nombre} copiado'))"
+            style="height:30px;padding:0 12px;border:1.5px solid var(--border);border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--ink-2);white-space:nowrap">
+            📋 Copiar
           </button>
-          <a href="${url}" target="_blank"
-            style="flex:1;height:34px;border:none;border-radius:6px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font);display:flex;align-items:center;justify-content:center;text-decoration:none">
-            🔗 Abrir
-          </a>
+        </div>`;
+      }).join('');
+
+      const urlGrupo = `${BASE}?grupo=${encodeURIComponent(grupo)}`;
+      return `<div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden">
+        <div style="background:var(--accent-lt);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+          <span style="font-weight:800;font-size:13px;color:var(--accent)">${grupo}</span>
+          <button onclick="navigator.clipboard.writeText('${urlGrupo}').then(()=>toast('✓ Link del grupo copiado'))"
+            style="height:28px;padding:0 10px;border:1px solid var(--accent-md);border-radius:6px;background:var(--accent-lt);font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--accent)">
+            🔗 Link del grupo
+          </button>
         </div>
+        <div style="padding:0 14px">${filas}</div>
       </div>`;
     }).join('');
-
-    // Link general (todos los grupos)
-    const urlGeneral = BASE;
-    body.innerHTML += `<div style="background:#f0fdf4;border:1.5px solid #86efac;border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-      <div style="font-weight:700;font-size:13px;color:#16a34a">🌐 Link general (todos los grupos)</div>
-      <div style="font-size:11px;color:var(--ink-3);word-break:break-all;background:var(--bg);padding:7px 10px;border-radius:6px;font-family:monospace">${urlGeneral}</div>
-      <button onclick="navigator.clipboard.writeText('${urlGeneral}').then(()=>toast('✓ Link copiado'))"
-        style="height:34px;border:1.5px solid #86efac;border-radius:6px;background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font);color:#16a34a">
-        📋 Copiar link general
-      </button>
-    </div>`;
 
     document.getElementById('modalLinksGrupos').style.display = 'flex';
   };
