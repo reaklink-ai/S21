@@ -452,9 +452,10 @@
     document.getElementById('eDireccion').value = em.direccion || '';
     document.getElementById('eNotas').value     = em.notasMed  || '';
 
-    // Ocultar botón atrás (no hay lista a donde regresar)
+    // Ocultar solo el botón atrás (no hay lista a donde regresar)
     document.querySelectorAll('.btn-row').forEach(r => {
-      if(r.querySelector('button[onclick*="irStep(2)"]')) r.style.display = 'none';
+      const atras = r.querySelector('button[onclick*="irStep(2)"]');
+      if(atras) atras.style.display = 'none';
     });
 
     cambiarTab('personales');
