@@ -11774,6 +11774,67 @@ document.head.appendChild(mLink);
       toast('❌ Error: ' + e.message);
     }
   };
+
+  // ── Auto-sincronización silenciosa cada 30 minutos ──
+  async function _autoSync() {
+    try {
+      const snap = await getDocs(collection(_fbDb, 'actualizaciones'));
+      if(snap.empty) return; // nada pendiente, sin toast
+
+      let actualizados = 0;
+      const borrar = [];
+
+      snap.forEach(d => {
+        const datos = d.data();
+        const idx = state.publicadores.findIndex(p => p.id === datos.id);
+        if(idx === -1) return;
+        const pub = state.publicadores[idx];
+        if(datos.nacimiento !== undefined) pub.nacimiento = datos.nacimiento;
+        if(datos.bautismo   !== undefined) pub.bautismo   = datos.bautismo;
+        if(datos.telefono   !== undefined) pub.telefono   = datos.telefono;
+        if(datos.emergencia) {
+          pub.emergencia = pub.emergencia || {};
+          const em = datos.emergencia;
+          if(em.nombre    !== undefined) pub.emergencia.nombre    = em.nombre;
+          if(em.relacion  !== undefined) pub.emergencia.relacion  = em.relacion;
+          if(em.tel       !== undefined) pub.emergencia.tel       = em.tel;
+          if(em.tel2      !== undefined) pub.emergencia.tel2      = em.tel2;
+          if(em.direccion !== undefined) pub.emergencia.direccion = em.direccion;
+          if(em.notasMed  !== undefined) pub.emergencia.notasMed  = em.notasMed;
+        }
+        pub._formTs = datos._ts || Date.now();
+        state.publicadores[idx] = pub;
+        borrar.push(d.id);
+        actualizados++;
+      });
+
+      if(actualizados > 0) {
+        saveState();
+        await Promise.all(borrar.map(id => deleteDoc(doc(_fbDb, 'actualizaciones', id))));
+        const { setDoc, doc: fdoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+        await Promise.all(
+          state.publicadores.map(p =>
+            setDoc(fdoc(_fbDb, 'publicadores', p.id), {
+              id: p.id, apellido: p.apellido, nombre: p.nombre,
+              grupo: p.grupo, genero: p.genero,
+              nacimiento: p.nacimiento||'', bautismo: p.bautismo||'',
+              telefono: p.telefono||'', emergencia: p.emergencia||{}
+            })
+          )
+        );
+        toast(`🔄 Auto-sync: ${actualizados} formulario${actualizados>1?'s':''} recibido${actualizados>1?'s':''}`);
+        renderAll();
+      }
+    } catch(e) {
+      console.error('Auto-sync error:', e);
+    }
+  }
+
+  // Iniciar auto-sync: primera vez a los 2 min, luego cada 30 min
+  setTimeout(() => {
+    _autoSync();
+    setInterval(_autoSync, 30 * 60 * 1000);
+  }, 2 * 60 * 1000);
 </script>
 </body>
 </html>
