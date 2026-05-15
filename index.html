@@ -5165,10 +5165,15 @@ function renderEmergenciasScreen() {
   if(!wrap) return;
 
   const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const todos = [
+  const _todosRaw = [
     ...state.publicadores.filter(p => !_mudIds.has(p.id)),
-    ...(state.inactivos||[])
-  ].sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+    ...(state.inactivos||[]).filter(i => !_mudIds.has(i.id))
+  ];
+  const _vistos = new Set();
+  const todos = _todosRaw.filter(p => {
+    if(_vistos.has(p.id)) return false;
+    _vistos.add(p.id); return true;
+  }).sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
 
   // Poblar selector de grupos
   const selGrupo = document.getElementById('emg-filtro-grupo');
