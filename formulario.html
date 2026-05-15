@@ -346,6 +346,8 @@
   window._setDoc = setDoc; window._collection = collection; window._getDocs = getDocs;
 
   async function cargarPublicadores() {
+    // No cargar si el link ya expiró
+    if(_urlId && _urlExp && Date.now() > _urlExp) return;
     mostrarLoading('Cargando publicadores...');
     try {
       const snap = await getDocs(collection(db, 'publicadores'));
@@ -384,6 +386,20 @@
   let grupoSel = '', pubSel = null;
   const _urlGrupo = new URLSearchParams(window.location.search).get('grupo') || '';
   const _urlId    = new URLSearchParams(window.location.search).get('id')    || '';
+  const _urlExp   = parseInt(new URLSearchParams(window.location.search).get('exp') || '0');
+
+  // Verificar expiración si viene con ?id=
+  if(_urlId && _urlExp && Date.now() > _urlExp) {
+    document.querySelector('.container').innerHTML = `
+      <div style="margin-top:40px;text-align:center;padding:0 16px">
+        <div style="font-size:48px;margin-bottom:16px">⏰</div>
+        <div style="font-size:20px;font-weight:800;color:#0f172a;margin-bottom:8px">Link caducado</div>
+        <p style="font-size:14px;color:#64748b;line-height:1.6">
+          Este link expiró. Solicita uno nuevo<br>al secretario o conductor de tu grupo.
+        </p>
+      </div>`;
+    document.getElementById('progressBar').style.width = '0%';
+  }
   const PROGRESS = { 1:'25%', 2:'55%', 3:'85%', 4:'100%' };
 
   function setProgress(n) { document.getElementById('progressBar').style.width = PROGRESS[n]||'25%'; }
