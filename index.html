@@ -3400,8 +3400,8 @@ input:focus, select:focus, textarea:focus {
           </div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
-          <div style="background:#f0f9ff;border:1.5px solid #7dd3fc;border-radius:var(--r);padding:12px 14px">
-            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0284c7;margin-bottom:4px">Enviaron formulario</div>
+          <div style="background:#f0f9ff;border:1.5px solid #7dd3fc;border-radius:var(--r);padding:12px 14px;cursor:pointer;transition:box-shadow .15s" onclick="verEnviaronFormulario()" onmouseover="this.style.boxShadow='0 0 0 3px #bae6fd'" onmouseout="this.style.boxShadow=''">
+            <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#0284c7;margin-bottom:4px">Enviaron formulario <span style="font-size:9px;opacity:.7">↗ Ver lista</span></div>
             <div style="font-size:22px;font-weight:800;color:#0284c7" id="emg-kpi-form">—</div>
           </div>
           <div style="background:#fafafa;border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px">
@@ -11339,6 +11339,20 @@ document.addEventListener('change', e => {
 </div>
 
 <!-- Modal Links por Grupo -->
+<!-- Modal Enviaron Formulario -->
+<div class="overlay" id="modalEnviaronForm" style="display:none">
+  <div class="modal" style="max-width:580px;width:95vw;max-height:90vh;display:flex;flex-direction:column;overflow:hidden">
+    <div class="modal-hd" style="flex-shrink:0">
+      <span class="modal-hd-title">📋 Publicadores que enviaron el formulario</span>
+      <button class="modal-x" onclick="document.getElementById('modalEnviaronForm').style.display='none'">×</button>
+    </div>
+    <div id="enviaronFormBody" style="flex:1;overflow-y:auto;min-height:0"></div>
+    <div class="modal-ft" style="flex-shrink:0">
+      <button class="btn-cancel" onclick="document.getElementById('modalEnviaronForm').style.display='none'">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 <div class="overlay" id="modalLinksGrupos" style="display:none">
   <div class="modal" style="max-width:600px;width:95vw;max-height:90vh;display:flex;flex-direction:column;overflow:visible">
     <div class="modal-hd" style="flex-shrink:0;border-radius:var(--r-xl) var(--r-xl) 0 0;overflow:hidden">
@@ -11560,6 +11574,54 @@ document.head.appendChild(mLink);
 
   const _fbApp = initializeApp(firebaseConfig, 'admin-app');
   const _fbDb  = getFirestore(_fbApp);
+
+  window.verEnviaronFormulario = function() {
+    const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+    const lista = state.publicadores
+      .filter(p => !_mudIds.has(p.id) && !!p._formTs)
+      .sort((a,b) => (b._formTs||0) - (a._formTs||0)); // más reciente primero
+
+    const body = document.getElementById('enviaronFormBody');
+
+    if(!lista.length) {
+      body.innerHTML = '<div style="padding:40px;text-align:center;color:var(--ink-3);font-size:14px">Ningún publicador ha enviado el formulario aún.</div>';
+      document.getElementById('modalEnviaronForm').style.display = 'flex';
+      return;
+    }
+
+    const fmtFecha = ts => {
+      const d = new Date(ts);
+      return d.toLocaleDateString('es-CO', { day:'2-digit', month:'short', year:'numeric' }) +
+             ' ' + d.toLocaleTimeString('es-CO', { hour:'2-digit', minute:'2-digit' });
+    };
+
+    const chk = v => v
+      ? '<span style="color:#16a34a;font-weight:700">✓</span>'
+      : '<span style="color:#cbd5e1">—</span>';
+
+    body.innerHTML = `
+      <div style="padding:12px 16px;background:var(--bg);border-bottom:1px solid var(--border);font-size:11px;color:var(--ink-3);font-weight:700;display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;text-transform:uppercase;letter-spacing:.4px">
+        <div>Publicador</div><div>Fecha envío</div><div style="text-align:center">Tel.</div><div style="text-align:center">Nac.</div><div style="text-align:center">Baut.</div><div style="text-align:center">Emergencia</div>
+      </div>
+      ${lista.map(p => {
+        const e = p.emergencia || {};
+        const tieneEmerg = !!(e.nombre || e.tel);
+        return `<div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;font-size:13px" onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+          <div>
+            <div style="font-weight:700;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</div>
+            <div style="font-size:11px;color:var(--ink-3)">${escHtml(p.grupo||'')}</div>
+          </div>
+          <div style="font-size:11px;color:var(--ink-2)">${fmtFecha(p._formTs)}</div>
+          <div style="text-align:center">${chk(p.telefono)}</div>
+          <div style="text-align:center">${chk(p.nacimiento)}</div>
+          <div style="text-align:center">${chk(p.bautismo)}</div>
+          <div style="text-align:center">${chk(tieneEmerg)}</div>
+        </div>`;
+      }).join('')}
+    `;
+
+    document.getElementById('modalEnviaronForm').style.display = 'flex';
+  };
 
   window.verLinksGrupos = function() {
     const BASE = 'https://s21-congregacion.pages.dev/formulario.html';
