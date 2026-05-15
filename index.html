@@ -11280,13 +11280,13 @@ document.addEventListener('change', e => {
 
 <!-- Modal Links por Grupo -->
 <div class="overlay" id="modalLinksGrupos" style="display:none">
-  <div class="modal" style="max-width:600px;width:95vw;max-height:90vh;display:flex;flex-direction:column">
-    <div class="modal-hd">
+  <div class="modal" style="max-width:600px;width:95vw;max-height:90vh;display:flex;flex-direction:column;overflow:visible">
+    <div class="modal-hd" style="flex-shrink:0;border-radius:var(--r-xl) var(--r-xl) 0 0;overflow:hidden">
       <span class="modal-hd-title">🔗 Links del formulario por grupo</span>
       <button class="modal-x" onclick="document.getElementById('modalLinksGrupos').style.display='none'">×</button>
     </div>
-    <div id="linksGruposBody" style="flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px"></div>
-    <div class="modal-ft">
+    <div id="linksGruposBody" style="flex:1;overflow-y:auto;padding:16px;display:block;min-height:0;background:var(--surface);border-radius:0 0 var(--r-xl) var(--r-xl)"></div>
+    <div class="modal-ft" style="flex-shrink:0;border-radius:0 0 var(--r-xl) var(--r-xl)">
       <button class="btn-cancel" onclick="document.getElementById('modalLinksGrupos').style.display='none'">Cerrar</button>
     </div>
   </div>
@@ -11525,7 +11525,7 @@ document.head.appendChild(mLink);
         const nombre = `${p.apellido}, ${p.nombre}`;
         const urlSafe = url.replace(/'/g, "\\'");
         const nombreSafe = nombre.replace(/'/g, "\\'");
-        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid #f1f5f9">
+        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 14px;border-bottom:1px solid #f1f5f9;background:#fff">
           <div style="flex:1;font-size:13px;font-weight:600;color:#0f172a">${nombre}</div>
           <button onclick="event.stopPropagation();navigator.clipboard.writeText('${urlSafe}').then(()=>toast('✓ Copiado: ${nombreSafe}'))"
             style="flex-shrink:0;height:30px;padding:0 12px;border:1.5px solid #e2e8f0;border-radius:6px;background:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font);color:#334155">
@@ -11536,22 +11536,19 @@ document.head.appendChild(mLink);
 
       const urlGrupo = `${BASE}?grupo=${encodeURIComponent(grupo)}`;
       const urlGrupoSafe = urlGrupo.replace(/'/g, "\\'");
-      const gid = 'grp_' + grupo.replace(/\s+/g,'_');
-      return `<div style="border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden">
-        <div onclick="const el=document.getElementById('${gid}');const arr=document.getElementById('arr_${gid}');const open=el.style.display==='none';el.style.display=open?'block':'none';arr.textContent=open?'▲':'▼';"
-          style="background:#eef2ff;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;user-select:none">
+      return `<details style="border:1.5px solid #e2e8f0;border-radius:10px;overflow:hidden">
+        <summary style="background:#eef2ff;padding:11px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;user-select:none;list-style:none;-webkit-appearance:none">
+          <span style="font-weight:800;font-size:13px;color:#4f46e5">${grupo} <span style="font-weight:500;font-size:11px;color:#818cf8">(${pubs.length})</span></span>
           <div style="display:flex;align-items:center;gap:8px">
-            <span id="arr_${gid}" style="font-size:11px;color:#4f46e5">▼</span>
-            <span style="font-weight:800;font-size:13px;color:#4f46e5">${grupo}</span>
-            <span style="font-size:11px;color:#818cf8;font-weight:500">(${pubs.length})</span>
+            <button onclick="event.stopPropagation();navigator.clipboard.writeText('${urlGrupoSafe}').then(()=>toast('✓ Link del grupo copiado'))"
+              style="height:26px;padding:0 10px;border:1px solid #c7d2fe;border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:#4f46e5">
+              🔗 Link grupo
+            </button>
+            <span style="color:#4f46e5;font-size:12px">▼</span>
           </div>
-          <button onclick="event.stopPropagation();navigator.clipboard.writeText('${urlGrupoSafe}').then(()=>toast('✓ Link del grupo copiado'))"
-            style="flex-shrink:0;height:26px;padding:0 10px;border:1px solid #c7d2fe;border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:#4f46e5">
-            🔗 Link grupo
-          </button>
-        </div>
-        <div id="${gid}" style="display:none;background:#fff">${filas}</div>
-      </div>`;
+        </summary>
+        ${filas}
+      </details>`;
     }).join('');
 
     document.getElementById('modalLinksGrupos').style.display = 'flex';
