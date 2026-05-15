@@ -11510,7 +11510,6 @@ document.head.appendChild(mLink);
       .filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id))
       .sort((a,b) => (a.grupo||'').localeCompare(b.grupo||'','es') || a.apellido.localeCompare(b.apellido,'es'));
 
-    // Agrupar por grupo
     const porGrupo = {};
     activos.forEach(p => {
       const g = p.grupo||'Sin grupo';
@@ -11521,27 +11520,33 @@ document.head.appendChild(mLink);
     const body = document.getElementById('linksGruposBody');
     body.innerHTML = Object.entries(porGrupo).map(([grupo, pubs]) => {
       const filas = pubs.map(p => {
-        const url = `${BASE}?id=${encodeURIComponent(p.id)}`;
+        const exp = Date.now() + 24 * 60 * 60 * 1000; // 24 horas
+        const url = `${BASE}?id=${encodeURIComponent(p.id)}&exp=${exp}`;
         const nombre = `${p.apellido}, ${p.nombre}`;
-        return `<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)">
-          <div style="flex:1;font-size:13px;font-weight:600;color:var(--ink)">${nombre}</div>
-          <button onclick="navigator.clipboard.writeText('${url}').then(()=>toast('✓ Link de ${nombre} copiado'))"
-            style="height:30px;padding:0 12px;border:1.5px solid var(--border);border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--ink-2);white-space:nowrap">
+        const urlSafe = url.replace(/'/g, "\\'");
+        const nombreSafe = nombre.replace(/'/g, "\\'");
+        return `<div style="display:flex;align-items:center;gap:8px;padding:9px 16px;border-bottom:1px solid var(--border)">
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${nombre}</div>
+          </div>
+          <button onclick="navigator.clipboard.writeText('${urlSafe}').then(()=>toast('✓ Link de ${nombreSafe} copiado'))"
+            style="flex-shrink:0;height:32px;padding:0 14px;border:1.5px solid var(--border);border-radius:6px;background:#fff;font-size:12px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--ink-2)">
             📋 Copiar
           </button>
         </div>`;
       }).join('');
 
       const urlGrupo = `${BASE}?grupo=${encodeURIComponent(grupo)}`;
-      return `<div style="background:var(--white);border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden">
-        <div style="background:var(--accent-lt);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:8px">
-          <span style="font-weight:800;font-size:13px;color:var(--accent)">${grupo}</span>
-          <button onclick="navigator.clipboard.writeText('${urlGrupo}').then(()=>toast('✓ Link del grupo copiado'))"
-            style="height:28px;padding:0 10px;border:1px solid var(--accent-md);border-radius:6px;background:var(--accent-lt);font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--accent)">
+      const urlGrupoSafe = urlGrupo.replace(/'/g, "\\'");
+      return `<div style="border:1.5px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:2px">
+        <div style="background:var(--accent-lt);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--accent-md)">
+          <span style="font-weight:800;font-size:13px;color:var(--accent)">${grupo} <span style="font-weight:500;font-size:11px;opacity:.7">(${pubs.length} publicadores)</span></span>
+          <button onclick="navigator.clipboard.writeText('${urlGrupoSafe}').then(()=>toast('✓ Link del grupo copiado'))"
+            style="flex-shrink:0;height:28px;padding:0 10px;border:1px solid var(--accent-md);border-radius:6px;background:#fff;font-size:11px;font-weight:700;cursor:pointer;font-family:var(--font);color:var(--accent)">
             🔗 Link del grupo
           </button>
         </div>
-        <div style="padding:0 14px">${filas}</div>
+        ${filas}
       </div>`;
     }).join('');
 
