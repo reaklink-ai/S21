@@ -32191,6 +32191,16 @@
   ],
   "asistencia": [
     {
+      "id": "r1778965190635",
+      "fecha": "2026-05-16",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 216,
+      "zoom": 35,
+      "total": 251,
+      "notas": "Visita del Superintendente de Circuito"
+    },
+    {
       "id": "r1778687362899",
       "fecha": "2026-05-12",
       "tipo": "Entre semana",
@@ -32199,6 +32209,16 @@
       "zoom": 68,
       "total": 222,
       "notas": "Visita del Superintendente de Circuito"
+    },
+    {
+      "id": "r1778634207768",
+      "fecha": "2026-05-12",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 154,
+      "zoom": 68,
+      "total": 222,
+      "notas": "Visita Súper de Circuito"
     },
     {
       "id": "r1778115364785",
@@ -32379,16 +32399,6 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
-    },
-    {
-      "id": "r1778634207768",
-      "fecha": "2026-05-12",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 154,
-      "zoom": 68,
-      "total": 222,
-      "notas": "Visita Súper de Circuito"
     }
   ],
   "usuarios": [
@@ -32472,7 +32482,7 @@
       }
     }
   ],
-  "_lastModified": 1778888297590,
+  "_lastModified": 1778966213324,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34641,6 +34651,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1778963329194,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778901001416,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1778888126894,
       "user": "Administrador",
       "rol": "admin",
@@ -36223,22 +36249,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuluaga, Carlos · Abr 2025: cursos=1",
       "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1778156745714,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1778156745708,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Abr 2025: horas=34",
-      "pubId": "mmm9qi4lgiwv"
     }
   ]
 }
