@@ -4289,7 +4289,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Ricardo calambas",
+        "relacion": "Hij@",
+        "tel": "3173259840",
+        "tel2": "",
+        "direccion": "Callé 12a 1be 80 interior 11 casa 37 manzana 2",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -8771,9 +8778,16 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Raquelita",
+        "relacion": "Hij@",
+        "tel": "+57 319 5645418",
+        "tel2": "",
+        "direccion": "CALLE 17 # 13--45  --ESTE... EL PORVENIR..             ESTANCIA IV..TORRE 3 APTO. 4O1",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Mar": {
@@ -16230,7 +16244,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Yuri catleya Martinez",
+        "relacion": "Hij@",
+        "tel": "3107549856",
+        "tel2": "",
+        "direccion": "carrera 3 #3-21, centro Mosquera piso 3",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Mar": {
@@ -25586,7 +25607,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Mario Tovar",
+        "relacion": "Padre",
+        "tel": "3052243077",
+        "tel2": "",
+        "direccion": "Carrera 3 este # 15-57  Porvenir centro Mosquera",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -25921,7 +25949,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Efrain Benavides sandoval",
+        "relacion": "Padre",
+        "tel": "3212027120",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "Carrera 3 este # 15-57  Porvenir centro Mosquera"
+      },
       "registros": {
         "2024": {
           "Mar": {
@@ -29527,9 +29562,9 @@
       "precursorEsp": false,
       "misionero": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Brayan Felipe Gonzales",
+        "relacion": "Espos@",
+        "tel": "3102816933",
         "tel2": "",
         "direccion": "",
         "notasMed": ""
@@ -32489,7 +32524,7 @@
       }
     }
   ],
-  "_lastModified": 1779206922050,
+  "_lastModified": 1779207975364,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34658,6 +34693,54 @@
   ],
   "auditoria": [
     {
+      "ts": 1779207785142,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Figueredo, Fergie Alexandra · datos generales",
+      "pubId": "p1776221244569"
+    },
+    {
+      "ts": 1779207533519,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Tovar, Andres · datos generales",
+      "pubId": "mmm9qi4s4eyz"
+    },
+    {
+      "ts": 1779207509840,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Tovar, Daniela · datos generales",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1779207476914,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Luis · datos generales",
+      "pubId": "mmm9qi4q025q"
+    },
+    {
+      "ts": 1779207445109,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Calambas, Clemencia · datos generales",
+      "pubId": "mmm9qi4l2zz4"
+    },
+    {
+      "ts": 1779206976647,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Gallardo, Raquel · datos generales",
+      "pubId": "mmm9qi4nc993"
+    },
+    {
       "ts": 1779206909492,
       "user": "Administrador",
       "rol": "admin",
@@ -36208,54 +36291,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Abr 2025: cursos=1",
       "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1778157576916,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1778157553379,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Abr 2025: horas=62",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1778157553374,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Abr 2025: horas=62",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1778157551495,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1778157551490,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1778157350458,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
     }
   ]
 }
