@@ -29405,7 +29405,7 @@
       "grupo": "Grupo 13",
       "telefono": "",
       "genero": "F",
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "anciano": false,
       "siervo": false,
@@ -29413,11 +29413,11 @@
       "precursorEsp": false,
       "misionero": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Cristian Serna",
+        "relacion": "Espos@",
+        "tel": "3122797267",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Novaterra conjunto Guayacan Torre 8 Apto 1231",
         "notasMed": ""
       }
     },
@@ -32489,7 +32489,7 @@
       }
     }
   ],
-  "_lastModified": 1779206825466,
+  "_lastModified": 1779206922050,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34658,6 +34658,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1779206909492,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Serna Rivadeneira, Cristina · datos generales",
+      "pubId": "p1776221052712"
+    },
+    {
       "ts": 1779206815415,
       "user": "Administrador",
       "rol": "admin",
@@ -36243,14 +36251,6 @@
     },
     {
       "ts": 1778157350458,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1778157350453,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
