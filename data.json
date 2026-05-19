@@ -7369,15 +7369,22 @@
       "bautismo": "2016-11-06",
       "grupo": "Grupo 13",
       "telefono": "",
-      "genero": "M",
+      "genero": "F",
       "anciano": false,
       "siervo": false,
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Steven Alejandro Ramirez D",
+        "relacion": "Hij@",
+        "tel": "3222857744",
+        "tel2": "",
+        "direccion": "Arrayan de Novaterra T10 apto 740",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -28631,12 +28638,12 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "Leandro García ",
+        "nombre": "Leandro García",
         "relacion": "Padre",
         "tel": "3105330192",
         "tel2": "3125035159",
         "direccion": "Transversal 5 sur 16 A14 conjunto Pacifika torre 11 apt 644",
-        "notasMed": "Ninguna "
+        "notasMed": "Ninguna"
       },
       "registros": {
         "2025": {
@@ -28742,11 +28749,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Yohanna Arandia García",
+        "relacion": "Hij@",
+        "tel": "313 6218334",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Km 4 vía la mesa barrio los puentes Mosquera",
         "notasMed": ""
       },
       "registros": {
@@ -32482,7 +32489,7 @@
       }
     }
   ],
-  "_lastModified": 1778966213324,
+  "_lastModified": 1779206825466,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34651,6 +34658,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1779206815415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "García, Bobadilla Alicia · datos generales",
+      "pubId": "mmm9qi4ulvrs"
+    },
+    {
+      "ts": 1779206782953,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Sarha · datos generales",
+      "pubId": "mmm9qi4uprah"
+    },
+    {
+      "ts": 1779206758544,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Diaz, Azucena · datos generales",
+      "pubId": "mmm9qi4mvdcx"
+    },
+    {
+      "ts": 1779206494266,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778963329194,
       "user": "Administrador",
       "rol": "admin",
@@ -34667,11 +34706,107 @@
       "pubId": null
     },
     {
+      "ts": 1778891282140,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Andrey · datos generales",
+      "pubId": "mmm9qi4n3s74"
+    },
+    {
+      "ts": 1778891258394,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Samuel · datos generales",
+      "pubId": "mmm9qi4nd6my"
+    },
+    {
+      "ts": 1778891222703,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Larrota, Mercedes · datos generales",
+      "pubId": "mmm9qi4ocyur"
+    },
+    {
+      "ts": 1778891187296,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Larrota, Sergio · datos generales",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1778891155813,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Cañon, Martha Lucia · datos generales",
+      "pubId": "mmm9qi4nge9e"
+    },
+    {
+      "ts": 1778891115607,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Cañon, Martha Lucia · Nombre: Hernandez → Cañon",
+      "pubId": "mmm9qi4nge9e"
+    },
+    {
+      "ts": 1778890195140,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1778888126894,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778873204705,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778873204642,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778865308929,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778859029458,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1778857428630,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -36121,134 +36256,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuluaga, Juan Camilo · Abr 2025: cursos=1",
       "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1778157345403,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1778157345399,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vivas, Sonia Julieth · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1778157335340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: horas=45",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778157335334,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: horas=45",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778157332675,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778157332668,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1778157324963,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778157324958,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: horas=55",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778157323333,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778157323328,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1778157306248,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1778157306242,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1778157301871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1778157301868,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Abr 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1778156760665,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1778156760662,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4ttlv0"
     }
   ]
 }
