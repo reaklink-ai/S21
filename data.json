@@ -10331,7 +10331,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Adriana Gineth Guerrero ",
+        "relacion": "Herman@",
+        "tel": "322 2178924",
+        "tel2": "318 6217242",
+        "direccion": "calle 10 sur #14A-85 SOL CRECIENTE ",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -10473,7 +10480,8 @@
           "horas": 192,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779220154848
     },
     {
       "id": "mmm9qi4np3hl",
@@ -32524,7 +32532,7 @@
       }
     }
   ],
-  "_lastModified": 1779208065351,
+  "_lastModified": 1779219782537,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34693,6 +34701,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1779218488315,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779210803762,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779207785142,
       "user": "Administrador",
       "rol": "admin",
@@ -36275,22 +36299,15 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Abr 2025: horas=50",
       "pubId": "mmm9qi4qnxk5"
-    },
+    }
+  ],
+  "formHistorial": [
     {
-      "ts": 1778157579674,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Abr 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1778157576922,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
+      "id": "mmm9qi4now8s",
+      "apellido": "Guerrero",
+      "nombre": "Gabriela",
+      "grupo": "Grupo 10",
+      "ts": 1779220154848
     }
   ]
 }
