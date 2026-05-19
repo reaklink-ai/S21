@@ -25087,9 +25087,16 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Lina Rodriguez",
+        "relacion": "Tí@",
+        "tel": "3132920625",
+        "tel2": "",
+        "direccion": "carrera 5 # 9-30 torre 8 apartamento 102 toledo mosquera",
+        "notasMed": ""
+      },
       "registros": {
         "2025": {
           "Feb": {
@@ -25184,11 +25191,11 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Lina Rodriguez",
+        "relacion": "Herman@",
+        "tel": "3132920625",
         "tel2": "",
-        "direccion": "",
+        "direccion": "carrera 5 # 9-30 torre 8 apartamento 102 toledo mosquera",
         "notasMed": ""
       },
       "registros": {
@@ -32532,7 +32539,7 @@
       }
     }
   ],
-  "_lastModified": 1779221808770,
+  "_lastModified": 1779221929282,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34701,6 +34708,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1779221921389,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Suarez, Angela · datos generales",
+      "pubId": "mmm9qi4shqru"
+    },
+    {
+      "ts": 1779221915590,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Suarez, Angela · datos generales",
+      "pubId": "mmm9qi4shqru"
+    },
+    {
+      "ts": 1779221888988,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Suarez, Laura · datos generales",
+      "pubId": "mmm9qi4s08s9"
+    },
+    {
       "ts": 1779218488315,
       "user": "Administrador",
       "rol": "admin",
@@ -36275,30 +36306,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Jaime · Abr 2025: horas=29",
       "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1778157587406,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Abr 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1778157587399,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Abr 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1778157579678,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Abr 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
     }
   ],
   "formHistorial": [
