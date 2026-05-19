@@ -11587,10 +11587,19 @@ document.head.appendChild(mLink);
 
   window.verEnviaronFormulario = function() {
     const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
-    const lista = state.publicadores
-      .filter(p => !_mudIds.has(p.id) && !!p._formTs)
-      .sort((a,b) => (b._formTs||0) - (a._formTs||0)); // más reciente primero
 
+    // Combinar publicadores con _formTs + historial
+    const porId = {};
+    // Primero del historial
+    (state.formHistorial||[]).forEach(h => {
+      if(!porId[h.id] || h.ts > porId[h.id].ts) porId[h.id] = h;
+    });
+    // Luego los que tienen _formTs en el publicador (más confiable)
+    state.publicadores.filter(p => !_mudIds.has(p.id) && !!p._formTs).forEach(p => {
+      porId[p.id] = { id:p.id, apellido:p.apellido, nombre:p.nombre, grupo:p.grupo, ts:p._formTs, pub:p };
+    });
+
+    const lista = Object.values(porId).sort((a,b) => (b.ts||0) - (a.ts||0));
     const body = document.getElementById('enviaronFormBody');
 
     if(!lista.length) {
@@ -11604,32 +11613,28 @@ document.head.appendChild(mLink);
       return d.toLocaleDateString('es-CO', { day:'2-digit', month:'short', year:'numeric' }) +
              ' ' + d.toLocaleTimeString('es-CO', { hour:'2-digit', minute:'2-digit' });
     };
-
-    const chk = v => v
-      ? '<span style="color:#16a34a;font-weight:700">✓</span>'
-      : '<span style="color:#cbd5e1">—</span>';
+    const chk = v => v ? '<span style="color:#16a34a;font-weight:700">✓</span>' : '<span style="color:#cbd5e1">—</span>';
 
     body.innerHTML = `
-      <div style="padding:12px 16px;background:var(--bg);border-bottom:1px solid var(--border);font-size:11px;color:var(--ink-3);font-weight:700;display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;text-transform:uppercase;letter-spacing:.4px">
-        <div>Publicador</div><div>Fecha envío</div><div style="text-align:center">Tel.</div><div style="text-align:center">Nac.</div><div style="text-align:center">Baut.</div><div style="text-align:center">Emergencia</div>
+      <div style="padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--border);font-size:11px;color:var(--ink-3);font-weight:700;display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;text-transform:uppercase;letter-spacing:.4px">
+        <div>Publicador</div><div>Fecha envío</div><div style="text-align:center">Tel.</div><div style="text-align:center">Nac.</div><div style="text-align:center">Baut.</div><div style="text-align:center">Emerg.</div>
       </div>
-      ${lista.map(p => {
+      ${lista.map(item => {
+        const p = item.pub || state.publicadores.find(x => x.id === item.id) || item;
         const e = p.emergencia || {};
-        const tieneEmerg = !!(e.nombre || e.tel);
-        return `<div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;font-size:13px" onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+        return `<div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr 1fr 1fr;gap:8px;padding:10px 16px;border-bottom:1px solid var(--border);align-items:center;font-size:13px">
           <div>
             <div style="font-weight:700;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</div>
             <div style="font-size:11px;color:var(--ink-3)">${escHtml(p.grupo||'')}</div>
           </div>
-          <div style="font-size:11px;color:var(--ink-2)">${fmtFecha(p._formTs)}</div>
+          <div style="font-size:11px;color:var(--ink-2)">${fmtFecha(item.ts)}</div>
           <div style="text-align:center">${chk(p.telefono)}</div>
           <div style="text-align:center">${chk(p.nacimiento)}</div>
           <div style="text-align:center">${chk(p.bautismo)}</div>
-          <div style="text-align:center">${chk(tieneEmerg)}</div>
+          <div style="text-align:center">${chk(e.nombre||e.tel)}</div>
         </div>`;
       }).join('')}
     `;
-
     document.getElementById('modalEnviaronForm').style.display = 'flex';
   };
 
@@ -11719,9 +11724,20 @@ document.head.appendChild(mLink);
           if(em.notasMed  !== undefined) pub.emergencia.notasMed  = em.notasMed;
         }
 
-        state.publicadores[idx] = pub;
-        // Marcar que este publicador envió el formulario
+        // Marcar _formTs ANTES de asignar al array
         pub._formTs = datos._ts || Date.now();
+        state.publicadores[idx] = pub;
+
+        // Guardar en historial persistente
+        if(!state.formHistorial) state.formHistorial = [];
+        state.formHistorial.push({
+          id: pub.id,
+          apellido: pub.apellido,
+          nombre: pub.nombre,
+          grupo: pub.grupo,
+          ts: pub._formTs
+        });
+
         borrar.push(d.id);
         actualizados++;
       });
@@ -11813,6 +11829,11 @@ document.head.appendChild(mLink);
           if(em.notasMed  !== undefined) pub.emergencia.notasMed  = em.notasMed;
         }
         pub._formTs = datos._ts || Date.now();
+        if(!state.formHistorial) state.formHistorial = [];
+        state.formHistorial.push({
+          id: pub.id, apellido: pub.apellido, nombre: pub.nombre,
+          grupo: pub.grupo, ts: pub._formTs
+        });
         state.publicadores[idx] = pub;
         borrar.push(d.id);
         actualizados++;
