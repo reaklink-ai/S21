@@ -11743,25 +11743,33 @@ document.head.appendChild(mLink);
       });
 
       if(actualizados > 0) {
+        // 1. Backup en localStorage antes de cualquier cambio en Firebase
+        try { localStorage.setItem('s21_v3_backup_' + Date.now(), localStorage.getItem('s21_v3')); } catch(e) {}
+        // Limpiar backups viejos (conservar solo los últimos 3)
+        const bkeys = Object.keys(localStorage).filter(k => k.startsWith('s21_v3_backup_')).sort();
+        while(bkeys.length > 3) { localStorage.removeItem(bkeys.shift()); }
+
+        // 2. Guardar en localStorage
         saveState();
-        // Borrar las actualizaciones procesadas de Firestore
+
+        // 3. Borrar actualizaciones procesadas de Firestore
         await Promise.all(borrar.map(id => deleteDoc(doc(_fbDb, 'actualizaciones', id))));
-        // También actualizar publicadores en Firestore para que el formulario tenga datos frescos
+
+        // 4. Actualizar SOLO los publicadores que cambiaron en Firebase
         const { setDoc, doc: fdoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
+        const pubsActualizados = state.publicadores.filter(p => borrar.includes(p.id) ||
+          state.publicadores.find(x => x.id === p.id && x._formTs));
         await Promise.all(
-          state.publicadores.map(p =>
-            setDoc(fdoc(_fbDb, 'publicadores', p.id), {
-              id: p.id,
-              apellido: p.apellido,
-              nombre: p.nombre,
-              grupo: p.grupo,
-              genero: p.genero,
-              nacimiento: p.nacimiento||'',
-              bautismo: p.bautismo||'',
-              telefono: p.telefono||'',
-              emergencia: p.emergencia||{}
-            })
-          )
+          borrar.map(id => {
+            const p = state.publicadores.find(x => x.id === id);
+            if(!p) return Promise.resolve();
+            return setDoc(fdoc(_fbDb, 'publicadores', p.id), {
+              id: p.id, apellido: p.apellido, nombre: p.nombre,
+              grupo: p.grupo, genero: p.genero,
+              nacimiento: p.nacimiento||'', bautismo: p.bautismo||'',
+              telefono: p.telefono||'', emergencia: p.emergencia||{}
+            });
+          })
         );
         toast(`✅ ${actualizados} publicador${actualizados>1?'es':''}  actualizado${actualizados>1?'s':''} desde el formulario`);
         renderAll();
@@ -11771,33 +11779,6 @@ document.head.appendChild(mLink);
     } catch(e) {
       console.error(e);
       toast('❌ Error al sincronizar: ' + e.message);
-    }
-  };
-
-  // Exponer función para subir todos los publicadores a Firestore (primera vez)
-  window.subirPublicadoresFirebase = async function() {
-    try {
-      toast('⏳ Subiendo publicadores a Firebase...');
-      const { setDoc, doc: fdoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
-      await Promise.all(
-        state.publicadores.map(p =>
-          setDoc(fdoc(_fbDb, 'publicadores', p.id), {
-            id: p.id,
-            apellido: p.apellido,
-            nombre: p.nombre,
-            grupo: p.grupo,
-            genero: p.genero,
-            nacimiento: p.nacimiento||'',
-            bautismo: p.bautismo||'',
-            telefono: p.telefono||'',
-            emergencia: p.emergencia||{}
-          })
-        )
-      );
-      toast(`✅ ${state.publicadores.length} publicadores subidos a Firebase`);
-    } catch(e) {
-      console.error(e);
-      toast('❌ Error: ' + e.message);
     }
   };
 
@@ -11840,18 +11821,30 @@ document.head.appendChild(mLink);
       });
 
       if(actualizados > 0) {
+        // 1. Backup
+        try { localStorage.setItem('s21_v3_backup_' + Date.now(), localStorage.getItem('s21_v3')); } catch(e) {}
+        const bkeys2 = Object.keys(localStorage).filter(k => k.startsWith('s21_v3_backup_')).sort();
+        while(bkeys2.length > 3) { localStorage.removeItem(bkeys2.shift()); }
+
+        // 2. Guardar local
         saveState();
+
+        // 3. Borrar actualizaciones
         await Promise.all(borrar.map(id => deleteDoc(doc(_fbDb, 'actualizaciones', id))));
+
+        // 4. Actualizar solo los publicadores que cambiaron
         const { setDoc, doc: fdoc } = await import("https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js");
         await Promise.all(
-          state.publicadores.map(p =>
-            setDoc(fdoc(_fbDb, 'publicadores', p.id), {
+          borrar.map(id => {
+            const p = state.publicadores.find(x => x.id === id);
+            if(!p) return Promise.resolve();
+            return setDoc(fdoc(_fbDb, 'publicadores', p.id), {
               id: p.id, apellido: p.apellido, nombre: p.nombre,
               grupo: p.grupo, genero: p.genero,
               nacimiento: p.nacimiento||'', bautismo: p.bautismo||'',
               telefono: p.telefono||'', emergencia: p.emergencia||{}
-            })
-          )
+            });
+          })
         );
         toast(`🔄 Auto-sync: ${actualizados} formulario${actualizados>1?'s':''} recibido${actualizados>1?'s':''}`);
         renderAll();
