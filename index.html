@@ -7664,6 +7664,28 @@ body{font-family:Arial,Helvetica,sans-serif;font-size:9.5pt;color:#000;backgroun
   w.document.close();
   toast(`\u2713 Resumen Últimos 12 Meses \u2014 ${nPubs} publicador${nPubs!==1?'es':''}`);
 }
+function infTipoChange() {
+  const tipo = document.querySelector('input[name="infTipo"]:checked')?.value;
+  const esMes = tipo === 'mes';
+  document.getElementById('infOpcionesMes').style.display    = esMes ? 'flex' : 'none';
+  document.getElementById('infOpcionesPeriodo').style.display = esMes ? 'none' : 'flex';
+  document.getElementById('infTipoMesLbl').style.borderColor    = esMes ? 'var(--accent)' : '';
+  document.getElementById('infTipoPeriodoLbl').style.borderColor = !esMes ? 'var(--accent)' : '';
+  // Actualizar info del período
+  if(!esMes) {
+    const n = parseInt(document.getElementById('infPeriodoSel').value);
+    const ahora = new Date();
+    let mCal = ahora.getMonth() - 1;
+    let aCal = ahora.getFullYear();
+    if(mCal < 0) { mCal = 11; aCal--; }
+    const MESES_CAL = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    const ultMes = MESES_CAL[mCal];
+    document.getElementById('infPeriodoInfo').textContent =
+      n === 0 ? `Año de servicio completo hasta ${ultMes} ${aCal}`
+              : `${n} meses hasta ${ultMes} ${aCal}`;
+  }
+}
+
 function abrirInformeGrupo() {
   const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
   const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
@@ -7672,13 +7694,21 @@ function abrirInformeGrupo() {
   )].sort();
   document.getElementById('infGrupoSel').innerHTML = grupos.map(g=>`<option value="${escHtml(g)}">${escHtml(g)}</option>`).join('');
 
-  // Año de servicio: actual y anterior
   const a = anioHoy();
   document.getElementById('infAnioSel').innerHTML = [a, a-1, a-2].map(y=>`<option value="${y}">${y}—${y+1}</option>`).join('');
 
-  // Preseleccionar mes actual
-  const mc = mesActual();
-  document.getElementById('infMesSel').value = mc.idx;
+  // Preseleccionar último mes vencido
+  const ahora = new Date();
+  let mCal = ahora.getMonth() - 1;
+  let aCal = ahora.getFullYear();
+  if(mCal < 0) { mCal = 11; aCal--; }
+  const mapMes = {8:0,9:1,10:2,11:3,0:4,1:5,2:6,3:7,4:8,5:9,6:10,7:11};
+  document.getElementById('infMesSel').value  = mapMes[mCal];
+  document.getElementById('infAnioSel').value = mCal >= 8 ? aCal : aCal - 1;
+
+  // Reset a modo "mes"
+  document.getElementById('infTipoMes').checked = true;
+  infTipoChange();
 
   document.getElementById('modalInformeGrupo').style.display = 'flex';
 }
@@ -7686,276 +7716,406 @@ function abrirInformeGrupo() {
 function generarInformeGrupo(modo) {
   const MESES_K    = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
   const MESES_FULL = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
-  const MESES_CAL  = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-  const MESES_CAL_FULL = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 
-  const grupo   = document.getElementById('infGrupoSel').value;
-  const mesIdx  = parseInt(document.getElementById('infMesSel').value); // 0=Sep..11=Ago
-  const anio    = parseInt(document.getElementById('infAnioSel').value);
-  const periodo = parseInt(document.getElementById('infPeriodoSel').value);
-  const mesKey  = MESES_K[mesIdx];
-  const mesNom  = MESES_FULL[mesIdx];
+  const tipo  = document.querySelector('input[name="infTipo"]:checked')?.value || 'mes';
+  const grupo = document.getElementById('infGrupoSel').value;
+
+  let mesIdx, anio, periodo;
+  if(tipo === 'mes') {
+    mesIdx  = parseInt(document.getElementById('infMesSel').value);
+    anio    = parseInt(document.getElementById('infAnioSel').value);
+    periodo = 1;
+  } else {
+    const ahora2 = new Date();
+    let mCal2 = ahora2.getMonth() - 1;
+    let aCal2 = ahora2.getFullYear();
+    if(mCal2 < 0) { mCal2 = 11; aCal2--; }
+    const mapMes2 = {8:0,9:1,10:2,11:3,0:4,1:5,2:6,3:7,4:8,5:9,6:10,7:11};
+    mesIdx  = mapMes2[mCal2];
+    anio    = mCal2 >= 8 ? aCal2 : aCal2 - 1;
+    periodo = parseInt(document.getElementById('infPeriodoSel').value);
+  }
+
+  const mesKey = MESES_K[mesIdx];
+  const mesNom = MESES_FULL[mesIdx];
 
   const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
   const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
-
   const pubs = state.publicadores.filter(p =>
     !_mudIds.has(p.id) && !_inacIds.has(p.id) && (p.grupo||'Sin grupo') === grupo
   ).sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
 
   if(!pubs.length) { toast('No hay publicadores en este grupo'); return; }
 
-  // Helper: obtener registro
   const getReg = (pub, a, m) => ((pub.registros||{})[a]||{})[m] || ((pub.registros||{})[String(a)]||{})[m] || {};
 
-  // Construir período de análisis — excluir el mes calendario actual si aún no ha cerrado
-  const hoyDate   = new Date();
-  const mesCalHoy = hoyDate.getMonth(); // 0=ene..11=dic
+  // ── Construir período ──
+  const hoyDate    = new Date();
+  const mesCalHoy  = hoyDate.getMonth();
   const anioCalHoy = hoyDate.getFullYear();
-  // Mapa MESES_K (Sep=0..Ago=11) → mes calendario (0=ene..11=dic)
-  const mapKtoCal = {Sep:8,Oct:9,Nov:10,Dic:11,Ene:0,Feb:1,Mar:2,Abr:3,May:4,Jun:5,Jul:6,Ago:7};
+  const mapKtoCal  = {Sep:8,Oct:9,Nov:10,Dic:11,Ene:0,Feb:1,Mar:2,Abr:3,May:4,Jun:5,Jul:6,Ago:7};
 
   const buildPeriodo = () => {
     if(periodo === 0) {
-      // Año de servicio completo
-      return MESES_K.map(m => ({ mesKey: m, anio: mesIdx < 4 ? anio : (m==='Sep'||m==='Oct'||m==='Nov'||m==='Dic' ? anio : anio+1), mesNom: MESES_FULL[MESES_K.indexOf(m)] }));
+      return MESES_K.map(m => ({ mesKey:m, anio: mesIdx<4?anio:(m==='Sep'||m==='Oct'||m==='Nov'||m==='Dic'?anio:anio+1), mesNom:MESES_FULL[MESES_K.indexOf(m)] }));
     }
-    // Últimos N meses desde el mes seleccionado
     const result = [];
-    for(let i = periodo-1; i >= 0; i--) {
-      let idx = mesIdx - i;
-      let a = anio;
-      if(idx < 0) { idx += 12; a--; }
-      result.push({ mesKey: MESES_K[idx], anio: a, mesNom: MESES_FULL[idx] });
+    for(let i=periodo-1; i>=0; i--) {
+      let idx=mesIdx-i, a=anio;
+      if(idx<0){idx+=12;a--;}
+      result.push({ mesKey:MESES_K[idx], anio:a, mesNom:MESES_FULL[idx] });
     }
     return result;
   };
 
-  // Filtrar mes en curso del período (el mes calendario actual si aún no cerró)
   const periodoMeses = buildPeriodo().filter(m => {
-    const cal = mapKtoCal[m.mesKey];
-    const anioCalMes = cal >= 8 ? m.anio : m.anio + 1;
-    // Excluir si es el mes calendario actual Y el año coincide (mes aún en curso)
-    return !(cal === mesCalHoy && anioCalMes === anioCalHoy);
+    const cal=mapKtoCal[m.mesKey];
+    const anioCalMes=cal>=8?m.anio:m.anio+1;
+    return !(cal===mesCalHoy && anioCalMes===anioCalHoy);
   });
 
-  // ── Tendencia: participación por mes en el período ──
+  // ── Tendencia por mes ──
   const tendencia = periodoMeses.map(m => {
-    const part = pubs.filter(p => getReg(p, m.anio, m.mesKey).particip).length;
-    return { mes: m.mesNom, anio: m.anio, part, pct: pubs.length > 0 ? Math.round((part/pubs.length)*100) : 0 };
+    const part = pubs.filter(p => getReg(p,m.anio,m.mesKey).particip).length;
+    const cursos = pubs.reduce((s,p)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
+    const horas  = pubs.reduce((s,p)=>s+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0);
+    const paux   = pubs.filter(p=>getReg(p,m.anio,m.mesKey).paux).length;
+    return { mes:m.mesNom, anio:m.anio, part, pct:pubs.length>0?Math.round((part/pubs.length)*100):0, cursos, horas, paux };
   });
-  const avgPct = tendencia.length > 0 ? Math.round(tendencia.reduce((s,t)=>s+t.pct,0)/tendencia.length) : 0;
+  const avgPct = tendencia.length>0 ? Math.round(tendencia.reduce((s,t)=>s+t.pct,0)/tendencia.length) : 0;
 
-  // ── Tendencia dirección ──
   let tendDir = '';
-  if(tendencia.length >= 2) {
+  if(tendencia.length>=2) {
     const diff = tendencia[tendencia.length-1].pct - tendencia[0].pct;
-    if(diff > 5) tendDir = `Tendencia al alza (+${diff}pp en el período)`;
-    else if(diff < -5) tendDir = `Tendencia a la baja (${diff}pp en el período)`;
-    else tendDir = `Tendencia estable (±${Math.abs(diff)}pp en el período)`;
+    if(diff>5) tendDir=`Tendencia al alza (+${diff}pp en el período)`;
+    else if(diff<-5) tendDir=`Tendencia a la baja (${diff}pp en el período)`;
+    else tendDir=`Tendencia estable (±${Math.abs(diff)}pp en el período)`;
   }
 
-  // ── Alertas por publicador ──
   const META_PREC_REG = 50;
   const META_PREC_AUX = 15;
+  const precReg = pubs.filter(p=>p.precursorReg||p.precursorEsp||p.misionero);
 
-  const alertasPub = pubs.map(p => {
-    const alertas = [];
-    const r = getReg(p, anio, mesKey);
-
-    // 1. No participó este mes
-    if(!r.particip) alertas.push({ tipo:'ausente', msg:'No participó este mes', nivel:'medio' });
-
-    // 2. Irregular: ausente este mes y al menos otro en los últimos 3 meses
-    const ult3m = [];
-    for(let i=2; i>=0; i--) {
-      let idx2 = mesIdx - i; let a2 = anio;
-      if(idx2 < 0) { idx2 += 12; a2--; }
-      ult3m.push({ mesKey: MESES_K[idx2], anio: a2 });
-    }
-    const ausUlt3 = ult3m.filter(m => !getReg(p, m.anio, m.mesKey).particip).length;
-    if(ausUlt3 >= 2 && ausUlt3 < 6) alertas.push({ tipo:'irregular', msg:`Irregular: ausente ${ausUlt3} de los últimos 3 meses`, nivel:'alto' });
-
-    // 3. En riesgo de inactividad: 6 meses sin participar
-    const ult6m = [];
-    for(let i=5; i>=0; i--) {
-      let idx2 = mesIdx - i; let a2 = anio;
-      if(idx2 < 0) { idx2 += 12; a2--; }
-      ult6m.push({ mesKey: MESES_K[idx2], anio: a2 });
-    }
-    const ausUlt6 = ult6m.filter(m => !getReg(p, m.anio, m.mesKey).particip).length;
-    if(ausUlt6 >= 6) alertas.push({ tipo:'inactivo', msg:'En riesgo de inactividad: 6 meses sin participar', nivel:'critico' });
-
-    // 4. Sin cursos bíblicos en el año de servicio
-    const tuvoCursos = MESES_K.some(m => parseInt(getReg(p, anio, m).cursos)||0 > 0);
-    if(!tuvoCursos) alertas.push({ tipo:'cursos', msg:'Sin cursos bíblicos en todo el año de servicio', nivel:'bajo' });
-
-    // 5. Precursor regular/especial/misionero: meta de horas
-    if(p.precursorReg || p.precursorEsp || p.misionero) {
-      const horas = parseFloat(r.horas)||0;
-      if(r.particip && horas < META_PREC_REG) {
-        alertas.push({ tipo:'horas', msg:`Horas bajo la meta: ${horas}h de ${META_PREC_REG}h requeridas`, nivel:'alto' });
+  // ── MODO MES: análisis puntual ──
+  if(tipo === 'mes') {
+    const alertasPub = pubs.map(p => {
+      const alertas = [];
+      const r = getReg(p,anio,mesKey);
+      if(!r.particip) alertas.push({tipo:'ausente',msg:'No participó este mes',nivel:'medio'});
+      const ult3m=[];
+      for(let i=2;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult3m.push({mesKey:MESES_K[idx],anio:a});}
+      const aus3=ult3m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+      if(aus3>=2&&aus3<6) alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus3} de los últimos 3 meses`,nivel:'alto'});
+      const ult6m=[];
+      for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
+      const aus6=ult6m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+      if(aus6>=6) alertas.push({tipo:'inactivo',msg:'En riesgo de inactividad: 6 meses sin participar',nivel:'critico'});
+      const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
+      if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
+      if(p.precursorReg||p.precursorEsp||p.misionero){
+        const h=parseFloat(r.horas)||0;
+        if(r.particip&&h<META_PREC_REG) alertas.push({tipo:'horas',msg:`Horas bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'alto'});
+        if(!r.particip) alertas.push({tipo:'horas',msg:'No reportó horas este mes',nivel:'alto'});
       }
-      if(!r.particip) alertas.push({ tipo:'horas', msg:`No reportó horas este mes`, nivel:'alto' });
-    }
-
-    // 6. Precursor auxiliar (que no sea continuo): meta 15h
-    if(r.paux && !p.precAuxContinuo) {
-      const horas = parseFloat(r.horas)||0;
-      if(horas < META_PREC_AUX) {
-        alertas.push({ tipo:'horas-aux', msg:`Precursor auxiliar: ${horas}h de ${META_PREC_AUX}h requeridas`, nivel:'medio' });
+      if(r.paux&&!p.precAuxContinuo){
+        const h=parseFloat(r.horas)||0;
+        if(h<META_PREC_AUX) alertas.push({tipo:'horas-aux',msg:`Precursor auxiliar: ${h}h de ${META_PREC_AUX}h requeridas`,nivel:'medio'});
       }
-    }
-
-    return { pub: p, r, alertas };
-  });
-
-  // Clasificaciones
-  const participaron   = alertasPub.filter(x => x.r.particip);
-  const noParticiparon = alertasPub.filter(x => !x.r.particip);
-  const conCursos      = alertasPub.filter(x => parseInt(x.r.cursos)||0 > 0);
-  const irregulares    = alertasPub.filter(x => x.alertas.some(a => a.tipo==='irregular'));
-  const enRiesgoInac   = alertasPub.filter(x => x.alertas.some(a => a.tipo==='inactivo'));
-  const sinCursos      = alertasPub.filter(x => x.alertas.some(a => a.tipo==='cursos'));
-  const precBajoMeta   = alertasPub.filter(x => x.alertas.some(a => a.tipo==='horas' || a.tipo==='horas-aux'));
-  const precReg        = pubs.filter(p => p.precursorReg || p.precursorEsp || p.misionero);
-  const precAux        = alertasPub.filter(x => x.r.paux);
-  const totalCursos    = alertasPub.reduce((s,x) => s + (parseInt(x.r.cursos)||0), 0);
-  const totalHoras     = precReg.reduce((s,p) => s + (parseFloat(getReg(p,anio,mesKey).horas)||0), 0);
-  const pct            = pubs.length > 0 ? Math.round((participaron.length/pubs.length)*100) : 0;
-
-  // ── Puntos fuertes y débiles ──
-  const fuertes = [];
-  const debiles = [];
-
-  if(pct >= 90) fuertes.push(`Alta participación este mes (${pct}%)`);
-  else if(pct < 70) debiles.push(`Baja participación este mes (${pct}%)`);
-
-  if(avgPct >= 85) fuertes.push(`Tendencia sólida en el período (${avgPct}% promedio)`);
-  else if(avgPct < 70) debiles.push(`Tendencia baja en el período (${avgPct}% promedio)`);
-
-  if(totalCursos > pubs.length * 0.3) fuertes.push(`Buen nivel de cursos bíblicos (${totalCursos} este mes)`);
-  else if(totalCursos === 0) debiles.push(`Sin cursos bíblicos reportados este mes`);
-
-  if(precAux.length > 0) fuertes.push(`${precAux.length} precursor${precAux.length>1?'es auxiliares':'auxiliar'} sirvieron este mes`);
-
-  if(precReg.length > 0) {
-    const cumplieron = precReg.filter(p => (parseFloat(getReg(p,anio,mesKey).horas)||0) >= META_PREC_REG).length;
-    if(cumplieron === precReg.length && precReg.length > 0) fuertes.push(`Todos los precursores regulares cumplieron la meta de ${META_PREC_REG}h`);
-    else if(cumplieron < precReg.length) debiles.push(`${precReg.length - cumplieron} precursor${(precReg.length-cumplieron)>1?'es regulares no cumplieron':'regular no cumplió'} la meta de ${META_PREC_REG}h`);
-  }
-
-  if(irregulares.length > 0) debiles.push(`${irregulares.length} publicador${irregulares.length>1?'es irregulares':'irregular'}`);
-  if(enRiesgoInac.length > 0) debiles.push(`${enRiesgoInac.length} publicador${enRiesgoInac.length>1?'es en riesgo de inactividad':'en riesgo de inactividad'}`);
-  if(sinCursos.length > pubs.length * 0.5) debiles.push(`${sinCursos.length} publicadores sin cursos bíblicos en todo el año`);
-
-  document.getElementById('modalInformeGrupo').style.display = 'none';
-
-  if(modo === 'whatsapp') {
-    // ── Formato WhatsApp ──
-    const lines = [];
-    lines.push(`📊 *INFORME DE GRUPO — ${grupo}*`);
-    lines.push(`📅 ${mesNom} ${mesIdx < 4 ? anio : anio+1} | Período: ${periodoMeses[0].mesNom} — ${periodoMeses[periodoMeses.length-1].mesNom}`);
-    lines.push('');
-    lines.push(`👥 *Total publicadores:* ${pubs.length}`);
-    lines.push(`✅ *Participaron:* ${participaron.length} (${pct}%)`);
-    lines.push(`❌ *No participaron:* ${noParticiparon.length}`);
-    if(totalCursos > 0) lines.push(`📖 *Cursos bíblicos:* ${totalCursos}`);
-    if(precAux.length > 0) lines.push(`⭐ *Precursores auxiliares:* ${precAux.length}`);
-    if(precReg.length > 0) lines.push(`🌟 *Precursores regulares/especiales:* ${precReg.length}${totalHoras > 0 ? ` (${totalHoras.toFixed(1)}h)` : ''}`);
-    lines.push('');
-
-    if(tendDir) { lines.push(`${tendDir}`); lines.push(''); }
-
-    if(tendencia.length > 1) {
-      lines.push('📈 *Tendencia de participación:*');
-      tendencia.forEach(t => lines.push(`  • ${t.mes}: ${t.part}/${pubs.length} (${t.pct}%)`));
-      lines.push('');
-    }
-
-    if(noParticiparon.length > 0) {
-      lines.push('No participaron este mes:');
-      noParticiparon.forEach(x => {
-        const nota = x.r.notas ? ` (${x.r.notas})` : '';
-        lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}${nota}`);
-      });
-      lines.push('');
-    }
-
-    if(irregulares.length > 0) {
-      lines.push('Irregulares (ausente 2+ de los ultimos 3 meses):');
-      irregulares.forEach(x => lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}`));
-      lines.push('');
-    }
-
-    if(enRiesgoInac.length > 0) {
-      lines.push('En riesgo de inactividad (6 meses sin participar):');
-      enRiesgoInac.forEach(x => lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}`));
-      lines.push('');
-    }
-
-    if(precBajoMeta.length > 0) {
-      lines.push('Precursores bajo la meta:');
-      precBajoMeta.forEach(x => {
-        const a = x.alertas.find(a => a.tipo==='horas'||a.tipo==='horas-aux');
-        lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}: ${a.msg}`);
-      });
-      lines.push('');
-    }
-
-    if(conCursos.length > 0) {
-      lines.push('Con cursos biblicos:');
-      conCursos.forEach(x => lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}: ${x.r.cursos} curso${x.r.cursos>1?'s':''}`));
-      lines.push('');
-    }
-
-    if(sinCursos.length > 0 && sinCursos.length <= 5) {
-      lines.push('Sin cursos biblicos en el año:');
-      sinCursos.forEach(x => lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}`));
-      lines.push('');
-    }
-
-    if(fuertes.length > 0) {
-      lines.push('💪 *Puntos fuertes:*');
-      fuertes.forEach(f => lines.push(`  ✓ ${f}`));
-      lines.push('');
-    }
-
-    if(debiles.length > 0) {
-      lines.push('🔧 *Áreas de atención:*');
-      debiles.forEach(d => lines.push(`  • ${d}`));
-      lines.push('');
-    }
-
-    lines.push(`_Generado desde S-21 Congregación_`);
-
-    const texto = lines.join('\n');
-    navigator.clipboard.writeText(texto).then(() => {
-      toast('✓ Informe copiado — pega en WhatsApp');
-    }).catch(() => {
-      // Fallback: abrir en nueva ventana
-      const w = window.open('', '_blank', 'width=600,height=800');
-      if(w) { w.document.write(`<pre style="font-family:sans-serif;padding:20px;white-space:pre-wrap">${texto}</pre>`); w.document.close(); }
+      return {pub:p,r,alertas};
     });
+
+    const participaron  = alertasPub.filter(x=>x.r.particip);
+    const noParticiparon= alertasPub.filter(x=>!x.r.particip);
+    const conCursos     = alertasPub.filter(x=>parseInt(x.r.cursos)||0>0);
+    const irregulares   = alertasPub.filter(x=>x.alertas.some(a=>a.tipo==='irregular'));
+    const enRiesgoInac  = alertasPub.filter(x=>x.alertas.some(a=>a.tipo==='inactivo'));
+    const sinCursos     = alertasPub.filter(x=>x.alertas.some(a=>a.tipo==='cursos'));
+    const precBajoMeta  = alertasPub.filter(x=>x.alertas.some(a=>a.tipo==='horas'||a.tipo==='horas-aux'));
+    const precAux       = alertasPub.filter(x=>x.r.paux);
+    const totalCursos   = alertasPub.reduce((s,x)=>s+(parseInt(x.r.cursos)||0),0);
+    const totalHoras    = precReg.reduce((s,p)=>s+(parseFloat(getReg(p,anio,mesKey).horas)||0),0);
+    const pct           = pubs.length>0?Math.round((participaron.length/pubs.length)*100):0;
+
+    const fuertes=[], debiles=[];
+    if(pct>=90) fuertes.push(`Alta participación este mes (${pct}%)`);
+    else if(pct<70) debiles.push(`Baja participación este mes (${pct}%)`);
+    if(avgPct>=85) fuertes.push(`Tendencia sólida en el período (${avgPct}% promedio)`);
+    else if(avgPct<70) debiles.push(`Tendencia baja en el período (${avgPct}% promedio)`);
+    if(totalCursos>pubs.length*0.3) fuertes.push(`Buen nivel de cursos bíblicos (${totalCursos} este mes)`);
+    else if(totalCursos===0) debiles.push(`Sin cursos bíblicos reportados este mes`);
+    if(precAux.length>0) fuertes.push(`${precAux.length} precursor${precAux.length>1?'es auxiliares':'auxiliar'} sirvieron este mes`);
+    if(precReg.length>0){
+      const cumplieron=precReg.filter(p=>(parseFloat(getReg(p,anio,mesKey).horas)||0)>=META_PREC_REG).length;
+      if(cumplieron===precReg.length&&precReg.length>0) fuertes.push(`Todos los precursores regulares cumplieron la meta de ${META_PREC_REG}h`);
+      else if(cumplieron<precReg.length) debiles.push(`${precReg.length-cumplieron} precursor${(precReg.length-cumplieron)>1?'es regulares no cumplieron':'regular no cumplió'} la meta de ${META_PREC_REG}h`);
+    }
+    if(irregulares.length>0) debiles.push(`${irregulares.length} publicador${irregulares.length>1?'es irregulares':'irregular'}`);
+    if(enRiesgoInac.length>0) debiles.push(`${enRiesgoInac.length} publicador${enRiesgoInac.length>1?'es en riesgo de inactividad':'en riesgo de inactividad'}`);
+    if(sinCursos.length>pubs.length*0.5) debiles.push(`${sinCursos.length} publicadores sin cursos bíblicos en todo el año`);
+
+    if(modo==='whatsapp') {
+      const lines=[];
+      lines.push(`INFORME DE GRUPO — ${grupo}`);
+      lines.push(`Mes: ${mesNom} ${mesIdx<4?anio:anio+1}`);
+      lines.push('');
+      lines.push(`Total publicadores: ${pubs.length}`);
+      lines.push(`Participaron: ${participaron.length} (${pct}%)`);
+      lines.push(`No participaron: ${noParticiparon.length}`);
+      if(totalCursos>0) lines.push(`Cursos bíblicos: ${totalCursos}`);
+      if(precAux.length>0) lines.push(`Precursores auxiliares: ${precAux.length}`);
+      if(precReg.length>0) lines.push(`Precursores regulares/especiales: ${precReg.length}${totalHoras>0?` (${totalHoras.toFixed(1)}h)`:''}`);
+      lines.push('');
+      if(tendDir){lines.push(tendDir);lines.push('');}
+      if(noParticiparon.length>0){
+        lines.push('No participaron este mes:');
+        noParticiparon.forEach(x=>{const nota=x.r.notas?` (${x.r.notas})`:'';lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}${nota}`);});
+        lines.push('');
+      }
+      if(irregulares.length>0){lines.push('Irregulares:');irregulares.forEach(x=>lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}`));lines.push('');}
+      if(enRiesgoInac.length>0){lines.push('En riesgo de inactividad:');enRiesgoInac.forEach(x=>lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}`));lines.push('');}
+      if(precBajoMeta.length>0){lines.push('Precursores bajo la meta:');precBajoMeta.forEach(x=>{const a=x.alertas.find(a=>a.tipo==='horas'||a.tipo==='horas-aux');lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}: ${a.msg}`);});lines.push('');}
+      if(conCursos.length>0){lines.push('Con cursos biblicos:');conCursos.forEach(x=>lines.push(`  - ${x.pub.apellido}, ${x.pub.nombre}: ${x.r.cursos}`));lines.push('');}
+      if(fuertes.length>0){lines.push('Puntos fuertes:');fuertes.forEach(f=>lines.push(`  + ${f}`));lines.push('');}
+      if(debiles.length>0){lines.push('Areas de atencion:');debiles.forEach(d=>lines.push(`  - ${d}`));lines.push('');}
+      lines.push('Generado desde S-21 Congregacion');
+      navigator.clipboard.writeText(lines.join('\n')).then(()=>toast('Informe copiado para WhatsApp')).catch(()=>{const w=window.open('','_blank','width=600,height=800');if(w){w.document.write(`<pre style="padding:20px;white-space:pre-wrap">${lines.join('\n')}</pre>`);w.document.close();}});
+      return;
+    }
+
+    // PDF modo mes
+    const w = window.open('','_blank','width=900,height=1100');
+    if(!w){toast('Activa las ventanas emergentes');return;}
+    document.getElementById('modalInformeGrupo').style.display='none';
+
+    const html = generarHTMLInformeMes({grupo,mesNom,mesIdx,anio,pubs,alertasPub,participaron,noParticiparon,conCursos,irregulares,enRiesgoInac,sinCursos,precBajoMeta,precAux,precReg,totalCursos,totalHoras,pct,fuertes,debiles,tendencia,tendDir,avgPct,getReg,mesKey,META_PREC_REG});
+    w.document.write(html); w.document.close();
+    toast(`Informe de ${grupo} — ${mesNom} generado`);
     return;
   }
 
-  // ── Formato PDF ──
-  const w = window.open('', '_blank', 'width=900,height=1100');
-  if(!w) { toast('⚠️ Activa las ventanas emergentes'); return; }
+  // ── MODO PERÍODO: solo tendencia y resumen acumulado ──
+  document.getElementById('modalInformeGrupo').style.display='none';
+  // Para el label del período, calcular el año calendario de cada mes
+  const getAnioCal = (mesKey, anioSrv) => { const cal = {Sep:8,Oct:9,Nov:10,Dic:11,Ene:0,Feb:1,Mar:2,Abr:3,May:4,Jun:5,Jul:6,Ago:7}[mesKey]; return cal >= 8 ? anioSrv : anioSrv + 1; };
+  const pm0 = periodoMeses[0], pmN = periodoMeses[periodoMeses.length-1];
+  const periodoLabel = periodo===0?`Año de servicio ${anio}—${anio+1}`:`${pm0.mesNom} ${getAnioCal(pm0.mesKey,pm0.anio)} — ${pmN.mesNom} ${getAnioCal(pmN.mesKey,pmN.anio)}`;
 
-  const bar = (pct, color='#4f46e5') => `
-    <div style="height:8px;background:#e2e8f0;border-radius:99px;overflow:hidden;margin-top:3px">
-      <div style="height:100%;width:${pct}%;background:${color};border-radius:99px"></div>
-    </div>`;
+  // Totales acumulados del período
+  const totalPartMeses = tendencia.reduce((s,t)=>s+t.part,0);
+  const totalCursosPer = tendencia.reduce((s,t)=>s+t.cursos,0);
+  const totalHorasPer  = tendencia.reduce((s,t)=>s+t.horas,0);
+  const maxPct = Math.max(...tendencia.map(t=>t.pct));
+  const minPct = Math.min(...tendencia.map(t=>t.pct));
+  const mesMasPart = tendencia.find(t=>t.pct===maxPct);
+  const mesMenosPart = tendencia.find(t=>t.pct===minPct);
 
-  const periodoLabel = periodo === 0
-    ? `Año de servicio ${anio}—${anio+1}`
-    : periodoMeses.length === 1
-      ? `${periodoMeses[0].mesNom} ${periodoMeses[0].anio}`
-      : `${periodoMeses[0].mesNom} — ${periodoMeses[periodoMeses.length-1].mesNom}`;
+  // Irregulares: cualquier publicador con al menos 1 ausencia en el período
+  const irregularesPer = pubs.filter(p => {
+    const aus = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+    return aus > 0;
+  });
 
-  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+  // Mejor y peor mes
+  const fuertesPer=[], debilesPer=[];
+  if(avgPct>=85) fuertesPer.push(`Participación promedio alta (${avgPct}%)`);
+  else if(avgPct<70) debilesPer.push(`Participación promedio baja (${avgPct}%)`);
+  if(tendencia.length>=2){
+    const diff=tendencia[tendencia.length-1].pct-tendencia[0].pct;
+    if(diff>5) fuertesPer.push(tendDir);
+    else if(diff<-5) debilesPer.push(tendDir);
+  }
+  if(totalCursosPer>0) fuertesPer.push(`${totalCursosPer} cursos bíblicos en el período`);
+  else debilesPer.push(`Sin cursos bíblicos reportados en el período`);
+  if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicadores ausentes más del 50% del período`);
+
+  if(modo==='whatsapp') {
+    const lines=[];
+    lines.push(`INFORME DE GRUPO — ${grupo}`);
+    lines.push(`Periodo: ${periodoLabel}`);
+    lines.push('');
+    lines.push(`Total publicadores: ${pubs.length}`);
+    lines.push(`Participacion promedio: ${avgPct}%`);
+    lines.push(`Cursos biblicos en el periodo: ${totalCursosPer}`);
+    if(totalHorasPer>0) lines.push(`Horas totales precursores: ${totalHorasPer.toFixed(1)}h`);
+    lines.push('');
+    lines.push('Tendencia de participacion:');
+    tendencia.forEach(t=>lines.push(`  ${t.mes} ${t.anio}: ${t.part}/${pubs.length} (${t.pct}%)`));
+    lines.push('');
+    if(mesMasPart) lines.push(`Mejor mes: ${mesMasPart.mes} ${mesMasPart.anio} (${maxPct}%)`);
+    if(mesMenosPart&&mesMenosPart!==mesMasPart) lines.push(`Mes mas bajo: ${mesMenosPart.mes} ${mesMenosPart.anio} (${minPct}%)`);
+    lines.push('');
+    if(irregularesPer.length>0){lines.push('Mas ausentistas del periodo:');irregularesPer.forEach(p=>lines.push(`  - ${p.apellido}, ${p.nombre}`));lines.push('');}
+    if(fuertesPer.length>0){lines.push('Puntos fuertes:');fuertesPer.forEach(f=>lines.push(`  + ${f}`));lines.push('');}
+    if(debilesPer.length>0){lines.push('Areas de atencion:');debilesPer.forEach(d=>lines.push(`  - ${d}`));lines.push('');}
+    lines.push('Generado desde S-21 Congregacion');
+    navigator.clipboard.writeText(lines.join('\n')).then(()=>toast('Informe copiado para WhatsApp')).catch(()=>{const w=window.open('','_blank','width=600,height=800');if(w){w.document.write(`<pre style="padding:20px;white-space:pre-wrap">${lines.join('\n')}</pre>`);w.document.close();}});
+    return;
+  }
+
+  // PDF modo período
+  const w2 = window.open('','_blank','width=900,height=1100');
+  if(!w2){toast('Activa las ventanas emergentes');return;}
+
+  const barChart = tendencia.map(t=>`
+    <div class="tend-row">
+      <div class="tend-mes">${t.mes} ${t.anio}</div>
+      <div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div>
+      <div class="tend-pct">${t.pct}%</div>
+      <div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div>
+      <div style="width:20mm;font-size:8pt;color:#64748b">${t.cursos>0?`${t.cursos} cursos`:''}</div>
+    </div>`).join('');
+
+  const htmlPer=`<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>Informe ${grupo} — ${periodoLabel}</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;font-size:9.5pt;color:#0f172a;background:#fff;padding:15mm 15mm 12mm}
+h1{font-size:16pt;font-weight:800;margin-bottom:2mm}
+h2{font-size:11pt;font-weight:800;color:#4f46e5;margin:6mm 0 3mm;border-bottom:2px solid #e2e8f0;padding-bottom:2mm}
+.header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6mm;padding-bottom:4mm;border-bottom:3px solid #4f46e5}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-bottom:4mm}
+.kpi{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:8px;padding:3mm 4mm}
+.kpi-val{font-size:20pt;font-weight:800;line-height:1.1}
+.kpi-lbl{font-size:7.5pt;color:#64748b;text-transform:uppercase;letter-spacing:.4px;margin-top:1mm}
+.kpi.verde{background:#f0fdf4;border-color:#86efac}.kpi.verde .kpi-val{color:#16a34a}
+.kpi.azul{background:#eef2ff;border-color:#c7d2fe}.kpi.azul .kpi-val{color:#4f46e5}
+.kpi.ambar{background:#fffbeb;border-color:#fcd34d}.kpi.ambar .kpi-val{color:#d97706}
+.tend-row{display:flex;align-items:center;gap:3mm;margin-bottom:2.5mm;font-size:9pt}
+.tend-mes{width:30mm;flex-shrink:0;color:#475569}
+.tend-bar{flex:1;height:14px;background:#e2e8f0;border-radius:6px;overflow:hidden}
+.tend-fill{height:100%;background:#4f46e5;border-radius:6px}
+.tend-pct{width:12mm;text-align:right;font-weight:700;color:#4f46e5;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:8.5pt}
+th{background:#f1f5f9;padding:2mm 3mm;text-align:left;font-weight:700;font-size:8pt;border:1px solid #e2e8f0}
+td{padding:2mm 3mm;border:1px solid #e2e8f0}
+tr:nth-child(even) td{background:#f8fafc}
+.punto{display:flex;align-items:flex-start;gap:4px;margin-bottom:2mm;font-size:9pt}
+.footer{margin-top:8mm;padding-top:3mm;border-top:1px solid #e2e8f0;font-size:7.5pt;color:#94a3b8;display:flex;justify-content:space-between}
+.btn-imp{background:#4f46e5;color:#fff;border:none;padding:8px 24px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:Arial}
+.no-print{text-align:center;margin-bottom:6mm}
+@media print{.no-print{display:none}body{padding:10mm 12mm 8mm}}
+</style></head><body>
+<div class="no-print"><button class="btn-imp" onclick="window.print()">Imprimir / Guardar PDF</button></div>
+<div class="header">
+  <div>
+    <div style="font-size:8pt;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2mm">Informe de Grupo — Análisis por Período</div>
+    <h1>${escHtml(grupo)}</h1>
+    <div style="font-size:10pt;color:#475569;margin-top:1mm">${escHtml(periodoLabel)}</div>
+  </div>
+  <div style="text-align:right;font-size:8pt;color:#94a3b8">
+    <div>S-21 Congregación</div>
+    <div>${new Date().toLocaleDateString('es-CO',{day:'2-digit',month:'long',year:'numeric'})}</div>
+  </div>
+</div>
+
+<h2>Resumen del período</h2>
+<div class="kpis">
+  <div class="kpi azul"><div class="kpi-val">${pubs.length}</div><div class="kpi-lbl">Publicadores</div></div>
+  <div class="kpi ${avgPct>=85?'verde':avgPct<70?'':'azul'}"><div class="kpi-val">${avgPct}%</div><div class="kpi-lbl">Participación promedio</div></div>
+  <div class="kpi"><div class="kpi-val">${totalCursosPer}</div><div class="kpi-lbl">Cursos bíblicos</div></div>
+  <div class="kpi ${irregularesPer.length>0?'ambar':'verde'}"><div class="kpi-val">${irregularesPer.length}</div><div class="kpi-lbl">Irregulares</div></div>
+</div>
+${totalHorasPer>0?`<div class="kpis"><div class="kpi azul"><div class="kpi-val">${totalHorasPer.toFixed(1)}h</div><div class="kpi-lbl">Horas precursores (total período)</div></div><div class="kpi"><div class="kpi-val">${precReg.length}</div><div class="kpi-lbl">Precursores regulares</div></div>
+<div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
+<div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div></div>`:`<div class="kpis">
+<div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
+<div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div>
+<div class="kpi"></div><div class="kpi"></div></div>`}
+
+<h2>Tendencia de participación</h2>
+${tendDir?`<div style="font-size:10pt;font-weight:700;color:#4f46e5;margin-bottom:4mm">${tendDir}</div>`:''}
+${barChart}
+
+<h2>Resumen por mes</h2>
+<table>
+  <tr>
+    <th>Mes</th><th style="text-align:center">Participaron</th><th style="text-align:center">%</th><th style="text-align:center">Cursos</th><th style="text-align:center">P. Aux.</th>${totalHorasPer>0?'<th style="text-align:center">Horas</th>':''}
+  </tr>
+  ${tendencia.map(t=>`<tr>
+    <td style="font-weight:600">${t.mes} ${t.anio}</td>
+    <td style="text-align:center">${t.part}/${pubs.length}</td>
+    <td style="text-align:center;font-weight:700;color:${t.pct>=85?'#16a34a':t.pct<70?'#ef4444':'#4f46e5'}">${t.pct}%</td>
+    <td style="text-align:center">${t.cursos||'—'}</td>
+    <td style="text-align:center">${t.paux||'—'}</td>
+    ${totalHorasPer>0?`<td style="text-align:center">${t.horas>0?t.horas.toFixed(1):'—'}</td>`:''}
+  </tr>`).join('')}
+</table>
+
+<h2>Detalle por publicador</h2>
+<table style="font-size:8pt">
+  <tr>
+    <th style="width:22%">Publicador</th>
+    ${periodoMeses.map(m=>`<th style="text-align:center;width:${Math.floor(52/periodoMeses.length)}%">${m.mesNom.substring(0,3)}<br>${m.anio}</th>`).join('')}
+    <th style="text-align:center">Ausencias</th>
+    <th style="text-align:center">Cursos</th>
+    ${totalHorasPer>0?'<th style="text-align:center">Horas</th>':''}
+    <th style="min-width:120px">Estado</th>
+  </tr>
+  ${pubs.map(p => {
+    const celdas = periodoMeses.map(m => {
+      const r = getReg(p, m.anio, m.mesKey);
+      const color = r.particip ? '#16a34a' : '#ef4444';
+      const bg = r.particip ? '#f0fdf4' : '#fef2f2';
+      const txt = r.particip ? 'Si' : 'No';
+      return `<td style="text-align:center;background:${bg};color:${color};font-weight:700">${txt}</td>`;
+    }).join('');
+    const ausencias = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+    const cursosTot = periodoMeses.reduce((s,m)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
+    const horasTot  = periodoMeses.reduce((s,m)=>s+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0);
+    const esIrreg   = ausencias > periodoMeses.length * 0.5;
+    const esInact   = ausencias >= periodoMeses.length;
+    // Estado: inactivo=ausente todo el período, irregular=1+ ausencias, regular=ninguna
+    const sinCursosPer = !MESES_K.some(m => parseInt(getReg(p, anio >= 8 ? anio : anio, m).cursos)||0 > 0);
+    const alertasList = [];
+    if(esInact) alertasList.push('<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Inactivo</span>');
+    else if(esIrreg) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
+    else if(ausencias > 0) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
+    else alertasList.push('<span style="background:#f0fdf4;color:#16a34a;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Regular</span>');
+    // Alerta cursos bíblicos: sin cursos en el período seleccionado
+    const tuvoCursosPer = periodoMeses.some(m => parseInt(getReg(p, m.anio, m.mesKey).cursos)||0 > 0);
+    if(!tuvoCursosPer) alertasList.push('<span style="background:#f8fafc;color:#64748b;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Sin cursos bíblicos</span>');
+    // Alerta precursor bajo meta
+    if(p.precursorReg||p.precursorEsp||p.misionero) {
+      const horasMes = periodoMeses.filter(m=>(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0) < 50 && getReg(p,m.anio,m.mesKey).particip).length;
+      if(horasMes > 0) alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Bajo meta ${horasMes} mes${horasMes>1?'es':''}</span>`);
+    }
+    const estado = alertasList.join('');
+    const rowBg = esInact?'background:#fff1f2':ausencias>0?'background:#fffbeb':'';
+    return `<tr style="${rowBg}">
+      <td style="font-weight:600">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</td>
+      ${celdas}
+      <td style="text-align:center;font-weight:700;color:${ausencias>0?'#ef4444':'#16a34a'}">${ausencias}</td>
+      <td style="text-align:center">${cursosTot||'—'}</td>
+      ${totalHorasPer>0?`<td style="text-align:center">${horasTot>0?horasTot.toFixed(1):'—'}</td>`:''}
+      <td style="white-space:nowrap">${estado}</td>
+    </tr>`;
+  }).join('')}
+</table>
+
+${fuertesPer.length>0||debilesPer.length>0?`
+<h2>Análisis</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm">
+  ${fuertesPer.length>0?`<div><h3 style="font-size:9.5pt;font-weight:700;color:#16a34a;margin-bottom:3mm">Puntos fuertes</h3>${fuertesPer.map(f=>`<div class="punto"><span>+</span><span>${f}</span></div>`).join('')}</div>`:'<div></div>'}
+  ${debilesPer.length>0?`<div><h3 style="font-size:9.5pt;font-weight:700;color:#ef4444;margin-bottom:3mm">Areas de atención</h3>${debilesPer.map(d=>`<div class="punto"><span>-</span><span>${d}</span></div>`).join('')}</div>`:'<div></div>'}
+</div>`:''}
+
+<div class="footer">
+  <span>S-21 Congregación — Informe generado automáticamente</span>
+  <span>${new Date().toLocaleString('es-CO')}</span>
+</div>
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();},500);});<\/script>
+</body></html>`;
+
+  w2.document.write(htmlPer);
+  w2.document.close();
+  toast(`Informe de ${grupo} — Período generado`);
+}
+
+function generarHTMLInformeMes({grupo,mesNom,mesIdx,anio,pubs,alertasPub,participaron,noParticiparon,conCursos,irregulares,enRiesgoInac,sinCursos,precBajoMeta,precAux,precReg,totalCursos,totalHoras,pct,fuertes,debiles,tendencia,tendDir,avgPct,getReg,mesKey,META_PREC_REG}) {
+  const escH = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  const periodoLabel = tendencia.length>1?`${tendencia[0].mes} ${tendencia[0].anio} — ${tendencia[tendencia.length-1].mes} ${tendencia[tendencia.length-1].anio}`:`${mesNom} ${mesIdx<4?anio:anio+1}`;
+
+  return `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
 <title>Informe ${grupo} — ${mesNom}</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -7964,7 +8124,7 @@ h1{font-size:16pt;font-weight:800;margin-bottom:2mm}
 h2{font-size:11pt;font-weight:800;color:#4f46e5;margin:6mm 0 3mm;border-bottom:2px solid #e2e8f0;padding-bottom:2mm}
 h3{font-size:9.5pt;font-weight:700;color:#334155;margin:4mm 0 2mm}
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6mm;padding-bottom:4mm;border-bottom:3px solid #4f46e5}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-bottom:0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-bottom:4mm}
 .kpi{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:8px;padding:3mm 4mm}
 .kpi-val{font-size:20pt;font-weight:800;line-height:1.1}
 .kpi-lbl{font-size:7.5pt;color:#64748b;text-transform:uppercase;letter-spacing:.4px;margin-top:1mm}
@@ -7979,167 +8139,79 @@ th{background:#f1f5f9;padding:2mm 3mm;text-align:left;font-weight:700;font-size:
 td{padding:2mm 3mm;border:1px solid #e2e8f0;vertical-align:middle}
 tr:nth-child(even) td{background:#f8fafc}
 .tag{display:inline-block;padding:1px 6px;border-radius:4px;font-size:7.5pt;font-weight:700}
-.tag-si{background:#dcfce7;color:#16a34a}
-.tag-no{background:#fee2e2;color:#ef4444}
-.tag-irr{background:#fef3c7;color:#d97706}
-.punto{display:flex;align-items:flex-start;gap:4px;margin-bottom:2mm;font-size:9pt}
-.punto-ico{flex-shrink:0;font-size:11pt;line-height:1.2}
+.tag-si{background:#dcfce7;color:#16a34a}.tag-no{background:#fee2e2;color:#ef4444}
 .tend-row{display:flex;align-items:center;gap:3mm;margin-bottom:2mm;font-size:9pt}
 .tend-mes{width:28mm;flex-shrink:0;color:#475569}
 .tend-bar{flex:1;height:12px;background:#e2e8f0;border-radius:6px;overflow:hidden}
-.tend-fill{height:100%;background:#4f46e5;border-radius:6px;transition:width .3s}
+.tend-fill{height:100%;background:#4f46e5;border-radius:6px}
 .tend-pct{width:12mm;text-align:right;font-weight:700;color:#4f46e5;flex-shrink:0}
+.punto{display:flex;align-items:flex-start;gap:4px;margin-bottom:2mm;font-size:9pt}
 .footer{margin-top:8mm;padding-top:3mm;border-top:1px solid #e2e8f0;font-size:7.5pt;color:#94a3b8;display:flex;justify-content:space-between}
 .btn-imp{background:#4f46e5;color:#fff;border:none;padding:8px 24px;border-radius:6px;font-size:13px;font-weight:700;cursor:pointer;font-family:Arial}
 .no-print{text-align:center;margin-bottom:6mm}
 @media print{.no-print{display:none}body{padding:10mm 12mm 8mm}}
 </style></head><body>
-
-<div class="no-print">
-  <button class="btn-imp" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
-</div>
-
+<div class="no-print"><button class="btn-imp" onclick="window.print()">Imprimir / Guardar PDF</button></div>
 <div class="header">
   <div>
     <div style="font-size:8pt;color:#64748b;text-transform:uppercase;letter-spacing:.5px;margin-bottom:2mm">Informe de Grupo</div>
-    <h1>${escHtml(grupo)}</h1>
-    <div style="font-size:10pt;color:#475569;margin-top:1mm">${mesNom} ${mesIdx < 4 ? anio : anio+1} &nbsp;·&nbsp; Período: ${escHtml(periodoLabel)}</div>
+    <h1>${escH(grupo)}</h1>
+    <div style="font-size:10pt;color:#475569;margin-top:1mm">${mesNom} ${mesIdx<4?anio:anio+1}</div>
   </div>
   <div style="text-align:right;font-size:8pt;color:#94a3b8">
     <div>S-21 Congregación</div>
     <div>${new Date().toLocaleDateString('es-CO',{day:'2-digit',month:'long',year:'numeric'})}</div>
   </div>
 </div>
-
 <h2>Resumen del mes</h2>
 <div class="kpis">
   <div class="kpi ${pct>=90?'verde':pct>=70?'azul':'rojo'}">
-    <div class="kpi-val">${pct}%</div>
-    <div class="kpi-lbl">Participación</div>
+    <div class="kpi-val">${pct}%</div><div class="kpi-lbl">Participación</div>
     <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:${pct>=90?'#16a34a':pct>=70?'#4f46e5':'#ef4444'}"></div></div>
   </div>
-  <div class="kpi verde">
-    <div class="kpi-val">${participaron.length}</div>
-    <div class="kpi-lbl">Participaron</div>
-  </div>
-  <div class="kpi ${noParticiparon.length>0?'rojo':'verde'}">
-    <div class="kpi-val">${noParticiparon.length}</div>
-    <div class="kpi-lbl">No participaron</div>
-  </div>
-  <div class="kpi azul">
-    <div class="kpi-val">${pubs.length}</div>
-    <div class="kpi-lbl">Total grupo</div>
-  </div>
+  <div class="kpi verde"><div class="kpi-val">${participaron.length}</div><div class="kpi-lbl">Participaron</div></div>
+  <div class="kpi ${noParticiparon.length>0?'rojo':'verde'}"><div class="kpi-val">${noParticiparon.length}</div><div class="kpi-lbl">No participaron</div></div>
+  <div class="kpi azul"><div class="kpi-val">${pubs.length}</div><div class="kpi-lbl">Total grupo</div></div>
 </div>
-<div class="kpis" style="margin-top:4mm">
-  <div class="kpi">
-    <div class="kpi-val">${totalCursos}</div>
-    <div class="kpi-lbl">Cursos bíblicos</div>
-  </div>
-  <div class="kpi ${precAux.length>0?'ambar':''}">
-    <div class="kpi-val">${precAux.length}</div>
-    <div class="kpi-lbl">Precursores aux.</div>
-  </div>
-  <div class="kpi ${precReg.length>0?'ambar':''}">
-    <div class="kpi-val">${precReg.length}</div>
-    <div class="kpi-lbl">Prec. regulares</div>
-  </div>
-  <div class="kpi ${irregulares.length>0?'rojo':'verde'}">
-    <div class="kpi-val">${irregulares.length}</div>
-    <div class="kpi-lbl">Irregulares</div>
-  </div>
+<div class="kpis">
+  <div class="kpi"><div class="kpi-val">${totalCursos}</div><div class="kpi-lbl">Cursos bíblicos</div></div>
+  <div class="kpi ${precAux.length>0?'ambar':''}"><div class="kpi-val">${precAux.length}</div><div class="kpi-lbl">Prec. auxiliares</div></div>
+  <div class="kpi ${precReg.length>0?'ambar':''}"><div class="kpi-val">${precReg.length}</div><div class="kpi-lbl">Prec. regulares</div></div>
+  <div class="kpi ${irregulares.length>0?'rojo':'verde'}"><div class="kpi-val">${irregulares.length}</div><div class="kpi-lbl">Irregulares</div></div>
 </div>
-
-${tendencia.length > 1 ? `
+${tendencia.length>1?`
 <h2>Tendencia de participación</h2>
-${tendDir ? `<div style="font-size:10pt;font-weight:700;color:#4f46e5;margin-bottom:4mm">${tendDir}</div>` : ''}
-${tendencia.map(t => `
-  <div class="tend-row">
-    <div class="tend-mes">${t.mes} ${t.anio}</div>
-    <div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div>
-    <div class="tend-pct">${t.pct}%</div>
-    <div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div>
-  </div>`).join('')}
-` : ''}
-
+${tendDir?`<div style="font-size:10pt;font-weight:700;color:#4f46e5;margin-bottom:4mm">${tendDir}</div>`:''}
+${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.anio}</div><div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div><div class="tend-pct">${t.pct}%</div><div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div></div>`).join('')}`:''}
 <h2>Detalle de publicadores</h2>
 <table>
-  <tr>
-    <th style="width:28%">Publicador</th>
-    <th style="width:8%;text-align:center">Participó</th>
-    <th style="width:7%;text-align:center">Cursos</th>
-    <th style="width:7%;text-align:center">P. Aux.</th>
-    <th style="width:7%;text-align:center">Horas</th>
-    <th style="width:28%">Alertas</th>
-    <th>Notas</th>
-  </tr>
-  ${alertasPub.map(({pub: p, r, alertas}) => {
-    const nivelMax = alertas.reduce((max,a) => {
-      const order = {critico:4,alto:3,medio:2,bajo:1};
-      return order[a.tipo==='inactivo'?'critico':a.nivel]||0 > order[max]||0 ? a.nivel : max;
-    }, '');
-    const rowBg = nivelMax==='critico'?'background:#fff1f2':nivelMax==='alto'?'background:#fffbeb':nivelMax==='medio'?'background:#f0f9ff':'';
-    const alertasHtml = alertas.map(a => {
-      const color = a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';
-      return `<div style="font-size:7pt;color:${color};line-height:1.4">• ${a.msg}</div>`;
-    }).join('');
-    return `<tr style="${rowBg}">
-      <td style="font-weight:600">${escHtml(p.apellido)}, ${escHtml(p.nombre)}${p.precAuxContinuo?'<br><span style=\"font-size:7pt;color:#7c3aed;font-weight:400\">Auxiliar continuo</span>':''}</td>
-      <td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Sí':'No'}</span></td>
-      <td style="text-align:center">${r.cursos||'—'}</td>
-      <td style="text-align:center">${r.paux?'Si':'—'}</td>
-      <td style="text-align:center">${r.horas||'—'}</td>
-      <td>${alertasHtml || '<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td>
-      <td style="font-size:8pt;color:#475569">${escHtml(r.notas||'')}</td>
-    </tr>`;
+  <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
+  ${alertasPub.map(({pub:p,r,alertas})=>{
+    const alertasHtml=alertas.map(a=>{const color=a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
+    const rowBg=alertas.some(a=>a.tipo==='inactivo')?'background:#fff1f2':alertas.some(a=>a.tipo==='irregular')?'background:#fffbeb':'';
+    return `<tr style="${rowBg}"><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Si':'No'}</span></td><td style="text-align:center">${r.cursos||'—'}</td><td style="text-align:center">${r.paux?'Si':'—'}</td><td style="text-align:center">${r.horas||'—'}</td><td>${alertasHtml||'<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td><td style="font-size:8pt;color:#475569">${escH(r.notas||'')}</td></tr>`;
   }).join('')}
 </table>
-
-${(enRiesgoInac.length > 0 || irregulares.length > 0 || precBajoMeta.length > 0) ? `
+${(enRiesgoInac.length>0||irregulares.length>0||precBajoMeta.length>0)?`
 <h2>Publicadores con alertas</h2>
 <table>
-  <tr>
-    <th style="width:30%">Publicador</th>
-    <th>Alertas</th>
-  </tr>
-  ${alertasPub.filter(x => x.alertas.length > 0).map(({pub: p, alertas}) => {
-    const alertasHtml = alertas.map(a => {
-      const color = a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';
-      const bg = a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':'#f8fafc';
-      return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;
-    }).join('');
-    return `<tr><td style="font-weight:600">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</td><td>${alertasHtml}</td></tr>`;
+  <tr><th style="width:30%">Publicador</th><th>Alertas</th></tr>
+  ${alertasPub.filter(x=>x.alertas.length>0).map(({pub:p,alertas})=>{
+    const aHtml=alertas.map(a=>{const color=a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
+    return `<tr><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td>${aHtml}</td></tr>`;
   }).join('')}
-</table>
-` : ''}
-
-${fuertes.length > 0 || debiles.length > 0 ? `
+</table>`:''}
+${fuertes.length>0||debiles.length>0?`
 <h2>Análisis</h2>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:6mm">
-  ${fuertes.length > 0 ? `
-  <div>
-    <h3 style="color:#16a34a">💪 Puntos fuertes</h3>
-    ${fuertes.map(f=>`<div class="punto"><span class="punto-ico">✓</span><span>${f}</span></div>`).join('')}
-  </div>` : '<div></div>'}
-  ${debiles.length > 0 ? `
-  <div>
-    <h3 style="color:#ef4444">🔧 Áreas de atención</h3>
-    ${debiles.map(d=>`<div class="punto"><span class="punto-ico">•</span><span>${d}</span></div>`).join('')}
-  </div>` : '<div></div>'}
-</div>` : ''}
-
-<div class="footer">
-  <span>S-21 Congregación — Informe generado automáticamente</span>
-  <span>${new Date().toLocaleString('es-CO')}</span>
-</div>
-
+  ${fuertes.length>0?`<div><h3 style="color:#16a34a">Puntos fuertes</h3>${fuertes.map(f=>`<div class="punto"><span>+</span><span>${f}</span></div>`).join('')}</div>`:'<div></div>'}
+  ${debiles.length>0?`<div><h3 style="color:#ef4444">Areas de atención</h3>${debiles.map(d=>`<div class="punto"><span>-</span><span>${d}</span></div>`).join('')}</div>`:'<div></div>'}
+</div>`:''}
+<div class="footer"><span>S-21 Congregación — Informe generado automáticamente</span><span>${new Date().toLocaleString('es-CO')}</span></div>
 <script>window.addEventListener('load',function(){setTimeout(function(){window.print();},500);});<\/script>
 </body></html>`;
-
-  w.document.write(html);
-  w.document.close();
-  toast(`✓ Informe de ${grupo} generado`);
 }
+
 
 function descargarS21Grupo() {
   const sel = document.getElementById('selectGrupoDescarga');
@@ -11848,38 +11920,79 @@ document.addEventListener('change', e => {
       <button class="modal-x" onclick="document.getElementById('modalInformeGrupo').style.display='none'">×</button>
     </div>
     <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:16px">
+
+      <!-- Grupo -->
       <div class="form-group">
         <label class="form-label">Grupo</label>
         <select class="form-input form-select" id="infGrupoSel"></select>
       </div>
-      <div class="form-row">
+
+      <!-- Tipo de análisis -->
+      <div class="form-group">
+        <label class="form-label">Tipo de análisis</label>
+        <div style="display:flex;gap:8px;margin-top:4px">
+          <label style="flex:1;display:flex;align-items:center;gap:8px;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:border-color .15s" id="infTipoMesLbl">
+            <input type="radio" name="infTipo" value="mes" id="infTipoMes" style="accent-color:var(--accent)" checked onchange="infTipoChange()">
+            <div>
+              <div style="font-weight:700;font-size:13px">Por mes</div>
+              <div style="font-size:11px;color:var(--ink-3)">Informe de un mes específico</div>
+            </div>
+          </label>
+          <label style="flex:1;display:flex;align-items:center;gap:8px;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:border-color .15s" id="infTipoPeriodoLbl">
+            <input type="radio" name="infTipo" value="periodo" id="infTipoPeriodo" style="accent-color:var(--accent)" onchange="infTipoChange()">
+            <div>
+              <div style="font-weight:700;font-size:13px">Por período</div>
+              <div style="font-size:11px;color:var(--ink-3)">Tendencia de varios meses</div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Opciones modo MES -->
+      <div id="infOpcionesMes" style="display:flex;flex-direction:column;gap:12px">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Mes</label>
+            <select class="form-input form-select" id="infMesSel">
+              <option value="0">Septiembre</option><option value="1">Octubre</option>
+              <option value="2">Noviembre</option><option value="3">Diciembre</option>
+              <option value="4">Enero</option><option value="5">Febrero</option>
+              <option value="6">Marzo</option><option value="7">Abril</option>
+              <option value="8">Mayo</option><option value="9">Junio</option>
+              <option value="10">Julio</option><option value="11">Agosto</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Año de servicio</label>
+            <select class="form-input form-select" id="infAnioSel"></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opciones modo PERÍODO -->
+      <div id="infOpcionesPeriodo" style="display:none;flex-direction:column;gap:12px">
         <div class="form-group">
-          <label class="form-label">Mes</label>
-          <select class="form-input form-select" id="infMesSel">
-            <option value="0">Septiembre</option><option value="1">Octubre</option>
-            <option value="2">Noviembre</option><option value="3">Diciembre</option>
-            <option value="4">Enero</option><option value="5">Febrero</option>
-            <option value="6">Marzo</option><option value="7">Abril</option>
-            <option value="8">Mayo</option><option value="9">Junio</option>
-            <option value="10">Julio</option><option value="11">Agosto</option>
+          <label class="form-label">Período</label>
+          <select class="form-input form-select" id="infPeriodoSel">
+            <option value="3">Últimos 3 meses</option>
+            <option value="6">Últimos 6 meses</option>
+            <option value="12">Último año</option>
+            <option value="0">Año de servicio completo</option>
           </select>
         </div>
-        <div class="form-group">
-          <label class="form-label">Año de servicio</label>
-          <select class="form-input form-select" id="infAnioSel"></select>
+        <div style="background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:var(--r);padding:10px 14px;font-size:11px;color:var(--accent)" id="infPeriodoInfo">
+          Se analizarán desde el último mes vencido hacia atrás.
         </div>
       </div>
-      <div class="form-group">
-        <label class="form-label">Período de análisis de tendencias</label>
-        <select class="form-input form-select" id="infPeriodoSel">
-          <option value="1">Solo este mes</option>
-          <option value="3" selected>Últimos 3 meses</option>
-          <option value="6">Últimos 6 meses</option>
-          <option value="12">Último año</option>
-          <option value="0">Año de servicio completo</option>
-        </select>
-      </div>
+
     </div>
+    <div class="modal-ft">
+      <button class="btn-cancel" onclick="document.getElementById('modalInformeGrupo').style.display='none'">Cancelar</button>
+      <button class="btn-save" onclick="generarInformeGrupo('pdf')">⬇ PDF</button>
+      <button class="btn-save" style="background:#25d366;border-color:#25d366" onclick="generarInformeGrupo('whatsapp')">💬 WhatsApp</button>
+    </div>
+  </div>
+</div>
     <div class="modal-ft">
       <button class="btn-cancel" onclick="document.getElementById('modalInformeGrupo').style.display='none'">Cancelar</button>
       <button class="btn-save" onclick="generarInformeGrupo('pdf')">⬇ PDF</button>
