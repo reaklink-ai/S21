@@ -12532,7 +12532,7 @@ document.head.appendChild(mLink);
           })
         );
         toast(`✅ ${actualizados} publicador${actualizados>1?'es':''}  actualizado${actualizados>1?'s':''} desde el formulario`);
-        renderAll();
+        renderLista();
       } else {
         toast('✓ Sin actualizaciones que aplicar');
       }
@@ -12607,7 +12607,7 @@ document.head.appendChild(mLink);
           })
         );
         toast(`🔄 Auto-sync: ${actualizados} formulario${actualizados>1?'s':''} recibido${actualizados>1?'s':''}`);
-        renderAll();
+        renderLista();
       }
     } catch(e) {
       console.error('Auto-sync error:', e);
