@@ -5429,7 +5429,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Lina Galindo ",
+        "relacion": "Madre",
+        "tel": "3118317856",
+        "tel2": "3208386196",
+        "direccion": "Calle 10 #14a-85 sur Mosquera Cund. Sol creciente ",
+        "notasMed": "O+"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -5605,7 +5612,8 @@
           "horas": 76,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779285925925
     },
     {
       "id": "mmm9qi4l7kbw",
@@ -32559,7 +32567,7 @@
       }
     }
   ],
-  "_lastModified": 1779285798926,
+  "_lastModified": 1779286056967,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36377,6 +36385,13 @@
       "nombre": "Judith",
       "grupo": "Grupo 4",
       "ts": 1779240208419
+    },
+    {
+      "id": "mmm9qi4lfo92",
+      "apellido": "Chacon",
+      "nombre": "Camila",
+      "grupo": "Grupo 10",
+      "ts": 1779285925925
     }
   ]
 }
