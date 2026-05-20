@@ -32523,7 +32523,7 @@
       "nombre": "Samuel_Ga",
       "rol": "anciano",
       "grupo": "Grupo 5",
-      "pinHash": "5f054b9f96b34092356119bc8051f550712467c25cb4fa8e71560b96b6a1ac11"
+      "pinHash": "2f385c53ef6eb27bea78392a50c1becd7948885996f4109176d91cc34d44c7f8"
     },
     {
       "id": "mn0unrhh",
@@ -32584,7 +32584,7 @@
       }
     }
   ],
-  "_lastModified": 1779293158626,
+  "_lastModified": 1779310037353,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34753,6 +34753,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1779309754271,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779305472815,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779290425969,
       "user": "Administrador",
       "rol": "admin",
@@ -36335,22 +36351,6 @@
       "accion": "Horas editadas",
       "detalle": "Beleño, Laura · Abr 2025: horas=35",
       "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1778157687560,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Abr 2025: horas=45",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1778157687554,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Abr 2025: horas=45",
-      "pubId": "mmm9qi4kqpna"
     }
   ],
   "formHistorial": [
