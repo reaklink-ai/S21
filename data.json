@@ -32584,7 +32584,7 @@
       }
     }
   ],
-  "_lastModified": 1779310717302,
+  "_lastModified": 1779319589492,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34753,6 +34753,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1779319014292,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1779309754271,
       "user": "Administrador",
       "rol": "admin",
@@ -34766,6 +34774,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779298663803,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -34873,6 +34889,14 @@
       "pubId": "mmm9qi4l2zz4"
     },
     {
+      "ts": 1779207090065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1779206976647,
       "user": "Administrador",
       "rol": "admin",
@@ -34918,6 +34942,54 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779055298259,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1779029083774,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1779026570155,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1778972609247,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Perez, Angelica · datos generales",
+      "pubId": "mmm9qi4rokye"
+    },
+    {
+      "ts": 1778972597088,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Perez, Angelica · datos generales",
+      "pubId": "mmm9qi4rokye"
+    },
+    {
+      "ts": 1778972367975,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -36279,78 +36351,6 @@
       "accion": "Horas editadas",
       "detalle": "Perez, Danna · Abr 2025: horas=48",
       "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1778157734722,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Abr 2025: horas=48",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1778157724184,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1778157724180,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1778157721895,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1778157721890,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Abr 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1778157700858,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Abr 2025: horas=22",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1778157700853,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Abr 2025: horas=22",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1778157694520,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Abr 2025: horas=35",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1778157694515,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Abr 2025: horas=35",
-      "pubId": "mmm9qi4k0gox"
     }
   ],
   "formHistorial": [
