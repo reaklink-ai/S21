@@ -7,7 +7,7 @@
       "nacimiento": "",
       "bautismo": "",
       "grupo": "Grupo 4",
-      "telefono": "3007033852",
+      "telefono": "300 7033852",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -17,11 +17,11 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Keyla Burgueza",
+        "relacion": "Hij@",
+        "tel": "312 5031511",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 19 #18a-61 bloque A casa 4 remanso ",
         "notasMed": ""
       },
       "registros": {
@@ -102,7 +102,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779240208419
     },
     {
       "id": "mmm9qi4jw1p2",
@@ -270,10 +271,10 @@
       "id": "mmm9qi4j5xl2",
       "apellido": "Acosta",
       "nombre": "Paola",
-      "nacimiento": "",
-      "bautismo": "",
+      "nacimiento": "1988-11-16",
+      "bautismo": "2006-04-02",
       "grupo": "Grupo 10",
-      "telefono": "",
+      "telefono": "3043682478",
       "genero": "F",
       "anciano": false,
       "siervo": false,
@@ -283,12 +284,12 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Daniela Acosta ",
+        "relacion": "Herman@",
+        "tel": "3169920920",
         "tel2": "",
-        "direccion": "",
-        "notasMed": ""
+        "direccion": "Cajicá, Cundinamarca ",
+        "notasMed": "Alérgica a la dipirona, tipo de sangre O positivo "
       },
       "registros": {
         "2024": {
@@ -432,14 +433,15 @@
           "horas": 15,
           "cursos": 7
         }
-      }
+      },
+      "_formTs": 1779238200201
     },
     {
       "id": "mmm9qi4jbuql",
       "apellido": "Acosta",
       "nombre": "Thiago",
-      "nacimiento": "",
-      "bautismo": "",
+      "nacimiento": "2014-12-30",
+      "bautismo": "2026-01-25",
       "grupo": "Grupo 10",
       "telefono": "304 368 2478",
       "genero": "M",
@@ -451,12 +453,12 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
+        "nombre": "Paola Acosta ",
+        "relacion": "Madre",
         "tel": "",
         "tel2": "",
-        "direccion": "",
-        "notasMed": ""
+        "direccion": "Calle 8#8A-24 Este ",
+        "notasMed": "Tipo de sangre O positivo "
       },
       "registros": {
         "2024": {
@@ -594,7 +596,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779237945942
     },
     {
       "id": "mmm9qi4jfkxs",
@@ -2492,7 +2495,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Miguel Acosta ",
+        "relacion": "Espos@",
+        "tel": "",
+        "tel2": "+57 313 7233154",
+        "direccion": "Calle 8 N 8A-24 este ",
+        "notasMed": "Paciente Menier \nTipo de sangre O+"
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -2633,7 +2643,8 @@
           "horas": 0,
           "cursos": 5
         }
-      }
+      },
+      "_formTs": 1779237940338
     },
     {
       "id": "mmm9qi4kqpna",
@@ -16076,7 +16087,7 @@
       "nacimiento": "2013-01-30",
       "bautismo": "",
       "grupo": "Grupo 4",
-      "telefono": "",
+      "telefono": "310 7663102",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -16085,7 +16096,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Sandra Patricia Rivera",
+        "relacion": "Madre",
+        "tel": "317 8109633",
+        "tel2": "",
+        "direccion": "Carrera 7 #11-15 piso 2 apt 202",
+        "notasMed": ""
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -16234,7 +16252,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779237119322
     },
     {
       "id": "mmm9qi4q025q",
@@ -29680,7 +29699,7 @@
       "nacimiento": "1953-06-17",
       "bautismo": "2006-07-02",
       "grupo": "Grupo 4",
-      "telefono": "",
+      "telefono": "320 4147003",
       "genero": "F",
       "otrasOvejas": false,
       "ungido": false,
@@ -29690,13 +29709,14 @@
       "precursorEsp": false,
       "misionero": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
+        "nombre": "Jhon Fredy Gomez Ormaza",
+        "relacion": "Hij@",
+        "tel": "311 8295649",
         "tel2": "",
-        "direccion": "",
+        "direccion": "Calle 10a #17a-27 ",
         "notasMed": ""
-      }
+      },
+      "_formTs": 1779238321585
     },
     {
       "id": "mmm9qi4me0oy",
@@ -32539,7 +32559,7 @@
       }
     }
   ],
-  "_lastModified": 1779222984173,
+  "_lastModified": 1779279235610,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34708,6 +34728,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1779229785301,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779226022065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779221921389,
       "user": "Administrador",
       "rol": "admin",
@@ -36290,22 +36326,6 @@
       "accion": "Horas editadas",
       "detalle": "Beleño, Isaac · Abr 2025: cursos=",
       "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1778157589940,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Abr 2025: horas=29",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1778157589936,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Abr 2025: horas=29",
-      "pubId": "mmm9qi4quyam"
     }
   ],
   "formHistorial": [
@@ -36315,6 +36335,48 @@
       "nombre": "Gabriela",
       "grupo": "Grupo 10",
       "ts": 1779220154848
+    },
+    {
+      "id": "mmm9qi4j5xl2",
+      "apellido": "Acosta",
+      "nombre": "Paola",
+      "grupo": "Grupo 10",
+      "ts": 1779238200201
+    },
+    {
+      "id": "mmm9qi4jbuql",
+      "apellido": "Acosta",
+      "nombre": "Thiago",
+      "grupo": "Grupo 10",
+      "ts": 1779237945942
+    },
+    {
+      "id": "mmm9qi4kye7q",
+      "apellido": "Bejarano",
+      "nombre": "Martha",
+      "grupo": "Grupo 10",
+      "ts": 1779237940338
+    },
+    {
+      "id": "mmm9qi4qeh9c",
+      "apellido": "Martinez",
+      "nombre": "Juan Pablo",
+      "grupo": "Grupo 4",
+      "ts": 1779237119322
+    },
+    {
+      "id": "p1777912957789",
+      "apellido": "Ormaza",
+      "nombre": "Gloria",
+      "grupo": "Grupo 4",
+      "ts": 1779238321585
+    },
+    {
+      "id": "mmm9qi4jqz6w",
+      "apellido": "Acosta",
+      "nombre": "Judith",
+      "grupo": "Grupo 4",
+      "ts": 1779240208419
     }
   ]
 }
