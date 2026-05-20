@@ -7789,7 +7789,7 @@ function generarInformeGrupo(modo) {
     const diff = tendencia[tendencia.length-1].pct - tendencia[0].pct;
     if(diff>5) tendDir=`Tendencia al alza (+${diff}pp en el período)`;
     else if(diff<-5) tendDir=`Tendencia a la baja (${diff}pp en el período)`;
-    else tendDir=`Tendencia estable (±${Math.abs(diff)}pp en el período)`;
+    else tendDir=`Tendencia estable — sin variación significativa en el período`;
   }
 
   const META_PREC_REG = 50;
@@ -8062,6 +8062,17 @@ ${barChart}
     const ausencias = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
     const cursosTot = periodoMeses.reduce((s,m)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
     const horasTot  = periodoMeses.reduce((s,m)=>s+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0);
+    const mesesConHoras2 = periodoMeses.filter(m=>getReg(p,m.anio,m.mesKey).particip);
+    // Calcular combinado para color de horas (predicación + crédito betel)
+    const _LIMITE_B = 55;
+    const horasComb2 = periodoMeses.reduce((s,m)=>{
+      const r=getReg(p,m.anio,m.mesKey);const h=parseFloat(r.horas)||0;
+      if(h<=0)return s;
+      const ext=r.notas?_extraerHorasNotas(r.notas):{total:0};
+      const cr=ext.total>0?Math.min(ext.total,Math.max(0,_LIMITE_B-h)):0;
+      return s+h+cr;
+    },0);
+    const promComb2 = mesesConHoras2.length>0?horasComb2/mesesConHoras2.length:0;
     const esIrreg   = ausencias > periodoMeses.length * 0.5;
     const esInact   = ausencias >= periodoMeses.length;
     // Estado: inactivo=ausente todo el período, irregular=1+ ausencias, regular=ninguna
@@ -8074,10 +8085,40 @@ ${barChart}
     // Alerta cursos bíblicos: sin cursos en el período seleccionado
     const tuvoCursosPer = periodoMeses.some(m => parseInt(getReg(p, m.anio, m.mesKey).cursos)||0 > 0);
     if(!tuvoCursosPer) alertasList.push('<span style="background:#f8fafc;color:#64748b;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Sin cursos bíblicos</span>');
-    // Alerta precursor bajo meta
+    // Alerta precursor — misma lógica que módulo de precursores, con horas Betel/extra
     if(p.precursorReg||p.precursorEsp||p.misionero) {
-      const horasMes = periodoMeses.filter(m=>(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0) < 50 && getReg(p,m.anio,m.mesKey).particip).length;
-      if(horasMes > 0) alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Bajo meta ${horasMes} mes${horasMes>1?'es':''}</span>`);
+      const LIMITE_BETEL = 55;
+      let horasPred=0, horasExtraBruto=0, horasCombinado=0, mesesCont=0;
+      const detalleExtra = {};
+      periodoMeses.forEach(m => {
+        const r = getReg(p,m.anio,m.mesKey);
+        const h = parseFloat(r.horas)||0;
+        if(h>0) { horasPred+=h; mesesCont++; }
+        const ext = r.notas ? _extraerHorasNotas(r.notas) : {total:0,detalle:[]};
+        ext.detalle.forEach(d => { detalleExtra[d.tipo]=(detalleExtra[d.tipo]||0)+d.horas; });
+        const credito = ext.total>0&&h>0 ? Math.min(ext.total, Math.max(0,LIMITE_BETEL-h)) : 0;
+        horasExtraBruto+=ext.total;
+        horasCombinado+=(h>0?h+credito:0);
+      });
+      const promPred = mesesCont>0?horasPred/mesesCont:0;
+      const promComb = mesesCont>0?horasCombinado/mesesCont:0;
+      const horasBetel = detalleExtra['betel']||detalleExtra['betel_']||0;
+      const otrasExtra = horasExtraBruto - horasBetel;
+
+      // Alerta: predica poco pero depende de crédito — alerta llamativa
+      if(mesesCont>=2 && promPred<30 && horasExtraBruto>0 && promComb>=45) {
+        alertasList.push(`<span style="display:inline-block;background:#7c3aed;color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:800;margin:1px;letter-spacing:.2px">⚠ PREDICACIÓN MUY BAJA — ${promPred.toFixed(0)}h promedio de predicación</span>`);
+      }
+      // Estado general de horas
+      if(promComb < 45 && mesesCont>=2) {
+        alertasList.push(`<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Prom. ${promComb.toFixed(1)}h combinado — requiere atención</span>`);
+      } else if(promComb < 50 && mesesCont>=1) {
+        alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Prom. ${promComb.toFixed(1)}h combinado — bajo meta</span>`);
+      }
+      // Crédito de horas adicionales (betel, construcción, etc.)
+      if(horasExtraBruto>0) {
+        alertasList.push(`<span style="background:#f0f9ff;color:#0284c7;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:600;margin:1px">Crédito de horas: ${horasExtraBruto.toFixed(1)}h en el período</span>`);
+      }
     }
     const estado = alertasList.join('');
     const rowBg = esInact?'background:#fff1f2':ausencias>0?'background:#fffbeb':'';
@@ -8086,7 +8127,7 @@ ${barChart}
       ${celdas}
       <td style="text-align:center;font-weight:700;color:${ausencias>0?'#ef4444':'#16a34a'}">${ausencias}</td>
       <td style="text-align:center">${cursosTot||'—'}</td>
-      ${totalHorasPer>0?`<td style="text-align:center">${horasTot>0?horasTot.toFixed(1):'—'}</td>`:''}
+      ${totalHorasPer>0?`<td style="text-align:center;font-weight:700;color:${(p.precursorReg||p.precursorEsp||p.misionero)?(promComb2>=50?'#16a34a':promComb2>=45?'#d97706':'#ef4444'):'#0f172a'}">${horasTot>0?horasTot.toFixed(1):'—'}</td>`:''}
       <td style="white-space:nowrap">${estado}</td>
     </tr>`;
   }).join('')}
