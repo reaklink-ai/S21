@@ -122,12 +122,12 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": ""
+        "nombre": "Paola acosta ",
+        "relacion": "Hij@",
+        "tel": "3043682478",
+        "tel2": "3212417331",
+        "direccion": "Calle 8#8a24 paramillo madrid",
+        "notasMed": "O+"
       },
       "registros": {
         "2024": {
@@ -265,7 +265,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779290950865
     },
     {
       "id": "mmm9qi4j5xl2",
@@ -12703,7 +12704,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Tatiana Hurtado ",
+        "relacion": "Madre",
+        "tel": "3053489607",
+        "tel2": "",
+        "direccion": "Bogota, colina campestre ",
+        "notasMed": "Rh 0+ "
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -12840,7 +12848,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779290807108
     },
     {
       "id": "mmm9qi4n3qgi",
@@ -32575,7 +32584,7 @@
       }
     }
   ],
-  "_lastModified": 1779286566533,
+  "_lastModified": 1779292132131,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34744,6 +34753,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1779290425969,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779229785301,
       "user": "Administrador",
       "rol": "admin",
@@ -36334,14 +36351,6 @@
       "accion": "Horas editadas",
       "detalle": "Beleño, Isaac · Abr 2025: horas=45",
       "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1778157685516,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Abr 2025: cursos=",
-      "pubId": "mmm9qi4kqpna"
     }
   ],
   "formHistorial": [
@@ -36407,6 +36416,20 @@
       "nombre": "Miguel",
       "grupo": "Grupo 10",
       "ts": 1779286209253
+    },
+    {
+      "id": "mmm9qi4jw1p2",
+      "apellido": "Acosta",
+      "nombre": "Miguel",
+      "grupo": "Grupo 10",
+      "ts": 1779290950865
+    },
+    {
+      "id": "mmm9qi4nxp0i",
+      "apellido": "Jimenez",
+      "nombre": "Camila",
+      "grupo": "Grupo 10",
+      "ts": 1779290807108
     }
   ]
 }
