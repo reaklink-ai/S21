@@ -7789,7 +7789,7 @@ function generarInformeGrupo(modo) {
     const diff = tendencia[tendencia.length-1].pct - tendencia[0].pct;
     if(diff>5) tendDir=`Tendencia al alza (+${diff}pp en el período)`;
     else if(diff<-5) tendDir=`Tendencia a la baja (${diff}pp en el período)`;
-    else tendDir=`Tendencia estable — sin variación significativa en el período`;
+    else tendDir=``;
   }
 
   const META_PREC_REG = 50;
@@ -7814,8 +7814,18 @@ function generarInformeGrupo(modo) {
       if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
       if(p.precursorReg||p.precursorEsp||p.misionero){
         const h=parseFloat(r.horas)||0;
-        if(r.particip&&h<META_PREC_REG) alertas.push({tipo:'horas',msg:`Horas bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'alto'});
+        // Alerta < 10h en S-21
+        if(r.particip && h>0 && h<10) alertas.push({tipo:'bajo10h',msg:`Menos de 10h en S-21 este mes (${h}h)`,nivel:'critico'});
+        if(r.particip&&h<META_PREC_REG&&h>=10) alertas.push({tipo:'horas',msg:`Horas S-21 bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'alto'});
         if(!r.particip) alertas.push({tipo:'horas',msg:'No reportó horas este mes',nivel:'alto'});
+        // Total acumulado año de servicio
+        const dp = precGetDatos(p, anio);
+        const haAcum = dp.horasTotalCombinado||0;
+        const mesesTrans = Math.min(mesActual().idx+1, 12);
+        const hEsperadas = (560/12)*mesesTrans;
+        const colorAc = haAcum>=600?'#16a34a':haAcum>=560?'#0284c7':haAcum>=hEsperadas?'#d97706':'#ef4444';
+        const deficit = hEsperadas-haAcum;
+        alertas.push({tipo:'acumulado',msg:`Acumulado año: ${haAcum.toFixed(1)}h / 560h mín${haAcum<hEsperadas?' — déficit: '+deficit.toFixed(1)+'h':''}`,nivel:'info',color:colorAc});
       }
       if(r.paux&&!p.precAuxContinuo){
         const h=parseFloat(r.horas)||0;
@@ -7901,9 +7911,18 @@ function generarInformeGrupo(modo) {
   const periodoLabel = periodo===0?`Año de servicio ${anio}—${anio+1}`:`${pm0.mesNom} ${getAnioCal(pm0.mesKey,pm0.anio)} — ${pmN.mesNom} ${getAnioCal(pmN.mesKey,pmN.anio)}`;
 
   // Totales acumulados del período
-  const totalPartMeses = tendencia.reduce((s,t)=>s+t.part,0);
-  const totalCursosPer = tendencia.reduce((s,t)=>s+t.cursos,0);
-  const totalHorasPer  = tendencia.reduce((s,t)=>s+t.horas,0);
+  const totalPartMeses  = tendencia.reduce((s,t)=>s+t.part,0);
+  const totalCursosPer  = tendencia.reduce((s,t)=>s+t.cursos,0);
+  const totalHorasPer   = tendencia.reduce((s,t)=>s+t.horas,0);
+  const promCursosPer   = tendencia.length>0 ? (totalCursosPer/tendencia.length).toFixed(1) : 0;
+  // Promedio horas precursores por mes
+  const promHorasPrec   = precReg.length>0 && tendencia.length>0
+    ? (tendencia.reduce((s,t)=>s+t.horas,0) / tendencia.filter(t=>t.horas>0).length || 0).toFixed(1)
+    : null;
+  // Promedio horas todos los publicadores (horas totales / publicadores en el período)
+  const totalHorasTodosP = periodoMeses.reduce((s,m)=>s+pubs.reduce((ss,p)=>ss+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0),0);
+  const promHorasPubs    = pubs.length>0 && tendencia.length>0 ? (totalHorasTodosP/tendencia.length).toFixed(1) : null;
+
   const maxPct = Math.max(...tendencia.map(t=>t.pct));
   const minPct = Math.min(...tendencia.map(t=>t.pct));
   const mesMasPart = tendencia.find(t=>t.pct===maxPct);
@@ -8011,34 +8030,45 @@ tr:nth-child(even) td{background:#f8fafc}
 <h2>Resumen del período</h2>
 <div class="kpis">
   <div class="kpi azul"><div class="kpi-val">${pubs.length}</div><div class="kpi-lbl">Publicadores</div></div>
-  <div class="kpi ${avgPct>=85?'verde':avgPct<70?'':'azul'}"><div class="kpi-val">${avgPct}%</div><div class="kpi-lbl">Participación promedio</div></div>
-  <div class="kpi"><div class="kpi-val">${totalCursosPer}</div><div class="kpi-lbl">Cursos bíblicos</div></div>
+  <div class="kpi ${avgPct>=85?'verde':avgPct<70?'rojo':'azul'}"><div class="kpi-val">${avgPct}%</div><div class="kpi-lbl">Participación promedio</div></div>
+  <div class="kpi"><div class="kpi-val">${promCursosPer}</div><div class="kpi-lbl">Promedio cursos/mes</div></div>
   <div class="kpi ${irregularesPer.length>0?'ambar':'verde'}"><div class="kpi-val">${irregularesPer.length}</div><div class="kpi-lbl">Irregulares</div></div>
 </div>
-${totalHorasPer>0?`<div class="kpis"><div class="kpi azul"><div class="kpi-val">${totalHorasPer.toFixed(1)}h</div><div class="kpi-lbl">Horas precursores (total período)</div></div><div class="kpi"><div class="kpi-val">${precReg.length}</div><div class="kpi-lbl">Precursores regulares</div></div>
-<div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
-<div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div></div>`:`<div class="kpis">
-<div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
-<div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div>
-<div class="kpi"></div><div class="kpi"></div></div>`}
+<div class="kpis">
+  ${promHorasPubs?`<div class="kpi azul"><div class="kpi-val">${promHorasPubs}h</div><div class="kpi-lbl">Prom. horas grupo/mes</div></div>`:'<div class="kpi"></div>'}
+  ${precReg.length>0&&promHorasPrec?`<div class="kpi ${parseFloat(promHorasPrec)>=50?'verde':parseFloat(promHorasPrec)>=45?'ambar':'rojo'}"><div class="kpi-val">${promHorasPrec}h</div><div class="kpi-lbl">Prom. horas precursores/mes</div></div>`:'<div class="kpi"></div>'}
+  <div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
+  <div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anana,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div>
+</div>
 
 <h2>Tendencia de participación</h2>
-${tendDir?`<div style="font-size:10pt;font-weight:700;color:#4f46e5;margin-bottom:4mm">${tendDir}</div>`:''}
 ${barChart}
 
 <h2>Resumen por mes</h2>
 <table>
   <tr>
-    <th>Mes</th><th style="text-align:center">Participaron</th><th style="text-align:center">%</th><th style="text-align:center">Cursos</th><th style="text-align:center">P. Aux.</th>${totalHorasPer>0?'<th style="text-align:center">Horas</th>':''}
+    <th>Mes</th>
+    <th style="text-align:center">Participaron</th>
+    <th style="text-align:center">%</th>
+    <th style="text-align:center">Cursos</th>
+    <th style="text-align:center">P. Aux.</th>
+    ${totalHorasPer>0?'<th style="text-align:center">Horas totales</th><th style="text-align:center">Prom. h/pub</th>':''}
   </tr>
-  ${tendencia.map(t=>`<tr>
+  ${tendencia.map(t=>{
+    const pubsConHoras = pubs.filter(p=>parseFloat(getReg(p,t.anioSrv||anio,t.mesKey||MESES_K[MESES_FULL.indexOf(t.mes)]).horas)||0>0);
+    const promH = pubsConHoras.length>0?(t.horas/pubsConHoras.length).toFixed(1):'—';
+    const mesK2 = MESES_K[MESES_FULL.indexOf(t.mes)];
+    const anio2 = periodoMeses.find(m=>m.mesNom===t.mes&&m.anio===t.anio)?.anio||anio;
+    const pubsH2 = pubs.filter(p=>parseFloat(getReg(p,anio2,mesK2).horas)||0>0);
+    const promH2 = pubsH2.length>0?(t.horas/pubsH2.length).toFixed(1):'—';
+    return `<tr>
     <td style="font-weight:600">${t.mes} ${t.anio}</td>
     <td style="text-align:center">${t.part}/${pubs.length}</td>
     <td style="text-align:center;font-weight:700;color:${t.pct>=85?'#16a34a':t.pct<70?'#ef4444':'#4f46e5'}">${t.pct}%</td>
     <td style="text-align:center">${t.cursos||'—'}</td>
     <td style="text-align:center">${t.paux||'—'}</td>
-    ${totalHorasPer>0?`<td style="text-align:center">${t.horas>0?t.horas.toFixed(1):'—'}</td>`:''}
-  </tr>`).join('')}
+    ${totalHorasPer>0?`<td style="text-align:center">${t.horas>0?t.horas.toFixed(1):'—'}</td><td style="text-align:center;color:#4f46e5">${promH2}</td>`:''}
+  </tr>`;}).join('')}
 </table>
 
 <h2>Detalle por publicador</h2>
@@ -8052,12 +8082,22 @@ ${barChart}
     <th style="min-width:120px">Estado</th>
   </tr>
   ${pubs.map(p => {
+    // Meses especiales conocidos (visita superintendente, conmemoración)
+    const MESES_ESP = {
+      'Mar': '★', // Conmemoración típicamente en marzo/abril
+      'Abr': '★',
+    };
     const celdas = periodoMeses.map(m => {
       const r = getReg(p, m.anio, m.mesKey);
       const color = r.particip ? '#16a34a' : '#ef4444';
       const bg = r.particip ? '#f0fdf4' : '#fef2f2';
+      const horas = parseFloat(r.horas)||0;
+      // Mostrar horas si tiene (precursor o auxiliar)
+      const horasLabel = horas>0 ? `<br><span style="font-size:6.5pt;font-weight:500;color:#475569">${horas}h</span>` : '';
+      const auxLabel = r.paux ? `<br><span style="font-size:6pt;color:#d97706;font-weight:700">AUX</span>` : '';
+      const especial = r.notas && (r.notas.toLowerCase().includes('visita') || r.notas.toLowerCase().includes('conmem') || r.notas.toLowerCase().includes('memorial')) ? '<span style="font-size:7pt;color:#7c3aed" title="Mes especial">★</span>' : '';
       const txt = r.particip ? 'Si' : 'No';
-      return `<td style="text-align:center;background:${bg};color:${color};font-weight:700">${txt}</td>`;
+      return `<td style="text-align:center;background:${bg};color:${color};font-weight:700;line-height:1.2">${especial}${txt}${horasLabel}${auxLabel}</td>`;
     }).join('');
     const ausencias = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
     const cursosTot = periodoMeses.reduce((s,m)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
@@ -8081,7 +8121,7 @@ ${barChart}
     if(esInact) alertasList.push('<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Inactivo</span>');
     else if(esIrreg) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
     else if(ausencias > 0) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
-    else alertasList.push('<span style="background:#f0fdf4;color:#16a34a;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Regular</span>');
+    // Regular: no mostrar etiqueta (punto 4 feedback)
     // Alerta cursos bíblicos: sin cursos en el período seleccionado
     const tuvoCursosPer = periodoMeses.some(m => parseInt(getReg(p, m.anio, m.mesKey).cursos)||0 > 0);
     if(!tuvoCursosPer) alertasList.push('<span style="background:#f8fafc;color:#64748b;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Sin cursos bíblicos</span>');
@@ -8105,15 +8145,43 @@ ${barChart}
       const horasBetel = detalleExtra['betel']||detalleExtra['betel_']||0;
       const otrasExtra = horasExtraBruto - horasBetel;
 
-      // Alerta: predica poco pero depende de crédito — alerta llamativa
-      if(mesesCont>=2 && promPred<30 && horasExtraBruto>0 && promComb>=45) {
-        alertasList.push(`<span style="display:inline-block;background:#7c3aed;color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:800;margin:1px;letter-spacing:.2px">⚠ PREDICACIÓN MUY BAJA — ${promPred.toFixed(0)}h promedio de predicación</span>`);
+      // Alerta < 10h en algún mes del período
+      const mesesBajo10 = periodoMeses.filter(m => {
+        const r = getReg(p, m.anio, m.mesKey);
+        return r.particip && (parseFloat(r.horas)||0) > 0 && (parseFloat(r.horas)||0) < 10;
+      });
+      if(mesesBajo10.length > 0) {
+        alertasList.push(`<span style="display:inline-block;background:#ef4444;color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:800;margin:1px">MENOS DE 10H — ${mesesBajo10.map(m=>m.mesNom).join(', ')}</span>`);
       }
+
+
+      // Alerta: menos de 10h en algún mes del período (horas S-21 puras)
+      const mesesBajo10Per = periodoMeses.filter(m => {
+        const h = parseFloat(getReg(p, m.anio, m.mesKey).horas)||0;
+        return h > 0 && h < 10;
+      });
+      if(mesesBajo10Per.length > 0) {
+        alertasList.push(`<span style="display:inline-block;background:#ef4444;color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:800;margin:1px">⚠ MENOS DE 10H EN S-21 — ${mesesBajo10Per.map(m=>m.mesNom).join(', ')}</span>`);
+      }
+      // S-21 bajo meta de 50h (promedio)
+      if(mesesCont>=1 && promPred<50) {
+        alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">S-21: ${promPred.toFixed(0)}h/mes promedio — bajo meta de 50h</span>`);
+      }
+      // Total acumulado año de servicio
+      const datosPrec = precGetDatos(p, anio);
+      const horasAcum = datosPrec.horasTotalCombinado || 0;
+      const META_MIN = 560; const META_FULL = 600;
+      const mesActIdx = mesActual().idx;
+      const mesesTranscurridos = Math.min(mesActIdx + 1, 12);
+      const horasEsperadas = (META_MIN / 12) * mesesTranscurridos;
+      const deficit = horasEsperadas - horasAcum;
+      const colorAcum = horasAcum >= META_FULL ? '#16a34a' : horasAcum >= META_MIN ? '#0284c7' : horasAcum >= horasEsperadas ? '#d97706' : '#ef4444';
+      alertasList.push(`<span style="display:inline-block;background:${colorAcum};color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:700;margin:1px">Acumulado año: ${horasAcum.toFixed(1)}h / 560h mín${horasAcum<horasEsperadas?' (deficit: '+deficit.toFixed(1)+'h)':''}</span>`);
       // Estado general de horas
       if(promComb < 45 && mesesCont>=2) {
-        alertasList.push(`<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Prom. ${promComb.toFixed(1)}h combinado — requiere atención</span>`);
+        alertasList.push(`<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">S-21 + crédito: ${promComb.toFixed(1)}h/mes — requiere atención</span>`);
       } else if(promComb < 50 && mesesCont>=1) {
-        alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Prom. ${promComb.toFixed(1)}h combinado — bajo meta</span>`);
+        alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">S-21 + crédito: ${promComb.toFixed(1)}h/mes — bajo meta</span>`);
       }
       // Crédito de horas adicionales (betel, construcción, etc.)
       if(horasExtraBruto>0) {
@@ -8123,7 +8191,7 @@ ${barChart}
     const estado = alertasList.join('');
     const rowBg = esInact?'background:#fff1f2':ausencias>0?'background:#fffbeb':'';
     return `<tr style="${rowBg}">
-      <td style="font-weight:600">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</td>
+      <td style="font-weight:600">${escHtml(p.apellido)}, ${escHtml(p.nombre)}${(p.precursorReg||p.precursorEsp||p.misionero)?'<br><span style="font-size:6.5pt;background:#fffbeb;color:#d97706;border-radius:3px;padding:0 4px;font-weight:700">PREC. REGULAR</span>':''}</td>
       ${celdas}
       <td style="text-align:center;font-weight:700;color:${ausencias>0?'#ef4444':'#16a34a'}">${ausencias}</td>
       <td style="text-align:center">${cursosTot||'—'}</td>
@@ -8228,7 +8296,7 @@ ${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.ani
 <table>
   <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
   ${alertasPub.map(({pub:p,r,alertas})=>{
-    const alertasHtml=alertas.map(a=>{const color=a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
+    const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
     const rowBg=alertas.some(a=>a.tipo==='inactivo')?'background:#fff1f2':alertas.some(a=>a.tipo==='irregular')?'background:#fffbeb':'';
     return `<tr style="${rowBg}"><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Si':'No'}</span></td><td style="text-align:center">${r.cursos||'—'}</td><td style="text-align:center">${r.paux?'Si':'—'}</td><td style="text-align:center">${r.horas||'—'}</td><td>${alertasHtml||'<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td><td style="font-size:8pt;color:#475569">${escH(r.notas||'')}</td></tr>`;
   }).join('')}
@@ -8238,7 +8306,7 @@ ${(enRiesgoInac.length>0||irregulares.length>0||precBajoMeta.length>0)?`
 <table>
   <tr><th style="width:30%">Publicador</th><th>Alertas</th></tr>
   ${alertasPub.filter(x=>x.alertas.length>0).map(({pub:p,alertas})=>{
-    const aHtml=alertas.map(a=>{const color=a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b';const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
+    const aHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
     return `<tr><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td>${aHtml}</td></tr>`;
   }).join('')}
 </table>`:''}
