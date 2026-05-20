@@ -13184,10 +13184,10 @@
       "id": "mmm9qi4o3hbq",
       "apellido": "Jimenez",
       "nombre": "Miguel",
-      "nacimiento": "",
+      "nacimiento": "1997-10-03",
       "bautismo": "",
       "grupo": "Grupo 10",
-      "telefono": "",
+      "telefono": "3057711660",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -13196,7 +13196,14 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "José Jimenez",
+        "relacion": "Padre",
+        "tel": "3152984739",
+        "tel2": "322 7658661",
+        "direccion": "Ciudad Sabana, Azulejos",
+        "notasMed": "Ninguno"
+      },
       "registros": {
         "2024": {
           "Feb": {
@@ -13317,7 +13324,8 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779286209253
     },
     {
       "id": "mmm9qi4o4bcn",
@@ -32567,7 +32575,7 @@
       }
     }
   ],
-  "_lastModified": 1779286067251,
+  "_lastModified": 1779286407891,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36392,6 +36400,13 @@
       "nombre": "Camila",
       "grupo": "Grupo 10",
       "ts": 1779285925925
+    },
+    {
+      "id": "mmm9qi4o3hbq",
+      "apellido": "Jimenez",
+      "nombre": "Miguel",
+      "grupo": "Grupo 10",
+      "ts": 1779286209253
     }
   ]
 }
