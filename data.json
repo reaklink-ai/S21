@@ -32584,7 +32584,7 @@
       }
     }
   ],
-  "_lastModified": 1779319634737,
+  "_lastModified": 1779322232450,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34753,6 +34753,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1779322115124,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779321383104,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779319014292,
       "user": "Administrador",
       "rol": "admin",
@@ -36335,22 +36351,6 @@
       "accion": "Marcado inactivo",
       "detalle": "Martinez, Jose Manuel",
       "pubId": "mmm9qi4qdgc9"
-    },
-    {
-      "ts": 1778157855874,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado inactivo",
-      "detalle": "Galeado, Santiago",
-      "pubId": "mmm9qi4u9kvo"
-    },
-    {
-      "ts": 1778157734727,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Abr 2025: horas=48",
-      "pubId": "mmm9qi4rigm6"
     }
   ],
   "formHistorial": [
