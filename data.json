@@ -32502,6 +32502,17 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
+    },
+    {
+      "id": "r1779325517053",
+      "fecha": "2026-05-20",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 129,
+      "zoom": 71,
+      "total": 200,
+      "notas": "",
+      "_ts": 1779325517053
     }
   ],
   "usuarios": [
@@ -32585,7 +32596,7 @@
       }
     }
   ],
-  "_lastModified": 1779324690232,
+  "_lastModified": 1779325521467,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34754,6 +34765,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1779324729568,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1779323995967,
       "user": "Administrador",
       "rol": "admin",
@@ -36342,14 +36361,6 @@
       "user": "Administrador",
       "rol": "admin",
       "accion": "Reactivado",
-      "detalle": "Alba, Nicolas",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778158120802,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado inactivo",
       "detalle": "Alba, Nicolas",
       "pubId": "mmm9qi4jq3yf"
     }
