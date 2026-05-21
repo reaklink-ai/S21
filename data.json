@@ -32314,16 +32314,6 @@
       "notas": "Visita del Superintendente de Circuito"
     },
     {
-      "id": "r1778634207768",
-      "fecha": "2026-05-12",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 154,
-      "zoom": 68,
-      "total": 222,
-      "notas": "Visita Súper de Circuito"
-    },
-    {
       "id": "r1778115364785",
       "fecha": "2026-05-06",
       "tipo": "Entre semana",
@@ -32375,26 +32365,6 @@
     },
     {
       "id": "r1777932017999",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
       "fecha": "2026-04-18",
       "tipo": "Fin de semana",
       "tema": "Estudio de la Atalaya",
@@ -32513,6 +32483,36 @@
       "total": 200,
       "notas": "",
       "_ts": 1779325517053
+    },
+    {
+      "id": "r1778634207768",
+      "fecha": "2026-05-12",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 154,
+      "zoom": 68,
+      "total": 222,
+      "notas": "Visita Súper de Circuito"
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776933778534",
+      "fecha": "2026-04-18",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
     }
   ],
   "usuarios": [
@@ -32596,7 +32596,7 @@
       }
     }
   ],
-  "_lastModified": 1779325531474,
+  "_lastModified": 1779367142154,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34765,6 +34765,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1779367078527,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779324729568,
       "user": "Administrador",
       "rol": "admin",
@@ -36355,14 +36363,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1778158133856,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Reactivado",
-      "detalle": "Alba, Nicolas",
-      "pubId": "mmm9qi4jq3yf"
     }
   ],
   "formHistorial": [
