@@ -4141,16 +4141,30 @@ function _mergeStates(remoto, local) {
     if(!localIds.has(rp.id)) { m.publicadores.push(rp); return; }
     const lp = m.publicadores.find(p=>p.id===rp.id);
     if(!lp) return;
-    // Merge campos personales: si local está vacío y remoto tiene valor, remoto gana
-    const camposPersonales = ['nacimiento','bautismo','telefono','genero'];
-    camposPersonales.forEach(campo => {
-      if(!lp[campo] && rp[campo]) lp[campo] = rp[campo];
-    });
-    // Emergencia: si local está vacío y remoto tiene datos, remoto gana
-    const emLocal = lp.emergencia || {};
-    const emRemoto = rp.emergencia || {};
-    if(!(emLocal.nombre||emLocal.tel||emLocal.direccion) && (emRemoto.nombre||emRemoto.tel||emRemoto.direccion)) {
-      lp.emergencia = emRemoto;
+    // Merge campos personales — gana el más reciente según _tsPersonal
+    const tsLocal  = lp._tsPersonal || 0;
+    const tsRemoto = rp._tsPersonal || 0;
+    const camposPersonales = ['nacimiento','bautismo','telefono','genero','_tsPersonal'];
+    if(tsRemoto > tsLocal) {
+      // Remoto es más reciente — tomar sus campos personales
+      camposPersonales.forEach(campo => { if(rp[campo] !== undefined) lp[campo] = rp[campo]; });
+    } else if(tsLocal === 0 && tsRemoto === 0) {
+      // Sin timestamps — si local vacío y remoto tiene valor, remoto gana
+      ['nacimiento','bautismo','telefono'].forEach(campo => {
+        if(!lp[campo] && rp[campo]) lp[campo] = rp[campo];
+      });
+    }
+    // Merge emergencia — gana la más reciente según _ts
+    const tsEmLocal  = (lp.emergencia||{})._ts || lp._tsPersonal || 0;
+    const tsEmRemoto = (rp.emergencia||{})._ts || rp._tsPersonal || 0;
+    if(tsEmRemoto > tsEmLocal) {
+      lp.emergencia = rp.emergencia;
+    } else if(tsEmLocal === 0 && tsEmRemoto === 0) {
+      const emLocal = lp.emergencia || {};
+      const emRemoto = rp.emergencia || {};
+      if(!(emLocal.nombre||emLocal.tel||emLocal.direccion) && (emRemoto.nombre||emRemoto.tel||emRemoto.direccion)) {
+        lp.emergencia = emRemoto;
+      }
     }
     // _formTs: preservar el más reciente
     if(rp._formTs && (!lp._formTs || rp._formTs > lp._formTs)) lp._formTs = rp._formTs;
@@ -4180,9 +4194,36 @@ function _mergeStates(remoto, local) {
     if(!m.grupos[g].aux   && cfg.aux)   m.grupos[g].aux   = cfg.aux;
   });
 
-  // Asistencia: agregar registros remotos que local no tiene (por ID)
+  // Asistencia: agregar remotos que local no tiene + actualizar existentes si remoto es más reciente
   const localAIds = new Set((local.asistencia||[]).map(r=>r.id));
-  (remoto.asistencia||[]).forEach(r => { if(!localAIds.has(r.id)) m.asistencia.push(r); });
+  (remoto.asistencia||[]).forEach(r => {
+    if(!localAIds.has(r.id)) {
+      m.asistencia.push(r);
+    } else {
+      const idx = m.asistencia.findIndex(a=>a.id===r.id);
+      if(idx !== -1 && r._ts && m.asistencia[idx]._ts && r._ts > m.asistencia[idx]._ts) {
+        m.asistencia[idx] = r;
+      }
+    }
+  });
+
+  // Inactivos: fusionar sin duplicados — preservar el más reciente
+  const localInacIds = new Set((local.inactivos||[]).map(p=>p.id));
+  (remoto.inactivos||[]).forEach(rp => {
+    if(!localInacIds.has(rp.id)) m.inactivos = [...(m.inactivos||[]), rp];
+  });
+
+  // Mudados: fusionar sin duplicados
+  const localMudIds = new Set((local.mudados||[]).map(p=>p.id));
+  (remoto.mudados||[]).forEach(rp => {
+    if(!localMudIds.has(rp.id)) m.mudados = [...(m.mudados||[]), rp];
+  });
+
+  // formHistorial: fusionar sin duplicados por id+ts
+  const localHist = new Set((local.formHistorial||[]).map(h=>h.id+'_'+h.ts));
+  (remoto.formHistorial||[]).forEach(h => {
+    if(!localHist.has(h.id+'_'+h.ts)) m.formHistorial = [...(m.formHistorial||[]), h];
+  });
 
   // VyM: agregar semanas remotas que local no tiene; local SIEMPRE gana en asign
   // Semanas borradas localmente (no en m.vym.semanas) se marcan para no restaurar
@@ -4708,6 +4749,7 @@ function agregarReunion() {
     zoom,
     total:     presencial + zoom,
     notas:     document.getElementById('aNotas').value.trim(),
+    _ts:       Date.now(),
   };
   state.asistencia.push(reg);
   state.asistencia.sort((a,b) => b.fecha.localeCompare(a.fecha));
@@ -5167,6 +5209,7 @@ function guardarPub() {
   const ap=document.getElementById('fApellido').value.trim();
   const nom=document.getElementById('fNombre').value.trim();
   if(!ap||!nom){ alert('Apellido y nombre son obligatorios'); return; }
+  const ahora = Date.now();
   const datos={
     apellido:ap, nombre:nom,
     nacimiento:document.getElementById('fNacimiento').value,
@@ -5182,6 +5225,7 @@ function guardarPub() {
     precursorEsp:document.getElementById('fPrecursorEsp').checked,
     misionero:document.getElementById('fMisionero').checked,
     precAuxContinuo:document.getElementById('fPrecAuxContinuo').checked,
+    _tsPersonal: ahora,
     emergencia:{
       nombre:document.getElementById('fEmergNombre').value.trim(),
       relacion:document.getElementById('fEmergRelacion').value,
@@ -5189,6 +5233,7 @@ function guardarPub() {
       tel2:document.getElementById('fEmergTel2').value.trim(),
       direccion:document.getElementById('fDireccion').value.trim(),
       notasMed:document.getElementById('fNotasMed').value.trim(),
+      _ts: ahora,
     }
   };
   if(editId){
@@ -12504,6 +12549,8 @@ document.head.appendChild(mLink);
 
         // Marcar _formTs ANTES de asignar al array
         pub._formTs = datos._ts || Date.now();
+        pub._tsPersonal = datos._ts || Date.now();
+        if(pub.emergencia) pub.emergencia._ts = datos._ts || Date.now();
         state.publicadores[idx] = pub;
 
         // Guardar en historial persistente
