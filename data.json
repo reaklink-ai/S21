@@ -109,10 +109,10 @@
       "id": "mmm9qi4jw1p2",
       "apellido": "Acosta",
       "nombre": "Miguel",
-      "nacimiento": "",
+      "nacimiento": "1967-05-02",
       "bautismo": "",
       "grupo": "Grupo 10",
-      "telefono": "",
+      "telefono": "3137233154",
       "genero": "M",
       "anciano": false,
       "siervo": false,
@@ -122,12 +122,13 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "Paola acosta ",
+        "nombre": "Paola acosta",
         "relacion": "Hij@",
         "tel": "3043682478",
         "tel2": "3212417331",
         "direccion": "Calle 8#8a24 paramillo madrid",
-        "notasMed": "O+"
+        "notasMed": "O+",
+        "_ts": 1779324123900
       },
       "registros": {
         "2024": {
@@ -266,7 +267,8 @@
           "cursos": 0
         }
       },
-      "_formTs": 1779290950865
+      "_formTs": 1779290950865,
+      "_tsPersonal": 1779324123900
     },
     {
       "id": "mmm9qi4j5xl2",
