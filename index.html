@@ -4141,6 +4141,20 @@ function _mergeStates(remoto, local) {
     if(!localIds.has(rp.id)) { m.publicadores.push(rp); return; }
     const lp = m.publicadores.find(p=>p.id===rp.id);
     if(!lp) return;
+    // Merge campos personales: si local está vacío y remoto tiene valor, remoto gana
+    const camposPersonales = ['nacimiento','bautismo','telefono','genero'];
+    camposPersonales.forEach(campo => {
+      if(!lp[campo] && rp[campo]) lp[campo] = rp[campo];
+    });
+    // Emergencia: si local está vacío y remoto tiene datos, remoto gana
+    const emLocal = lp.emergencia || {};
+    const emRemoto = rp.emergencia || {};
+    if(!(emLocal.nombre||emLocal.tel||emLocal.direccion) && (emRemoto.nombre||emRemoto.tel||emRemoto.direccion)) {
+      lp.emergencia = emRemoto;
+    }
+    // _formTs: preservar el más reciente
+    if(rp._formTs && (!lp._formTs || rp._formTs > lp._formTs)) lp._formTs = rp._formTs;
+
     Object.entries(rp.registros||{}).forEach(([anio, meses]) => {
       if(!lp.registros) lp.registros = {};
       if(!lp.registros[anio]) lp.registros[anio] = {};
@@ -12452,6 +12466,10 @@ document.head.appendChild(mLink);
   };
 
   window.sincronizarFirebase = async function() {
+    if(!navigator.onLine) {
+      toast('⚠️ Sin conexión a internet — intenta cuando tengas conexión');
+      return;
+    }
     try {
       toast('⏳ Buscando actualizaciones...');
       const snap = await getDocs(collection(_fbDb, 'actualizaciones'));
@@ -12544,6 +12562,8 @@ document.head.appendChild(mLink);
 
   // ── Auto-sincronización silenciosa cada 30 minutos ──
   async function _autoSync() {
+    // No intentar si no hay conexión
+    if(!navigator.onLine) return;
     try {
       const snap = await getDocs(collection(_fbDb, 'actualizaciones'));
       if(snap.empty) return; // nada pendiente, sin toast
