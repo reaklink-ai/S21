@@ -122,13 +122,12 @@
       "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
-        "nombre": "Paola acosta",
+        "nombre": "Paola acosta ",
         "relacion": "Hij@",
         "tel": "3043682478",
         "tel2": "3212417331",
         "direccion": "Calle 8#8a24 paramillo madrid",
-        "notasMed": "O+",
-        "_ts": 1779324123900
+        "notasMed": "O+"
       },
       "registros": {
         "2024": {
@@ -32586,7 +32585,7 @@
       }
     }
   ],
-  "_lastModified": 1779324066744,
+  "_lastModified": 1779324146001,
   "vym": {
     "semanas": {},
     "historial": [
