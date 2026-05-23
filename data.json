@@ -5633,7 +5633,15 @@
       "misionero": false,
       "otrasOvejas": false,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "Lina Galindo ",
+        "relacion": "Madre",
+        "tel": "(311) 831-7856",
+        "tel2": "3208386196",
+        "direccion": "Calle 10 sur 14a 85, Mosquera, Sol Creciente Torre 13 apto 550",
+        "notasMed": "Na\nO+",
+        "_ts": 1779569618996
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -5770,7 +5778,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "_formTs": 1779569618996,
+      "_tsPersonal": 1779569618996
     },
     {
       "id": "mmm9qi4lxrtx",
@@ -32294,6 +32304,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1779325517053",
+      "fecha": "2026-05-20",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 129,
+      "zoom": 71,
+      "total": 200,
+      "notas": "",
+      "_ts": 1779325517053
+    },
+    {
       "id": "r1778965190635",
       "fecha": "2026-05-16",
       "tipo": "Fin de semana",
@@ -32368,6 +32389,16 @@
       "fecha": "2026-04-18",
       "tipo": "Fin de semana",
       "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 47,
+      "total": 202,
+      "notas": ""
+    },
+    {
+      "id": "r1776927876791",
+      "fecha": "2026-04-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
       "presencial": 155,
       "zoom": 47,
       "total": 202,
@@ -32472,47 +32503,6 @@
       "zoom": 54,
       "total": 149,
       "notas": ""
-    },
-    {
-      "id": "r1779325517053",
-      "fecha": "2026-05-20",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 129,
-      "zoom": 71,
-      "total": 200,
-      "notas": "",
-      "_ts": 1779325517053
-    },
-    {
-      "id": "r1778634207768",
-      "fecha": "2026-05-12",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 154,
-      "zoom": 68,
-      "total": 222,
-      "notas": "Visita Súper de Circuito"
-    },
-    {
-      "id": "r1776927876791",
-      "fecha": "2026-04-18",
-      "tipo": "Entre semana",
-      "tema": "Vida y Ministerio Cristiano",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
-    },
-    {
-      "id": "r1776933778534",
-      "fecha": "2026-04-18",
-      "tipo": "Fin de semana",
-      "tema": "Estudio de la Atalaya",
-      "presencial": 155,
-      "zoom": 47,
-      "total": 202,
-      "notas": ""
     }
   ],
   "usuarios": [
@@ -32596,7 +32586,7 @@
       }
     }
   ],
-  "_lastModified": 1779367341810,
+  "_lastModified": 1779569715558,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34765,11 +34755,35 @@
   ],
   "auditoria": [
     {
+      "ts": 1779569525216,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1779367078527,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1779360664590,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1779328358348,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -36339,30 +36353,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1778159165501,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778158866824,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1778158758483,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
@@ -36456,6 +36446,13 @@
       "nombre": "Nicolas",
       "grupo": "Grupo 9",
       "ts": 1779310700692
+    },
+    {
+      "id": "mmm9qi4l7kbw",
+      "apellido": "Chacon",
+      "nombre": "Felipe",
+      "grupo": "Grupo 10",
+      "ts": 1779569618996
     }
   ]
 }
