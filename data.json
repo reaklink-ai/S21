@@ -32304,6 +32304,28 @@
   ],
   "asistencia": [
     {
+      "id": "r1780175936373",
+      "fecha": "2026-05-30",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 136,
+      "zoom": 53,
+      "total": 189,
+      "notas": "",
+      "_ts": 1780175936373
+    },
+    {
+      "id": "r1780175911894",
+      "fecha": "2026-05-27",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 130,
+      "zoom": 57,
+      "total": 187,
+      "notas": "",
+      "_ts": 1780175911894
+    },
+    {
       "id": "r1779569798185",
       "fecha": "2026-05-23",
       "tipo": "Fin de semana",
@@ -32597,7 +32619,7 @@
       }
     }
   ],
-  "_lastModified": 1779569811832,
+  "_lastModified": 1780175946660,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34766,6 +34788,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1780175862957,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1779569525216,
       "user": "Administrador",
       "rol": "admin",
@@ -36356,14 +36386,6 @@
       "accion": "Publicador editado",
       "detalle": "Garcia, Laura Johana · datos generales",
       "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1778159299653,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
