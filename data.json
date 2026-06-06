@@ -32304,6 +32304,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1780779558312",
+      "fecha": "2026-06-03",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 129,
+      "zoom": 74,
+      "total": 203,
+      "notas": "",
+      "_ts": 1780779558312
+    },
+    {
       "id": "r1780175936373",
       "fecha": "2026-05-30",
       "tipo": "Fin de semana",
@@ -32619,7 +32630,7 @@
       }
     }
   ],
-  "_lastModified": 1780175954357,
+  "_lastModified": 1780779567713,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34788,6 +34799,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1780779526815,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1780175862957,
       "user": "Administrador",
       "rol": "admin",
@@ -36378,14 +36397,6 @@
       "accion": "Publicador eliminado",
       "detalle": "Alba, Nicolas",
       "pubId": null
-    },
-    {
-      "ts": 1778159317499,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Garcia, Laura Johana · datos generales",
-      "pubId": "p1776219747113"
     }
   ],
   "formHistorial": [
