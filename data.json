@@ -32304,6 +32304,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1780779985070",
+      "fecha": "2026-06-06",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 136,
+      "zoom": 62,
+      "total": 198,
+      "notas": "",
+      "_ts": 1780779985070
+    },
+    {
       "id": "r1780779558312",
       "fecha": "2026-06-03",
       "tipo": "Entre semana",
@@ -32630,7 +32641,7 @@
       }
     }
   ],
-  "_lastModified": 1780779567713,
+  "_lastModified": 1780779990668,
   "vym": {
     "semanas": {},
     "historial": [
