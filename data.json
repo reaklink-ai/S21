@@ -32641,7 +32641,7 @@
       }
     }
   ],
-  "_lastModified": 1780779990668,
+  "_lastModified": 1781298120566,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34810,6 +34810,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781298112757,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1780779526815,
       "user": "Administrador",
       "rol": "admin",
@@ -34826,11 +34834,27 @@
       "pubId": null
     },
     {
+      "ts": 1780002021325,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1779569525216,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1779374242859,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -36384,30 +36408,6 @@
       "accion": "Publicador editado",
       "detalle": "Montañez, Ana · Nombre: MontañEz → Montañez",
       "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1778160025706,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Bolaños Quiñones, Miler · Nombre: BolañOs QuiñOn → Bolaños Quiñones",
-      "pubId": "mmm9qi4lb847"
-    },
-    {
-      "ts": 1778159997965,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Peña, Johana Marcela · Nombre: PeñA → Peña",
-      "pubId": "mmm9qi4rb7p1"
-    },
-    {
-      "ts": 1778159603824,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador eliminado",
-      "detalle": "Alba, Nicolas",
-      "pubId": null
     }
   ],
   "formHistorial": [
