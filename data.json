@@ -32817,7 +32817,7 @@
       }
     }
   ],
-  "_lastModified": 1781579601368,
+  "_lastModified": 1781579875370,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34986,6 +34986,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781579864611,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781579528755,
       "user": "Administrador",
       "rol": "admin",
@@ -36571,14 +36579,6 @@
     },
     {
       "ts": 1778687408061,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687408050,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
