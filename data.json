@@ -6794,11 +6794,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615689931
           },
           "Jun": {
             "particip": false,
@@ -7121,11 +7122,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "18",
+            "notas": "",
+            "_ts": 1781615700670
           },
           "Jun": {
             "particip": false,
@@ -7285,11 +7287,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615704340
           },
           "Jun": {
             "particip": false,
@@ -7539,11 +7542,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615709813
           },
           "Jun": {
             "particip": false,
@@ -10827,14 +10831,16 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO INFORMO EN EL MES"
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781615740348
           },
           "May": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781615741851
           },
           "Jun": {
             "particip": false,
@@ -10985,11 +10991,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615748733
           },
           "Jun": {
             "particip": false,
@@ -11473,9 +11480,10 @@
           "Mar": {
             "particip": true,
             "cursos": "1",
-            "paux": false,
+            "paux": true,
             "horas": "30",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615758394
           },
           "Abr": {
             "particip": true,
@@ -11485,11 +11493,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1781615760812
           },
           "Jun": {
             "particip": false,
@@ -14360,11 +14369,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615766822
           },
           "Jun": {
             "particip": false,
@@ -22594,11 +22604,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615774830
           },
           "Jun": {
             "particip": false,
@@ -24334,11 +24345,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615778072
           },
           "Jun": {
             "particip": false,
@@ -24512,11 +24524,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615788421
           },
           "Jun": {
             "particip": false,
@@ -28779,11 +28792,12 @@
             "notas": "NO INFORMO EN EL MES"
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615802889
           },
           "Jun": {
             "particip": false,
@@ -28886,14 +28900,16 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO INFORMO EN EL MES"
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781615721382
           },
           "May": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781615722958
           },
           "Jun": {
             "particip": false,
@@ -29014,11 +29030,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615736574
           },
           "Jun": {
             "particip": false,
@@ -29452,11 +29469,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615794872
           },
           "Jun": {
             "particip": false,
@@ -29565,11 +29583,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781615799027
           },
           "Jun": {
             "particip": false,
@@ -32851,7 +32870,7 @@
       }
     }
   ],
-  "_lastModified": 1781615250775,
+  "_lastModified": 1781616178703,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35020,6 +35039,102 @@
   ],
   "auditoria": [
     {
+      "ts": 1781615788421,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sanchez, Maritza · May 2025: cursos=1",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
+      "ts": 1781615788415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sanchez, Maritza · May 2025: cursos=1",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
+      "ts": 1781615774830,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · May 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
+      "ts": 1781615774824,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · May 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
+      "ts": 1781615760812,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · May 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1781615760807,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · May 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1781615757727,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · May 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1781615757720,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · May 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1781615700670,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · May 2025: horas=18",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
+      "ts": 1781615700664,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · May 2025: horas=18",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
+      "ts": 1781615603166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781615256141,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781614837019,
       "user": "Administrador",
       "rol": "admin",
@@ -36522,102 +36637,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1779210803762,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1779207785142,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Figueredo, Fergie Alexandra · datos generales",
-      "pubId": "p1776221244569"
-    },
-    {
-      "ts": 1779207533519,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Tovar, Andres · datos generales",
-      "pubId": "mmm9qi4s4eyz"
-    },
-    {
-      "ts": 1779207509840,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Tovar, Daniela · datos generales",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1779207476914,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Martinez, Luis · datos generales",
-      "pubId": "mmm9qi4q025q"
-    },
-    {
-      "ts": 1779207445109,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Calambas, Clemencia · datos generales",
-      "pubId": "mmm9qi4l2zz4"
-    },
-    {
-      "ts": 1779207090065,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1779206976647,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Gallardo, Raquel · datos generales",
-      "pubId": "mmm9qi4nc993"
-    },
-    {
-      "ts": 1779206909492,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Serna Rivadeneira, Cristina · datos generales",
-      "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1779206815415,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "García, Bobadilla Alicia · datos generales",
-      "pubId": "mmm9qi4ulvrs"
-    },
-    {
-      "ts": 1779206782953,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Garcia, Sarha · datos generales",
-      "pubId": "mmm9qi4uprah"
-    },
-    {
-      "ts": 1779206758544,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Diaz, Azucena · datos generales",
-      "pubId": "mmm9qi4mvdcx"
     }
   ],
   "formHistorial": [
