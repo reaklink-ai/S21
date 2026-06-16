@@ -32817,7 +32817,7 @@
       }
     }
   ],
-  "_lastModified": 1781580093181,
+  "_lastModified": 1781580185169,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34986,6 +34986,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781580109883,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781580021488,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781579864611,
       "user": "Administrador",
       "rol": "admin",
@@ -35000,6 +35016,14 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
+    },
+    {
+      "ts": 1781579396076,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Melanie · Jun 2025: cursos=",
+      "pubId": "mmm9qi4nsqsw"
     },
     {
       "ts": 1781579255948,
@@ -35378,6 +35402,14 @@
       "pubId": "mmm9qi4jevxb"
     },
     {
+      "ts": 1781578575863,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781578446436,
       "user": "Administrador",
       "rol": "admin",
@@ -35727,6 +35759,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1780781835048,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -36543,46 +36583,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Alba, Nicolas · Ago 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687458637,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jul 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687458629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jul 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687412139,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687412132,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: horas=50",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1778687408061,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: horas=50",
       "pubId": "mmm9qi4jq3yf"
     }
   ],
