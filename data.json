@@ -32851,7 +32851,7 @@
       }
     }
   ],
-  "_lastModified": 1781582536714,
+  "_lastModified": 1781582708253,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35020,6 +35020,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781582704468,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781582516977,
       "user": "Administrador",
       "rol": "admin",
@@ -36605,14 +36613,6 @@
     },
     {
       "ts": 1779029083774,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1779026570155,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
