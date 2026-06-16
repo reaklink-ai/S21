@@ -7370,7 +7370,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -7964,10 +7964,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": ""
           },
           "Jun": {
@@ -9184,11 +9184,11 @@
             "notas": "12 horas Betel - Fallecimiento de la mamá"
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "23",
+            "notas": "32 Betel"
           },
           "Jun": {
             "particip": false,
@@ -11131,7 +11131,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11748,7 +11748,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11909,7 +11909,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO",
+            "_ts": 1781580390242
           },
           "Jun": {
             "particip": false,
@@ -12078,11 +12079,11 @@
             "notas": "48 Horas Betel"
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Betel"
           },
           "Jun": {
             "particip": false,
@@ -12245,10 +12246,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "44",
             "notas": ""
           },
           "Jun": {
@@ -13498,11 +13499,11 @@
             "notas": "42 Horas Betel"
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "5",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "27",
+            "notas": "28 Betel"
           },
           "Jun": {
             "particip": false,
@@ -13675,11 +13676,11 @@
             "notas": "16 Horas Betel"
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "31",
+            "notas": "24 Betel"
           },
           "Jun": {
             "particip": false,
@@ -13845,10 +13846,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "53",
             "notas": ""
           },
           "Jun": {
@@ -14021,11 +14022,11 @@
             "notas": "16 Horas Betel"
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "30",
+            "notas": "18 Betel"
           },
           "Jun": {
             "particip": false,
@@ -14181,10 +14182,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "54",
             "notas": ""
           },
           "Jun": {
@@ -16103,7 +16104,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16739,7 +16740,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16934,10 +16935,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": ""
           },
           "Jun": {
@@ -21065,10 +21066,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Jun": {
@@ -32817,7 +32818,7 @@
       }
     }
   ],
-  "_lastModified": 1781580386916,
+  "_lastModified": 1781580523013,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34986,6 +34987,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781580396332,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781580324263,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781580296525,
       "user": "Administrador",
       "rol": "admin",
@@ -36567,22 +36584,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Alba, Geraldine · Jun 2025: horas=50",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1778687477461,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Jun 2025: horas=50",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1778687475504,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · May 2025: horas=50",
       "pubId": "mmm9qi4jigd3"
     }
   ],
