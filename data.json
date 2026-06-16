@@ -32851,7 +32851,7 @@
       }
     }
   ],
-  "_lastModified": 1781611237312,
+  "_lastModified": 1781614841472,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35020,6 +35020,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781614837019,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781611233170,
       "user": "Administrador",
       "rol": "admin",
@@ -36610,14 +36618,6 @@
       "accion": "Publicador editado",
       "detalle": "Diaz, Azucena · datos generales",
       "pubId": "mmm9qi4mvdcx"
-    },
-    {
-      "ts": 1779206494266,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
