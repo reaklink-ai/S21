@@ -4177,20 +4177,11 @@ function _mergeStates(remoto, local) {
         if(!localReg) {
           // Local no tiene este mes — tomar del remoto
           lp.registros[anio][mes] = val;
-        } else if(val && val._ts && localReg._ts) {
-          // Ambos tienen timestamp — gana el más reciente
-          if(val._ts > localReg._ts) lp.registros[anio][mes] = val;
-        } else if(val && val._ts && !localReg._ts) {
-          // Remoto tiene timestamp, local no — remoto gana
+        } else if(val && val._ts && localReg._ts && val._ts > localReg._ts) {
+          // Remoto tiene timestamp más reciente — tomar del remoto
           lp.registros[anio][mes] = val;
-        } else if(val && !val._ts && !localReg._ts) {
-          // Ninguno tiene timestamp — merge campo por campo, remoto complementa local
-          if(val.particip && !localReg.particip) localReg.particip = val.particip;
-          if(val.cursos && !localReg.cursos) localReg.cursos = val.cursos;
-          if(val.horas && !localReg.horas) localReg.horas = val.horas;
-          if(val.paux && !localReg.paux) localReg.paux = val.paux;
-          if(val.notas && !localReg.notas) localReg.notas = val.notas;
         }
+        // Si local tiene datos y no hay timestamp, local SIEMPRE gana (es la edición activa)
       });
     });
   });
@@ -4242,36 +4233,18 @@ function _mergeStates(remoto, local) {
     if(!localHist.has(h.id+'_'+h.ts)) m.formHistorial = [...(m.formHistorial||[]), h];
   });
 
-  // VyM: merge bidireccional — remoto y local se complementan
+  // VyM: agregar semanas remotas que local no tiene; local SIEMPRE gana en asign
+  // Semanas borradas localmente (no en m.vym.semanas) se marcan para no restaurar
   if(remoto.vym && remoto.vym.semanas) {
     if(!m.vym) m.vym = { semanas: {} };
     const borradas = m.vym._borradas || [];
     Object.entries(remoto.vym.semanas).forEach(([k, sv]) => {
-      if(borradas.includes(k)) return;
+      if(borradas.includes(k)) return;          // fue borrada intencionalmente, no restaurar
       if(!m.vym.semanas[k]) {
         m.vym.semanas[k] = JSON.parse(JSON.stringify(sv));
         return;
       }
-      // Merge partes: tomar del remoto si local no tiene o remoto es más reciente
-      if(sv.partes) {
-        if(!m.vym.semanas[k].partes) {
-          m.vym.semanas[k].partes = sv.partes;
-        } else {
-          // Merge parte por parte
-          sv.partes.forEach((rp, i) => {
-            if(!m.vym.semanas[k].partes[i]) {
-              m.vym.semanas[k].partes[i] = rp;
-            } else {
-              const lp = m.vym.semanas[k].partes[i];
-              // Si remoto tiene asignado y local no, tomar remoto
-              if(rp.asignado && !lp.asignado) lp.asignado = rp.asignado;
-              if(rp.ayudante && !lp.ayudante) lp.ayudante = rp.ayudante;
-              if(rp.titulo && !lp.titulo) lp.titulo = rp.titulo;
-              if(rp.tipo && !lp.tipo) lp.tipo = rp.tipo;
-            }
-          });
-        }
-      }
+      if(sv.partes && !m.vym.semanas[k].partes) m.vym.semanas[k].partes = sv.partes;
       if(sv.libros && !m.vym.semanas[k].libros) m.vym.semanas[k].libros = sv.libros;
     });
   }
@@ -9915,40 +9888,29 @@ renderGruposPanel();
       }
       // Primero aplicar permisos, luego ir al inicio
       applyRoleUI();
-      // Mostrar pantalla de carga mientras sincroniza
-      const _loadingDiv = document.createElement('div');
-      _loadingDiv.id = '_syncLoading';
-      _loadingDiv.style.cssText = 'position:fixed;inset:0;background:rgba(255,255,255,.92);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;font-family:var(--font)';
-      _loadingDiv.innerHTML = '<div style="width:36px;height:36px;border:3px solid #e2e8f0;border-top-color:var(--accent);border-radius:50%;animation:spin .7s linear infinite"></div><div style="font-size:14px;font-weight:600;color:var(--ink-2)">Sincronizando datos...</div>';
-      document.body.appendChild(_loadingDiv);
-
-      const _hideSyncLoading = () => {
-        const el = document.getElementById('_syncLoading');
-        if(el) el.remove();
-        irA('inicio');
-      };
-
-      // Siempre hacer merge bidireccional antes de mostrar
+      irA('inicio');
+      // Sincronizar al restaurar sesión
       setTimeout(async () => {
         try {
           const res = await fetch(SYNC_URL + '?t=' + Date.now());
-          if(!res.ok) { _hideSyncLoading(); return; }
+          if(!res.ok) return;
           const json   = await res.json();
           const remoto = json.data;
-          // Siempre hacer merge — gana el campo más reciente de cada lado
-          state = _mergeStates(remoto, state);
-          if(!state.usuarios||state.usuarios.length===0) state.usuarios=[{...DEFAULT_ADMIN}];
-          migrarUsuariosLegacy();
-          localStorage.setItem(KEY, JSON.stringify(state));
-          // Subir el merge resultante al Worker
-          await _mergeAndPush(0, true);
-          renderDashboard(); renderLista();
-        } catch(e) {
-          // Sin internet — usar datos locales
-        } finally {
-          _hideSyncLoading();
-        }
-      }, 300);
+          const tsLocal  = state._lastModified || 0;
+          const tsRemoto = remoto._lastModified || 0;
+          const localTieneSupers  = Object.values(state.grupos||{}).some(g=>g.super);
+          const remotoTieneSupers = Object.values(remoto.grupos||{}).some(g=>g.super);
+          if(tsLocal > tsRemoto || (localTieneSupers && !remotoTieneSupers)) {
+            await _mergeAndPush();
+          } else {
+            state = _mergeStates(remoto, state);
+            if(!state.usuarios||state.usuarios.length===0) state.usuarios=[{...DEFAULT_ADMIN}];
+            migrarUsuariosLegacy();
+            localStorage.setItem(KEY, JSON.stringify(state));
+            renderDashboard(); renderLista();
+          }
+        } catch(e) {}
+      }, 500);
     } catch(e) {
       currentUser = null;
       setTimeout(() => document.getElementById('loginUser')?.focus(), 100);
