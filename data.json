@@ -32641,7 +32641,7 @@
       }
     }
   ],
-  "_lastModified": 1781298176258,
+  "_lastModified": 1781577758936,
   "vym": {
     "semanas": {},
     "historial": [
@@ -34810,6 +34810,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781577754031,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781298112757,
       "user": "Administrador",
       "rol": "admin",
@@ -36400,14 +36408,6 @@
       "accion": "Publicador editado",
       "detalle": "Millán, Andrea Carolina · Nombre: MilláN → Millán",
       "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1778160033228,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Montañez, Ana · Nombre: MontañEz → Montañez",
-      "pubId": "mmm9qi4qg4ch"
     }
   ],
   "formHistorial": [
