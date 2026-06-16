@@ -4177,11 +4177,20 @@ function _mergeStates(remoto, local) {
         if(!localReg) {
           // Local no tiene este mes — tomar del remoto
           lp.registros[anio][mes] = val;
-        } else if(val && val._ts && localReg._ts && val._ts > localReg._ts) {
-          // Remoto tiene timestamp más reciente — tomar del remoto
+        } else if(val && val._ts && localReg._ts) {
+          // Ambos tienen timestamp — gana el más reciente
+          if(val._ts > localReg._ts) lp.registros[anio][mes] = val;
+        } else if(val && val._ts && !localReg._ts) {
+          // Remoto tiene timestamp, local no — remoto gana
           lp.registros[anio][mes] = val;
+        } else if(val && !val._ts && !localReg._ts) {
+          // Ninguno tiene timestamp — merge campo por campo, remoto complementa local
+          if(val.particip && !localReg.particip) localReg.particip = val.particip;
+          if(val.cursos && !localReg.cursos) localReg.cursos = val.cursos;
+          if(val.horas && !localReg.horas) localReg.horas = val.horas;
+          if(val.paux && !localReg.paux) localReg.paux = val.paux;
+          if(val.notas && !localReg.notas) localReg.notas = val.notas;
         }
-        // Si local tiene datos y no hay timestamp, local SIEMPRE gana (es la edición activa)
       });
     });
   });
@@ -4233,18 +4242,36 @@ function _mergeStates(remoto, local) {
     if(!localHist.has(h.id+'_'+h.ts)) m.formHistorial = [...(m.formHistorial||[]), h];
   });
 
-  // VyM: agregar semanas remotas que local no tiene; local SIEMPRE gana en asign
-  // Semanas borradas localmente (no en m.vym.semanas) se marcan para no restaurar
+  // VyM: merge bidireccional — remoto y local se complementan
   if(remoto.vym && remoto.vym.semanas) {
     if(!m.vym) m.vym = { semanas: {} };
     const borradas = m.vym._borradas || [];
     Object.entries(remoto.vym.semanas).forEach(([k, sv]) => {
-      if(borradas.includes(k)) return;          // fue borrada intencionalmente, no restaurar
+      if(borradas.includes(k)) return;
       if(!m.vym.semanas[k]) {
         m.vym.semanas[k] = JSON.parse(JSON.stringify(sv));
         return;
       }
-      if(sv.partes && !m.vym.semanas[k].partes) m.vym.semanas[k].partes = sv.partes;
+      // Merge partes: tomar del remoto si local no tiene o remoto es más reciente
+      if(sv.partes) {
+        if(!m.vym.semanas[k].partes) {
+          m.vym.semanas[k].partes = sv.partes;
+        } else {
+          // Merge parte por parte
+          sv.partes.forEach((rp, i) => {
+            if(!m.vym.semanas[k].partes[i]) {
+              m.vym.semanas[k].partes[i] = rp;
+            } else {
+              const lp = m.vym.semanas[k].partes[i];
+              // Si remoto tiene asignado y local no, tomar remoto
+              if(rp.asignado && !lp.asignado) lp.asignado = rp.asignado;
+              if(rp.ayudante && !lp.ayudante) lp.ayudante = rp.ayudante;
+              if(rp.titulo && !lp.titulo) lp.titulo = rp.titulo;
+              if(rp.tipo && !lp.tipo) lp.tipo = rp.tipo;
+            }
+          });
+        }
+      }
       if(sv.libros && !m.vym.semanas[k].libros) m.vym.semanas[k].libros = sv.libros;
     });
   }
