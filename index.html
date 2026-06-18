@@ -11227,12 +11227,12 @@ function _extraerHorasNotas(notas) {
   // Patrón 2: unidad ANTES del número → "HORAS DE BETEL 15"
   // Solo si el patrón 1 no encontró nada
   if(detalle.length === 0) {
-    const re2 = /h(?:rs?|oras?)\s+(?:\w+\s+){0,2}(\d+(?:[.,]\d+)?)/gi;
+    const re2 = /h(?:rs?|oras?)\s+(?:de\s+)?(?:\w+[\s:]+){0,4}(\d+(?:[.,]\d+)?)/gi;
     while((m = re2.exec(txt)) !== null) {
       const num = parseFloat(m[1].replace(',', '.'));
       if(num > 0 && num <= 300) {
         // Etiqueta: palabras entre la unidad y el número
-        const entre = m[0].replace(/^h(?:rs?|oras?)\s+/i,'').replace(/\s*\d[\d.,]*$/,'').trim();
+        const entre = m[0].replace(/^h(?:rs?|oras?)\s+/i,'').replace(/:?\s*\d[\d.,]*$/,'').trim();
         const tipo = entre.length > 0 ? entre.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'').slice(0,30) : 'extra';
         detalle.push({ tipo, horas: num, raw: m[0].trim() });
         total += num;
