@@ -7881,7 +7881,13 @@ function generarInformeGrupo(modo) {
       if(!r.particip) alertas.push({tipo:'ausente',msg:'No participó este mes',nivel:'medio'});
       const ult3m=[];
       for(let i=2;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult3m.push({mesKey:MESES_K[idx],anio:a});}
-      const aus3=ult3m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+      // Solo contar como ausencia los meses donde el publicador ya tenía registro en el sistema
+      // (evita marcar como irregular a publicadores nuevos sin historial previo)
+      const ult3mValidos = ult3m.filter(m => {
+        const reg = (p.registros||{})[m.anio]?.[m.mesKey];
+        return reg !== undefined; // el mes existe como registro, sea true o false
+      });
+      const aus3=ult3mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
       if(aus3>=2&&aus3<6) alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus3} de los últimos 3 meses`,nivel:'alto'});
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
