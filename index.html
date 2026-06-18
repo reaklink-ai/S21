@@ -7878,6 +7878,15 @@ function generarInformeGrupo(modo) {
     const alertasPub = pubs.map(p => {
       const alertas = [];
       const r = getReg(p,anio,mesKey);
+
+      // Detectar publicador nuevo por nota — alerta positiva, no debe contar como irregular
+      const notaLower = (r.notas||'').toLowerCase();
+      const esNuevoPublicador = notaLower.includes('nuevo publicador') || notaLower.includes('nueva publicadora') ||
+        notaLower.includes('nuevo publicador') || notaLower.includes('no bautizad');
+      if(esNuevoPublicador) {
+        alertas.push({tipo:'nuevo',msg:'Nuevo publicador 🎉',nivel:'positivo',color:'#16a34a'});
+      }
+
       if(!r.particip) alertas.push({tipo:'ausente',msg:'No participó este mes',nivel:'medio'});
       const ult3m=[];
       for(let i=2;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult3m.push({mesKey:MESES_K[idx],anio:a});}
@@ -7888,11 +7897,11 @@ function generarInformeGrupo(modo) {
         return reg !== undefined; // el mes existe como registro, sea true o false
       });
       const aus3=ult3mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-      if(aus3>=2&&aus3<6) alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus3} de los últimos 3 meses`,nivel:'alto'});
+      if(aus3>=2&&aus3<6&&!esNuevoPublicador) alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus3} de los últimos 3 meses`,nivel:'alto'});
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
       const aus6=ult6m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-      if(aus6>=6) alertas.push({tipo:'inactivo',msg:'En riesgo de inactividad: 6 meses sin participar',nivel:'critico'});
+      if(aus6>=6&&!esNuevoPublicador) alertas.push({tipo:'inactivo',msg:'En riesgo de inactividad: 6 meses sin participar',nivel:'critico'});
       const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
       if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
       if(p.precursorReg||p.precursorEsp||p.misionero){
@@ -8379,7 +8388,7 @@ ${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.ani
 <table>
   <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
   ${alertasPub.map(({pub:p,r,alertas})=>{
-    const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
+    const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
     const rowBg=alertas.some(a=>a.tipo==='inactivo')?'background:#fff1f2':alertas.some(a=>a.tipo==='irregular')?'background:#fffbeb':'';
     return `<tr style="${rowBg}"><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Si':'No'}</span></td><td style="text-align:center">${r.cursos||'—'}</td><td style="text-align:center">${r.paux?'Si':'—'}</td><td style="text-align:center">${r.horas||'—'}</td><td>${alertasHtml||'<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td><td style="font-size:8pt;color:#475569">${escH(r.notas||'')}</td></tr>`;
   }).join('')}
@@ -8389,7 +8398,7 @@ ${(enRiesgoInac.length>0||irregulares.length>0||precBajoMeta.length>0)?`
 <table>
   <tr><th style="width:30%">Publicador</th><th>Alertas</th></tr>
   ${alertasPub.filter(x=>x.alertas.length>0).map(({pub:p,alertas})=>{
-    const aHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
+    const aHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
     return `<tr><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td>${aHtml}</td></tr>`;
   }).join('')}
 </table>`:''}
