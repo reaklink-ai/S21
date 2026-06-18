@@ -29492,9 +29492,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "55",
             "notas": "",
-            "_ts": 1781793554569
+            "_ts": 1781795405177
           },
           "Jun": {
             "particip": false,
@@ -33208,7 +33208,7 @@
       }
     }
   ],
-  "_lastModified": 1781795372600,
+  "_lastModified": 1781795443544,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35377,6 +35377,54 @@
   ],
   "auditoria": [
     {
+      "ts": 1781795405177,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: cursos=",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1781795405172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: cursos=",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1781795401383,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: cursos=1",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1781795401375,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: cursos=1",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1781795400639,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: horas=55",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1781795400630,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · May 2025: horas=55",
+      "pubId": "p1776219747113"
+    },
+    {
       "ts": 1781795251061,
       "user": "Administrador",
       "rol": "admin",
@@ -36927,54 +36975,6 @@
       "accion": "Horas editadas",
       "detalle": "Hernandez, Martha · May 2025: horas=58",
       "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1781579145182,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · May 2025: horas=35",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1781579145175,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · May 2025: horas=35",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1781579143091,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · May 2025: cursos=1",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1781579143084,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · May 2025: cursos=1",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1781579135636,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · May 2025: horas=10",
-      "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1781579135630,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · May 2025: horas=10",
-      "pubId": "mmm9qi4nj17y"
     }
   ],
   "formHistorial": [
