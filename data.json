@@ -9954,11 +9954,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793158015
           },
           "Jun": {
             "particip": false,
@@ -20198,11 +20199,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793163287
           },
           "Jun": {
             "particip": false,
@@ -24790,11 +24792,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793182308
           },
           "Jun": {
             "particip": false,
@@ -24959,14 +24962,16 @@
             "cursos": "2",
             "paux": false,
             "horas": "22",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793187361
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "57",
+            "notas": "",
+            "_ts": 1781793190440
           },
           "Jun": {
             "particip": false,
@@ -25654,11 +25659,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1781793203210
           },
           "Jun": {
             "particip": false,
@@ -25814,11 +25820,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793205552
           },
           "Jun": {
             "particip": false,
@@ -28574,11 +28581,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781793160511
           },
           "Jun": {
             "particip": false,
@@ -33183,7 +33191,7 @@
       }
     }
   ],
-  "_lastModified": 1781793090245,
+  "_lastModified": 1781793355172,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35352,6 +35360,142 @@
   ],
   "auditoria": [
     {
+      "ts": 1781793203210,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tibaquicha, Luz Marina · May 2025: horas=15",
+      "pubId": "mmm9qi4szjx7"
+    },
+    {
+      "ts": 1781793203203,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tibaquicha, Luz Marina · May 2025: horas=15",
+      "pubId": "mmm9qi4szjx7"
+    },
+    {
+      "ts": 1781793190440,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: horas=57",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793190436,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: horas=57",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793188575,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793188569,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793187361,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Abr 2025: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793186975,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: horas=",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793184670,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · May 2025: cursos=",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1781793182308,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: horas=",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793182302,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: horas=",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793181527,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: cursos=",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793181522,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: cursos=",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793180317,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: horas=57",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793180312,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: horas=57",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793177765,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: cursos=2",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
+      "ts": 1781793177757,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Fabian · May 2025: cursos=2",
+      "pubId": "mmm9qi4si0is"
+    },
+    {
       "ts": 1781792866846,
       "user": "Administrador",
       "rol": "admin",
@@ -36814,142 +36958,6 @@
       "accion": "Horas editadas",
       "detalle": "Vivas, Sonia Julieth · May 2025: horas=15",
       "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1781578417995,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vivas, Sonia Julieth · May 2025: cursos=",
-      "pubId": "mmm9qi4t0167"
-    },
-    {
-      "ts": 1781578414889,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · May 2025: horas=50",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1781578414884,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · May 2025: horas=50",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1781578327933,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · May 2025: horas=49",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1781578327927,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · May 2025: horas=49",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1781578326021,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · May 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1781578326015,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · May 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1781578300776,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · May 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1781578300769,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · May 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1781578263951,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1781578263944,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1781577992198,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · May 2025: horas=30",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1781577992191,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · May 2025: horas=30",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1781577989662,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · May 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1781577989656,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · May 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1781577964689,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · May 2025: horas=60",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1781577964683,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · May 2025: horas=60",
-      "pubId": "mmm9qi4qzusx"
     }
   ],
   "formHistorial": [
