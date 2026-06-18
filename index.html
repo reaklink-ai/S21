@@ -7884,7 +7884,7 @@ function generarInformeGrupo(modo) {
       const esNuevoPublicador = notaLower.includes('nuevo publicador') || notaLower.includes('nueva publicadora') ||
         notaLower.includes('nuevo publicador') || notaLower.includes('no bautizad');
       if(esNuevoPublicador) {
-        alertas.push({tipo:'nuevo',msg:'Nuevo publicador 🎉',nivel:'positivo',color:'#16a34a'});
+        alertas.push({tipo:'nuevo',msg:'Nuevo publicador',nivel:'positivo',color:'#16a34a'});
       }
 
       // Nota: la ausencia se refleja directamente en la alerta "Predicación irregular" más abajo
@@ -7900,8 +7900,15 @@ function generarInformeGrupo(modo) {
       if(!r.particip&&!esNuevoPublicador) alertas.push({tipo:'irregular',msg:'Predicación irregular',nivel:'critico'});
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
-      const aus6=ult6m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+      // Solo considerar meses donde ya existía registro (evita penalizar a publicadores nuevos)
+      const ult6mValidos = ult6m.filter(m => {
+        const reg = (p.registros||{})[m.anio]?.[m.mesKey];
+        return reg !== undefined;
+      });
+      const mesesAusentes6 = ult6mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip);
+      const aus6 = mesesAusentes6.length;
       if(aus6>=6&&!esNuevoPublicador) alertas.push({tipo:'inactivo',msg:'En riesgo de inactividad: 6 meses sin participar',nivel:'critico'});
+      else if(aus6>=1&&!esNuevoPublicador) alertas.push({tipo:'ausencias6m',msg:`Ausente en últimos 6 meses: ${mesesAusentes6.map(m=>m.mesKey).join(', ')}`,nivel:'medio'});
       const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
       if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
       if(p.precursorReg||p.precursorEsp||p.misionero){
