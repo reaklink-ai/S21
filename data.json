@@ -18611,11 +18611,12 @@
             "_ts": 1778157569498
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781801486767
           },
           "Jun": {
             "particip": false,
@@ -33209,7 +33210,7 @@
       }
     }
   ],
-  "_lastModified": 1781798708038,
+  "_lastModified": 1781801488053,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35378,6 +35379,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1781801233343,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781801233095,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781800417321,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781800236162,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781799249376,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781797650512,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36936,46 +36977,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1781649843810,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781616224211,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · May 2025: horas=16",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1781616224205,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · May 2025: horas=16",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1781616221931,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · May 2025: horas=",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1781616220774,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4nsgsv"
     }
   ],
   "formHistorial": [
