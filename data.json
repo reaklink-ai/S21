@@ -28227,11 +28227,11 @@
           },
           "May": {
             "particip": true,
-            "cursos": "1",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1781792805473
+            "_ts": 1781804951602
           },
           "Jun": {
             "particip": false,
@@ -28252,7 +28252,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781804952723
           }
         }
       },
@@ -33215,7 +33216,7 @@
       }
     }
   ],
-  "_lastModified": 1781804929651,
+  "_lastModified": 1781804953590,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35384,6 +35385,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781804951602,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · May 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1781804951593,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · May 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
       "ts": 1781804928323,
       "user": "Administrador",
       "rol": "admin",
@@ -36965,22 +36982,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Padilla, Jaime · May 2025: horas=42",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1781699349699,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · May 2025: cursos=2",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1781699349693,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · May 2025: cursos=2",
       "pubId": "mmm9qi4quyam"
     }
   ],
