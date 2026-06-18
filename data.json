@@ -3640,11 +3640,12 @@
             "_ts": 1778156732359
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792751821
           },
           "Jun": {
             "particip": false,
@@ -3814,11 +3815,12 @@
             "_ts": 1778156734233
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792754426
           },
           "Jun": {
             "particip": false,
@@ -3980,11 +3982,12 @@
             "_ts": 1778156737449
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792762785
           },
           "Jun": {
             "particip": false,
@@ -4148,11 +4151,12 @@
             "_ts": 1778156745714
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "21",
+            "notas": "",
+            "_ts": 1781792769251
           },
           "Jun": {
             "particip": false,
@@ -4420,11 +4424,12 @@
             "_ts": 1778156748187
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792771096
           },
           "Jun": {
             "particip": false,
@@ -6952,11 +6957,12 @@
             "_ts": 1778156749780
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792775517
           },
           "Jun": {
             "particip": false,
@@ -8154,11 +8160,12 @@
             "_ts": 1781578256249
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781791598202
           },
           "Jul": {
             "particip": false,
@@ -13134,7 +13141,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781791606849
           },
           "Jul": {
             "particip": false,
@@ -16516,11 +16524,12 @@
             "_ts": 1778156752375
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792779954
           },
           "Jun": {
             "particip": false,
@@ -25970,11 +25979,12 @@
             "_ts": 1778156754880
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792789967
           },
           "Jun": {
             "particip": false,
@@ -26299,11 +26309,12 @@
             "_ts": 1778156756875
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1781792798113
           },
           "Jun": {
             "particip": false,
@@ -28185,11 +28196,12 @@
             "_ts": 1778156760665
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781792805473
           },
           "Jun": {
             "particip": false,
@@ -32033,6 +32045,124 @@
         "notasMed": "",
         "_ts": 1781578828320
       }
+    },
+    {
+      "id": "p1781792857813",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781792863563
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
+            "_ts": 1781792874046
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Ardila de Zuluaga",
+      "nombre": "María",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 2",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1781792857812,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1781792857812
+      }
     }
   ],
   "grupos": {
@@ -33053,7 +33183,7 @@
       }
     }
   ],
-  "_lastModified": 1781791500756,
+  "_lastModified": 1781793090245,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35222,6 +35352,94 @@
   ],
   "auditoria": [
     {
+      "ts": 1781792866846,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · Jun 2025: horas=",
+      "pubId": "p1781792857813"
+    },
+    {
+      "ts": 1781792866424,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · Jun 2025: cursos=",
+      "pubId": "p1781792857813"
+    },
+    {
+      "ts": 1781792857813,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Ardila de Zuluaga, María · Grupo 2",
+      "pubId": "p1781792857813"
+    },
+    {
+      "ts": 1781792805473,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · May 2025: cursos=1",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1781792805468,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · May 2025: cursos=1",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1781792798113,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · May 2025: horas=15",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1781792798108,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · May 2025: horas=15",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1781792769251,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · May 2025: horas=21",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1781792769245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · May 2025: horas=21",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1781792762785,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · May 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1781792762779,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · May 2025: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
       "ts": 1781791475536,
       "user": "Administrador",
       "rol": "admin",
@@ -36732,94 +36950,6 @@
       "accion": "Horas editadas",
       "detalle": "Parra, Flor Alba · May 2025: horas=60",
       "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1781577962527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · May 2025: cursos=1",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1781577962521,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · May 2025: cursos=1",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1781577952318,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · May 2025: horas=54",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1781577952312,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · May 2025: horas=54",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1781577937418,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · May 2025: horas=50",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1781577937411,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · May 2025: horas=50",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1781577934599,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · May 2025: cursos=3",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1781577934592,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · May 2025: cursos=3",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1781577902395,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro, Luz Helena · May 2025: horas=17",
-      "pubId": "mmm9qi4lss62"
-    },
-    {
-      "ts": 1781577902388,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro, Luz Helena · May 2025: horas=17",
-      "pubId": "mmm9qi4lss62"
-    },
-    {
-      "ts": 1781577889290,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Amortegui, Natalia · May 2025: horas=16",
-      "pubId": "mmm9qi4j8aj2"
     }
   ],
   "formHistorial": [
