@@ -7917,14 +7917,23 @@ function generarInformeGrupo(modo) {
         if(r.particip && h>0 && h<10) alertas.push({tipo:'bajo10h',msg:`Menos de 10h en S-21 este mes (${h}h)`,nivel:'critico'});
         if(r.particip&&h<META_PREC_REG&&h>=10) alertas.push({tipo:'horas',msg:`Horas S-21 bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'alto'});
         if(!r.particip) alertas.push({tipo:'horas',msg:'No reportó horas este mes',nivel:'alto'});
-        // Total acumulado año de servicio
+        // Total acumulado año de servicio — usando el mes del informe, no el mes calendario actual
         const dp = precGetDatos(p, anio);
         const haAcum = dp.horasTotalCombinado||0;
-        const mesesTrans = Math.min(mesActual().idx+1, 12);
+        // Meses transcurridos del año de servicio (Sep=0 ... Ago=11) hasta el mes del informe
+        const mesesTrans = mesIdx + 1;
+        const mesesRestantes = 12 - mesesTrans;
         const hEsperadas = (560/12)*mesesTrans;
         const colorAc = haAcum>=600?'#16a34a':haAcum>=560?'#0284c7':haAcum>=hEsperadas?'#d97706':'#ef4444';
         const deficit = hEsperadas-haAcum;
-        alertas.push({tipo:'acumulado',msg:`Acumulado año: ${haAcum.toFixed(1)}h / 560h mín${haAcum<hEsperadas?' — déficit: '+deficit.toFixed(1)+'h':''}`,nivel:'info',color:colorAc});
+        let msgAcum = `Acumulado año: ${haAcum.toFixed(1)}h / 560h mín`;
+        if(haAcum<hEsperadas && mesesRestantes>0) {
+          const hNecesarias = (560-haAcum)/mesesRestantes;
+          msgAcum += ` — necesita ${hNecesarias.toFixed(0)}h/mes en los ${mesesRestantes} meses restantes`;
+        } else if(haAcum<hEsperadas) {
+          msgAcum += ` — déficit: ${deficit.toFixed(1)}h (sin meses restantes)`;
+        }
+        alertas.push({tipo:'acumulado',msg:msgAcum,nivel:'info',color:colorAc});
       }
       if(r.paux&&!p.precAuxContinuo){
         const h=parseFloat(r.horas)||0;
@@ -8266,16 +8275,26 @@ ${barChart}
       if(mesesCont>=1 && promPred<50) {
         alertasList.push(`<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">S-21: ${promPred.toFixed(0)}h/mes promedio — bajo meta de 50h</span>`);
       }
-      // Total acumulado año de servicio
+      // Total acumulado año de servicio — usando el último mes del período evaluado
       const datosPrec = precGetDatos(p, anio);
       const horasAcum = datosPrec.horasTotalCombinado || 0;
       const META_MIN = 560; const META_FULL = 600;
-      const mesActIdx = mesActual().idx;
-      const mesesTranscurridos = Math.min(mesActIdx + 1, 12);
+      // Usar el último mes del período como referencia (no el mes calendario actual)
+      const ultimoMesPeriodo = periodoMeses[periodoMeses.length-1];
+      const idxUltimoMes = MESES_K.indexOf(ultimoMesPeriodo.mesKey);
+      const mesesTranscurridos = idxUltimoMes + 1;
+      const mesesRestantesAnio = 12 - mesesTranscurridos;
       const horasEsperadas = (META_MIN / 12) * mesesTranscurridos;
       const deficit = horasEsperadas - horasAcum;
       const colorAcum = horasAcum >= META_FULL ? '#16a34a' : horasAcum >= META_MIN ? '#0284c7' : horasAcum >= horasEsperadas ? '#d97706' : '#ef4444';
-      alertasList.push(`<span style="display:inline-block;background:${colorAcum};color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:700;margin:1px">Acumulado año: ${horasAcum.toFixed(1)}h / 560h mín${horasAcum<horasEsperadas?' (deficit: '+deficit.toFixed(1)+'h)':''}</span>`);
+      let msgAcumPer = `Acumulado año: ${horasAcum.toFixed(1)}h / 560h mín`;
+      if(horasAcum<horasEsperadas && mesesRestantesAnio>0) {
+        const hNecesariasPer = (META_MIN-horasAcum)/mesesRestantesAnio;
+        msgAcumPer += ` — necesita ${hNecesariasPer.toFixed(0)}h/mes en los ${mesesRestantesAnio} meses restantes`;
+      } else if(horasAcum<horasEsperadas) {
+        msgAcumPer += ` (déficit: ${deficit.toFixed(1)}h)`;
+      }
+      alertasList.push(`<span style="display:inline-block;background:${colorAcum};color:#fff;border-radius:4px;padding:2px 8px;font-size:7.5pt;font-weight:700;margin:1px">${msgAcumPer}</span>`);
       // Estado general de horas
       if(promComb < 45 && mesesCont>=2) {
         alertasList.push(`<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">S-21 + crédito: ${promComb.toFixed(1)}h/mes — requiere atención</span>`);
