@@ -7887,7 +7887,7 @@ function generarInformeGrupo(modo) {
         alertas.push({tipo:'nuevo',msg:'Nuevo publicador 🎉',nivel:'positivo',color:'#16a34a'});
       }
 
-      if(!r.particip) alertas.push({tipo:'ausente',msg:'No participó este mes',nivel:'medio'});
+      // Nota: la ausencia se refleja directamente en la alerta "Predicación irregular" más abajo
       const ult3m=[];
       for(let i=2;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult3m.push({mesKey:MESES_K[idx],anio:a});}
       // Solo contar como ausencia los meses donde el publicador ya tenía registro en el sistema
@@ -7897,7 +7897,7 @@ function generarInformeGrupo(modo) {
         return reg !== undefined; // el mes existe como registro, sea true o false
       });
       const aus3=ult3mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-      if(aus3>=2&&aus3<6&&!esNuevoPublicador) alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus3} de los últimos 3 meses`,nivel:'alto'});
+      if(!r.particip&&!esNuevoPublicador) alertas.push({tipo:'irregular',msg:'Predicación irregular',nivel:'critico'});
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
       const aus6=ult6m.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
@@ -8389,7 +8389,7 @@ ${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.ani
   <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
   ${alertasPub.map(({pub:p,r,alertas})=>{
     const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
-    const rowBg=alertas.some(a=>a.tipo==='inactivo')?'background:#fff1f2':alertas.some(a=>a.tipo==='irregular')?'background:#fffbeb':'';
+    const rowBg=alertas.some(a=>a.tipo==='inactivo'||a.tipo==='irregular')?'background:#fff1f2':'';
     return `<tr style="${rowBg}"><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Si':'No'}</span></td><td style="text-align:center">${r.cursos||'—'}</td><td style="text-align:center">${r.paux?'Si':'—'}</td><td style="text-align:center">${r.horas||'—'}</td><td>${alertasHtml||'<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td><td style="font-size:8pt;color:#475569">${escH(r.notas||'')}</td></tr>`;
   }).join('')}
 </table>
