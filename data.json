@@ -5765,11 +5765,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781797166744
           },
           "Jun": {
             "particip": false,
@@ -33208,7 +33209,7 @@
       }
     }
   ],
-  "_lastModified": 1781796381241,
+  "_lastModified": 1781797167902,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35377,6 +35378,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781797152861,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781796247190,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -36967,14 +36976,6 @@
       "accion": "Horas editadas",
       "detalle": "De Leon, Marcela · May 2025: horas=18",
       "pubId": "mmm9qi4m00va"
-    },
-    {
-      "ts": 1781615603166,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
