@@ -12343,9 +12343,15 @@ function guardarAhora() {
   }
   const badge = document.getElementById('appbar-cambios-badge');
   if(badge) badge.classList.remove('visible');
-  // Ahora sí sincronizar con el Worker
-  _syncQueue = _syncQueue.then(() => _mergeAndPush(0, false)).then(() => { _guardandoPub = false; }).catch(() => { _guardandoPub = false; });
-  toast('✓ Guardado');
+  // Guardado local inmediato confirmado; ahora sincronizar con el Worker (toma unos segundos)
+  toast('✓ Guardado localmente — sincronizando con la nube...', 4000);
+  _syncQueue = _syncQueue.then(() => _mergeAndPush(0, true)).then(() => {
+    _guardandoPub = false;
+    toast('☁️ Sincronizado correctamente', 2500);
+  }).catch(() => {
+    _guardandoPub = false;
+    toast('⚠️ No se pudo sincronizar — verifica tu internet e intenta de nuevo', 4000);
+  });
 }
 
 // Advertir si hay cambios sin guardar al cerrar/navegar
