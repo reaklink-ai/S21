@@ -66,12 +66,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1779279559978
+            "_ts": 1781062786054
           },
           "Jun": {
             "particip": false,
@@ -725,11 +725,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "25",
+            "notas": "",
+            "_ts": 1781797650512
           },
           "Jun": {
             "particip": false,
@@ -19778,7 +19779,7 @@
       "apellido": "Pelaez",
       "nombre": "Neismer",
       "nacimiento": "1984-04-26",
-      "bautismo": "",
+      "bautismo": "1997-11-",
       "grupo": "Grupo 1",
       "telefono": "310 241 8902",
       "genero": "F",
@@ -33209,7 +33210,7 @@
       }
     }
   ],
-  "_lastModified": 1781797417523,
+  "_lastModified": 1781797651334,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35378,6 +35379,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781797650512,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · May 2025: horas=25",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1781797650505,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · May 2025: horas=25",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
       "ts": 1781797416574,
       "user": "Administrador",
       "rol": "admin",
@@ -35410,6 +35427,14 @@
       "pubId": "mmm9qi4r0lk8"
     },
     {
+      "ts": 1781797284110,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781797199835,
       "user": "Administrador",
       "rol": "admin",
@@ -35429,6 +35454,14 @@
       "ts": 1781797083213,
       "user": "Administrador",
       "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781796652976,
+      "user": "Miguel_R",
+      "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
@@ -36944,38 +36977,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Carlos · May 2025: cursos=2",
       "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1781616220768,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1781616210763,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: horas=50",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781616210757,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: horas=50",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781616208597,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
     }
   ],
   "formHistorial": [
