@@ -9633,11 +9633,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1781795251061
           },
           "Jun": {
             "particip": false,
@@ -33207,7 +33208,7 @@
       }
     }
   ],
-  "_lastModified": 1781795135492,
+  "_lastModified": 1781795262164,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35376,6 +35377,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1781795251061,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · May 2025: horas=50",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1781795251055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · May 2025: horas=50",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1781795249380,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1781795249375,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
       "ts": 1781793833730,
       "user": "Administrador",
       "rol": "admin",
@@ -36942,38 +36975,6 @@
       "accion": "Horas editadas",
       "detalle": "Galindo, Estefania · May 2025: horas=10",
       "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1781578828321,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Figueredo, Whitney · Grupo 6",
-      "pubId": "p1781578828320"
-    },
-    {
-      "ts": 1781578794337,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · May 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1781578794331,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · May 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1781578791751,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · May 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
     }
   ],
   "formHistorial": [
