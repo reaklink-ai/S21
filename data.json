@@ -725,12 +725,11 @@
             "notas": ""
           },
           "May": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
-            "paux": true,
-            "horas": "25",
-            "notas": "",
-            "_ts": 1781797650512
+            "paux": false,
+            "horas": "",
+            "notas": ""
           },
           "Jun": {
             "particip": false,
@@ -32138,16 +32137,16 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1781792863563
+            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
+            "_ts": 1781798262739
           },
           "Jun": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
-            "_ts": 1781792874046
+            "notas": "",
+            "_ts": 1781798261484
           },
           "Jul": {
             "particip": false,
@@ -33210,7 +33209,7 @@
       }
     }
   ],
-  "_lastModified": 1781797651334,
+  "_lastModified": 1781798263590,
   "vym": {
     "semanas": {},
     "historial": [
