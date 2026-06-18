@@ -20716,10 +20716,10 @@
           "May": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "15",
             "notas": "",
-            "_ts": 1781581830599
+            "_ts": 1781797416574
           },
           "Jun": {
             "particip": false,
@@ -33209,7 +33209,7 @@
       }
     }
   ],
-  "_lastModified": 1781797409940,
+  "_lastModified": 1781797417523,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35378,6 +35378,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781797416574,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Ruben · May 2025: horas=15",
+      "pubId": "mmm9qi4rtrpu"
+    },
+    {
+      "ts": 1781797416569,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Ruben · May 2025: horas=15",
+      "pubId": "mmm9qi4rtrpu"
+    },
+    {
       "ts": 1781797409313,
       "user": "Administrador",
       "rol": "admin",
@@ -36960,22 +36976,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · May 2025: cursos=1",
       "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781616208590,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781615788421,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sanchez, Maritza · May 2025: cursos=1",
-      "pubId": "mmm9qi4spx52"
     }
   ],
   "formHistorial": [
