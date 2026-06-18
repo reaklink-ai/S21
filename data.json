@@ -20554,10 +20554,10 @@
           "May": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "15",
             "notas": "",
-            "_ts": 1781581818021
+            "_ts": 1781797409313
           },
           "Jun": {
             "particip": false,
@@ -33209,7 +33209,7 @@
       }
     }
   ],
-  "_lastModified": 1781797167902,
+  "_lastModified": 1781797409940,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35378,9 +35378,65 @@
   ],
   "auditoria": [
     {
+      "ts": 1781797409313,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Marisol · May 2025: horas=15",
+      "pubId": "mmm9qi4r0lk8"
+    },
+    {
+      "ts": 1781797409308,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Marisol · May 2025: horas=15",
+      "pubId": "mmm9qi4r0lk8"
+    },
+    {
+      "ts": 1781797199835,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781797152861,
       "user": "Felipe_C",
       "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781797083213,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781796607709,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781796421940,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781796421869,
+      "user": "Administrador",
+      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
@@ -35391,6 +35447,22 @@
       "rol": "auxiliar",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781796192397,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781796040215,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -36904,78 +36976,6 @@
       "accion": "Horas editadas",
       "detalle": "Sanchez, Maritza · May 2025: cursos=1",
       "pubId": "mmm9qi4spx52"
-    },
-    {
-      "ts": 1781615788415,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sanchez, Maritza · May 2025: cursos=1",
-      "pubId": "mmm9qi4spx52"
-    },
-    {
-      "ts": 1781615774830,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · May 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1781615774824,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · May 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1781615760812,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · May 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1781615760807,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · May 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1781615757727,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · May 2025: cursos=1",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1781615757720,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · May 2025: cursos=1",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1781615700670,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "De Leon, Marcela · May 2025: horas=18",
-      "pubId": "mmm9qi4m00va"
-    },
-    {
-      "ts": 1781615700664,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "De Leon, Marcela · May 2025: horas=18",
-      "pubId": "mmm9qi4m00va"
     }
   ],
   "formHistorial": [
