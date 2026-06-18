@@ -17230,9 +17230,9 @@
             "particip": true,
             "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "6",
             "notas": "48 Horas Betel",
-            "_ts": 1781579190535
+            "_ts": 1781804831352
           },
           "Abr": {
             "particip": true,
@@ -33215,7 +33215,7 @@
       }
     }
   ],
-  "_lastModified": 1781804714992,
+  "_lastModified": 1781804832822,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35384,6 +35384,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781804831352,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Mar 2025: horas=6",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1781804831343,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Mar 2025: horas=6",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1781804463356,
       "user": "Administrador",
       "rol": "admin",
@@ -36965,22 +36981,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · May 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1781699299987,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · May 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1781699299979,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · May 2025: cursos=1",
       "pubId": "mmm9qi4qnxk5"
     }
   ],
