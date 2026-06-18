@@ -3999,6 +3999,7 @@ function saveState() {
 // ── Sync via Worker ──
 let _syncQueue = Promise.resolve();
 let _lastSha   = null; // SHA cacheado para reducir llamadas
+let _guardandoPub = false; // Lock: true mientras se está guardando un publicador
 
 function saveStateAndSync() {
   saveState();
@@ -4263,6 +4264,15 @@ function _mergeStates(remoto, local) {
 async function ghPush() { return _mergeAndPush(); }
 
 async function ghPull() {
+  if(_guardandoPub) {
+    toast('⏳ Espera, hay un guardado en proceso...');
+    setTimeout(() => ghPull(), 1500);
+    return;
+  }
+  if(_hayCambios) {
+    toast('⚠️ Tienes cambios sin guardar — guárdalos primero');
+    return;
+  }
   try {
     const res = await fetch(SYNC_URL + '?t=' + Date.now());
     if(res.status === 404) { toast('No hay datos en la nube aún'); return; }
@@ -12320,6 +12330,7 @@ function marcarCambios() {
 function guardarAhora() {
   if(!_hayCambios) return;
   _hayCambios = false;
+  _guardandoPub = true;
   const btn = document.getElementById('btn-guardar-flotante');
   if(btn) {
     btn.classList.remove('visible');
@@ -12332,7 +12343,8 @@ function guardarAhora() {
   }
   const badge = document.getElementById('appbar-cambios-badge');
   if(badge) badge.classList.remove('visible');
-  // Ahora sí sincronizar con _syncQueue = _syncQueue.then(() => _mergeAndPush(0, false)).catch(() => {}); // false = mostrar bannertch(() => {});
+  // Ahora sí sincronizar con el Worker
+  _syncQueue = _syncQueue.then(() => _mergeAndPush(0, false)).then(() => { _guardandoPub = false; }).catch(() => { _guardandoPub = false; });
   toast('✓ Guardado');
 }
 
