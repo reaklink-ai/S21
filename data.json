@@ -33208,7 +33208,7 @@
       }
     }
   ],
-  "_lastModified": 1781795443544,
+  "_lastModified": 1781795488114,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35377,6 +35377,110 @@
   ],
   "auditoria": [
     {
+      "ts": 1781795474352,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781795474339,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781795470837,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: cursos=1",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781795470825,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: cursos=1",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781795446614,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: horas=42",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781795446602,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: horas=42",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781795444875,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781795444866,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781795437880,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781795424740,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: horas=53",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781795424728,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: horas=53",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781795422668,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781795422660,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
       "ts": 1781795405177,
       "user": "Administrador",
       "rol": "admin",
@@ -35425,6 +35529,126 @@
       "pubId": "p1776219747113"
     },
     {
+      "ts": 1781795376992,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1781795376980,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1781795357665,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · May 2025: horas=43",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1781795357652,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · May 2025: horas=43",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1781795332030,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: horas=51",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781795332019,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: horas=51",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781795330143,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781795330133,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781795285551,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · May 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1781795285544,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · May 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1781795272555,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · May 2025: horas=",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1781795256086,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: horas=26",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781795256075,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: horas=26",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781795252685,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781795252672,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
       "ts": 1781795251061,
       "user": "Administrador",
       "rol": "admin",
@@ -35455,6 +35679,30 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · May 2025: cursos=1",
       "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1781795227468,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · May 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1781795227455,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · May 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1781794975162,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
     },
     {
       "ts": 1781793833730,
@@ -36001,6 +36249,222 @@
       "pubId": null
     },
     {
+      "ts": 1781708663888,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: horas=42",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781708663876,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: horas=42",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781708660124,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781708660115,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · May 2025: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1781708626258,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: horas=53",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781708626245,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: horas=53",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781708622462,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781708622452,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · May 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1781708563407,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1781708563394,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1781708535015,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · May 2025: horas=43",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1781708535002,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · May 2025: horas=43",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1781708504494,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: horas=51",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781708504484,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: horas=51",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781708502415,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781708502405,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · May 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781708445659,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · May 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1781708445651,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · May 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1781708417167,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781708417154,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · May 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1781708387053,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: horas=26",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781708387041,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: horas=26",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781708382535,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781708382523,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1781708345227,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · May 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1781708345216,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · May 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1781708225151,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781699351539,
       "user": "Administrador",
       "rol": "admin",
@@ -36511,470 +36975,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Melissa · May 2025: horas=35",
       "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1781582365153,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · May 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1781582365146,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · May 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1781582358072,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · May 2025: horas=15",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1781582354395,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · May 2025: horas=15",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1781582352050,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · May 2025: horas=15",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1781582352044,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · May 2025: horas=15",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1781582045913,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: horas=43",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1781582045906,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: horas=43",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1781582042250,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1781582042243,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · May 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1781582039220,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · May 2025: horas=41",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1781582039214,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · May 2025: horas=41",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1781582007959,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · May 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1781582007953,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · May 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1781581815322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · May 2025: horas=52",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1781581815315,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · May 2025: horas=52",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1781581802664,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · May 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1781581802656,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · May 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1781581800569,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · May 2025: cursos=",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1781581791781,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · May 2025: horas=15",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1781581791776,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · May 2025: horas=15",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1781581789629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · May 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1781581789622,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · May 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1781581776373,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · May 2025: horas=15",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1781581776366,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · May 2025: horas=15",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1781581758853,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · May 2025: horas=41",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1781581758847,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · May 2025: horas=41",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1781581747685,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Mar 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781581747678,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Mar 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781581742719,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · May 2025: horas=37",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781581742712,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · May 2025: horas=37",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781581739890,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · May 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781581739884,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · May 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1781580396332,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781580324263,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781580296525,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781580109883,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781580021488,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781579864611,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781579528755,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781579396076,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Melanie · Jun 2025: cursos=",
-      "pubId": "mmm9qi4nsqsw"
-    },
-    {
-      "ts": 1781579255948,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · May 2025: cursos=5",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1781579255943,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · May 2025: cursos=5",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1781579254466,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · May 2025: horas=31",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1781579251189,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · May 2025: horas=31",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1781579251185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · May 2025: horas=31",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1781579226514,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · May 2025: horas=50",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1781579226508,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · May 2025: horas=50",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1781579224774,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · May 2025: cursos=1",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1781579224767,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · May 2025: cursos=1",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1781579193153,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · May 2025: horas=6",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579193146,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · May 2025: horas=6",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579190535,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Mar 2025: cursos=2",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579190527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Mar 2025: cursos=2",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579187026,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · May 2025: horas=",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579184739,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · May 2025: horas=",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781579163903,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · May 2025: horas=58",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1781579163896,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · May 2025: horas=58",
-      "pubId": "mmm9qi4n8uw3"
     }
   ],
   "formHistorial": [
