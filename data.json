@@ -33214,9 +33214,16 @@
       "accesos": {
         "grupos": true
       }
+    },
+    {
+      "id": "mqjtxs57",
+      "nombre": "Fernando_G",
+      "pinHash": "255edbc7c49e7a2add6dfc66314c477463f09c94360177d1c25dd4eefeb97db6",
+      "rol": "anciano",
+      "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781804953590,
+  "_lastModified": 1781807105930,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35385,6 +35392,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781807078793,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781806860338,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781804951602,
       "user": "Administrador",
       "rol": "admin",
@@ -36095,6 +36118,14 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Lina · May 2025: cursos=1",
       "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1781795301908,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
     },
     {
       "ts": 1781795285551,
@@ -36959,30 +36990,6 @@
       "accion": "Horas editadas",
       "detalle": "Bejarano, Martha · May 2025: cursos=1",
       "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1781708225151,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781699351539,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · May 2025: horas=42",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1781699351534,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · May 2025: horas=42",
-      "pubId": "mmm9qi4quyam"
     }
   ],
   "formHistorial": [
