@@ -32140,11 +32140,11 @@
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
-            "_ts": 1781798262739
+            "_ts": 1781804928323
           },
           "Jun": {
             "particip": false,
@@ -33215,7 +33215,7 @@
       }
     }
   ],
-  "_lastModified": 1781804832822,
+  "_lastModified": 1781804929651,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35384,6 +35384,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781804928323,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · May 2025: cursos=1",
+      "pubId": "p1781792857813"
+    },
+    {
+      "ts": 1781804928315,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · May 2025: cursos=1",
+      "pubId": "p1781792857813"
+    },
+    {
       "ts": 1781804831352,
       "user": "Administrador",
       "rol": "admin",
@@ -36966,22 +36982,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Jaime · May 2025: cursos=2",
       "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1781699302359,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · May 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1781699302354,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · May 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
     }
   ],
   "formHistorial": [
