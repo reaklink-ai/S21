@@ -15735,16 +15735,17 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "25",
+            "notas": "",
+            "_ts": 1781830963190
           },
           "May": {
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "35",
             "notas": "",
-            "_ts": 1781830917941
+            "_ts": 1781830958478
           },
           "Jun": {
             "particip": false,
@@ -16425,11 +16426,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781830940056
           },
           "Jun": {
             "particip": false,
@@ -33231,7 +33233,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781830919375,
+  "_lastModified": 1781830963850,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35400,6 +35402,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1781830963190,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Abr 2025: horas=25",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1781830963184,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Abr 2025: horas=25",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1781830958478,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · May 2025: horas=35",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1781830958471,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · May 2025: horas=35",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
       "ts": 1781830891668,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36966,38 +37000,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Lina · May 2025: cursos=1",
       "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781708445659,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781708445651,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781708417167,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: horas=21",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781708417154,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: horas=21",
-      "pubId": "mmm9qi4tnncr"
     }
   ],
   "formHistorial": [
