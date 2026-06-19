@@ -21378,11 +21378,11 @@
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "8",
             "notas": "55 horas betel ",
-            "_ts": 1781830992504
+            "_ts": 1781831003038
           },
           "Jun": {
             "particip": false,
@@ -21910,11 +21910,12 @@
             "notas": "16 horas"
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781830996720
           },
           "Jun": {
             "particip": false,
@@ -33235,7 +33236,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781830993051,
+  "_lastModified": 1781831003396,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35404,6 +35405,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781831003038,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · May 2025: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1781831003024,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · May 2025: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
       "ts": 1781830985408,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36986,22 +37003,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · May 2025: horas=43",
       "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781708504494,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781708504484,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
