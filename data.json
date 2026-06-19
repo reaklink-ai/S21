@@ -17091,9 +17091,10 @@
           "May": {
             "particip": true,
             "cursos": "",
-            "paux": false,
+            "paux": true,
             "horas": "30",
-            "notas": ""
+            "notas": "",
+            "_ts": 1781838017112
           },
           "Jun": {
             "particip": false,
@@ -33249,7 +33250,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781837742192,
+  "_lastModified": 1781838019152,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35418,6 +35419,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781837836829,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781835623433,
       "user": "Administrador",
       "rol": "admin",
@@ -37007,14 +37016,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · May 2025: horas=50",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1781791360247,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · May 2025: cursos=1",
       "pubId": "mmm9qi4qnxk5"
     }
   ],
