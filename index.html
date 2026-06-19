@@ -7886,6 +7886,12 @@ function generarInformeGrupo(modo) {
       if(esNuevoPublicador) {
         alertas.push({tipo:'nuevo',msg:'Nuevo publicador',nivel:'positivo',color:'#16a34a'});
       }
+      // Detectar readmitido — no debe arrastrar irregularidad por los meses que estuvo fuera
+      const esReadmitido = notaLower.includes('readmitido') || notaLower.includes('readmitida');
+      if(esReadmitido) {
+        alertas.push({tipo:'readmitido',msg:'Readmitido',nivel:'positivo',color:'#16a34a'});
+      }
+      const exentoIrregular = esNuevoPublicador || esReadmitido;
 
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
@@ -7899,9 +7905,9 @@ function generarInformeGrupo(modo) {
       const aus6 = mesesAusentes6.length;
       // Definición oficial: irregular = no participó al menos 1 mes durante el semestre (6 meses)
       // Inactivo = no participó NINGÚN mes del semestre completo
-      if(ult6mValidos.length>0 && mesesParticipo6.length===0 && !esNuevoPublicador) {
+      if(ult6mValidos.length>0 && mesesParticipo6.length===0 && !exentoIrregular) {
         alertas.push({tipo:'inactivo',msg:'Inactivo: sin participación en los últimos 6 meses',nivel:'critico'});
-      } else if(aus6>=1 && !esNuevoPublicador) {
+      } else if(aus6>=1 && !exentoIrregular) {
         alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus6} mes${aus6>1?'es':''} en el semestre (${mesesAusentes6.map(m=>m.mesKey).join(', ')})`,nivel:'critico'});
       }
       const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
@@ -7910,7 +7916,7 @@ function generarInformeGrupo(modo) {
         const h=parseFloat(r.horas)||0;
         // Alerta < 10h en S-21
         if(r.particip && h>0 && h<10) alertas.push({tipo:'bajo10h',msg:`Menos de 10h en S-21 este mes (${h}h)`,nivel:'critico'});
-        if(r.particip&&h<META_PREC_REG&&h>=10) alertas.push({tipo:'horas',msg:`Horas S-21 bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'alto'});
+        if(r.particip&&h<META_PREC_REG&&h>=10) alertas.push({tipo:'horas',msg:`Horas S-21 bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'precursor',color:'#d97706'});
         if(!r.particip) alertas.push({tipo:'horas',msg:'No reportó horas este mes',nivel:'alto'});
         // Total acumulado año de servicio — usando el mes del informe, no el mes calendario actual
         const dp = precGetDatos(p, anio);
@@ -7919,7 +7925,7 @@ function generarInformeGrupo(modo) {
         const mesesTrans = mesIdx + 1;
         const mesesRestantes = 12 - mesesTrans;
         const hEsperadas = (560/12)*mesesTrans;
-        const colorAc = haAcum>=600?'#16a34a':haAcum>=560?'#0284c7':haAcum>=hEsperadas?'#d97706':'#ef4444';
+        const colorAc = haAcum>=600?'#16a34a':haAcum>=560?'#0284c7':haAcum>=hEsperadas?'#d97706':'#b45309';
         const deficit = hEsperadas-haAcum;
         let msgAcum = `Acumulado año: ${haAcum.toFixed(1)}h / 560h mín`;
         if(haAcum<hEsperadas && mesesRestantes>0) {
@@ -7928,7 +7934,7 @@ function generarInformeGrupo(modo) {
         } else if(haAcum<hEsperadas) {
           msgAcum += ` — déficit: ${deficit.toFixed(1)}h (sin meses restantes)`;
         }
-        alertas.push({tipo:'acumulado',msg:msgAcum,nivel:'info',color:colorAc});
+        alertas.push({tipo:'acumulado',msg:msgAcum,nivel:'precursor',color:colorAc});
       }
       if(r.paux&&!p.precAuxContinuo){
         const h=parseFloat(r.horas)||0;
@@ -8408,7 +8414,7 @@ ${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.ani
 <table>
   <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
   ${alertasPub.map(({pub:p,r,alertas})=>{
-    const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
+    const alertasHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='precursor'?'#fffbeb':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px 2px 1px 0;font-weight:600">${a.msg}</span>`;}).join('');
     const rowBg=alertas.some(a=>a.tipo==='inactivo'||a.tipo==='irregular')?'background:#fff1f2':'';
     return `<tr style="${rowBg}"><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td style="text-align:center"><span class="tag ${r.particip?'tag-si':'tag-no'}">${r.particip?'Si':'No'}</span></td><td style="text-align:center">${r.cursos||'—'}</td><td style="text-align:center">${r.paux?'Si':'—'}</td><td style="text-align:center">${r.horas||'—'}</td><td>${alertasHtml||'<span style="color:#94a3b8;font-size:8pt">Sin alertas</span>'}</td><td style="font-size:8pt;color:#475569">${escH(r.notas||'')}</td></tr>`;
   }).join('')}
@@ -8418,7 +8424,7 @@ ${(enRiesgoInac.length>0||irregulares.length>0||precBajoMeta.length>0)?`
 <table>
   <tr><th style="width:30%">Publicador</th><th>Alertas</th></tr>
   ${alertasPub.filter(x=>x.alertas.length>0).map(({pub:p,alertas})=>{
-    const aHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
+    const aHtml=alertas.map(a=>{const color=a.color||(a.nivel==='critico'?'#ef4444':a.nivel==='alto'?'#d97706':a.nivel==='medio'?'#0284c7':'#64748b');const bg=a.nivel==='critico'?'#fef2f2':a.nivel==='alto'?'#fffbeb':a.nivel==='medio'?'#f0f9ff':a.nivel==='positivo'?'#f0fdf4':a.nivel==='precursor'?'#fffbeb':a.nivel==='info'?'#fff':'#f8fafc';return `<span style="display:inline-block;background:${bg};color:${color};border-radius:4px;padding:1px 6px;font-size:7.5pt;margin:1px;font-weight:600">${a.msg}</span>`;}).join('');
     return `<tr><td style="font-weight:600">${escH(p.apellido)}, ${escH(p.nombre)}</td><td>${aHtml}</td></tr>`;
   }).join('')}
 </table>`:''}
