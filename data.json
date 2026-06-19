@@ -225,7 +225,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -395,7 +395,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -558,7 +558,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -2617,8 +2617,8 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": ""
@@ -5403,10 +5403,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "26",
             "notas": ""
           },
           "Jun": {
@@ -5604,11 +5604,11 @@
             "notas": "34 horas betel"
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "18",
+            "notas": "33 horas betel"
           },
           "Jun": {
             "particip": false,
@@ -5946,10 +5946,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "51",
             "notas": ""
           },
           "Jun": {
@@ -10448,10 +10448,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "43",
             "notas": ""
           },
           "Jun": {
@@ -10615,10 +10615,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": ""
           },
           "Jun": {
@@ -12976,7 +12976,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -13464,7 +13464,7 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -21738,10 +21738,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
+            "horas": "53",
             "notas": ""
           },
           "Jun": {
@@ -22091,10 +22091,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "42",
             "notas": ""
           },
           "Jun": {
@@ -27776,10 +27776,10 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "21",
             "notas": ""
           },
           "Jun": {
@@ -33238,7 +33238,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781832370170,
+  "_lastModified": 1781834725526,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35407,9 +35407,33 @@
   ],
   "auditoria": [
     {
+      "ts": 1781834659109,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781834520102,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781832353711,
       "user": "Felipe_C",
       "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781831578568,
+      "user": "Administrador",
+      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -35596,6 +35620,14 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781807157093,
+      "user": "Fernando_G",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -36973,38 +37005,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · May 2025: cursos=1",
       "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1781791345158,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · May 2025: horas=58",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1781791345152,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · May 2025: horas=58",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1781791234271,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781708663888,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
