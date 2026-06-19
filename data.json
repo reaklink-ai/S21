@@ -725,11 +725,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "25",
+            "notas": "",
+            "_ts": 1781830878102
           },
           "Jun": {
             "particip": false,
@@ -33223,7 +33224,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781807105930,
+  "_lastModified": 1781830878471,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35392,6 +35393,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1781830878102,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · May 2025: horas=25",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1781830876631,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · May 2025: horas=25",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1781830858003,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781807078793,
       "user": "Administrador",
       "rol": "admin",
@@ -36966,30 +36991,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Alfonso · May 2025: cursos=1",
       "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781708382523,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781708345227,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · May 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1781708345216,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · May 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
     }
   ],
   "formHistorial": [
