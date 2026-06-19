@@ -13435,19 +13435,27 @@
             "paux": false
           },
           "Sep": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781836301859
           },
           "Oct": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781836307276
           },
           "Nov": {
             "particip": true
           },
           "Dic": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781836299856
           },
           "Ene": {
-            "particip": false
+            "particip": false,
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781836300951
           },
           "Mar": {
             "particip": true,
@@ -32275,6 +32283,121 @@
   },
   "inactivos": [
     {
+      "id": "mmm9qi4u9kvo",
+      "apellido": "Galeano",
+      "nombre": "Santiago",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO"
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NO INFORMO EN EL MES"
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "fechaInactivo": "2026-05-15",
+      "motivoInactivo": "Sacado el 6 de Mayo del 2026",
+      "tipoInactivo": "sacado"
+    },
+    {
       "id": "mmm9qi4ovmh3",
       "apellido": "Lugo",
       "nombre": "Josias",
@@ -32777,121 +32900,6 @@
       },
       "fechaInactivo": "2026-05-05",
       "motivoInactivo": "SACADA DE LA CONGREGACIÓN"
-    },
-    {
-      "id": "mmm9qi4u9kvo",
-      "apellido": "Galeano",
-      "nombre": "Santiago",
-      "nacimiento": "",
-      "bautismo": "",
-      "grupo": "Grupo 13",
-      "telefono": "",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": ""
-      },
-      "registros": {
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Sep": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Oct": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO"
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NO INFORMO EN EL MES"
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "fechaInactivo": "2026-05-15",
-      "motivoInactivo": "Sacado el 6 de Mayo del 2026",
-      "tipoInactivo": "sacado"
     }
   ],
   "asistencia": [
@@ -33240,7 +33248,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781835911328,
+  "_lastModified": 1781836308297,
   "vym": {
     "semanas": {},
     "historial": [
