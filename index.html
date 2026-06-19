@@ -7887,17 +7887,6 @@ function generarInformeGrupo(modo) {
         alertas.push({tipo:'nuevo',msg:'Nuevo publicador',nivel:'positivo',color:'#16a34a'});
       }
 
-      // Nota: la ausencia se refleja directamente en la alerta "Predicación irregular" más abajo
-      const ult3m=[];
-      for(let i=2;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult3m.push({mesKey:MESES_K[idx],anio:a});}
-      // Solo contar como ausencia los meses donde el publicador ya tenía registro en el sistema
-      // (evita marcar como irregular a publicadores nuevos sin historial previo)
-      const ult3mValidos = ult3m.filter(m => {
-        const reg = (p.registros||{})[m.anio]?.[m.mesKey];
-        return reg !== undefined; // el mes existe como registro, sea true o false
-      });
-      const aus3=ult3mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-      if(!r.particip&&!esNuevoPublicador) alertas.push({tipo:'irregular',msg:'Predicación irregular',nivel:'critico'});
       const ult6m=[];
       for(let i=5;i>=0;i--){let idx=mesIdx-i,a=anio;if(idx<0){idx+=12;a--;}ult6m.push({mesKey:MESES_K[idx],anio:a});}
       // Solo considerar meses donde ya existía registro (evita penalizar a publicadores nuevos)
@@ -7906,9 +7895,15 @@ function generarInformeGrupo(modo) {
         return reg !== undefined;
       });
       const mesesAusentes6 = ult6mValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip);
+      const mesesParticipo6 = ult6mValidos.filter(m=>getReg(p,m.anio,m.mesKey).particip);
       const aus6 = mesesAusentes6.length;
-      if(aus6>=6&&!esNuevoPublicador) alertas.push({tipo:'inactivo',msg:'En riesgo de inactividad: 6 meses sin participar',nivel:'critico'});
-      else if(aus6>=1&&!esNuevoPublicador) alertas.push({tipo:'ausencias6m',msg:`Ausente en últimos 6 meses: ${mesesAusentes6.map(m=>m.mesKey).join(', ')}`,nivel:'medio'});
+      // Definición oficial: irregular = no participó al menos 1 mes durante el semestre (6 meses)
+      // Inactivo = no participó NINGÚN mes del semestre completo
+      if(ult6mValidos.length>0 && mesesParticipo6.length===0 && !esNuevoPublicador) {
+        alertas.push({tipo:'inactivo',msg:'Inactivo: sin participación en los últimos 6 meses',nivel:'critico'});
+      } else if(aus6>=1 && !esNuevoPublicador) {
+        alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus6} mes${aus6>1?'es':''} en el semestre (${mesesAusentes6.map(m=>m.mesKey).join(', ')})`,nivel:'critico'});
+      }
       const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
       if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
       if(p.precursorReg||p.precursorEsp||p.misionero){
@@ -8221,14 +8216,13 @@ ${barChart}
       return s+h+cr;
     },0);
     const promComb2 = mesesConHoras2.length>0?horasComb2/mesesConHoras2.length:0;
-    const esIrreg   = ausencias > periodoMeses.length * 0.5;
-    const esInact   = ausencias >= periodoMeses.length;
-    // Estado: inactivo=ausente todo el período, irregular=1+ ausencias, regular=ninguna
+    // Estado oficial: inactivo=0 participaciones en el período, irregular=1+ ausencias, regular=ninguna ausencia
+    const esInact   = ausencias >= periodoMeses.length && mesesConHoras2.length===0;
+    const esIrreg   = ausencias > 0 && !esInact;
     const sinCursosPer = !MESES_K.some(m => parseInt(getReg(p, anio >= 8 ? anio : anio, m).cursos)||0 > 0);
     const alertasList = [];
     if(esInact) alertasList.push('<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Inactivo</span>');
-    else if(esIrreg) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
-    else if(ausencias > 0) alertasList.push('<span style="background:#fffbeb;color:#d97706;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
+    else if(esIrreg) alertasList.push('<span style="background:#fef2f2;color:#ef4444;border-radius:4px;padding:1px 5px;font-size:7pt;font-weight:700;margin:1px">Irregular</span>');
     // Regular: no mostrar etiqueta (punto 4 feedback)
     // Alerta cursos bíblicos: sin cursos en el período seleccionado
     const tuvoCursosPer = periodoMeses.some(m => parseInt(getReg(p, m.anio, m.mesKey).cursos)||0 > 0);
