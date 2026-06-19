@@ -23556,11 +23556,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "3",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1781831067707
           },
           "Jun": {
             "particip": false,
@@ -33237,7 +33238,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781831042674,
+  "_lastModified": 1781831068108,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35406,6 +35407,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1781831067707,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · May 2025: horas=30",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1781831067701,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · May 2025: horas=30",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1781831051069,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · May 2025: cursos=3",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1781831051063,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · May 2025: cursos=3",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
       "ts": 1781831038622,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36972,38 +37005,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · May 2025: cursos=2",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781708660115,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: cursos=2",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781708626258,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781708626245,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781708622462,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
