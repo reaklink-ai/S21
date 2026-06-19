@@ -7880,14 +7880,22 @@ function generarInformeGrupo(modo) {
       const r = getReg(p,anio,mesKey);
 
       // Detectar publicador nuevo por nota — alerta positiva, no debe contar como irregular
-      const notaLower = (r.notas||'').toLowerCase();
-      const esNuevoPublicador = notaLower.includes('nuevo publicador') || notaLower.includes('nueva publicadora') ||
-        notaLower.includes('nuevo publicador') || notaLower.includes('no bautizad');
+      // Buscar en cualquier mes del año de servicio (no solo el mes del informe)
+      const esNuevoPublicador = MESES_K.some(m => {
+        const reg = (p.registros||{})[anio]?.[m];
+        const n = (reg?.notas||'').toLowerCase();
+        return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+      });
       if(esNuevoPublicador) {
         alertas.push({tipo:'nuevo',msg:'Nuevo publicador',nivel:'positivo',color:'#16a34a'});
       }
       // Detectar readmitido — no debe arrastrar irregularidad por los meses que estuvo fuera
-      const esReadmitido = notaLower.includes('readmitido') || notaLower.includes('readmitida');
+      // Buscar "readmitido" en cualquier mes del año de servicio (no solo el mes actual)
+      const esReadmitido = MESES_K.some(m => {
+        const reg = (p.registros||{})[anio]?.[m];
+        const n = (reg?.notas||'').toLowerCase();
+        return n.includes('readmitido') || n.includes('readmitida');
+      });
       if(esReadmitido) {
         alertas.push({tipo:'readmitido',msg:'Readmitido',nivel:'positivo',color:'#16a34a'});
       }
