@@ -21907,15 +21907,16 @@
             "cursos": "3",
             "paux": false,
             "horas": "30",
-            "notas": "16 horas"
+            "notas": "16 horas betel",
+            "_ts": 1781831023548
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1781830996720
+            "horas": "20",
+            "notas": "55 horas betel ",
+            "_ts": 1781831038622
           },
           "Jun": {
             "particip": false,
@@ -33236,7 +33237,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781831003396,
+  "_lastModified": 1781831042674,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35405,6 +35406,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1781831038622,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · May 2025: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1781831038615,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · May 2025: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1781831012562,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · May 2025: horas=",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1781831010889,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · May 2025: cursos=3",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1781831010880,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · May 2025: cursos=3",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
       "ts": 1781831003038,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36963,46 +37004,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · May 2025: cursos=4",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781708622452,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781708563407,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1781708563394,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1781708535015,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781708535002,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
     }
   ],
   "formHistorial": [
