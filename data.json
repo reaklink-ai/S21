@@ -1047,11 +1047,12 @@
             "notas": ""
           },
           "May": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "25",
+            "notas": "",
+            "_ts": 1781830891668
           },
           "Jun": {
             "particip": false,
@@ -33225,7 +33226,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781830883004,
+  "_lastModified": 1781830892001,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35394,6 +35395,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1781830891668,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Victor Hugo · May 2025: horas=25",
+      "pubId": "mmm9qi4jnax6"
+    },
+    {
+      "ts": 1781830891661,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Victor Hugo · May 2025: horas=25",
+      "pubId": "mmm9qi4jnax6"
+    },
+    {
+      "ts": 1781830888095,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Victor Hugo · May 2025: horas=",
+      "pubId": "mmm9qi4jnax6"
+    },
+    {
       "ts": 1781830878102,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36968,30 +36993,6 @@
       "accion": "Horas editadas",
       "detalle": "Villa, Julia · May 2025: horas=21",
       "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781708387053,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: horas=26",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781708387041,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: horas=26",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781708382535,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
     }
   ],
   "formHistorial": [
