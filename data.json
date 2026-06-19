@@ -13458,11 +13458,12 @@
             "_ts": 1781836300951
           },
           "Mar": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1781836312984
           },
           "Abr": {
             "particip": true,
@@ -33248,7 +33249,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781836308297,
+  "_lastModified": 1781836313424,
   "vym": {
     "semanas": {},
     "historial": [
