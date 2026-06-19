@@ -17061,7 +17061,9 @@
           },
           "Oct": {
             "particip": true,
-            "horas": "15"
+            "horas": "15",
+            "paux": true,
+            "_ts": 1781838025842
           },
           "Nov": {
             "particip": true
@@ -33250,7 +33252,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781838019152,
+  "_lastModified": 1781838027394,
   "vym": {
     "semanas": {},
     "historial": [
