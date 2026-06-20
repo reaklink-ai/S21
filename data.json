@@ -32919,6 +32919,17 @@
       "_ts": 1781989248513
     },
     {
+      "id": "r1781989495795",
+      "fecha": "2026-06-17",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 125,
+      "zoom": 67,
+      "total": 192,
+      "notas": "",
+      "_ts": 1781989495795
+    },
+    {
       "id": "r1781989300995",
       "fecha": "2026-06-13",
       "tipo": "Entre semana",
@@ -33274,7 +33285,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781989302947,
+  "_lastModified": 1781989497909,
   "vym": {
     "semanas": {},
     "historial": [
