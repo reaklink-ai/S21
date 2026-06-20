@@ -32381,11 +32381,11 @@
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1781993523639
+            "_ts": 1781993539176
           },
           "Ene": {
             "particip": true,
@@ -32397,11 +32397,11 @@
           },
           "Feb": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1781993524489
+            "_ts": 1781993540122
           },
           "Mar": {
             "particip": true,
@@ -33535,7 +33535,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781993529714,
+  "_lastModified": 1781993540586,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35704,6 +35704,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1781993540122,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Barrios, Alejandra · Feb 2025: cursos=1",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1781993540117,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Barrios, Alejandra · Feb 2025: cursos=1",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1781993539176,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1781993536318,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1781993536311,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
+      "pubId": "p1781993516577"
+    },
+    {
       "ts": 1781993516577,
       "user": "Administrador",
       "rol": "admin",
@@ -37262,46 +37302,6 @@
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · May 2025: horas=",
       "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793184670,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · May 2025: cursos=",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793182308,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Fabian · May 2025: horas=",
-      "pubId": "mmm9qi4si0is"
-    },
-    {
-      "ts": 1781793182302,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Fabian · May 2025: horas=",
-      "pubId": "mmm9qi4si0is"
-    },
-    {
-      "ts": 1781793181527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Fabian · May 2025: cursos=",
-      "pubId": "mmm9qi4si0is"
-    },
-    {
-      "ts": 1781793181522,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Fabian · May 2025: cursos=",
-      "pubId": "mmm9qi4si0is"
     }
   ],
   "formHistorial": [
