@@ -31005,7 +31005,7 @@
       "nombre": "Amy Valeria",
       "nacimiento": "2010-04-23",
       "bautismo": "2020-12-12",
-      "grupo": "Grupo 12",
+      "grupo": "Grupo 9",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": true,
@@ -31021,8 +31021,11 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
-      }
+        "notasMed": "",
+        "_ts": 1781994051963
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1781994051963
     },
     {
       "id": "p1778011460356",
@@ -31225,7 +31228,7 @@
       "nombre": "Juliana",
       "nacimiento": "2014-10-12",
       "bautismo": "2025-05-04",
-      "grupo": "Grupo 12",
+      "grupo": "Grupo 9",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": false,
@@ -31241,8 +31244,11 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
-      }
+        "notasMed": "",
+        "_ts": 1781994063479
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1781994063479
     },
     {
       "id": "mmm9qi4qdgc9",
@@ -33535,7 +33541,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781994025972,
+  "_lastModified": 1781994065448,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35848,6 +35854,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1781994063479,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Vargas, Juliana · Grupo: Grupo 12 → Grupo 9",
+      "pubId": "p1778011460356"
+    },
+    {
+      "ts": 1781994051963,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ahumada Correa, Amy Valeria · Grupo: Grupo 12 → Grupo 9",
+      "pubId": "p1778011389849"
+    },
+    {
       "ts": 1781993568862,
       "user": "Administrador",
       "rol": "admin",
@@ -37429,22 +37451,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · May 2025: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793188569,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · May 2025: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793187361,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Abr 2025: cursos=2",
       "pubId": "mmm9qi4smd7i"
     }
   ],
