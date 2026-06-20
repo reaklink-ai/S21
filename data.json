@@ -32350,6 +32350,131 @@
         "notasMed": "",
         "_ts": 1781993446049
       }
+    },
+    {
+      "id": "p1781993516577",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993521864
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993522347
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993523080
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993523639
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993525405
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993524489
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993526105
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993527447
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781993528155
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Barrios",
+      "nombre": "Alejandra",
+      "nacimiento": "1993-08-02",
+      "bautismo": "2021-05-21",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1781993516577,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1781993516577
+      }
     }
   ],
   "grupos": {
@@ -33410,7 +33535,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781993466321,
+  "_lastModified": 1781993529714,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35579,6 +35704,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1781993516577,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Barrios, Alejandra · Grupo 7",
+      "pubId": "p1781993516577"
+    },
+    {
       "ts": 1781993465209,
       "user": "Administrador",
       "rol": "admin",
@@ -37168,14 +37301,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Sierra, Fabian · May 2025: cursos=",
-      "pubId": "mmm9qi4si0is"
-    },
-    {
-      "ts": 1781793180317,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Fabian · May 2025: horas=57",
       "pubId": "mmm9qi4si0is"
     }
   ],
