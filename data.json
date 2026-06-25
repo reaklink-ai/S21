@@ -33164,6 +33164,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1782350111884",
+      "fecha": "2026-06-24",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 123,
+      "zoom": 78,
+      "total": 201,
+      "notas": "",
+      "_ts": 1782350111884
+    },
+    {
       "id": "r1781989248513",
       "fecha": "2026-06-20",
       "tipo": "Fin de semana",
@@ -33541,7 +33552,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1781994065448,
+  "_lastModified": 1782350114540,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35854,6 +35865,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1782350078407,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1781999190540,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1781994063479,
       "user": "Administrador",
       "rol": "admin",
@@ -37435,22 +37462,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · May 2025: horas=57",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793190436,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · May 2025: horas=57",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1781793188575,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · May 2025: cursos=2",
       "pubId": "mmm9qi4smd7i"
     }
   ],
