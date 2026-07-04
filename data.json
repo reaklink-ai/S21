@@ -33164,6 +33164,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1783200441555",
+      "fecha": "2026-07-04",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 116,
+      "zoom": 53,
+      "total": 169,
+      "notas": "",
+      "_ts": 1783200441555
+    },
+    {
       "id": "r1782350111884",
       "fecha": "2026-06-24",
       "tipo": "Entre semana",
@@ -33552,7 +33563,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1782350124604,
+  "_lastModified": 1783200444171,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35865,6 +35876,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783200413030,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1782952653837,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1782350078407,
       "user": "Administrador",
       "rol": "admin",
@@ -37447,22 +37474,6 @@
       "accion": "Horas editadas",
       "detalle": "Tibaquicha, Luz Marina · May 2025: horas=15",
       "pubId": "mmm9qi4szjx7"
-    },
-    {
-      "ts": 1781793203203,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tibaquicha, Luz Marina · May 2025: horas=15",
-      "pubId": "mmm9qi4szjx7"
-    },
-    {
-      "ts": 1781793190440,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · May 2025: horas=57",
-      "pubId": "mmm9qi4smd7i"
     }
   ],
   "formHistorial": [
