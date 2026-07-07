@@ -32886,11 +32886,11 @@
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440425819
+            "_ts": 1783440451580
           },
           "Ene": {
             "particip": true,
@@ -32902,43 +32902,43 @@
           },
           "Feb": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440426618
+            "_ts": 1783440452022
           },
           "Mar": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440427061
+            "_ts": 1783440452512
           },
           "Abr": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440427650
+            "_ts": 1783440453841
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440428093
+            "_ts": 1783440455486
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783440428565
+            "_ts": 1783440456595
           },
           "Jul": {
             "particip": false,
@@ -34074,7 +34074,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783440430799,
+  "_lastModified": 1783440457319,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36387,6 +36387,102 @@
   ],
   "auditoria": [
     {
+      "ts": 1783440456595,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Jun 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440456592,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Jun 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440455486,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · May 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440455481,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · May 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440453841,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440453835,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440452512,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Mar 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440452507,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Mar 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440452022,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Feb 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440452018,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Feb 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440451580,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Dic 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
+      "ts": 1783440451570,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Dic 2025: cursos=1",
+      "pubId": "p1783440422009"
+    },
+    {
       "ts": 1783440422009,
       "user": "Administrador",
       "rol": "admin",
@@ -37889,102 +37985,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Camila · May 2025: horas=18",
       "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781795285544,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781795272555,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781795256086,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: horas=26",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781795256075,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: horas=26",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781795252685,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781795252672,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1781795251061,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: horas=50",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781795251055,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: horas=50",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781795249380,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781795249375,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · May 2025: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1781795227468,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · May 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1781795227455,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · May 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
     }
   ],
   "formHistorial": [
