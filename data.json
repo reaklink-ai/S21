@@ -15765,11 +15765,12 @@
             "_ts": 1781831074635
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "27",
+            "notas": "",
+            "_ts": 1783437480388
           },
           "Jul": {
             "particip": false,
@@ -33588,7 +33589,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783436925229,
+  "_lastModified": 1783437481255,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35901,6 +35902,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1783437480388,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Jun 2025: horas=27",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1783437480380,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Jun 2025: horas=27",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1783437375632,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1783437312330,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1783437312322,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
       "ts": 1783436922227,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -37459,46 +37500,6 @@
       "accion": "Horas editadas",
       "detalle": "Montañez, Ana · May 2025: horas=38",
       "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1781793806769,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · May 2025: horas=38",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1781793804450,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · May 2025: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1781793804445,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · May 2025: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1781793792323,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · May 2025: horas=45",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1781793792317,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · May 2025: horas=45",
-      "pubId": "mmm9qi4qve1a"
     }
   ],
   "formHistorial": [
