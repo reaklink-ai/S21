@@ -21799,18 +21799,20 @@
             "_ts": 1781831038622
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "48 horas betel",
+            "_ts": 1783436849029
           },
           "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783436873822
           },
           "Ago": {
             "particip": false,
@@ -33585,7 +33587,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783436817543,
+  "_lastModified": 1783436874798,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35898,6 +35900,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1783436873822,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Jul 2025: horas=",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1783436839020,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Jun 2025: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1783436839013,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Jun 2025: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1783436828475,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Jun 2025: cursos=4",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1783436828467,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Jun 2025: cursos=4",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
       "ts": 1783436803056,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -37456,46 +37498,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Andrea Carolina · May 2025: horas=48",
       "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1781793579602,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · May 2025: cursos=1",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1781793579597,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · May 2025: cursos=1",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1781793572793,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · May 2025: horas=40",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1781793572787,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · May 2025: horas=40",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1781793570919,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · May 2025: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
     }
   ],
   "formHistorial": [
