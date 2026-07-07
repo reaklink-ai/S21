@@ -74,11 +74,12 @@
             "_ts": 1781062786054
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783436569038
           },
           "Jul": {
             "particip": false,
@@ -733,11 +734,12 @@
             "_ts": 1781830878102
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783436620119
           },
           "Jul": {
             "particip": false,
@@ -33574,7 +33576,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783200496413,
+  "_lastModified": 1783436633523,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35887,6 +35889,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783436620108,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · Jun 2025: horas=",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1783436616244,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1783436616235,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Blanca · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
+      "ts": 1783436532925,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783200413030,
       "user": "Administrador",
       "rol": "admin",
@@ -37453,38 +37487,6 @@
       "accion": "Horas editadas",
       "detalle": "Garcia, Luis Fernando · May 2025: cursos=1",
       "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1781793496191,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · May 2025: cursos=1",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1781793484786,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · May 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1781793484776,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · May 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1781793203210,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tibaquicha, Luz Marina · May 2025: horas=15",
-      "pubId": "mmm9qi4szjx7"
     }
   ],
   "formHistorial": [
