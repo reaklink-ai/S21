@@ -23446,11 +23446,12 @@
             "_ts": 1781831067707
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "3",
+            "paux": true,
+            "horas": "34",
+            "notas": "",
+            "_ts": 1783436924312
           },
           "Jul": {
             "particip": false,
@@ -33587,7 +33588,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783436874798,
+  "_lastModified": 1783436925229,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35900,6 +35901,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783436922227,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Jun 2025: horas=34",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1783436922220,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Jun 2025: horas=34",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1783436917329,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Jun 2025: cursos=3",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1783436917320,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Jun 2025: cursos=3",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
       "ts": 1783436873822,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -37466,38 +37499,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Valentina · May 2025: horas=45",
       "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1781793789301,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · May 2025: cursos=1",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1781793789295,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · May 2025: cursos=1",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1781793580982,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · May 2025: horas=48",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1781793580977,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · May 2025: horas=48",
-      "pubId": "mmm9qi4qp27l"
     }
   ],
   "formHistorial": [
