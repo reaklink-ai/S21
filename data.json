@@ -21264,11 +21264,12 @@
             "_ts": 1781831003038
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "48 horas betel",
+            "_ts": 1783436815109
           },
           "Jul": {
             "particip": false,
@@ -33584,7 +33585,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783436737371,
+  "_lastModified": 1783436817543,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35897,6 +35898,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783436803056,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jun 2025: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1783436803047,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jun 2025: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1783436753464,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1783436753456,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
       "ts": 1783436620108,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -37463,38 +37496,6 @@
       "accion": "Horas editadas",
       "detalle": "Millan, Fernando · May 2025: cursos=1",
       "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1781793570914,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · May 2025: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1781793565422,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · May 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1781793565415,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · May 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1781793496198,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · May 2025: cursos=1",
-      "pubId": "mmm9qi4n4dj1"
     }
   ],
   "formHistorial": [
