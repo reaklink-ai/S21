@@ -32855,6 +32855,132 @@
         "notasMed": "",
         "_ts": 1783439761501
       }
+    },
+    {
+      "id": "p1783440422009",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440424601
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440425267
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440424913
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440425819
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440426180
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440426618
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440427061
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440427650
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440428093
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783440428565
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Espinel",
+      "nombre": "Dario",
+      "nacimiento": "1983-06-05",
+      "bautismo": "2020-08-30",
+      "grupo": "Grupo 7",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783440422009,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783440422009
+      }
     }
   ],
   "grupos": {
@@ -33948,7 +34074,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783439775551,
+  "_lastModified": 1783440430799,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36261,6 +36387,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783440422009,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Espinel, Dario · Grupo 7",
+      "pubId": "p1783440422009"
+    },
+    {
       "ts": 1783439764245,
       "user": "Administrador",
       "rol": "admin",
@@ -37851,14 +37985,6 @@
       "accion": "Horas editadas",
       "detalle": "Bejarano, Martha · May 2025: cursos=1",
       "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1781794975162,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
