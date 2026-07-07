@@ -32496,6 +32496,122 @@
           "cursos": 0
         }
       }
+    },
+    {
+      "id": "p1783439637996",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Graterol",
+      "nombre": "Leonardo",
+      "nacimiento": "1999-11-29",
+      "bautismo": "2023-03-19",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439637996,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439637996
+      }
     }
   ],
   "grupos": {
@@ -33589,7 +33705,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783437481255,
+  "_lastModified": 1783439642224,
   "vym": {
     "semanas": {},
     "historial": [
@@ -35902,6 +36018,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1783439637997,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Graterol, Leonardo · Grupo 8",
+      "pubId": "p1783439637996"
+    },
+    {
+      "ts": 1783439475008,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783437634958,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783437480388,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -36078,6 +36218,14 @@
       "pubId": null
     },
     {
+      "ts": 1783436176294,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783200413030,
       "user": "Administrador",
       "rol": "admin",
@@ -36091,6 +36239,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1782478444573,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -37460,46 +37616,6 @@
       "accion": "Horas editadas",
       "detalle": "Yanes, Maria · May 2025: cursos=",
       "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1781793813885,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · May 2025: horas=21",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1781793813880,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · May 2025: horas=21",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1781793813033,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · May 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1781793813028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · May 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1781793806773,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · May 2025: horas=38",
-      "pubId": "mmm9qi4qg4ch"
     }
   ],
   "formHistorial": [
