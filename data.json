@@ -32622,70 +32622,80 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439713584
           },
           "Oct": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439714041
           },
           "Nov": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439714502
           },
           "Dic": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439714930
           },
           "Ene": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439715370
           },
           "Feb": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439715963
           },
           "Mar": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439716640
           },
           "Abr": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439717252
           },
           "May": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439718039
           },
           "Jun": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783439719780
           },
           "Jul": {
             "particip": false,
@@ -33821,7 +33831,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783439704434,
+  "_lastModified": 1783439720286,
   "vym": {
     "semanas": {},
     "historial": [
