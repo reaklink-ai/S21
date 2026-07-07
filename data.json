@@ -32738,6 +32738,123 @@
         "notasMed": "",
         "_ts": 1783439700818
       }
+    },
+    {
+      "id": "p1783439761501",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
+            "_ts": 1783439774661
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Bejarano Miranda",
+      "nombre": "Karen Natalia",
+      "nacimiento": "2003-07-17",
+      "bautismo": "",
+      "grupo": "Grupo 11",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439761501,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439761501
+      }
     }
   ],
   "grupos": {
@@ -33831,7 +33948,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783439720286,
+  "_lastModified": 1783439775551,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36144,6 +36261,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783439764245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano Miranda, Karen Natalia · Jun 2025: cursos=",
+      "pubId": "p1783439761501"
+    },
+    {
+      "ts": 1783439761501,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Bejarano Miranda, Karen Natalia · Grupo 11",
+      "pubId": "p1783439761501"
+    },
+    {
       "ts": 1783439700818,
       "user": "Administrador",
       "rol": "admin",
@@ -37726,22 +37859,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1781793833730,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · May 2025: horas=15",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1781793833727,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · May 2025: horas=15",
-      "pubId": "mmm9qi4tpwhw"
     }
   ],
   "formHistorial": [
