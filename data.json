@@ -3168,11 +3168,12 @@
             "_ts": 1781582367183
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "32",
+            "notas": "",
+            "_ts": 1783527520272
           },
           "Jul": {
             "particip": false,
@@ -34099,7 +34100,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527509157,
+  "_lastModified": 1783527520912,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36412,6 +36413,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527520272,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jun 2025: horas=32",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1783527520266,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jun 2025: horas=32",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1783527519043,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1783527519038,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
       "ts": 1783527441943,
       "user": "Administrador",
       "rol": "admin",
@@ -37977,38 +38010,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · May 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795446602,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795444875,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: cursos=2",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795444866,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: cursos=2",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795437880,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: cursos=2",
       "pubId": "mmm9qi4rhmxc"
     }
   ],
