@@ -21472,14 +21472,15 @@
             "paux": false,
             "horas": "14",
             "notas": "41 Horas de Betel ",
-            "_ts": 1781582486479
+            "_ts": 1783527579239
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "43 Horas de Betel ",
+            "_ts": 1783527582973
           },
           "Jul": {
             "particip": false,
@@ -34107,7 +34108,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527569915,
+  "_lastModified": 1783527583691,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36420,6 +36421,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527577567,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jun 2025: horas=12",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1783527577561,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jun 2025: horas=12",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1783527574316,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1783527574313,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
       "ts": 1783527569343,
       "user": "Administrador",
       "rol": "admin",
@@ -37986,38 +38019,6 @@
       "accion": "Horas editadas",
       "detalle": "Villa, Julia · May 2025: horas=21",
       "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795698143,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: horas=21",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795695763,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: cursos=1",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795695750,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: cursos=1",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795680587,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · May 2025: horas=26",
-      "pubId": "mmm9qi4l1oio"
     }
   ],
   "formHistorial": [
