@@ -3337,11 +3337,12 @@
             "_ts": 1781582373889
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527533883
           },
           "Jul": {
             "particip": false,
@@ -34100,7 +34101,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527520912,
+  "_lastModified": 1783527534318,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36413,6 +36414,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527533883,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
+      "ts": 1783527533879,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
       "ts": 1783527520272,
       "user": "Administrador",
       "rol": "admin",
@@ -37995,22 +38012,6 @@
       "accion": "Horas editadas",
       "detalle": "Villa, Julia · May 2025: cursos=1",
       "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795470825,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: cursos=1",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1781795446614,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
