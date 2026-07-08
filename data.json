@@ -19292,11 +19292,12 @@
             "_ts": 1781577964689
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "46",
+            "notas": "",
+            "_ts": 1783527414012
           },
           "Jul": {
             "particip": false,
@@ -34088,7 +34089,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527405504,
+  "_lastModified": 1783527414443,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36401,6 +36402,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527414012,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jun 2025: horas=46",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1783527414006,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jun 2025: horas=46",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1783527412239,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1783527412235,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
       "ts": 1783527405075,
       "user": "Administrador",
       "rol": "admin",
@@ -37966,38 +37999,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Garcia, Laura Johana · May 2025: cursos=",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1781795405172,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · May 2025: cursos=",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1781795401383,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · May 2025: cursos=1",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1781795401375,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · May 2025: cursos=1",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1781795400639,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · May 2025: horas=55",
       "pubId": "p1776219747113"
     }
   ],
