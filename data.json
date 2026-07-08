@@ -32766,14 +32766,15 @@
             "paux": false,
             "horas": "",
             "notas": "INACTIVA",
-            "_ts": 1783439719780
+            "_ts": 1783529211206
           },
           "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "INACTIVA",
+            "_ts": 1783529212563
           },
           "Ago": {
             "particip": false,
@@ -34019,7 +34020,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783529127197,
+  "_lastModified": 1783529213390,
   "vym": {
     "semanas": {},
     "historial": [
