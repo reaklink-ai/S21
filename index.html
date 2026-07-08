@@ -5223,6 +5223,91 @@ function limpiarForm() {
 
 function cerrarModal() { document.getElementById('modalPub').style.display='none'; }
 
+function abrirModalNuevos() {
+  const modal = document.getElementById('modalNuevos');
+  modal.style.display = 'flex';
+  // Poblar selector de años
+  const sel = document.getElementById('nuevosAnioSel');
+  sel.innerHTML = '';
+  const anioAct = anioHoy();
+  for(let a = anioAct; a >= anioAct - 5; a--) {
+    const opt = document.createElement('option');
+    opt.value = a;
+    opt.textContent = `${a}–${a+1}`;
+    if(a === anioAct) opt.selected = true;
+    sel.appendChild(opt);
+  }
+  renderModalNuevos();
+}
+
+function cerrarModalNuevos() {
+  document.getElementById('modalNuevos').style.display = 'none';
+}
+
+function renderModalNuevos() {
+  const anio = parseInt(document.getElementById('nuevosAnioSel').value);
+  const pubs = state.publicadores.filter(p => !p._inactivo);
+
+  const noBautizados = pubs.filter(p =>
+    MESES_K.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+    })
+  );
+
+  const bautizados = pubs.filter(p => {
+    const fechaOk = p.bautismo && p.bautismo >= `${anio}-09-01` && p.bautismo <= `${anio+1}-08-31`;
+    const notaOk = MESES_K.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('bautizad');
+    });
+    return fechaOk || notaOk;
+  });
+
+  const fila = (p, detalle) => `
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-bottom:1px solid var(--border)">
+      <div>
+        <div style="font-weight:600;font-size:14px;color:var(--ink)">${p.apellido}, ${p.nombre}</div>
+        <div style="font-size:12px;color:var(--ink-2)">${p.grupo||'Sin grupo'}</div>
+      </div>
+      <div style="font-size:11px;color:#64748b;text-align:right;max-width:180px">${detalle}</div>
+    </div>`;
+
+  let html = '';
+
+  // Sección no bautizados
+  html += `<div style="padding:8px 12px;background:var(--bg-2);font-size:11px;font-weight:700;color:var(--ink-2);text-transform:uppercase;letter-spacing:.5px">
+    Nuevos publicadores no bautizados (${noBautizados.length})
+  </div>`;
+  if(noBautizados.length === 0) {
+    html += `<div style="padding:16px 12px;color:var(--ink-2);font-size:13px">Ninguno registrado</div>`;
+  } else {
+    noBautizados.forEach(p => {
+      // Buscar el mes donde aparece la nota
+      const mesNota = MESES_K.find(m => {
+        const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+        return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+      });
+      html += fila(p, mesNota ? `Registrado en ${mesNota} ${anio}` : '');
+    });
+  }
+
+  // Sección bautizados
+  html += `<div style="padding:8px 12px;background:var(--bg-2);font-size:11px;font-weight:700;color:var(--ink-2);text-transform:uppercase;letter-spacing:.5px;margin-top:8px">
+    Bautizados (${bautizados.length})
+  </div>`;
+  if(bautizados.length === 0) {
+    html += `<div style="padding:16px 12px;color:var(--ink-2);font-size:13px">Ninguno registrado</div>`;
+  } else {
+    bautizados.forEach(p => {
+      const detalle = p.bautismo ? `Bautismo: ${p.bautismo}` : 'Registrado por nota';
+      html += fila(p, detalle);
+    });
+  }
+
+  document.getElementById('nuevosContenido').innerHTML = html;
+}
+
 function guardarPub() {
   const ap=document.getElementById('fApellido').value.trim();
   const nom=document.getElementById('fNombre').value.trim();
@@ -9542,7 +9627,25 @@ function renderDashboard() {
   const precursores = pubs.filter(p=>
     !_inacIds.has(p.id) && (p.precursorReg||p.precursorEsp||p.misionero)
   ).length;
+  const precAuxCont = pubs.filter(p=>!_inacIds.has(p.id) && p.precAuxContinuo).length;
   const mudados     = (state.mudados||[]).length;
+
+  // Nuevos publicadores no bautizados y bautizados en el año de servicio actual
+  const _anioSv = anioHoy();
+  const _nuevosNoBaut = pubs.filter(p => {
+    return MESES_K.some(m => {
+      const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
+      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+    });
+  });
+  const _bautizados = pubs.filter(p => {
+    const tieneFecha = p.bautismo && p.bautismo >= `${_anioSv}-09-01` && p.bautismo <= `${_anioSv+1}-08-31`;
+    const tieneNota = MESES_K.some(m => {
+      const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
+      return n.includes('bautizad');
+    });
+    return tieneFecha || tieneNota;
+  });
 
   // Bloque superintendentes — solo admin
   const esAdmin = currentUser && currentUser.rol === 'admin';
@@ -9748,11 +9851,17 @@ function renderDashboard() {
         <div class="dash-card-value">${precursores}</div>
         <div class="dash-card-desc">Activos este año</div>
       </div>
-      <div class="dash-card c-violet" onclick="irA('vym')">
-        <div class="dash-card-ico"><svg><use href="#ico-book"/></svg></div>
-        <div class="dash-card-label">Vida y Ministerio</div>
-        <div class="dash-card-value">${Object.keys((state.vym&&state.vym.semanas)||{}).filter(k=>k.slice(0,4)===String(anio)||k.slice(0,4)===String(anio+1)).length}</div>
-        <div class="dash-card-desc">Semanas programadas</div>
+      <div class="dash-card c-teal" onclick="irA('publicadores')">
+        <div class="dash-card-ico"><svg><use href="#ico-star"/></svg></div>
+        <div class="dash-card-label">Prec. aux. continuo</div>
+        <div class="dash-card-value">${precAuxCont}</div>
+        <div class="dash-card-desc">Designados este año</div>
+      </div>
+      <div class="dash-card c-green" onclick="abrirModalNuevos()">
+        <div class="dash-card-ico"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg></div>
+        <div class="dash-card-label">Nuevos este año</div>
+        <div class="dash-card-value">${_nuevosNoBaut.length + _bautizados.length}</div>
+        <div class="dash-card-desc">${_nuevosNoBaut.length} no bautizados · ${_bautizados.length} bautizados</div>
       </div>
       <div class="dash-card c-teal" onclick="toggleAsistencia()">
         <div class="dash-card-ico"><svg><use href="#ico-cal"/></svg></div>
@@ -12233,6 +12342,23 @@ document.addEventListener('change', e => {
       <button class="btn-save" onclick="generarInformeGrupo('pdf')">⬇ PDF</button>
       <button class="btn-save" style="background:#25d366;border-color:#25d366" onclick="generarInformeGrupo('whatsapp')">💬 WhatsApp</button>
     </div>
+  </div>
+</div>
+
+<div class="overlay" id="modalNuevos" style="display:none" onclick="if(event.target===this)cerrarModalNuevos()">
+  <div class="modal" style="max-width:640px;width:95%;max-height:85vh;display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-shrink:0">
+      <div>
+        <div style="font-size:18px;font-weight:700;color:var(--ink)">Nuevos publicadores</div>
+        <div style="font-size:13px;color:var(--ink-2);margin-top:2px">No bautizados y bautizados por año de servicio</div>
+      </div>
+      <button onclick="cerrarModalNuevos()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--ink-2);padding:4px 8px">&times;</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-shrink:0">
+      <label style="font-size:13px;font-weight:600;color:var(--ink-2)">Año de servicio:</label>
+      <select id="nuevosAnioSel" onchange="renderModalNuevos()" style="padding:6px 10px;border-radius:8px;border:1px solid var(--border);font-size:13px;font-family:var(--font)"></select>
+    </div>
+    <div id="nuevosContenido" style="overflow-y:auto;flex:1"></div>
   </div>
 </div>
 
