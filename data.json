@@ -11513,7 +11513,7 @@
         "tel2": "",
         "direccion": "Carrera 6a #14-41 sur torre 3 apartamento 111 arrayan",
         "notasMed": "",
-        "_ts": 1783531105230
+        "_ts": 1783531463318
       },
       "registros": {
         "2024": {
@@ -11669,8 +11669,8 @@
           "cursos": 6
         }
       },
-      "precAuxContinuo": true,
-      "_tsPersonal": 1783531105230
+      "_tsPersonal": 1783531463318,
+      "precAuxContinuo": true
     },
     {
       "id": "mmm9qi4n8uw3",
@@ -17615,8 +17615,7 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": "",
-        "_ts": 1783531117918
+        "notasMed": ""
       },
       "registros": {
         "2025": {
@@ -17715,7 +17714,6 @@
           "cursos": 0
         }
       },
-      "precAuxContinuo": true,
       "_tsPersonal": 1783531117918
     },
     {
@@ -34299,7 +34297,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783531119134,
+  "_lastModified": 1783531464470,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36612,6 +36610,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783531463319,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Ingrid · datos generales",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
       "ts": 1783531117918,
       "user": "Administrador",
       "rol": "admin",
@@ -36661,6 +36667,30 @@
     },
     {
       "ts": 1783530339595,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783530126238,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783529889652,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783529812344,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
@@ -38178,38 +38208,6 @@
       "accion": "Horas editadas",
       "detalle": "Alarcon, Victor Hugo · May 2025: horas=25",
       "pubId": "mmm9qi4jnax6"
-    },
-    {
-      "ts": 1781830888095,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Victor Hugo · May 2025: horas=",
-      "pubId": "mmm9qi4jnax6"
-    },
-    {
-      "ts": 1781830878102,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · May 2025: horas=25",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1781830876631,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · May 2025: horas=25",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1781830858003,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
