@@ -23948,11 +23948,12 @@
             "_ts": 1781582495860
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527592804
           },
           "Jul": {
             "particip": false,
@@ -34108,7 +34109,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527583691,
+  "_lastModified": 1783527593268,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36421,6 +36422,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527592804,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Olga · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4spu34"
+    },
+    {
+      "ts": 1783527592800,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Olga · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4spu34"
+    },
+    {
       "ts": 1783527577567,
       "user": "Administrador",
       "rol": "admin",
@@ -38003,22 +38020,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Gabriela · May 2025: horas=30",
       "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1781795724175,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1781795698154,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · May 2025: horas=21",
-      "pubId": "mmm9qi4tnncr"
     }
   ],
   "formHistorial": [
