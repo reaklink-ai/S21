@@ -32577,6 +32577,133 @@
             "cursos": "",
             "paux": false,
             "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529240787
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242415
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242933
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243316
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243674
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244074
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244626
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245046
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245490
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529246090
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783529249269
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Graterol",
+      "nombre": "Leonardo",
+      "nacimiento": "1999-11-29",
+      "bautismo": "2023-03-19",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439637996,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439637996
+      }
+    },
+    {
+      "id": "p1783439761501",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
             "notas": ""
           },
           "Oct": {
@@ -32636,11 +32763,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
+            "_ts": 1783439774661
           },
           "Jul": {
             "particip": false,
@@ -32658,13 +32786,13 @@
           }
         }
       },
-      "apellido": "Graterol",
-      "nombre": "Leonardo",
-      "nacimiento": "1999-11-29",
-      "bautismo": "2023-03-19",
-      "grupo": "Grupo 8",
+      "apellido": "Bejarano Miranda",
+      "nombre": "Karen Natalia",
+      "nacimiento": "2003-07-17",
+      "bautismo": "",
+      "grupo": "Grupo 11",
       "telefono": "",
-      "genero": "M",
+      "genero": "F",
       "otrasOvejas": false,
       "ungido": false,
       "anciano": false,
@@ -32673,7 +32801,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1783439637996,
+      "_tsPersonal": 1783439761501,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -32681,7 +32809,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1783439637996
+        "_ts": 1783439761501
       }
     },
     {
@@ -32809,123 +32937,6 @@
         "direccion": "",
         "notasMed": "",
         "_ts": 1783439700818
-      }
-    },
-    {
-      "id": "p1783439761501",
-      "registros": {
-        "2025": {
-          "Sep": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Feb": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "NUEVA PUBLICADORA NO BAUTIZADA",
-            "_ts": 1783439774661
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "apellido": "Bejarano Miranda",
-      "nombre": "Karen Natalia",
-      "nacimiento": "2003-07-17",
-      "bautismo": "",
-      "grupo": "Grupo 11",
-      "telefono": "",
-      "genero": "F",
-      "otrasOvejas": false,
-      "ungido": false,
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "precAuxContinuo": false,
-      "_tsPersonal": 1783439761501,
-      "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": "",
-        "_ts": 1783439761501
       }
     }
   ],
@@ -33606,6 +33617,136 @@
       },
       "fechaInactivo": "2026-05-05",
       "motivoInactivo": "SACADA DE LA CONGREGACIÓN"
+    },
+    {
+      "id": "p1783439700818",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439713584
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439714041
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439714502
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439714930
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439715370
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439715963
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439716640
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439717252
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783439718039
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783529211206
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVA",
+            "_ts": 1783529212563
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Aldana de Graterol",
+      "nombre": "Havigahid",
+      "nacimiento": "1992-09-18",
+      "bautismo": "2023-03-19",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439700818,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439700818
+      },
+      "fechaInactivo": "2026-07-08",
+      "motivoInactivo": "VIENEN DE VENEZUELA",
+      "tipoInactivo": "inactivo"
     }
   ],
   "asistencia": [
@@ -34020,7 +34161,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783529213390,
+  "_lastModified": 1783529249933,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36333,6 +36474,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783529231087,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Inactivo",
+      "detalle": "Aldana de Graterol, Havigahid · VIENEN DE VENEZUELA",
+      "pubId": "p1783439700818"
+    },
+    {
       "ts": 1783528893398,
       "user": "Administrador",
       "rol": "admin",
@@ -37918,14 +38067,6 @@
     },
     {
       "ts": 1781801233343,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781801233095,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
