@@ -7857,11 +7857,12 @@
             "_ts": 1781581776373
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "",
+            "_ts": 1783527810434
           },
           "Jul": {
             "particip": false,
@@ -34133,7 +34134,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527799771,
+  "_lastModified": 1783527810863,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36446,6 +36447,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527810434,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Jun 2025: horas=40",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
+      "ts": 1783527810431,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Jun 2025: horas=40",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
       "ts": 1783527799245,
       "user": "Administrador",
       "rol": "admin",
@@ -38028,22 +38045,6 @@
       "accion": "Horas editadas",
       "detalle": "Perez, Marisol · May 2025: horas=15",
       "pubId": "mmm9qi4r0lk8"
-    },
-    {
-      "ts": 1781797284110,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781797199835,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
