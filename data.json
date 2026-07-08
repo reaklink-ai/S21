@@ -18313,11 +18313,12 @@
             "_ts": 1781581802664
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527828412
           },
           "Jul": {
             "particip": false,
@@ -34136,7 +34137,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527823297,
+  "_lastModified": 1783527828867,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36449,6 +36450,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527828412,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
+      "ts": 1783527828408,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
       "ts": 1783527822587,
       "user": "Administrador",
       "rol": "admin",
@@ -38031,22 +38048,6 @@
       "accion": "Horas editadas",
       "detalle": "Alarcon, Blanca · May 2025: horas=25",
       "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1781797416574,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Ruben · May 2025: horas=15",
-      "pubId": "mmm9qi4rtrpu"
-    },
-    {
-      "ts": 1781797416569,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Ruben · May 2025: horas=15",
-      "pubId": "mmm9qi4rtrpu"
     }
   ],
   "formHistorial": [
