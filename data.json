@@ -19966,11 +19966,12 @@
             "_ts": 1781577992198
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "28",
+            "notas": "",
+            "_ts": 1783527434241
           },
           "Jul": {
             "particip": false,
@@ -34091,7 +34092,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527425053,
+  "_lastModified": 1783527435401,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36404,6 +36405,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527434142,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jun 2025: horas=28",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1783527434137,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jun 2025: horas=28",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1783527431573,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1783527431570,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1783527414012,
       "user": "Administrador",
       "rol": "admin",
@@ -37970,38 +38003,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · May 2025: horas=53",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795424728,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795422668,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795422660,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795405177,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · May 2025: cursos=",
-      "pubId": "p1776219747113"
     }
   ],
   "formHistorial": [
