@@ -24254,11 +24254,12 @@
             "_ts": 1781582516977
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "58",
+            "notas": "",
+            "_ts": 1783527627741
           },
           "Jul": {
             "particip": false,
@@ -34120,7 +34121,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527609612,
+  "_lastModified": 1783527628754,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36433,6 +36434,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527627741,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Jun 2025: horas=58",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1783527627737,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Jun 2025: horas=58",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1783527616522,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1783527616516,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
       "ts": 1783527607170,
       "user": "Administrador",
       "rol": "admin",
@@ -37999,38 +38032,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · May 2025: cursos=4",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795799955,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781795799942,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781795777392,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795777380,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
