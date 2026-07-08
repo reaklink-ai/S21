@@ -18143,11 +18143,12 @@
             "_ts": 1781581791781
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527822587
           },
           "Jul": {
             "particip": false,
@@ -34135,7 +34136,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527816196,
+  "_lastModified": 1783527823297,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36448,6 +36449,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527822587,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
+      "ts": 1783527822583,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
       "ts": 1783527810434,
       "user": "Administrador",
       "rol": "admin",
@@ -38030,22 +38047,6 @@
       "accion": "Horas editadas",
       "detalle": "Perez, Ruben · May 2025: horas=15",
       "pubId": "mmm9qi4rtrpu"
-    },
-    {
-      "ts": 1781797409313,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Marisol · May 2025: horas=15",
-      "pubId": "mmm9qi4r0lk8"
-    },
-    {
-      "ts": 1781797409308,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Marisol · May 2025: horas=15",
-      "pubId": "mmm9qi4r0lk8"
     }
   ],
   "formHistorial": [
