@@ -13346,10 +13346,11 @@
           },
           "Jun": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527722069
           },
           "Jul": {
             "particip": false,
@@ -34122,7 +34123,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527718187,
+  "_lastModified": 1783527722487,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36435,6 +36436,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527722069,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1783527722066,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
       "ts": 1783527717786,
       "user": "Administrador",
       "rol": "admin",
@@ -38017,22 +38034,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · May 2025: cursos=2",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795821131,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1781795821119,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
