@@ -27561,11 +27561,12 @@
             "_ts": 1781582007959
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527862931
           },
           "Jul": {
             "particip": false,
@@ -34143,7 +34144,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527857008,
+  "_lastModified": 1783527864187,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36456,6 +36457,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527862849,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
+      "ts": 1783527862842,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
       "ts": 1783527837038,
       "user": "Administrador",
       "rol": "admin",
@@ -38033,22 +38050,6 @@
     },
     {
       "ts": 1781800417321,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781800236162,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781799249376,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
