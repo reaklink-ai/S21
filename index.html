@@ -5245,6 +5245,7 @@ function cerrarModalNuevos() {
 }
 
 function renderModalNuevos() {
+  const MESES_K = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
   const anio = parseInt(document.getElementById('nuevosAnioSel').value);
   const pubs = state.publicadores.filter(p => !p._inactivo);
 
@@ -9631,16 +9632,17 @@ function renderDashboard() {
   const mudados     = (state.mudados||[]).length;
 
   // Nuevos publicadores no bautizados y bautizados en el año de servicio actual
+  const _MESES_K = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
   const _anioSv = anioHoy();
   const _nuevosNoBaut = pubs.filter(p => {
-    return MESES_K.some(m => {
+    return _MESES_K.some(m => {
       const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
       return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
     });
   });
   const _bautizados = pubs.filter(p => {
     const tieneFecha = p.bautismo && p.bautismo >= `${_anioSv}-09-01` && p.bautismo <= `${_anioSv+1}-08-31`;
-    const tieneNota = MESES_K.some(m => {
+    const tieneNota = _MESES_K.some(m => {
       const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
       return n.includes('bautizad');
     });
