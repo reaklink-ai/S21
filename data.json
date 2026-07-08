@@ -19827,7 +19827,7 @@
       "apellido": "Pelaez",
       "nombre": "Neismer",
       "nacimiento": "1984-04-26",
-      "bautismo": "1997-11-",
+      "bautismo": "",
       "grupo": "Grupo 1",
       "telefono": "310 241 8902",
       "genero": "F",
@@ -19844,7 +19844,8 @@
         "tel": "3112435826",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1783527441943
       },
       "registros": {
         "2024": {
@@ -20000,7 +20001,9 @@
           "horas": 121,
           "cursos": 6
         }
-      }
+      },
+      "precAuxContinuo": true,
+      "_tsPersonal": 1783527441943
     },
     {
       "id": "mmm9qi4rokye",
@@ -34092,7 +34095,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527435401,
+  "_lastModified": 1783527443408,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36405,6 +36408,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527441943,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Pelaez, Neismer · datos generales",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1783527434142,
       "user": "Administrador",
       "rol": "admin",
@@ -37995,14 +38006,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · May 2025: cursos=2",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1781795424740,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · May 2025: horas=53",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
