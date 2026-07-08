@@ -34144,7 +34144,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783528599235,
+  "_lastModified": 1783528895357,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36457,6 +36457,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783528893398,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador eliminado",
+      "detalle": "Espinel, Dario",
+      "pubId": null
+    },
+    {
       "ts": 1783527862849,
       "user": "Administrador",
       "rol": "admin",
@@ -38042,14 +38050,6 @@
     },
     {
       "ts": 1781801233095,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781800417321,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
