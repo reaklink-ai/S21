@@ -17615,7 +17615,8 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1783531480980
       },
       "registros": {
         "2025": {
@@ -17714,7 +17715,8 @@
           "cursos": 0
         }
       },
-      "_tsPersonal": 1783531117918
+      "_tsPersonal": 1783531480980,
+      "precAuxContinuo": true
     },
     {
       "id": "mmm9qi4qve1a",
@@ -34297,7 +34299,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783531464470,
+  "_lastModified": 1783531482318,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36610,6 +36612,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783531480980,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Laura Camila · datos generales",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
       "ts": 1783531463319,
       "user": "Administrador",
       "rol": "admin",
@@ -38195,14 +38205,6 @@
     },
     {
       "ts": 1781830891668,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Victor Hugo · May 2025: horas=25",
-      "pubId": "mmm9qi4jnax6"
-    },
-    {
-      "ts": 1781830891661,
       "user": "Miguel_R",
       "rol": "anciano",
       "accion": "Horas editadas",
