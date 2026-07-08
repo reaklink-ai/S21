@@ -24064,11 +24064,12 @@
             "_ts": 1781582505310
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1783527603130
           },
           "Jul": {
             "particip": false,
@@ -34109,7 +34110,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527593268,
+  "_lastModified": 1783527603585,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36422,6 +36423,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527603130,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jun 2025: horas=30",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1783527603127,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jun 2025: horas=30",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1783527600312,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1783527600308,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
       "ts": 1783527592804,
       "user": "Administrador",
       "rol": "admin",
@@ -37988,38 +38021,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Lina · May 2025: cursos=1",
       "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795775546,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795749497,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781795749490,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · May 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1781795724185,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · May 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
     }
   ],
   "formHistorial": [
