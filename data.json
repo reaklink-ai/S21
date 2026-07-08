@@ -2997,11 +2997,12 @@
             "_ts": 1781581758853
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1783527799245
           },
           "Jul": {
             "particip": false,
@@ -34132,7 +34133,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527792097,
+  "_lastModified": 1783527799771,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36445,6 +36446,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527799245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Jun 2025: horas=50",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1783527799240,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Jun 2025: horas=50",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
       "ts": 1783527791226,
       "user": "Administrador",
       "rol": "admin",
@@ -38022,22 +38039,6 @@
     },
     {
       "ts": 1781797199835,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781797152861,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781797083213,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
