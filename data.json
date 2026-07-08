@@ -11507,10 +11507,13 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Carrera 6a #14-41 sur torre 3 apartamento 111 arrayan",
         "nombre": "John Hernández Mendoza",
+        "relacion": "",
         "tel": "3202971761",
-        "relacion": "Hermano carnal"
+        "tel2": "",
+        "direccion": "Carrera 6a #14-41 sur torre 3 apartamento 111 arrayan",
+        "notasMed": "",
+        "_ts": 1783531105230
       },
       "registros": {
         "2024": {
@@ -11665,7 +11668,9 @@
           "horas": 180,
           "cursos": 6
         }
-      }
+      },
+      "precAuxContinuo": true,
+      "_tsPersonal": 1783531105230
     },
     {
       "id": "mmm9qi4n8uw3",
@@ -34291,7 +34296,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783529741797,
+  "_lastModified": 1783531106552,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36604,6 +36609,78 @@
   ],
   "auditoria": [
     {
+      "ts": 1783531105230,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Hernandez, Ingrid · datos generales",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1783531080512,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783530925300,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783530813707,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783530719716,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783530339595,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783529620575,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783529533003,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783529486549,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783529257194,
       "user": "Administrador",
       "rol": "admin",
@@ -37852,7 +37929,39 @@
       "pubId": null
     },
     {
+      "ts": 1781837874287,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1781837836829,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781837237068,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781837135590,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1781837036654,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
@@ -38097,110 +38206,6 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781807078793,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781806860338,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781804951602,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1781804951593,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · May 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1781804928323,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · May 2025: cursos=1",
-      "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1781804928315,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · May 2025: cursos=1",
-      "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1781804831352,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Mar 2025: horas=6",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781804831343,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Mar 2025: horas=6",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1781804463356,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781804130421,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781804130394,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781803842808,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781803157005,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     }
   ],
