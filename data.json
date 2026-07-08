@@ -1468,11 +1468,12 @@
             "_ts": 1781577880666
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783527344817
           },
           "Jul": {
             "particip": false,
@@ -34078,7 +34079,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783440716160,
+  "_lastModified": 1783527348468,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36391,6 +36392,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527322888,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783440713250,
       "user": "Administrador",
       "rol": "admin",
@@ -37976,14 +37985,6 @@
     },
     {
       "ts": 1781795330143,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795330133,
       "user": "Felipe_C",
       "rol": "auxiliar",
       "accion": "Horas editadas",
