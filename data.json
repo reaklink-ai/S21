@@ -32569,133 +32569,6 @@
       }
     },
     {
-      "id": "p1783439637996",
-      "registros": {
-        "2025": {
-          "Sep": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529240787
-          },
-          "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529242415
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529242933
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529243316
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529243674
-          },
-          "Feb": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529244074
-          },
-          "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529244626
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529245046
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529245490
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVO",
-            "_ts": 1783529246090
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1783529249269
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "apellido": "Graterol",
-      "nombre": "Leonardo",
-      "nacimiento": "1999-11-29",
-      "bautismo": "2023-03-19",
-      "grupo": "Grupo 8",
-      "telefono": "",
-      "genero": "M",
-      "otrasOvejas": false,
-      "ungido": false,
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "precAuxContinuo": false,
-      "_tsPersonal": 1783439637996,
-      "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": "",
-        "_ts": 1783439637996
-      }
-    },
-    {
       "id": "p1783439761501",
       "registros": {
         "2025": {
@@ -32937,6 +32810,133 @@
         "direccion": "",
         "notasMed": "",
         "_ts": 1783439700818
+      }
+    },
+    {
+      "id": "p1783439637996",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529240787
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242415
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242933
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243316
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243674
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244074
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244626
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245046
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245490
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529246090
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783529249269
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Graterol",
+      "nombre": "Leonardo",
+      "nacimiento": "1999-11-29",
+      "bautismo": "2023-03-19",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439637996,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439637996
       }
     }
   ],
@@ -33747,6 +33747,136 @@
       "fechaInactivo": "2026-07-08",
       "motivoInactivo": "VIENEN DE VENEZUELA",
       "tipoInactivo": "inactivo"
+    },
+    {
+      "id": "p1783439637996",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529240787
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242415
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529242933
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243316
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529243674
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244074
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529244626
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245046
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529245490
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "INACTIVO",
+            "_ts": 1783529246090
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783529249269
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Graterol",
+      "nombre": "Leonardo",
+      "nacimiento": "1999-11-29",
+      "bautismo": "2023-03-19",
+      "grupo": "Grupo 8",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783439637996,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1783439637996
+      },
+      "fechaInactivo": "2026-07-08",
+      "motivoInactivo": "VIENEN DE VENEZUELA",
+      "tipoInactivo": "inactivo"
     }
   ],
   "asistencia": [
@@ -34161,7 +34291,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783529249933,
+  "_lastModified": 1783529258581,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36474,6 +36604,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783529257194,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Inactivo",
+      "detalle": "Graterol, Leonardo · VIENEN DE VENEZUELA",
+      "pubId": "p1783439637996"
+    },
+    {
       "ts": 1783529231087,
       "user": "Administrador",
       "rol": "admin",
@@ -38059,14 +38197,6 @@
     },
     {
       "ts": 1781803157005,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781801233343,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
