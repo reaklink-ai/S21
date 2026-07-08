@@ -15121,11 +15121,12 @@
             "_ts": 1781577937418
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "34",
+            "notas": "",
+            "_ts": 1783527388464
           },
           "Jul": {
             "particip": false,
@@ -34085,7 +34086,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527380445,
+  "_lastModified": 1783527389104,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36398,6 +36399,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527388464,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jun 2025: horas=34",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1783527388461,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jun 2025: horas=34",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1783527387008,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jun 2025: cursos=3",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1783527387004,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jun 2025: cursos=3",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
       "ts": 1783527322888,
       "user": "Administrador",
       "rol": "admin",
@@ -37964,38 +37997,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · May 2025: horas=43",
       "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781795357652,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1781795332030,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795332019,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1781795330143,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · May 2025: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
