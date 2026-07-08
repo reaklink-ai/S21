@@ -20323,11 +20323,12 @@
             "_ts": 1781581815322
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "52",
+            "notas": "",
+            "_ts": 1783527837038
           },
           "Jul": {
             "particip": false,
@@ -34137,7 +34138,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527828867,
+  "_lastModified": 1783527837559,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36450,6 +36451,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527837038,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Jun 2025: horas=52",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1783527837033,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Jun 2025: horas=52",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
       "ts": 1783527828412,
       "user": "Administrador",
       "rol": "admin",
@@ -38032,22 +38049,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1781797650512,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · May 2025: horas=25",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1781797650505,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · May 2025: horas=25",
-      "pubId": "mmm9qi4jfkxs"
     }
   ],
   "formHistorial": [
