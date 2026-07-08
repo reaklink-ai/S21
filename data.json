@@ -25254,11 +25254,12 @@
             "_ts": 1781578414889
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1783527746105
           },
           "Jul": {
             "particip": false,
@@ -34127,7 +34128,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783527738651,
+  "_lastModified": 1783527746715,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36440,6 +36441,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1783527746105,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Jun 2025: horas=55",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1783527746102,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Jun 2025: horas=55",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1783527744557,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Jun 2025: cursos=",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
       "ts": 1783527735240,
       "user": "Administrador",
       "rol": "admin",
@@ -38014,30 +38039,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1781796192397,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781796040215,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781795837942,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · May 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
