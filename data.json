@@ -34324,7 +34324,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783616355309,
+  "_lastModified": 1783616375234,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36803,6 +36803,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783616372815,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Regresó de mudados",
+      "detalle": "Peña, Johana Marcela",
+      "pubId": "mmm9qi4rb7p1"
+    },
+    {
       "ts": 1783616323655,
       "user": "Administrador",
       "rol": "admin",
@@ -38388,14 +38396,6 @@
     },
     {
       "ts": 1781993460379,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Mar 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993457096,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
