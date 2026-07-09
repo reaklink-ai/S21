@@ -8832,11 +8832,12 @@
             "_ts": 1781579135636
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "10",
+            "notas": "Cirugía",
+            "_ts": 1783615858201
           },
           "Jul": {
             "particip": false,
@@ -34313,7 +34314,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615833267,
+  "_lastModified": 1783615858652,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36792,6 +36793,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615848835,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Jun 2025: horas=10",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
+      "ts": 1783615848829,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Jun 2025: horas=10",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
       "ts": 1783615667811,
       "user": "Administrador",
       "rol": "admin",
@@ -38369,22 +38386,6 @@
     },
     {
       "ts": 1781834659109,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781834520102,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781832353711,
       "user": "Felipe_C",
       "rol": "auxiliar",
       "accion": "Login",
