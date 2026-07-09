@@ -26336,10 +26336,11 @@
           },
           "Jun": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "26",
+            "notas": "",
+            "_ts": 1783615642097
           },
           "Jul": {
             "particip": false,
@@ -34307,7 +34308,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615633183,
+  "_lastModified": 1783615643129,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36786,6 +36787,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615642097,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jun 2025: horas=26",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1783615642092,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jun 2025: horas=26",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1783615639987,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1783615639981,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
       "ts": 1783615582264,
       "user": "Administrador",
       "rol": "admin",
@@ -38352,38 +38385,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · May 2025: cursos=1",
       "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1781830985408,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2025: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1781830985401,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2025: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1781830963190,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Abr 2025: horas=25",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1781830963184,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Abr 2025: horas=25",
-      "pubId": "mmm9qi4qvq3o"
     }
   ],
   "formHistorial": [
