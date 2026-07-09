@@ -27920,11 +27920,12 @@
             "_ts": 1781793833730
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "10",
+            "notas": "",
+            "_ts": 1783618104161
           },
           "Jul": {
             "particip": false,
@@ -34346,7 +34347,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783618094279,
+  "_lastModified": 1783618104671,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36825,6 +36826,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783618104161,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Jun 2025: horas=10",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1783618104155,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Jun 2025: horas=10",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
       "ts": 1783618089461,
       "user": "Administrador",
       "rol": "admin",
@@ -38406,22 +38423,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Jun 2025: horas=20",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1783436828475,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jun 2025: cursos=4",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1783436828467,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jun 2025: cursos=4",
       "pubId": "mmm9qi4r1pju"
     }
   ],
