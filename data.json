@@ -17714,11 +17714,12 @@
             "_ts": 1781793777497
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "13",
+            "notas": "",
+            "_ts": 1783618047047
           },
           "Jul": {
             "particip": false,
@@ -34343,7 +34344,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783618025457,
+  "_lastModified": 1783618048029,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36822,6 +36823,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783618047047,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Laura Camila · Jun 2025: horas=13",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
+      "ts": 1783618047041,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Laura Camila · Jun 2025: horas=13",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
       "ts": 1783618023436,
       "user": "Administrador",
       "rol": "admin",
@@ -38403,22 +38420,6 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783436176294,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783200413030,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     }
   ],
