@@ -8074,21 +8074,50 @@ function generarInformeGrupo(modo) {
         if(r.particip && h>0 && h<10) alertas.push({tipo:'bajo10h',msg:`Menos de 10h en S-21 este mes (${h}h)`,nivel:'critico'});
         if(r.particip&&h<META_PREC_REG&&h>=10) alertas.push({tipo:'horas',msg:`Horas S-21 bajo la meta: ${h}h de ${META_PREC_REG}h`,nivel:'precursor',color:'#d97706'});
         if(!r.particip) alertas.push({tipo:'horas',msg:'No reportó horas este mes',nivel:'alto'});
+
+        // Detectar si es nuevo precursor regular este año — buscar nota en el año de servicio
+        let mesInicioPrec = 0;
+        let esNuevoPrec = false;
+        for(let mi = 0; mi < MESES_K.length; mi++) {
+          const nota = ((p.registros||{})[anio]?.[MESES_K[mi]]?.notas||'').toLowerCase();
+          if(nota.includes('nuevo precursor regular')) {
+            mesInicioPrec = mi;
+            esNuevoPrec = true;
+            break;
+          }
+        }
+        if(esNuevoPrec) {
+          alertas.push({tipo:'nuevo-prec',msg:`Nuevo precursor regular desde ${MESES_K[mesInicioPrec]} ${anio}`,nivel:'positivo',color:'#0ea5e9'});
+        }
+
         // Total acumulado año de servicio — usando el mes del informe, no el mes calendario actual
         const dp = precGetDatos(p, anio);
-        const haAcum = dp.horasTotalCombinado||0;
-        // Meses transcurridos del año de servicio (Sep=0 ... Ago=11) hasta el mes del informe
-        const mesesTrans = mesIdx + 1;
-        const mesesRestantes = 12 - mesesTrans;
-        const hEsperadas = (560/12)*mesesTrans;
-        const colorAc = haAcum>=600?'#16a34a':haAcum>=560?'#0284c7':haAcum>=hEsperadas?'#d97706':'#b45309';
-        const deficit = hEsperadas-haAcum;
-        let msgAcum = `Acumulado año: ${haAcum.toFixed(1)}h / 560h mín`;
+        // Si es nuevo precursor regular, solo contar horas desde el mes que empezó
+        const haAcum = esNuevoPrec
+          ? dp.meses.filter(m => m.idx >= mesInicioPrec).reduce((s, m) => s + (m.combinado||0), 0)
+          : dp.horasTotalCombinado||0;
+
+        // Meses transcurridos desde que empezó como precursor hasta el mes del informe
+        const mesesTransDesdeInicio = mesIdx - mesInicioPrec + 1;
+        const mesesTrans = esNuevoPrec ? Math.max(1, mesesTransDesdeInicio) : mesIdx + 1;
+        const mesesRestantes = 12 - mesIdx - 1;
+        // Meta proporcional: si es nuevo precursor, la meta anual se ajusta a los meses que le aplican
+        const metaAjustada = esNuevoPrec ? Math.round((560 / 12) * (12 - mesInicioPrec)) : 560;
+        const hEsperadas = (metaAjustada / (esNuevoPrec ? 12 - mesInicioPrec : 12)) * mesesTrans;
+        const colorAc = haAcum>=600?'#16a34a':haAcum>=(esNuevoPrec?metaAjustada:560)?'#0284c7':haAcum>=hEsperadas?'#d97706':'#b45309';
+        let msgAcum;
+        if(esNuevoPrec) {
+          const mesesAplican = 12 - mesInicioPrec;
+          msgAcum = `Acumulado desde ${MESES_K[mesInicioPrec]}: ${haAcum.toFixed(1)}h de ${metaAjustada}h (meta proporcional a ${mesesAplican} meses)`;
+        } else {
+          msgAcum = `Acumulado año: ${haAcum.toFixed(1)}h de 560h requeridas`;
+        }
         if(haAcum<hEsperadas && mesesRestantes>0) {
-          const hNecesarias = (560-haAcum)/mesesRestantes;
+          const hNecesarias = ((esNuevoPrec?metaAjustada:560)-haAcum)/mesesRestantes;
           msgAcum += ` — necesita ${hNecesarias.toFixed(0)}h/mes en los ${mesesRestantes} meses restantes`;
         } else if(haAcum<hEsperadas) {
-          msgAcum += ` — déficit: ${deficit.toFixed(1)}h (sin meses restantes)`;
+          const deficit = hEsperadas-haAcum;
+          msgAcum += ` — déficit: ${deficit.toFixed(1)}h`;
         }
         alertas.push({tipo:'acumulado',msg:msgAcum,nivel:'precursor',color:colorAc});
       }
@@ -8119,12 +8148,19 @@ function generarInformeGrupo(modo) {
     if(totalCursos>pubs.length*0.3) fuertes.push(`Buen nivel de cursos bíblicos (${totalCursos} este mes)`);
     else if(totalCursos===0) debiles.push(`Sin cursos bíblicos reportados este mes`);
     if(precAux.length>0) fuertes.push(`${precAux.length} precursor${precAux.length>1?'es auxiliares':'auxiliar'} sirvieron este mes`);
+    // Nuevos precursores regulares este año de servicio
+    const _MK = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
+    const nuevosPrec = pubs.filter(p => _MK.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('nuevo precursor regular');
+    }));
+    if(nuevosPrec.length>0) fuertes.push(`${nuevosPrec.length} nuevo${nuevosPrec.length>1?'s precursores regulares':' precursor regular'} este año de servicio (${nuevosPrec.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
     if(precReg.length>0){
       const cumplieron=precReg.filter(p=>(parseFloat(getReg(p,anio,mesKey).horas)||0)>=META_PREC_REG).length;
       if(cumplieron===precReg.length&&precReg.length>0) fuertes.push(`Todos los precursores regulares cumplieron la meta de ${META_PREC_REG}h`);
       else if(cumplieron<precReg.length) debiles.push(`${precReg.length-cumplieron} precursor${(precReg.length-cumplieron)>1?'es regulares no cumplieron':'regular no cumplió'} la meta de ${META_PREC_REG}h`);
     }
-    if(irregulares.length>0) debiles.push(`${irregulares.length} publicador${irregulares.length>1?'es irregulares':'irregular'}`);
+    if(irregulares.length>0) debiles.push(`${irregulares.length} publicador${irregulares.length>1?'es irregulares':' irregular'}`);
     if(enRiesgoInac.length>0) debiles.push(`${enRiesgoInac.length} publicador${enRiesgoInac.length>1?'es en riesgo de inactividad':'en riesgo de inactividad'}`);
     if(sinCursos.length>pubs.length*0.5) debiles.push(`${sinCursos.length} publicadores sin cursos bíblicos en todo el año`);
 
@@ -11312,15 +11348,31 @@ function precGetDatos(pub, anio) {
     if(combinado !== null) horasTotalCombinado += combinado;
   });
 
+  // Detectar si es nuevo precursor regular este año — buscar nota en cualquier mes
+  let mesInicioPrec = 0; // índice en MESES_C (0=Sep, 1=Oct, ...)
+  let esNuevoPrecReg = false;
+  MESES_C.forEach((m, idx) => {
+    if(esNuevoPrecReg) return;
+    const nota = ((regs[anio] || regs[String(anio)] || {})[m]?.notas||'').toLowerCase();
+    if(nota.includes('nuevo precursor regular')) {
+      mesInicioPrec = idx;
+      esNuevoPrecReg = true;
+    }
+  });
+
+  // Meta ajustada: si empezó después de Sep, la meta anual es proporcional
+  const mesesAplicables = 12 - mesInicioPrec;
+  const metaAnioAjustada = esNuevoPrecReg ? Math.round((PREC_META_ANIO / 12) * mesesAplicables) : PREC_META_ANIO;
+
   // ── Promedio general ──
   const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
 
-  // ── Meses pasados / restantes ──
+  // ── Meses pasados / restantes (desde inicio como precursor) ──
   const mesActualIdx = mesActual().idx;
-  const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx);
+  const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx && m.idx >= mesInicioPrec);
   const mesesRestantes = meses.filter(m => m.idx >  mesActualIdx).length;
 
-  const horasRestantes    = Math.max(0, PREC_META_ANIO - horasTotalCombinado);
+  const horasRestantes    = Math.max(0, metaAnioAjustada - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
 
   // ── Promedios para clasificación ──
@@ -11348,22 +11400,19 @@ function precGetDatos(pub, anio) {
 
   let estado = 'ok';
   if(requiereReunion) {
-    // Promedio anual < 45h con 3+ meses → incumplimiento habitual
     estado = 'reunion';
   } else if(promedioNecesario > PREC_META_MES * 1.4) {
-    // Necesita >70h/mes para completar 560h → riesgo real
     estado = 'riesgo';
   } else if(promGeneral !== null && promGeneral < PREC_META_MES && pasadosConDatos.length >= 2) {
-    // Promedio entre 45-50h: cerca de la meta pero sin cumplirla
     estado = 'bajo';
   } else if(promedioNecesario > PREC_META_MES) {
-    // Necesita más de 50h/mes para la meta anual
     estado = 'bajo';
   }
 
   return {
     meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
     horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
+    metaAnioAjustada, esNuevoPrecReg, mesInicioPrec,
     // Horas adicionales (todas las categorías)
     horasExtraBruto, horasExtraCredito, desgloseCategorias,
     // Compatibilidad con código que usa horasBetelCredito/Bruto
@@ -11535,7 +11584,7 @@ function renderPrecursores() {
   // Tarjetas
   datosOrdenados.forEach(({ pub, d }) => {
     const init = (pub.apellido[0]||'')+(pub.nombre[0]||'');
-    const pct = Math.min(100, Math.round(d.horasTotalCombinado/PREC_META_ANIO*100));
+    const pct = Math.min(100, Math.round(d.horasTotalCombinado/(d.metaAnioAjustada||PREC_META_ANIO)*100));
     const colorBarra = pct>=100?'#22c55e':pct>=70?'#f59e0b':'#ef4444';
     const claseCard = d.requiereReunion?'reunion-req':d.estado==='riesgo'?'alerta-anual':d.estado==='bajo'?'alerta-mes':'ok';
 
@@ -11641,17 +11690,17 @@ function renderPrecursores() {
     const metaLabel = pct >= 100
       ? '✓ Meta alcanzada — puede continuar como precursor'
       : (d.mesesRestantes === 0
-          ? (d.horasTotalCombinado >= PREC_META_ANIO
+          ? (d.horasTotalCombinado >= (d.metaAnioAjustada||PREC_META_ANIO)
               ? '✓ Año completado — meta alcanzada'
-              : '✗ Año completado — no alcanzó 560h')
-          : 'Para continuar como precursor necesita llegar a ' + PREC_META_ANIO + 'h al finalizar el año');
-    const metaColor = pct >= 100 ? '#16a34a' : (d.mesesRestantes === 0 ? (d.horasTotalCombinado >= PREC_META_ANIO ? '#16a34a' : '#dc2626') : colorBarra);
+              : '✗ Año completado — no alcanzó ' + (d.metaAnioAjustada||560) + 'h')
+          : 'Para continuar como precursor necesita llegar a ' + (d.metaAnioAjustada||PREC_META_ANIO) + 'h al finalizar el año');
+    const metaColor = pct >= 100 ? '#16a34a' : (d.mesesRestantes === 0 ? (d.horasTotalCombinado >= (d.metaAnioAjustada||PREC_META_ANIO) ? '#16a34a' : '#dc2626') : colorBarra);
 
     html += '<div class="prec-progreso-wrap">';
     html += '<div class="prec-progreso-label">';
-    html += '<span style="font-weight:700;color:var(--ink)">Progreso hacia 560h anuales</span>';
+    html += '<span style="font-weight:700;color:var(--ink)">Progreso hacia ' + (d.metaAnioAjustada||560) + 'h' + (d.esNuevoPrecReg ? ' <span style="font-size:10px;font-weight:600;color:#0ea5e9">(desde ' + ["Sep","Oct","Nov","Dic","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"][d.mesInicioPrec] + ')</span>' : ' anuales') + '</span>';
     html += '<span style="font-weight:800;color:' + metaColor + ';font-family:Sora,var(--font);font-size:13px">'
-      + Math.round(d.horasTotalCombinado) + '<span style="font-size:10px;font-weight:600;opacity:.7"> / ' + PREC_META_ANIO + 'h</span>'
+      + Math.round(d.horasTotalCombinado) + '<span style="font-size:10px;font-weight:600;opacity:.7"> / ' + (d.metaAnioAjustada||PREC_META_ANIO) + 'h</span>'
       + '</span></div>';
     html += '<div class="prec-progreso-bar"><div class="prec-progreso-fill" style="width:' + pct + '%;background:' + metaColor + '"></div></div>';
     html += '<div style="font-size:10px;color:' + metaColor + ';margin-top:5px;font-weight:600">' + metaLabel + '</div>';
@@ -11680,7 +11729,7 @@ function renderPrecursores() {
           Le faltan <strong>${Math.round(d.horasRestantes)}h</strong>.
         </div>
       </div>`;
-    } else if(d.mesesRestantes === 0 && d.horasTotalCombinado < PREC_META_ANIO) {
+    } else if(d.mesesRestantes === 0 && d.horasTotalCombinado < (d.metaAnioAjustada||PREC_META_ANIO)) {
       html += `<div class="prec-alerta">
         <strong>✗ Año finalizado — no alcanzó la meta.</strong>
         Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de 560h requeridas.
@@ -11845,7 +11894,7 @@ function precVerHistorial(pubId) {
   } else {
     anios.forEach(anio => {
       const d = precGetDatos(pub, anio);
-      const pct = Math.min(100, Math.round(d.horasTotalCombinado / PREC_META_ANIO * 100));
+      const pct = Math.min(100, Math.round(d.horasTotalCombinado / (d.metaAnioAjustada||PREC_META_ANIO) * 100));
       const colorPct = pct >= 100 ? '#22c55e' : pct >= 70 ? '#f59e0b' : '#ef4444';
       const chip = pct >= 100
         ? '<span class="prec-hist-chip ok">✓ Meta alcanzada</span>'
@@ -11857,7 +11906,7 @@ function precVerHistorial(pubId) {
       html += `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">`;
       html += `<span style="font-weight:800;font-size:14px;color:var(--ink)">Año ${anio}–${anio+1}</span>`;
       html += `<div style="display:flex;align-items:center;gap:8px">${chip}`;
-      html += `<span style="font-weight:700;color:${colorPct};font-size:13px">${Math.round(d.horasTotalCombinado)}h / ${PREC_META_ANIO}h (${pct}%)</span>`;
+      html += `<span style="font-weight:700;color:${colorPct};font-size:13px">${Math.round(d.horasTotalCombinado)}h / ${d.metaAnioAjustada||PREC_META_ANIO}h (${pct}%)</span>`;
       html += `</div></div>`;
 
       // Barra de progreso del año
@@ -12021,7 +12070,7 @@ function precExportarPDFUno(pubId) {
   const anio = anioHoy();
   const d = precGetDatos(pub, anio);
   const fechaHoy = new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
-  const pct = Math.min(100, Math.round(d.horasTotalCombinado / PREC_META_ANIO * 100));
+  const pct = Math.min(100, Math.round(d.horasTotalCombinado / (d.metaAnioAjustada||PREC_META_ANIO) * 100));
 
   const mesesRows = MESES_C.map((_, i) => {
     const m = d.meses[i];
