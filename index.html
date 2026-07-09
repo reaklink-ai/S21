@@ -4219,13 +4219,16 @@ function _mergeStates(remoto, local) {
   // Inactivos: fusionar sin duplicados — preservar el más reciente
   const localInacIds = new Set((local.inactivos||[]).map(p=>p.id));
   (remoto.inactivos||[]).forEach(rp => {
-    if(!localInacIds.has(rp.id)) m.inactivos = [...(m.inactivos||[]), rp];
+    // No restaurar si ya fue regresado a publicadores activos en local
+    if(!localInacIds.has(rp.id) && !localPubIds.has(rp.id)) m.inactivos = [...(m.inactivos||[]), rp];
   });
 
   // Mudados: fusionar sin duplicados
   const localMudIds = new Set((local.mudados||[]).map(p=>p.id));
+  const localPubIds = new Set((local.publicadores||[]).map(p=>p.id));
   (remoto.mudados||[]).forEach(rp => {
-    if(!localMudIds.has(rp.id)) m.mudados = [...(m.mudados||[]), rp];
+    // No restaurar si ya fue regresado a publicadores activos en local
+    if(!localMudIds.has(rp.id) && !localPubIds.has(rp.id)) m.mudados = [...(m.mudados||[]), rp];
   });
 
   // formHistorial: fusionar sin duplicados por id+ts
@@ -6366,7 +6369,8 @@ function regresarMudado(id) {
   delete pub.direccionMudado;
   state.mudados.splice(idx, 1);
   state.publicadores.push(pub);
-  marcarCambios();
+  saveState();
+  _syncQueue = _syncQueue.then(() => _mergeAndPush(0, true)).catch(() => {});
   renderMudados();
   renderDashboard();
   auditLog('Regresó de mudados', `${pub.apellido}, ${pub.nombre}`, pub.id);
