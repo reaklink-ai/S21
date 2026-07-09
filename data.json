@@ -17321,21 +17321,23 @@
             "paux": false,
             "horas": "6",
             "notas": "40 Horas betel",
-            "_ts": 1781579201413
+            "_ts": 1783615895669
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "64 Horas betel",
+            "_ts": 1783615899608
           },
           "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783615896087
           },
           "Ago": {
             "particip": false,
@@ -34317,7 +34319,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615878103,
+  "_lastModified": 1783615900843,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36796,6 +36798,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615894994,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Jun 2025: horas=8",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1783615890750,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Jun 2025: horas=8",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1783615890745,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Jun 2025: horas=8",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1783615877665,
       "user": "Administrador",
       "rol": "admin",
@@ -38365,30 +38391,6 @@
     },
     {
       "ts": 1781922598068,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781890032953,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781838708920,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781838650686,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
