@@ -26979,11 +26979,12 @@
             "_ts": 1781578786531
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1783615662877
           },
           "Jul": {
             "particip": false,
@@ -34310,7 +34311,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615657103,
+  "_lastModified": 1783615663255,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36789,6 +36790,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615662877,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jun 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1783615662870,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jun 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1783615660220,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1783615660212,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
       "ts": 1783615650642,
       "user": "Administrador",
       "rol": "admin",
@@ -38355,38 +38388,6 @@
       "accion": "Horas editadas",
       "detalle": "Rivera, Sandra · May 2025: cursos=3",
       "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1781831051063,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · May 2025: cursos=3",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1781831038622,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · May 2025: horas=20",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1781831038615,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · May 2025: horas=20",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1781831012562,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · May 2025: horas=",
-      "pubId": "mmm9qi4r1pju"
     }
   ],
   "formHistorial": [
