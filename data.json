@@ -17828,7 +17828,7 @@
             "paux": false,
             "horas": "25",
             "notas": "17 horas SAC",
-            "_ts": 1778156614402
+            "_ts": 1783618070360
           },
           "May": {
             "particip": true,
@@ -17839,11 +17839,12 @@
             "_ts": 1781793796812
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "23",
+            "notas": "17 horas SAC",
+            "_ts": 1783618071182
           },
           "Jul": {
             "particip": false,
@@ -34344,7 +34345,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783618059101,
+  "_lastModified": 1783618072047,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36823,6 +36824,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783618068850,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jun 2025: horas=23",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1783618068845,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jun 2025: horas=23",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
       "ts": 1783618047047,
       "user": "Administrador",
       "rol": "admin",
@@ -38405,22 +38422,6 @@
       "accion": "Horas editadas",
       "detalle": "Alarcon, Blanca · Jun 2025: cursos=1",
       "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1783436616235,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1783436532925,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
