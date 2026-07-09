@@ -6734,11 +6734,12 @@
             "_ts": 1781793484786
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783617792585
           },
           "Jul": {
             "particip": false,
@@ -34333,7 +34334,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783617787636,
+  "_lastModified": 1783617793288,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36812,6 +36813,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783617792585,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
+      "ts": 1783617792578,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
       "ts": 1783617536430,
       "user": "Administrador",
       "rol": "admin",
@@ -38393,22 +38410,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Espinel, Dario · Dic 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993465204,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Dic 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993463995,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Feb 2025: cursos=1",
       "pubId": "p1781993446050"
     }
   ],
