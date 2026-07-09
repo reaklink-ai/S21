@@ -25221,11 +25221,12 @@
             "_ts": 1781578732544
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783615626877
           },
           "Jul": {
             "particip": false,
@@ -25329,11 +25330,12 @@
             "_ts": 1781578738315
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783615630745
           },
           "Jul": {
             "particip": false,
@@ -31857,11 +31859,12 @@
             "_ts": 1781578847156
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783615623383
           },
           "Jul": {
             "particip": false,
@@ -34304,7 +34307,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615621685,
+  "_lastModified": 1783615631745,
   "vym": {
     "semanas": {},
     "historial": [
