@@ -26517,10 +26517,11 @@
           },
           "Jun": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "49",
+            "notas": "",
+            "_ts": 1783615650641
           },
           "Jul": {
             "particip": false,
@@ -34308,7 +34309,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615644492,
+  "_lastModified": 1783615651368,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36787,6 +36788,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615650642,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jun 2025: horas=49",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1783615650635,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jun 2025: horas=49",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1783615648691,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1783615648685,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
       "ts": 1783615642097,
       "user": "Administrador",
       "rol": "admin",
@@ -38353,38 +38386,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · May 2025: horas=",
       "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1781831010889,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · May 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1781831010880,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · May 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1781831003038,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2025: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1781831003024,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2025: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
     }
   ],
   "formHistorial": [
