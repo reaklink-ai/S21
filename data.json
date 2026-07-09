@@ -12872,11 +12872,11 @@
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783617930610
+            "_ts": 1783617942843
           },
           "Jul": {
             "particip": false,
@@ -12890,7 +12890,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783617943542
           }
         }
       },
@@ -34340,7 +34341,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783617932085,
+  "_lastModified": 1783617944528,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36819,6 +36820,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783617942843,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
+      "ts": 1783617942837,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
       "ts": 1783617832104,
       "user": "Administrador",
       "rol": "admin",
@@ -38401,22 +38418,6 @@
       "accion": "Marcado mudado",
       "detalle": "Peña, Johana Marcela → Se traslado a bogota",
       "pubId": "mmm9qi4rb7p1"
-    },
-    {
-      "ts": 1781993540122,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Barrios, Alejandra · Feb 2025: cursos=1",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993540117,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Barrios, Alejandra · Feb 2025: cursos=1",
-      "pubId": "p1781993516577"
     }
   ],
   "formHistorial": [
