@@ -18012,11 +18012,12 @@
             "_ts": 1781793806773
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783618079727
           },
           "Jul": {
             "particip": false,
@@ -34345,7 +34346,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783618072047,
+  "_lastModified": 1783618080460,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36824,6 +36825,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783618079727,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1783618079722,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
       "ts": 1783618068850,
       "user": "Administrador",
       "rol": "admin",
@@ -38406,22 +38423,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Jun 2025: cursos=1",
       "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1783436620108,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · Jun 2025: horas=",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1783436616244,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4jfkxs"
     }
   ],
   "formHistorial": [
