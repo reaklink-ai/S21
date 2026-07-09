@@ -23859,11 +23859,12 @@
             "_ts": 1781579255948
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "5",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1783615931217
           },
           "Jul": {
             "particip": false,
@@ -34321,7 +34322,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615917710,
+  "_lastModified": 1783615931853,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36800,6 +36801,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615931217,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jun 2025: horas=30",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1783615931210,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jun 2025: horas=30",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1783615929429,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jun 2025: cursos=5",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1783615929425,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jun 2025: cursos=5",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
       "ts": 1783615917200,
       "user": "Administrador",
       "rol": "admin",
@@ -38365,38 +38398,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Espinel, Dario · Mar 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993456118,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993456112,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993455361,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · May 2025: cursos=1",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1781993455354,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · May 2025: cursos=1",
       "pubId": "p1781993446050"
     }
   ],
