@@ -32126,12 +32126,12 @@
             "_ts": 1783529118082
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "LLEGAN A LA CONGREGACIÓN",
-            "_ts": 1783529118871
+            "_ts": 1783617796427
           },
           "Jul": {
             "particip": false,
@@ -34334,7 +34334,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783617793288,
+  "_lastModified": 1783617800863,
   "vym": {
     "semanas": {},
     "historial": [
