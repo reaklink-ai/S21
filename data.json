@@ -11814,11 +11814,12 @@
             "_ts": 1781579163903
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "",
+            "_ts": 1783615877665
           },
           "Jul": {
             "particip": false,
@@ -34316,7 +34317,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783615869313,
+  "_lastModified": 1783615878103,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36795,6 +36796,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783615877665,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jun 2025: horas=40",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1783615877661,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jun 2025: horas=40",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1783615876056,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1783615876049,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
       "ts": 1783615865861,
       "user": "Administrador",
       "rol": "admin",
@@ -38360,38 +38393,6 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1781837874287,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781837836829,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781837237068,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1781837135590,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     }
   ],
