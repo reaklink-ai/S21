@@ -9006,7 +9006,7 @@
       "genero": "M",
       "anciano": true,
       "siervo": false,
-      "precursorReg": false,
+      "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
       "otrasOvejas": false,
@@ -9017,7 +9017,8 @@
         "tel": "3174339729",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1783617832104
       },
       "registros": {
         "2024": {
@@ -9138,11 +9139,12 @@
             "_ts": 1781793496198
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "NUEVO PRECURSOR REGULAR",
+            "_ts": 1783617828473
           },
           "Jul": {
             "particip": false,
@@ -9171,7 +9173,9 @@
           "horas": 76,
           "cursos": 4
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1783617832104
     },
     {
       "id": "mmm9qi4nd6my",
@@ -34335,7 +34339,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783617807001,
+  "_lastModified": 1783617833900,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36814,6 +36818,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1783617832104,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Garcia, Luis Fernando · Asignado como precursor regular",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1783617828473,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jun 2025: horas=40",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1783617828468,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jun 2025: horas=40",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1783617824556,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1783617824552,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
       "ts": 1783617792585,
       "user": "Administrador",
       "rol": "admin",
@@ -38372,46 +38416,6 @@
       "accion": "Horas editadas",
       "detalle": "Barrios, Alejandra · Feb 2025: cursos=1",
       "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993539176,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993536318,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993536311,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Barrios, Alejandra · Dic 2025: cursos=2",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993516577,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Barrios, Alejandra · Grupo 7",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1781993465209,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Dic 2025: cursos=1",
-      "pubId": "p1781993446050"
     }
   ],
   "formHistorial": [
