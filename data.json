@@ -17468,11 +17468,12 @@
             "_ts": 1781793580982
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "",
+            "_ts": 1783618023436
           },
           "Jul": {
             "particip": false,
@@ -34342,7 +34343,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783617956635,
+  "_lastModified": 1783618025457,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36821,6 +36822,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1783618023436,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jun 2025: horas=40",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1783618023433,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jun 2025: horas=40",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1783618021452,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jun 2025: cursos=",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
       "ts": 1783617955903,
       "user": "Administrador",
       "rol": "admin",
@@ -38390,30 +38415,6 @@
     },
     {
       "ts": 1783200413030,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1782952653837,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1782478444573,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1782350078407,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
