@@ -29359,11 +29359,12 @@
             "_ts": 1781795405177
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "43",
+            "notas": "",
+            "_ts": 1783717715431
           },
           "Jul": {
             "particip": false,
@@ -34360,7 +34361,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783690694121,
+  "_lastModified": 1783717716338,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36839,11 +36840,43 @@
   ],
   "auditoria": [
     {
+      "ts": 1783717715431,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · Jun 2025: horas=43",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1783717715424,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Laura Johana · Jun 2025: horas=43",
+      "pubId": "p1776219747113"
+    },
+    {
+      "ts": 1783717667143,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783690603040,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1783625379380,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -38405,38 +38438,6 @@
       "accion": "Horas editadas",
       "detalle": "Rivera, Sandra · Jun 2025: horas=34",
       "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1783436917329,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jun 2025: cursos=3",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1783436917320,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jun 2025: cursos=3",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1783436873822,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jul 2025: horas=",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1783436839020,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jun 2025: horas=20",
-      "pubId": "mmm9qi4r1pju"
     }
   ],
   "formHistorial": [
