@@ -7435,7 +7435,7 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8033,10 +8033,10 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "32",
             "notas": ""
           },
           "Jul": {
@@ -9351,11 +9351,11 @@
             "notas": "32 Betel"
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "7",
+            "notas": "48 Horas Betel"
           },
           "Jul": {
             "particip": false,
@@ -11310,7 +11310,7 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11936,7 +11936,7 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -12267,11 +12267,11 @@
             "notas": "48 Betel"
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Horas Betel"
           },
           "Jul": {
             "particip": false,
@@ -12434,10 +12434,10 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": ""
           },
           "Jul": {
@@ -13705,11 +13705,11 @@
             "notas": "28 Betel"
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "5",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "18",
+            "notas": "37 Horas Betel"
           },
           "Jul": {
             "particip": false,
@@ -13882,10 +13882,10 @@
             "notas": "24 Betel"
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
+            "horas": "14",
             "notas": ""
           },
           "Jul": {
@@ -14052,11 +14052,11 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "41",
+            "notas": "14 Horas Betel"
           },
           "Jul": {
             "particip": false,
@@ -14228,11 +14228,11 @@
             "notas": "18 Betel"
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "39",
+            "notas": "16 Horas Betel"
           },
           "Jul": {
             "particip": false,
@@ -14388,10 +14388,10 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "52",
             "notas": ""
           },
           "Jul": {
@@ -16329,7 +16329,7 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16969,7 +16969,7 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -17167,10 +17167,10 @@
             "_ts": 1781838017112
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": ""
           },
           "Jul": {
@@ -21197,11 +21197,11 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "Gripe por 15 dias"
           },
           "Jul": {
             "particip": false,
@@ -34361,7 +34361,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783717716338,
+  "_lastModified": 1783975275779,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36840,6 +36840,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783974812856,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783717715431,
       "user": "Administrador",
       "rol": "admin",
@@ -38425,14 +38433,6 @@
     },
     {
       "ts": 1783436922227,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jun 2025: horas=34",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1783436922220,
       "user": "Miguel_R",
       "rol": "anciano",
       "accion": "Horas editadas",
