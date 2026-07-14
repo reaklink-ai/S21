@@ -5644,11 +5644,12 @@
             "notas": "33 horas betel"
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "14",
+            "notas": "37 horas betel",
+            "_ts": 1783997145789
           },
           "Jul": {
             "particip": false,
@@ -5775,7 +5776,9 @@
             "particip": true
           },
           "Oct": {
-            "particip": true
+            "particip": true,
+            "paux": false,
+            "_ts": 1783997132124
           },
           "Nov": {
             "particip": true
@@ -34413,7 +34416,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783997033277,
+  "_lastModified": 1783997147432,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36892,6 +36895,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783997141799,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Jun 2025: horas=14",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1783997141793,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Jun 2025: horas=14",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
       "ts": 1783997024562,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38474,22 +38493,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Melissa · Jun 2025: cursos=1",
       "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1783527519038,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1783527441943,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Pelaez, Neismer · datos generales",
-      "pubId": "mmm9qi4r9s54"
     }
   ],
   "formHistorial": [
