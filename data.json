@@ -2640,11 +2640,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784038417275
           },
           "Jul": {
             "particip": false,
@@ -34421,7 +34422,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784005738245,
+  "_lastModified": 1784038418258,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36900,6 +36901,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1784038417275,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1784038417266,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1784038394772,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1784005669062,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38474,30 +38499,6 @@
       "accion": "Horas editadas",
       "detalle": "Lopez Pardo, Willian · Jun 2025: cursos=1",
       "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1783527569340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1783527561614,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1783527561608,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4ntq1t"
     }
   ],
   "formHistorial": [
