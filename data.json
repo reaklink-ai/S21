@@ -7174,11 +7174,12 @@
             "_ts": 1781615700670
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "10",
+            "notas": "",
+            "_ts": 1783993767142
           },
           "Jul": {
             "particip": false,
@@ -34362,7 +34363,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783993760589,
+  "_lastModified": 1783993767620,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36841,6 +36842,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993767142,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · Jun 2025: horas=10",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
+      "ts": 1783993767136,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · Jun 2025: horas=10",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
       "ts": 1783993581748,
       "user": "Administrador",
       "rol": "admin",
@@ -38418,22 +38435,6 @@
     },
     {
       "ts": 1783437375632,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783437312330,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783437312322,
       "user": "Miguel_R",
       "rol": "anciano",
       "accion": "Horas editadas",
