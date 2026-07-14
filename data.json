@@ -21739,18 +21739,20 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1784005669062
           },
           "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784005663987
           },
           "Ago": {
             "particip": false,
@@ -34419,7 +34421,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783998817899,
+  "_lastModified": 1784005670576,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36898,6 +36900,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1784005669062,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jun 2025: horas=50",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1784005669050,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jun 2025: horas=50",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1784005667176,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1784005667166,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1784005643822,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1783998816941,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38456,46 +38498,6 @@
       "accion": "Horas editadas",
       "detalle": "Huertas, Oscar · Jun 2025: cursos=1",
       "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1783527546161,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jun 2025: horas=42",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1783527546157,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jun 2025: horas=42",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1783527544191,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1783527544187,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1783527533883,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
     }
   ],
   "formHistorial": [
