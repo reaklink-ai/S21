@@ -5803,11 +5803,12 @@
             "_ts": 1781797166744
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783996765101
           },
           "Jul": {
             "particip": false,
@@ -34401,7 +34402,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783995589731,
+  "_lastModified": 1783996787286,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36880,6 +36881,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996758846,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1783994137081,
       "user": "Administrador",
       "rol": "admin",
@@ -38465,14 +38474,6 @@
     },
     {
       "ts": 1783440455486,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · May 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440455481,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
