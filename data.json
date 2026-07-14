@@ -10681,11 +10681,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "",
+            "_ts": 1783996954691
           },
           "Jul": {
             "particip": false,
@@ -34409,7 +34410,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783996933738,
+  "_lastModified": 1783996955146,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36888,6 +36889,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996954691,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Jun 2025: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1783996954682,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Jun 2025: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
       "ts": 1783996932587,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38470,22 +38487,6 @@
       "accion": "Horas editadas",
       "detalle": "Parra, Flor Alba · Jun 2025: cursos=1",
       "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1783527405075,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jun 2025: horas=36",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1783527405072,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jun 2025: horas=36",
-      "pubId": "mmm9qi4q8sw6"
     }
   ],
   "formHistorial": [
