@@ -22665,7 +22665,9 @@
             "particip": true,
             "horas": "",
             "cursos": "1",
-            "paux": false
+            "paux": false,
+            "notas": "",
+            "_ts": 1783993869262
           },
           "Sep": {
             "particip": true,
@@ -22723,11 +22725,11 @@
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783993837080
+            "_ts": 1783993868495
           },
           "Jul": {
             "particip": false,
@@ -34372,7 +34374,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783993858388,
+  "_lastModified": 1783993869870,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36851,6 +36853,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993868495,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
+      "ts": 1783993868487,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
       "ts": 1783993814116,
       "user": "Administrador",
       "rol": "admin",
@@ -38433,22 +38451,6 @@
       "accion": "Nuevo publicador",
       "detalle": "Bejarano Miranda, Karen Natalia · Grupo 11",
       "pubId": "p1783439761501"
-    },
-    {
-      "ts": 1783439700818,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Aldana de Graterol, Havigahid · Grupo 8",
-      "pubId": "p1783439700818"
-    },
-    {
-      "ts": 1783439637997,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Graterol, Leonardo · Grupo 8",
-      "pubId": "p1783439637996"
     }
   ],
   "formHistorial": [
