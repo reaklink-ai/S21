@@ -29575,11 +29575,12 @@
             "_ts": 1781615794872
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783993902089
           },
           "Jul": {
             "particip": false,
@@ -34376,7 +34377,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783993893130,
+  "_lastModified": 1783993902471,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36855,6 +36856,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993902089,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Jun 2025: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
+      "ts": 1783993902084,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Jun 2025: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
       "ts": 1783993892735,
       "user": "Administrador",
       "rol": "admin",
@@ -38436,22 +38453,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Espinel, Dario · Dic 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440451570,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Dic 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440422009,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Espinel, Dario · Grupo 7",
       "pubId": "p1783440422009"
     }
   ],
