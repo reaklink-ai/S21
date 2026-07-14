@@ -11662,11 +11662,12 @@
             "_ts": 1781615760812
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1783993814116
           },
           "Jul": {
             "particip": false,
@@ -34369,7 +34370,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783993807397,
+  "_lastModified": 1783993814552,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36848,6 +36849,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993814116,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jun 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1783993814108,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jun 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1783993811310,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jun 2025: horas=",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1783993810710,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1783993810702,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
       "ts": 1783993767142,
       "user": "Administrador",
       "rol": "admin",
@@ -38406,46 +38447,6 @@
       "accion": "Nuevo publicador",
       "detalle": "Graterol, Leonardo · Grupo 8",
       "pubId": "p1783439637996"
-    },
-    {
-      "ts": 1783439475008,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783437634958,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783437480388,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jun 2025: horas=27",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783437480380,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jun 2025: horas=27",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783437375632,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jun 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
     }
   ],
   "formHistorial": [
