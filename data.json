@@ -24667,11 +24667,12 @@
             "_ts": 1781615788421
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783993892735
           },
           "Jul": {
             "particip": false,
@@ -34375,7 +34376,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783993875295,
+  "_lastModified": 1783993893130,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36854,6 +36855,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993892735,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sanchez, Maritza · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
+      "ts": 1783993892729,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sanchez, Maritza · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
       "ts": 1783993868495,
       "user": "Administrador",
       "rol": "admin",
@@ -38436,22 +38453,6 @@
       "accion": "Nuevo publicador",
       "detalle": "Espinel, Dario · Grupo 7",
       "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783439764245,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano Miranda, Karen Natalia · Jun 2025: cursos=",
-      "pubId": "p1783439761501"
-    },
-    {
-      "ts": 1783439761501,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Bejarano Miranda, Karen Natalia · Grupo 11",
-      "pubId": "p1783439761501"
     }
   ],
   "formHistorial": [
