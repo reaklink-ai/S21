@@ -13065,11 +13065,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784049204833
           },
           "Jul": {
             "particip": false,
@@ -34423,7 +34424,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784038527399,
+  "_lastModified": 1784049206155,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36902,6 +36903,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784049194825,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1784038417275,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38492,14 +38501,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Jhonatan · Jun 2025: cursos=1",
       "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1783527569343,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4oaz18"
     }
   ],
   "formHistorial": [
