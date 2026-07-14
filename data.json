@@ -6844,11 +6844,12 @@
             "_ts": 1781615689931
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783993758938
           },
           "Jul": {
             "particip": false,
@@ -34361,7 +34362,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783975275779,
+  "_lastModified": 1783993760589,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36840,6 +36841,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1783993581748,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783974812856,
       "user": "Harold_La",
       "rol": "anciano",
@@ -38430,14 +38439,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Rogers · Jun 2025: horas=30",
       "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783436922227,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jun 2025: horas=34",
-      "pubId": "mmm9qi4spd20"
     }
   ],
   "formHistorial": [
