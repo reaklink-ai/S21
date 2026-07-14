@@ -5437,11 +5437,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783996820795
           },
           "Jul": {
             "particip": false,
@@ -34402,7 +34403,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783996799996,
+  "_lastModified": 1783996821206,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36881,6 +36882,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996820795,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1783996820785,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1783996809023,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1783996758846,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38455,30 +38480,6 @@
       "accion": "Publicador eliminado",
       "detalle": "Espinel, Dario",
       "pubId": null
-    },
-    {
-      "ts": 1783440456595,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Jun 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440456592,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Jun 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440455486,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · May 2025: cursos=1",
-      "pubId": "p1783440422009"
     }
   ],
   "formHistorial": [
