@@ -4180,11 +4180,12 @@
             "_ts": 1781792769251
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "28",
+            "notas": "",
+            "_ts": 1783994100368
           },
           "Jul": {
             "particip": false,
@@ -34382,7 +34383,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783994092376,
+  "_lastModified": 1783994100759,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36861,6 +36862,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783994100368,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Jun 2025: horas=28",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1783994100365,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Jun 2025: horas=28",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
       "ts": 1783994091944,
       "user": "Administrador",
       "rol": "admin",
@@ -38442,22 +38459,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Espinel, Dario · Abr 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440452512,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Mar 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440452507,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Mar 2025: cursos=1",
       "pubId": "p1783440422009"
     }
   ],
