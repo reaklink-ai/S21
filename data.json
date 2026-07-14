@@ -22088,11 +22088,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "",
+            "_ts": 1783996984629
           },
           "Jul": {
             "particip": false,
@@ -34410,7 +34411,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783996955146,
+  "_lastModified": 1783996985758,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36889,6 +36890,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996984629,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jun 2025: horas=35",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1783996984617,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jun 2025: horas=35",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1783996981196,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1783996981183,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
       "ts": 1783996954691,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38455,38 +38488,6 @@
       "accion": "Horas editadas",
       "detalle": "Pelaez, Neismer · Jun 2025: cursos=1",
       "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1783527414012,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jun 2025: horas=46",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1783527414006,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jun 2025: horas=46",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1783527412239,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1783527412235,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qzusx"
     }
   ],
   "formHistorial": [
