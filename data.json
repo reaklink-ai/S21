@@ -397,25 +397,27 @@
           },
           "May": {
             "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783996848649
+            "_ts": 1783996872127
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783996874325
           },
           "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783996872664
           },
           "Ago": {
             "particip": false,
@@ -34405,7 +34407,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783996863702,
+  "_lastModified": 1783996881109,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36884,6 +36886,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996874325,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Acosta, Paola · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4j5xl2"
+    },
+    {
+      "ts": 1783996874313,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Acosta, Paola · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4j5xl2"
+    },
+    {
+      "ts": 1783996872664,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Acosta, Paola · Jul 2025: cursos=",
+      "pubId": "mmm9qi4j5xl2"
+    },
+    {
+      "ts": 1783996872127,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Acosta, Paola · May 2025: cursos=1",
+      "pubId": "mmm9qi4j5xl2"
+    },
+    {
+      "ts": 1783996872117,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Acosta, Paola · May 2025: cursos=1",
+      "pubId": "mmm9qi4j5xl2"
+    },
+    {
       "ts": 1783996820795,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38442,46 +38484,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Oscar · Jun 2025: horas=34",
       "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1783527387008,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jun 2025: cursos=3",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1783527387004,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jun 2025: cursos=3",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1783527322888,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783440713250,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Lugo, Rogers · datos generales",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1783440644630,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador eliminado",
-      "detalle": "Espinel, Dario",
-      "pubId": null
     }
   ],
   "formHistorial": [
