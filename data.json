@@ -26208,11 +26208,12 @@
             "_ts": 1781792798113
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783994137081
           },
           "Jul": {
             "particip": false,
@@ -34387,7 +34388,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783994128969,
+  "_lastModified": 1783994137985,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36866,6 +36867,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1783994137081,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1783994137077,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
       "ts": 1783994100368,
       "user": "Administrador",
       "rol": "admin",
@@ -38447,22 +38464,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Espinel, Dario · May 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440453841,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
-      "pubId": "p1783440422009"
-    },
-    {
-      "ts": 1783440453835,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Abr 2025: cursos=1",
       "pubId": "p1783440422009"
     }
   ],
