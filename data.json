@@ -5987,11 +5987,12 @@
             "notas": ""
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "52",
+            "notas": "",
+            "_ts": 1783996932587
           },
           "Jul": {
             "particip": false,
@@ -34408,7 +34409,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783996892582,
+  "_lastModified": 1783996933738,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36887,6 +36888,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1783996932587,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Jun 2025: horas=52",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1783996932575,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Jun 2025: horas=52",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1783996930993,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1783996930986,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
       "ts": 1783996874325,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -38453,38 +38486,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Yasmilys · Jun 2025: horas=36",
       "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1783527402322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1783527402320,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1783527388464,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jun 2025: horas=34",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1783527388461,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jun 2025: horas=34",
-      "pubId": "mmm9qi4otsz7"
     }
   ],
   "formHistorial": [
