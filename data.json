@@ -28107,11 +28107,12 @@
             "_ts": 1781804951602
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1783994141366
           },
           "Jul": {
             "particip": false,
@@ -34388,7 +34389,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1783994137985,
+  "_lastModified": 1783994164598,
   "vym": {
     "semanas": {},
     "historial": [
