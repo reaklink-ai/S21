@@ -2338,11 +2338,12 @@
             "_ts": 1781791345158
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1784137257624
           },
           "Jul": {
             "particip": false,
@@ -34424,7 +34425,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784127433939,
+  "_lastModified": 1784137258216,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36903,6 +36904,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1784137257624,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Jun 2025: horas=45",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1784137257616,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Jun 2025: horas=45",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1784137242909,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1784127432907,
       "user": "Administrador",
       "rol": "admin",
@@ -38476,30 +38501,6 @@
       "rol": "admin",
       "accion": "Publicador editado",
       "detalle": "Rojas, Blanca Cecilia · datos generales",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1783527603130,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jun 2025: horas=30",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1783527603127,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jun 2025: horas=30",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1783527600312,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jun 2025: cursos=1",
       "pubId": "mmm9qi4s0oc6"
     }
   ],
