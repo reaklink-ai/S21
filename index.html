@@ -8067,7 +8067,7 @@ function generarInformeGrupo(modo) {
         alertas.push({tipo:'irregular',msg:`Irregular: ausente ${aus6} mes${aus6>1?'es':''} en el semestre (${mesesAusentes6.map(m=>m.mesKey).join(', ')})`,nivel:'critico'});
       }
       const tuvoCursos=MESES_K.some(m=>parseInt(getReg(p,anio,m).cursos)||0>0);
-      if(!tuvoCursos) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
+      if(!tuvoCursos && !exentoIrregular) alertas.push({tipo:'cursos',msg:'Sin cursos bíblicos en todo el año de servicio',nivel:'bajo'});
       if(p.precursorReg||p.precursorEsp||p.misionero){
         const h=parseFloat(r.horas)||0;
         // Alerta < 10h en S-21
@@ -8155,6 +8155,12 @@ function generarInformeGrupo(modo) {
       return n.includes('nuevo precursor regular');
     }));
     if(nuevosPrec.length>0) fuertes.push(`${nuevosPrec.length} nuevo${nuevosPrec.length>1?'s precursores regulares':' precursor regular'} este año de servicio (${nuevosPrec.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
+    // Nuevos publicadores del grupo este año de servicio
+    const nuevosPub = pubs.filter(p => _MK.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+    }));
+    if(nuevosPub.length>0) fuertes.push(`${nuevosPub.length} nuevo${nuevosPub.length>1?'s publicadores':' publicador'} en el grupo este año de servicio (${nuevosPub.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
     if(precReg.length>0){
       const cumplieron=precReg.filter(p=>(parseFloat(getReg(p,anio,mesKey).horas)||0)>=META_PREC_REG).length;
       if(cumplieron===precReg.length&&precReg.length>0) fuertes.push(`Todos los precursores regulares cumplieron la meta de ${META_PREC_REG}h`);
@@ -8247,6 +8253,13 @@ function generarInformeGrupo(modo) {
   if(totalCursosPer>0) fuertesPer.push(`${totalCursosPer} cursos bíblicos en el período`);
   else debilesPer.push(`Sin cursos bíblicos reportados en el período`);
   if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicadores ausentes más del 50% del período`);
+  // Nuevos publicadores del grupo este año de servicio
+  const _MKPer = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
+  const nuevosPubPer = pubs.filter(p => _MKPer.some(m => {
+    const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+    return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+  }));
+  if(nuevosPubPer.length>0) fuertesPer.push(`${nuevosPubPer.length} nuevo${nuevosPubPer.length>1?'s publicadores':' publicador'} en el grupo este año de servicio (${nuevosPubPer.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
 
   if(modo==='whatsapp') {
     const lines=[];
