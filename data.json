@@ -19216,11 +19216,12 @@
             "_ts": 1781791475536
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1784137318777
           },
           "Jul": {
             "particip": false,
@@ -34432,7 +34433,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784137309797,
+  "_lastModified": 1784137319457,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36911,6 +36912,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1784137318777,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Jun 2025: horas=55",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1784137318770,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Jun 2025: horas=55",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1784137316189,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1784137316181,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
       "ts": 1784137303106,
       "user": "Administrador",
       "rol": "admin",
@@ -38477,38 +38510,6 @@
       "accion": "Horas editadas",
       "detalle": "Jimenez, Flor · Jun 2025: cursos=1",
       "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1783527722066,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1783527717786,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1783527717783,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1783527627741,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Jun 2025: horas=58",
-      "pubId": "mmm9qi4seyz6"
     }
   ],
   "formHistorial": [
