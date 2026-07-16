@@ -12129,14 +12129,15 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO",
-            "_ts": 1781580390242
+            "_ts": 1784215124361
           },
           "Jun": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO",
+            "_ts": 1784215126227
           },
           "Jul": {
             "particip": false,
@@ -34463,7 +34464,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784214225271,
+  "_lastModified": 1784215127115,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36942,6 +36943,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784214896102,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1784214185735,
       "user": "Administrador",
       "rol": "admin",
@@ -37203,6 +37212,22 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1784137808452,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1784137652730,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -37902,6 +37927,54 @@
       "pubId": null
     },
     {
+      "ts": 1783625126419,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783624790177,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783624634459,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783624500632,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783618650128,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783618437901,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1783618104161,
       "user": "Administrador",
       "rol": "admin",
@@ -38468,78 +38541,6 @@
       "accion": "Marcado mudado",
       "detalle": "Sierra, Marlen → Se traslado a bogota",
       "pubId": "mmm9qi4smpf8"
-    },
-    {
-      "ts": 1783615491348,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783534834183,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783531480980,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millán, Laura Camila · datos generales",
-      "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1783531463319,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Hernandez, Ingrid · datos generales",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1783531117918,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millán, Laura Camila · datos generales",
-      "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1783531105230,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Hernandez, Ingrid · datos generales",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1783531080512,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783530925300,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783530813707,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
