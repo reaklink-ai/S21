@@ -16587,7 +16587,7 @@
       "apellido": "Martinez",
       "nombre": "Luis",
       "nacimiento": "1954-11-25",
-      "bautismo": "",
+      "bautismo": "2026-07-18",
       "grupo": "Grupo 2",
       "telefono": "",
       "genero": "M",
@@ -16604,7 +16604,8 @@
         "tel": "3107549856",
         "tel2": "",
         "direccion": "carrera 3 #3-21, centro Mosquera piso 3",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1784170006383
       },
       "registros": {
         "2025": {
@@ -16699,7 +16700,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1784170006383
     },
     {
       "id": "mmm9qi4qc1j1",
@@ -34442,7 +34445,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784169990543,
+  "_lastModified": 1784170008105,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36921,6 +36924,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784170006384,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Luis · datos generales",
+      "pubId": "mmm9qi4q025q"
+    },
+    {
       "ts": 1784169988700,
       "user": "Administrador",
       "rol": "admin",
@@ -38511,14 +38522,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuluaga, Juan Camilo · Jun 2025: cursos=1",
       "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1783527746105,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Jun 2025: horas=55",
-      "pubId": "mmm9qi4surcd"
     }
   ],
   "formHistorial": [
