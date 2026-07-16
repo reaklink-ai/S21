@@ -31618,11 +31618,11 @@
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "32",
             "notas": "",
-            "_ts": 1783995588062
+            "_ts": 1784202438257
           },
           "Jul": {
             "particip": false,
@@ -34462,7 +34462,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784202240316,
+  "_lastModified": 1784202440912,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36941,6 +36941,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1784202438257,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: horas=32",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1784202438245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: horas=32",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1784202434758,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1784202434746,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
       "ts": 1784202238214,
       "user": "Administrador",
       "rol": "admin",
@@ -38502,38 +38534,6 @@
     },
     {
       "ts": 1783530126238,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783529889652,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783529812344,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783529620575,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783529533003,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
