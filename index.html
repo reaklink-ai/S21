@@ -9316,9 +9316,10 @@ function renderMetMensual() {
         if(r && r.particip) activos.add(p.id);
       });
     }
-    return activos.size;
+    return activos;
   }
-  const pubsActivos6 = pubsActivosUltimos6(mesIdx);
+  const activosSet6 = pubsActivosUltimos6(mesIdx);
+  const pubsActivos6 = activosSet6.size;
 
   // ── Calcular datos del mes actual para el informe ──
   function calcMes(m, anioR) {
@@ -9362,6 +9363,18 @@ function renderMetMensual() {
 
   const d = calcMes(mesCV, anioMes);
 
+  // ── Publicadores activos (últimos 6 meses) que NO informaron este mes puntual ──
+  const informaronEsteMesIds = new Set();
+  {
+    const getRegMes = (p) => (p.registros||{})[anioMes]?.[mesCV] || (p.registros||{})[String(anioMes)]?.[mesCV];
+    pubs.forEach(p => { const r = getRegMes(p); if(r && r.particip) informaronEsteMesIds.add(p.id); });
+  }
+  const faltantesMes = [...activosSet6]
+    .filter(id => !informaronEsteMesIds.has(id))
+    .map(id => pubs.find(p => p.id === id))
+    .filter(Boolean)
+    .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
+
   // Asistencia promedio fin de semana (de módulo de asistencia)
   const asistFDS = (state.asistencia||[])
     .filter(r => r.tipo === 'Fin de semana')
@@ -9388,8 +9401,15 @@ function renderMetMensual() {
   informe += '<colgroup><col style="width:60%"><col style="width:40%"></colgroup>';
 
   // Publicadores activos
-  informe += '<tr><td style="' + TDN + 'text-align:left;padding-left:20px;font-size:13px;color:var(--ink);font-weight:700;font-family:var(--font)">Publicadores activos <span style="font-size:11px;color:var(--ink-3);font-weight:500">(informaron 1+ mes en los \u00faltimos 6)</span></td>';
+  const _faltHtml = faltantesMes.length
+    ? faltantesMes.map(p => '<div style="padding:4px 0;font-size:12px;color:var(--ink-2)">' + p.apellido + ', ' + p.nombre + '</div>').join('')
+    : '<div style="padding:4px 0;font-size:12px;color:var(--ink-3)">Todos los activos ya informaron este mes ✓</div>';
+  informe += '<tr style="cursor:pointer" onclick="const el=document.getElementById(\'faltantesMesDetalle\'); el.style.display = el.style.display===\'none\'?\'block\':\'none\';"><td style="' + TDN + 'text-align:left;padding-left:20px;font-size:13px;color:var(--ink);font-weight:700;font-family:var(--font)">Publicadores activos <span style="font-size:11px;color:var(--ink-3);font-weight:500">(informaron 1+ mes en los \u00faltimos 6)</span> <span style="font-size:10px;color:var(--accent);font-weight:600;text-decoration:underline">ver detalle</span></td>';
   informe += '<td style="' + TDN + '">' + pubsActivos6 + '</td></tr>';
+  informe += '<tr id="faltantesMesDetalle" style="display:none"><td colspan="2" style="padding:10px 20px 14px 20px;background:var(--surface-2);border-bottom:1px solid var(--border-2)">';
+  informe += '<div style="font-size:11px;font-weight:700;color:var(--ink-3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">Activos (\u00faltimos 6 meses) que a\u00fan no informan ' + mesNombre + ' (' + faltantesMes.length + ')</div>';
+  informe += _faltHtml;
+  informe += '</td></tr>';
 
   // Asistencia fin de semana
   informe += '<tr><td style="' + TD + 'color:var(--ink-2)">Promedio de asistencia a las reuniones del fin de semana</td>';
