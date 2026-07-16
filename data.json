@@ -1229,9 +1229,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "37",
             "notas": "",
-            "_ts": 1783995586532
+            "_ts": 1784202479092
           },
           "Jul": {
             "particip": false,
@@ -34462,7 +34462,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784202455452,
+  "_lastModified": 1784202481153,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36941,6 +36941,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1784202479092,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Geraldine · Jun 2025: horas=37",
+      "pubId": "mmm9qi4jigd3"
+    },
+    {
+      "ts": 1784202479080,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Geraldine · Jun 2025: horas=37",
+      "pubId": "mmm9qi4jigd3"
+    },
+    {
       "ts": 1784202438257,
       "user": "Administrador",
       "rol": "admin",
@@ -38518,22 +38534,6 @@
     },
     {
       "ts": 1783530719716,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783530339595,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783530126238,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
