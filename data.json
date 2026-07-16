@@ -29897,7 +29897,7 @@
       "apellido": "Figueredo",
       "nombre": "Fergie Alexandra",
       "nacimiento": "1995-01-29",
-      "bautismo": "",
+      "bautismo": "2026-07-18",
       "grupo": "Grupo 6",
       "telefono": "",
       "genero": "F",
@@ -29914,8 +29914,11 @@
         "tel": "3102816933",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
-      }
+        "notasMed": "",
+        "_ts": 1784202208363
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1784202208363
     },
     {
       "id": "p1777912957789",
@@ -34454,7 +34457,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784202196450,
+  "_lastModified": 1784202210275,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36933,6 +36936,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784202208363,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Figueredo, Fergie Alexandra · datos generales",
+      "pubId": "p1776221244569"
+    },
+    {
       "ts": 1784202194343,
       "user": "Administrador",
       "rol": "admin",
@@ -38523,14 +38534,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1783529257194,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Inactivo",
-      "detalle": "Graterol, Leonardo · VIENEN DE VENEZUELA",
-      "pubId": "p1783439637996"
     }
   ],
   "formHistorial": [
