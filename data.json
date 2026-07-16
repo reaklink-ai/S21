@@ -16407,7 +16407,7 @@
       "apellido": "Martinez",
       "nombre": "Juan Pablo",
       "nacimiento": "2013-01-30",
-      "bautismo": "",
+      "bautismo": "2026-07-18",
       "grupo": "Grupo 4",
       "telefono": "310 7663102",
       "genero": "M",
@@ -16424,7 +16424,8 @@
         "tel": "317 8109633",
         "tel2": "",
         "direccion": "Carrera 7 #11-15 piso 2 apt 202",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1784169988699
       },
       "registros": {
         "2024": {
@@ -16577,7 +16578,9 @@
           "cursos": 0
         }
       },
-      "_formTs": 1779237119322
+      "_formTs": 1779237119322,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1784169988699
     },
     {
       "id": "mmm9qi4q025q",
@@ -34439,7 +34442,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784169971086,
+  "_lastModified": 1784169990543,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36918,6 +36921,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784169988700,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Martinez, Juan Pablo · datos generales",
+      "pubId": "mmm9qi4qeh9c"
+    },
+    {
       "ts": 1784169965764,
       "user": "Administrador",
       "rol": "admin",
@@ -38503,14 +38514,6 @@
     },
     {
       "ts": 1783527746105,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Jun 2025: horas=55",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1783527746102,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
