@@ -5,7 +5,7 @@
       "apellido": "Acosta",
       "nombre": "Judith",
       "nacimiento": "",
-      "bautismo": "",
+      "bautismo": "2026-07-18",
       "grupo": "Grupo 4",
       "telefono": "300 7033852",
       "genero": "F",
@@ -21,8 +21,9 @@
         "relacion": "Hij@",
         "tel": "312 5031511",
         "tel2": "",
-        "direccion": "Calle 19 #18a-61 bloque A casa 4 remanso ",
-        "notasMed": ""
+        "direccion": "Calle 19 #18a-61 bloque A casa 4 remanso",
+        "notasMed": "",
+        "_ts": 1784169965764
       },
       "registros": {
         "2025": {
@@ -104,7 +105,9 @@
           "cursos": 0
         }
       },
-      "_formTs": 1779240208419
+      "_formTs": 1779240208419,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1784169965764
     },
     {
       "id": "mmm9qi4jw1p2",
@@ -34436,7 +34439,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784137340640,
+  "_lastModified": 1784169971086,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36915,6 +36918,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1784169965764,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Acosta, Judith · datos generales",
+      "pubId": "mmm9qi4jqz6w"
+    },
+    {
+      "ts": 1784169913941,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1784137318777,
       "user": "Administrador",
       "rol": "admin",
@@ -37056,6 +37075,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1784050970885,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -37531,11 +37558,35 @@
       "pubId": null
     },
     {
+      "ts": 1783992167683,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1783979656784,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1783974812856,
       "user": "Harold_La",
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1783807327550,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -38465,54 +38516,6 @@
       "accion": "Horas editadas",
       "detalle": "Silva, Edith · Jun 2025: horas=55",
       "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1783527744557,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Jun 2025: cursos=",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1783527735240,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jun 2025: horas=50",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1783527735236,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jun 2025: horas=50",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1783527733433,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1783527733428,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1783527722069,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
     }
   ],
   "formHistorial": [
