@@ -15246,7 +15246,7 @@
       "apellido": "Lugo",
       "nombre": "Paulina",
       "nacimiento": "2013-02-15",
-      "bautismo": "",
+      "bautismo": "2026-07-18",
       "grupo": "Grupo 1",
       "telefono": "3228377193",
       "genero": "F",
@@ -15258,10 +15258,13 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 8a Este # 1b -49 el trebol manzana 9 interior 2 casa 23",
         "nombre": "Oscar Lugo",
+        "relacion": "Padre",
         "tel": "3228377193",
-        "relacion": "Padre"
+        "tel2": "",
+        "direccion": "Calle 8a Este # 1b -49 el trebol manzana 9 interior 2 casa 23",
+        "notasMed": "",
+        "_ts": 1784202238213
       },
       "registros": {
         "2024": {
@@ -15401,7 +15404,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1784202238213
     },
     {
       "id": "mmm9qi4q8ujz",
@@ -34457,7 +34462,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784202210275,
+  "_lastModified": 1784202240316,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36936,6 +36941,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1784202238214,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Lugo, Paulina · datos generales",
+      "pubId": "mmm9qi4q0047"
+    },
+    {
       "ts": 1784202208363,
       "user": "Administrador",
       "rol": "admin",
@@ -38521,14 +38534,6 @@
     },
     {
       "ts": 1783529533003,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783529486549,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
