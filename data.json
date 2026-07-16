@@ -9711,11 +9711,12 @@
             "_ts": 1781795251061
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "44",
+            "notas": "",
+            "_ts": 1784172071458
           },
           "Jul": {
             "particip": false,
@@ -9877,11 +9878,12 @@
             "_ts": 1781616224211
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171999736
           },
           "Jul": {
             "particip": false,
@@ -10040,11 +10042,12 @@
             "_ts": 1781793158015
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171983752
           },
           "Jul": {
             "particip": false,
@@ -20241,11 +20244,12 @@
             "_ts": 1781793163287
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171979936
           },
           "Jul": {
             "particip": false,
@@ -24878,11 +24882,12 @@
             "_ts": 1781793182308
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171977959
           },
           "Jul": {
             "particip": false,
@@ -25052,11 +25057,12 @@
             "_ts": 1781793190440
           },
           "Jun": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "48",
+            "notas": "",
+            "_ts": 1784171903254
           },
           "Jul": {
             "particip": false,
@@ -25584,11 +25590,12 @@
             "_ts": 1781793203210
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171809605
           },
           "Jul": {
             "particip": false,
@@ -25745,11 +25752,12 @@
             "_ts": 1781793205552
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171806477
           },
           "Jul": {
             "particip": false,
@@ -28531,11 +28539,12 @@
             "_ts": 1781793160511
           },
           "Jun": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1784171981551
           },
           "Jul": {
             "particip": false,
@@ -34445,7 +34454,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784170008105,
+  "_lastModified": 1784172161842,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36924,6 +36933,142 @@
   ],
   "auditoria": [
     {
+      "ts": 1784172071458,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: horas=44",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784172071449,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: horas=44",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784172069137,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784172069129,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784172064521,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: cursos=",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784172016074,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jun 2025: cursos=",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1784171999736,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1784171999728,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1784171992546,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1784171992536,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1784171903255,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: horas=48",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171903246,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: horas=48",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171849709,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171849702,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171844707,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: cursos=",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171838500,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jun 2025: cursos=",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1784171742884,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1784170006384,
       "user": "Administrador",
       "rol": "admin",
@@ -38386,142 +38531,6 @@
       "accion": "Horas editadas",
       "detalle": "Vega Palomino, Zulma · Jun 2025: cursos=1",
       "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1783527862842,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1783527837038,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Jun 2025: horas=52",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1783527837033,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Jun 2025: horas=52",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1783527828412,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1783527828408,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1783527822587,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1783527822583,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1783527810434,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Jun 2025: horas=40",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1783527810431,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Jun 2025: horas=40",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1783527799245,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Jun 2025: horas=50",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1783527799240,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Jun 2025: horas=50",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1783527791226,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jun 2025: horas=50",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1783527791223,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jun 2025: horas=50",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1783527788954,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1783527788950,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1783527760037,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1783527760031,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Juan Camilo · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4ttbx6"
     }
   ],
   "formHistorial": [
