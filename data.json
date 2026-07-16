@@ -1222,16 +1222,16 @@
             "cursos": "",
             "paux": false,
             "horas": "41",
-            "notas": "",
-            "_ts": 1781582039220
+            "notas": "Embarazo",
+            "_ts": 1784202495053
           },
           "Jun": {
             "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "37",
-            "notas": "",
-            "_ts": 1784202479092
+            "notas": "Embarazo",
+            "_ts": 1784202500608
           },
           "Jul": {
             "particip": false,
@@ -34462,7 +34462,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784202481153,
+  "_lastModified": 1784202501864,
   "vym": {
     "semanas": {},
     "historial": [
