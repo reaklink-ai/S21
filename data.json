@@ -8573,169 +8573,6 @@
       }
     },
     {
-      "id": "mmm9qi4moy12",
-      "apellido": "Fuentes",
-      "nombre": "Raidy",
-      "nacimiento": "1982-01-24",
-      "bautismo": "2002-08-01",
-      "grupo": "Grupo 7",
-      "telefono": "3043296278",
-      "genero": "F",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {
-        "direccion": "Calle 20#4b-43, Villanueva",
-        "nombre": "María Piña",
-        "tel": "573133869309",
-        "relacion": "Prima"
-      },
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true
-          },
-          "Oct": {
-            "particip": true
-          },
-          "Nov": {
-            "particip": true
-          },
-          "Dic": {
-            "particip": true
-          },
-          "Ene": {
-            "particip": true
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1778156558515
-          },
-          "May": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1781793487185
-          },
-          "Jun": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1783617805622
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 0
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 0,
-          "cursos": 0
-        }
-      }
-    },
-    {
       "id": "mmm9qi4nj17y",
       "apellido": "Galindo",
       "nombre": "Estefania",
@@ -33089,6 +32926,169 @@
           "cursos": 0
         }
       }
+    },
+    {
+      "id": "mmm9qi4moy12",
+      "apellido": "Fuentes",
+      "nombre": "Raidy",
+      "nacimiento": "1982-01-24",
+      "bautismo": "2002-08-01",
+      "grupo": "Grupo 7",
+      "telefono": "3043296278",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "direccion": "Calle 20#4b-43, Villanueva",
+        "nombre": "María Piña",
+        "tel": "573133869309",
+        "relacion": "Prima"
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156558515
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793487185
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617805622
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      }
     }
   ],
   "grupos": {
@@ -34475,7 +34475,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1784768150470,
+  "_lastModified": 1785250535112,
   "vym": {
     "semanas": {},
     "historial": [
@@ -36950,9 +36950,222 @@
       },
       "fechaMudado": "2026-06-20",
       "direccionMudado": "Se traslado a bogota"
+    },
+    {
+      "id": "mmm9qi4moy12",
+      "apellido": "Fuentes",
+      "nombre": "Raidy",
+      "nacimiento": "1982-01-24",
+      "bautismo": "2002-08-01",
+      "grupo": "Grupo 7",
+      "telefono": "3043296278",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "direccion": "Calle 20#4b-43, Villanueva",
+        "nombre": "María Piña",
+        "tel": "573133869309",
+        "relacion": "Prima"
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156558515
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793487185
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617805622
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      },
+      "fechaMudado": "2026-07-28",
+      "direccionMudado": "Cambio de congregación a Madrid españa"
     }
   ],
   "auditoria": [
+    {
+      "ts": 1785250533559,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado mudado",
+      "detalle": "Fuentes, Raidy → Cambio de congregación a Madrid españa",
+      "pubId": "mmm9qi4moy12"
+    },
+    {
+      "ts": 1785250524177,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1785191138995,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado mudado",
+      "detalle": "Fuentes, Raidy → Cambio de congregación a Madrid españa",
+      "pubId": "mmm9qi4moy12"
+    },
+    {
+      "ts": 1785191119738,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado mudado",
+      "detalle": "Zuluaga, Juan Camilo → Cambio de congregación a Facatativa",
+      "pubId": "mmm9qi4ttbx6"
+    },
+    {
+      "ts": 1785189897649,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1785187472523,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
     {
       "ts": 1784768129199,
       "user": "Administrador",
@@ -38504,54 +38717,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Mario · Jun 2025: horas=49",
       "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1783615650635,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jun 2025: horas=49",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1783615648691,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1783615648685,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1783615642097,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jun 2025: horas=26",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1783615642092,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jun 2025: horas=26",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1783615639987,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4tcdjz"
     }
   ],
   "formHistorial": [
