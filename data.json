@@ -34032,6 +34032,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1785372357554",
+      "fecha": "2026-07-25",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 130,
+      "zoom": 56,
+      "total": 186,
+      "notas": "",
+      "_ts": 1785372357554
+    },
+    {
       "id": "r1784768149119",
       "fecha": "2026-07-22",
       "tipo": "Entre semana",
@@ -34475,7 +34486,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1785250560275,
+  "_lastModified": 1785372359452,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37292,6 +37303,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1785372335355,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1785250559181,
       "user": "Administrador",
       "rol": "admin",
@@ -38877,14 +38896,6 @@
     },
     {
       "ts": 1783615660220,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1783615660212,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
