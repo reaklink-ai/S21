@@ -7993,9 +7993,24 @@ function generarInformeGrupo(modo) {
     return result;
   };
 
+  // REGLA: un mes solo se considera "cerrado" (con datos definitivos) después del día 20
+  // del mes siguiente, que es el plazo límite para enviar los informes a la sucursal.
+  // Ej: julio se cierra el 20 de agosto. Antes de esa fecha, julio aún se está recibiendo
+  // y no debe mostrarse ni contarse como ausencia en el detalle por publicador.
+  const diaHoy = hoyDate.getDate();
+  let mesLimiteCal = mesCalHoy - 1;
+  let anioLimiteCal = anioCalHoy;
+  if(mesLimiteCal < 0) { mesLimiteCal = 11; anioLimiteCal--; }
+  if(diaHoy < 20) {
+    mesLimiteCal--;
+    if(mesLimiteCal < 0) { mesLimiteCal = 11; anioLimiteCal--; }
+  }
+  const fechaLimite = new Date(anioLimiteCal, mesLimiteCal, 1);
+
   const periodoMeses = buildPeriodo().filter(m => {
     const cal=mapKtoCal[m.mesKey];
     const anioCalMes=cal>=8?m.anio:m.anio+1;
+    if(new Date(anioCalMes, cal, 1) > fechaLimite) return false;
     return !(cal===mesCalHoy && anioCalMes===anioCalHoy);
   });
 
@@ -8235,10 +8250,36 @@ function generarInformeGrupo(modo) {
   const mesMasPart = tendencia.find(t=>t.pct===maxPct);
   const mesMenosPart = tendencia.find(t=>t.pct===minPct);
 
-  // Irregulares: cualquier publicador con al menos 1 ausencia en el período
+  // El registro de un mes se crea automáticamente (con particip:false) apenas se consulta
+  // en cualquier parte de la app, así que su sola existencia NO indica que la persona ya
+  // era publicador ese mes. El marcador real es la nota "nuevo publicador/a" o "readmitido/a"
+  // que se registra en el mes en que efectivamente se dio de alta o fue readmitido.
+  function mesInicioComoPublicador(p) {
+    let idx = -1;
+    MESES_K.forEach((mk, i) => {
+      if(idx !== -1) return;
+      const reg = (p.registros||{})[anio]?.[mk] || (p.registros||{})[String(anio)]?.[mk];
+      const n = (reg?.notas||'').toLowerCase();
+      if(n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad') || n.includes('readmitid')) {
+        idx = i;
+      }
+    });
+    return idx;
+  }
+  function mesEsValidoParaPublicador(p, m) {
+    const inicio = mesInicioComoPublicador(p);
+    if(inicio === -1) return true;
+    if(m.anio < anio) return false;
+    if(m.anio > anio) return true;
+    return MESES_K.indexOf(m.mesKey) >= inicio;
+  }
+
+  // Irregulares: cualquier publicador con al menos 1 ausencia en el período,
+  // contando solo los meses en que ya era publicador
   const irregularesPer = pubs.filter(p => {
-    const aus = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-    return aus > 0;
+    const mesesValidosP = periodoMeses.filter(m => mesEsValidoParaPublicador(p, m));
+    const aus = mesesValidosP.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+    return mesesValidosP.length>0 && aus > 0;
   });
 
   // Mejor y peor mes
@@ -8253,13 +8294,27 @@ function generarInformeGrupo(modo) {
   if(totalCursosPer>0) fuertesPer.push(`${totalCursosPer} cursos bíblicos en el período`);
   else debilesPer.push(`Sin cursos bíblicos reportados en el período`);
   if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicadores ausentes más del 50% del período`);
-  // Nuevos publicadores del grupo este año de servicio
+  // Nuevos publicadores (no bautizados) del grupo este año de servicio
   const _MKPer = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
   const nuevosPubPer = pubs.filter(p => _MKPer.some(m => {
     const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
     return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
   }));
+  // Bautizados este año de servicio (por fecha de bautismo o por nota, excluyendo a los "no bautizados")
+  const _nuevosIdsPer = new Set(nuevosPubPer.map(p=>p.id));
+  const bautizadosPer = pubs.filter(p => {
+    if(_nuevosIdsPer.has(p.id)) return false;
+    const tieneFecha = p.bautismo && p.bautismo >= `${anio}-09-01` && p.bautismo <= `${anio+1}-08-31`;
+    const tieneNota = _MKPer.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('bautizad') && !n.includes('no bautizad');
+    });
+    return tieneFecha || tieneNota;
+  });
+  const nuevosOBautizadosPer = [...nuevosPubPer, ...bautizadosPer];
   if(nuevosPubPer.length>0) fuertesPer.push(`${nuevosPubPer.length} nuevo${nuevosPubPer.length>1?'s publicadores':' publicador'} en el grupo este año de servicio (${nuevosPubPer.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
+  if(bautizadosPer.length>0) fuertesPer.push(`${bautizadosPer.length} ${bautizadosPer.length>1?'bautizados':'bautizado'} este año de servicio (${bautizadosPer.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
+
 
   if(modo==='whatsapp') {
     const lines=[];
@@ -8352,7 +8407,13 @@ tr:nth-child(even) td{background:#f8fafc}
   ${promHorasPubs?`<div class="kpi azul"><div class="kpi-val">${promHorasPubs}h</div><div class="kpi-lbl">Prom. horas grupo/mes</div></div>`:'<div class="kpi"></div>'}
   ${precReg.length>0&&promHorasPrec?`<div class="kpi ${parseFloat(promHorasPrec)>=50?'verde':parseFloat(promHorasPrec)>=45?'ambar':'rojo'}"><div class="kpi-val">${promHorasPrec}h</div><div class="kpi-lbl">Prom. horas precursores/mes</div></div>`:'<div class="kpi"></div>'}
   <div class="kpi ${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length>0?'rojo':'verde'}"><div class="kpi-val">${pubs.filter(p=>!periodoMeses.some(m=>parseInt(getReg(p,m.anio,m.mesKey).cursos)||0>0)).length}</div><div class="kpi-lbl">Sin cursos bíblicos</div></div>
-  <div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anana,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div>
+  <div class="kpi ${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length>0?'ambar':''}"><div class="kpi-val">${pubs.filter(p=>periodoMeses.some(m=>getReg(p,m.anio,m.mesKey).paux)).length}</div><div class="kpi-lbl">Precursores auxiliares</div></div>
+</div>
+<div class="kpis">
+  <div class="kpi ${nuevosOBautizadosPer.length>0?'verde':''}"><div class="kpi-val">${nuevosOBautizadosPer.length}</div><div class="kpi-lbl">Nuevos/bautizados este año</div></div>
+  <div class="kpi"><div class="kpi-val">${nuevosPubPer.length}</div><div class="kpi-lbl">Nuevos publicadores</div></div>
+  <div class="kpi"><div class="kpi-val">${bautizadosPer.length}</div><div class="kpi-lbl">Bautizados este año</div></div>
+  <div class="kpi"></div>
 </div>
 
 <h2>Tendencia de participación</h2>
@@ -8401,7 +8462,13 @@ ${barChart}
       'Mar': '★', // Conmemoración típicamente en marzo/abril
       'Abr': '★',
     };
+    // Usa el helper compartido (definido más arriba) que ya considera la nota
+    // "nuevo publicador/a" o "readmitido/a" para no contar meses previos al alta.
+    const regExiste = (m) => mesEsValidoParaPublicador(p, m);
     const celdas = periodoMeses.map(m => {
+      if(!regExiste(m)) {
+        return `<td style="text-align:center;background:#f8fafc;color:#94a3b8;font-weight:700;line-height:1.2">—</td>`;
+      }
       const r = getReg(p, m.anio, m.mesKey);
       const color = r.particip ? '#16a34a' : '#ef4444';
       const bg = r.particip ? '#f0fdf4' : '#fef2f2';
@@ -8413,10 +8480,11 @@ ${barChart}
       const txt = r.particip ? 'Si' : 'No';
       return `<td style="text-align:center;background:${bg};color:${color};font-weight:700;line-height:1.2">${especial}${txt}${horasLabel}${auxLabel}</td>`;
     }).join('');
-    const ausencias = periodoMeses.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
+    const mesesValidos = periodoMeses.filter(regExiste);
+    const ausencias = mesesValidos.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
     const cursosTot = periodoMeses.reduce((s,m)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
     const horasTot  = periodoMeses.reduce((s,m)=>s+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0);
-    const mesesConHoras2 = periodoMeses.filter(m=>getReg(p,m.anio,m.mesKey).particip);
+    const mesesConHoras2 = mesesValidos.filter(m=>getReg(p,m.anio,m.mesKey).particip);
     // Calcular combinado para color de horas (predicación + crédito betel)
     const _LIMITE_B = 55;
     const horasComb2 = periodoMeses.reduce((s,m)=>{
@@ -8428,7 +8496,8 @@ ${barChart}
     },0);
     const promComb2 = mesesConHoras2.length>0?horasComb2/mesesConHoras2.length:0;
     // Estado oficial: inactivo=0 participaciones en el período, irregular=1+ ausencias, regular=ninguna ausencia
-    const esInact   = ausencias >= periodoMeses.length && mesesConHoras2.length===0;
+    // Solo se evalúa sobre los meses en que el publicador ya existía (mesesValidos)
+    const esInact   = mesesValidos.length>0 && ausencias >= mesesValidos.length && mesesConHoras2.length===0;
     const esIrreg   = ausencias > 0 && !esInact;
     const sinCursosPer = !MESES_K.some(m => parseInt(getReg(p, anio >= 8 ? anio : anio, m).cursos)||0 > 0);
     const alertasList = [];
