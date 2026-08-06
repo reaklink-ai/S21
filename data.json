@@ -13707,19 +13707,22 @@
             "horas": "16",
             "cursos": "2",
             "paux": false,
-            "notas": "39 horas betel"
+            "notas": "39 Horas Betel",
+            "_ts": 1786022778772
           },
           "Sep": {
             "particip": true,
             "horas": "17",
             "cursos": "2",
-            "notas": "24 HORAS BETEL"
+            "notas": "24 Horas Betel",
+            "_ts": 1786022758659
           },
           "Oct": {
             "particip": true,
             "horas": "19",
             "cursos": "2",
-            "notas": "32 horas Betel"
+            "notas": "32 Horas Betel",
+            "_ts": 1786022761044
           },
           "Nov": {
             "particip": true,
@@ -13730,20 +13733,23 @@
             "particip": true,
             "horas": "17",
             "cursos": "2",
-            "notas": "32 horas betel"
+            "notas": "32 Horas betel",
+            "_ts": 1786022764588
           },
           "Ene": {
             "particip": true,
             "horas": "26",
             "cursos": "2",
-            "notas": "29 horas Betel"
+            "notas": "29 Horas Betel",
+            "_ts": 1786022776576
           },
           "Mar": {
             "particip": true,
             "cursos": "3",
             "paux": false,
             "horas": "13",
-            "notas": "42 horas betel"
+            "notas": "42 Horas Betel",
+            "_ts": 1786022781395
           },
           "Abr": {
             "particip": true,
@@ -13757,14 +13763,16 @@
             "cursos": "4",
             "paux": false,
             "horas": "31",
-            "notas": "24 Betel"
+            "notas": "24 Horas Betel",
+            "_ts": 1786022782824
           },
           "Jun": {
             "particip": true,
             "cursos": "4",
             "paux": false,
-            "horas": "14",
-            "notas": ""
+            "horas": "41",
+            "notas": "14 Horas Betel",
+            "_ts": 1786022786993
           },
           "Jul": {
             "particip": true,
@@ -34497,7 +34505,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786022223789,
+  "_lastModified": 1786022796823,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37314,6 +37322,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1786022738482,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Jun 2025: horas=41",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1786022738473,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Jun 2025: horas=41",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
       "ts": 1786021895409,
       "user": "Harold_La",
       "rol": "anciano",
@@ -38896,22 +38920,6 @@
       "accion": "Horas editadas",
       "detalle": "Galindo, Estefania · Jun 2025: horas=10",
       "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1783615848829,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · Jun 2025: horas=10",
-      "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1783615667811,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jun 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
     }
   ],
   "formHistorial": [
