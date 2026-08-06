@@ -7469,7 +7469,7 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8068,10 +8068,10 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "36",
             "notas": ""
           },
           "Ago": {
@@ -9223,11 +9223,11 @@
             "notas": "48 Horas Betel"
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "6",
+            "notas": "49 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -11191,7 +11191,7 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11818,7 +11818,7 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -11977,7 +11977,7 @@
             "_ts": 1784215126227
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -12150,11 +12150,11 @@
             "notas": "48 Horas Betel"
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -12317,11 +12317,11 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "33",
+            "notas": "Problemas de Salud"
           },
           "Ago": {
             "particip": false,
@@ -13590,11 +13590,11 @@
             "notas": "37 Horas Betel"
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "43 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -13767,11 +13767,11 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "39",
+            "notas": "16 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -13937,11 +13937,11 @@
             "notas": "14 Horas Betel"
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "41",
+            "notas": "14 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -14113,11 +14113,11 @@
             "notas": "16 Horas Betel"
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "39",
+            "notas": "16 Horas Betel"
           },
           "Ago": {
             "particip": false,
@@ -14273,10 +14273,10 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "54",
             "notas": ""
           },
           "Ago": {
@@ -16220,7 +16220,7 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16867,7 +16867,7 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -17065,10 +17065,10 @@
             "notas": ""
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "42",
             "notas": ""
           },
           "Ago": {
@@ -21103,10 +21103,10 @@
             "notas": "Gripe por 15 dias"
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": ""
           },
           "Ago": {
@@ -34497,7 +34497,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1785621096744,
+  "_lastModified": 1786022223789,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37314,6 +37314,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1786021895409,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1785969405922,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Jun 2025: horas=14",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1785969405848,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Jun 2025: horas=14",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1785967654299,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Jun 2025: horas=14",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1785966698622,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1785621057231,
       "user": "Administrador",
       "rol": "admin",
@@ -38872,46 +38912,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Jun 2025: horas=50",
       "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1783615667805,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jun 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1783615665716,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1783615665709,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1783615662877,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jun 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1783615662870,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jun 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
     }
   ],
   "formHistorial": [
