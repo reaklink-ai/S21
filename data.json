@@ -34040,6 +34040,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1786224901825",
+      "fecha": "2026-08-08",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 140,
+      "zoom": 70,
+      "total": 210,
+      "notas": "",
+      "_ts": 1786224901825
+    },
+    {
       "id": "r1785621094517",
       "fecha": "2026-08-01",
       "tipo": "Fin de semana",
@@ -34505,7 +34516,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786022796823,
+  "_lastModified": 1786224905479,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37322,6 +37333,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1786224883569,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1786022738482,
       "user": "Harold_La",
       "rol": "anciano",
@@ -37343,6 +37362,14 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1785977429230,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -37375,6 +37402,14 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1785677243307,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -38896,30 +38931,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Transito · Jun 2025: horas=40",
       "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1783615864044,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1783615864039,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1783615848835,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · Jun 2025: horas=10",
-      "pubId": "mmm9qi4nj17y"
     }
   ],
   "formHistorial": [
