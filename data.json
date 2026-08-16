@@ -21633,15 +21633,15 @@
             "paux": false,
             "horas": "50",
             "notas": "",
-            "_ts": 1784005669062
+            "_ts": 1786849432363
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": "",
-            "_ts": 1784005663987
+            "_ts": 1786849438074
           },
           "Ago": {
             "particip": false,
@@ -34533,7 +34533,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786849413459,
+  "_lastModified": 1786849439978,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37468,6 +37468,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1786849438074,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jul 2025: horas=45",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1786849438062,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jul 2025: horas=45",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1786849436200,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jul 2025: cursos=3",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1786849436195,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jul 2025: cursos=3",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1786849432363,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
       "ts": 1786849411716,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39026,46 +39066,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Andrea Carolina · Jun 2025: horas=40",
       "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1783618021452,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jun 2025: cursos=",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1783617955903,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jun 2025: horas=40",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1783617955897,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jun 2025: horas=40",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1783617953852,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1783617953847,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
     }
   ],
   "formHistorial": [
