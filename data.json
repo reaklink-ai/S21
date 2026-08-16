@@ -13428,14 +13428,15 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMA",
-            "_ts": 1784038525591
+            "_ts": 1786893388467
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1786893388731
           },
           "Ago": {
             "particip": false,
@@ -34538,7 +34539,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786889271979,
+  "_lastModified": 1786893391491,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37473,6 +37474,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1786893376997,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1786889201951,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39063,14 +39072,6 @@
       "accion": "Horas editadas",
       "detalle": "Yanes, Maria · Jun 2025: horas=10",
       "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1783618089461,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jun 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
     }
   ],
   "formHistorial": [
