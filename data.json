@@ -5666,11 +5666,12 @@
             "_ts": 1783997145789
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "18",
+            "notas": "33 horas betel",
+            "_ts": 1786894682565
           },
           "Ago": {
             "particip": false,
@@ -34540,7 +34541,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786893406288,
+  "_lastModified": 1786894684295,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37475,6 +37476,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1786894677248,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Jul 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1786894677237,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Jul 2025: horas=18",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
       "ts": 1786893376997,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39057,22 +39074,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1783618104161,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Jun 2025: horas=10",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1783618104155,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Jun 2025: horas=10",
-      "pubId": "mmm9qi4tpwhw"
     }
   ],
   "formHistorial": [
