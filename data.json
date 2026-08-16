@@ -245,11 +245,12 @@
             "_ts": 1783996885262
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1786849346400
           },
           "Ago": {
             "particip": false,
@@ -34529,7 +34530,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786718721389,
+  "_lastModified": 1786849347554,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37464,6 +37465,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1786849328359,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1786718644839,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -39049,14 +39058,6 @@
     },
     {
       "ts": 1783617824556,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1783617824552,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
