@@ -27562,11 +27562,12 @@
             "_ts": 1783997024562
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "21",
+            "notas": "",
+            "_ts": 1786849386230
           },
           "Ago": {
             "particip": false,
@@ -34531,7 +34532,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786849360657,
+  "_lastModified": 1786849387418,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37466,6 +37467,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1786849386230,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · Jul 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1786849386217,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · Jul 2025: horas=21",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
       "ts": 1786849328359,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39047,22 +39064,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Garcia, Luis Fernando · Jun 2025: horas=40",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1783617828468,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jun 2025: horas=40",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1783617824556,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jun 2025: cursos=1",
       "pubId": "mmm9qi4n4dj1"
     }
   ],
