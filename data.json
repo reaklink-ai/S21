@@ -10549,11 +10549,12 @@
             "_ts": 1783996954691
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "",
+            "_ts": 1786849467513
           },
           "Ago": {
             "particip": false,
@@ -34533,7 +34534,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786849439978,
+  "_lastModified": 1786849468394,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37468,6 +37469,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1786849467513,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Jul 2025: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1786849467501,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Jul 2025: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
       "ts": 1786849438074,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39050,22 +39067,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Laura Camila · Jun 2025: horas=13",
       "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1783618023436,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jun 2025: horas=40",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1783618023433,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jun 2025: horas=40",
-      "pubId": "mmm9qi4qp27l"
     }
   ],
   "formHistorial": [
