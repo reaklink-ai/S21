@@ -2659,11 +2659,12 @@
             "_ts": 1784038417275
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1786889268935
           },
           "Ago": {
             "particip": false,
@@ -34537,7 +34538,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786850071436,
+  "_lastModified": 1786889271979,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37472,6 +37473,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1786889201951,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1786849922194,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39057,14 +39066,6 @@
     },
     {
       "ts": 1783618089461,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jun 2025: horas=18",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1783618089455,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
