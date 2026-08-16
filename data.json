@@ -21993,11 +21993,12 @@
             "_ts": 1783996984629
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "25",
+            "notas": "",
+            "_ts": 1786849411716
           },
           "Ago": {
             "particip": false,
@@ -34532,7 +34533,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786849387418,
+  "_lastModified": 1786849413459,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37467,6 +37468,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1786849411716,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jul 2025: horas=25",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1786849411704,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jul 2025: horas=25",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1786849409941,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1786849409932,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
       "ts": 1786849386230,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39033,38 +39066,6 @@
       "accion": "Horas editadas",
       "detalle": "Millan, Fernando · Jun 2025: cursos=1",
       "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1783617942843,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1783617942837,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1783617832104,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Garcia, Luis Fernando · Asignado como precursor regular",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1783617828473,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jun 2025: horas=40",
-      "pubId": "mmm9qi4n4dj1"
     }
   ],
   "formHistorial": [
