@@ -23724,11 +23724,12 @@
             "_ts": 1783615917199
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1787095703641
           },
           "Ago": {
             "particip": false,
@@ -34638,7 +34639,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095691925,
+  "_lastModified": 1787095704110,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37573,6 +37574,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095703641,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Jul 2025: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1787095703635,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Jul 2025: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1787095701633,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1787095701626,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
       "ts": 1787095669271,
       "user": "Administrador",
       "rol": "admin",
@@ -39134,38 +39167,6 @@
     },
     {
       "ts": 1785250559181,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Zuluaga, Juan Camilo → Cambio de congregación a Facatativa",
-      "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1785250533559,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Fuentes, Raidy → Cambio de congregación a Madrid españa",
-      "pubId": "mmm9qi4moy12"
-    },
-    {
-      "ts": 1785250524177,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1785191138995,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Fuentes, Raidy → Cambio de congregación a Madrid españa",
-      "pubId": "mmm9qi4moy12"
-    },
-    {
-      "ts": 1785191119738,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Marcado mudado",
