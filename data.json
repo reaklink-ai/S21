@@ -18325,11 +18325,12 @@
             "_ts": 1783527828412
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787095530155
           },
           "Ago": {
             "particip": false,
@@ -34620,7 +34621,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095523733,
+  "_lastModified": 1787095530580,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37555,6 +37556,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095530155,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
+      "ts": 1787095530150,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Xiomara · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qgt8u"
+    },
+    {
       "ts": 1787095522874,
       "user": "Administrador",
       "rol": "admin",
@@ -39137,22 +39154,6 @@
       "accion": "Publicador editado",
       "detalle": "Figueredo, Whitney · datos generales",
       "pubId": "p1781578828320"
-    },
-    {
-      "ts": 1784201998575,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784172071458,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jun 2025: horas=44",
-      "pubId": "mmm9qi4ndhnb"
     }
   ],
   "formHistorial": [
