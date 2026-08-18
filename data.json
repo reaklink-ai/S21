@@ -6791,11 +6791,12 @@
             "_ts": 1783617792585
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787094720161
           },
           "Ago": {
             "particip": false,
@@ -34614,7 +34615,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787094712699,
+  "_lastModified": 1787094720656,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37549,6 +37550,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787094720161,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
+      "ts": 1787094720156,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Conde, Martha · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4mva5c"
+    },
+    {
       "ts": 1787093893511,
       "user": "Administrador",
       "rol": "admin",
@@ -39130,22 +39147,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Jun 2025: horas=48",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171903246,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: horas=48",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171849709,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: cursos=2",
       "pubId": "mmm9qi4smd7i"
     }
   ],
