@@ -12794,10 +12794,11 @@
           },
           "Jul": {
             "particip": false,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787093766914
           },
           "Ago": {
             "particip": false,
@@ -34605,7 +34606,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093760599,
+  "_lastModified": 1787093767664,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37540,6 +37541,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093766914,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
+      "ts": 1787093766909,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Isaza, Maria Del Rosario · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ntbx0"
+    },
+    {
       "ts": 1787093759665,
       "user": "Administrador",
       "rol": "admin",
@@ -39122,22 +39139,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1784127432907,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1784127432898,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
     }
   ],
   "formHistorial": [
