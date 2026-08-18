@@ -19292,11 +19292,12 @@
             "_ts": 1783527414012
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "65",
+            "notas": "",
+            "_ts": 1787089717472
           },
           "Ago": {
             "particip": false,
@@ -34557,7 +34558,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089705170,
+  "_lastModified": 1787089718973,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37492,6 +37493,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089717472,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jul 2025: horas=65",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1787089717464,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jul 2025: horas=65",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1787089714801,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1787089714794,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
       "ts": 1787089704067,
       "user": "Administrador",
       "rol": "admin",
@@ -39058,38 +39091,6 @@
       "accion": "Horas editadas",
       "detalle": "Sanchez, Maritza · Jun 2025: cursos=1",
       "pubId": "mmm9qi4spx52"
-    },
-    {
-      "ts": 1783993868495,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1783993868487,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1783993814116,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Jun 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1783993814108,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Jun 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
     }
   ],
   "formHistorial": [
