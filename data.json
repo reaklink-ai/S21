@@ -23896,11 +23896,12 @@
             "_ts": 1783615931217
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "5",
+            "paux": true,
+            "horas": "32",
+            "notas": "",
+            "_ts": 1787095720841
           },
           "Ago": {
             "particip": false,
@@ -34639,7 +34640,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095704110,
+  "_lastModified": 1787095722081,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37574,6 +37575,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095720841,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jul 2025: horas=32",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1787095720834,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jul 2025: horas=32",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1787095716469,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jul 2025: horas=",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1787095713498,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jul 2025: cursos=5",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1787095713491,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Jul 2025: cursos=5",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
       "ts": 1787095703641,
       "user": "Administrador",
       "rol": "admin",
@@ -39132,46 +39173,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1785677418826,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1785677243307,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1785621057231,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1785372335355,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1785250559181,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Zuluaga, Juan Camilo → Cambio de congregación a Facatativa",
-      "pubId": "mmm9qi4ttbx6"
     }
   ],
   "formHistorial": [
