@@ -13290,11 +13290,12 @@
             "_ts": 1783527880903
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787090079421
           },
           "Ago": {
             "particip": false,
@@ -34574,7 +34575,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787090070394,
+  "_lastModified": 1787090079848,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37509,6 +37510,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787090079421,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1787090079415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
       "ts": 1787090069944,
       "user": "Administrador",
       "rol": "admin",
@@ -39091,22 +39108,6 @@
       "accion": "Horas editadas",
       "detalle": "Acosta, Paola · May 2025: cursos=1",
       "pubId": "mmm9qi4j5xl2"
-    },
-    {
-      "ts": 1783996872117,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Acosta, Paola · May 2025: cursos=1",
-      "pubId": "mmm9qi4j5xl2"
-    },
-    {
-      "ts": 1783996820795,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
     }
   ],
   "formHistorial": [
