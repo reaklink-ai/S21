@@ -1491,11 +1491,12 @@
             "_ts": 1783527344817
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787089652165
           },
           "Ago": {
             "particip": false,
@@ -34549,7 +34550,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787019817561,
+  "_lastModified": 1787089654064,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37484,6 +37485,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089483501,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1787079833901,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1787067046382,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1787019765957,
       "user": "Isaac_G",
       "rol": "auxiliar",
@@ -37913,6 +37938,22 @@
       "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1786489800372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1786487661305,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -39041,46 +39082,6 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783974812856,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783807327550,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783717715431,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · Jun 2025: horas=43",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1783717715424,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Laura Johana · Jun 2025: horas=43",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1783717667143,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     }
   ],
