@@ -5151,11 +5151,11 @@
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1787093640795
+            "_ts": 1787093666011
           },
           "Ago": {
             "particip": false,
@@ -34603,7 +34603,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093661678,
+  "_lastModified": 1787093666889,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37538,6 +37538,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093666011,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
+      "ts": 1787093666003,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
       "ts": 1787093661218,
       "user": "Administrador",
       "rol": "admin",
@@ -39120,22 +39136,6 @@
       "accion": "Horas editadas",
       "detalle": "Ardila de Zuluaga, María · Jun 2025: cursos=1",
       "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1784127418899,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784054002189,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
