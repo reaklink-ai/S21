@@ -9042,11 +9042,12 @@
             "_ts": 1783617828473
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "",
+            "_ts": 1787093759665
           },
           "Ago": {
             "particip": false,
@@ -34604,7 +34605,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093751851,
+  "_lastModified": 1787093760599,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37539,6 +37540,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093759665,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jul 2025: horas=40",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1787093759658,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Jul 2025: horas=40",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
       "ts": 1787093666011,
       "user": "Administrador",
       "rol": "admin",
@@ -39121,22 +39138,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuluaga, Carlos · Jun 2025: cursos=2",
       "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1784127429167,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · Jun 2025: cursos=1",
-      "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1784127429156,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · Jun 2025: cursos=1",
-      "pubId": "p1781792857813"
     }
   ],
   "formHistorial": [
