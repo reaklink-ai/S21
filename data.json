@@ -2361,11 +2361,12 @@
             "_ts": 1784137257624
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1787096096757
           },
           "Ago": {
             "particip": false,
@@ -4830,11 +4831,12 @@
             "_ts": 1783527546161
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787096051488
           },
           "Ago": {
             "particip": false,
@@ -34662,7 +34664,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095938053,
+  "_lastModified": 1787096097647,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37597,6 +37599,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787096096757,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Jul 2025: horas=55",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1787096096751,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Jul 2025: horas=55",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1787096051488,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: cursos=",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1787095979338,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: cursos=",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
       "ts": 1787095933458,
       "user": "Administrador",
       "rol": "admin",
@@ -39163,38 +39197,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Rogers · Jul 2025: cursos=1",
       "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1786717892149,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jul 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1786717892143,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Jul 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1786717850329,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1786717844689,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Alarcon, Blanca · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jfkxs"
     }
   ],
   "formHistorial": [
