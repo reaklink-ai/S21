@@ -18154,11 +18154,12 @@
             "_ts": 1783527822587
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787095522874
           },
           "Ago": {
             "particip": false,
@@ -34619,7 +34620,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095421220,
+  "_lastModified": 1787095523733,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37554,6 +37555,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095522874,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
+      "ts": 1787095522869,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
       "ts": 1787095411983,
       "user": "Administrador",
       "rol": "admin",
@@ -39135,22 +39152,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Jun 2025: horas=44",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1784172071449,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jun 2025: horas=44",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1784172069137,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jun 2025: cursos=1",
       "pubId": "mmm9qi4ndhnb"
     }
   ],
