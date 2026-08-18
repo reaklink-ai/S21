@@ -26888,18 +26888,19 @@
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1783615653554
+            "_ts": 1787093575018
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787093576951
           },
           "Ago": {
             "particip": false,
@@ -34595,7 +34596,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093567404,
+  "_lastModified": 1787093577432,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37530,6 +37531,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093576951,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1787093576946,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1787093575113,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=0",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1787093575018,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1787093575011,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Jun 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
       "ts": 1787093566346,
       "user": "Administrador",
       "rol": "admin",
@@ -39088,46 +39129,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · Jun 2025: cursos=4",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1784005667166,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1784005643822,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783998816941,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Jun 2025: horas=35",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1783998816931,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Jun 2025: horas=35",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1783998814819,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Jul 2025: horas=",
-      "pubId": "mmm9qi4ndp9i"
     }
   ],
   "formHistorial": [
