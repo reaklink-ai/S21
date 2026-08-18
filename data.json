@@ -2840,14 +2840,15 @@
             "paux": false,
             "horas": "50",
             "notas": "",
-            "_ts": 1783527791226
+            "_ts": 1787095328375
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "51",
+            "notas": "",
+            "_ts": 1787095327690
           },
           "Ago": {
             "particip": false,
@@ -34615,7 +34616,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787094720656,
+  "_lastModified": 1787095329559,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37550,6 +37551,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095327690,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Jul 2025: horas=51",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1787095327685,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Jul 2025: horas=51",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1787095324790,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1787095324784,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
       "ts": 1787094720161,
       "user": "Administrador",
       "rol": "admin",
@@ -39116,38 +39149,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Carlos · Jun 2025: cursos=2",
       "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1784171999728,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1784171992546,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1784171992536,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1784171903255,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: horas=48",
-      "pubId": "mmm9qi4smd7i"
     }
   ],
   "formHistorial": [
