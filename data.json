@@ -27298,11 +27298,12 @@
             "_ts": 1783615667811
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1787093596032
           },
           "Ago": {
             "particip": false,
@@ -34597,7 +34598,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093586685,
+  "_lastModified": 1787093597255,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37532,6 +37533,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093596032,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Jul 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1787093596028,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Jul 2025: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1787093592804,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1787093592797,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
       "ts": 1787093585411,
       "user": "Administrador",
       "rol": "admin",
@@ -39098,38 +39131,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1784050970885,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784049194825,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784038417275,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1784038417266,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
     }
   ],
   "formHistorial": [
