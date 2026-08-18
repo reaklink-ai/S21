@@ -1780,11 +1780,12 @@
             "_ts": 1783615589338
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787090283731
           },
           "Ago": {
             "particip": false,
@@ -34585,7 +34586,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787090220482,
+  "_lastModified": 1787090284720,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37520,6 +37521,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787090283731,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1787090283724,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
       "ts": 1787090130289,
       "user": "Administrador",
       "rol": "admin",
@@ -39102,22 +39119,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Gabriela · Jun 2025: horas=20",
       "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1783996932587,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Jun 2025: horas=52",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1783996932575,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Jun 2025: horas=52",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
