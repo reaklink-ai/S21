@@ -3030,11 +3030,12 @@
             "_ts": 1783527799245
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "51",
+            "notas": "",
+            "_ts": 1787095406655
           },
           "Ago": {
             "particip": false,
@@ -34616,7 +34617,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095329559,
+  "_lastModified": 1787095407492,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37551,6 +37552,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095406655,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Jul 2025: horas=51",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1787095406651,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Jul 2025: horas=51",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
       "ts": 1787095327690,
       "user": "Administrador",
       "rol": "admin",
@@ -39133,22 +39150,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Jun 2025: cursos=",
       "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1784172016074,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jun 2025: cursos=",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1784171999736,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4nsgsv"
     }
   ],
   "formHistorial": [
