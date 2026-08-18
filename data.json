@@ -4210,11 +4210,12 @@
             "_ts": 1783994100368
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "",
+            "_ts": 1787089834378
           },
           "Ago": {
             "particip": false,
@@ -34565,7 +34566,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089820970,
+  "_lastModified": 1787089834810,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37500,6 +37501,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089834378,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Jul 2025: horas=35",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1787089834372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Jul 2025: horas=35",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
       "ts": 1787089820539,
       "user": "Administrador",
       "rol": "admin",
@@ -39082,22 +39099,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Daniela · Jun 2025: cursos=2",
       "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1783994137077,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1783994100368,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Jun 2025: horas=28",
-      "pubId": "mmm9qi4lgiwv"
     }
   ],
   "formHistorial": [
