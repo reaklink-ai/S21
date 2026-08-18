@@ -19971,11 +19971,12 @@
             "_ts": 1783527434241
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1787089742070
           },
           "Ago": {
             "particip": false,
@@ -34560,7 +34561,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089732087,
+  "_lastModified": 1787089742536,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37495,6 +37496,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089742070,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jul 2025: horas=30",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1787089742064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jul 2025: horas=30",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1787089738348,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1787089738340,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1787089717472,
       "user": "Administrador",
       "rol": "admin",
@@ -39061,38 +39094,6 @@
       "accion": "Horas editadas",
       "detalle": "Beltran, Mauricio · Jun 2025: cursos=0",
       "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1783993902089,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Jun 2025: cursos=1",
-      "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1783993902084,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Jun 2025: cursos=1",
-      "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1783993892735,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sanchez, Maritza · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4spx52"
-    },
-    {
-      "ts": 1783993892729,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sanchez, Maritza · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4spx52"
     }
   ],
   "formHistorial": [
