@@ -6304,11 +6304,12 @@
             "_ts": 1783617779206
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787093661218
           },
           "Ago": {
             "particip": false,
@@ -34602,7 +34603,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093654195,
+  "_lastModified": 1787093661678,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37537,6 +37538,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093661218,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Clavijo Arias, Luz Marina · Jul 2025: cursos=",
+      "pubId": "mmm9qi4l379l"
+    },
+    {
       "ts": 1787093596032,
       "user": "Administrador",
       "rol": "admin",
@@ -39122,14 +39131,6 @@
     },
     {
       "ts": 1784054002189,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784054002119,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
