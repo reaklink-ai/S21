@@ -34203,6 +34203,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1787096625772",
+      "fecha": "2026-08-12",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 114,
+      "zoom": 81,
+      "total": 195,
+      "notas": "",
+      "_ts": 1787096625772
+    },
+    {
       "id": "r1786224901825",
       "fecha": "2026-08-08",
       "tipo": "Fin de semana",
@@ -34679,7 +34690,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787096538146,
+  "_lastModified": 1787096627632,
   "vym": {
     "semanas": {},
     "historial": [
