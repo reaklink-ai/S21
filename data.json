@@ -1237,14 +1237,15 @@
             "paux": false,
             "horas": "37",
             "notas": "Embarazo",
-            "_ts": 1784202500608
+            "_ts": 1787096250323
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "32",
+            "notas": "Embarazo",
+            "_ts": 1787096253719
           },
           "Ago": {
             "particip": false,
@@ -34676,7 +34677,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787096209261,
+  "_lastModified": 1787096254777,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37611,6 +37612,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787096253719,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Geraldine · Jul 2025: horas=32",
+      "pubId": "mmm9qi4jigd3"
+    },
+    {
+      "ts": 1787096253713,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Geraldine · Jul 2025: horas=32",
+      "pubId": "mmm9qi4jigd3"
+    },
+    {
       "ts": 1787096176252,
       "user": "Administrador",
       "rol": "admin",
@@ -39192,22 +39209,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Rivera, Sandra · Jul 2025: horas=30",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1786718421587,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jul 2025: horas=30",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1786718251405,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jul 2025: horas=",
       "pubId": "mmm9qi4spd20"
     }
   ],
