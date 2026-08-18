@@ -28780,7 +28780,7 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1781615722958
+            "_ts": 1787095772156
           },
           "Jun": {
             "particip": true,
@@ -28795,7 +28795,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1787095773323
           },
           "Ago": {
             "particip": false,
@@ -34644,7 +34645,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095764447,
+  "_lastModified": 1787095774430,
   "vym": {
     "semanas": {},
     "historial": [
