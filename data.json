@@ -28068,11 +28068,12 @@
             "_ts": 1784127432907
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787089881623
           },
           "Ago": {
             "particip": false,
@@ -34571,7 +34572,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089877659,
+  "_lastModified": 1787089882088,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37506,6 +37507,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089881623,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1787089881617,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
       "ts": 1787089834378,
       "user": "Administrador",
       "rol": "admin",
@@ -39088,22 +39105,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1783996758846,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783994137081,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
     }
   ],
   "formHistorial": [
