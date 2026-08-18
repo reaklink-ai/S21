@@ -26035,14 +26035,15 @@
             "paux": false,
             "horas": "18",
             "notas": "CREDITO DE HORAS DE BETHEL : 37",
-            "_ts": 1783618093773
+            "_ts": 1787093872531
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "16",
+            "notas": "CREDITO DE HORAS DE BETHEL : 35",
+            "_ts": 1787093874986
           },
           "Ago": {
             "particip": false,
@@ -34611,7 +34612,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093857804,
+  "_lastModified": 1787093875850,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37546,6 +37547,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093871537,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Jul 2025: horas=16",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1787093871530,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Jul 2025: horas=16",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1787093867705,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1787093867698,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
       "ts": 1787093857307,
       "user": "Administrador",
       "rol": "admin",
@@ -39112,38 +39145,6 @@
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Jun 2025: cursos=",
       "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171838500,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: cursos=",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171742884,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784170006384,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Martinez, Luis · datos generales",
-      "pubId": "mmm9qi4q025q"
-    },
-    {
-      "ts": 1784169988700,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Martinez, Juan Pablo · datos generales",
-      "pubId": "mmm9qi4qeh9c"
     }
   ],
   "formHistorial": [
