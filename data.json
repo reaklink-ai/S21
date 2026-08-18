@@ -17315,12 +17315,12 @@
             "_ts": 1783615899608
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1783615896087
+            "horas": "5",
+            "notas": "63 horas betel",
+            "_ts": 1787095678766
           },
           "Ago": {
             "particip": false,
@@ -34637,7 +34637,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095661736,
+  "_lastModified": 1787095680675,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37572,6 +37572,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095669271,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Jul 2025: horas=5",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1787095669264,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Jul 2025: horas=5",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1787095648969,
       "user": "Administrador",
       "rol": "admin",
@@ -39154,22 +39170,6 @@
       "accion": "Marcado mudado",
       "detalle": "Zuluaga, Juan Camilo → Cambio de congregación a Facatativa",
       "pubId": "mmm9qi4ttbx6"
-    },
-    {
-      "ts": 1785189897649,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1785187472523,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
