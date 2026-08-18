@@ -16573,8 +16573,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1787089866630
+            "notas": "NUEVO PUBLICADOR BAUTIZADO",
+            "_ts": 1787089922456
           },
           "Ago": {
             "particip": false,
@@ -34572,7 +34572,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089882088,
+  "_lastModified": 1787089924096,
   "vym": {
     "semanas": {},
     "historial": [
