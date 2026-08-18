@@ -11759,11 +11759,12 @@
             "_ts": 1783615877665
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "63",
+            "notas": "",
+            "_ts": 1787095648969
           },
           "Ago": {
             "particip": false,
@@ -34634,7 +34635,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095638807,
+  "_lastModified": 1787095650173,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37569,6 +37570,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095648969,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jul 2025: horas=63",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1787095648963,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jul 2025: horas=63",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1787095646454,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1787095646447,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
       "ts": 1787095630373,
       "user": "Administrador",
       "rol": "admin",
@@ -39130,38 +39163,6 @@
     },
     {
       "ts": 1785187472523,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784768129199,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784592785221,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784214896102,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784214185735,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
