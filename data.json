@@ -24682,11 +24682,12 @@
             "_ts": 1783993892735
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787095837428
           },
           "Ago": {
             "particip": false,
@@ -34652,7 +34653,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095825148,
+  "_lastModified": 1787095837872,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37587,6 +37588,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095837428,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sanchez, Maritza · Jul 2025: cursos=",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
       "ts": 1787095819407,
       "user": "Administrador",
       "rol": "admin",
@@ -39177,14 +39186,6 @@
       "accion": "Horas editadas",
       "detalle": "Larrota, Harold · Jun 2025: horas=41",
       "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1786021895409,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
