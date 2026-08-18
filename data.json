@@ -15083,11 +15083,12 @@
             "_ts": 1783527388464
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1787089691745
           },
           "Ago": {
             "particip": false,
@@ -34554,7 +34555,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089677823,
+  "_lastModified": 1787089692278,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37489,6 +37490,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089691745,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jul 2025: horas=50",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1787089691739,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jul 2025: horas=50",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1787089689452,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jul 2025: cursos=3",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
+      "ts": 1787089689444,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Oscar · Jul 2025: cursos=3",
+      "pubId": "mmm9qi4otsz7"
+    },
+    {
       "ts": 1787089483501,
       "user": "Administrador",
       "rol": "admin",
@@ -39055,38 +39088,6 @@
       "accion": "Horas editadas",
       "detalle": "De Leon, Marcela · Jun 2025: horas=10",
       "pubId": "mmm9qi4m00va"
-    },
-    {
-      "ts": 1783993767136,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "De Leon, Marcela · Jun 2025: horas=10",
-      "pubId": "mmm9qi4m00va"
-    },
-    {
-      "ts": 1783993581748,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783992167683,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783979656784,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
