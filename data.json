@@ -17804,11 +17804,12 @@
             "_ts": 1783618071182
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "31",
+            "notas": "11 horas SAC",
+            "_ts": 1787093843535
           },
           "Ago": {
             "particip": false,
@@ -34609,7 +34610,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093827680,
+  "_lastModified": 1787093844797,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37544,6 +37545,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093836246,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jul 2025: horas=31",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1787093836240,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jul 2025: horas=31",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1787093834661,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1787093834655,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
       "ts": 1787093824069,
       "user": "Administrador",
       "rol": "admin",
@@ -39110,38 +39143,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1784137808452,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784137652730,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1784137318777,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jun 2025: horas=55",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1784137318770,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jun 2025: horas=55",
-      "pubId": "mmm9qi4quyam"
     }
   ],
   "formHistorial": [
