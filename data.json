@@ -3207,11 +3207,12 @@
             "_ts": 1783527520272
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "32",
+            "notas": "",
+            "_ts": 1787095924009
           },
           "Ago": {
             "particip": false,
@@ -34659,7 +34660,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095912719,
+  "_lastModified": 1787095924666,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37594,6 +37595,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095924009,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: horas=32",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787095924003,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: horas=32",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787095922660,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787095922654,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
       "ts": 1787095858272,
       "user": "Administrador",
       "rol": "admin",
@@ -39159,38 +39192,6 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1786487661305,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1786477157527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Garcia, Laura Johana → Asignada Precursora Especial",
-      "pubId": "p1776219747113"
-    },
-    {
-      "ts": 1786476953653,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1786224883569,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     }
   ],
