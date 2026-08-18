@@ -8751,11 +8751,12 @@
             "_ts": 1783615858201
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "10",
+            "notas": "",
+            "_ts": 1787095622338
           },
           "Ago": {
             "particip": false,
@@ -34631,7 +34632,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095611225,
+  "_lastModified": 1787095622963,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37566,6 +37567,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095622338,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Jul 2025: horas=10",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
+      "ts": 1787095622333,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Jul 2025: horas=10",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
       "ts": 1787095572853,
       "user": "Administrador",
       "rol": "admin",
@@ -39147,22 +39164,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Alba, Nicolas · Jun 2025: horas=32",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1784202434758,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1784202434746,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: cursos=1",
       "pubId": "mmm9qi4jq3yf"
     }
   ],
