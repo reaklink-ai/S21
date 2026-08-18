@@ -22730,11 +22730,12 @@
             "_ts": 1783993868495
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787095819407
           },
           "Ago": {
             "particip": false,
@@ -34650,7 +34651,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095805333,
+  "_lastModified": 1787095819874,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37585,6 +37586,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095819407,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
+      "ts": 1787095819400,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Reyes, Santiago · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4swquo"
+    },
+    {
       "ts": 1787095798809,
       "user": "Administrador",
       "rol": "admin",
@@ -39167,22 +39184,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1785977429230,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1785969405922,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Harold · Jun 2025: horas=14",
-      "pubId": "mmm9qi4ol4i0"
     }
   ],
   "formHistorial": [
