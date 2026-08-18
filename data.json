@@ -27010,11 +27010,12 @@
             "_ts": 1783615662877
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1787093585411
           },
           "Ago": {
             "particip": false,
@@ -34596,7 +34597,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093577432,
+  "_lastModified": 1787093586685,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37531,6 +37532,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093585411,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jul 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1787093585406,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jul 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1787093583614,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1787093583608,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
       "ts": 1787093576951,
       "user": "Administrador",
       "rol": "admin",
@@ -39097,38 +39130,6 @@
       "accion": "Horas editadas",
       "detalle": "Bejarano, Martha · Jun 2025: cursos=1",
       "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1784038394772,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1784005669062,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jun 2025: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1784005669050,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jun 2025: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1784005667176,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
