@@ -17430,11 +17430,12 @@
             "_ts": 1783618023436
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "",
+            "_ts": 1787093797199
           },
           "Ago": {
             "particip": false,
@@ -34607,7 +34608,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093782422,
+  "_lastModified": 1787093798243,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37542,6 +37543,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093797199,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jul 2025: horas=35",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1787093797193,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jul 2025: horas=35",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1787093794403,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Jul 2025: cursos=",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
       "ts": 1787093781375,
       "user": "Administrador",
       "rol": "admin",
@@ -39116,30 +39141,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Jaime · Jun 2025: cursos=2",
       "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1784137303106,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jun 2025: horas=51",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1784137303100,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jun 2025: horas=51",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1784137299499,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
     }
   ],
   "formHistorial": [
