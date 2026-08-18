@@ -26363,11 +26363,12 @@
             "_ts": 1783615740904
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "23",
+            "notas": "",
+            "_ts": 1787093556571
           },
           "Ago": {
             "particip": false,
@@ -34593,7 +34594,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093545894,
+  "_lastModified": 1787093557595,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37528,6 +37529,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093556571,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jul 2025: horas=23",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1787093556564,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jul 2025: horas=23",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1787093553334,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1787093553327,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
       "ts": 1787093545414,
       "user": "Administrador",
       "rol": "admin",
@@ -39094,38 +39127,6 @@
       "accion": "Horas editadas",
       "detalle": "Villa, Julia · Jun 2025: horas=18",
       "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1783997024549,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Jun 2025: horas=18",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1783997018181,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1783997018171,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1783996984629,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Jun 2025: horas=35",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
