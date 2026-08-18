@@ -25123,11 +25123,12 @@
             "_ts": 1783527746105
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1787090130289
           },
           "Ago": {
             "particip": false,
@@ -34579,7 +34580,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787090113555,
+  "_lastModified": 1787090130778,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37514,6 +37515,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787090130289,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Jul 2025: horas=50",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1787090130284,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Jul 2025: horas=50",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
       "ts": 1787090109920,
       "user": "Administrador",
       "rol": "admin",
@@ -39095,22 +39112,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Chacon, Lina · Jun 2025: horas=52",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1783996930993,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1783996930986,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Jun 2025: cursos=1",
       "pubId": "mmm9qi4lxrtx"
     }
   ],
