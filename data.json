@@ -26545,11 +26545,12 @@
             "_ts": 1783615743995
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "29",
+            "notas": "",
+            "_ts": 1787093566346
           },
           "Ago": {
             "particip": false,
@@ -34594,7 +34595,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093557595,
+  "_lastModified": 1787093567404,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37529,6 +37530,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093566346,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jul 2025: horas=29",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1787093566340,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jul 2025: horas=29",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1787093564692,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1787093564685,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
       "ts": 1787093556571,
       "user": "Administrador",
       "rol": "admin",
@@ -39095,38 +39128,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · Jul 2025: horas=",
       "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1783998814198,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · May 2025: horas=43",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1783997141799,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Jun 2025: horas=14",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1783997141793,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Jun 2025: horas=14",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1783997024562,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Jun 2025: horas=18",
-      "pubId": "mmm9qi4tnncr"
     }
   ],
   "formHistorial": [
