@@ -20348,11 +20348,12 @@
             "_ts": 1783527837038
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "51",
+            "notas": "",
+            "_ts": 1787095537578
           },
           "Ago": {
             "particip": false,
@@ -34621,7 +34622,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095530580,
+  "_lastModified": 1787095538346,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37556,6 +37557,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095537578,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Jul 2025: horas=51",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1787095537572,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Jul 2025: horas=51",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
       "ts": 1787095530155,
       "user": "Administrador",
       "rol": "admin",
@@ -39138,22 +39155,6 @@
       "accion": "Publicador editado",
       "detalle": "Figueredo, Fergie Alexandra · datos generales",
       "pubId": "p1776221244569"
-    },
-    {
-      "ts": 1784202194343,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Figueredo, Whitney · datos generales",
-      "pubId": "p1781578828320"
-    },
-    {
-      "ts": 1784202097698,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Figueredo, Whitney · datos generales",
-      "pubId": "p1781578828320"
     }
   ],
   "formHistorial": [
