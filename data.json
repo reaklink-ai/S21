@@ -27940,11 +27940,12 @@
             "_ts": 1783618104161
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "16",
+            "notas": "",
+            "_ts": 1787093893598
           },
           "Ago": {
             "particip": false,
@@ -34612,7 +34613,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093875850,
+  "_lastModified": 1787093894511,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37547,6 +37548,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093893511,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Jul 2025: horas=16",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1787093893505,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Jul 2025: horas=16",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
       "ts": 1787093871537,
       "user": "Administrador",
       "rol": "admin",
@@ -39128,22 +39145,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171849702,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1784171844707,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Jun 2025: cursos=",
       "pubId": "mmm9qi4smd7i"
     }
   ],
