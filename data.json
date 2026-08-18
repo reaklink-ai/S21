@@ -17552,11 +17552,12 @@
             "_ts": 1783617955903
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "30",
+            "notas": "",
+            "_ts": 1787093781375
           },
           "Ago": {
             "particip": false,
@@ -34606,7 +34607,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093767664,
+  "_lastModified": 1787093782422,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37541,6 +37542,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093781375,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Jul 2025: horas=30",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1787093781369,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Jul 2025: horas=30",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1787093778165,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Jul 2025: horas=29.5",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1787093778159,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Jul 2025: horas=29.5",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
       "ts": 1787093766914,
       "user": "Administrador",
       "rol": "admin",
@@ -39107,38 +39140,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Jun 2025: cursos=1",
       "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1784137299493,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1784137257624,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Jun 2025: horas=45",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1784137257616,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Jun 2025: horas=45",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1784137242909,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
