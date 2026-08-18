@@ -31342,10 +31342,11 @@
           },
           "Jul": {
             "particip": false,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "27",
+            "notas": "",
+            "_ts": 1787096259861
           },
           "Ago": {
             "particip": false,
@@ -34677,7 +34678,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787096254777,
+  "_lastModified": 1787096260348,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37612,6 +37613,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787096259861,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jul 2025: horas=27",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1787096259856,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jul 2025: horas=27",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1787096257191,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1787096257185,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
       "ts": 1787096253719,
       "user": "Administrador",
       "rol": "admin",
@@ -39178,38 +39211,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Jul 2025: horas=15",
       "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1786718644823,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jul 2025: horas=15",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1786718626156,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1786718626148,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1786718421602,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Jul 2025: horas=30",
-      "pubId": "mmm9qi4spd20"
     }
   ],
   "formHistorial": [
