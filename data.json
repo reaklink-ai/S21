@@ -9567,11 +9567,12 @@
             "_ts": 1784172071458
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "60",
+            "notas": "",
+            "_ts": 1787019765957
           },
           "Ago": {
             "particip": false,
@@ -9734,11 +9735,12 @@
             "_ts": 1784171999736
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019718854
           },
           "Ago": {
             "particip": false,
@@ -9898,11 +9900,12 @@
             "_ts": 1784171983752
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019717406
           },
           "Ago": {
             "particip": false,
@@ -20123,11 +20126,12 @@
             "_ts": 1784171979936
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019712806
           },
           "Ago": {
             "particip": false,
@@ -24764,11 +24768,12 @@
             "_ts": 1784171977959
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019784303
           },
           "Ago": {
             "particip": false,
@@ -25472,11 +25477,12 @@
             "_ts": 1784171809605
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019706326
           },
           "Ago": {
             "particip": false,
@@ -25634,11 +25640,12 @@
             "_ts": 1784171806477
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019704390
           },
           "Ago": {
             "particip": false,
@@ -28251,11 +28258,12 @@
             "_ts": 1784171981551
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787019715310
           },
           "Ago": {
             "particip": false,
@@ -34541,7 +34549,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1786894684295,
+  "_lastModified": 1787019817561,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37476,6 +37484,70 @@
   ],
   "auditoria": [
     {
+      "ts": 1787019765957,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019765951,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019761994,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019761228,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: horas=60",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019761223,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: horas=60",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019723582,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019723574,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1787019682652,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1786894677248,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39005,70 +39077,6 @@
     },
     {
       "ts": 1783717667143,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783690603040,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1783625379380,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783625126419,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783624790177,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783624634459,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783624500632,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783618650128,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1783618437901,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
