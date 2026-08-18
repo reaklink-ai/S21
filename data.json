@@ -17978,11 +17978,12 @@
             "_ts": 1783618079727
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787093857307
           },
           "Ago": {
             "particip": false,
@@ -34610,7 +34611,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787093844797,
+  "_lastModified": 1787093857804,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37545,6 +37546,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093857307,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1787093857300,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
       "ts": 1787093836246,
       "user": "Administrador",
       "rol": "admin",
@@ -39127,22 +39144,6 @@
       "accion": "Publicador editado",
       "detalle": "Martinez, Juan Pablo · datos generales",
       "pubId": "mmm9qi4qeh9c"
-    },
-    {
-      "ts": 1784169965764,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Acosta, Judith · datos generales",
-      "pubId": "mmm9qi4jqz6w"
-    },
-    {
-      "ts": 1784169913941,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
