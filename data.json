@@ -10761,11 +10761,12 @@
             "_ts": 1783615865861
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "25",
+            "notas": "",
+            "_ts": 1787095630373
           },
           "Ago": {
             "particip": false,
@@ -34632,7 +34633,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095622963,
+  "_lastModified": 1787095631487,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37567,6 +37568,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095630373,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Jul 2025: horas=25",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1787095630366,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Jul 2025: horas=25",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1787095628633,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1787095628626,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
       "ts": 1787095622338,
       "user": "Administrador",
       "rol": "admin",
@@ -39133,38 +39166,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1784202479092,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Jun 2025: horas=37",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1784202479080,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Jun 2025: horas=37",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1784202438257,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: horas=32",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1784202438245,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jun 2025: horas=32",
-      "pubId": "mmm9qi4jq3yf"
     }
   ],
   "formHistorial": [
