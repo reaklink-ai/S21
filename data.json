@@ -11593,11 +11593,12 @@
             "_ts": 1783993814116
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1787095798809
           },
           "Ago": {
             "particip": false,
@@ -34648,7 +34649,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095790946,
+  "_lastModified": 1787095799790,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37583,6 +37584,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095798809,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jul 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1787095798803,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jul 2025: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1787095796964,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1787095796958,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
       "ts": 1787095720841,
       "user": "Administrador",
       "rol": "admin",
@@ -39149,38 +39182,6 @@
       "accion": "Horas editadas",
       "detalle": "Larrota, Harold · Jun 2025: horas=14",
       "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1785969405848,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Harold · Jun 2025: horas=14",
-      "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1785967654299,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Harold · Jun 2025: horas=14",
-      "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1785966698622,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1785678892697,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
