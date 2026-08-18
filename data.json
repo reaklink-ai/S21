@@ -27475,11 +27475,12 @@
             "_ts": 1783527862931
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787095572853
           },
           "Ago": {
             "particip": false,
@@ -34627,7 +34628,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787095568741,
+  "_lastModified": 1787095573341,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37562,6 +37563,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787095572853,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
+      "ts": 1787095572848,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
       "ts": 1787095537578,
       "user": "Administrador",
       "rol": "admin",
@@ -39144,22 +39161,6 @@
       "accion": "Horas editadas",
       "detalle": "Alba, Nicolas · Jun 2025: cursos=1",
       "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1784202238214,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Lugo, Paulina · datos generales",
-      "pubId": "mmm9qi4q0047"
-    },
-    {
-      "ts": 1784202208363,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Figueredo, Fergie Alexandra · datos generales",
-      "pubId": "p1776221244569"
     }
   ],
   "formHistorial": [
