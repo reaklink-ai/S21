@@ -31720,11 +31720,12 @@
             "_ts": 1784127429167
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787089806906
           },
           "Ago": {
             "particip": false,
@@ -34562,7 +34563,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787089748559,
+  "_lastModified": 1787089808169,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37497,6 +37498,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787089806906,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · Jul 2025: cursos=1",
+      "pubId": "p1781792857813"
+    },
+    {
+      "ts": 1787089806901,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ardila de Zuluaga, María · Jul 2025: cursos=1",
+      "pubId": "p1781792857813"
+    },
+    {
       "ts": 1787089742070,
       "user": "Administrador",
       "rol": "admin",
@@ -39078,22 +39095,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Beltran, Mauricio · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1783994091185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1783994090369,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Jun 2025: cursos=0",
       "pubId": "mmm9qi4kk1hh"
     }
   ],
