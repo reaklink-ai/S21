@@ -13118,10 +13118,11 @@
           },
           "Jul": {
             "particip": false,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787090069944
           },
           "Ago": {
             "particip": false,
@@ -34573,7 +34574,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787090060280,
+  "_lastModified": 1787090070394,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37508,6 +37509,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787090069944,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
+      "ts": 1787090069940,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
       "ts": 1787089881623,
       "user": "Administrador",
       "rol": "admin",
@@ -39090,22 +39107,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Alfonso · Jun 2025: cursos=1",
       "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1783996820785,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1783996809023,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
