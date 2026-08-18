@@ -25239,11 +25239,12 @@
             "_ts": 1783615626877
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787093530693
           },
           "Ago": {
             "particip": false,
@@ -34591,7 +34592,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787090338520,
+  "_lastModified": 1787093533465,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37526,6 +37527,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1787093461548,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1787090283731,
       "user": "Administrador",
       "rol": "admin",
@@ -39111,14 +39120,6 @@
     },
     {
       "ts": 1783996954691,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Jun 2025: horas=20",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1783996954682,
       "user": "Felipe_C",
       "rol": "auxiliar",
       "accion": "Horas editadas",
