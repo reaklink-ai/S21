@@ -21550,14 +21550,15 @@
             "paux": false,
             "horas": "12",
             "notas": "43 Horas de Betel ",
-            "_ts": 1783527582973
+            "_ts": 1787097931940
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "43 Horas de Betel",
+            "_ts": 1787097936049
           },
           "Ago": {
             "particip": false,
@@ -34706,7 +34707,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097892912,
+  "_lastModified": 1787097937966,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37641,6 +37642,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097924318,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jul 2025: horas=12",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1787097924310,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jul 2025: horas=12",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1787097918378,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1787097918369,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
       "ts": 1787097891705,
       "user": "Administrador",
       "rol": "admin",
@@ -39206,38 +39239,6 @@
       "rol": "auxiliar",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1787019436113,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1786894677248,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Jul 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1786894677237,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Jul 2025: horas=18",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1786893376997,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     }
   ],
