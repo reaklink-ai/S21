@@ -24179,11 +24179,12 @@
             "_ts": 1783527603130
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "35",
+            "notas": "",
+            "_ts": 1787097989916
           },
           "Ago": {
             "particip": false,
@@ -34708,7 +34709,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097957421,
+  "_lastModified": 1787097991418,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37643,6 +37644,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097989916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jul 2025: horas=35",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1787097989904,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jul 2025: horas=35",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1787097987169,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1787097987156,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
       "ts": 1787097956037,
       "user": "Administrador",
       "rol": "admin",
@@ -39208,38 +39241,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1787019761994,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1787019761228,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jul 2025: horas=60",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1787019761223,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jul 2025: horas=60",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1787019723582,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Jul 2025: cursos=1",
       "pubId": "mmm9qi4ndhnb"
     }
   ],
