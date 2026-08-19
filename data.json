@@ -3210,12 +3210,12 @@
             "_ts": 1783527520272
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "31",
             "notas": "",
-            "_ts": 1787096468803
+            "_ts": 1787097799315
           },
           "Ago": {
             "particip": false,
@@ -34702,7 +34702,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097783621,
+  "_lastModified": 1787097800651,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37637,6 +37637,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097799315,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: horas=31",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787097799303,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: horas=31",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787097797332,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1787097797322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
       "ts": 1787097714794,
       "user": "Administrador",
       "rol": "admin",
@@ -39203,38 +39235,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Gabriela · Jul 2025: horas=20",
       "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1786849467501,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Jul 2025: horas=20",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1786849438074,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jul 2025: horas=45",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1786849438062,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jul 2025: horas=45",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1786849436200,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
