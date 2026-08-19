@@ -3381,11 +3381,11 @@
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1787097808374
+            "_ts": 1787097812287
           },
           "Ago": {
             "particip": false,
@@ -34702,7 +34702,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097809454,
+  "_lastModified": 1787097813960,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37637,6 +37637,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097812287,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
+      "ts": 1787097812275,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
       "ts": 1787097799315,
       "user": "Administrador",
       "rol": "admin",
@@ -39219,22 +39235,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · Jul 2025: horas=15",
       "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1786849488821,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Jul 2025: horas=15",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1786849467513,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Jul 2025: horas=20",
-      "pubId": "mmm9qi4now8s"
     }
   ],
   "formHistorial": [
