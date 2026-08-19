@@ -25039,11 +25039,12 @@
             "_ts": 1784171903254
           },
           "Jul": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "4",
+            "notas": "",
+            "_ts": 1787097714794
           },
           "Ago": {
             "particip": false,
@@ -34701,7 +34702,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787096648634,
+  "_lastModified": 1787097716700,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37636,6 +37637,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097714794,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jul 2025: horas=4",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1787097714781,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Jul 2025: horas=4",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1787097691983,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1787096476294,
       "user": "Administrador",
       "rol": "admin",
@@ -39068,6 +39093,14 @@
       "pubId": null
     },
     {
+      "ts": 1787019436113,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1786894677248,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -39202,38 +39235,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · Jul 2025: cursos=3",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1786849436195,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1786849432363,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Jun 2025: cursos=4",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1786849411716,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Jul 2025: horas=25",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1786849411704,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Jul 2025: horas=25",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
