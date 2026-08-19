@@ -12661,11 +12661,12 @@
             "_ts": 1783527561614
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787097871454
           },
           "Ago": {
             "particip": false,
@@ -34704,7 +34705,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097861787,
+  "_lastModified": 1787097872849,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37639,6 +37640,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097871454,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Huertas, Oscar · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4ntq1t"
+    },
+    {
+      "ts": 1787097871442,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Huertas, Oscar · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4ntq1t"
+    },
+    {
       "ts": 1787097841398,
       "user": "Administrador",
       "rol": "admin",
@@ -39221,22 +39238,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Alfonso · Jul 2025: cursos=1",
       "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1786849922183,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1786849564834,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Jul 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
