@@ -14811,11 +14811,12 @@
             "_ts": 1783527569343
           },
           "Jul": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1787097891705
           },
           "Ago": {
             "particip": false,
@@ -34705,7 +34706,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787097872849,
+  "_lastModified": 1787097892912,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37640,6 +37641,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1787097891705,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1787097891693,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Jul 2025: cursos=1",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
       "ts": 1787097871454,
       "user": "Administrador",
       "rol": "admin",
@@ -39222,22 +39239,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1786889201951,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1786849922194,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l1oio"
     }
   ],
   "formHistorial": [
