@@ -34213,6 +34213,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1787434220455",
+      "fecha": "2026-08-22",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 155,
+      "zoom": 40,
+      "total": 195,
+      "notas": "",
+      "_ts": 1787434220455
+    },
+    {
       "id": "r1787096647259",
       "fecha": "2026-08-15",
       "tipo": "Fin de semana",
@@ -34711,7 +34722,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787098080710,
+  "_lastModified": 1787434222190,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37646,6 +37657,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1787434200065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1787098016635,
       "user": "Administrador",
       "rol": "admin",
@@ -39236,14 +39255,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Oscar · Jul 2025: cursos=3",
       "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1787089483501,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
