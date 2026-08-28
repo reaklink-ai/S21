@@ -4335,6 +4335,32 @@ function getReg(pub, anio, mes) {
   return pub.registros[anio][mes];
 }
 
+// Clasifica publicadores en "no bautizados" (nuevos, aún sin bautizarse) y "bautizados"
+// dentro de un año de servicio dado. IMPORTANTE: se calcula primero quién está
+// bautizado (por fecha de bautismo o nota), y luego se arman los "no bautizados"
+// excluyendo a quien ya se bautizó — así alguien que empezó como "nuevo publicador
+// no bautizado" y se bautizó meses después pasa correctamente a la lista de bautizados
+// en vez de quedar atrapado para siempre en "no bautizados".
+function clasificarNuevosYBautizados(pubs, anio) {
+  const bautizados = pubs.filter(p => {
+    const tieneFecha = p.bautismo && p.bautismo >= `${anio}-09-01` && p.bautismo <= `${anio+1}-08-31`;
+    const tieneNota = MESES_C.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('bautizad') && !n.includes('no bautizad');
+    });
+    return tieneFecha || tieneNota;
+  });
+  const bautIds = new Set(bautizados.map(p => p.id));
+  const noBautizados = pubs.filter(p => {
+    if(bautIds.has(p.id)) return false; // ya se bautizó, no cuenta como "no bautizado"
+    return MESES_C.some(m => {
+      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
+      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
+    });
+  });
+  return { noBautizados, bautizados };
+}
+
 // ══════════════════════════════════════════
 // LISTA
 // ══════════════════════════════════════════
@@ -5289,23 +5315,7 @@ function renderModalNuevos() {
   const anio = parseInt(document.getElementById('nuevosAnioSel').value);
   const pubs = state.publicadores.filter(p => !p._inactivo);
 
-  const noBautizados = pubs.filter(p =>
-    MESES_K.some(m => {
-      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
-      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
-    })
-  );
-  const noBautIds = new Set(noBautizados.map(p => p.id));
-
-  const bautizados = pubs.filter(p => {
-    if(noBautIds.has(p.id)) return false;
-    const fechaOk = p.bautismo && p.bautismo >= `${anio}-09-01` && p.bautismo <= `${anio+1}-08-31`;
-    const notaOk = MESES_K.some(m => {
-      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
-      return n.includes('bautizad') && !n.includes('no bautizad');
-    });
-    return fechaOk || notaOk;
-  });
+  const { noBautizados, bautizados } = clasificarNuevosYBautizados(pubs, anio);
 
   const tarjeta = (p, acento, detalle, icono) => {
     const ini = (p.nombre[0]||'') + (p.apellido[0]||'');
@@ -8294,23 +8304,8 @@ function generarInformeGrupo(modo) {
   if(totalCursosPer>0) fuertesPer.push(`${totalCursosPer} cursos bíblicos en el período`);
   else debilesPer.push(`Sin cursos bíblicos reportados en el período`);
   if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicadores ausentes más del 50% del período`);
-  // Nuevos publicadores (no bautizados) del grupo este año de servicio
-  const _MKPer = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
-  const nuevosPubPer = pubs.filter(p => _MKPer.some(m => {
-    const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
-    return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
-  }));
-  // Bautizados este año de servicio (por fecha de bautismo o por nota, excluyendo a los "no bautizados")
-  const _nuevosIdsPer = new Set(nuevosPubPer.map(p=>p.id));
-  const bautizadosPer = pubs.filter(p => {
-    if(_nuevosIdsPer.has(p.id)) return false;
-    const tieneFecha = p.bautismo && p.bautismo >= `${anio}-09-01` && p.bautismo <= `${anio+1}-08-31`;
-    const tieneNota = _MKPer.some(m => {
-      const n = ((p.registros||{})[anio]?.[m]?.notas||'').toLowerCase();
-      return n.includes('bautizad') && !n.includes('no bautizad');
-    });
-    return tieneFecha || tieneNota;
-  });
+  // Nuevos publicadores (no bautizados) y bautizados del grupo este año de servicio
+  const { noBautizados: nuevosPubPer, bautizados: bautizadosPer } = clasificarNuevosYBautizados(pubs, anio);
   const nuevosOBautizadosPer = [...nuevosPubPer, ...bautizadosPer];
   if(nuevosPubPer.length>0) fuertesPer.push(`${nuevosPubPer.length} nuevo${nuevosPubPer.length>1?'s publicadores':' publicador'} en el grupo este año de servicio (${nuevosPubPer.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
   if(bautizadosPer.length>0) fuertesPer.push(`${bautizadosPer.length} ${bautizadosPer.length>1?'bautizados':'bautizado'} este año de servicio (${bautizadosPer.map(p=>p.apellido+', '+p.nombre).join(' · ')})`);
@@ -9832,25 +9827,8 @@ function renderDashboard() {
   const mudados     = (state.mudados||[]).length;
 
   // Nuevos publicadores no bautizados y bautizados en el año de servicio actual
-  const _MESES_K = ['Sep','Oct','Nov','Dic','Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'];
   const _anioSv = anioHoy();
-  const _nuevosNoBaut = pubs.filter(p => {
-    return _MESES_K.some(m => {
-      const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
-      return n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad');
-    });
-  });
-  const _noBautIds = new Set(_nuevosNoBaut.map(p => p.id));
-  const _bautizados = pubs.filter(p => {
-    if(_noBautIds.has(p.id)) return false; // ya está en no bautizados
-    const tieneFecha = p.bautismo && p.bautismo >= `${_anioSv}-09-01` && p.bautismo <= `${_anioSv+1}-08-31`;
-    const tieneNota = _MESES_K.some(m => {
-      const n = ((p.registros||{})[_anioSv]?.[m]?.notas||'').toLowerCase();
-      // Excluir "no bautizado" — solo contar notas que digan bautizado sin el "no" antes
-      return n.includes('bautizad') && !n.includes('no bautizad');
-    });
-    return tieneFecha || tieneNota;
-  });
+  const { noBautizados: _nuevosNoBaut, bautizados: _bautizados } = clasificarNuevosYBautizados(pubs, _anioSv);
 
   // Bloque superintendentes — solo admin
   const esAdmin = currentUser && currentUser.rol === 'admin';
@@ -11396,61 +11374,10 @@ const PREC_LIMITE_BETEL = 55; // horas máx acreditables al combinar predicació
 
 function precGetDatos(pub, anio) {
   const regs = pub.registros || {};
-  const meses = [];
-  let horasTotal = 0, mesesConDatos = 0;
-  let horasExtraBruto = 0;    // suma bruta de TODAS las horas adicionales en notas
-  let horasExtraCredito = 0;  // suma acreditable (limitada a 55h combinado por mes)
-  let horasTotalCombinado = 0;
-  // Desglose por categoría: { betel: N, construccion: N, especial: N, ... }
-  const desgloseCategorias = {};
 
-  MESES_C.forEach((m, idx) => {
-    const r = (regs[anio] || regs[String(anio)] || {})[m];
-
-    // Mes con datos: horas existe, no vacía, y > 0
-    const horasRaw = r ? r.horas : undefined;
-    const tieneHoras = horasRaw !== undefined && horasRaw !== null && horasRaw !== ''
-                       && parseFloat(horasRaw) > 0;
-    const horas = tieneHoras ? parseFloat(horasRaw) : null;
-    if(horas !== null) { mesesConDatos++; horasTotal += horas; }
-
-    // Extraer TODAS las horas adicionales del campo notas
-    const extraccion = r?.notas ? _extraerHorasNotas(r.notas) : { total: 0, detalle: [] };
-    const brutoMes = extraccion.total;
-
-    // Acumular desglose por categoría
-    extraccion.detalle.forEach(d => {
-      desgloseCategorias[d.tipo] = (desgloseCategorias[d.tipo] || 0) + d.horas;
-    });
-
-    // Crédito acreditable ese mes: la suma de horas adicionales no puede llevar
-    // el total mensual más allá de PREC_LIMITE_BETEL (55h)
-    let creditoMes = 0;
-    if(brutoMes > 0 && horas !== null) {
-      creditoMes = Math.min(brutoMes, Math.max(0, PREC_LIMITE_BETEL - horas));
-    }
-
-    horasExtraBruto   += brutoMes;
-    horasExtraCredito += creditoMes;
-
-    const combinado = horas !== null ? horas + creditoMes : null;
-    const combinadoCompleto = horas !== null ? horas + brutoMes : null; // sin límite (info)
-
-    meses.push({
-      mes: m, idx, horas, tieneDatos: horas !== null,
-      extraBruto: brutoMes, extraCredito: creditoMes,
-      extraDetalle: extraccion.detalle,
-      combinado,
-      combinadoCompleto,
-      // compatibilidad con código anterior que usa betelBruto/betelCredito
-      betelBruto:   extraccion.detalle.find(d=>d.tipo==='betel')?.horas || 0,
-      betelCredito: extraccion.detalle.find(d=>d.tipo==='betel') ? Math.min(extraccion.detalle.find(d=>d.tipo==='betel').horas, Math.max(0, PREC_LIMITE_BETEL - (horas||0))) : 0,
-    });
-
-    if(combinado !== null) horasTotalCombinado += combinado;
-  });
-
-  // Detectar si es nuevo precursor regular este año — buscar nota en cualquier mes
+  // Detectar si es nuevo precursor regular este año — buscar nota en cualquier mes.
+  // Esto se hace ANTES de acumular horas para poder excluir del total los meses
+  // previos al inicio como precursor (ver más abajo).
   let mesInicioPrec = 0; // índice en MESES_C (0=Sep, 1=Oct, ...)
   let esNuevoPrecReg = false;
   MESES_C.forEach((m, idx) => {
@@ -11462,6 +11389,65 @@ function precGetDatos(pub, anio) {
     }
   });
 
+  // ── Construir el detalle mes a mes (todos los 12 meses, para mostrar chips/histórico) ──
+  const meses = MESES_C.map((m, idx) => {
+    const r = (regs[anio] || regs[String(anio)] || {})[m];
+
+    // Mes con datos: horas existe, no vacía, y > 0
+    const horasRaw = r ? r.horas : undefined;
+    const tieneHoras = horasRaw !== undefined && horasRaw !== null && horasRaw !== ''
+                       && parseFloat(horasRaw) > 0;
+    const horas = tieneHoras ? parseFloat(horasRaw) : null;
+
+    // Extraer TODAS las horas adicionales del campo notas
+    const extraccion = r?.notas ? _extraerHorasNotas(r.notas) : { total: 0, detalle: [] };
+    const brutoMes = extraccion.total;
+
+    // Crédito acreditable ese mes: la suma de horas adicionales no puede llevar
+    // el total mensual más allá de PREC_LIMITE_BETEL (55h)
+    let creditoMes = 0;
+    if(brutoMes > 0 && horas !== null) {
+      creditoMes = Math.min(brutoMes, Math.max(0, PREC_LIMITE_BETEL - horas));
+    }
+
+    const combinado = horas !== null ? horas + creditoMes : null;
+    const combinadoCompleto = horas !== null ? horas + brutoMes : null; // sin límite (info)
+
+    return {
+      mes: m, idx, horas, tieneDatos: horas !== null,
+      extraBruto: brutoMes, extraCredito: creditoMes,
+      extraDetalle: extraccion.detalle,
+      combinado,
+      combinadoCompleto,
+      // compatibilidad con código anterior que usa betelBruto/betelCredito
+      betelBruto:   extraccion.detalle.find(d=>d.tipo==='betel')?.horas || 0,
+      betelCredito: extraccion.detalle.find(d=>d.tipo==='betel') ? Math.min(extraccion.detalle.find(d=>d.tipo==='betel').horas, Math.max(0, PREC_LIMITE_BETEL - (horas||0))) : 0,
+    };
+  });
+
+  // ── Acumular totales SOLO desde el mes en que empezó como precursor ──
+  // (si no es nuevo precursor este año, se cuentan los 12 meses igual que antes).
+  // Este es el fix clave: antes se sumaban TODOS los meses del año de servicio aunque
+  // el publicador aún no fuera precursor regular (p. ej. horas como precursor auxiliar
+  // meses antes), lo que inflaba el total frente a la meta ya proporcionalmente reducida.
+  let horasTotal = 0, mesesConDatos = 0;
+  let horasExtraBruto = 0;    // suma bruta de TODAS las horas adicionales en notas
+  let horasExtraCredito = 0;  // suma acreditable (limitada a 55h combinado por mes)
+  let horasTotalCombinado = 0;
+  // Desglose por categoría: { betel: N, construccion: N, especial: N, ... }
+  const desgloseCategorias = {};
+
+  const mesesParaTotal = esNuevoPrecReg ? meses.filter(m => m.idx >= mesInicioPrec) : meses;
+  mesesParaTotal.forEach(m => {
+    if(m.horas !== null) { mesesConDatos++; horasTotal += m.horas; }
+    horasExtraBruto   += m.extraBruto;
+    horasExtraCredito += m.extraCredito;
+    if(m.combinado !== null) horasTotalCombinado += m.combinado;
+    m.extraDetalle.forEach(d => {
+      desgloseCategorias[d.tipo] = (desgloseCategorias[d.tipo] || 0) + d.horas;
+    });
+  });
+
   // Meta ajustada: si empezó después de Sep, la meta anual es proporcional
   const mesesAplicables = 12 - mesInicioPrec;
   const metaAnioAjustada = esNuevoPrecReg ? Math.round((PREC_META_ANIO / 12) * mesesAplicables) : PREC_META_ANIO;
@@ -11470,7 +11456,10 @@ function precGetDatos(pub, anio) {
   const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
 
   // ── Meses pasados / restantes (desde inicio como precursor) ──
-  const mesActualIdx = mesActual().idx;
+  // Si "anio" es un año de servicio anterior (ya cerrado), no debe truncarse al mes
+  // calendario actual — el año completo ya transcurrió. Solo el año de servicio en
+  // curso usa el mes real de hoy como corte.
+  const mesActualIdx = (anio === anioHoy()) ? mesActual().idx : 11;
   const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx && m.idx >= mesInicioPrec);
   const mesesRestantes = meses.filter(m => m.idx >  mesActualIdx).length;
 
@@ -11519,7 +11508,7 @@ function precGetDatos(pub, anio) {
     horasExtraBruto, horasExtraCredito, desgloseCategorias,
     // Compatibilidad con código que usa horasBetelCredito/Bruto
     horasBetelBruto:   desgloseCategorias.betel || 0,
-    horasBetelCredito: meses.reduce((s,m) => s + m.betelCredito, 0),
+    horasBetelCredito: mesesParaTotal.reduce((s,m) => s + m.betelCredito, 0),
   };
 }
 
@@ -11779,7 +11768,11 @@ function renderPrecursores() {
     d.meses.forEach((m,i) => {
       const mesActualIdx = mesActual().idx;
       let clase = 'futuro', valor = '\u2014';
-      if(i <= mesActualIdx) {
+      if(d.esNuevoPrecReg && i < d.mesInicioPrec) {
+        // Mes anterior a que empezara como precursor regular nuevo: no aplica la
+        // meta de 50h todavía, así que no se pinta como "bajo" (rojo/ámbar).
+        clase = 'futuro'; valor = '\u2014';
+      } else if(i <= mesActualIdx) {
         if(!m.tieneDatos){ clase='cero'; valor='?'; }
         else if(m.horas>=PREC_META_MES){ clase='sobre'; valor=m.horas; }
         else { clase='bajo'; valor=m.horas; }
@@ -11815,26 +11808,26 @@ function renderPrecursores() {
     if(d.requiereReunion) {
       html += `<div class="prec-alerta">
         <strong>⚠ Reunión requerida</strong> con el superintendente de servicio y de grupo.<br>
-        Promedio últimos meses con datos: <strong>${Math.round((d.promUlt3||0)*10)/10}h</strong> — por debajo del umbral habitual (40h). Meta mensual: ${PREC_META_MES}h.
+        Promedio últimos meses con datos: <strong>${Math.round((d.promUlt3||0)*10)/10}h</strong> — por debajo del umbral habitual (${Math.round(PREC_META_MES*0.9)}h). Meta mensual: ${PREC_META_MES}h.
         Evaluar circunstancias y si es realista continuar como precursor.
         <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fca5a5;font-size:10px;color:#9f1239">
-          📖 Reglamento: Al terminar el año debe tener al menos <strong>560h</strong> (predicación + horas acreditadas) para poder continuar.
+          📖 Reglamento: Al terminar el año debe tener al menos <strong>${d.metaAnioAjustada||PREC_META_ANIO}h</strong> (predicación + horas acreditadas) para poder continuar.
           Proyección actual: <strong>${Math.round(d.horasTotalCombinado + (d.promUlt3||0) * d.mesesRestantes)}h</strong>.
         </div>
       </div>`;
     } else if(d.estado==='riesgo') {
       html += `<div class="prec-alerta ambar">
-        <strong>⚠ En riesgo de no alcanzar las 560h anuales.</strong>
+        <strong>⚠ En riesgo de no alcanzar las ${d.metaAnioAjustada||PREC_META_ANIO}h anuales.</strong>
         Necesita <strong>${Math.round(d.promedioNecesario)}h/mes</strong> en los ${d.mesesRestantes} meses restantes.
         <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fcd34d;font-size:10px;color:#92400e">
-          📖 Reglamento: Debe completar <strong>560h</strong> al finalizar el año de servicio para continuar como precursor regular.
+          📖 Reglamento: Debe completar <strong>${d.metaAnioAjustada||PREC_META_ANIO}h</strong> al finalizar el año de servicio para continuar como precursor regular.
           Le faltan <strong>${Math.round(d.horasRestantes)}h</strong>.
         </div>
       </div>`;
     } else if(d.mesesRestantes === 0 && d.horasTotalCombinado < (d.metaAnioAjustada||PREC_META_ANIO)) {
       html += `<div class="prec-alerta">
         <strong>✗ Año finalizado — no alcanzó la meta.</strong>
-        Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de 560h requeridas.
+        Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${d.metaAnioAjustada||PREC_META_ANIO}h requeridas.
         El Comité de Servicio determinará si puede continuar como precursor regular.
       </div>`;
     }
@@ -11906,7 +11899,10 @@ function precFiltrarGrupo(filtro) {
 // ══════════════════════════════════════════════════════════════
 function precChartHTML(d) {
   const mesActualIdx = mesActual().idx;
-  const mesesVis = d.meses.filter(m => m.idx <= mesActualIdx);
+  // Si es nuevo precursor regular este año, no mostrar los meses previos a su inicio
+  // como precursor (no aplicaba la meta de 50h en esos meses).
+  const mesInicio = d.esNuevoPrecReg ? d.mesInicioPrec : 0;
+  const mesesVis = d.meses.filter(m => m.idx <= mesActualIdx && m.idx >= mesInicio);
   if(!mesesVis.length) return '';
 
   const BAR_H = 72; // px altura área barras
