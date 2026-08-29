@@ -34215,6 +34215,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1788038127969",
+      "fecha": "2026-08-29",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 149,
+      "zoom": 55,
+      "total": 204,
+      "notas": "",
+      "_ts": 1788038127969
+    },
+    {
       "id": "r1787434220455",
       "fecha": "2026-08-22",
       "tipo": "Fin de semana",
@@ -34735,7 +34746,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1787709343469,
+  "_lastModified": 1788038129708,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37670,6 +37681,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788038086705,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1788032714425,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1787707954995,
       "user": "Administrador",
       "rol": "admin",
@@ -39251,22 +39278,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Lugo, Oscar · Jul 2025: horas=50",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1787089691739,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jul 2025: horas=50",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1787089689452,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jul 2025: cursos=3",
       "pubId": "mmm9qi4otsz7"
     }
   ],
