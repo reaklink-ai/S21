@@ -619,7 +619,7 @@
       "nombre": "Blanca",
       "nacimiento": "1960-12-12",
       "bautismo": "1996-07-20",
-      "grupo": "Grupo 4",
+      "grupo": "Grupo 14",
       "telefono": "3176511346",
       "genero": "F",
       "anciano": false,
@@ -631,11 +631,12 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Víctor David Alarcón Camelo",
-        "relacion": "Hijo",
+        "relacion": "",
         "tel": "3507365588",
         "tel2": "",
         "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124762970
       },
       "registros": {
         "2024": {
@@ -780,7 +781,9 @@
           "horas": 46,
           "cursos": 5
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124762970
     },
     {
       "id": "mmm9qi4jaer1",
@@ -788,7 +791,7 @@
       "nombre": "Karla",
       "nacimiento": "1999-09-13",
       "bautismo": "2012-07-07",
-      "grupo": "Grupo 4",
+      "grupo": "Grupo 14",
       "telefono": "3108760263",
       "genero": "F",
       "anciano": false,
@@ -800,11 +803,12 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Victor David Alarcón Camelo",
-        "relacion": "Hermano",
+        "relacion": "",
         "tel": "3507365588",
         "tel2": "",
         "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124769545
       },
       "registros": {
         "2024": {
@@ -941,7 +945,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124769545
     },
     {
       "id": "mmm9qi4jnax6",
@@ -949,7 +955,7 @@
       "nombre": "Victor Hugo",
       "nacimiento": "1960-04-17",
       "bautismo": "1996-07-20",
-      "grupo": "Grupo 4",
+      "grupo": "Grupo 14",
       "telefono": "3158958866",
       "genero": "M",
       "anciano": false,
@@ -961,11 +967,12 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Tatiana Tapiero",
-        "relacion": "Nuera",
+        "relacion": "",
         "tel": "3143191316",
         "tel2": "",
         "direccion": "Calle 12 a # 1 b este - 80 mnz 2 int 9 cs 17 urbanización el trebol Mosquera Cundinamarca",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124777737
       },
       "registros": {
         "2024": {
@@ -1106,7 +1113,9 @@
           "horas": 46,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124777737
     },
     {
       "id": "mmm9qi4jigd3",
@@ -34769,7 +34778,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788124751666,
+  "_lastModified": 1788124779231,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37704,6 +37713,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788124777737,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Alarcon, Victor Hugo · Grupo: Grupo 4 → Grupo 14",
+      "pubId": "mmm9qi4jnax6"
+    },
+    {
+      "ts": 1788124769546,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Alarcon, Karla · Grupo: Grupo 4 → Grupo 14",
+      "pubId": "mmm9qi4jaer1"
+    },
+    {
+      "ts": 1788124762971,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Alarcon, Blanca · Grupo: Grupo 4 → Grupo 14",
+      "pubId": "mmm9qi4jfkxs"
+    },
+    {
       "ts": 1788124748208,
       "user": "Administrador",
       "rol": "admin",
@@ -39278,30 +39311,6 @@
       "accion": "Horas editadas",
       "detalle": "Pelaez, Neismer · Jul 2025: cursos=1",
       "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1787089717472,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jul 2025: horas=65",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1787089717464,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jul 2025: horas=65",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1787089714801,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4qzusx"
     }
   ],
   "formHistorial": [
