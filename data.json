@@ -25814,7 +25814,7 @@
       "nombre": "Andres",
       "nacimiento": "1996-09-17",
       "bautismo": "2009-04-11",
-      "grupo": "Grupo 2",
+      "grupo": "Grupo 4",
       "telefono": "",
       "genero": "M",
       "anciano": false,
@@ -25830,7 +25830,8 @@
         "tel": "3052243077",
         "tel2": "",
         "direccion": "Carrera 3 este # 15-57  Porvenir centro Mosquera",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124893949
       },
       "registros": {
         "2024": {
@@ -25974,7 +25975,9 @@
           "horas": 186,
           "cursos": 5
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124893949
     },
     {
       "id": "mmm9qi4s0lt4",
@@ -26166,7 +26169,7 @@
       "nombre": "Daniela",
       "nacimiento": "",
       "bautismo": "",
-      "grupo": "Grupo 2",
+      "grupo": "Grupo 4",
       "telefono": "",
       "genero": "F",
       "anciano": false,
@@ -26182,7 +26185,8 @@
         "tel": "3212027120",
         "tel2": "",
         "direccion": "",
-        "notasMed": "Carrera 3 este # 15-57  Porvenir centro Mosquera"
+        "notasMed": "Carrera 3 este # 15-57  Porvenir centro Mosquera",
+        "_ts": 1788124900448
       },
       "registros": {
         "2024": {
@@ -26313,7 +26317,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124900448
     },
     {
       "id": "mmm9qi4tcdjz",
@@ -34787,7 +34793,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788124852197,
+  "_lastModified": 1788124902673,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37722,6 +37728,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788124900449,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Tovar, Daniela · Grupo: Grupo 2 → Grupo 4",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1788124893949,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Tovar, Andres · Grupo: Grupo 2 → Grupo 4",
+      "pubId": "mmm9qi4s4eyz"
+    },
+    {
       "ts": 1788124834650,
       "user": "Administrador",
       "rol": "admin",
@@ -39304,22 +39326,6 @@
       "accion": "Horas editadas",
       "detalle": "Beltran, Mauricio · Jul 2025: cursos=1",
       "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1787089806906,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · Jul 2025: cursos=1",
-      "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1787089806901,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ardila de Zuluaga, María · Jul 2025: cursos=1",
-      "pubId": "p1781792857813"
     }
   ],
   "formHistorial": [
