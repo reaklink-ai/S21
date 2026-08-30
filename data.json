@@ -2710,7 +2710,7 @@
       "nombre": "Isaac",
       "nacimiento": "",
       "bautismo": "2015-02-08",
-      "grupo": "Grupo 14",
+      "grupo": "Grupo 1",
       "telefono": "3013629170",
       "genero": "M",
       "anciano": true,
@@ -2726,7 +2726,8 @@
         "tel": "3013629170",
         "tel2": "",
         "direccion": "Carrera 17 Sur # 5 - 66 torre 14 apartamento 256 Cerezo Novaterra. Mosquera - Cundinamarca.",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124734872
       },
       "registros": {
         "2024": {
@@ -2882,7 +2883,9 @@
           "horas": 115,
           "cursos": 2
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124734872
     },
     {
       "id": "mmm9qi4k0gox",
@@ -2890,7 +2893,7 @@
       "nombre": "Laura",
       "nacimiento": "1996-04-05",
       "bautismo": "2014-07-05",
-      "grupo": "Grupo 14",
+      "grupo": "Grupo 1",
       "telefono": "3012999176",
       "genero": "F",
       "anciano": false,
@@ -2902,11 +2905,12 @@
       "ungido": false,
       "emergencia": {
         "nombre": "Isaac Beleño",
-        "relacion": "Esposo",
+        "relacion": "",
         "tel": "3013629170",
         "tel2": "",
         "direccion": "Carrera 17 Sur # 5 - 66 torre 14 apartamento 256 Cerezo Novaterra. Mosquera - Cundinamarca.",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124748208
       },
       "registros": {
         "2024": {
@@ -3069,7 +3073,9 @@
           "horas": 19,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124748208
     },
     {
       "id": "mmm9qi4kqs2f",
@@ -34763,7 +34769,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788124715882,
+  "_lastModified": 1788124751666,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37698,6 +37704,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788124748208,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beleño, Laura · Grupo: Grupo 14 → Grupo 1",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1788124734872,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beleño, Isaac · Grupo: Grupo 14 → Grupo 1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
       "ts": 1788124713192,
       "user": "Administrador",
       "rol": "admin",
@@ -39280,22 +39302,6 @@
       "accion": "Horas editadas",
       "detalle": "Parra, Flor Alba · Jul 2025: cursos=2",
       "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1787089714794,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1787089704067,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jul 2025: horas=50",
-      "pubId": "mmm9qi4q8sw6"
     }
   ],
   "formHistorial": [
