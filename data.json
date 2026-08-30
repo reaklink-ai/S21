@@ -17394,7 +17394,7 @@
       "nombre": "Andrea Carolina",
       "nacimiento": "1976-12-05",
       "bautismo": "1993-12-18",
-      "grupo": "Grupo 7",
+      "grupo": "Grupo 6",
       "telefono": "",
       "genero": "F",
       "anciano": false,
@@ -17410,7 +17410,8 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124824782
       },
       "registros": {
         "2025": {
@@ -17510,7 +17511,9 @@
           "horas": 12,
           "cursos": 1
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124824782
     },
     {
       "id": "mmm9qi4q1iwb",
@@ -17518,7 +17521,7 @@
       "nombre": "Fernando",
       "nacimiento": "1971-05-19",
       "bautismo": "1988-04-24",
-      "grupo": "Grupo 7",
+      "grupo": "Grupo 6",
       "telefono": "",
       "genero": "M",
       "anciano": false,
@@ -17534,7 +17537,8 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124819174
       },
       "registros": {
         "2025": {
@@ -17633,7 +17637,9 @@
           "horas": 30,
           "cursos": 1
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124819174
     },
     {
       "id": "mmm9qi4qf90z",
@@ -17641,7 +17647,7 @@
       "nombre": "Laura Camila",
       "nacimiento": "1999-03-31",
       "bautismo": "2012-07-01",
-      "grupo": "Grupo 7",
+      "grupo": "Grupo 6",
       "telefono": "",
       "genero": "F",
       "anciano": false,
@@ -17658,7 +17664,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1783531480980
+        "_ts": 1788124829924
       },
       "registros": {
         "2025": {
@@ -17759,7 +17765,7 @@
           "cursos": 0
         }
       },
-      "_tsPersonal": 1783531480980,
+      "_tsPersonal": 1788124829924,
       "precAuxContinuo": true
     },
     {
@@ -17768,7 +17774,7 @@
       "nombre": "Valentina",
       "nacimiento": "1998-02-02",
       "bautismo": "2009-12-26",
-      "grupo": "Grupo 7",
+      "grupo": "Grupo 6",
       "telefono": "",
       "genero": "F",
       "anciano": false,
@@ -17784,7 +17790,8 @@
         "tel": "",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124834649
       },
       "registros": {
         "2025": {
@@ -17877,7 +17884,9 @@
             "notas": ""
           }
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124834649
     },
     {
       "id": "mmm9qi4qg4ch",
@@ -34778,7 +34787,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788124779231,
+  "_lastModified": 1788124836659,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37713,6 +37722,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788124834650,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Valentina · Grupo: Grupo 7 → Grupo 6",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1788124829924,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Laura Camila · Grupo: Grupo 7 → Grupo 6",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
+      "ts": 1788124824782,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millán, Andrea Carolina · Grupo: Grupo 7 → Grupo 6",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1788124819174,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Millan, Fernando · Grupo: Grupo 7 → Grupo 6",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
       "ts": 1788124777737,
       "user": "Administrador",
       "rol": "admin",
@@ -39279,38 +39320,6 @@
       "accion": "Horas editadas",
       "detalle": "Ardila de Zuluaga, María · Jul 2025: cursos=1",
       "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1787089742070,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Jul 2025: horas=30",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1787089742064,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Jul 2025: horas=30",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1787089738348,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1787089738340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
     }
   ],
   "formHistorial": [
