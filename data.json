@@ -1362,7 +1362,7 @@
       "nombre": "Cesar Mauricio",
       "nacimiento": "1974-01-07",
       "bautismo": "2003-03-30",
-      "grupo": "Grupo 1",
+      "grupo": "Grupo 3",
       "telefono": "317 6400153",
       "genero": "M",
       "anciano": true,
@@ -1378,7 +1378,8 @@
         "tel": "3045653704",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124701867
       },
       "registros": {
         "2024": {
@@ -1519,7 +1520,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124701867
     },
     {
       "id": "mmm9qi4j8aj2",
@@ -1527,7 +1530,7 @@
       "nombre": "Natalia",
       "nacimiento": "1995-08-29",
       "bautismo": "2007-09-29",
-      "grupo": "Grupo 1",
+      "grupo": "Grupo 3",
       "telefono": "310 2189593",
       "genero": "F",
       "anciano": false,
@@ -1543,7 +1546,8 @@
         "tel": "3214055374",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788124713191
       },
       "registros": {
         "2024": {
@@ -1684,7 +1688,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788124713191
     },
     {
       "id": "mmm9qi4jevxb",
@@ -33277,19 +33283,19 @@
   "grupos": {
     "Grupo 1": {
       "super": "mmm9qi4otsz7",
-      "aux": "mmm9qi4jl2r2"
+      "aux": "mmm9qi4kqpna"
     },
     "Grupo 2": {
       "super": "mmm9qi4ttlv0",
       "aux": "mmm9qi4kk1hh"
     },
     "Grupo 3": {
-      "super": "mmm9qi4ttbx6",
+      "super": "mmm9qi4jl2r2",
       "aux": "mmm9qi4n3qgi"
     },
     "Grupo 4": {
       "super": "mmm9qi4r1pju",
-      "aux": "mmm9qi4jnax6"
+      "aux": "mmm9qi4s4eyz"
     },
     "Grupo 5": {
       "super": "mmm9qi4nd6my",
@@ -33329,7 +33335,7 @@
     },
     "Grupo 14": {
       "super": "mmm9qi4rvhuc",
-      "aux": "mmm9qi4kqpna"
+      "aux": "mmm9qi4jnax6"
     }
   },
   "inactivos": [
@@ -34757,7 +34763,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788038172643,
+  "_lastModified": 1788124715882,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37692,6 +37698,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788124713192,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Amortegui, Natalia · Grupo: Grupo 1 → Grupo 3",
+      "pubId": "mmm9qi4j8aj2"
+    },
+    {
+      "ts": 1788124701867,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Amortegui, Cesar Mauricio · Grupo: Grupo 1 → Grupo 3",
+      "pubId": "mmm9qi4jl2r2"
+    },
+    {
+      "ts": 1788122789657,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1788038086705,
       "user": "Administrador",
       "rol": "admin",
@@ -37705,6 +37735,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1787946127116,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -39258,38 +39296,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Yasmilys · Jul 2025: horas=50",
       "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1787089704060,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jul 2025: horas=50",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1787089702192,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1787089702185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1787089691745,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Jul 2025: horas=50",
-      "pubId": "mmm9qi4otsz7"
     }
   ],
   "formHistorial": [
