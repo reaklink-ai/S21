@@ -4007,6 +4007,7 @@ function saveStateAndSync() {
 }
 
 async function _mergeAndPush(intentos = 0, silencioso = false) {
+  let errorMsg = null;
   try {
     // 1. Descargar versión remota fresca via Worker (GET /sync)
     const res = await fetch(SYNC_URL + '?t=' + Date.now());
@@ -4038,7 +4039,7 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
       saveState();
       // Feedback visual claro de éxito (solo si fue guardado manualmente)
       if(!silencioso) _mostrarConfirmGuardado();
-      return;
+      return; // éxito — no seguir al manejo de error de abajo
     }
 
     const err = await putRes.json().catch(() => ({}));
@@ -4046,14 +4047,21 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
       (err.error && err.error.includes('does not match'));
     if(esConflicto && intentos < 4) {
       await new Promise(r => setTimeout(r, 500 * (intentos + 1)));
-      return _mergeAndPush(intentos + 1);
+      return _mergeAndPush(intentos + 1, silencioso);
     }
-    // Error definitivo — avisar claramente
-    if(!silencioso) _mostrarErrorGuardado(err.error || ('HTTP ' + putRes.status));
+    errorMsg = err.error || ('HTTP ' + putRes.status);
   } catch(e) {
-    if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1); }
-    if(!silencioso) _mostrarErrorGuardado('Sin conexión — verifica tu internet');
+    if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1, silencioso); }
+    errorMsg = 'Sin conexión — verifica tu internet';
   }
+  // Si llegamos aquí, el guardado falló de forma definitiva (sin más reintentos).
+  // Avisamos con el banner solo si no es una llamada "silenciosa" (el que llama
+  // ya da su propio aviso, ej. guardarAhora()), y SIEMPRE propagamos el fallo
+  // lanzando el error, para que el código que llamó a esta función (y espera la
+  // promesa) sepa que realmente no se guardó — antes se resolvía en silencio y
+  // mostraba "Sincronizado correctamente" aunque hubiera fallado.
+  if(!silencioso) _mostrarErrorGuardado(errorMsg);
+  throw new Error(errorMsg);
 }
 
 function _mostrarConfirmGuardado() {
