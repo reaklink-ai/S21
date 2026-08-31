@@ -6521,343 +6521,6 @@
       }
     },
     {
-      "id": "mmm9qi4m86kf",
-      "apellido": "Conde",
-      "nombre": "Jose",
-      "nacimiento": "1957-09-17",
-      "bautismo": "2004-10-22",
-      "grupo": "Grupo 7",
-      "telefono": "3212790055",
-      "genero": "M",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {
-        "direccion": "Cra 16 #09e14",
-        "nombre": "Victor gomez",
-        "tel": "3212430550",
-        "relacion": "Hermano"
-      },
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true
-          },
-          "Oct": {
-            "particip": true
-          },
-          "Nov": {
-            "particip": true
-          },
-          "Dic": {
-            "particip": true
-          },
-          "Ene": {
-            "particip": true
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1778156554338
-          },
-          "May": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1781793416795
-          },
-          "Jun": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1783617786203
-          },
-          "Jul": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1787094710668
-          },
-          "Ago": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1788192688246
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 0
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 0,
-          "cursos": 0
-        }
-      }
-    },
-    {
-      "id": "mmm9qi4mva5c",
-      "apellido": "Conde",
-      "nombre": "Martha",
-      "nacimiento": "1967-06-16",
-      "bautismo": "1989-10-14",
-      "grupo": "Grupo 7",
-      "telefono": "312 426 6877",
-      "genero": "F",
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "otrasOvejas": false,
-      "ungido": false,
-      "emergencia": {
-        "nombre": "Victor gomez",
-        "relacion": "Herman@",
-        "tel": "3212430550",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": ""
-      },
-      "registros": {
-        "2024": {
-          "Ene": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Mar": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "May": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Jun": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Jul": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          },
-          "Ago": {
-            "particip": true,
-            "horas": "",
-            "cursos": "5",
-            "paux": false,
-            "notas": ""
-          }
-        },
-        "2025": {
-          "Feb": {
-            "particip": true,
-            "horas": "",
-            "cursos": "2",
-            "paux": false
-          },
-          "Sep": {
-            "particip": true,
-            "cursos": "5"
-          },
-          "Oct": {
-            "particip": true,
-            "cursos": "3"
-          },
-          "Nov": {
-            "particip": true,
-            "cursos": "2"
-          },
-          "Dic": {
-            "particip": true,
-            "cursos": "2"
-          },
-          "Ene": {
-            "particip": true,
-            "cursos": "2"
-          },
-          "Mar": {
-            "particip": true,
-            "cursos": "2",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          },
-          "Abr": {
-            "particip": true,
-            "cursos": "2",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1778156557381
-          },
-          "May": {
-            "particip": true,
-            "cursos": "2",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1781793484786
-          },
-          "Jun": {
-            "particip": true,
-            "cursos": "2",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1783617792585
-          },
-          "Jul": {
-            "particip": true,
-            "cursos": "2",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1787094720161
-          },
-          "Ago": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1788192686720
-          }
-        }
-      },
-      "totales": {
-        "2024": {
-          "participaron": 8,
-          "horas": 0,
-          "cursos": 40
-        },
-        "2025": {
-          "participaron": 6,
-          "horas": 0,
-          "cursos": 16
-        }
-      }
-    },
-    {
       "id": "mmm9qi4m5k1f",
       "apellido": "Creach",
       "nombre": "Isabela",
@@ -33638,6 +33301,343 @@
         "notasMed": "",
         "_ts": 1788192547629
       }
+    },
+    {
+      "id": "mmm9qi4m86kf",
+      "apellido": "Conde",
+      "nombre": "Jose",
+      "nacimiento": "1957-09-17",
+      "bautismo": "2004-10-22",
+      "grupo": "Grupo 7",
+      "telefono": "3212790055",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "direccion": "Cra 16 #09e14",
+        "nombre": "Victor gomez",
+        "tel": "3212430550",
+        "relacion": "Hermano"
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156554338
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793416795
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617786203
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1787094710668
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192688246
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      }
+    },
+    {
+      "id": "mmm9qi4mva5c",
+      "apellido": "Conde",
+      "nombre": "Martha",
+      "nacimiento": "1967-06-16",
+      "bautismo": "1989-10-14",
+      "grupo": "Grupo 7",
+      "telefono": "312 426 6877",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "Victor gomez",
+        "relacion": "Herman@",
+        "tel": "3212430550",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "2",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "5"
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "3"
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156557381
+          },
+          "May": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793484786
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617792585
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1787094720161
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192686720
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 40
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 16
+        }
+      }
     }
   ],
   "grupos": {
@@ -35123,7 +35123,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788192689917,
+  "_lastModified": 1788192850024,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38054,9 +38054,366 @@
       },
       "fechaMudado": "2026-08-11",
       "direccionMudado": "Asignada Precursora Especial"
+    },
+    {
+      "id": "mmm9qi4mva5c",
+      "apellido": "Conde",
+      "nombre": "Martha",
+      "nacimiento": "1967-06-16",
+      "bautismo": "1989-10-14",
+      "grupo": "Grupo 7",
+      "telefono": "312 426 6877",
+      "genero": "F",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "nombre": "Victor gomez",
+        "relacion": "Herman@",
+        "tel": "3212430550",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": ""
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "5",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "2",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "5"
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "3"
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "2"
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156557381
+          },
+          "May": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793484786
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617792585
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1787094720161
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192686720
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 40
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 16
+        }
+      },
+      "fechaMudado": "2026-08-31",
+      "direccionMudado": "se muda a bogota"
+    },
+    {
+      "id": "mmm9qi4m86kf",
+      "apellido": "Conde",
+      "nombre": "Jose",
+      "nacimiento": "1957-09-17",
+      "bautismo": "2004-10-22",
+      "grupo": "Grupo 7",
+      "telefono": "3212790055",
+      "genero": "M",
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "otrasOvejas": false,
+      "ungido": false,
+      "emergencia": {
+        "direccion": "Cra 16 #09e14",
+        "nombre": "Victor gomez",
+        "tel": "3212430550",
+        "relacion": "Hermano"
+      },
+      "registros": {
+        "2024": {
+          "Ene": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Mar": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "May": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jun": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          },
+          "Ago": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false,
+            "notas": ""
+          }
+        },
+        "2025": {
+          "Feb": {
+            "particip": true,
+            "horas": "",
+            "cursos": "",
+            "paux": false
+          },
+          "Sep": {
+            "particip": true
+          },
+          "Oct": {
+            "particip": true
+          },
+          "Nov": {
+            "particip": true
+          },
+          "Dic": {
+            "particip": true
+          },
+          "Ene": {
+            "particip": true
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1778156554338
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1781793416795
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1783617786203
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1787094710668
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192688246
+          }
+        }
+      },
+      "totales": {
+        "2024": {
+          "participaron": 8,
+          "horas": 0,
+          "cursos": 0
+        },
+        "2025": {
+          "participaron": 6,
+          "horas": 0,
+          "cursos": 0
+        }
+      },
+      "fechaMudado": "2026-08-31",
+      "direccionMudado": "Se muda a bogota"
     }
   ],
   "auditoria": [
+    {
+      "ts": 1788192848018,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado mudado",
+      "detalle": "Conde, Jose → Se muda a bogota",
+      "pubId": "mmm9qi4m86kf"
+    },
+    {
+      "ts": 1788192841374,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Marcado mudado",
+      "detalle": "Conde, Martha → se muda a bogota",
+      "pubId": "mmm9qi4mva5c"
+    },
     {
       "ts": 1788192547629,
       "user": "Administrador",
@@ -39640,22 +39997,6 @@
       "accion": "Horas editadas",
       "detalle": "Jimenez, Flor · Jul 2025: cursos=1",
       "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1787090079415,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1787090069944,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
     }
   ],
   "formHistorial": [
