@@ -33615,7 +33615,7 @@
       "nombre": "Claudia",
       "nacimiento": "1977-06-28",
       "bautismo": "2021-07-24",
-      "grupo": "Grupo 6",
+      "grupo": "Grupo 7",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": true,
@@ -33626,7 +33626,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788192485986,
+      "_tsPersonal": 1788192547629,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -33634,7 +33634,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1788192485986
+        "_ts": 1788192547629
       }
     }
   ],
@@ -35121,7 +35121,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788192531563,
+  "_lastModified": 1788192548951,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38056,6 +38056,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788192547629,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Clavijo, Claudia · Grupo: Grupo 6 → Grupo 7",
+      "pubId": "p1788192485987"
+    },
+    {
       "ts": 1788192485987,
       "user": "Administrador",
       "rol": "admin",
@@ -39641,14 +39649,6 @@
     },
     {
       "ts": 1787090069944,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1787090069940,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
