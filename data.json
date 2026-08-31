@@ -6663,11 +6663,12 @@
             "_ts": 1787094710668
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788192688246
           }
         }
       },
@@ -6834,11 +6835,12 @@
             "_ts": 1787094720161
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788192686720
           }
         }
       },
@@ -35121,7 +35123,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788192548951,
+  "_lastModified": 1788192689917,
   "vym": {
     "semanas": {},
     "historial": [
