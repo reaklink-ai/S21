@@ -32422,7 +32422,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788125030848,
+      "_tsPersonal": 1788194036248,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -32430,7 +32430,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1788125030848
+        "_ts": 1788194036248
       }
     },
     {
@@ -33699,136 +33699,6 @@
     }
   },
   "inactivos": [
-    {
-      "id": "p1783439700818",
-      "registros": {
-        "2025": {
-          "Sep": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439713584
-          },
-          "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439714041
-          },
-          "Nov": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439714502
-          },
-          "Dic": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439714930
-          },
-          "Ene": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439715370
-          },
-          "Feb": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439715963
-          },
-          "Mar": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439716640
-          },
-          "Abr": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439717252
-          },
-          "May": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783439718039
-          },
-          "Jun": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783529211206
-          },
-          "Jul": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": "INACTIVA",
-            "_ts": 1783529212563
-          },
-          "Ago": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
-          }
-        }
-      },
-      "apellido": "Aldana de Graterol",
-      "nombre": "Havigahid",
-      "nacimiento": "1992-09-18",
-      "bautismo": "2023-03-19",
-      "grupo": "Grupo 8",
-      "telefono": "",
-      "genero": "F",
-      "otrasOvejas": false,
-      "ungido": false,
-      "anciano": false,
-      "siervo": false,
-      "precursorReg": false,
-      "precursorEsp": false,
-      "misionero": false,
-      "precAuxContinuo": false,
-      "_tsPersonal": 1783439700818,
-      "emergencia": {
-        "nombre": "",
-        "relacion": "",
-        "tel": "",
-        "tel2": "",
-        "direccion": "",
-        "notasMed": "",
-        "_ts": 1783439700818
-      },
-      "fechaInactivo": "2026-07-08",
-      "motivoInactivo": "VIENEN DE VENEZUELA",
-      "tipoInactivo": "inactivo"
-    },
     {
       "id": "mmm9qi4u9kvo",
       "apellido": "Galeano",
@@ -35123,7 +34993,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788192850024,
+  "_lastModified": 1788205514974,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38399,6 +38269,142 @@
   ],
   "auditoria": [
     {
+      "ts": 1788205037406,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788205024052,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788197853901,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788197834801,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788197622291,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788197608321,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788196333866,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788196328942,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788196201109,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788196193233,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788194036248,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Aldana de Graterol, Havigahid · Grupo: Grupo 8 → Grupo 4",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788193990676,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788193985525,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788193730633,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788193523381,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788193512195,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788192998581,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
       "ts": 1788192848018,
       "user": "Administrador",
       "rol": "admin",
@@ -39861,142 +39867,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Gloria · Jul 2025: horas=23",
       "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1787093556564,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jul 2025: horas=23",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1787093553334,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1787093553327,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1787093545414,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1787093545407,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1787093544588,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1787093544581,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1787093461548,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1787090283731,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1787090283724,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Arevalo, Mercedes · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jevxb"
-    },
-    {
-      "ts": 1787090130289,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Jul 2025: horas=50",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1787090130284,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Silva, Edith · Jul 2025: horas=50",
-      "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1787090109920,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jul 2025: horas=53",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1787090109915,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jul 2025: horas=53",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1787090107853,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1787090107849,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1787090079421,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4nszua"
     }
   ],
   "formHistorial": [
