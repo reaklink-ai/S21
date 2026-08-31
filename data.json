@@ -32403,8 +32403,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "Activada",
-            "_ts": 1788205544566
+            "notas": "Se reactiva en la congregación",
+            "_ts": 1788205564292
           }
         }
       },
@@ -34994,7 +34994,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788205554408,
+  "_lastModified": 1788205565630,
   "vym": {
     "semanas": {},
     "historial": [
