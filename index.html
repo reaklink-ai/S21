@@ -4050,9 +4050,11 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
       return _mergeAndPush(intentos + 1, silencioso);
     }
     errorMsg = err.error || ('HTTP ' + putRes.status);
+    console.error('[S21-SYNC] PUT falló con estado ' + putRes.status + ':', err);
   } catch(e) {
+    console.error('[S21-SYNC] Excepción durante sync (intento ' + intentos + '):', e);
     if(intentos < 2) { await new Promise(r => setTimeout(r, 1000)); return _mergeAndPush(intentos + 1, silencioso); }
-    errorMsg = 'Sin conexión — verifica tu internet';
+    errorMsg = 'Sin conexión — verifica tu internet (' + (e?.message || e) + ')';
   }
   // Si llegamos aquí, el guardado falló de forma definitiva (sin más reintentos).
   // Avisamos con el banner solo si no es una llamada "silenciosa" (el que llama
@@ -12752,9 +12754,9 @@ function guardarAhora() {
   _syncQueue = _syncQueue.then(() => _mergeAndPush(0, true)).then(() => {
     _guardandoPub = false;
     toast('☁️ Sincronizado correctamente', 2500);
-  }).catch(() => {
+  }).catch((e) => {
     _guardandoPub = false;
-    toast('⚠️ No se pudo sincronizar — verifica tu internet e intenta de nuevo', 4000);
+    toast('⚠️ No se pudo sincronizar: ' + (e?.message || 'verifica tu internet') + ' — intenta de nuevo', 6000);
   });
 }
 
