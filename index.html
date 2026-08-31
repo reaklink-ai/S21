@@ -4228,6 +4228,7 @@ function _mergeStates(remoto, local) {
 
   // Inactivos: fusionar sin duplicados — preservar el más reciente
   const localInacIds = new Set((local.inactivos||[]).map(p=>p.id));
+  const localPubIds = new Set((local.publicadores||[]).map(p=>p.id));
   (remoto.inactivos||[]).forEach(rp => {
     // No restaurar si ya fue regresado a publicadores activos en local
     if(!localInacIds.has(rp.id) && !localPubIds.has(rp.id)) m.inactivos = [...(m.inactivos||[]), rp];
@@ -4235,7 +4236,6 @@ function _mergeStates(remoto, local) {
 
   // Mudados: fusionar sin duplicados
   const localMudIds = new Set((local.mudados||[]).map(p=>p.id));
-  const localPubIds = new Set((local.publicadores||[]).map(p=>p.id));
   (remoto.mudados||[]).forEach(rp => {
     // No restaurar si ya fue regresado a publicadores activos en local
     if(!localMudIds.has(rp.id) && !localPubIds.has(rp.id)) m.mudados = [...(m.mudados||[]), rp];
