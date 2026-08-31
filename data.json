@@ -32399,11 +32399,12 @@
             "_ts": 1783529212563
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "Activada",
+            "_ts": 1788205544566
           }
         }
       },
@@ -34993,7 +34994,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788205514974,
+  "_lastModified": 1788205545041,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38269,6 +38270,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788205520695,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1788205037406,
       "user": "Administrador",
       "rol": "admin",
@@ -39859,14 +39868,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Mario · Jul 2025: cursos=1",
       "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1787093556571,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Jul 2025: horas=23",
-      "pubId": "mmm9qi4tcdjz"
     }
   ],
   "formHistorial": [
