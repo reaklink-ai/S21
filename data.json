@@ -32412,7 +32412,7 @@
       "nombre": "Havigahid",
       "nacimiento": "1992-09-18",
       "bautismo": "2023-03-19",
-      "grupo": "Grupo 8",
+      "grupo": "Grupo 4",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": false,
@@ -32423,7 +32423,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788194036248,
+      "_tsPersonal": 1788205552947,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -32431,7 +32431,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1788194036248
+        "_ts": 1788205552947
       }
     },
     {
@@ -34994,7 +34994,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788205545041,
+  "_lastModified": 1788205554408,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38270,6 +38270,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788205552947,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Aldana de Graterol, Havigahid · Grupo: Grupo 8 → Grupo 4",
+      "pubId": "p1783439700818"
+    },
+    {
       "ts": 1788205520695,
       "user": "Administrador",
       "rol": "admin",
@@ -39855,14 +39863,6 @@
     },
     {
       "ts": 1787093564692,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1787093564685,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
