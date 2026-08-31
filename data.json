@@ -18087,6 +18087,178 @@
       "ungido": false,
       "emergencia": {},
       "registros": {
+        "2022": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        },
+        "2023": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        },
         "2024": {
           "Ene": {
             "particip": true,
@@ -18142,6 +18314,34 @@
             "horas": "",
             "cursos": "1",
             "paux": false,
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
             "notas": ""
           }
         },
@@ -32557,7 +32757,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1783439700818,
+      "_tsPersonal": 1788125030848,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -32565,7 +32765,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1783439700818
+        "_ts": 1788125030848
       }
     },
     {
@@ -33307,6 +33507,134 @@
         "tel2": "",
         "direccion": "",
         "notasMed": ""
+      }
+    },
+    {
+      "id": "p1788192485987",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "No participó en el ministerio.",
+            "_ts": 1788192500039
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192500130
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192500777
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192501136
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192501497
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192501888
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "No participó en el ministerio.",
+            "_ts": 1788192515899
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192502705
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192503094
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192503543
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192504010
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788192505201
+          }
+        }
+      },
+      "apellido": "Clavijo",
+      "nombre": "Claudia",
+      "nacimiento": "1977-06-28",
+      "bautismo": "2021-07-24",
+      "grupo": "Grupo 6",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788192485986,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1788192485986
       }
     }
   ],
@@ -34793,7 +35121,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788124902673,
+  "_lastModified": 1788192516884,
   "vym": {
     "semanas": {},
     "historial": [
@@ -37728,6 +38056,54 @@
   ],
   "auditoria": [
     {
+      "ts": 1788192485987,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Clavijo, Claudia · Grupo 6",
+      "pubId": "p1788192485987"
+    },
+    {
+      "ts": 1788192391891,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788189502755,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788130209109,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788125030848,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Aldana de Graterol, Havigahid · Grupo: Grupo 8 → Grupo 4",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788124946894,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
       "ts": 1788124900449,
       "user": "Administrador",
       "rol": "admin",
@@ -39278,54 +39654,6 @@
       "accion": "Horas editadas",
       "detalle": "Jimenez, Carlos · Jul 2025: cursos=2",
       "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1787089881623,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1787089881617,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1787089834378,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Jul 2025: horas=35",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1787089834372,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Jul 2025: horas=35",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1787089820539,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1787089820534,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
     }
   ],
   "formHistorial": [
