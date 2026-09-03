@@ -34452,6 +34452,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1788397485198",
+      "fecha": "2026-09-02",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 140,
+      "zoom": 65,
+      "total": 205,
+      "notas": "",
+      "_ts": 1788397485198
+    },
+    {
       "id": "r1788038127969",
       "fecha": "2026-08-29",
       "tipo": "Fin de semana",
@@ -34994,7 +35005,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788205565630,
+  "_lastModified": 1788397487550,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38270,6 +38281,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788397449089,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1788205552947,
       "user": "Administrador",
       "rol": "admin",
@@ -38331,6 +38350,22 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788196865655,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Reactivado",
+      "detalle": "Aldana de Graterol, Havigahid",
+      "pubId": "p1783439700818"
+    },
+    {
+      "ts": 1788196860489,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -39844,30 +39879,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Juan Pablo · Jun 2025: cursos=1",
       "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1787093566346,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jul 2025: horas=29",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1787093566340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jul 2025: horas=29",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1787093564692,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
     }
   ],
   "formHistorial": [
