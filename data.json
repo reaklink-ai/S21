@@ -29734,7 +29734,7 @@
       "nombre": "Gloria",
       "nacimiento": "1953-06-17",
       "bautismo": "2006-07-02",
-      "grupo": "Grupo 7",
+      "grupo": "Grupo 6",
       "telefono": "320 4147003",
       "genero": "F",
       "otrasOvejas": false,
@@ -29751,11 +29751,11 @@
         "tel2": "",
         "direccion": "Calle 10a #17a-27",
         "notasMed": "",
-        "_ts": 1788528705253
+        "_ts": 1788528715594
       },
       "_formTs": 1779238321585,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788528705253
+      "_tsPersonal": 1788528715594
     },
     {
       "id": "mmm9qi4me0oy",
@@ -35094,7 +35094,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788528706327,
+  "_lastModified": 1788528716806,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38370,6 +38370,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788528715594,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ormaza, Gloria · Grupo: Grupo 7 → Grupo 6",
+      "pubId": "p1777912957789"
+    },
+    {
       "ts": 1788528705253,
       "user": "Administrador",
       "rol": "admin",
@@ -39960,14 +39968,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Mayerli · Jul 2025: cursos=1",
       "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1787093576951,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
     }
   ],
   "formHistorial": [
