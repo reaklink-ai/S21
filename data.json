@@ -34070,6 +34070,134 @@
         "notasMed": "",
         "_ts": 1788528930135
       }
+    },
+    {
+      "id": "p1788529197916",
+      "registros": {
+        "2026": {
+          "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "81",
+            "notas": "",
+            "_ts": 1788529221078
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "79",
+            "notas": "",
+            "_ts": 1788529224328
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "65",
+            "notas": "",
+            "_ts": 1788529226453
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "65",
+            "notas": "",
+            "_ts": 1788529227744
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "65",
+            "notas": "",
+            "_ts": 1788529230068
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "72",
+            "notas": "",
+            "_ts": 1788529232638
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "72",
+            "notas": "",
+            "_ts": 1788529235106
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "72",
+            "notas": "",
+            "_ts": 1788529237770
+          },
+          "May": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "65",
+            "notas": "",
+            "_ts": 1788529240325
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "65",
+            "notas": "",
+            "_ts": 1788529243176
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "68",
+            "notas": "",
+            "_ts": 1788529245482
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788529217167
+          }
+        }
+      },
+      "apellido": "Méndez",
+      "nombre": "Yaneth",
+      "nacimiento": "1969-07-04",
+      "bautismo": "1990-06-30",
+      "grupo": "Grupo 13",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788529197916,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1788529197916
+      }
     }
   ],
   "grupos": {
@@ -35436,7 +35564,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788529042842,
+  "_lastModified": 1788529254870,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38712,6 +38840,358 @@
   ],
   "auditoria": [
     {
+      "ts": 1788529245482,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: horas=68",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529245478,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: horas=68",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529243176,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529243170,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529240325,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529240319,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529237770,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529237763,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529235106,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529235099,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529232638,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529232631,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2026: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529230068,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529230060,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529227744,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529227738,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529226453,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529226445,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2026: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529224328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: horas=79",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529224322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: horas=79",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529221409,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529220755,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=81",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529220749,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=81",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529217064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529217055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529215906,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529215901,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529215270,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529215263,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529214666,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529214661,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529214150,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529214144,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529213056,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529213050,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529212065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529212059,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529210493,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529210485,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2026: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529209793,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529209788,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529208886,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529208880,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788529197916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Méndez, Yaneth · Grupo 13",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788529041283,
       "user": "Administrador",
       "rol": "admin",
@@ -39958,358 +40438,6 @@
       "accion": "Horas editadas",
       "detalle": "Galindo, Estefania · Jul 2025: horas=10",
       "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1787095572853,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1787095572848,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1787095537578,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Jul 2025: horas=51",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1787095537572,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Jul 2025: horas=51",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1787095530155,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1787095530150,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1787095522874,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1787095522869,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1787095411983,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Jul 2025: horas=12",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1787095411977,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Jul 2025: horas=12",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1787095406655,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Jul 2025: horas=51",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1787095406651,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Jul 2025: horas=51",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1787095327690,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jul 2025: horas=51",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1787095327685,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jul 2025: horas=51",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1787095324790,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1787095324784,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1787094720161,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1787094720156,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Conde, Martha · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1787093893511,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Jul 2025: horas=16",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1787093893505,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Jul 2025: horas=16",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1787093871537,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jul 2025: horas=16",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1787093871530,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jul 2025: horas=16",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1787093867705,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1787093867698,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1787093857307,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1787093857300,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1787093836246,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Jul 2025: horas=31",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1787093836240,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Jul 2025: horas=31",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1787093834661,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1787093834655,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1787093824069,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Laura Camila · Jul 2025: horas=20",
-      "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1787093824061,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Laura Camila · Jul 2025: horas=20",
-      "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1787093797199,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jul 2025: horas=35",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1787093797193,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jul 2025: horas=35",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1787093794403,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Jul 2025: cursos=",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1787093781375,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jul 2025: horas=30",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1787093781369,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jul 2025: horas=30",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1787093778165,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jul 2025: horas=29.5",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1787093778159,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Jul 2025: horas=29.5",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1787093766914,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1787093766909,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1787093759665,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jul 2025: horas=40",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1787093759658,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Jul 2025: horas=40",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1787093666011,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
     }
   ],
   "formHistorial": [
