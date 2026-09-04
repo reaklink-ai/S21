@@ -33942,6 +33942,134 @@
         "notasMed": "",
         "_ts": 1788528816882
       }
+    },
+    {
+      "id": "p1788528899828",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528901753
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528902127
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528902472
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528902906
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528903949
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528904287
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528904707
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528905077
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528905511
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528905854
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528906299
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528906724
+          }
+        }
+      },
+      "apellido": "Méndez",
+      "nombre": "Felipe",
+      "nacimiento": "2003-07-21",
+      "bautismo": "2011-04-09",
+      "grupo": "",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788528899828,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1788528899828
+      }
     }
   ],
   "grupos": {
@@ -35308,7 +35436,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788528853506,
+  "_lastModified": 1788528909545,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38584,6 +38712,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788528899828,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Méndez, Felipe · Sin grupo",
+      "pubId": "p1788528899828"
+    },
+    {
       "ts": 1788528848970,
       "user": "Administrador",
       "rol": "admin",
@@ -40174,14 +40310,6 @@
       "accion": "Horas editadas",
       "detalle": "Clavijo Arias, Luz Marina · Jul 2025: cursos=",
       "pubId": "mmm9qi4l379l"
-    },
-    {
-      "ts": 1787093596032,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jul 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
     }
   ],
   "formHistorial": [
