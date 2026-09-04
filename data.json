@@ -33917,11 +33917,11 @@
           }
         }
       },
-      "apellido": "Mendéz",
+      "apellido": "Méndez",
       "nombre": "Jose",
       "nacimiento": "1954-03-20",
       "bautismo": "1986-08-30",
-      "grupo": "",
+      "grupo": "Grupo 13",
       "telefono": "",
       "genero": "M",
       "otrasOvejas": true,
@@ -33932,7 +33932,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788528816882,
+      "_tsPersonal": 1788529041283,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -33940,7 +33940,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1788528816882
+        "_ts": 1788529041283
       }
     },
     {
@@ -34049,7 +34049,7 @@
       "nombre": "Felipe",
       "nacimiento": "2003-07-21",
       "bautismo": "2011-04-09",
-      "grupo": "",
+      "grupo": "Grupo 13",
       "telefono": "",
       "genero": "M",
       "otrasOvejas": true,
@@ -34060,7 +34060,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1788528899828,
+      "_tsPersonal": 1788528930135,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -34068,7 +34068,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1788528899828
+        "_ts": 1788528930135
       }
     }
   ],
@@ -35436,7 +35436,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788528917041,
+  "_lastModified": 1788529042842,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38712,6 +38712,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788529041283,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Méndez, Jose · Nombre: Mendéz → Méndez, Grupo: ninguno → Grupo 13",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528930136,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Méndez, Felipe · Grupo: ninguno → Grupo 13",
+      "pubId": "p1788528899828"
+    },
+    {
       "ts": 1788528899828,
       "user": "Administrador",
       "rol": "admin",
@@ -40294,22 +40310,6 @@
       "accion": "Horas editadas",
       "detalle": "Cepeda, Laura · Jul 2025: cursos=1",
       "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1787093666003,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1787093661218,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Clavijo Arias, Luz Marina · Jul 2025: cursos=",
-      "pubId": "mmm9qi4l379l"
     }
   ],
   "formHistorial": [
