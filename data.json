@@ -29642,13 +29642,99 @@
             "horas": "",
             "notas": ""
           }
+        },
+        "2026": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
         }
       },
       "apellido": "Ormaza",
       "nombre": "Gloria",
       "nacimiento": "1953-06-17",
       "bautismo": "2006-07-02",
-      "grupo": "Grupo 4",
+      "grupo": "Grupo 7",
       "telefono": "320 4147003",
       "genero": "F",
       "otrasOvejas": false,
@@ -29663,10 +29749,13 @@
         "relacion": "Hij@",
         "tel": "311 8295649",
         "tel2": "",
-        "direccion": "Calle 10a #17a-27 ",
-        "notasMed": ""
+        "direccion": "Calle 10a #17a-27",
+        "notasMed": "",
+        "_ts": 1788528705253
       },
-      "_formTs": 1779238321585
+      "_formTs": 1779238321585,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788528705253
     },
     {
       "id": "mmm9qi4me0oy",
@@ -35005,7 +35094,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788397487550,
+  "_lastModified": 1788528706327,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38281,6 +38370,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788528705253,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Ormaza, Gloria · Grupo: Grupo 4 → Grupo 7",
+      "pubId": "p1777912957789"
+    },
+    {
+      "ts": 1788528689331,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788451552561,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788447391145,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1788397449089,
       "user": "Administrador",
       "rol": "admin",
@@ -39846,38 +39967,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1787093576946,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1787093575113,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Jul 2025: cursos=0",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1787093575018,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Jun 2025: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1787093575011,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Jun 2025: cursos=1",
       "pubId": "mmm9qi4t6vl7"
     }
   ],
