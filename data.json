@@ -33728,6 +33728,220 @@
           "cursos": 16
         }
       }
+    },
+    {
+      "id": "p1788528816882",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528830974
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528832115
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528832608
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528833234
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1788528839453
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528839590
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528840274
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528840773
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528841150
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528841549
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "16",
+            "notas": "",
+            "_ts": 1788528849066
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788528842534
+          }
+        },
+        "2026": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Mendéz",
+      "nombre": "Jose",
+      "nacimiento": "1954-03-20",
+      "bautismo": "1986-08-30",
+      "grupo": "",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788528816882,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1788528816882
+      }
     }
   ],
   "grupos": {
@@ -35094,7 +35308,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788528716806,
+  "_lastModified": 1788528853506,
   "vym": {
     "semanas": {},
     "historial": [
@@ -38370,6 +38584,62 @@
   ],
   "auditoria": [
     {
+      "ts": 1788528848970,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Jul 2025: horas=16",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528848966,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Jul 2025: horas=16",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528847229,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Jul 2025: cursos=1",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528847225,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Jul 2025: cursos=1",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528839453,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Ene 2025: horas=15",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528839449,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mendéz, Jose · Ene 2025: horas=15",
+      "pubId": "p1788528816882"
+    },
+    {
+      "ts": 1788528816882,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Mendéz, Jose · Sin grupo",
+      "pubId": "p1788528816882"
+    },
+    {
       "ts": 1788528715594,
       "user": "Administrador",
       "rol": "admin",
@@ -39912,62 +40182,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Jul 2025: horas=50",
       "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1787093596028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jul 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1787093592804,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1787093592797,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1787093585411,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jul 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1787093585406,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jul 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1787093583614,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1787093583608,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
     }
   ],
   "formHistorial": [
