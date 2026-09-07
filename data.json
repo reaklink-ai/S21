@@ -6155,15 +6155,93 @@
             "_ts": 1786894682565
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "16",
+            "notas": "35 horas betel",
+            "_ts": 1788797992722
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -37070,7 +37148,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788794006804,
+  "_lastModified": 1788797993819,
   "vym": {
     "semanas": {},
     "historial": [
@@ -40346,6 +40424,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788797988004,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Ago 2025: horas=16",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1788797987993,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Ago 2025: horas=16",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1788797974003,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1788793993409,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -41920,30 +42022,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Roberto · Jul 2025: cursos=1",
       "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1787095933451,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1787095924009,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Jul 2025: horas=32",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1787095924003,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Jul 2025: horas=32",
-      "pubId": "mmm9qi4kqs2f"
     }
   ],
   "formHistorial": [
