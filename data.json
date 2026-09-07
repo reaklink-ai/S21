@@ -6160,6 +6160,15 @@
             "horas": "",
             "notas": ""
           }
+        },
+        "2026": {
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
         }
       },
       "totales": {
@@ -22693,11 +22702,12 @@
             "_ts": 1786849438074
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1788793993409
           }
         },
         "2026": {
@@ -37059,7 +37069,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788793609106,
+  "_lastModified": 1788793996568,
   "vym": {
     "semanas": {},
     "historial": [
@@ -40335,6 +40345,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1788793993409,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Ago 2025: horas=50",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1788793993397,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Ago 2025: horas=50",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1788793753731,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Ago 2025: horas=",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1788793693247,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1788793693237,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
       "ts": 1788793583012,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -41893,46 +41943,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Melissa · Jul 2025: horas=32",
       "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1787095922660,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1787095922654,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1787095858272,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Rivadeneira, Cristina · Jul 2025: cursos=1",
-      "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1787095858265,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Rivadeneira, Cristina · Jul 2025: cursos=1",
-      "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1787095837428,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sanchez, Maritza · Jul 2025: cursos=",
-      "pubId": "mmm9qi4spx52"
     }
   ],
   "formHistorial": [
