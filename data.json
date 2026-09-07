@@ -2951,6 +2951,93 @@
             "_ts": 1786889268935
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1788793087978
+          }
+        },
+        "2026": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -36190,7 +36277,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788793039082,
+  "_lastModified": 1788793091594,
   "vym": {
     "semanas": {},
     "historial": [
@@ -39466,6 +39553,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788793087978,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Ago 2025: horas=30",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1788793087964,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Ago 2025: horas=30",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1788793082537,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1788793082524,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
       "ts": 1788792951585,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -41032,38 +41151,6 @@
       "accion": "Horas editadas",
       "detalle": "Mesa, Lina · Jul 2025: horas=5",
       "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1787095669264,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Jul 2025: horas=5",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1787095648969,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Jul 2025: horas=63",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1787095648963,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Jul 2025: horas=63",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1787095646454,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4n8uw3"
     }
   ],
   "formHistorial": [
