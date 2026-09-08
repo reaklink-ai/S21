@@ -11246,7 +11246,7 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Ximena Martinez",
@@ -11254,7 +11254,8 @@
         "tel": "3002719383",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788828466700
       },
       "registros": {
         "2024": {
@@ -11263,7 +11264,8 @@
             "horas": "34",
             "cursos": "",
             "paux": false,
-            "notas": ""
+            "notas": "",
+            "_ts": 1788828581278
           },
           "Feb": {
             "particip": true,
@@ -11313,6 +11315,38 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "34",
+            "notas": "",
+            "_ts": 1788828575514
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "21",
+            "notas": "",
+            "_ts": 1788828577414
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "46",
+            "notas": "",
+            "_ts": 1788828580280
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "41",
+            "notas": "",
+            "_ts": 1788828583993
           }
         },
         "2025": {
@@ -11487,7 +11521,9 @@
           "horas": 158,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788828466700
     },
     {
       "id": "mmm9qi4now8s",
@@ -38850,7 +38886,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788828463418,
+  "_lastModified": 1788828585682,
   "vym": {
     "semanas": {},
     "historial": [
@@ -42126,6 +42162,86 @@
   ],
   "auditoria": [
     {
+      "ts": 1788828583993,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Dic 2024: horas=41",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828583980,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Dic 2024: horas=41",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828581278,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Ene 2024: horas=34",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828580280,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Nov 2024: horas=46",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828580270,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Nov 2024: horas=46",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828577414,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Oct 2024: horas=21",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828577403,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Oct 2024: horas=21",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828575514,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Sep 2024: horas=34",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828575504,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Sep 2024: horas=34",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828466700,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Guerrero, Adriana · datos generales",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
       "ts": 1788828442841,
       "user": "Administrador",
       "rol": "admin",
@@ -43644,86 +43760,6 @@
       "accion": "Horas editadas",
       "detalle": "Alba, Nicolas · Jul 2025: horas=27",
       "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1787096257191,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1787096257185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1787096253719,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Jul 2025: horas=32",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1787096253713,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Jul 2025: horas=32",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1787096176252,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jul 2025: horas=35",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1787096176247,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jul 2025: horas=35",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1787096173490,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1787096173483,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Jul 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1787096159459,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jul 2025: horas=61",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1787096159452,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jul 2025: horas=61",
-      "pubId": "mmm9qi4qnxk5"
     }
   ],
   "formHistorial": [
