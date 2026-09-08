@@ -11378,7 +11378,7 @@
             "paux": false,
             "horas": "15",
             "notas": "",
-            "_ts": 1786849488833
+            "_ts": 1788828442841
           },
           "Ago": {
             "particip": true,
@@ -38850,7 +38850,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788810158556,
+  "_lastModified": 1788828463418,
   "vym": {
     "semanas": {},
     "historial": [
@@ -42126,6 +42126,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788828442841,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Jul 2025: horas=15",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
+      "ts": 1788828420835,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1788810157391,
       "user": "Administrador",
       "rol": "admin",
@@ -42401,6 +42417,22 @@
       "ts": 1788792643704,
       "user": "Felipe_C",
       "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1788738857776,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1788709360516,
+      "user": "Administrador",
+      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -43692,38 +43724,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Jul 2025: horas=61",
       "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1787096157006,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1787096156999,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1787096096757,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Jul 2025: horas=55",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1787096096751,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Jul 2025: horas=55",
-      "pubId": "mmm9qi4k6wjw"
     }
   ],
   "formHistorial": [
