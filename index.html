@@ -11407,6 +11407,16 @@ const PREC_META_ANIO = 560;
 
 const PREC_LIMITE_BETEL = 55; // horas máx acreditables al combinar predicación + betel
 
+// Año de servicio que se está viendo actualmente en el módulo de precursores.
+// null hasta el primer render, ahí se inicializa en anioHoy().
+let _precAnioActivo = null;
+
+function precCambiarAnio(delta) {
+  if(_precAnioActivo === null) _precAnioActivo = anioHoy();
+  _precAnioActivo += delta;
+  renderPrecursores();
+}
+
 function precGetDatos(pub, anio) {
   const regs = pub.registros || {};
 
@@ -11634,7 +11644,9 @@ function precAbrirRegistro(pubId) {
 function renderPrecursores() {
   const root = document.getElementById('precursores-root');
   if(!root) return;
-  const anio = anioHoy();
+  if(_precAnioActivo === null) _precAnioActivo = anioHoy();
+  const anio = _precAnioActivo;
+  const esAnioActual = anio === anioHoy();
 
   // Filtrar por grupo si es anciano o auxiliar
   const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
@@ -11667,7 +11679,11 @@ function renderPrecursores() {
   html += `<div class="prec-header">
     <div>
       <div class="prec-title">Precursores Regulares${_soloGrupo ? ' · ' + currentUser.grupo : ''}</div>
-      <div class="prec-subtitle">Año de servicio ${anio}–${anio+1} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></div>
+      <div class="prec-subtitle" style="display:flex;align-items:center;gap:8px">
+        <button onclick="precCambiarAnio(-1)" title="Año anterior" style="border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;cursor:pointer;font-size:12px;line-height:1">◀</button>
+        <span>Año de servicio ${anio}–${anio+1}${esAnioActual ? '' : ' <span style="font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:1px 7px;border-radius:10px">histórico</span>'} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></span>
+        <button onclick="precCambiarAnio(1)" title="Año siguiente" ${anio >= anioHoy() ? 'disabled style="opacity:.35;cursor:default;border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;font-size:12px;line-height:1"' : 'style="border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;cursor:pointer;font-size:12px;line-height:1"'}>▶</button>
+      </div>
     </div>
     <span class="prec-count-badge">${precursores.length} precursores</span>
   </div>`;
@@ -11840,7 +11856,7 @@ function renderPrecursores() {
     html += '</div>';
 
     // Alertas reglamentarias
-    if(d.requiereReunion) {
+    if(d.requiereReunion && d.mesesRestantes > 0) {
       html += `<div class="prec-alerta">
         <strong>⚠ Reunión requerida</strong> con el superintendente de servicio y de grupo.<br>
         Promedio últimos meses con datos: <strong>${Math.round((d.promUlt3||0)*10)/10}h</strong> — por debajo del umbral habitual (${Math.round(PREC_META_MES*0.9)}h). Meta mensual: ${PREC_META_MES}h.
@@ -11849,6 +11865,14 @@ function renderPrecursores() {
           📖 Reglamento: Al terminar el año debe tener al menos <strong>${d.metaAnioAjustada||PREC_META_ANIO}h</strong> (predicación + horas acreditadas) para poder continuar.
           Proyección actual: <strong>${Math.round(d.horasTotalCombinado + (d.promUlt3||0) * d.mesesRestantes)}h</strong>.
         </div>
+      </div>`;
+    } else if(d.requiereReunion && d.mesesRestantes === 0) {
+      // Año ya cerrado (actual finalizado o histórico): no tiene sentido hablar de
+      // "evaluar si continuar" a futuro — se muestra como resultado final del año.
+      html += `<div class="prec-alerta">
+        <strong>✗ Año finalizado — desempeño por debajo del umbral habitual.</strong>
+        Promedio del año: <strong>${Math.round((d.promedio||0)*10)/10}h/mes</strong> (umbral: ${Math.round(PREC_META_MES*0.9)}h) · Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${d.metaAnioAjustada||PREC_META_ANIO}h requeridas.
+        El Comité de Servicio determinará si puede continuar como precursor regular.
       </div>`;
     } else if(d.estado==='riesgo') {
       html += `<div class="prec-alerta ambar">
@@ -12070,7 +12094,7 @@ function precVerHistorial(pubId) {
 // ══════════════════════════════════════════════════════════════
 function precExportarExcel() {
   if(typeof XLSX === 'undefined') { alert('La librería XLSX no está disponible.'); return; }
-  const anio = anioHoy();
+  const anio = _precAnioActivo ?? anioHoy();
   const precursores = state.publicadores.filter(p => p.precursorReg)
     .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
   if(!precursores.length) { alert('No hay precursores registrados.'); return; }
@@ -12113,7 +12137,7 @@ function precExportarExcel() {
 // EXPORTAR PDF — tabla de precursores via ventana de impresión
 // ══════════════════════════════════════════════════════════════
 function precExportarPDF() {
-  const anio = anioHoy();
+  const anio = _precAnioActivo ?? anioHoy();
   const precursores = state.publicadores.filter(p => p.precursorReg)
     .sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
   if(!precursores.length) { alert('No hay precursores registrados.'); return; }
