@@ -19872,11 +19872,12 @@
             "notas": ""
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "19",
+            "notas": "",
+            "_ts": 1788972636803
           }
         },
         "2026": {
@@ -40283,7 +40284,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972613516,
+  "_lastModified": 1788972637782,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43559,6 +43560,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972636803,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Ruth · Ago 2025: horas=19",
+      "pubId": "mmm9qi4qzmjj"
+    },
+    {
+      "ts": 1788972636793,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Ruth · Ago 2025: horas=19",
+      "pubId": "mmm9qi4qzmjj"
+    },
+    {
       "ts": 1788972603126,
       "user": "Administrador",
       "rol": "admin",
@@ -45141,22 +45158,6 @@
       "accion": "Publicador editado",
       "detalle": "Millan, Fernando · Grupo: Grupo 7 → Grupo 6",
       "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1788124777737,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Alarcon, Victor Hugo · Grupo: Grupo 4 → Grupo 14",
-      "pubId": "mmm9qi4jnax6"
-    },
-    {
-      "ts": 1788124769546,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Alarcon, Karla · Grupo: Grupo 4 → Grupo 14",
-      "pubId": "mmm9qi4jaer1"
     }
   ],
   "formHistorial": [
