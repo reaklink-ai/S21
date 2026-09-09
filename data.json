@@ -32673,15 +32673,93 @@
             "_ts": 1787093576951
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788973276887
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -42237,7 +42315,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973269542,
+  "_lastModified": 1788973277333,
   "vym": {
     "semanas": {},
     "historial": [
@@ -45513,6 +45591,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973276887,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
+      "ts": 1788973276880,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
       "ts": 1788973269127,
       "user": "Administrador",
       "rol": "admin",
@@ -47095,22 +47189,6 @@
       "accion": "Publicador editado",
       "detalle": "Ormaza, Gloria · Grupo: Grupo 7 → Grupo 6",
       "pubId": "p1777912957789"
-    },
-    {
-      "ts": 1788528705253,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Ormaza, Gloria · Grupo: Grupo 4 → Grupo 7",
-      "pubId": "p1777912957789"
-    },
-    {
-      "ts": 1788528689331,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
