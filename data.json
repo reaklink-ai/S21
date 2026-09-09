@@ -21086,15 +21086,93 @@
             "_ts": 1787093781375
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "36",
+            "notas": "",
+            "_ts": 1788973142004
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -41612,7 +41690,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973116632,
+  "_lastModified": 1788973143087,
   "vym": {
     "semanas": {},
     "historial": [
@@ -44888,6 +44966,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973142004,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Ago 2025: horas=36",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1788973141996,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Ago 2025: horas=36",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
+      "ts": 1788973140473,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Ago 2025: cursos=",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
       "ts": 1788972916439,
       "user": "Administrador",
       "rol": "admin",
@@ -46457,30 +46559,6 @@
     },
     {
       "ts": 1788196201109,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Reactivado",
-      "detalle": "Aldana de Graterol, Havigahid",
-      "pubId": "p1783439700818"
-    },
-    {
-      "ts": 1788196193233,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788194036248,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Aldana de Graterol, Havigahid · Grupo: Grupo 8 → Grupo 4",
-      "pubId": "p1783439700818"
-    },
-    {
-      "ts": 1788193990676,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Reactivado",
