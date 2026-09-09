@@ -25918,15 +25918,93 @@
             "_ts": 1787089742070
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "24",
+            "notas": "",
+            "_ts": 1788974364382
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -44437,7 +44515,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974351916,
+  "_lastModified": 1788974365294,
   "vym": {
     "semanas": {},
     "historial": [
@@ -47713,6 +47791,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974364382,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Ago 2025: horas=24",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1788974364373,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Ago 2025: horas=24",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1788974361140,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Ago 2025: horas=",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1788974360645,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1788974360633,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1788974338919,
       "user": "Administrador",
       "rol": "admin",
@@ -49271,46 +49389,6 @@
       "accion": "Horas editadas",
       "detalle": "Bejarano, Martha · Ago 2025: horas=30",
       "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1788793087964,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Ago 2025: horas=30",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1788793082537,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1788793082524,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1788792951585,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Felipe · Ago 2025: cursos=",
-      "pubId": "mmm9qi4l7kbw"
-    },
-    {
-      "ts": 1788792951571,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Felipe · Ago 2025: cursos=",
-      "pubId": "mmm9qi4l7kbw"
     }
   ],
   "formHistorial": [
