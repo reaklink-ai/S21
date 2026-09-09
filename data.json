@@ -29600,7 +29600,7 @@
       "id": "mmm9qi4sgwb2",
       "apellido": "Rodriguez",
       "nombre": "Cristian",
-      "nacimiento": "",
+      "nacimiento": "1979-01-20",
       "bautismo": "2022-08-24",
       "grupo": "Grupo 8",
       "telefono": "3505651069",
@@ -29610,7 +29610,7 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "José Luis Rodríguez Garzon",
@@ -29618,7 +29618,8 @@
         "tel": "3102673695",
         "tel2": "",
         "direccion": "Calle 15 No. 7C-11",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788974163961
       },
       "registros": {
         "2024": {
@@ -29764,6 +29765,83 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -29778,7 +29856,9 @@
           "horas": 300,
           "cursos": 12
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788974163961
     },
     {
       "id": "mmm9qi4s4baq",
@@ -43496,7 +43576,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974131917,
+  "_lastModified": 1788974165440,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46772,6 +46852,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974163961,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Rodriguez, Cristian · Nacimiento: 1979-01-20",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
       "ts": 1788974119558,
       "user": "Administrador",
       "rol": "admin",
@@ -48361,14 +48449,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Nov 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529224328,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Oct 2026: horas=79",
       "pubId": "p1788529197916"
     }
   ],
