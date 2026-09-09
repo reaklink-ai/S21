@@ -10493,8 +10493,8 @@
       "id": "mmm9qi4nj17y",
       "apellido": "Galindo",
       "nombre": "Estefania",
-      "nacimiento": "",
-      "bautismo": "",
+      "nacimiento": "2006-11-21",
+      "bautismo": "2024-12-01",
       "grupo": "Grupo 8",
       "telefono": "3118317856",
       "genero": "F",
@@ -10503,7 +10503,7 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Claudia Valencia",
@@ -10511,7 +10511,8 @@
         "tel": "320 8982856",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788973911385
       },
       "registros": {
         "2024": {
@@ -10667,7 +10668,9 @@
           "horas": 201,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788973911385
     },
     {
       "id": "mmm9qi4nc993",
@@ -43254,7 +43257,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973705409,
+  "_lastModified": 1788973913622,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46530,6 +46533,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973911386,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Galindo, Estefania · Nacimiento: 2006-11-21",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
       "ts": 1788973520227,
       "user": "Administrador",
       "rol": "admin",
@@ -48119,14 +48130,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Abr 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529214150,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: cursos=1",
       "pubId": "p1788529197916"
     }
   ],
