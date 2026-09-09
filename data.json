@@ -3916,11 +3916,12 @@
             "_ts": 1787095406655
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "31",
+            "notas": "",
+            "_ts": 1788974256087
           }
         },
         "2026": {
@@ -43733,7 +43734,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974248389,
+  "_lastModified": 1788974256567,
   "vym": {
     "semanas": {},
     "historial": [
@@ -47009,6 +47010,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974256087,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Ago 2025: horas=31",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1788974256078,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Ago 2025: horas=31",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
       "ts": 1788974247064,
       "user": "Administrador",
       "rol": "admin",
@@ -48590,22 +48607,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Jun 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529240325,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529240319,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2026: horas=65",
       "pubId": "p1788529197916"
     }
   ],
