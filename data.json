@@ -44307,11 +44307,11 @@
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "65",
             "notas": "",
-            "_ts": 1788974758119
+            "_ts": 1788974803952
           },
           "Ene": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974798072,
+  "_lastModified": 1788974804355,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974803952,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974803944,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974802550,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974802536,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974797646,
       "user": "Administrador",
       "rol": "admin",
@@ -50720,38 +50752,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=55",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883501564,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=55.5",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883497729,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: cursos=0",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883495342,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: cursos=0",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883468007,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: cursos=1",
       "pubId": "mmm9qi4m740x"
     }
   ],
