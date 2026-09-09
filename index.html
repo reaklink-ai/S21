@@ -5863,13 +5863,8 @@ function exportarPlantillaInformes(grupo) {
   _descargarPlantillaGrupo(grupo);
 }
 
-function _descargarPlantillaGrupo(grupo, mesC, anio) {
-  if(!mesC || !anio) {
-    const actual = mesActual();
-    mesC = mesC || actual.mesC;
-    anio = anio || actual.anio;
-  }
-  const mesNombre = MESES[MESES_C.indexOf(mesC)];
+function _descargarPlantillaGrupo(grupo) {
+  const { mesC, mesNombre, anio } = mesActual();
   const anioLabel = `${anio}-${anio+1}`;
   const miembros = state.publicadores
     .filter(p => p.grupo === grupo)
@@ -6160,7 +6155,7 @@ function _importarFormatoViejo(rows) {
 
 
 // Modal selector de grupo para plantilla
-function abrirModalPlantillaInformes(grupoPre) {
+function abrirModalPlantillaInformes() {
   document.getElementById('modalPlantillaInformes').style.display = 'flex';
   const sel = document.getElementById('selectGrupoPlantilla');
   sel.innerHTML = GRUPOS_LISTA
@@ -6169,34 +6164,14 @@ function abrirModalPlantillaInformes(grupoPre) {
       const n = state.publicadores.filter(p => p.grupo===g).length;
       return `<option value="${g}">${g} (${n} publicadores)</option>`;
     }).join('');
-  if(grupoPre) sel.value = grupoPre;
-
-  const actual = mesActual();
-
-  const selMes = document.getElementById('selectMesPlantilla');
-  selMes.innerHTML = MESES_C
-    .map((m, i) => `<option value="${m}">${MESES[i]}</option>`)
-    .join('');
-  selMes.value = actual.mesC;
-
-  const selAnio = document.getElementById('selectAnioPlantilla');
-  const anioActual = actual.anio;
-  const anios = [];
-  for(let a = anioActual - 2; a <= anioActual + 1; a++) anios.push(a);
-  selAnio.innerHTML = anios
-    .map(a => `<option value="${a}">${a}-${a+1}</option>`)
-    .join('');
-  selAnio.value = anioActual;
 }
 function cerrarModalPlantilla() {
   document.getElementById('modalPlantillaInformes').style.display = 'none';
 }
 function confirmarDescargaPlantilla() {
   const grupo = document.getElementById('selectGrupoPlantilla').value;
-  const mesC  = document.getElementById('selectMesPlantilla').value;
-  const anio  = parseInt(document.getElementById('selectAnioPlantilla').value);
   cerrarModalPlantilla();
-  _descargarPlantillaGrupo(grupo, mesC, anio);
+  _descargarPlantillaGrupo(grupo);
 }
 
 
@@ -10187,7 +10162,7 @@ function renderGruposScreen() {
       <div class="gs-chips">${chips.join('')}</div>
       <div class="gs-miembros">${items}</div>
       <div class="gs-card-footer">
-        <button class="gs-btn" onclick="abrirModalPlantillaInformes('${g}')">↓ Plantilla</button>
+        <button class="gs-btn" onclick="_descargarPlantillaGrupo('${g}')">↓ Plantilla</button>
         <button class="gs-btn" onclick="importarInformes()" title="Importar informe de este grupo">↑ Importar</button>
         <button class="gs-btn gs-btn-prim" onclick="filtrarYVerGrupo('${g}')">Ver registros →</button>
       </div>
@@ -12290,21 +12265,11 @@ function precExportarPDFUno(pubId) {
     </div>
     <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:16px">
       <p style="font-size:13px;color:var(--ink-2);line-height:1.5">
-        Descarga la plantilla Excel de un grupo y período para llenar los informes y luego importarla.
+        Descarga la plantilla Excel de un grupo para llenar los informes del mes y luego importarla.
       </p>
       <div class="form-group">
         <label class="form-label">Selecciona el grupo</label>
         <select id="selectGrupoPlantilla" class="form-input form-select"></select>
-      </div>
-      <div style="display:flex;gap:12px">
-        <div class="form-group" style="flex:1">
-          <label class="form-label">Mes</label>
-          <select id="selectMesPlantilla" class="form-input form-select"></select>
-        </div>
-        <div class="form-group" style="flex:1">
-          <label class="form-label">Año de servicio</label>
-          <select id="selectAnioPlantilla" class="form-input form-select"></select>
-        </div>
       </div>
       <div style="background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:var(--r);padding:12px;font-size:12px;color:var(--accent);line-height:1.6">
         <strong>Instrucciones:</strong><br>
