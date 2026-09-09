@@ -36665,11 +36665,12 @@
             "_ts": 1787090134138
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788974640782
           }
         },
         "2026": {
@@ -45538,7 +45539,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974632442,
+  "_lastModified": 1788974641280,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48814,6 +48815,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974640782,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1788974640774,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
       "ts": 1788974625633,
       "user": "Administrador",
       "rol": "admin",
@@ -50395,22 +50412,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1788793993397,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1788793753731,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Ago 2025: horas=",
       "pubId": "mmm9qi4rre7b"
     }
   ],
