@@ -5002,7 +5002,7 @@
       "id": "mmm9qi4kk1hh",
       "apellido": "Beltran",
       "nombre": "Mauricio",
-      "nacimiento": "",
+      "nacimiento": "1971-03-04",
       "bautismo": "2012-03-24",
       "grupo": "Grupo 2",
       "telefono": "3223462780",
@@ -5012,15 +5012,16 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Carlos Torres",
-        "relacion": "nan",
+        "relacion": "",
         "tel": "3124693588",
         "tel2": "",
         "direccion": "Calle 10 #1A-18",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1788974456618
       },
       "registros": {
         "2024": {
@@ -5175,7 +5176,9 @@
           "horas": 16,
           "cursos": 6
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1788974456618
     },
     {
       "id": "mmm9qi4lgiwv",
@@ -44828,7 +44831,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974420827,
+  "_lastModified": 1788974458516,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48104,6 +48107,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974456619,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beltran, Mauricio · Nacimiento: 1971-03-04",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
       "ts": 1788974420414,
       "user": "Administrador",
       "rol": "admin",
@@ -49694,14 +49705,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · Ago 2025: horas=55",
       "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788793160710,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Ago 2025: horas=51",
-      "pubId": "mmm9qi4lxrtx"
     }
   ],
   "formHistorial": [
