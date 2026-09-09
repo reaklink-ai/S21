@@ -14002,7 +14002,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "50 Horas Betel",
+            "_ts": 1788972307912
           }
         },
         "2026": {
@@ -40275,7 +40276,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972287558,
+  "_lastModified": 1788972308382,
   "vym": {
     "semanas": {},
     "historial": [
