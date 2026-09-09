@@ -10398,9 +10398,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1788971871862
+            "horas": "4.5",
+            "notas": "35 Horas Asambleas Regionales 15,5 Horas Betel",
+            "_ts": 1788972257016
           }
         },
         "2026": {
@@ -40272,7 +40272,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972223449,
+  "_lastModified": 1788972257691,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43548,6 +43548,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972237944,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Samuel · Ago 2025: horas=4.5",
+      "pubId": "mmm9qi4nd6my"
+    },
+    {
+      "ts": 1788972237926,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Samuel · Ago 2025: horas=4.5",
+      "pubId": "mmm9qi4nd6my"
+    },
+    {
       "ts": 1788972222678,
       "user": "Administrador",
       "rol": "admin",
@@ -45130,22 +45146,6 @@
       "accion": "Horas editadas",
       "detalle": "Lopez Pardo, Willian · Jul 2025: cursos=1",
       "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1787097891693,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1787097871454,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4ntq1t"
     }
   ],
   "formHistorial": [
