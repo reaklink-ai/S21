@@ -33087,11 +33087,12 @@
             "_ts": 1787090130289
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "53",
+            "notas": "ESCUELA DE PRECURSORES",
+            "_ts": 1788974631456
           }
         },
         "2026": {
@@ -45537,7 +45538,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974610575,
+  "_lastModified": 1788974632442,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48813,6 +48814,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974625633,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Ago 2025: horas=53",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1788974625623,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Ago 2025: horas=53",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
       "ts": 1788974604236,
       "user": "Administrador",
       "rol": "admin",
@@ -50394,22 +50411,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · Ago 2025: horas=",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1788793693247,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1788793693237,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Ago 2025: cursos=3",
       "pubId": "mmm9qi4rre7b"
     }
   ],
