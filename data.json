@@ -44412,12 +44412,12 @@
             "_ts": 1788974820528
           },
           "Ene": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "65",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529230068
+            "_ts": 1788974829858
           },
           "Feb": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974826803,
+  "_lastModified": 1788974831123,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974829757,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974829744,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974825898,
       "user": "Administrador",
       "rol": "admin",
@@ -50737,22 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=26",
       "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788972208871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788971703345,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
