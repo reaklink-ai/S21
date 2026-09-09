@@ -21688,15 +21688,93 @@
             "_ts": 1787095522874
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788972846011
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -40519,7 +40597,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972833316,
+  "_lastModified": 1788972846850,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43795,6 +43873,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972846011,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
+      "ts": 1788972846003,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
       "ts": 1788972828209,
       "user": "Administrador",
       "rol": "admin",
@@ -45377,22 +45471,6 @@
       "accion": "Marcado mudado",
       "detalle": "Conde, Jose → Se muda a bogota",
       "pubId": "mmm9qi4m86kf"
-    },
-    {
-      "ts": 1788192841374,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Marcado mudado",
-      "detalle": "Conde, Martha → se muda a bogota",
-      "pubId": "mmm9qi4mva5c"
-    },
-    {
-      "ts": 1788192547629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Clavijo, Claudia · Grupo: Grupo 6 → Grupo 7",
-      "pubId": "p1788192485987"
     }
   ],
   "formHistorial": [
