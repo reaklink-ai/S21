@@ -20159,11 +20159,12 @@
             "_ts": 1787707965593
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "36",
+            "notas": "",
+            "_ts": 1788972649084
           }
         },
         "2026": {
@@ -40284,7 +40285,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972637782,
+  "_lastModified": 1788972650272,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43560,6 +43561,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972649084,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Yakci · Ago 2025: horas=36",
+      "pubId": "mmm9qi4qdi8f"
+    },
+    {
+      "ts": 1788972649073,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Yakci · Ago 2025: horas=36",
+      "pubId": "mmm9qi4qdi8f"
+    },
+    {
       "ts": 1788972636803,
       "user": "Administrador",
       "rol": "admin",
@@ -45142,22 +45159,6 @@
       "accion": "Publicador editado",
       "detalle": "Millán, Laura Camila · Grupo: Grupo 7 → Grupo 6",
       "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1788124824782,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millán, Andrea Carolina · Grupo: Grupo 7 → Grupo 6",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1788124819174,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millan, Fernando · Grupo: Grupo 7 → Grupo 6",
-      "pubId": "mmm9qi4q1iwb"
     }
   ],
   "formHistorial": [
