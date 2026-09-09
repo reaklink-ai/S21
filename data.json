@@ -36771,16 +36771,93 @@
             "_ts": 1787089881623
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1781804952723
+            "_ts": 1788974494971
           }
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -45143,7 +45220,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974486154,
+  "_lastModified": 1788974495473,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48419,6 +48496,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974494971,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
+      "ts": 1788974494960,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
       "ts": 1788974467612,
       "user": "Administrador",
       "rol": "admin",
@@ -50001,22 +50094,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Ago 2025: cursos=1",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1788793203755,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Ago 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1788793203742,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Ago 2025: horas=30",
-      "pubId": "mmm9qi4now8s"
     }
   ],
   "formHistorial": [
