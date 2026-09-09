@@ -44299,11 +44299,11 @@
           },
           "Nov": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "65",
             "notas": "",
-            "_ts": 1788974757784
+            "_ts": 1788974790170
           },
           "Dic": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974785212,
+  "_lastModified": 1788974790742,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974790170,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974790160,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974788429,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974788415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Nov 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974782954,
       "user": "Administrador",
       "rol": "admin",
@@ -50721,38 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=1",
       "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883442266,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=0.5",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883441793,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=0",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883380325,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788828583993,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Dic 2024: horas=41",
-      "pubId": "mmm9qi4ndp9i"
     }
   ],
   "formHistorial": [
