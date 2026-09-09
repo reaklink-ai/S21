@@ -105,6 +105,83 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -8300,16 +8377,17 @@
             "notas": ""
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788971717922
           }
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -8320,8 +8398,7 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1788883506031
+            "notas": ""
           },
           "Oct": {
             "particip": false,
@@ -9016,28 +9093,28 @@
             "notas": ""
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788971071566
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
-            "particip": true,
-            "cursos": "1",
-            "paux": false,
-            "horas": "56",
-            "notas": "Escuela"
           },
           "Sep": {
             "particip": false,
-            "cursos": "0",
+            "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1788883504687
+            "notas": ""
           },
           "Oct": {
             "particip": false,
@@ -10318,20 +10395,21 @@
             "notas": "49 Horas Betel"
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1788971871862
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
-            "particip": true,
-            "cursos": "",
-            "paux": false,
-            "horas": "4.5",
-            "notas": "35 Horas Asambleas Regionales 15,5 Betel"
           },
           "Sep": {
             "particip": false,
@@ -11479,7 +11557,7 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": true,
+      "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
         "nombre": "Ximena Martinez",
@@ -11487,8 +11565,7 @@
         "tel": "3002719383",
         "tel2": "",
         "direccion": "",
-        "notasMed": "",
-        "_ts": 1788828466700
+        "notasMed": ""
       },
       "registros": {
         "2024": {
@@ -11497,8 +11574,7 @@
             "horas": "34",
             "cursos": "",
             "paux": false,
-            "notas": "",
-            "_ts": 1788828581278
+            "notas": ""
           },
           "Feb": {
             "particip": true,
@@ -11755,7 +11831,6 @@
           "cursos": 0
         }
       },
-      "precAuxContinuo": false,
       "_tsPersonal": 1788828466700
     },
     {
@@ -12682,7 +12757,7 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -13425,7 +13500,7 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -13670,7 +13745,7 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -13929,11 +14004,11 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "50 Betel"
+            "notas": ""
           },
           "Sep": {
             "particip": false,
@@ -14182,10 +14257,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "51",
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -15854,11 +15929,11 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "3",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "12",
-            "notas": "Escuela, Betel 43"
+            "horas": "",
+            "notas": ""
           },
           "Sep": {
             "particip": false,
@@ -16125,10 +16200,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "3",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "42",
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -16381,11 +16456,11 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "49",
-            "notas": "Salud Afectada"
+            "horas": "",
+            "notas": ""
           },
           "Sep": {
             "particip": false,
@@ -16643,10 +16718,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "46",
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -16889,10 +16964,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "55",
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -19032,10 +19107,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
-            "paux": true,
-            "horas": "16",
+            "paux": false,
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -19795,10 +19870,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
-            "paux": true,
-            "horas": "19",
+            "paux": false,
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -20081,10 +20156,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
-            "paux": true,
-            "horas": "36",
+            "paux": false,
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -24653,10 +24728,10 @@
         },
         "2026": {
           "Ago": {
-            "particip": true,
-            "cursos": "4",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "49",
+            "horas": "",
             "notas": ""
           },
           "Sep": {
@@ -40197,7 +40272,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788889109638,
+  "_lastModified": 1788972118636,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43473,6 +43548,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788971703345,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788971018710,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1788906267382,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1788888927741,
       "user": "Harold_La",
       "rol": "anciano",
@@ -45047,30 +45146,6 @@
       "accion": "Horas editadas",
       "detalle": "Castro De Cruz, Elizabeth · Jul 2025: horas=40",
       "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1787097839527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1787097839517,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1787097812287,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
     }
   ],
   "formHistorial": [
