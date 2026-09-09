@@ -17077,11 +17077,12 @@
             "_ts": 1787090079421
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788974577042
           }
         },
         "2026": {
@@ -45301,7 +45302,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974571133,
+  "_lastModified": 1788974577562,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48577,6 +48578,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974577042,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1788974577031,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
       "ts": 1788974570649,
       "user": "Administrador",
       "rol": "admin",
@@ -50159,22 +50176,6 @@
       "accion": "Horas editadas",
       "detalle": "Villa, Julia · Ago 2025: horas=15",
       "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1788793299873,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Ago 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1788793299864,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Ago 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
