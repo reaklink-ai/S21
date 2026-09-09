@@ -44373,9 +44373,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "46",
             "notas": "",
-            "_ts": 1788974761396
+            "_ts": 1788974899766
           }
         },
         "2026": {
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974893633,
+  "_lastModified": 1788974900969,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974899766,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ago 2025: horas=46",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974899752,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ago 2025: horas=46",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974892756,
       "user": "Administrador",
       "rol": "admin",
@@ -50737,22 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Perez, Danna · Ago 2025: horas=45",
       "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1788972853916,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1788972853906,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4qgt8u"
     }
   ],
   "formHistorial": [
