@@ -15929,8 +15929,8 @@
             "cursos": "3",
             "paux": false,
             "horas": "12",
-            "notas": "30 horas escuela de precursores",
-            "_ts": 1788972495501
+            "notas": "30 horas escuela de precursores y Betel",
+            "_ts": 1788972511428
           }
         },
         "2026": {
@@ -40278,7 +40278,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972497995,
+  "_lastModified": 1788972512526,
   "vym": {
     "semanas": {},
     "historial": [
