@@ -9096,9 +9096,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1788971071566
+            "horas": "26",
+            "notas": "30 HORAS ESCUELA DE PRECURSORES",
+            "_ts": 1788972222678
           }
         },
         "2026": {
@@ -40272,7 +40272,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972177719,
+  "_lastModified": 1788972223449,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43548,6 +43548,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972222678,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=26",
+      "pubId": "mmm9qi4m740x"
+    },
+    {
+      "ts": 1788972222671,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=26",
+      "pubId": "mmm9qi4m740x"
+    },
+    {
+      "ts": 1788972208871,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=",
+      "pubId": "mmm9qi4m740x"
+    },
+    {
       "ts": 1788971703345,
       "user": "Administrador",
       "rol": "admin",
@@ -45122,30 +45146,6 @@
       "accion": "Horas editadas",
       "detalle": "Huertas, Oscar · Jul 2025: cursos=1",
       "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1787097871442,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1787097841398,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: horas=40",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1787097841385,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Jul 2025: horas=40",
-      "pubId": "mmm9qi4l0gf8"
     }
   ],
   "formHistorial": [
