@@ -24968,15 +24968,93 @@
             "_ts": 1787089717472
           },
           "Ago": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "45",
+            "notas": "",
+            "_ts": 1788974338919
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -44203,7 +44281,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974322748,
+  "_lastModified": 1788974340177,
   "vym": {
     "semanas": {},
     "historial": [
@@ -47479,6 +47557,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974338919,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Ago 2025: horas=45",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1788974338910,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Ago 2025: horas=45",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1788974337758,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1788974337748,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
       "ts": 1788974321747,
       "user": "Administrador",
       "rol": "admin",
@@ -49045,38 +49155,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Felipe · Ago 2025: cursos=",
       "pubId": "mmm9qi4l7kbw"
-    },
-    {
-      "ts": 1788792943935,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Felipe · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4l7kbw"
-    },
-    {
-      "ts": 1788792943921,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Felipe · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4l7kbw"
-    },
-    {
-      "ts": 1788792643704,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788738857776,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
