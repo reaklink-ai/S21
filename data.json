@@ -10640,11 +10640,12 @@
             "_ts": 1787095622338
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "30 horas escuela de precursores",
+            "_ts": 1788974059414
           }
         },
         "2026": {
@@ -43257,7 +43258,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973913622,
+  "_lastModified": 1788974060430,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46533,6 +46534,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974051364,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Ago 2025: horas=35",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
+      "ts": 1788974051347,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Ago 2025: horas=35",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
       "ts": 1788973911386,
       "user": "Administrador",
       "rol": "admin",
@@ -48114,22 +48131,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · May 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529214666,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529214661,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: cursos=1",
       "pubId": "p1788529197916"
     }
   ],
