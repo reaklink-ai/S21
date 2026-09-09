@@ -14253,11 +14253,11 @@
           },
           "Ago": {
             "particip": true,
-            "cursos": "51",
+            "cursos": "1",
             "paux": false,
-            "horas": "1",
+            "horas": "51",
             "notas": "",
-            "_ts": 1788972334659
+            "_ts": 1788972394748
           }
         },
         "2026": {
@@ -15925,11 +15925,12 @@
             "notas": "43 Horas Betel"
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "",
+            "_ts": 1788972386373
           }
         },
         "2026": {
@@ -40277,7 +40278,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972338483,
+  "_lastModified": 1788972395463,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43553,6 +43554,70 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972394748,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: horas=51",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972394741,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: horas=51",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972393498,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972393490,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972386373,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Andrea · Ago 2025: horas=12",
+      "pubId": "mmm9qi4o4bcn"
+    },
+    {
+      "ts": 1788972386365,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Andrea · Ago 2025: horas=12",
+      "pubId": "mmm9qi4o4bcn"
+    },
+    {
+      "ts": 1788972382795,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Andrea · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4o4bcn"
+    },
+    {
+      "ts": 1788972382786,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Andrea · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4o4bcn"
+    },
+    {
       "ts": 1788972334659,
       "user": "Administrador",
       "rol": "admin",
@@ -45087,70 +45152,6 @@
       "accion": "Horas editadas",
       "detalle": "Ruiz, Luz Marina · Jul 2025: cursos=1",
       "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1787098014871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1787097989916,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jul 2025: horas=35",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1787097989904,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jul 2025: horas=35",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1787097987169,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1787097987156,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1787097956037,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1787097956026,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1787097924318,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Jul 2025: horas=12",
-      "pubId": "mmm9qi4r25tb"
     }
   ],
   "formHistorial": [
