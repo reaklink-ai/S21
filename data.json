@@ -44444,20 +44444,20 @@
             "_ts": 1788974871845
           },
           "May": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "65",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529240325
+            "_ts": 1788974886902
           },
           "Jun": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "65",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529243176
+            "_ts": 1788974886384
           },
           "Jul": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974879844,
+  "_lastModified": 1788974887980,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,70 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974886268,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974886259,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974885642,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974885634,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974884829,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974884820,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974884110,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974884097,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974879396,
       "user": "Administrador",
       "rol": "admin",
@@ -50689,70 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Dominguez, Oscar Javier · Ago 2025: horas=31",
       "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1788972825038,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Oscar Javier · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1788972825020,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Oscar Javier · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1788972808006,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Ago 2025: horas=15",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1788972807996,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Ago 2025: horas=15",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1788972681284,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2025: horas=49",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1788972681276,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2025: horas=49",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1788972679391,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2025: cursos=4",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1788972679381,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2025: cursos=4",
-      "pubId": "mmm9qi4rakns"
     }
   ],
   "formHistorial": [
