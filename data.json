@@ -16717,11 +16717,12 @@
             "notas": "16 Horas Betel"
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "46",
+            "notas": "",
+            "_ts": 1788972590722
           }
         },
         "2026": {
@@ -40280,7 +40281,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972567099,
+  "_lastModified": 1788972592543,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43556,6 +43557,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972590722,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Rose · Ago 2025: horas=46",
+      "pubId": "mmm9qi4oz8wb"
+    },
+    {
+      "ts": 1788972590714,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Rose · Ago 2025: horas=46",
+      "pubId": "mmm9qi4oz8wb"
+    },
+    {
+      "ts": 1788972586849,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Rose · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4oz8wb"
+    },
+    {
+      "ts": 1788972586838,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Rose · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4oz8wb"
+    },
+    {
       "ts": 1788972551996,
       "user": "Administrador",
       "rol": "admin",
@@ -45122,38 +45155,6 @@
       "accion": "Publicador editado",
       "detalle": "Beleño, Laura · Grupo: Grupo 14 → Grupo 1",
       "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1788124734872,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Beleño, Isaac · Grupo: Grupo 14 → Grupo 1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1788124713192,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Amortegui, Natalia · Grupo: Grupo 1 → Grupo 3",
-      "pubId": "mmm9qi4j8aj2"
-    },
-    {
-      "ts": 1788124701867,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Amortegui, Cesar Mauricio · Grupo: Grupo 1 → Grupo 3",
-      "pubId": "mmm9qi4jl2r2"
-    },
-    {
-      "ts": 1788122789657,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
