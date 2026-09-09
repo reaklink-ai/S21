@@ -29751,11 +29751,12 @@
             "_ts": 1787095703641
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1788974174059
           }
         },
         "2026": {
@@ -43576,7 +43577,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974165440,
+  "_lastModified": 1788974175006,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46852,6 +46853,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974174059,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Ago 2025: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1788974174050,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Ago 2025: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1788974171108,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1788974171097,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
       "ts": 1788974163961,
       "user": "Administrador",
       "rol": "admin",
@@ -48417,38 +48450,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Ene 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529227744,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Dic 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529227738,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Dic 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529226453,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Nov 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529226445,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Nov 2026: horas=65",
       "pubId": "p1788529197916"
     }
   ],
