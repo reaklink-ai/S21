@@ -44380,20 +44380,20 @@
         },
         "2026": {
           "Sep": {
-            "particip": true,
-            "cursos": "2",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "81",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529221078
+            "_ts": 1788974783551
           },
           "Oct": {
-            "particip": true,
-            "cursos": "2",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "79",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529224328
+            "_ts": 1788974783056
           },
           "Nov": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974777135,
+  "_lastModified": 1788974785212,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,78 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974782954,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974782944,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974782326,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974782315,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974781589,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974780751,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974780741,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974779966,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974779953,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974776716,
       "user": "Administrador",
       "rol": "admin",
@@ -50680,78 +50752,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Guerrero, Adriana · Dic 2024: horas=41",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828583980,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Dic 2024: horas=41",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828581278,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Ene 2024: horas=34",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828580280,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Nov 2024: horas=46",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828580270,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Nov 2024: horas=46",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828577414,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Oct 2024: horas=21",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828577403,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Oct 2024: horas=21",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828575514,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Sep 2024: horas=34",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828575504,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Sep 2024: horas=34",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1788828466700,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Guerrero, Adriana · datos generales",
       "pubId": "mmm9qi4ndp9i"
     }
   ],
