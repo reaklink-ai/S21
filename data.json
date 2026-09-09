@@ -10723,15 +10723,93 @@
             "_ts": 1787093759665
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1788973446852
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -42708,7 +42786,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973435095,
+  "_lastModified": 1788973448060,
   "vym": {
     "semanas": {},
     "historial": [
@@ -45984,6 +46062,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973446852,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Ago 2025: horas=30",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1788973446843,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Ago 2025: horas=30",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1788973445068,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Ago 2025: cursos=",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
       "ts": 1788973408264,
       "user": "Administrador",
       "rol": "admin",
@@ -47558,30 +47660,6 @@
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Sep 2026: cursos=2",
       "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529208880,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Sep 2026: cursos=2",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529197916,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Méndez, Yaneth · Grupo 13",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529041283,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Méndez, Jose · Nombre: Mendéz → Méndez, Grupo: ninguno → Grupo 13",
-      "pubId": "p1788528816882"
     }
   ],
   "formHistorial": [
