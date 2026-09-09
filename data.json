@@ -44460,12 +44460,12 @@
             "_ts": 1788974886384
           },
           "Jul": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "68",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529245482
+            "_ts": 1788974909334
           },
           "Ago": {
             "particip": false,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974900969,
+  "_lastModified": 1788974909884,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974909334,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974909322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974908341,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974908330,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974899766,
       "user": "Administrador",
       "rol": "admin",
@@ -50721,38 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Millan, Fernando · Ago 2025: cursos=",
       "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1788972916439,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1788972916424,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1788972865340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Ago 2025: horas=45",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1788972865333,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Ago 2025: horas=45",
-      "pubId": "mmm9qi4rigm6"
     }
   ],
   "formHistorial": [
