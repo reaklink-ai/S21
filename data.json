@@ -24732,11 +24732,12 @@
             "notas": ""
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "49",
+            "notas": "",
+            "_ts": 1788972681284
           }
         },
         "2026": {
@@ -40285,7 +40286,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972650272,
+  "_lastModified": 1788972681909,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43561,6 +43562,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972681284,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Ago 2025: horas=49",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1788972681276,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Ago 2025: horas=49",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1788972679391,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Ago 2025: cursos=4",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1788972679381,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Ago 2025: cursos=4",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
       "ts": 1788972649084,
       "user": "Administrador",
       "rol": "admin",
@@ -45127,38 +45160,6 @@
       "accion": "Reactivado",
       "detalle": "Aldana de Graterol, Havigahid",
       "pubId": "p1783439700818"
-    },
-    {
-      "ts": 1788124900449,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Tovar, Daniela · Grupo: Grupo 2 → Grupo 4",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1788124893949,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Tovar, Andres · Grupo: Grupo 2 → Grupo 4",
-      "pubId": "mmm9qi4s4eyz"
-    },
-    {
-      "ts": 1788124834650,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millán, Valentina · Grupo: Grupo 7 → Grupo 6",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1788124829924,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Millán, Laura Camila · Grupo: Grupo 7 → Grupo 6",
-      "pubId": "mmm9qi4qf90z"
     }
   ],
   "formHistorial": [
