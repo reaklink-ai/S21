@@ -20085,15 +20085,93 @@
             "_ts": 1787089704067
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1788974321747
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -44125,7 +44203,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974307825,
+  "_lastModified": 1788974322748,
   "vym": {
     "semanas": {},
     "historial": [
@@ -47401,6 +47479,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974321747,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Ago 2025: horas=50",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1788974321738,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Ago 2025: horas=50",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1788974320080,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1788974320071,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
       "ts": 1788974301045,
       "user": "Administrador",
       "rol": "admin",
@@ -48967,38 +49077,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
-    },
-    {
-      "ts": 1788709360516,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788642809948,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788542820100,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788530292611,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Isaza, Maria Del Rosario · datos generales",
-      "pubId": "mmm9qi4ntbx0"
     }
   ],
   "formHistorial": [
