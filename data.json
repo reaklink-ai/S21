@@ -16894,11 +16894,12 @@
             "_ts": 1787090181120
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788974570649
           }
         },
         "2026": {
@@ -45300,7 +45301,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974563992,
+  "_lastModified": 1788974571133,
   "vym": {
     "semanas": {},
     "historial": [
@@ -48576,6 +48577,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974570649,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
+      "ts": 1788974570641,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Carlos · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4n3qgi"
+    },
+    {
       "ts": 1788974494971,
       "user": "Administrador",
       "rol": "admin",
@@ -50157,22 +50174,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Ago 2025: horas=42",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1788793296096,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1788793296085,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Ago 2025: cursos=1",
       "pubId": "mmm9qi4rhmxc"
     }
   ],
