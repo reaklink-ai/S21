@@ -14252,11 +14252,12 @@
             "notas": "Problemas de Salud"
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "51",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "1",
+            "notas": "",
+            "_ts": 1788972334659
           }
         },
         "2026": {
@@ -40276,7 +40277,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972308382,
+  "_lastModified": 1788972338483,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43552,6 +43553,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972334659,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: horas=1",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972334652,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: horas=1",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972329173,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: cursos=51",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1788972329162,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Ago 2025: cursos=51",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
       "ts": 1788972237944,
       "user": "Administrador",
       "rol": "admin",
@@ -45118,38 +45151,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Jhonatan · Jul 2025: horas=12",
       "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1787097924310,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Jul 2025: horas=12",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1787097918378,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1787097918369,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1787097891705,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4oaz18"
     }
   ],
   "formHistorial": [
