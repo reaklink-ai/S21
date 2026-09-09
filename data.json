@@ -16197,11 +16197,12 @@
             "notas": "16 Horas Betel"
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "42",
+            "notas": "",
+            "_ts": 1788972530289
           }
         },
         "2026": {
@@ -40278,7 +40279,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972512526,
+  "_lastModified": 1788972531096,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43554,6 +43555,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972530289,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Ago 2025: horas=42",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1788972530282,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Ago 2025: horas=42",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1788972522722,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1788972522713,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
       "ts": 1788972394748,
       "user": "Administrador",
       "rol": "admin",
@@ -45120,38 +45153,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1787434200065,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1787098016635,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Jul 2025: horas=46",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1787098016623,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Jul 2025: horas=46",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1787098014881,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Jul 2025: cursos=1",
-      "pubId": "mmm9qi4seyz6"
     }
   ],
   "formHistorial": [
