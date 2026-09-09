@@ -44347,19 +44347,19 @@
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "65",
             "notas": "",
-            "_ts": 1788974760078
+            "_ts": 1788974878258
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "65",
             "notas": "",
-            "_ts": 1788974760453
+            "_ts": 1788974879396
           },
           "Jul": {
             "particip": true,
@@ -44367,7 +44367,7 @@
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788974760977
+            "_ts": 1788974876284
           },
           "Ago": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974872298,
+  "_lastModified": 1788974879844,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,78 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974879396,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974879388,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974878258,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974878251,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974876943,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974876935,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jun 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974876284,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2025: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974875758,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974875744,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · May 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974871845,
       "user": "Administrador",
       "rol": "admin",
@@ -50681,78 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Quiroz, Carmen · Ago 2025: cursos=4",
       "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1788972649084,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Martinez, Yakci · Ago 2025: horas=36",
-      "pubId": "mmm9qi4qdi8f"
-    },
-    {
-      "ts": 1788972649073,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Martinez, Yakci · Ago 2025: horas=36",
-      "pubId": "mmm9qi4qdi8f"
-    },
-    {
-      "ts": 1788972636803,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Martinez, Ruth · Ago 2025: horas=19",
-      "pubId": "mmm9qi4qzmjj"
-    },
-    {
-      "ts": 1788972636793,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Martinez, Ruth · Ago 2025: horas=19",
-      "pubId": "mmm9qi4qzmjj"
-    },
-    {
-      "ts": 1788972603126,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Ago 2025: horas=55",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1788972603119,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Ago 2025: horas=55",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1788972590722,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Rose · Ago 2025: horas=46",
-      "pubId": "mmm9qi4oz8wb"
-    },
-    {
-      "ts": 1788972590714,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Rose · Ago 2025: horas=46",
-      "pubId": "mmm9qi4oz8wb"
-    },
-    {
-      "ts": 1788972586849,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Rose · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4oz8wb"
     }
   ],
   "formHistorial": [
