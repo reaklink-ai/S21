@@ -16964,11 +16964,12 @@
             "notas": ""
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1788972603126
           }
         },
         "2026": {
@@ -40281,7 +40282,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972592543,
+  "_lastModified": 1788972604145,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43557,6 +43558,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972603126,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Ago 2025: horas=55",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1788972603119,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Ago 2025: horas=55",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
       "ts": 1788972590722,
       "user": "Administrador",
       "rol": "admin",
@@ -45139,22 +45156,6 @@
       "accion": "Publicador editado",
       "detalle": "Alarcon, Karla · Grupo: Grupo 4 → Grupo 14",
       "pubId": "mmm9qi4jaer1"
-    },
-    {
-      "ts": 1788124762971,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Alarcon, Blanca · Grupo: Grupo 4 → Grupo 14",
-      "pubId": "mmm9qi4jfkxs"
-    },
-    {
-      "ts": 1788124748208,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Beleño, Laura · Grupo: Grupo 14 → Grupo 1",
-      "pubId": "mmm9qi4k0gox"
     }
   ],
   "formHistorial": [
