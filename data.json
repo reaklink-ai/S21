@@ -14241,11 +14241,12 @@
             "_ts": 1787095648969
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1788974092510
           }
         },
         "2026": {
@@ -43260,7 +43261,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974080846,
+  "_lastModified": 1788974093621,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46536,6 +46537,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974092510,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Ago 2025: horas=55",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1788974092501,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Ago 2025: horas=55",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1788974091328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1788974091317,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
       "ts": 1788974071790,
       "user": "Administrador",
       "rol": "admin",
@@ -48101,38 +48134,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529220755,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Sep 2026: horas=81",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529220749,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Sep 2026: horas=81",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529217064,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Jul 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529217055,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Jul 2026: cursos=1",
       "pubId": "p1788529197916"
     }
   ],
