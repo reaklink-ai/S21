@@ -37248,11 +37248,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788974681632
           },
           "Abr": {
             "particip": true,
@@ -45540,7 +45541,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974649180,
+  "_lastModified": 1788974683397,
   "vym": {
     "semanas": {},
     "historial": [
