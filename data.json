@@ -44283,11 +44283,11 @@
         "2025": {
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "81",
             "notas": "",
-            "_ts": 1788974757137
+            "_ts": 1788974770336
           },
           "Oct": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974762652,
+  "_lastModified": 1788974770816,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974770336,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2025: horas=81",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974770328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2025: horas=81",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974767263,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2025: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974767249,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2025: cursos=2",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974640782,
       "user": "Administrador",
       "rol": "admin",
@@ -50721,38 +50753,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1788797988004,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Ago 2025: horas=16",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1788797987993,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Ago 2025: horas=16",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1788797974003,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788793993409,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
