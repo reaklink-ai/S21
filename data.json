@@ -33511,15 +33511,93 @@
             "_ts": 1787095414887
           },
           "Ago": {
+            "particip": true,
+            "cursos": "2",
+            "paux": true,
+            "horas": "31",
+            "notas": "",
+            "_ts": 1788972832835
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -40441,7 +40519,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788972809101,
+  "_lastModified": 1788972833316,
   "vym": {
     "semanas": {},
     "historial": [
@@ -43717,6 +43795,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788972828209,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Ago 2025: horas=31",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1788972828202,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Ago 2025: horas=31",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1788972825038,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1788972825020,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
       "ts": 1788972808006,
       "user": "Administrador",
       "rol": "admin",
@@ -45283,38 +45393,6 @@
       "accion": "Publicador editado",
       "detalle": "Clavijo, Claudia · Grupo: Grupo 6 → Grupo 7",
       "pubId": "p1788192485987"
-    },
-    {
-      "ts": 1788192485987,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Clavijo, Claudia · Grupo 6",
-      "pubId": "p1788192485987"
-    },
-    {
-      "ts": 1788192391891,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788189502755,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788130209109,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
