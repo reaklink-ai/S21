@@ -31914,11 +31914,11 @@
           },
           "Ago": {
             "particip": true,
-            "cursos": "16",
+            "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "16",
             "notas": "CREDITO DE HORAS DE BETHEL : 39",
-            "_ts": 1788973514163
+            "_ts": 1788973520227
           }
         },
         "2026": {
@@ -42942,7 +42942,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973515850,
+  "_lastModified": 1788973521430,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46218,6 +46218,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973520227,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Ago 2025: horas=16",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1788973520218,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Ago 2025: horas=16",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1788973518548,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Ago 2025: cursos=",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1788973518533,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Ago 2025: cursos=",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
       "ts": 1788973506996,
       "user": "Administrador",
       "rol": "admin",
@@ -47783,38 +47815,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Mar 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529214144,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529213056,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529213050,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529212065,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Dic 2026: cursos=1",
       "pubId": "p1788529197916"
     }
   ],
