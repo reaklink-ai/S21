@@ -44319,15 +44319,15 @@
             "paux": false,
             "horas": "65",
             "notas": "",
-            "_ts": 1788974825898
+            "_ts": 1788974847106
           },
           "Feb": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "72",
             "notas": "",
-            "_ts": 1788974759011
+            "_ts": 1788974850224
           },
           "Mar": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974831123,
+  "_lastModified": 1788974850639,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974850224,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974850214,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974848421,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974848413,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Feb 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974847106,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2025: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974829757,
       "user": "Administrador",
       "rol": "admin",
@@ -50713,46 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Hernandez, Yudid · Ago 2025: cursos=51",
       "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972329162,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Ago 2025: cursos=51",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972237944,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Samuel · Ago 2025: horas=4.5",
-      "pubId": "mmm9qi4nd6my"
-    },
-    {
-      "ts": 1788972237926,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Samuel · Ago 2025: horas=4.5",
-      "pubId": "mmm9qi4nd6my"
-    },
-    {
-      "ts": 1788972222678,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=26",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788972222671,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Ago 2025: horas=26",
-      "pubId": "mmm9qi4m740x"
     }
   ],
   "formHistorial": [
