@@ -44331,19 +44331,19 @@
           },
           "Mar": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "72",
             "notas": "",
-            "_ts": 1788974759351
+            "_ts": 1788974861736
           },
           "Abr": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "72",
             "notas": "",
-            "_ts": 1788974759719
+            "_ts": 1788974863884
           },
           "May": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974857654,
+  "_lastModified": 1788974864788,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,70 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974863884,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974863877,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974862304,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974862295,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Abr 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974861736,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974861727,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2025: horas=72",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974860135,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974860121,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Mar 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974856882,
       "user": "Administrador",
       "rol": "admin",
@@ -50689,70 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Larrota, Harold · Ago 2025: cursos=3",
       "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1788972522713,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Harold · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4ol4i0"
-    },
-    {
-      "ts": 1788972394748,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Ago 2025: horas=51",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972394741,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Ago 2025: horas=51",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972393498,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972393490,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1788972386373,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Andrea · Ago 2025: horas=12",
-      "pubId": "mmm9qi4o4bcn"
-    },
-    {
-      "ts": 1788972386365,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Andrea · Ago 2025: horas=12",
-      "pubId": "mmm9qi4o4bcn"
-    },
-    {
-      "ts": 1788972382795,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Andrea · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4o4bcn"
     }
   ],
   "formHistorial": [
