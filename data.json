@@ -32875,11 +32875,12 @@
             "_ts": 1787093585411
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1788973285591
           }
         },
         "2026": {
@@ -42315,7 +42316,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973277333,
+  "_lastModified": 1788973286316,
   "vym": {
     "semanas": {},
     "historial": [
@@ -45591,6 +45592,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973285591,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Ago 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1788973285581,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Ago 2025: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1788973282628,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1788973282620,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
       "ts": 1788973276887,
       "user": "Administrador",
       "rol": "admin",
@@ -47157,38 +47190,6 @@
       "accion": "Horas editadas",
       "detalle": "Mendéz, Jose · Jul 2025: cursos=1",
       "pubId": "p1788528816882"
-    },
-    {
-      "ts": 1788528839453,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mendéz, Jose · Ene 2025: horas=15",
-      "pubId": "p1788528816882"
-    },
-    {
-      "ts": 1788528839449,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mendéz, Jose · Ene 2025: horas=15",
-      "pubId": "p1788528816882"
-    },
-    {
-      "ts": 1788528816882,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Mendéz, Jose · Sin grupo",
-      "pubId": "p1788528816882"
-    },
-    {
-      "ts": 1788528715594,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Ormaza, Gloria · Grupo: Grupo 7 → Grupo 6",
-      "pubId": "p1777912957789"
     }
   ],
   "formHistorial": [
