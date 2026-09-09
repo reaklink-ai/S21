@@ -44363,11 +44363,11 @@
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "68",
             "notas": "",
-            "_ts": 1788974876284
+            "_ts": 1788974892756
           },
           "Ago": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974887980,
+  "_lastModified": 1788974893633,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974892756,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2025: horas=68",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974892747,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2025: horas=68",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974891267,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974891254,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Jul 2025: cursos=1",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974886268,
       "user": "Administrador",
       "rol": "admin",
@@ -50721,38 +50753,6 @@
       "accion": "Horas editadas",
       "detalle": "Montoya, Xiomara · Ago 2025: cursos=2",
       "pubId": "mmm9qi4qgt8u"
-    },
-    {
-      "ts": 1788972846011,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1788972846003,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Marco · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qfkhc"
-    },
-    {
-      "ts": 1788972828209,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Oscar Javier · Ago 2025: horas=31",
-      "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1788972828202,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Oscar Javier · Ago 2025: horas=31",
-      "pubId": "mmm9qi4uvqhc"
     }
   ],
   "formHistorial": [
