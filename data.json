@@ -6166,11 +6166,12 @@
             "_ts": 1787093666011
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788973408264
           }
         },
         "2026": {
@@ -42472,7 +42473,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788973402273,
+  "_lastModified": 1788973408707,
   "vym": {
     "semanas": {},
     "historial": [
@@ -45748,6 +45749,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788973408264,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
+      "ts": 1788973408254,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Cepeda, Laura · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4l14cm"
+    },
+    {
       "ts": 1788973298932,
       "user": "Administrador",
       "rol": "admin",
@@ -47330,22 +47347,6 @@
       "accion": "Publicador editado",
       "detalle": "Méndez, Jose · Nombre: Mendéz → Méndez, Grupo: ninguno → Grupo 13",
       "pubId": "p1788528816882"
-    },
-    {
-      "ts": 1788528930136,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Méndez, Felipe · Grupo: ninguno → Grupo 13",
-      "pubId": "p1788528899828"
-    },
-    {
-      "ts": 1788528899828,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Méndez, Felipe · Sin grupo",
-      "pubId": "p1788528899828"
     }
   ],
   "formHistorial": [
