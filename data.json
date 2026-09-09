@@ -44404,12 +44404,12 @@
             "_ts": 1788974797646
           },
           "Dic": {
-            "particip": true,
-            "cursos": "1",
+            "particip": false,
+            "cursos": "",
             "paux": false,
-            "horas": "65",
+            "horas": "",
             "notas": "",
-            "_ts": 1788529227744
+            "_ts": 1788974820528
           },
           "Ene": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974804355,
+  "_lastModified": 1788974821989,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974820429,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974820418,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: cursos=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974819706,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974819695,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: horas=",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974818060,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Dic 2026: horas=64.5",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974803952,
       "user": "Administrador",
       "rol": "admin",
@@ -50713,46 +50753,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1788888927741,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788883504687,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883504669,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883502160,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=54.5",
-      "pubId": "mmm9qi4m740x"
-    },
-    {
-      "ts": 1788883501757,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Duarte, Dufay Arlet · Sep 2026: horas=55",
-      "pubId": "mmm9qi4m740x"
     }
   ],
   "formHistorial": [
