@@ -21445,15 +21445,93 @@
             "_ts": 1787095678766
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "7",
+            "notas": "48 horas betel",
+            "_ts": 1788974125678
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -43417,7 +43495,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974107295,
+  "_lastModified": 1788974126777,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46693,6 +46771,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974119558,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Ago 2025: horas=7",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1788974119547,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Ago 2025: horas=7",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1788974092510,
       "user": "Administrador",
       "rol": "admin",
@@ -48274,22 +48368,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Oct 2026: horas=79",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529224322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Oct 2026: horas=79",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529221409,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Oct 2026: cursos=2",
       "pubId": "p1788529197916"
     }
   ],
