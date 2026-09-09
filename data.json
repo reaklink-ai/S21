@@ -3639,15 +3639,93 @@
             "_ts": 1787095327690
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "34",
+            "notas": "",
+            "_ts": 1788974247064
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -43655,7 +43733,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974187846,
+  "_lastModified": 1788974248389,
   "vym": {
     "semanas": {},
     "historial": [
@@ -46931,6 +47009,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974247064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Ago 2025: horas=34",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1788974247055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Ago 2025: horas=34",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1788974245345,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1788974245334,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
       "ts": 1788974186450,
       "user": "Administrador",
       "rol": "admin",
@@ -48496,38 +48606,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · May 2026: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529237770,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529237763,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529235106,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788529235099,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: horas=72",
       "pubId": "p1788529197916"
     }
   ],
