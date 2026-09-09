@@ -6540,11 +6540,12 @@
             "_ts": 1787089660502
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1788974558055
           }
         },
         "2026": {
@@ -45298,7 +45299,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974555151,
+  "_lastModified": 1788974559039,
   "vym": {
     "semanas": {},
     "historial": [
