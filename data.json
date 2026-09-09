@@ -44317,9 +44317,9 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "65",
             "notas": "",
-            "_ts": 1788974758489
+            "_ts": 1788974825898
           },
           "Feb": {
             "particip": true,
@@ -45879,7 +45879,7 @@
       "grupo": "Grupo 7"
     }
   ],
-  "_lastModified": 1788974821989,
+  "_lastModified": 1788974826803,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49155,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1788974825898,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1788974825889,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Ene 2025: horas=65",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1788974820429,
       "user": "Administrador",
       "rol": "admin",
@@ -50732,22 +50748,6 @@
     },
     {
       "ts": 1788971703345,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788971018710,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1788906267382,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
