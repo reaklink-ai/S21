@@ -3124,15 +3124,93 @@
             "_ts": 1787096096757
           },
           "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "49",
+            "notas": "",
+            "_ts": 1789052665617
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -19350,6 +19428,84 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789000212582
           }
         }
       }
@@ -45903,7 +46059,7 @@
       }
     }
   ],
-  "_lastModified": 1789003169721,
+  "_lastModified": 1789052668395,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49179,6 +49335,70 @@
   ],
   "auditoria": [
     {
+      "ts": 1789052665617,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: cursos=",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052665603,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: cursos=",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052662006,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: horas=49",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052661995,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: horas=49",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052651973,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: horas=49",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052619175,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: cursos=49",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052619161,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Ago 2025: cursos=49",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1789052552153,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789003035704,
       "user": "Administrador",
       "rol": "admin",
@@ -49206,6 +49426,30 @@
       "ts": 1789002739231,
       "user": "Administrador",
       "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789000175076,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789000141807,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789000044539,
+      "user": "Jaime_P",
+      "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -50689,94 +50933,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Mario · Ago 2025: cursos=1",
       "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1788973267829,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1788973252589,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Ago 2025: horas=12",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1788973252579,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Ago 2025: horas=12",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1788973250188,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Ago 2025: cursos=",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1788973231535,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1788973231526,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1788973186541,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Ago 2025: horas=32",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1788973186532,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Ago 2025: horas=32",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1788973184957,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Valentina · Ago 2025: cursos=",
-      "pubId": "mmm9qi4qve1a"
-    },
-    {
-      "ts": 1788973172732,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Laura Camila · Ago 2025: horas=18",
-      "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1788973172724,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Laura Camila · Ago 2025: horas=18",
-      "pubId": "mmm9qi4qf90z"
     }
   ],
   "formHistorial": [
