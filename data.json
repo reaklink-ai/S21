@@ -25965,8 +25965,8 @@
             "cursos": "3",
             "paux": false,
             "horas": "71",
-            "notas": "GVP- Incluye crédito ESP ",
-            "_ts": 1789053067322
+            "notas": "GVP- crédito ESP ",
+            "_ts": 1789053132069
           }
         },
         "2026": {
@@ -46606,7 +46606,7 @@
       }
     }
   ],
-  "_lastModified": 1789053068728,
+  "_lastModified": 1789053133596,
   "vym": {
     "semanas": {},
     "historial": [
