@@ -25502,9 +25502,9 @@
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "51",
             "notas": "",
-            "_ts": 1789052950277
+            "_ts": 1789053203901
           }
         },
         "2026": {
@@ -46840,7 +46840,7 @@
       }
     }
   ],
-  "_lastModified": 1789053176271,
+  "_lastModified": 1789053209070,
   "vym": {
     "semanas": {},
     "historial": [
@@ -50116,6 +50116,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789053203901,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Ago 2025: horas=51",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1789053203887,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Ago 2025: horas=51",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
       "ts": 1789053027623,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -51697,22 +51713,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1788973298925,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1788973296077,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Ago 2025: cursos=1",
       "pubId": "mmm9qi4tl3oj"
     }
   ],
