@@ -38304,11 +38304,12 @@
             "_ts": 1787096117647
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1789056293674
           }
         },
         "2026": {
@@ -46840,7 +46841,7 @@
       }
     }
   ],
-  "_lastModified": 1789053209070,
+  "_lastModified": 1789056294898,
   "vym": {
     "semanas": {},
     "historial": [
@@ -50116,6 +50117,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789056005710,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1789053203901,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -50337,6 +50346,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1788984136685,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -51698,22 +51715,6 @@
       "accion": "Horas editadas",
       "detalle": "Cepeda, Laura · Ago 2025: cursos=1",
       "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1788973408254,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
-    },
-    {
-      "ts": 1788973298932,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Ago 2025: horas=50",
-      "pubId": "mmm9qi4tl3oj"
     }
   ],
   "formHistorial": [
