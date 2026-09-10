@@ -25925,46 +25925,48 @@
             "cursos": "3",
             "paux": false,
             "horas": "39",
-            "notas": ""
+            "notas": "GVP",
+            "_ts": 1789052997112
           },
           "Abr": {
             "particip": true,
             "cursos": "3",
             "paux": false,
             "horas": "29",
-            "notas": "",
-            "_ts": 1778157589940
+            "notas": "GVP",
+            "_ts": 1789053006351
           },
           "May": {
             "particip": true,
             "cursos": "2",
             "paux": false,
             "horas": "42",
-            "notas": "",
-            "_ts": 1781791475536
+            "notas": "GVP",
+            "_ts": 1789053010886
           },
           "Jun": {
             "particip": true,
             "cursos": "2",
             "paux": false,
             "horas": "55",
-            "notas": "",
-            "_ts": 1784137318777
+            "notas": "GVP",
+            "_ts": 1789053020674
           },
           "Jul": {
             "particip": true,
             "cursos": "3",
             "paux": false,
             "horas": "35",
-            "notas": "",
-            "_ts": 1787096176252
+            "notas": "GVP",
+            "_ts": 1789053025422
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "71",
+            "notas": "GVP- Incluye crédito ESP ",
+            "_ts": 1789053067322
           }
         },
         "2026": {
@@ -46604,7 +46606,7 @@
       }
     }
   ],
-  "_lastModified": 1789052961393,
+  "_lastModified": 1789053068728,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49880,6 +49882,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1789053027623,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Ago 2025: horas=71",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1789053027613,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Ago 2025: horas=71",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1789052988765,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Ago 2025: horas=",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1789052977841,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1789052977830,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Ago 2025: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
       "ts": 1789052950277,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -51438,46 +51480,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Ago 2025: cursos=1",
       "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1788973296067,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1788973285591,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Ago 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1788973285581,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Ago 2025: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1788973282628,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1788973282620,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4twt9q"
     }
   ],
   "formHistorial": [
