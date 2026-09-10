@@ -45891,19 +45891,9 @@
       "accesos": {
         "vym": false
       }
-    },
-    {
-      "id": "mtusgxiw",
-      "nombre": "Jaime_P",
-      "pinHash": "1d15ea215b66bc1f3fec55000ace7a247ce1d357a4677383e0f51fc472e1b249",
-      "rol": "anciano",
-      "grupo": "Grupo 11",
-      "accesos": {
-        "vym": false
-      }
     }
   ],
-  "_lastModified": 1789002266428,
+  "_lastModified": 1789002562403,
   "vym": {
     "semanas": {},
     "historial": [
