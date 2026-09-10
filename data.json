@@ -45893,9 +45893,9 @@
       }
     },
     {
-      "id": "mtuu5zo3",
+      "id": "mtuu8cqe",
       "nombre": "Jaime_P",
-      "pinHash": "8e0814ee50771fada28c13875e2a2b2c398f3731289e66e0cbbca55ef752598d",
+      "pinHash": "6b21b0bd40fcebb324e75178dc998085ce3d2ebd74a5ce589a3bbd2c236f4ce3",
       "rol": "anciano",
       "grupo": "Grupo 11",
       "accesos": {
@@ -45903,7 +45903,7 @@
       }
     }
   ],
-  "_lastModified": 1789003006802,
+  "_lastModified": 1789003064842,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49179,6 +49179,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789003035704,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789002912376,
       "user": "Administrador",
       "rol": "admin",
@@ -50769,14 +50777,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Laura Camila · Ago 2025: horas=18",
       "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1788973157855,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Ago 2025: horas=50",
-      "pubId": "mmm9qi4qp27l"
     }
   ],
   "formHistorial": [
