@@ -45880,19 +45880,9 @@
       "accesos": {
         "vym": false
       }
-    },
-    {
-      "id": "mtusbtiu",
-      "nombre": "Jaime_P",
-      "pinHash": "136b5e4ddedd79e477e96e4330b0538da2c578e397dda4307b30e08c9ee5a0f8",
-      "rol": "anciano",
-      "grupo": "Grupo 12",
-      "accesos": {
-        "vym": false
-      }
     }
   ],
-  "_lastModified": 1789000026847,
+  "_lastModified": 1789000089494,
   "vym": {
     "semanas": {},
     "historial": [
