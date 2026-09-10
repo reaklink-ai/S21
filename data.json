@@ -45893,7 +45893,7 @@
       }
     }
   ],
-  "_lastModified": 1789002765134,
+  "_lastModified": 1789002799607,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49169,6 +49169,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789002787147,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789002739231,
       "user": "Administrador",
       "rol": "admin",
@@ -50759,14 +50767,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Andrea Carolina · Ago 2025: horas=50",
       "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1788973142004,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Ago 2025: horas=36",
-      "pubId": "mmm9qi4q1iwb"
     }
   ],
   "formHistorial": [
