@@ -45891,9 +45891,19 @@
       "accesos": {
         "vym": false
       }
+    },
+    {
+      "id": "mtuu5zo3",
+      "nombre": "Jaime_P",
+      "pinHash": "8e0814ee50771fada28c13875e2a2b2c398f3731289e66e0cbbca55ef752598d",
+      "rol": "anciano",
+      "grupo": "Grupo 11",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1789002890475,
+  "_lastModified": 1789002954415,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49169,6 +49179,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789002912376,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789002787147,
       "user": "Administrador",
       "rol": "admin",
@@ -50754,14 +50772,6 @@
     },
     {
       "ts": 1788973157855,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Ago 2025: horas=50",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1788973157845,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
