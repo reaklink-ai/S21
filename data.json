@@ -45876,10 +45876,23 @@
       "nombre": "Fernando_G",
       "pinHash": "255edbc7c49e7a2add6dfc66314c477463f09c94360177d1c25dd4eefeb97db6",
       "rol": "anciano",
-      "grupo": "Grupo 7"
+      "grupo": "Grupo 7",
+      "accesos": {
+        "vym": false
+      }
+    },
+    {
+      "id": "mtusbtiu",
+      "nombre": "Jaime_P",
+      "pinHash": "192457b9c40355da97878d0f83bd71aa73226c7dba0b098fa2e1551822d48d57",
+      "rol": "anciano",
+      "grupo": "Grupo 12",
+      "accesos": {
+        "vym": false
+      }
     }
   ],
-  "_lastModified": 1788974909884,
+  "_lastModified": 1788999878453,
   "vym": {
     "semanas": {},
     "historial": [
@@ -49155,6 +49168,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1788999730598,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1788974909334,
       "user": "Administrador",
       "rol": "admin",
@@ -50744,14 +50765,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Millan, Fernando · Ago 2025: horas=36",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1788973140473,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Ago 2025: cursos=",
       "pubId": "mmm9qi4q1iwb"
     }
   ],
