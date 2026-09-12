@@ -46254,6 +46254,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1789248431067",
+      "fecha": "2026-09-12",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 164,
+      "zoom": 51,
+      "total": 215,
+      "notas": "",
+      "_ts": 1789248431067
+    },
+    {
       "id": "r1789002264959",
       "fecha": "2026-09-09",
       "tipo": "Entre semana",
@@ -46842,7 +46853,7 @@
       }
     }
   ],
-  "_lastModified": 1789056298519,
+  "_lastModified": 1789248432274,
   "vym": {
     "semanas": {},
     "historial": [
@@ -50118,6 +50129,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789248406228,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789224699366,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789056005710,
       "user": "Administrador",
       "rol": "admin",
@@ -51700,22 +51727,6 @@
       "accion": "Horas editadas",
       "detalle": "Garcia, Luis Fernando · Ago 2025: horas=30",
       "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1788973445068,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Ago 2025: cursos=",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1788973408264,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Cepeda, Laura · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4l14cm"
     }
   ],
   "formHistorial": [
