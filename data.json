@@ -40978,15 +40978,93 @@
             "_ts": 1787095842094
           },
           "Ago": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789490376053
+          }
+        },
+        "2026": {
+          "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": ""
-          }
-        },
-        "2026": {
-          "Ago": {
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -48428,7 +48506,7 @@
       }
     }
   ],
-  "_lastModified": 1789490365107,
+  "_lastModified": 1789490376658,
   "vym": {
     "semanas": {},
     "historial": [
@@ -51704,6 +51782,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789490376053,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Ago 2025: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
+      "ts": 1789490376042,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Ago 2025: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
       "ts": 1789490350620,
       "user": "Administrador",
       "rol": "admin",
@@ -53285,22 +53379,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Rodriguez, Cristian · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1788974171097,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1788974163961,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Rodriguez, Cristian · Nacimiento: 1979-01-20",
       "pubId": "mmm9qi4sgwb2"
     }
   ],
