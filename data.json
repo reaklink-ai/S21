@@ -39843,14 +39843,15 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1787095773323
+            "_ts": 1789490257475
           },
           "Ago": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1789490258227
           }
         },
         "2026": {
@@ -48034,7 +48035,7 @@
       }
     }
   ],
-  "_lastModified": 1789490249736,
+  "_lastModified": 1789490259412,
   "vym": {
     "semanas": {},
     "historial": [
