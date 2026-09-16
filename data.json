@@ -35350,11 +35350,12 @@
             "_ts": 1787098016635
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "01",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "53",
+            "notas": "",
+            "_ts": 1789561414372
           }
         },
         "2026": {
@@ -50470,7 +50471,7 @@
       }
     }
   ],
-  "_lastModified": 1789561405077,
+  "_lastModified": 1789561415816,
   "vym": {
     "semanas": {},
     "historial": [
@@ -53746,6 +53747,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1789561414372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Ago 2025: horas=53",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1789561414365,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Ago 2025: horas=53",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1789561412716,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Ago 2025: cursos=01",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1789561412708,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Ago 2025: cursos=01",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
       "ts": 1789561404067,
       "user": "Administrador",
       "rol": "admin",
@@ -55312,38 +55345,6 @@
       "accion": "Horas editadas",
       "detalle": "Silva, Edith · Ago 2025: horas=53",
       "pubId": "mmm9qi4surcd"
-    },
-    {
-      "ts": 1788974604236,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Ago 2025: horas=57",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1788974604225,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Ago 2025: horas=57",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1788974602583,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1788974602572,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4spxmz"
     }
   ],
   "formHistorial": [
