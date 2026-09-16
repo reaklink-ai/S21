@@ -49543,12 +49543,12 @@
             "_ts": 1789570763291
           },
           "Ago": {
-            "particip": true,
+            "particip": false,
             "cursos": "2",
             "paux": false,
             "horas": "50",
             "notas": "",
-            "_ts": 1789571281344
+            "_ts": 1789571824115
           }
         },
         "2026": {
@@ -51075,7 +51075,7 @@
       }
     }
   ],
-  "_lastModified": 1789571484021,
+  "_lastModified": 1789571825934,
   "vym": {
     "semanas": {},
     "historial": [
