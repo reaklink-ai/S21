@@ -3207,6 +3207,9 @@ input:focus, select:focus, textarea:focus {
       <button class="sb-nav-item sb-perm-export" id="sbnav-precursores" onclick="irA('precursores')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-star"/></svg></span>Precursores
       </button>
+      <button class="sb-nav-item sb-perm-export" id="sbnav-s10" onclick="irA('s10')">
+        <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-chart"/></svg></span>Análisis año de servicio
+      </button>
       <button class="sb-nav-item" id="sbnav-emergencias" onclick="irA('emergencias')">
         <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-alert"/></svg></span>Emergencias
       </button>
@@ -3601,6 +3604,11 @@ input:focus, select:focus, textarea:focus {
       <div id="precursores-root"></div>
     </div>
 
+    <!-- ANÁLISIS AÑO DE SERVICIO (S-10) -->
+    <div class="screen" id="screen-s10" style="display:none">
+      <div id="s10-root"></div>
+    </div>
+
   </div>
 </div>
 
@@ -3651,6 +3659,10 @@ input:focus, select:focus, textarea:focus {
     <button class="mob-drawer-item sb-perm-export" onclick="irA('emergencias');closeMobDrawer()">
       <div class="mob-drawer-ico"><svg width="20" height="20"><use href="#ico-alert"/></svg></div>
       <span>Emergencias</span>
+    </button>
+    <button class="mob-drawer-item sb-perm-export" onclick="irA('s10');closeMobDrawer()">
+      <div class="mob-drawer-ico"><svg width="20" height="20"><use href="#ico-chart"/></svg></div>
+      <span>Año de servicio</span>
     </button>
     <button class="mob-drawer-item" onclick="irA('datos');closeMobDrawer()">
       <div class="mob-drawer-ico"><svg width="20" height="20"><use href="#ico-db"/></svg></div>
@@ -4245,6 +4257,12 @@ function _mergeStates(remoto, local) {
   const localHist = new Set((local.formHistorial||[]).map(h=>h.id+'_'+h.ts));
   (remoto.formHistorial||[]).forEach(h => {
     if(!localHist.has(h.id+'_'+h.ts)) m.formHistorial = [...(m.formHistorial||[]), h];
+  });
+
+  // historialActividad (inactivos/reactivados) — usado por S-10: fusionar sin duplicados por entryId
+  const localHistAct = new Set((local.historialActividad||[]).map(h=>h.entryId));
+  (remoto.historialActividad||[]).forEach(h => {
+    if(!localHistAct.has(h.entryId)) m.historialActividad = [...(m.historialActividad||[]), h];
   });
 
   // VyM: agregar semanas remotas que local no tiene; local SIEMPRE gana en asign
@@ -6305,6 +6323,10 @@ function confirmarInactivo() {
   const tipoLabel = tipo==='sacado'?'Sacado':tipo==='desasociado'?'Desasociado':'Inactivo';
   auditLog(tipoLabel, `${pub.apellido}, ${pub.nombre}${motivo?' · '+motivo:''}`, id);
 
+  // Historial permanente (no rota como la auditoría) — usado por el informe S-10
+  if(!state.historialActividad) state.historialActividad = [];
+  state.historialActividad.push({ entryId: 'h'+Date.now()+Math.random().toString(36).slice(2,6), pubId: id, apellido: pub.apellido, nombre: pub.nombre, tipo: 'inactivo', fecha: hoy, motivo, tipoInactivo: tipo });
+
   marcarCambios();
   selId = null;
   cerrarModalInactivo();
@@ -6326,7 +6348,284 @@ function reactivarPub(id) {
   renderInactivos();
   renderDashboard();
   auditLog('Reactivado', `${pub.apellido}, ${pub.nombre}`, pub.id);
+
+  // Historial permanente — usado por el informe S-10
+  if(!state.historialActividad) state.historialActividad = [];
+  state.historialActividad.push({ entryId: 'h'+Date.now()+Math.random().toString(36).slice(2,6), pubId: id, apellido: pub.apellido, nombre: pub.nombre, tipo: 'reactivado', fecha: new Date().toISOString().slice(0,10) });
+
   toast(`${pub.apellido}, ${pub.nombre} reactivado`);
+}
+
+// ══════════════════════════════════════════════════════════════
+// INFORME S-10 — Análisis de la congregación (por año de servicio)
+// ══════════════════════════════════════════════════════════════
+
+// ¿La fecha (YYYY-MM-DD) cae dentro del año de servicio "anio" (sep anio → ago anio+1)?
+function fechaEnAnioServicio(fechaStr, anio) {
+  if(!fechaStr) return false;
+  const d = new Date(fechaStr+'T00:00:00');
+  if(isNaN(d.getTime())) return false;
+  const inicio = new Date(anio, 8, 1);            // 1 sep anio
+  const fin    = new Date(anio+1, 7, 31, 23,59,59); // 31 ago anio+1
+  return d >= inicio && d <= fin;
+}
+
+// Promedios de asistencia a reuniones (S-88) del año de servicio.
+function s10Asistencia(anio) {
+  const lista = (state.asistencia||[]).filter(r => fechaEnAnioServicio(r.fecha, anio));
+  const finSemana   = lista.filter(r => r.tipo === 'Fin de semana');
+  const entreSemana = lista.filter(r => r.tipo === 'Entre semana');
+  const avg = arr => arr.length ? Math.round(arr.reduce((s,r)=>s+(r.total||0),0)/arr.length) : null;
+  return {
+    finSemana:   avg(finSemana),   nFinSemana:   finSemana.length,
+    entreSemana: avg(entreSemana), nEntreSemana: entreSemana.length,
+  };
+}
+
+// Todos los publicadores activos: informaron 1+ mes durante los ÚLTIMOS 6 MESES
+// del año de servicio (Mar–Ago, índices 6–11 de MESES_C). Incluye a quienes estén
+// actualmente en Inactivos, porque pueden haber sido activos parte del semestre
+// antes de pasar a inactivos; excluye mudados (ya no son de esta congregación).
+function s10PublicadoresActivos(anio) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const todos = [...state.publicadores, ...(state.inactivos||[])].filter(p => !_mudIds.has(p.id));
+  const activos = new Set();
+  for(let idx = 6; idx <= 11; idx++) { // Mar..Ago del año de servicio "anio"
+    const m = MESES_C[idx];
+    todos.forEach(p => {
+      const r = (p.registros||{})[anio]?.[m] || (p.registros||{})[String(anio)]?.[m];
+      if(r && r.particip) activos.add(p.id);
+    });
+  }
+  return activos.size;
+}
+
+// Nuevos publicadores inactivos durante el año de servicio,
+// a partir del historial permanente (state.historialActividad).
+function s10NuevosInactivos(anio) {
+  if(state.historialActividad) {
+    return state.historialActividad.filter(h => h.tipo==='inactivo' && fechaEnAnioServicio(h.fecha, anio));
+  }
+  // Sin historial todavía (recién se activó esta función): mejor esfuerzo con la
+  // lista actual de Inactivos y su fecha — no captura a quienes ya fueron reactivados.
+  return (state.inactivos||[]).filter(p => fechaEnAnioServicio(p.fechaInactivo, anio))
+    .map(p => ({ pubId:p.id, apellido:p.apellido, nombre:p.nombre, fecha:p.fechaInactivo }));
+}
+
+// ── Detección por texto de notas de los informes S-21 ──
+// El mismo criterio que ya usa el resto de la app para "nuevo publicador/a"
+// (ver mesInicioComoPublicador y esNuevoPrecReg): la existencia de un registro
+// mensual NO indica nada por sí sola (getReg() crea registros vacíos al
+// consultarlos), así que la señal confiable es el TEXTO de la nota que el
+// secretario escribe en el informe de ese mes.
+function _s10BuscarPorNota(anio, keywords) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const todos = [...state.publicadores, ...(state.inactivos||[])].filter(p => !_mudIds.has(p.id));
+  const encontrados = [];
+  todos.forEach(p => {
+    for(const m of MESES_C) {
+      const reg = (p.registros||{})[anio]?.[m] || (p.registros||{})[String(anio)]?.[m];
+      const n = (reg?.notas||'').toLowerCase();
+      if(keywords.some(k => n.includes(k))) {
+        encontrados.push({ pubId: p.id, apellido: p.apellido, nombre: p.nombre, mes: m });
+        break; // ya detectado una vez en el año, no seguir buscando en otros meses
+      }
+    }
+  });
+  return encontrados;
+}
+
+// Reactivados: se detectan principalmente por la nota "reactivad..." (reactivado/
+// reactivada/reactivación) o "readmitid..." en el informe mensual del año — el
+// mismo sinónimo que ya usa mesInicioComoPublicador(). Se complementa (sin
+// duplicar) con el historial del flujo manual de Inactivos/Reactivar, por si
+// alguien quedó registrado solo ahí y no en las notas.
+function s10Reactivados(anio) {
+  const porNotas = _s10BuscarPorNota(anio, ['reactiv', 'readmitid']);
+  const idsNotas = new Set(porNotas.map(x => x.pubId));
+  let porHistorial = [];
+  if(state.historialActividad) {
+    porHistorial = state.historialActividad
+      .filter(h => h.tipo==='reactivado' && fechaEnAnioServicio(h.fecha, anio) && !idsNotas.has(h.pubId));
+  }
+  return [...porNotas, ...porHistorial];
+}
+
+// Nuevos publicadores (dato informativo, no es uno de los renglones oficiales
+// del S-10) y Bautizados, SEGMENTADOS: reutiliza la clasificación que ya usa el
+// resto de la app (clasificarNuevosYBautizados) — bautizados se determina por la
+// fecha real de bautismo (p.bautismo) o, si falta, por nota "bautizad..."; nuevos
+// publicadores es quien quedó como "no bautizado" (recién empezó, aún sin
+// bautizarse) para no contar dos veces a la misma persona en ambos grupos.
+function s10Bautizados(anio) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = [...state.publicadores, ...(state.inactivos||[])].filter(p => !_mudIds.has(p.id));
+  const { bautizados } = clasificarNuevosYBautizados(pubs, anio);
+  return bautizados.map(p => ({ pubId: p.id, apellido: p.apellido, nombre: p.nombre, fecha: p.bautismo||null }));
+}
+function s10NuevosPublicadores(anio) {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const pubs = [...state.publicadores, ...(state.inactivos||[])].filter(p => !_mudIds.has(p.id));
+  const { noBautizados } = clasificarNuevosYBautizados(pubs, anio);
+  return noBautizados.map(p => ({ pubId: p.id, apellido: p.apellido, nombre: p.nombre }));
+}
+
+function calcularS10(anio) {
+  return {
+    anio,
+    asis: s10Asistencia(anio),
+    activos: s10PublicadoresActivos(anio),
+    nuevosInactivos: s10NuevosInactivos(anio),
+    reactivados: s10Reactivados(anio),
+    bautizados: s10Bautizados(anio),
+    nuevosPublicadores: s10NuevosPublicadores(anio),
+    sinHistorialInactivos: !state.historialActividad, // solo afecta a "nuevos inactivos"
+  };
+}
+
+let _s10AnioActivo = null;
+
+function s10CambiarAnio(delta) {
+  _s10AnioActivo += delta;
+  renderS10();
+}
+
+function renderS10() {
+  const root = document.getElementById('s10-root');
+  if(!root) return;
+  if(_s10AnioActivo === null) _s10AnioActivo = anioHoy();
+  const anio = _s10AnioActivo;
+  const d = calcularS10(anio);
+
+  const flechaBtn = 'border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;cursor:pointer;font-size:12px;line-height:1';
+
+  let html = '<div class="prec-wrap">';
+
+  // ── Header, estilo consistente con el módulo de Precursores ──
+  html += `<div class="prec-header">
+    <div>
+      <div class="prec-title">📋 Análisis año de servicio (S-10)</div>
+      <div class="prec-subtitle" style="display:flex;align-items:center;gap:8px">
+        <button onclick="s10CambiarAnio(-1)" title="Año anterior" style="${flechaBtn}">◀</button>
+        <span>Año de servicio ${anio}–${anio+1}</span>
+        <button onclick="s10CambiarAnio(1)" title="Año siguiente" ${anio>=anioHoy() ? 'disabled style="'+flechaBtn+';opacity:.35;cursor:default"' : 'style="'+flechaBtn+'"'}>▶</button>
+      </div>
+    </div>
+    <button class="prec-btn prim" onclick="s10ExportarPDF()">🖨 Exportar PDF</button>
+  </div>`;
+
+  html += `<div style="font-size:11px;color:var(--ink-3);margin:14px 2px 18px;line-height:1.5">
+    Basado en los formularios de <strong>Registro de asistencia a las reuniones (S-88)</strong> y <strong>Registro de publicador (S-21)</strong> del año de servicio, de septiembre ${anio} a agosto ${anio+1}.
+  </div>`;
+
+  html += `<div style="font-weight:800;font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px">1 · Asistencia y publicadores</div>`;
+  html += `<div style="font-size:11px;color:var(--ink-3);margin-bottom:10px">Promedio de asistencia a las reuniones (redondeado al entero más cercano)</div>`;
+  html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px">
+    <div style="background:var(--surface-2);border-radius:var(--r);padding:16px;border:1px solid var(--border-2)">
+      <div style="font-size:12px;color:var(--ink-3);font-weight:600">Reunión del fin de semana</div>
+      <div style="font-size:32px;font-weight:800;color:var(--ink);font-family:Sora,var(--font)">${d.asis.finSemana ?? '—'}</div>
+      <div style="font-size:11px;color:var(--ink-3)">${d.asis.nFinSemana} reunión${d.asis.nFinSemana!==1?'es':''} registrada${d.asis.nFinSemana!==1?'s':''} este año</div>
+    </div>
+    <div style="background:var(--surface-2);border-radius:var(--r);padding:16px;border:1px solid var(--border-2)">
+      <div style="font-size:12px;color:var(--ink-3);font-weight:600">Reunión de entre semana</div>
+      <div style="font-size:32px;font-weight:800;color:var(--ink);font-family:Sora,var(--font)">${d.asis.entreSemana ?? '—'}</div>
+      <div style="font-size:11px;color:var(--ink-3)">${d.asis.nEntreSemana} reunión${d.asis.nEntreSemana!==1?'es':''} registrada${d.asis.nEntreSemana!==1?'s':''} este año</div>
+    </div>
+  </div>`;
+
+  html += `<div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:10px">Totales de la congregación</div>`;
+  html += `<div style="background:var(--surface-2);border-radius:var(--r);padding:16px;border:1px solid var(--border-2);margin-bottom:14px">
+    <div style="font-size:12px;color:var(--ink-3);font-weight:600">Todos los publicadores activos</div>
+    <div style="font-size:32px;font-weight:800;color:var(--ink);font-family:Sora,var(--font)">${d.activos}</div>
+    <div style="font-size:11px;color:var(--ink-3);line-height:1.4;max-width:520px">Informaron participación en el ministerio 1 mes o más durante los últimos 6 meses del año de servicio (incluye precursores, no bautizados, irregulares, reactivados, y con discapacidad)</div>
+  </div>`;
+
+  html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+    <div style="background:#fef2f2;border-radius:var(--r);padding:16px;border:1px solid #fecaca">
+      <div style="font-size:12px;color:#7f1d1d;font-weight:600">Nuevos publicadores inactivos</div>
+      <div style="font-size:32px;font-weight:800;color:#dc2626;font-family:Sora,var(--font)">${d.nuevosInactivos.length}</div>
+      ${d.nuevosInactivos.length ? `<div style="font-size:11px;color:#9f1239;margin-top:6px;line-height:1.6">${d.nuevosInactivos.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>` : '<div style="font-size:11px;color:#9f1239">Ninguno este año</div>'}
+    </div>
+    <div style="background:#f0fdf4;border-radius:var(--r);padding:16px;border:1px solid #bbf7d0">
+      <div style="font-size:12px;color:#065f46;font-weight:600">Publicadores reactivados</div>
+      <div style="font-size:32px;font-weight:800;color:#16a34a;font-family:Sora,var(--font)">${d.reactivados.length}</div>
+      ${d.reactivados.length ? `<div style="font-size:11px;color:#065f46;margin-top:6px;line-height:1.6">${d.reactivados.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>` : '<div style="font-size:11px;color:#065f46">Ninguno este año</div>'}
+      <div style="font-size:9px;color:#059669;margin-top:8px;opacity:.8">Detectado por nota "reactivad..." / "readmitid..." en el informe mensual</div>
+    </div>
+  </div>`;
+
+  // Datos adicionales (no son renglones oficiales del S-10, pero salen del mismo
+  // criterio ya usado en el resto de la app) — segmentados: bautizados por un lado,
+  // nuevos publicadores (aún no bautizados) por otro, sin contar a nadie dos veces.
+  html += `<div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:10px">Bautizados y nuevos publicadores <span style="font-weight:500;color:var(--ink-3);text-transform:none;letter-spacing:0">(informativo, no oficial del S-10)</span></div>`;
+  html += `<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+    <div style="background:#f5f3ff;border-radius:var(--r);padding:16px;border:1px solid #ddd6fe">
+      <div style="font-size:12px;color:#4c1d95;font-weight:600">Bautizados</div>
+      <div style="font-size:32px;font-weight:800;color:#7c3aed;font-family:Sora,var(--font)">${d.bautizados.length}</div>
+      ${d.bautizados.length ? `<div style="font-size:11px;color:#5b21b6;margin-top:6px;line-height:1.6">${d.bautizados.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>` : '<div style="font-size:11px;color:#5b21b6">Ninguno este año</div>'}
+      <div style="font-size:9px;color:#8b5cf6;margin-top:8px;opacity:.8">Por fecha real de bautismo, o nota "bautizad..." si falta la fecha</div>
+    </div>
+    <div style="background:#eff6ff;border-radius:var(--r);padding:16px;border:1px solid #bfdbfe">
+      <div style="font-size:12px;color:#1e3a8a;font-weight:600">Nuevos publicadores (no bautizados)</div>
+      <div style="font-size:32px;font-weight:800;color:#2563eb;font-family:Sora,var(--font)">${d.nuevosPublicadores.length}</div>
+      ${d.nuevosPublicadores.length ? `<div style="font-size:11px;color:#1e40af;margin-top:6px;line-height:1.6">${d.nuevosPublicadores.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>` : '<div style="font-size:11px;color:#1e40af">Ninguno este año</div>'}
+      <div style="font-size:9px;color:#3b82f6;margin-top:8px;opacity:.8">Nota "nuevo publicador/a" o "no bautizad..." — excluye a quien ya se bautizó</div>
+    </div>
+  </div>`;
+
+  if(d.sinHistorialInactivos) {
+    html += `<div style="margin-top:6px;background:#fffbeb;border:1px solid #fde68a;border-radius:var(--r);padding:12px;font-size:11px;color:#92400e;line-height:1.6">
+      ⚠ Todavía no había un historial detallado de movimientos manuales de Inactivos (se empezó a guardar recién ahora). "Nuevos publicadores inactivos" se estimó con la lista actual de Inactivos y su fecha — puede faltar alguien que ya fue reactivado dentro del mismo año. De acá en adelante va a salir exacto automáticamente. ("Reactivados" ya no depende de esto: se detecta directo por nota en el informe mensual.)
+    </div>`;
+  }
+
+  html += '</div>';
+  root.innerHTML = html;
+}
+
+function s10ExportarPDF() {
+  const anio = _s10AnioActivo ?? anioHoy();
+  const d = calcularS10(anio);
+  const fechaHoy = new Date().toLocaleDateString('es-CO', {year:'numeric',month:'long',day:'numeric'});
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8">
+  <title>S-10 ${anio}</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin: 28px; color: #1a1814; }
+    h1 { font-size: 19px; font-weight: 800; margin-bottom: 2px; }
+    .sub { font-size: 11px; color: #57534e; margin-bottom: 18px; line-height:1.5 }
+    .row { display:flex; gap:14px; margin-bottom:14px }
+    .card { flex:1; border:1px solid #e4e2dd; border-radius:8px; padding:12px }
+    .lbl { font-size:10px; color:#78716c; font-weight:600; text-transform:uppercase; letter-spacing:.03em }
+    .n { font-size:22px; font-weight:800; margin-top:4px }
+    .list { font-size:10px; color:#57534e; margin-top:6px; line-height:1.5 }
+    @media print { body { margin: 12px; } }
+  </style></head><body>
+  <h1>📋 Análisis de la congregación (S-10)</h1>
+  <div class="sub">Año de servicio ${anio}–${anio+1} · Generado el ${fechaHoy}<br>
+  Basado en S-88 (asistencia) y S-21 (publicadores) de septiembre ${anio} a agosto ${anio+1}.</div>
+
+  <div class="row">
+    <div class="card"><div class="lbl">Prom. asistencia — fin de semana</div><div class="n">${d.asis.finSemana ?? '—'}</div></div>
+    <div class="card"><div class="lbl">Prom. asistencia — entre semana</div><div class="n">${d.asis.entreSemana ?? '—'}</div></div>
+  </div>
+  <div class="row">
+    <div class="card"><div class="lbl">Todos los publicadores activos</div><div class="n">${d.activos}</div></div>
+    <div class="card"><div class="lbl">Nuevos publicadores inactivos</div><div class="n">${d.nuevosInactivos.length}</div>
+      ${d.nuevosInactivos.length?`<div class="list">${d.nuevosInactivos.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>`:''}</div>
+    <div class="card"><div class="lbl">Publicadores reactivados</div><div class="n">${d.reactivados.length}</div>
+      ${d.reactivados.length?`<div class="list">${d.reactivados.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>`:''}</div>
+  </div>
+  <div class="row">
+    <div class="card"><div class="lbl">Bautizados (informativo)</div><div class="n">${d.bautizados.length}</div>
+      ${d.bautizados.length?`<div class="list">${d.bautizados.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>`:''}</div>
+    <div class="card"><div class="lbl">Nuevos publicadores no bautizados (informativo)</div><div class="n">${d.nuevosPublicadores.length}</div>
+      ${d.nuevosPublicadores.length?`<div class="list">${d.nuevosPublicadores.map(p=>escHtml(p.apellido+', '+p.nombre)).join('<br>')}</div>`:''}</div>
+  </div>
+  </body></html>`;
+  const w = window.open('', '_blank');
+  w.document.write(html);
+  w.document.close();
+  setTimeout(() => w.print(), 300);
 }
 
 
@@ -8027,7 +8326,12 @@ function generarInformeGrupo(modo) {
 
   const buildPeriodo = () => {
     if(periodo === 0) {
-      return MESES_K.map(m => ({ mesKey:m, anio: mesIdx<4?anio:(m==='Sep'||m==='Oct'||m==='Nov'||m==='Dic'?anio:anio+1), mesNom:MESES_FULL[MESES_K.indexOf(m)] }));
+      // Año completo: los 12 meses de un año de servicio comparten la MISMA clave
+      // de año en los registros (regs[anio]['Ene'], regs[anio]['Ago'], etc. — no
+      // regs[anio+1]). Antes esto dependía por error de "mesIdx" (el mes que haya
+      // quedado seleccionado en el desplegable), lo cual podía sumar un año de más
+      // a Ene–Ago y hacer que esos meses se descartaran enteros del informe.
+      return MESES_K.map(m => ({ mesKey:m, anio, mesNom:MESES_FULL[MESES_K.indexOf(m)] }));
     }
     const result = [];
     for(let i=periodo-1; i>=0; i--) {
@@ -9796,6 +10100,7 @@ function irA(pantalla) {
   if(pantalla === 'asistencia')   renderAsistenciaScreen();
   if(pantalla === 'vym')          renderVyM();
   if(pantalla === 'precursores')  renderPrecursores();
+  if(pantalla === 's10')          renderS10();
   applyRoleUI();
 }
 
@@ -12530,6 +12835,8 @@ document.addEventListener('change', e => {
     </div>
   </div>
 </div>
+
+<!-- Modal S-10 eliminado — ahora es la pantalla screen-s10 (módulo propio en el menú) -->
 
 <!-- Modal Links por Grupo -->
 <!-- Modal Enviaron Formulario -->
