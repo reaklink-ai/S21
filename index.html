@@ -3890,7 +3890,7 @@ const SYNC_URL = 'https://mute-grass-cc8b.reaklink.workers.dev/sync';
 // (ver APP_KEY en las variables del Worker). No es un secreto perfecto — vive en
 // este mismo archivo — pero bloquea que alguien pegue la URL de sync directo en
 // el navegador sin siquiera abrir la app.
-const SYNC_KEY = 's21cong2026x7k9mQ3zL';
+const SYNC_KEY = 'CAMBIAR_ESTA_CLAVE';
 const SYNC_HEADERS = { 'X-S21-Key': SYNC_KEY };
 
 // ══════════════════════════════════════════
@@ -8284,6 +8284,7 @@ function abrirInformeGrupo() {
   // Reset a modo "mes"
   document.getElementById('infTipoMes').checked = true;
   infTipoChange();
+  document.getElementById('infForzarCierre').checked = false;
 
   document.getElementById('modalInformeGrupo').style.display = 'flex';
 }
@@ -8294,6 +8295,7 @@ function generarInformeGrupo(modo) {
 
   const tipo  = document.querySelector('input[name="infTipo"]:checked')?.value || 'mes';
   const grupo = document.getElementById('infGrupoSel').value;
+  const forzarCierre = document.getElementById('infForzarCierre')?.checked || false;
 
   let mesIdx, anio, periodo;
   if(tipo === 'mes') {
@@ -8365,17 +8367,24 @@ function generarInformeGrupo(modo) {
   const periodoMeses = buildPeriodo().filter(m => {
     const cal=mapKtoCal[m.mesKey];
     const anioCalMes=cal>=8?m.anio:m.anio+1;
-    if(new Date(anioCalMes, cal, 1) > fechaLimite) return false;
+    // La regla del día 20 se puede saltar manualmente (checkbox "Ya tengo todos
+    // los informes recogidos") para este caso puntual, sin sacarla del todo —
+    // sigue siendo útil el resto de las veces.
+    if(!forzarCierre && new Date(anioCalMes, cal, 1) > fechaLimite) return false;
     return !(cal===mesCalHoy && anioCalMes===anioCalHoy);
   });
 
   // ── Tendencia por mes ──
+  // NOTA: m.anio es el año de SERVICIO (clave interna de los registros, constante
+  // para los 12 meses) — no es el año de CALENDARIO real de cada mes. Para mostrar
+  // en pantalla ("Enero 2026" y no "Enero 2025"), hay que convertirlo aparte.
   const tendencia = periodoMeses.map(m => {
     const part = pubs.filter(p => getReg(p,m.anio,m.mesKey).particip).length;
     const cursos = pubs.reduce((s,p)=>s+(parseInt(getReg(p,m.anio,m.mesKey).cursos)||0),0);
     const horas  = pubs.reduce((s,p)=>s+(parseFloat(getReg(p,m.anio,m.mesKey).horas)||0),0);
     const paux   = pubs.filter(p=>getReg(p,m.anio,m.mesKey).paux).length;
-    return { mes:m.mesNom, anio:m.anio, part, pct:pubs.length>0?Math.round((part/pubs.length)*100):0, cursos, horas, paux };
+    const anioCal = mapKtoCal[m.mesKey] >= 8 ? m.anio : m.anio + 1;
+    return { mes:m.mesNom, anio:m.anio, anioCal, part, pct:pubs.length>0?Math.round((part/pubs.length)*100):0, cursos, horas, paux };
   });
   const avgPct = tendencia.length>0 ? Math.round(tendencia.reduce((s,t)=>s+t.pct,0)/tendencia.length) : 0;
 
@@ -8667,10 +8676,10 @@ function generarInformeGrupo(modo) {
     if(totalHorasPer>0) lines.push(`Horas totales precursores: ${totalHorasPer.toFixed(1)}h`);
     lines.push('');
     lines.push('Tendencia de participacion:');
-    tendencia.forEach(t=>lines.push(`  ${t.mes} ${t.anio}: ${t.part}/${pubs.length} (${t.pct}%)`));
+    tendencia.forEach(t=>lines.push(`  ${t.mes} ${t.anioCal}: ${t.part}/${pubs.length} (${t.pct}%)`));
     lines.push('');
-    if(mesMasPart) lines.push(`Mejor mes: ${mesMasPart.mes} ${mesMasPart.anio} (${maxPct}%)`);
-    if(mesMenosPart&&mesMenosPart!==mesMasPart) lines.push(`Mes mas bajo: ${mesMenosPart.mes} ${mesMenosPart.anio} (${minPct}%)`);
+    if(mesMasPart) lines.push(`Mejor mes: ${mesMasPart.mes} ${mesMasPart.anioCal} (${maxPct}%)`);
+    if(mesMenosPart&&mesMenosPart!==mesMasPart) lines.push(`Mes mas bajo: ${mesMenosPart.mes} ${mesMenosPart.anioCal} (${minPct}%)`);
     lines.push('');
     if(irregularesPer.length>0){lines.push('Mas ausentistas del periodo:');irregularesPer.forEach(p=>lines.push(`  - ${p.apellido}, ${p.nombre}`));lines.push('');}
     if(fuertesPer.length>0){lines.push('Puntos fuertes:');fuertesPer.forEach(f=>lines.push(`  + ${f}`));lines.push('');}
@@ -8686,7 +8695,7 @@ function generarInformeGrupo(modo) {
 
   const barChart = tendencia.map(t=>`
     <div class="tend-row">
-      <div class="tend-mes">${t.mes} ${t.anio}</div>
+      <div class="tend-mes">${t.mes} ${t.anioCal}</div>
       <div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div>
       <div class="tend-pct">${t.pct}%</div>
       <div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div>
@@ -8777,7 +8786,7 @@ ${barChart}
     const pubsH2 = pubs.filter(p=>parseFloat(getReg(p,anio2,mesK2).horas)||0>0);
     const promH2 = pubsH2.length>0?(t.horas/pubsH2.length).toFixed(1):'—';
     return `<tr>
-    <td style="font-weight:600">${t.mes} ${t.anio}</td>
+    <td style="font-weight:600">${t.mes} ${t.anioCal}</td>
     <td style="text-align:center">${t.part}/${pubs.length}</td>
     <td style="text-align:center;font-weight:700;color:${t.pct>=85?'#16a34a':t.pct<70?'#ef4444':'#4f46e5'}">${t.pct}%</td>
     <td style="text-align:center">${t.cursos||'—'}</td>
@@ -8790,7 +8799,7 @@ ${barChart}
 <table style="font-size:8pt">
   <tr>
     <th style="width:22%">Publicador</th>
-    ${periodoMeses.map(m=>`<th style="text-align:center;width:${Math.floor(52/periodoMeses.length)}%">${m.mesNom.substring(0,3)}<br>${m.anio}</th>`).join('')}
+    ${periodoMeses.map(m=>{ const anioColCal = mapKtoCal[m.mesKey]>=8 ? m.anio : m.anio+1; return `<th style="text-align:center;width:${Math.floor(52/periodoMeses.length)}%">${m.mesNom.substring(0,3)}<br>${anioColCal}</th>`; }).join('')}
     <th style="text-align:center">Ausencias</th>
     <th style="text-align:center">Cursos</th>
     ${totalHorasPer>0?'<th style="text-align:center">Horas</th>':''}
@@ -9023,7 +9032,7 @@ tr:nth-child(even) td{background:#f8fafc}
 ${tendencia.length>1?`
 <h2>Tendencia de participación</h2>
 ${tendDir?`<div style="font-size:10pt;font-weight:700;color:#4f46e5;margin-bottom:4mm">${tendDir}</div>`:''}
-${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.anio}</div><div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div><div class="tend-pct">${t.pct}%</div><div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div></div>`).join('')}`:''}
+${tendencia.map(t=>`<div class="tend-row"><div class="tend-mes">${t.mes} ${t.anioCal}</div><div class="tend-bar"><div class="tend-fill" style="width:${t.pct}%"></div></div><div class="tend-pct">${t.pct}%</div><div style="width:18mm;font-size:8.5pt;color:#64748b">${t.part}/${pubs.length}</div></div>`).join('')}`:''}
 <h2>Detalle de publicadores</h2>
 <table>
   <tr><th style="width:28%">Publicador</th><th style="width:8%;text-align:center">Participó</th><th style="width:7%;text-align:center">Cursos</th><th style="width:7%;text-align:center">P. Aux.</th><th style="width:7%;text-align:center">Horas</th><th style="width:28%">Alertas</th><th>Notas</th></tr>
@@ -12919,14 +12928,16 @@ document.addEventListener('change', e => {
         </div>
       </div>
 
+      <!-- Forzar inclusión de meses aún no "cerrados" por la regla del día 20 -->
+      <label style="display:flex;align-items:flex-start;gap:8px;padding:10px 12px;border:1.5px solid var(--border);border-radius:var(--r);cursor:pointer">
+        <input type="checkbox" id="infForzarCierre" style="accent-color:var(--accent);margin-top:2px">
+        <span style="font-size:12px;line-height:1.4">
+          <strong>Ya tengo todos los informes recogidos</strong><br>
+          <span style="color:var(--ink-3)">Incluye el mes más reciente aunque todavía no haya pasado el día 20 (normalmente se espera esa fecha porque la sucursal sigue recibiendo informes hasta entonces).</span>
+        </span>
+      </label>
+
     </div>
-    <div class="modal-ft">
-      <button class="btn-cancel" onclick="document.getElementById('modalInformeGrupo').style.display='none'">Cancelar</button>
-      <button class="btn-save" onclick="generarInformeGrupo('pdf')">⬇ PDF</button>
-      <button class="btn-save" style="background:#25d366;border-color:#25d366" onclick="generarInformeGrupo('whatsapp')">💬 WhatsApp</button>
-    </div>
-  </div>
-</div>
     <div class="modal-ft">
       <button class="btn-cancel" onclick="document.getElementById('modalInformeGrupo').style.display='none'">Cancelar</button>
       <button class="btn-save" onclick="generarInformeGrupo('pdf')">⬇ PDF</button>
