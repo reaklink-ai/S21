@@ -3886,6 +3886,12 @@ const KEY = 's21_v3';
 // ── GitHub Sync Config ──
 // ── Sync: apunta al Worker de Cloudflare (el token vive allá, no aquí) ──
 const SYNC_URL = 'https://mute-grass-cc8b.reaklink.workers.dev/sync';
+// Clave compartida para que el Worker rechace pedidos que no vengan de esta app
+// (ver APP_KEY en las variables del Worker). No es un secreto perfecto — vive en
+// este mismo archivo — pero bloquea que alguien pegue la URL de sync directo en
+// el navegador sin siquiera abrir la app.
+const SYNC_KEY = 'kZo\jrV!159z';
+const SYNC_HEADERS = { 'X-S21-Key': SYNC_KEY };
 
 // ══════════════════════════════════════════
 //  ROLES Y USUARIOS
@@ -4022,7 +4028,7 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
   let errorMsg = null;
   try {
     // 1. Descargar versión remota fresca via Worker (GET /sync)
-    const res = await fetch(SYNC_URL + '?t=' + Date.now());
+    const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
     let remoto = null, sha = null;
     if(res.ok) {
       const json = await res.json();
@@ -4040,7 +4046,7 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
     // 3. PUT via Worker (/sync) con SHA fresco
     const putRes = await fetch(SYNC_URL, {
       method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', ...SYNC_HEADERS },
       body: JSON.stringify({ data: merged, sha })
     });
 
@@ -4305,7 +4311,7 @@ async function ghPull() {
     return;
   }
   try {
-    const res = await fetch(SYNC_URL + '?t=' + Date.now());
+    const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
     if(res.status === 404) { toast('No hay datos en la nube aún'); return; }
     if(!res.ok) { toast('Error al conectar con el servidor'); return; }
     const json  = await res.json();
@@ -7182,7 +7188,7 @@ async function verificarLogin() {
   if(btnLogin) { btnLogin.textContent = 'Verificando...'; btnLogin.disabled = true; }
 
   try {
-    const res = await fetch(SYNC_URL + '?t=' + Date.now());
+    const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
     if(res.ok) {
       const json = await res.json();
       const remoto = json.data;
@@ -7247,7 +7253,7 @@ async function verificarLogin() {
   // Siempre jalar datos remotos al hacer login — crítico en dominio nuevo o dispositivo nuevo
   setTimeout(async () => {
     try {
-      const res = await fetch(SYNC_URL + '?t=' + Date.now());
+      const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
       if(!res.ok) return;
       const json   = await res.json();
       const remoto = json.data;
@@ -7625,12 +7631,12 @@ function cargarJSON(e) {
       saveState();
       // Restauración completa: subir directo sin merge para no perder datos
       try {
-        const res = await fetch(SYNC_URL + '?t=' + Date.now());
+        const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
         let sha = null;
         if(res.ok){ const j=await res.json(); sha=j.sha||null; _lastSha=sha; }
         const putRes = await fetch(SYNC_URL, {
           method:'PUT',
-          headers:{'Content-Type':'application/json'},
+          headers:{'Content-Type':'application/json', ...SYNC_HEADERS},
           body: JSON.stringify({data:state, sha})
         });
         if(putRes.ok){ const pj=await putRes.json(); if(pj.sha) _lastSha=pj.sha; toast('✓ Restaurado y sincronizado'); }
@@ -10577,7 +10583,7 @@ renderGruposPanel();
       // Sincronizar al restaurar sesión
       setTimeout(async () => {
         try {
-          const res = await fetch(SYNC_URL + '?t=' + Date.now());
+          const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
           if(!res.ok) return;
           const json   = await res.json();
           const remoto = json.data;
