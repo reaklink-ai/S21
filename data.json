@@ -1867,12 +1867,12 @@
             "_ts": 1789490163646
           },
           "Ago": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "20",
             "notas": "Embarazo",
-            "_ts": 1789490168183
+            "_ts": 1789561447735
           }
         },
         "2026": {
@@ -50549,7 +50549,7 @@
       }
     }
   ],
-  "_lastModified": 1789561422065,
+  "_lastModified": 1789561448904,
   "vym": {
     "semanas": {},
     "historial": [
