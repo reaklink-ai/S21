@@ -4755,11 +4755,12 @@
             "_ts": 1787097812287
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1789561317699
           }
         },
         "2026": {
@@ -49998,7 +49999,7 @@
       }
     }
   ],
-  "_lastModified": 1789561310102,
+  "_lastModified": 1789561318588,
   "vym": {
     "semanas": {},
     "historial": [
@@ -53274,6 +53275,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789561317699,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
+      "ts": 1789561317691,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Ago 2025: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
       "ts": 1789561309231,
       "user": "Administrador",
       "rol": "admin",
@@ -54856,22 +54873,6 @@
       "accion": "Horas editadas",
       "detalle": "Pelaez, Neismer · Ago 2025: cursos=1",
       "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1788974360633,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1788974338919,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Ago 2025: horas=45",
-      "pubId": "mmm9qi4qzusx"
     }
   ],
   "formHistorial": [
