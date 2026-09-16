@@ -20840,11 +20840,12 @@
             "_ts": 1787097891705
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1789561364586
           }
         },
         "2026": {
@@ -50235,7 +50236,7 @@
       }
     }
   ],
-  "_lastModified": 1789561354909,
+  "_lastModified": 1789561364976,
   "vym": {
     "semanas": {},
     "historial": [
@@ -53511,6 +53512,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789561364586,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1789561364581,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
       "ts": 1789561354513,
       "user": "Administrador",
       "rol": "admin",
@@ -55092,22 +55109,6 @@
       "rol": "admin",
       "accion": "Publicador editado",
       "detalle": "Beltran, Mauricio · Nacimiento: 1971-03-04",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1788974420414,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1788974420405,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Ago 2025: cursos=1",
       "pubId": "mmm9qi4kk1hh"
     }
   ],
