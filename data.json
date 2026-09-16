@@ -6763,11 +6763,12 @@
             "_ts": 1787097841398
           },
           "Ago": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "11",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "34",
+            "notas": "",
+            "_ts": 1789561334102
           }
         },
         "2026": {
@@ -50000,7 +50001,7 @@
       }
     }
   ],
-  "_lastModified": 1789561322619,
+  "_lastModified": 1789561335570,
   "vym": {
     "semanas": {},
     "historial": [
@@ -53276,6 +53277,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1789561334102,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: horas=34",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1789561334095,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: horas=34",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1789561332285,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: cursos=11",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1789561332278,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: cursos=11",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
       "ts": 1789561317699,
       "user": "Administrador",
       "rol": "admin",
@@ -54842,38 +54875,6 @@
       "accion": "Horas editadas",
       "detalle": "Ardila de Zuluaga, María · Ago 2025: cursos=1",
       "pubId": "p1781792857813"
-    },
-    {
-      "ts": 1788974364382,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Ago 2025: horas=24",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1788974364373,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Ago 2025: horas=24",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1788974361140,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Ago 2025: horas=",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1788974360645,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4r9s54"
     }
   ],
   "formHistorial": [
