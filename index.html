@@ -13170,10 +13170,13 @@ async function _hashPin(pin, userId) { return await sha256(pin + (userId||'')); 
 // ── Service Worker inline (PWA offline) ──
 if('serviceWorker' in navigator) {
   const swLines = [
-    "const CACHE='s21-v1';",
-    "self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.add(location.href)));self.skipWaiting();});",
-    "self.addEventListener('activate',e=>{self.clients.claim();});",
-    "self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match(e.request))));});"
+    "const CACHE='s21-v2';", // subir este número obliga a refrescar la caché en todos los dispositivos
+    "self.addEventListener('install',e=>{self.skipWaiting();});",
+    "self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});",
+    // Red primero, caché solo como respaldo offline — así cualquier actualización
+    // (arreglos, seguridad, módulos nuevos) llega de inmediato en cuanto haya
+    // conexión, en vez de quedar pegada a la primera versión instalada.
+    "self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(CACHE).then(cache=>cache.put(e.request,c));return r;}).catch(()=>caches.match(e.request)));});"
   ];
   const blob = new Blob([swLines.join('\n')], {type:'application/javascript'});
   navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
