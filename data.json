@@ -31083,7 +31083,7 @@
             "paux": false,
             "horas": "8",
             "notas": "55 horas betel ",
-            "_ts": 1781831003038
+            "_ts": 1789610193095
           },
           "Jun": {
             "particip": true,
@@ -31091,7 +31091,7 @@
             "paux": false,
             "horas": "8",
             "notas": "48 horas betel",
-            "_ts": 1788923229553
+            "_ts": 1789610194728
           },
           "Jul": {
             "particip": true,
@@ -31099,7 +31099,7 @@
             "paux": false,
             "horas": "8",
             "notas": "55 horas betel ",
-            "_ts": 1788923271990
+            "_ts": 1789610221384
           },
           "Ago": {
             "particip": true,
@@ -38210,19 +38210,19 @@
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1787089874529
+            "_ts": 1789610375243
           },
           "Ago": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1789516715245
+            "_ts": 1789610383020
           }
         },
         "2026": {
@@ -51075,7 +51075,7 @@
       }
     }
   ],
-  "_lastModified": 1789571830562,
+  "_lastModified": 1789610383952,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54351,6 +54351,78 @@
   ],
   "auditoria": [
     {
+      "ts": 1789610383020,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1789610383011,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1789610376872,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1789610375243,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1789610375233,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Daniela · Jul 2025: cursos=2",
+      "pubId": "mmm9qi4sqy67"
+    },
+    {
+      "ts": 1789610221384,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jul 2025: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789610199993,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Jul 2025: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789610193095,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · May 2025: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789609490014,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789571292002,
       "user": "Administrador",
       "rol": "admin",
@@ -55876,78 +55948,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Abr 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974861736,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2025: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974861727,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2025: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974860135,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974860121,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974856882,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974856872,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974855180,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974855172,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974850224,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Feb 2025: horas=72",
       "pubId": "p1788529197916"
     }
   ],
