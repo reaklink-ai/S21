@@ -14053,7 +14053,7 @@
       "nombre": "Angie",
       "nacimiento": "1996-06-15",
       "bautismo": "2007-11-05",
-      "grupo": "Grupo 4",
+      "grupo": "Grupo 13",
       "telefono": "3172271079",
       "genero": "F",
       "anciano": false,
@@ -14064,10 +14064,13 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Calle 13 A n 1 b este 80 Mz 2 Int 7 casa 26",
         "nombre": "Octavio Grisales",
+        "relacion": "",
         "tel": "3142977645",
-        "relacion": "Tío"
+        "tel2": "",
+        "direccion": "Calle 13 A n 1 b este 80 Mz 2 Int 7 casa 26",
+        "notasMed": "",
+        "_ts": 1789850844226
       },
       "registros": {
         "2024": {
@@ -14292,7 +14295,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1789850844226
     },
     {
       "id": "mmm9qi4nusbr",
@@ -51075,7 +51080,7 @@
       }
     }
   ],
-  "_lastModified": 1789610383952,
+  "_lastModified": 1789850846126,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54351,6 +54356,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789850844226,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Grisales, Angie · Grupo: Grupo 4 → Grupo 13",
+      "pubId": "mmm9qi4npk28"
+    },
+    {
+      "ts": 1789850823397,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789610383020,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -54418,6 +54439,54 @@
       "ts": 1789609490014,
       "user": "Miguel_R",
       "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789607782181,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789607166527,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789605942832,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789605065651,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789605000659,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789604956727,
+      "user": "Administrador",
+      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -55884,70 +55953,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Abr 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974868775,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974868767,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974868152,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974868139,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Mar 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974863884,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2025: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974863877,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2025: horas=72",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974862304,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974862295,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2025: cursos=1",
       "pubId": "p1788529197916"
     }
   ],
