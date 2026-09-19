@@ -46823,7 +46823,7 @@
           }
         }
       },
-      "apellido": "Barrios",
+      "apellido": "Espinel",
       "nombre": "Alejandra",
       "nacimiento": "1993-08-02",
       "bautismo": "2021-05-21",
@@ -46838,7 +46838,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1781993516577,
+      "_tsPersonal": 1789850883065,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -46846,7 +46846,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1781993516577
+        "_ts": 1789850883065
       }
     },
     {
@@ -51080,7 +51080,7 @@
       }
     }
   ],
-  "_lastModified": 1789850846126,
+  "_lastModified": 1789850889905,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54356,6 +54356,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789850883065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Espinel, Alejandra · Nombre: Barrios → Espinel",
+      "pubId": "p1781993516577"
+    },
+    {
       "ts": 1789850844226,
       "user": "Administrador",
       "rol": "admin",
@@ -55941,14 +55949,6 @@
     },
     {
       "ts": 1788974870125,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974870117,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
