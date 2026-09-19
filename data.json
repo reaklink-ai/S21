@@ -50481,6 +50481,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1789855688879",
+      "fecha": "2026-09-19",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 140,
+      "zoom": 66,
+      "total": 206,
+      "notas": "",
+      "_ts": 1789855688879
+    },
+    {
       "id": "r1789248431067",
       "fecha": "2026-09-12",
       "tipo": "Fin de semana",
@@ -51080,7 +51091,7 @@
       }
     }
   ],
-  "_lastModified": 1789850889905,
+  "_lastModified": 1789855690485,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54356,6 +54367,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1789855665627,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1789850883065,
       "user": "Administrador",
       "rol": "admin",
@@ -55945,14 +55964,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Abr 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974870125,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: cursos=",
       "pubId": "p1788529197916"
     }
   ],
