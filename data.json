@@ -39153,6 +39153,38 @@
             "cursos": "1",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "46",
+            "notas": "",
+            "_ts": 1789959566988
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "46",
+            "notas": "",
+            "_ts": 1789959573424
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "35",
+            "notas": "",
+            "_ts": 1789959578244
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "40",
+            "notas": "",
+            "_ts": 1789959579986
           }
         },
         "2025": {
@@ -51564,7 +51596,7 @@
       }
     }
   ],
-  "_lastModified": 1789959528713,
+  "_lastModified": 1789959581887,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54840,6 +54872,142 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959579986,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Dic 2024: horas=40",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959579976,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Dic 2024: horas=40",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959578244,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Nov 2024: horas=35",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959575243,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Nov 2024: horas=35",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959575232,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Nov 2024: horas=35",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959573424,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Oct 2024: horas=46",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959573415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Oct 2024: horas=46",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959566988,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: horas=46",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959566977,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: horas=46",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959562064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: horas=",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959561711,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Nov 2024: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959561700,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Nov 2024: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959561095,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959561084,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959560418,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: cursos=2",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959557110,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: cursos=2",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1789959557099,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2024: cursos=2",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
       "ts": 1789959511471,
       "user": "Administrador",
       "rol": "admin",
@@ -56301,142 +56469,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Nov 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958837319,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958837310,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958834742,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Oct 2024: horas=47",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958834737,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Oct 2024: horas=47",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958830642,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958825297,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958825285,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958810531,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Abr 2024: cursos=2",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958810526,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Abr 2024: cursos=2",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958808136,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958802930,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958802921,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958801672,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Abr 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958801662,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Abr 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958800940,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Mar 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958800929,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Mar 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958800223,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Feb 2024: cursos=1",
       "pubId": "mmm9qi4rwj0v"
     }
   ],
