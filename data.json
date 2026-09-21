@@ -15236,6 +15236,38 @@
             "cursos": "2",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "52",
+            "notas": "",
+            "_ts": 1789959145532
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "55",
+            "notas": "",
+            "_ts": 1789959146769
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "38",
+            "notas": "",
+            "_ts": 1789959160490
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "40",
+            "notas": "",
+            "_ts": 1789959162473
           }
         },
         "2025": {
@@ -15319,6 +15351,83 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -51259,7 +51368,7 @@
       }
     }
   ],
-  "_lastModified": 1789959095286,
+  "_lastModified": 1789959164018,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54535,6 +54644,158 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959162473,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Dic 2024: horas=40",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959162463,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Dic 2024: horas=40",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959160490,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959156738,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959149336,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959149322,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959146769,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2024: horas=55",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959146759,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2024: horas=55",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959145532,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2024: horas=52",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959145521,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2024: horas=52",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959143488,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959138038,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959138028,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959136372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: cursos=3",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959136367,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Nov 2024: cursos=3",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959134871,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2024: cursos=4",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959134866,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2024: cursos=4",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959134329,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2024: cursos=4",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1789959134325,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2024: cursos=4",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
       "ts": 1789959093261,
       "user": "Administrador",
       "rol": "admin",
@@ -55981,158 +56242,6 @@
       "accion": "Horas editadas",
       "detalle": "Huertas, Oscar · Ago 2025: cursos=6",
       "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1789561334102,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: horas=34",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1789561334095,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: horas=34",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1789561332285,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: cursos=11",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1789561332278,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Ago 2025: cursos=11",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1789561317699,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1789561317691,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1789561309231,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Ago 2025: horas=25",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789561309225,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Ago 2025: horas=25",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789561307408,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789561307402,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789561270304,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789516699792,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Ago 2025: horas=30",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1789516699778,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Ago 2025: horas=30",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1789516693882,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1789516693870,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1789516678872,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Ago 2025: horas=16",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1789516678862,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Ago 2025: horas=16",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1789516675147,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1789516675137,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4r1pju"
     }
   ],
   "formHistorial": [
