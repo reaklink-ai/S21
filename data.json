@@ -17562,7 +17562,8 @@
             "horas": "49",
             "cursos": "1",
             "paux": false,
-            "notas": ""
+            "notas": "",
+            "_ts": 1789959229402
           },
           "Abr": {
             "particip": true,
@@ -17598,6 +17599,38 @@
             "cursos": "1",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "57",
+            "notas": "NUEVA PRECURSORA REGULAR",
+            "_ts": 1789959219356
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1789959225120
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "43",
+            "notas": "",
+            "_ts": 1789959226590
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "39",
+            "notas": "",
+            "_ts": 1789959228244
           }
         },
         "2025": {
@@ -51368,7 +51401,7 @@
       }
     }
   ],
-  "_lastModified": 1789959164018,
+  "_lastModified": 1789959230118,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54644,6 +54677,110 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959228244,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Dic 2024: horas=39",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959228234,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Dic 2024: horas=39",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959226590,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Nov 2024: horas=43",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959226573,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Nov 2024: horas=43",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959225120,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959221511,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959221499,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959219356,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Sep 2024: horas=57",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959219347,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Sep 2024: horas=57",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959216923,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2024: horas=",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959211832,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2024: horas=",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959211369,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Sep 2024: horas=55",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
+      "ts": 1789959211364,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Sep 2024: horas=55",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
       "ts": 1789959162473,
       "user": "Administrador",
       "rol": "admin",
@@ -56138,110 +56275,6 @@
       "accion": "Horas editadas",
       "detalle": "Ruiz, Luz Marina · Ago 2025: cursos=01",
       "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1789561404067,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Ago 2025: horas=30",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1789561404060,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Ago 2025: horas=30",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1789561401720,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rojas, Blanca Cecilia · Ago 2025: cursos=",
-      "pubId": "mmm9qi4s0oc6"
-    },
-    {
-      "ts": 1789561391360,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1789561391350,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1789561374799,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Ago 2025: horas=10",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1789561374791,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Ago 2025: horas=10",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1789561370818,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1789561370809,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1789561364586,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1789561364581,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1789561354513,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Ago 2025: cursos=6",
-      "pubId": "mmm9qi4ntq1t"
-    },
-    {
-      "ts": 1789561354508,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Huertas, Oscar · Ago 2025: cursos=6",
-      "pubId": "mmm9qi4ntq1t"
     }
   ],
   "formHistorial": [
