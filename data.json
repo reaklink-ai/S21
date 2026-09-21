@@ -32179,27 +32179,27 @@
           },
           "Oct": {
             "particip": true,
-            "cursos": "",
+            "cursos": "3",
             "paux": false,
             "horas": "45",
             "notas": "",
-            "_ts": 1789958911556
+            "_ts": 1789958922229
           },
           "Nov": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "43",
             "notas": "",
-            "_ts": 1789958900073
+            "_ts": 1789958930330
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "44",
             "notas": "",
-            "_ts": 1789958900550
+            "_ts": 1789958931801
           }
         },
         "2025": {
@@ -51195,7 +51195,7 @@
       }
     }
   ],
-  "_lastModified": 1789958912375,
+  "_lastModified": 1789958934338,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54471,6 +54471,94 @@
   ],
   "auditoria": [
     {
+      "ts": 1789958931801,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Dic 2024: horas=44",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958931790,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Dic 2024: horas=44",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958930330,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Nov 2024: horas=43",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958930323,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Nov 2024: horas=43",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958924508,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Nov 2024: horas=",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958924091,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Dic 2024: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958924081,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Dic 2024: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958923002,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Nov 2024: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958922991,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Nov 2024: cursos=2",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958922229,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Oct 2024: cursos=3",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958922214,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Oct 2024: cursos=3",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
       "ts": 1789958911556,
       "user": "Administrador",
       "rol": "admin",
@@ -55981,94 +56069,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Ago 2025: cursos=2",
       "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1789489396715,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1789489353495,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Ago 2025: horas=7",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789489353474,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Ago 2025: horas=7",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789489351459,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Ago 2025: cursos=",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789489346532,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Ago 2025: cursos=",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789489307291,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789248406228,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789224699366,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789069897506,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789061429090,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789056005710,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
