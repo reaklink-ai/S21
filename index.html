@@ -11866,6 +11866,7 @@ function precGetDatos(pub, anio) {
   }
 
   return {
+    anio,
     meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
     horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
     metaAnioAjustada, esNuevoPrecReg, mesInicioPrec,
@@ -12137,7 +12138,7 @@ function renderPrecursores() {
     // Chips mes a mes
     html += '<div class="prec-meses">';
     d.meses.forEach((m,i) => {
-      const mesActualIdx = mesActual().idx;
+      const mesActualIdx = (d.anio === anioHoy()) ? mesActual().idx : 11;
       let clase = 'futuro', valor = '\u2014';
       if(d.esNuevoPrecReg && i < d.mesInicioPrec) {
         // Mes anterior a que empezara como precursor regular nuevo: no aplica la
@@ -12277,7 +12278,11 @@ function precFiltrarGrupo(filtro) {
 // GRÁFICO DE BARRAS — inline por tarjeta precursor
 // ══════════════════════════════════════════════════════════════
 function precChartHTML(d) {
-  const mesActualIdx = mesActual().idx;
+  // Si "d" es de un año de servicio ya cerrado (histórico), hay que mostrar los
+  // 12 meses completos — mesActual().idx es el mes de HOY, que no tiene ningún
+  // sentido aplicado a un año distinto al actual (antes ocultaba todo lo que no
+  // fuera el mismo mes calendario de hoy en cualquier año que se estuviera viendo).
+  const mesActualIdx = (d.anio === anioHoy()) ? mesActual().idx : 11;
   // Si es nuevo precursor regular este año, no mostrar los meses previos a su inicio
   // como precursor (no aplicaba la meta de 50h en esos meses).
   const mesInicio = d.esNuevoPrecReg ? d.mesInicioPrec : 0;
