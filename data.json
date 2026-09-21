@@ -38852,6 +38852,38 @@
             "cursos": "1",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "51",
+            "notas": "",
+            "_ts": 1789959503132
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "51",
+            "notas": "",
+            "_ts": 1789959504513
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "27",
+            "notas": "",
+            "_ts": 1789959506020
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "28",
+            "notas": "",
+            "_ts": 1789959511471
           }
         },
         "2025": {
@@ -51532,7 +51564,7 @@
       }
     }
   ],
-  "_lastModified": 1789959462870,
+  "_lastModified": 1789959512839,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54808,6 +54840,142 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959511471,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Dic 2024: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959511456,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Dic 2024: horas=28",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959506388,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Dic 2024: horas=",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959506020,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Nov 2024: horas=27",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959506015,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Nov 2024: horas=27",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959504513,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Oct 2024: horas=51",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959504507,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Oct 2024: horas=51",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959503132,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2024: horas=51",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959500501,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2024: horas=51",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959500488,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2024: horas=51",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959498668,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Nov 2024: cursos=3",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959494063,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Nov 2024: cursos=3",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959494057,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Nov 2024: cursos=3",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959493311,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Oct 2024: cursos=3",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959493300,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Oct 2024: cursos=3",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959492843,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2024: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1789959492836,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2024: cursos=1",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
       "ts": 1789959461198,
       "user": "Administrador",
       "rol": "admin",
@@ -56270,142 +56438,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Feb 2024: cursos=1",
       "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958800215,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Feb 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958799774,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ene 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958799762,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ene 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958798589,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Nov 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958798580,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Nov 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958797968,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958797954,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958797195,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Oct 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958797186,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Oct 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958796694,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958796678,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2024: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789956906681,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789956823562,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789855665627,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789850883065,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Espinel, Alejandra · Nombre: Barrios → Espinel",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1789850844226,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Grisales, Angie · Grupo: Grupo 4 → Grupo 13",
-      "pubId": "mmm9qi4npk28"
-    },
-    {
-      "ts": 1789850823397,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
     }
   ],
   "formHistorial": [
