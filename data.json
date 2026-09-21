@@ -4505,6 +4505,38 @@
             "cursos": "2",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "28",
+            "notas": "",
+            "_ts": 1789958987623
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "43",
+            "notas": "",
+            "_ts": 1789958988829
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "43",
+            "notas": "",
+            "_ts": 1789958993799
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "38",
+            "notas": "",
+            "_ts": 1789958995677
           }
         },
         "2025": {
@@ -51195,7 +51227,7 @@
       }
     }
   ],
-  "_lastModified": 1789958934338,
+  "_lastModified": 1789958997256,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54471,6 +54503,166 @@
   ],
   "auditoria": [
     {
+      "ts": 1789958995677,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Dic 2024: horas=38",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958995666,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Dic 2024: horas=38",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958993799,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958990743,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958990727,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958988829,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2024: horas=43",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958988818,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2024: horas=43",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958987623,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Sep 2024: horas=28",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958987612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Sep 2024: horas=28",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958982019,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Sep 2024: horas=",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958981552,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2024: horas=",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958980878,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Dic 2024: cursos=4",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958980869,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Dic 2024: cursos=4",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958979436,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958972612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958972602,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958971820,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2024: cursos=2",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958971809,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2024: cursos=2",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958971197,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Sep 2024: cursos=3",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1789958971185,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Sep 2024: cursos=3",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
       "ts": 1789958931801,
       "user": "Administrador",
       "rol": "admin",
@@ -55909,166 +56101,6 @@
       "accion": "Horas editadas",
       "detalle": "Serna Rivadeneira, Cristina · Ago 2025: cursos=1",
       "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1789490383092,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Rivadeneira, Cristina · Ago 2025: cursos=1",
-      "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1789490376053,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Ago 2025: cursos=1",
-      "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1789490376042,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Ago 2025: cursos=1",
-      "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1789490350620,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1789490350611,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1789490329081,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Ago 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1789490329070,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Ago 2025: horas=30",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1789490326726,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1789490326714,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4nts9j"
-    },
-    {
-      "ts": 1789490161993,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Ago 2025: horas=20",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1789490161982,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Geraldine · Ago 2025: horas=20",
-      "pubId": "mmm9qi4jigd3"
-    },
-    {
-      "ts": 1789490156545,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Ago 2025: horas=20",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1789490156536,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Ago 2025: horas=20",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1789490154772,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1789490154760,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Alba, Nicolas · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4jq3yf"
-    },
-    {
-      "ts": 1789490016997,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789489407790,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Ago 2025: horas=22",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1789489407772,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Ago 2025: horas=22",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1789489397273,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Ago 2025: horas=",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1789489396734,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4ndhnb"
     }
   ],
   "formHistorial": [
