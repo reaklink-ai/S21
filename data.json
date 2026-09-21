@@ -20503,6 +20503,38 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "52",
+            "notas": "",
+            "_ts": 1789959267050
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1789959268785
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "40",
+            "notas": "",
+            "_ts": 1789959278354
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1789959280411
           }
         },
         "2025": {
@@ -51401,7 +51433,7 @@
       }
     }
   ],
-  "_lastModified": 1789959230118,
+  "_lastModified": 1789959281114,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54677,6 +54709,126 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959280411,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Dic 2024: horas=50",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959280401,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Dic 2024: horas=50",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959278354,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959274889,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959274880,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959269247,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: horas=",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959268785,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Oct 2024: horas=50",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959268775,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Oct 2024: horas=50",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959267050,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Sep 2024: horas=52",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959267038,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Sep 2024: horas=52",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959262143,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Sep 2024: horas=",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959261691,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: cursos=1",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959261683,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Nov 2024: cursos=1",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959261023,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
+      "ts": 1789959261012,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
       "ts": 1789959228244,
       "user": "Administrador",
       "rol": "admin",
@@ -56155,126 +56307,6 @@
       "accion": "Horas editadas",
       "detalle": "Moreno, Sandra · Nov 2025: cursos=2",
       "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570713743,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Nov 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570712814,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Dic 2025: cursos=",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570712555,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Oct 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570712543,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Oct 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789569820667,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Moreno, Sandra · Sin grupo",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789569606919,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789564050545,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789563701664,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789563655990,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789563485265,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789563218729,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789561414372,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Ago 2025: horas=53",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1789561414365,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Ago 2025: horas=53",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1789561412716,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Ago 2025: cursos=01",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1789561412708,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Ago 2025: cursos=01",
-      "pubId": "mmm9qi4seyz6"
     }
   ],
   "formHistorial": [
