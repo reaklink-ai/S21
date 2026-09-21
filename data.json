@@ -38874,16 +38874,16 @@
             "cursos": "3",
             "paux": false,
             "horas": "27",
-            "notas": "",
-            "_ts": 1789959506020
+            "notas": "DIFICULTADES DE SALUD",
+            "_ts": 1789959526854
           },
           "Dic": {
             "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "28",
-            "notas": "",
-            "_ts": 1789959511471
+            "notas": "DIFICULTADES DE SALUD",
+            "_ts": 1789959527752
           }
         },
         "2025": {
@@ -51564,7 +51564,7 @@
       }
     }
   ],
-  "_lastModified": 1789959512839,
+  "_lastModified": 1789959528713,
   "vym": {
     "semanas": {},
     "historial": [
