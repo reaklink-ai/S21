@@ -31028,73 +31028,73 @@
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "54",
             "notas": "",
-            "_ts": 1789958796694
+            "_ts": 1789958830642
           },
           "Oct": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "47",
             "notas": "",
-            "_ts": 1789958797195
+            "_ts": 1789958834742
           },
           "Nov": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": "",
-            "_ts": 1789958798589
+            "_ts": 1789958846746
           },
           "Dic": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": "",
-            "_ts": 1789958797968
+            "_ts": 1789958849174
           },
           "Ene": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "41",
             "notas": "",
-            "_ts": 1789958799774
+            "_ts": 1789958850992
           },
           "Feb": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "38",
             "notas": "",
-            "_ts": 1789958800223
+            "_ts": 1789958860156
           },
           "Mar": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "31",
             "notas": "",
-            "_ts": 1789958800940
+            "_ts": 1789958862225
           },
           "Abr": {
             "particip": true,
             "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "46",
             "notas": "",
-            "_ts": 1789958810531
+            "_ts": 1789958864605
           },
           "May": {
             "particip": true,
             "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1789958808136
+            "horas": "4",
+            "notas": "luna de miel",
+            "_ts": 1789958870031
           }
         },
         "2025": {
@@ -51163,7 +51163,7 @@
       }
     }
   ],
-  "_lastModified": 1789958811013,
+  "_lastModified": 1789958870790,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54439,6 +54439,182 @@
   ],
   "auditoria": [
     {
+      "ts": 1789958865629,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · May 2024: horas=4",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958865623,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · May 2024: horas=4",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958864605,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Abr 2024: horas=46",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958864597,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Abr 2024: horas=46",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958862225,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Mar 2024: horas=31",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958862217,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Mar 2024: horas=31",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958860156,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958855410,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958855401,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958850992,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Ene 2024: horas=41",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958850982,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Ene 2024: horas=41",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958849174,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Dic 2024: horas=30",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958849166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Dic 2024: horas=30",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958846746,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958841167,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958837319,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958837310,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Nov 2024: horas=38",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958834742,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Oct 2024: horas=47",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958834737,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Oct 2024: horas=47",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958830642,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958825297,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1789958825285,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2024: horas=54",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
       "ts": 1789958810531,
       "user": "Administrador",
       "rol": "admin",
@@ -55861,182 +56037,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Jaime · Ago 2025: cursos=3",
       "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1789052950277,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: horas=",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789052949242,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: horas=",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789052923453,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: horas=",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789052879380,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789052879369,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789052665617,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: cursos=",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052665603,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: cursos=",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052662006,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: horas=49",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052661995,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: horas=49",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052651973,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: horas=49",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052619175,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: cursos=49",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052619161,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Ago 2025: cursos=49",
-      "pubId": "mmm9qi4k6wjw"
-    },
-    {
-      "ts": 1789052552153,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789003035704,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789002912376,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789002787147,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789002739231,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789000175076,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789000141807,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789000044539,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788999730598,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1788984721629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
