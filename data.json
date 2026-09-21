@@ -36727,6 +36727,38 @@
             "cursos": "1",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "66",
+            "notas": "",
+            "_ts": 1789959447830
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "44",
+            "notas": "",
+            "_ts": 1789959458220
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "24",
+            "notas": "",
+            "_ts": 1789959459649
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "7",
+            "notas": "",
+            "_ts": 1789959461198
           }
         },
         "2025": {
@@ -51500,7 +51532,7 @@
       }
     }
   ],
-  "_lastModified": 1789959422594,
+  "_lastModified": 1789959462870,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54776,6 +54808,118 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959461198,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Dic 2024: horas=7",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959461187,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Dic 2024: horas=7",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959459649,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Nov 2024: horas=24",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959459640,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Nov 2024: horas=24",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959458220,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: horas=44",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959453522,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: horas=44",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959453512,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: horas=44",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959452316,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959452305,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: cursos=1",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959448183,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2024: cursos=",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959447830,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2024: horas=66",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959447820,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2024: horas=66",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959446608,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2024: cursos=1",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1789959446599,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2024: cursos=1",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
       "ts": 1789959420763,
       "user": "Administrador",
       "rol": "admin",
@@ -56257,118 +56401,6 @@
     },
     {
       "ts": 1789850823397,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789610383020,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1789610383011,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1789610376872,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Ago 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1789610375243,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1789610375233,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Daniela · Jul 2025: cursos=2",
-      "pubId": "mmm9qi4sqy67"
-    },
-    {
-      "ts": 1789610221384,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Jul 2025: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789610199993,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Jul 2025: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789610193095,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2025: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789609490014,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789607782181,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789607166527,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789605942832,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789605065651,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1789605000659,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
