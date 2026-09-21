@@ -31023,6 +31023,78 @@
             "cursos": "1",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958786865
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958787247
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958787606
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958788012
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958788664
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958789107
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958789595
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958790071
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958790495
           }
         },
         "2025": {
@@ -51091,7 +51163,7 @@
       }
     }
   ],
-  "_lastModified": 1789855690485,
+  "_lastModified": 1789958792480,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54367,6 +54439,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1789956906681,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789956823562,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1789855665627,
       "user": "Administrador",
       "rol": "admin",
@@ -54516,6 +54604,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1789572671166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -54880,6 +54976,46 @@
     },
     {
       "ts": 1789569606919,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789564050545,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789563701664,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789563655990,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789563485265,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1789563218729,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
@@ -55727,6 +55863,14 @@
       "pubId": null
     },
     {
+      "ts": 1788984721629,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1788984136685,
       "user": "Administrador",
       "rol": "admin",
@@ -55892,78 +56036,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Jun 2025: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974878258,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2025: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974878251,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2025: horas=65",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974876943,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Jun 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974876935,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Jun 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974876284,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Jul 2025: cursos=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974875758,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974875744,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · May 2025: cursos=1",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974871845,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: horas=",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1788974871834,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Abr 2026: horas=",
       "pubId": "p1788529197916"
     }
   ],
