@@ -31037,6 +31037,38 @@
             "cursos": "4",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "5",
+            "paux": false,
+            "horas": "36",
+            "notas": "",
+            "_ts": 1789959318979
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "5",
+            "paux": false,
+            "horas": "20",
+            "notas": "",
+            "_ts": 1789959324756
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "5",
+            "paux": false,
+            "horas": "45",
+            "notas": "",
+            "_ts": 1789959326411
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1789959327895
           }
         },
         "2025": {
@@ -51433,7 +51465,7 @@
       }
     }
   ],
-  "_lastModified": 1789959281114,
+  "_lastModified": 1789959329665,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54709,6 +54741,150 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959327895,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Dic 2024: horas=15",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959327889,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Dic 2024: horas=15",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959326411,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Nov 2024: horas=45",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959326398,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Nov 2024: horas=45",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959324756,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959321116,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959321104,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959318979,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Sep 2024: horas=36",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959318966,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Sep 2024: horas=36",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959313146,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Sep 2024: horas=",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959312791,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Dic 2024: cursos=2",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959312779,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Dic 2024: cursos=2",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959311926,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Nov 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959311916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Nov 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959311108,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959311097,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959310576,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Sep 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1789959310565,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Sep 2024: cursos=5",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
       "ts": 1789959280411,
       "user": "Administrador",
       "rol": "admin",
@@ -56162,150 +56338,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Moreno, Sandra · Jul 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570739611,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Jun 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570739603,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Jun 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738938,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · May 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738930,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · May 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738464,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Abr 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738456,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Abr 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738034,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Mar 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570738028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Mar 2025: cursos=2",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570737141,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Feb 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570737130,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Feb 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570735650,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Ene 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570735639,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Ene 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570734392,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Dic 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570734380,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Dic 2025: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570733056,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Nov 2025: horas=30",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570723314,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Nov 2025: horas=30",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570723307,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Nov 2025: horas=30",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1789570713752,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Nov 2025: cursos=2",
       "pubId": "p1789569820666"
     }
   ],
