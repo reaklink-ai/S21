@@ -14949,6 +14949,38 @@
             "cursos": "",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "28",
+            "notas": "",
+            "_ts": 1789959075377
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "20",
+            "notas": "",
+            "_ts": 1789959078173
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "44",
+            "notas": "",
+            "_ts": 1789959091353
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1789959093261
           }
         },
         "2025": {
@@ -51227,7 +51259,7 @@
       }
     }
   ],
-  "_lastModified": 1789958997256,
+  "_lastModified": 1789959095286,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54503,6 +54535,86 @@
   ],
   "auditoria": [
     {
+      "ts": 1789959093261,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Dic 2024: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959093255,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Dic 2024: horas=30",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959091353,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959080055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959080049,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959078173,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Oct 2024: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959078168,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Oct 2024: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959075377,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959070798,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1789959070786,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
       "ts": 1789958995677,
       "user": "Administrador",
       "rol": "admin",
@@ -56021,86 +56133,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Ago 2025: cursos=3",
       "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1789516661490,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ago 2025: horas=9",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789516661479,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ago 2025: horas=9",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789516639937,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789516639925,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789516618673,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Ago 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1789516618662,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Ago 2025: horas=30",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1789516614190,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1789516614179,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Rogers · Ago 2025: cursos=1",
-      "pubId": "mmm9qi4qvq3o"
-    },
-    {
-      "ts": 1789516556866,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1789490383101,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Rivadeneira, Cristina · Ago 2025: cursos=1",
-      "pubId": "p1776221052712"
     }
   ],
   "formHistorial": [
