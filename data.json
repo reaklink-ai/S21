@@ -32168,6 +32168,38 @@
             "cursos": "3",
             "paux": false,
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "3",
+            "paux": false,
+            "horas": "43",
+            "notas": "",
+            "_ts": 1789958909668
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "45",
+            "notas": "",
+            "_ts": 1789958911556
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958900073
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1789958900550
           }
         },
         "2025": {
@@ -51163,7 +51195,7 @@
       }
     }
   ],
-  "_lastModified": 1789958870790,
+  "_lastModified": 1789958912375,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54439,6 +54471,62 @@
   ],
   "auditoria": [
     {
+      "ts": 1789958911556,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Oct 2024: horas=45",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958911546,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Oct 2024: horas=45",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958909668,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Sep 2024: horas=43",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958909657,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Sep 2024: horas=43",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958908007,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Sep 2024: cursos=3",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958905251,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Sep 2024: cursos=3",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
+      "ts": 1789958905242,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Sep 2024: cursos=3",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
       "ts": 1789958865629,
       "user": "Administrador",
       "rol": "admin",
@@ -55981,62 +56069,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1789053203901,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: horas=51",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789053203887,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Ago 2025: horas=51",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1789053027623,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Ago 2025: horas=71",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1789053027613,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Ago 2025: horas=71",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1789052988765,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Ago 2025: horas=",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1789052977841,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1789052977830,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Ago 2025: cursos=3",
-      "pubId": "mmm9qi4quyam"
     }
   ],
   "formHistorial": [
