@@ -50996,6 +50996,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1790454990455",
+      "fecha": "2026-09-26",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 148,
+      "zoom": 63,
+      "total": 211,
+      "notas": "",
+      "_ts": 1790454990455
+    },
+    {
       "id": "r1790211900839",
       "fecha": "2026-09-23",
       "tipo": "Entre semana",
@@ -51617,7 +51628,7 @@
       }
     }
   ],
-  "_lastModified": 1790211902375,
+  "_lastModified": 1790454991963,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54893,6 +54904,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1790454973513,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1790211880695,
       "user": "Administrador",
       "rol": "admin",
@@ -56482,14 +56501,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Ene 2024: horas=41",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958849174,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Dic 2024: horas=30",
       "pubId": "mmm9qi4rwj0v"
     }
   ],
