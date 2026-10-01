@@ -50996,6 +50996,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1790825293548",
+      "fecha": "2026-09-30",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 129,
+      "zoom": 79,
+      "total": 208,
+      "notas": "",
+      "_ts": 1790825293548
+    },
+    {
       "id": "r1790454990455",
       "fecha": "2026-09-26",
       "tipo": "Fin de semana",
@@ -51628,7 +51639,7 @@
       }
     }
   ],
-  "_lastModified": 1790454991963,
+  "_lastModified": 1790825295325,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54904,6 +54915,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1790825262775,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1790454973513,
       "user": "Administrador",
       "rol": "admin",
@@ -56489,14 +56508,6 @@
     },
     {
       "ts": 1789958850992,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ene 2024: horas=41",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958850982,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
