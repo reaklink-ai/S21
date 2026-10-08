@@ -50996,6 +50996,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1791423058006",
+      "fecha": "2026-10-07",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 105,
+      "zoom": 77,
+      "total": 182,
+      "notas": "",
+      "_ts": 1791423058006
+    },
+    {
       "id": "r1790825293548",
       "fecha": "2026-09-30",
       "tipo": "Entre semana",
@@ -51639,7 +51650,7 @@
       }
     }
   ],
-  "_lastModified": 1790825295325,
+  "_lastModified": 1791423059688,
   "vym": {
     "semanas": {},
     "historial": [
@@ -54915,6 +54926,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1791423031702,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1791420328283,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1791415813495,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1791129714593,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1790825262775,
       "user": "Administrador",
       "rol": "admin",
@@ -56480,38 +56523,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Mar 2024: horas=31",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958860156,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958855410,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958855401,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Feb 2024: horas=38",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958850992,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Ene 2024: horas=41",
       "pubId": "mmm9qi4rwj0v"
     }
   ],
