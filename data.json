@@ -50996,6 +50996,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1791667085808",
+      "fecha": "2026-10-10",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 119,
+      "zoom": 57,
+      "total": 176,
+      "notas": "",
+      "_ts": 1791667085808
+    },
+    {
       "id": "r1791423058006",
       "fecha": "2026-10-07",
       "tipo": "Entre semana",
@@ -51650,7 +51661,7 @@
       }
     }
   ],
-  "_lastModified": 1791600322983,
+  "_lastModified": 1791667087617,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55196,6 +55207,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1791667027472,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1791600320351,
       "user": "Administrador",
       "rol": "admin",
@@ -55217,6 +55236,22 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1791548620356,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Sarha · Oct 2025: cursos=",
+      "pubId": "mmm9qi4uprah"
+    },
+    {
+      "ts": 1791548538913,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -56770,30 +56805,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Sep 2024: cursos=3",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958865629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2024: horas=4",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958865623,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · May 2024: horas=4",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1789958864605,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Abr 2024: horas=46",
-      "pubId": "mmm9qi4rwj0v"
     }
   ],
   "formHistorial": [
