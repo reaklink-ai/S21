@@ -27875,10 +27875,11 @@
           },
           "Sep": {
             "particip": false,
-            "cursos": "",
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "42",
+            "notas": "GVP",
+            "_ts": 1791754959711
           },
           "Oct": {
             "particip": false,
@@ -51673,7 +51674,7 @@
       }
     }
   ],
-  "_lastModified": 1791754902353,
+  "_lastModified": 1791754960623,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55219,6 +55220,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1791754948989,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Sep 2026: horas=42",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1791754948977,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Sep 2026: horas=42",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1791754922378,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
+      "ts": 1791754922366,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Jaime · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4quyam"
+    },
+    {
       "ts": 1791754883852,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -56784,38 +56817,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Nov 2024: horas=",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958924091,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958924081,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958923002,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Nov 2024: cursos=2",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958922991,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Nov 2024: cursos=2",
       "pubId": "mmm9qi4rhmxc"
     }
   ],
