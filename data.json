@@ -27411,11 +27411,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1791754883852
           },
           "Oct": {
             "particip": false,
@@ -51672,7 +51673,7 @@
       }
     }
   ],
-  "_lastModified": 1791754852224,
+  "_lastModified": 1791754885877,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55218,6 +55219,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1791754883852,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1791754883836,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
       "ts": 1791754676868,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -56799,22 +56816,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Nov 2024: cursos=2",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958922229,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Oct 2024: cursos=3",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958922214,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Oct 2024: cursos=3",
       "pubId": "mmm9qi4rhmxc"
     }
   ],
