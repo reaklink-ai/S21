@@ -51405,11 +51405,11 @@
         "2025": {
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791829510376
+            "_ts": 1791829533918
           },
           "Oct": {
             "particip": true,
@@ -51429,11 +51429,11 @@
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791829512934
+            "_ts": 1791829537563
           },
           "Ene": {
             "particip": true,
@@ -51477,36 +51477,37 @@
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791829515708
+            "_ts": 1791829538328
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791829516192
+            "_ts": 1791829539028
           },
           "Ago": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791829516676
+            "_ts": 1791829540229
           }
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1791829541113
           },
           "Oct": {
             "particip": false,
@@ -53090,7 +53091,7 @@
       }
     }
   ],
-  "_lastModified": 1791829517977,
+  "_lastModified": 1791829542781,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56636,6 +56637,102 @@
   ],
   "auditoria": [
     {
+      "ts": 1791829540229,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Ago 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829540221,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Ago 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829539028,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Jul 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829539020,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Jul 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829538328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Jun 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829538321,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Jun 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829537563,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Dic 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829535884,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Dic 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829535875,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Dic 2025: cursos=1",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829533918,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Sep 2025: cursos=2",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829531983,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Sep 2025: cursos=2",
+      "pubId": "p1791829505304"
+    },
+    {
+      "ts": 1791829531974,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Manosalva, Nidia · Sep 2025: cursos=2",
+      "pubId": "p1791829505304"
+    },
+    {
       "ts": 1791829505305,
       "user": "Administrador",
       "rol": "admin",
@@ -58138,102 +58235,6 @@
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Nov 2025: cursos=2",
       "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828344162,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Nov 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828343612,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Oct 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828343604,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Oct 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828343055,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828343040,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828303713,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Uribe, Catherine · Sin grupo",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828178226,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1791811726980,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1791754948989,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Sep 2026: horas=42",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1791754948977,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Sep 2026: horas=42",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1791754922378,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4quyam"
-    },
-    {
-      "ts": 1791754922366,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Jaime · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4quyam"
     }
   ],
   "formHistorial": [
