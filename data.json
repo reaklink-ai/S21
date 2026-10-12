@@ -50418,6 +50418,104 @@
       "registros": {
         "2025": {
           "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828790892
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828791588
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828792155
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828792773
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828801010
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828801777
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828802460
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828803188
+          },
+          "May": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828803830
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828804489
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828805321
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "4",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828806306
+          }
+        },
+        "2026": {
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -52348,7 +52446,7 @@
       }
     }
   ],
-  "_lastModified": 1791828758007,
+  "_lastModified": 1791828806984,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55894,6 +55992,134 @@
   ],
   "auditoria": [
     {
+      "ts": 1791828806306,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Ago 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828806297,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Ago 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828805321,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Jul 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828805314,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Jul 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828804489,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Jun 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828804480,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Jun 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828803830,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · May 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828803822,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · May 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828803188,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Abr 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828803181,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Abr 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828802460,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Mar 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828802455,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Mar 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828801777,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Feb 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828801771,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Feb 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828801010,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Ene 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1791828801005,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Ene 2025: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
       "ts": 1791828736498,
       "user": "Administrador",
       "rol": "admin",
@@ -57364,134 +57590,6 @@
       "accion": "Horas editadas",
       "detalle": "Larrota, Sergio · Sep 2024: horas=52",
       "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959262143,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Sep 2024: horas=",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959261691,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: cursos=1",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959261683,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: cursos=1",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959261023,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Oct 2024: cursos=1",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959261012,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Oct 2024: cursos=1",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959228244,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Dic 2024: horas=39",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959228234,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Dic 2024: horas=39",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959226590,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Nov 2024: horas=43",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959226573,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Nov 2024: horas=43",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959225120,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959221511,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959221499,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Oct 2024: horas=50",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959219356,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Sep 2024: horas=57",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959219347,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Sep 2024: horas=57",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959216923,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Oct 2024: horas=",
-      "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959211832,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Yudid · Oct 2024: horas=",
-      "pubId": "mmm9qi4nym0v"
     }
   ],
   "formHistorial": [
