@@ -11723,7 +11723,8 @@ function renderVyM() {
 // ══════════════════════════════════════════════════════════════
 
 const PREC_META_MES  = 50;
-const PREC_META_ANIO = 560;
+const PREC_META_ANIO = 600;              // Meta anual oficial que se muestra siempre (600h)
+const PREC_UMBRAL_CONTINUAR_ANIO = 560;  // Mínimo real: llegando a esto puede seguir siendo precursor regular
 
 const PREC_LIMITE_BETEL = 55; // horas máx acreditables al combinar predicación + betel
 
@@ -11814,8 +11815,11 @@ function precGetDatos(pub, anio) {
   });
 
   // Meta ajustada: si empezó después de Sep, la meta anual es proporcional
+  // metaAnioAjustada = meta "oficial" mostrada (600h, o proporcional si es nuevo precursor)
+  // umbralContinuarAjustado = mínimo REAL para poder continuar como precursor regular (560h, o proporcional)
   const mesesAplicables = 12 - mesInicioPrec;
   const metaAnioAjustada = esNuevoPrecReg ? Math.round((PREC_META_ANIO / 12) * mesesAplicables) : PREC_META_ANIO;
+  const umbralContinuarAjustado = esNuevoPrecReg ? Math.round((PREC_UMBRAL_CONTINUAR_ANIO / 12) * mesesAplicables) : PREC_UMBRAL_CONTINUAR_ANIO;
 
   // ── Promedio general ──
   const promedio = mesesConDatos > 0 ? horasTotalCombinado / mesesConDatos : 0;
@@ -11828,7 +11832,9 @@ function precGetDatos(pub, anio) {
   const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx && m.idx >= mesInicioPrec);
   const mesesRestantes = meses.filter(m => m.idx >  mesActualIdx).length;
 
-  const horasRestantes    = Math.max(0, metaAnioAjustada - horasTotalCombinado);
+  // El "necesario para no quedar bajo" se calcula contra el mínimo REAL (560h),
+  // no contra la meta oficial de 600h — llegando a 560h ya puede continuar.
+  const horasRestantes    = Math.max(0, umbralContinuarAjustado - horasTotalCombinado);
   const promedioNecesario = mesesRestantes > 0 ? horasRestantes / mesesRestantes : 0;
 
   // ── Promedios para clasificación ──
@@ -11869,7 +11875,7 @@ function precGetDatos(pub, anio) {
     anio,
     meses, horasTotal, horasTotalCombinado, promedio, mesesConDatos, mesesRestantes,
     horasRestantes, promedioNecesario, promUlt3, requiereReunion, estado,
-    metaAnioAjustada, esNuevoPrecReg, mesInicioPrec,
+    metaAnioAjustada, umbralContinuarAjustado, esNuevoPrecReg, mesInicioPrec,
     // Horas adicionales (todas las categorías)
     horasExtraBruto, horasExtraCredito, desgloseCategorias,
     // Compatibilidad con código que usa horasBetelCredito/Bruto
@@ -12002,7 +12008,7 @@ function renderPrecursores() {
       <div class="prec-title">Precursores Regulares${_soloGrupo ? ' · ' + currentUser.grupo : ''}</div>
       <div class="prec-subtitle" style="display:flex;align-items:center;gap:8px">
         <button onclick="precCambiarAnio(-1)" title="Año anterior" style="border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;cursor:pointer;font-size:12px;line-height:1">◀</button>
-        <span>Año de servicio ${anio}–${anio+1}${esAnioActual ? '' : ' <span style="font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:1px 7px;border-radius:10px">histórico</span>'} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong></span>
+        <span>Año de servicio ${anio}–${anio+1}${esAnioActual ? '' : ' <span style="font-size:10px;font-weight:700;color:var(--accent);background:var(--accent-lt);padding:1px 7px;border-radius:10px">histórico</span>'} · Meta mensual: <strong>${PREC_META_MES}h</strong> · Meta anual: <strong>${PREC_META_ANIO}h</strong> <span style="font-size:10px;color:var(--ink-3)">(mínimo para continuar: ${PREC_UMBRAL_CONTINUAR_ANIO}h)</span></span>
         <button onclick="precCambiarAnio(1)" title="Año siguiente" ${anio >= anioHoy() ? 'disabled style="opacity:.35;cursor:default;border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;font-size:12px;line-height:1"' : 'style="border:1px solid var(--border-2);background:#fff;border-radius:8px;width:24px;height:24px;cursor:pointer;font-size:12px;line-height:1"'}>▶</button>
       </div>
     </div>
@@ -12153,19 +12159,25 @@ function renderPrecursores() {
     });
     html += '</div>';
 
-    // Barra progreso anual con criterio explícito
+    // Barra progreso anual con criterio explícito.
+    // La meta "oficial" que se muestra es siempre PREC_META_ANIO (600h), pero el
+    // criterio real de aprobación/continuidad usa el umbral mínimo (560h): llegar
+    // a ese mínimo ya permite continuar como precursor regular, aunque no se
+    // hayan completado las 600h oficiales.
+    const umbralMin = d.umbralContinuarAjustado || PREC_UMBRAL_CONTINUAR_ANIO;
+    const alcanzoMinimo = d.horasTotalCombinado >= umbralMin;
     const metaLabel = pct >= 100
       ? '✓ Meta alcanzada — puede continuar como precursor'
       : (d.mesesRestantes === 0
-          ? (d.horasTotalCombinado >= (d.metaAnioAjustada||PREC_META_ANIO)
-              ? '✓ Año completado — meta alcanzada'
-              : '✗ Año completado — no alcanzó ' + (d.metaAnioAjustada||560) + 'h')
-          : 'Para continuar como precursor necesita llegar a ' + (d.metaAnioAjustada||PREC_META_ANIO) + 'h al finalizar el año');
-    const metaColor = pct >= 100 ? '#16a34a' : (d.mesesRestantes === 0 ? (d.horasTotalCombinado >= (d.metaAnioAjustada||PREC_META_ANIO) ? '#16a34a' : '#dc2626') : colorBarra);
+          ? (alcanzoMinimo
+              ? '✓ Año completado — llegó al mínimo requerido (' + umbralMin + 'h) para continuar'
+              : '✗ Año completado — no alcanzó el mínimo de ' + umbralMin + 'h')
+          : 'Para continuar como precursor necesita llegar a ' + umbralMin + 'h al finalizar el año');
+    const metaColor = pct >= 100 ? '#16a34a' : (d.mesesRestantes === 0 ? (alcanzoMinimo ? '#16a34a' : '#dc2626') : colorBarra);
 
     html += '<div class="prec-progreso-wrap">';
     html += '<div class="prec-progreso-label">';
-    html += '<span style="font-weight:700;color:var(--ink)">Progreso hacia ' + (d.metaAnioAjustada||560) + 'h' + (d.esNuevoPrecReg ? ' <span style="font-size:10px;font-weight:600;color:#0ea5e9">(desde ' + ["Sep","Oct","Nov","Dic","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"][d.mesInicioPrec] + ')</span>' : ' anuales') + '</span>';
+    html += '<span style="font-weight:700;color:var(--ink)">Progreso hacia ' + (d.metaAnioAjustada||PREC_META_ANIO) + 'h' + (d.esNuevoPrecReg ? ' <span style="font-size:10px;font-weight:600;color:#0ea5e9">(desde ' + ["Sep","Oct","Nov","Dic","Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"][d.mesInicioPrec] + ')</span>' : ' anuales') + '</span>';
     html += '<span style="font-weight:800;color:' + metaColor + ';font-family:Sora,var(--font);font-size:13px">'
       + Math.round(d.horasTotalCombinado) + '<span style="font-size:10px;font-weight:600;opacity:.7"> / ' + (d.metaAnioAjustada||PREC_META_ANIO) + 'h</span>'
       + '</span></div>';
@@ -12183,7 +12195,7 @@ function renderPrecursores() {
         Promedio últimos meses con datos: <strong>${Math.round((d.promUlt3||0)*10)/10}h</strong> — por debajo del umbral habitual (${Math.round(PREC_META_MES*0.9)}h). Meta mensual: ${PREC_META_MES}h.
         Evaluar circunstancias y si es realista continuar como precursor.
         <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fca5a5;font-size:10px;color:#9f1239">
-          📖 Reglamento: Al terminar el año debe tener al menos <strong>${d.metaAnioAjustada||PREC_META_ANIO}h</strong> (predicación + horas acreditadas) para poder continuar.
+          📖 Reglamento: Al terminar el año debe tener al menos <strong>${umbralMin}h</strong> (predicación + horas acreditadas) para poder continuar.
           Proyección actual: <strong>${Math.round(d.horasTotalCombinado + (d.promUlt3||0) * d.mesesRestantes)}h</strong>.
         </div>
       </div>`;
@@ -12192,22 +12204,22 @@ function renderPrecursores() {
       // "evaluar si continuar" a futuro — se muestra como resultado final del año.
       html += `<div class="prec-alerta">
         <strong>✗ Año finalizado — desempeño por debajo del umbral habitual.</strong>
-        Promedio del año: <strong>${Math.round((d.promedio||0)*10)/10}h/mes</strong> (umbral: ${Math.round(PREC_META_MES*0.9)}h) · Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${d.metaAnioAjustada||PREC_META_ANIO}h requeridas.
+        Promedio del año: <strong>${Math.round((d.promedio||0)*10)/10}h/mes</strong> (umbral: ${Math.round(PREC_META_MES*0.9)}h) · Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${umbralMin}h requeridas.
         El Comité de Servicio determinará si puede continuar como precursor regular.
       </div>`;
     } else if(d.estado==='riesgo') {
       html += `<div class="prec-alerta ambar">
-        <strong>⚠ En riesgo de no alcanzar las ${d.metaAnioAjustada||PREC_META_ANIO}h anuales.</strong>
+        <strong>⚠ En riesgo de no alcanzar las ${umbralMin}h mínimas anuales.</strong>
         Necesita <strong>${Math.round(d.promedioNecesario)}h/mes</strong> en los ${d.mesesRestantes} meses restantes.
         <div style="margin-top:6px;padding-top:6px;border-top:1px solid #fcd34d;font-size:10px;color:#92400e">
-          📖 Reglamento: Debe completar <strong>${d.metaAnioAjustada||PREC_META_ANIO}h</strong> al finalizar el año de servicio para continuar como precursor regular.
+          📖 Reglamento: Debe completar al menos <strong>${umbralMin}h</strong> al finalizar el año de servicio para continuar como precursor regular (la meta oficial son ${d.metaAnioAjustada||PREC_META_ANIO}h).
           Le faltan <strong>${Math.round(d.horasRestantes)}h</strong>.
         </div>
       </div>`;
-    } else if(d.mesesRestantes === 0 && d.horasTotalCombinado < (d.metaAnioAjustada||PREC_META_ANIO)) {
+    } else if(d.mesesRestantes === 0 && !alcanzoMinimo) {
       html += `<div class="prec-alerta">
-        <strong>✗ Año finalizado — no alcanzó la meta.</strong>
-        Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${d.metaAnioAjustada||PREC_META_ANIO}h requeridas.
+        <strong>✗ Año finalizado — no alcanzó el mínimo requerido.</strong>
+        Total: <strong>${Math.round(d.horasTotalCombinado)}h</strong> de ${umbralMin}h requeridas (meta oficial: ${d.metaAnioAjustada||PREC_META_ANIO}h).
         El Comité de Servicio determinará si puede continuar como precursor regular.
       </div>`;
     }
@@ -12231,6 +12243,7 @@ function renderPrecursores() {
   html += '<div style="display:flex;justify-content:flex-end;gap:8px;margin-top:14px">';
   html += '<button class="prec-btn prim" onclick="precExportarExcel()">⬇ Exportar Excel</button>';
   html += '<button class="prec-btn" onclick="precExportarPDF()">⬇ Exportar PDF</button>';
+  html += '<button class="prec-btn grn" onclick="precExportarListado()">⬇ Listado regulares y auxiliares</button>';
   html += '</div>';
 
   html += '</div>';
@@ -12377,12 +12390,16 @@ function precVerHistorial(pubId) {
     anios.forEach(anio => {
       const d = precGetDatos(pub, anio);
       const pct = Math.min(100, Math.round(d.horasTotalCombinado / (d.metaAnioAjustada||PREC_META_ANIO) * 100));
-      const colorPct = pct >= 100 ? '#22c55e' : pct >= 70 ? '#f59e0b' : '#ef4444';
+      const umbralMinHist = d.umbralContinuarAjustado || PREC_UMBRAL_CONTINUAR_ANIO;
+      const alcanzoMinimoHist = d.horasTotalCombinado >= umbralMinHist;
+      const colorPct = pct >= 100 ? '#22c55e' : alcanzoMinimoHist ? '#22c55e' : pct >= 70 ? '#f59e0b' : '#ef4444';
       const chip = pct >= 100
         ? '<span class="prec-hist-chip ok">✓ Meta alcanzada</span>'
-        : pct >= 70
-          ? '<span class="prec-hist-chip low">⚠ Parcial</span>'
-          : '<span class="prec-hist-chip bad">✗ Bajo meta</span>';
+        : alcanzoMinimoHist
+          ? '<span class="prec-hist-chip ok">✓ Llegó al mínimo</span>'
+          : pct >= 70
+            ? '<span class="prec-hist-chip low">⚠ Parcial</span>'
+            : '<span class="prec-hist-chip bad">✗ Bajo meta</span>';
 
       html += `<div style="margin-bottom:22px">`;
       html += `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">`;
@@ -12505,7 +12522,7 @@ function precExportarPDF() {
     @media print { body { margin: 12px; } }
   </style></head><body>
   <h1>📋 Precursores Regulares — Año de Servicio ${anio}–${anio+1}</h1>
-  <div class="sub">Generado el ${fechaHoy} · Meta mensual: ${PREC_META_MES}h · Meta anual: ${PREC_META_ANIO}h</div>
+  <div class="sub">Generado el ${fechaHoy} · Meta mensual: ${PREC_META_MES}h · Meta anual: ${PREC_META_ANIO}h (mínimo para continuar: ${PREC_UMBRAL_CONTINUAR_ANIO}h)</div>
   <table>
     <thead><tr>
       <th>Nombre</th><th>Grupo</th>${thMeses}
@@ -12521,6 +12538,38 @@ function precExportarPDF() {
   const w = window.open('','_blank','width=1100,height=800');
   if(w) { w.document.write(html); w.document.close(); }
   else alert('Activa las ventanas emergentes para exportar PDF.');
+}
+
+// ── Listado de precursores regulares y auxiliares (Excel) ──
+function precExportarListado() {
+  if(typeof XLSX === 'undefined') { alert('La librería XLSX no está disponible.'); return; }
+  const anio = _precAnioActivo ?? anioHoy();
+  const orden = (a,b) => (a.apellido||'').localeCompare(b.apellido||'','es') || (a.nombre||'').localeCompare(b.nombre||'','es');
+  const activos = state.publicadores.filter(p => !p._inactivo);
+  const regs = activos.filter(p => p.precursorReg).sort(orden);
+  const auxCont = activos.filter(p => p.precAuxContinuo && !p.precursorReg).sort(orden);
+  // Auxiliares del año: marcaron "precursor auxiliar" en algún mes (lectura directa, sin getReg para no crear registros vacíos)
+  const auxAnio = activos.filter(p => !p.precursorReg && !p.precAuxContinuo)
+    .map(p => {
+      const r = (p.registros||{})[anio] || {};
+      const meses = MESES_C.filter(m => r[m] && r[m].paux);
+      const horas = meses.reduce((s,m) => s + (parseFloat(r[m].horas)||0), 0);
+      return { p, meses, horas };
+    }).filter(x => x.meses.length).sort((a,b) => orden(a.p,b.p));
+
+  const wb = XLSX.utils.book_new();
+  const add = (nombre, head, rows, cols) => {
+    const ws = XLSX.utils.aoa_to_sheet([head, ...rows]);
+    ws['!cols'] = cols.map(w => ({wch:w}));
+    XLSX.utils.book_append_sheet(wb, ws, nombre);
+  };
+  add('Regulares', ['Apellido','Nombre','Grupo','Teléfono'],
+    regs.map(p => [p.apellido, p.nombre, p.grupo||'', p.telefono||'']), [20,18,14,16]);
+  add('Auxiliares continuos', ['Apellido','Nombre','Grupo','Teléfono'],
+    auxCont.map(p => [p.apellido, p.nombre, p.grupo||'', p.telefono||'']), [20,18,14,16]);
+  add('Auxiliares ' + anio + '-' + (anio+1), ['Apellido','Nombre','Grupo','Meses como auxiliar','Cant. meses','Horas'],
+    auxAnio.map(x => [x.p.apellido, x.p.nombre, x.p.grupo||'', x.meses.join(', '), x.meses.length, x.horas]), [20,18,14,30,12,10]);
+  XLSX.writeFile(wb, 'Precursores_' + anio + '-' + (anio+1) + '.xlsx');
 }
 
 // ── Excel individual ──
