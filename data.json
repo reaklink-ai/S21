@@ -4410,6 +4410,84 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "6",
+            "notas": "",
+            "_ts": 1791834239955
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -53208,7 +53286,7 @@
       }
     }
   ],
-  "_lastModified": 1791834226135,
+  "_lastModified": 1791834240489,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56754,6 +56832,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834239955,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Sep 2026: horas=6",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1791834236185,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Sep 2026: horas=6",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
+      "ts": 1791834236176,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Laura · Sep 2026: horas=6",
+      "pubId": "mmm9qi4k0gox"
+    },
+    {
       "ts": 1791834182361,
       "user": "Administrador",
       "rol": "admin",
@@ -58327,30 +58429,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Abr 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828347204,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Abr 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828346637,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Mar 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828346629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Mar 2025: cursos=2",
       "pubId": "p1791828303713"
     }
   ],
