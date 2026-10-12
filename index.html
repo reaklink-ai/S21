@@ -9073,6 +9073,19 @@ function descargarS21Grupo() {
   ]);
   sel.innerHTML = '<option value="">&#8212; Todos &#8212;</option>' +
     [...todosGrupos].sort().map(g => `<option value="${g}">${g}</option>`).join('');
+  // Selector de año de servicio: desde el actual hasta el más antiguo con registros
+  const _aSel = document.getElementById('selectAnioDescarga');
+  if(_aSel) {
+    const hoy = anioHoy();
+    let minA = hoy - 1;
+    [...state.publicadores, ...(state.inactivos||[]), ...(state.mudados||[])].forEach(p => {
+      Object.keys(p.registros||{}).forEach(k => { const n = parseInt(k); if(!isNaN(n) && n < minA) minA = n; });
+    });
+    const def = (typeof anioVer !== 'undefined' && anioVer) ? anioVer : hoy;
+    let opts = '';
+    for(let a = hoy; a >= minA; a--) opts += `<option value="${a}"${a===def?' selected':''}>${a}–${a+1}${a===hoy?' (actual)':''}</option>`;
+    _aSel.innerHTML = opts;
+  }
   document.getElementById('modalDescargaGrupo').style.display = 'flex';
 }
 
@@ -9082,7 +9095,7 @@ function confirmarDescargaGrupo() {
   const incInactivos= document.getElementById('descIncInactivos')?.checked ?? false;
   const incSacados  = document.getElementById('descIncSacados')?.checked   ?? false;
   const incMudados  = document.getElementById('descIncMudados')?.checked   ?? false;
-  const anio = anioVer || anioHoy();
+  const anio = parseInt(document.getElementById('selectAnioDescarga')?.value) || anioVer || anioHoy();
 
   const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
   const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
@@ -13111,6 +13124,10 @@ document.addEventListener('change', e => {
       <button class="modal-x" onclick="document.getElementById('modalDescargaGrupo').style.display='none'">×</button>
     </div>
     <div class="modal-body" style="padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div class="form-group">
+        <label class="form-label">Año de servicio</label>
+        <select id="selectAnioDescarga" class="form-input form-select"></select>
+      </div>
       <div class="form-group">
         <label class="form-label">Grupo</label>
         <select id="selectGrupoDescarga" class="form-input form-select"></select>
