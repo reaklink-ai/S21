@@ -11354,10 +11354,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "17",
             "notas": ""
           },
           "Oct": {
@@ -12973,11 +12973,11 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "24 Escuela de ancianos (23 Betel)"
           },
           "Oct": {
             "particip": false,
@@ -16099,7 +16099,7 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -16923,7 +16923,7 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -17169,7 +17169,7 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
@@ -17429,11 +17429,11 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Betel"
           },
           "Oct": {
             "particip": false,
@@ -17716,10 +17716,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "43",
             "notas": ""
           },
           "Oct": {
@@ -19561,10 +19561,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "42",
             "notas": ""
           },
           "Oct": {
@@ -19818,10 +19818,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "54",
             "notas": ""
           },
           "Oct": {
@@ -20081,10 +20081,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "35",
             "notas": ""
           },
           "Oct": {
@@ -20360,10 +20360,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "53",
             "notas": ""
           },
           "Oct": {
@@ -23289,10 +23289,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "16",
             "notas": ""
           },
           "Oct": {
@@ -24288,10 +24288,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "19",
             "notas": ""
           },
           "Oct": {
@@ -24575,10 +24575,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": ""
           },
           "Oct": {
@@ -30913,10 +30913,10 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "6",
             "paux": false,
-            "horas": "",
+            "horas": "49",
             "notas": ""
           },
           "Oct": {
@@ -53091,7 +53091,7 @@
       }
     }
   ],
-  "_lastModified": 1791829542781,
+  "_lastModified": 1791830569825,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56637,6 +56637,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1791829779589,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1791829540229,
       "user": "Administrador",
       "rol": "admin",
@@ -58226,14 +58234,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Dic 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828344171,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Nov 2025: cursos=2",
       "pubId": "p1791828303713"
     }
   ],
