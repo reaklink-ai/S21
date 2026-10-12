@@ -51287,11 +51287,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "36",
+            "notas": "",
+            "_ts": 1791829431385
           },
           "Oct": {
             "particip": false,
@@ -52875,7 +52876,7 @@
       }
     }
   ],
-  "_lastModified": 1791829420795,
+  "_lastModified": 1791829431980,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56421,6 +56422,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1791829431385,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Brenda · Sep 2026: horas=36",
+      "pubId": "p1791829298292"
+    },
+    {
+      "ts": 1791829431377,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Brenda · Sep 2026: horas=36",
+      "pubId": "p1791829298292"
+    },
+    {
       "ts": 1791829419173,
       "user": "Administrador",
       "rol": "admin",
@@ -58003,22 +58020,6 @@
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Sep 2026: cursos=2",
       "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1791754883836,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Padilla, Anyela · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4qnxk5"
-    },
-    {
-      "ts": 1791754676868,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ayala, Saul · Sep 2026: horas=59",
-      "pubId": "mmm9qi4k6wjw"
     }
   ],
   "formHistorial": [
