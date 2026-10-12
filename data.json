@@ -50205,99 +50205,99 @@
         "2025": {
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "20",
             "notas": "",
-            "_ts": 1791828326971
+            "_ts": 1791828359899
           },
           "Oct": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "24",
             "notas": "",
-            "_ts": 1791828326408
+            "_ts": 1791828361478
           },
           "Nov": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "28",
             "notas": "",
-            "_ts": 1791828325896
+            "_ts": 1791828363246
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": "",
-            "_ts": 1791828325346
+            "_ts": 1791828369379
           },
           "Ene": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "16",
             "notas": "",
-            "_ts": 1791828324896
+            "_ts": 1791828371594
           },
           "Feb": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "12",
             "notas": "",
-            "_ts": 1791828323853
+            "_ts": 1791828378202
           },
           "Mar": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "6",
             "notas": "",
-            "_ts": 1791828323413
+            "_ts": 1791828380560
           },
           "Abr": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "8",
             "notas": "",
-            "_ts": 1791828322812
+            "_ts": 1791828382227
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "20",
             "notas": "",
-            "_ts": 1791828322354
+            "_ts": 1791828383780
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "16",
             "notas": "",
-            "_ts": 1791828321746
+            "_ts": 1791828390239
           },
           "Jul": {
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": "",
-            "_ts": 1791828321146
+            "_ts": 1791828392160
           },
           "Ago": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "22",
             "notas": "",
-            "_ts": 1791828320546
+            "_ts": 1791828393166
           }
         },
         "2026": {
@@ -51890,7 +51890,7 @@
       }
     }
   ],
-  "_lastModified": 1791828328666,
+  "_lastModified": 1791828394803,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55436,6 +55436,406 @@
   ],
   "auditoria": [
     {
+      "ts": 1791828393166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ago 2025: horas=22",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828393158,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ago 2025: horas=22",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828392160,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jul 2025: horas=30",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828392150,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jul 2025: horas=30",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828390239,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jun 2025: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828390232,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jun 2025: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828385429,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jun 2025: horas=",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828383780,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · May 2025: horas=20",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828383771,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · May 2025: horas=20",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828382227,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Abr 2025: horas=8",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828382220,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Abr 2025: horas=8",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828380560,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Mar 2025: horas=6",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828380553,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Mar 2025: horas=6",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828378202,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Feb 2025: horas=12",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828373737,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Feb 2025: horas=12",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828373721,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Feb 2025: horas=12",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828371594,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ene 2025: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828371586,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ene 2025: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828369379,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Dic 2025: horas=30",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828369370,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Dic 2025: horas=30",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828364881,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Dic 2025: horas=",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828363246,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Nov 2025: horas=28",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828363237,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Nov 2025: horas=28",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828361478,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2025: horas=24",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828361470,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2025: horas=24",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828359899,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2025: horas=20",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828359889,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2025: horas=20",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828350559,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2025: horas=",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828349854,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ago 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828349845,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ago 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828348635,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jun 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828348628,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Jun 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828347850,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · May 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828347838,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · May 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828347212,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Abr 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828347204,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Abr 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828346637,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Mar 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828346629,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Mar 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828345996,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ene 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828345987,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Ene 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828345379,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Feb 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828345370,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Feb 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828344712,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Dic 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828344704,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Dic 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828344171,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Nov 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828344162,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Nov 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828343612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828343604,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828343055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1791828343040,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2025: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
       "ts": 1791828303713,
       "user": "Administrador",
       "rol": "admin",
@@ -56634,406 +57034,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Transito · Dic 2024: horas=40",
       "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959162463,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Dic 2024: horas=40",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959160490,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959156738,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959149336,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959149322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: horas=38",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959146769,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Oct 2024: horas=55",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959146759,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Oct 2024: horas=55",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959145532,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2024: horas=52",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959145521,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2024: horas=52",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959143488,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959138038,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959138028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Dic 2024: cursos=3",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959136372,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: cursos=3",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959136367,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Nov 2024: cursos=3",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959134871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Oct 2024: cursos=4",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959134866,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Oct 2024: cursos=4",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959134329,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2024: cursos=4",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959134325,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2024: cursos=4",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1789959093261,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Dic 2024: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959093255,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Dic 2024: horas=30",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959091353,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959080055,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959080049,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Nov 2024: horas=44",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959078173,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Oct 2024: horas=20",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959078168,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Oct 2024: horas=20",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959075377,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959070798,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789959070786,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Sep 2024: horas=28",
-      "pubId": "mmm9qi4now8s"
-    },
-    {
-      "ts": 1789958995677,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Dic 2024: horas=38",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958995666,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Dic 2024: horas=38",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958993799,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958990743,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958990727,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: horas=43",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958988829,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Oct 2024: horas=43",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958988818,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Oct 2024: horas=43",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958987623,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2024: horas=28",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958987612,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2024: horas=28",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958982019,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2024: horas=",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958981552,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Oct 2024: horas=",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958980878,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Dic 2024: cursos=4",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958980869,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Dic 2024: cursos=4",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958979436,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958972612,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958972602,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Nov 2024: cursos=2",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958971820,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Oct 2024: cursos=2",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958971809,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Oct 2024: cursos=2",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958971197,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2024: cursos=3",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958971185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2024: cursos=3",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1789958931801,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Dic 2024: horas=44",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1789958931790,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Dic 2024: horas=44",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
