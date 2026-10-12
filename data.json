@@ -50412,6 +50412,122 @@
         "notasMed": "",
         "_ts": 1791828303713
       }
+    },
+    {
+      "id": "p1791828537787",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Uribe Gamez",
+      "nombre": "Diego",
+      "nacimiento": "1986-06-09",
+      "bautismo": "2016-07-23",
+      "grupo": "",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": true,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1791828537787,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1791828537787
+      }
     }
   ],
   "grupos": {
@@ -51890,7 +52006,7 @@
       }
     }
   ],
-  "_lastModified": 1791828394803,
+  "_lastModified": 1791828540928,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55436,6 +55552,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1791828537787,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Uribe Gamez, Diego · Sin grupo",
+      "pubId": "p1791828537787"
+    },
+    {
       "ts": 1791828393166,
       "user": "Administrador",
       "rol": "admin",
@@ -57026,14 +57150,6 @@
       "accion": "Horas editadas",
       "detalle": "Hernandez, Yudid · Sep 2024: horas=55",
       "pubId": "mmm9qi4nym0v"
-    },
-    {
-      "ts": 1789959162473,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Dic 2024: horas=40",
-      "pubId": "mmm9qi4np3hl"
     }
   ],
   "formHistorial": [
