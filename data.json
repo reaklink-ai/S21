@@ -50978,8 +50978,8 @@
             "cursos": "3",
             "paux": false,
             "horas": "30",
-            "notas": "LDC 20 Horas",
-            "_ts": 1791828976916
+            "notas": "PID y LDC 20 Horas",
+            "_ts": 1791829123890
           },
           "Oct": {
             "particip": true,
@@ -51002,16 +51002,16 @@
             "cursos": "1",
             "paux": false,
             "horas": "40",
-            "notas": "",
-            "_ts": 1791829007115
+            "notas": "PID y LDC 15 Horas",
+            "_ts": 1791829109785
           },
           "Ene": {
             "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "46",
-            "notas": "",
-            "_ts": 1791829008916
+            "notas": "LDC 10 Horas",
+            "_ts": 1791829133435
           },
           "Feb": {
             "particip": true,
@@ -51019,47 +51019,47 @@
             "paux": false,
             "horas": "50",
             "notas": "",
-            "_ts": 1791829047612
+            "_ts": 1791829156964
           },
           "Mar": {
             "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "50",
-            "notas": "",
-            "_ts": 1791829049372
+            "notas": "LDC 5 Horas",
+            "_ts": 1791829171035
           },
           "Abr": {
             "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "50",
-            "notas": "",
-            "_ts": 1791829051255
+            "notas": "LDC 5 Horas",
+            "_ts": 1791829171751
           },
           "May": {
             "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "30",
-            "notas": "",
-            "_ts": 1791829056816
+            "notas": "LDC 15 Horas",
+            "_ts": 1791829181148
           },
           "Jun": {
             "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "40",
-            "notas": "",
-            "_ts": 1791829064145
+            "notas": "LDC 15 Horas",
+            "_ts": 1791829181971
           },
           "Jul": {
             "particip": true,
             "cursos": "1",
             "paux": false,
             "horas": "45",
-            "notas": "",
-            "_ts": 1791829065532
+            "notas": "LDC 5 Horas",
+            "_ts": 1791829188251
           },
           "Ago": {
             "particip": true,
@@ -51067,7 +51067,7 @@
             "paux": false,
             "horas": "35",
             "notas": "",
-            "_ts": 1791829082711
+            "_ts": 1791829189193
           }
         }
       },
@@ -52574,7 +52574,7 @@
       }
     }
   ],
-  "_lastModified": 1791829084559,
+  "_lastModified": 1791829189926,
   "vym": {
     "semanas": {},
     "historial": [
