@@ -41386,11 +41386,11 @@
           },
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1791834979207
+            "_ts": 1791835022305
           },
           "Oct": {
             "particip": false,
@@ -53791,7 +53791,7 @@
       }
     }
   ],
-  "_lastModified": 1791835006619,
+  "_lastModified": 1791835023360,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57337,6 +57337,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1791835022305,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1791835022298,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
+      "ts": 1791835018691,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Sep 2026: horas=",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
       "ts": 1791834884974,
       "user": "Administrador",
       "rol": "admin",
@@ -58911,30 +58935,6 @@
       "accion": "Nuevo publicador",
       "detalle": "Uribe Cancino, Miguel · Sin grupo",
       "pubId": "p1791828736498"
-    },
-    {
-      "ts": 1791828596369,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Uribe Cancino, Keyla · Sin grupo",
-      "pubId": "p1791828596369"
-    },
-    {
-      "ts": 1791828537787,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Uribe Gamez, Diego · Sin grupo",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828393166,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Ago 2025: horas=22",
-      "pubId": "p1791828303713"
     }
   ],
   "formHistorial": [
