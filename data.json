@@ -34554,9 +34554,17 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
-      "emergencia": {},
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1791834877081
+      },
       "registros": {
         "2024": {
           "Ene": {
@@ -34785,7 +34793,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1791834877081
     },
     {
       "id": "mmm9qi4spd20",
@@ -53615,7 +53625,7 @@
       }
     }
   ],
-  "_lastModified": 1791834868624,
+  "_lastModified": 1791834878369,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57161,6 +57171,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834877082,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Rivera, Samuel · datos generales",
+      "pubId": "mmm9qi4slz78"
+    },
+    {
       "ts": 1791834842241,
       "user": "Administrador",
       "rol": "admin",
@@ -58750,14 +58768,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Ago 2025: horas=22",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828392160,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Jul 2025: horas=30",
       "pubId": "p1791828303713"
     }
   ],
