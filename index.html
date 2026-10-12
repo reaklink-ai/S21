@@ -3460,6 +3460,8 @@ input:focus, select:focus, textarea:focus {
             <div class="asist-page-sub" id="asistPageSub">Registro de asistencia de la congregación</div>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <select id="asistS3Anio" class="asist-input" style="width:auto;padding:6px 10px" title="Año de servicio (formulario S-3)"></select>
+            <button class="btn btn-ghost" onclick="imprimirS3Asistencia()">🖨 Registro S-3 (PDF)</button>
             <button class="btn btn-ghost" onclick="exportarAsistenciaExcel()">↓ Exportar Excel</button>
           </div>
         </div>
@@ -4849,6 +4851,7 @@ function eliminarReunion(id) {
 }
 
 function renderAsistenciaScreen() {
+  _poblarSelectorS3();
   renderAsistenciaMetrics();
   renderAsistenciaByTipo();
   renderAsistenciaChart();
@@ -5148,6 +5151,103 @@ function guardarEditAsist() {
   document.getElementById('modalEditAsistOverlay').style.display = 'none';
   renderAsistenciaScreen();
   toast('✓ Reunión actualizada');
+}
+
+// ══════════════════════════════════════════
+// REGISTRO DE ASISTENCIA S-3 (formulario oficial, por año de servicio)
+// ══════════════════════════════════════════
+// El S-3 nombra el año de servicio por el año en que TERMINA (Sep 2025–Ago 2026 = "2026").
+// Internamente la app usa el año en que EMPIEZA (anio = 2025), por eso el rótulo es anio+1.
+function _poblarSelectorS3() {
+  const sel = document.getElementById('asistS3Anio'); if(!sel) return;
+  const prev = sel.value;
+  const hoy = anioHoy();
+  let minA = hoy;
+  (state.asistencia||[]).forEach(r => {
+    const d = new Date((r.fecha||'')+'T00:00:00'); if(isNaN(d)) return;
+    const a = d.getMonth() >= 8 ? d.getFullYear() : d.getFullYear()-1;
+    if(a < minA) minA = a;
+  });
+  let opts = '';
+  for(let a = hoy; a >= minA; a--) opts += `<option value="${a}">Año de servicio ${a+1}${a===hoy?' (actual)':''}</option>`;
+  sel.innerHTML = opts;
+  if(prev && [...sel.options].some(o => o.value === prev)) sel.value = prev;
+}
+
+function _s3Datos(anio, tipo) {
+  // 12 meses Sep..Ago → { n, total, prom }
+  const meses = Array.from({length:12}, () => ({ n:0, total:0 }));
+  (state.asistencia||[]).forEach(r => {
+    if(r.tipo !== tipo || !fechaEnAnioServicio(r.fecha, anio)) return;
+    const m = parseInt((r.fecha||'').split('-')[1]) - 1; // 0..11 calendario
+    if(isNaN(m)) return;
+    const idx = (m + 4) % 12; // Sep→0 … Ago→11
+    meses[idx].n += 1;
+    meses[idx].total += (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
+  });
+  meses.forEach(m => { m.prom = m.n ? Math.floor(m.total / m.n) : null; });
+  const tn = meses.reduce((s,m) => s + m.n, 0);
+  const tt = meses.reduce((s,m) => s + m.total, 0);
+  return { meses, promMensual: tn ? Math.floor(tt / tn) : null };
+}
+
+function imprimirS3Asistencia() {
+  const sel = document.getElementById('asistS3Anio');
+  const anio = parseInt(sel && sel.value) || anioHoy();
+  if(!(state.asistencia||[]).length) { toast('No hay datos de asistencia'); return; }
+  const NOMBRES = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
+
+  const bloque = (tipo, titulo) => {
+    const A = _s3Datos(anio, tipo), B = _s3Datos(anio+1, tipo);
+    const cel = v => (v === null || v === 0 && false) ? '' : v;
+    const lado = (D, rotulo) => `
+      <th>Año de servicio<br><span class="yr">${rotulo}</span></th>
+      <th>Número de<br>reuniones</th><th>Asistencia<br>total</th><th>Promedio de<br>asistencia<br>semanal</th>`;
+    const filas = NOMBRES.map((nm,i) => {
+      const a = A.meses[i], b = B.meses[i];
+      return `<tr>
+        <td class="mes">${nm}</td><td class="c">${a.n||''}</td><td class="c">${a.n?a.total:''}</td><td class="c">${a.prom===null?'':a.prom}</td>
+        <td class="mes bl">${nm}</td><td class="c">${b.n||''}</td><td class="c">${b.n?b.total:''}</td><td class="c">${b.prom===null?'':b.prom}</td></tr>`;
+    }).join('');
+    return `<h2>${titulo}</h2>
+    <table class="s3">
+      <thead><tr>${lado(A, anio+1)}${lado(B, anio+2).replace('<th>','<th class="bl">')}</tr></thead>
+      <tbody>${filas}
+        <tr class="tot"><td colspan="3" class="r">Promedio de asistencia mensual</td><td class="c">${A.promMensual===null?'':A.promMensual}</td>
+        <td colspan="3" class="r bl">Promedio de asistencia mensual</td><td class="c">${B.promMensual===null?'':B.promMensual}</td></tr>
+      </tbody></table>`;
+  };
+
+  const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
+<title>S-3 Registro de asistencia ${anio+1}</title>
+<style>
+  @page { size: letter portrait; margin: 10mm; }
+  * { box-sizing:border-box; }
+  body { font-family: Georgia,'Times New Roman',serif; color:#000; margin:0; padding:8mm; }
+  h1 { font-size:14pt; text-align:center; text-transform:uppercase; letter-spacing:.5px; margin:0 0 5mm; }
+  h2 { font-size:11.5pt; margin:5mm 0 2mm 2mm; }
+  table.s3 { width:100%; border-collapse:collapse; border:2px solid #000; table-layout:fixed; }
+  .s3 th { border:1px solid #000; font-size:7.5pt; padding:1.2mm; text-align:center; vertical-align:middle; line-height:1.15; }
+  .s3 th .yr { font-weight:normal; font-size:10pt; }
+  .s3 td { border:1px solid #000; height:6.3mm; padding:0 1.5mm; font-size:9pt; }
+  .s3 .mes { width:15%; } .s3 .c { text-align:center; } .s3 .r { text-align:right; font-weight:bold; padding-right:3mm; }
+  .s3 .bl { border-left:2px solid #000; }
+  .s3 .tot td { height:7mm; font-weight:bold; border-top:2px solid #000; }
+  .btn { text-align:center; margin-bottom:5mm; }
+  .btn button { background:#3d5a9e; color:#fff; border:0; padding:8px 24px; border-radius:6px; font-size:13px; font-weight:700; cursor:pointer; }
+  .cod { text-align:right; font-size:7.5pt; color:#555; margin-top:3mm; }
+  @media print { .btn { display:none; } body { padding:0; } }
+</style></head><body>
+<div class="btn"><button onclick="window.print()">🖨 Imprimir / Guardar como PDF</button></div>
+<h1>Registro de asistencia a las reuniones de congregación</h1>
+${bloque('Entre semana','Reunión de entre semana')}
+${bloque('Fin de semana','Reunión del fin de semana')}
+<div class="cod">S-3-S</div>
+<script>window.addEventListener('load',function(){setTimeout(function(){window.print();},500);});<\/script>
+</body></html>`;
+  const w = window.open('', '_blank', 'width=870,height=1000');
+  if(w) { w.document.write(html); w.document.close(); }
+  else { toast('⚠ Activa las ventanas emergentes para generar el PDF'); }
 }
 
 function exportarAsistenciaExcel() {
@@ -9132,9 +9232,20 @@ function confirmarDescargaGrupo() {
     ));
   }
 
+  // Filtro por tipo de publicador (precursores regulares / auxiliares del año elegido)
+  const tipoSel = document.getElementById('selectTipoDescarga')?.value || '';
+  if(tipoSel) {
+    const esAux = p => !p.precursorReg && (p.precAuxContinuo ||
+      MESES_C.some(m => (((p.registros||{})[anio] || (p.registros||{})[String(anio)] || {})[m] || {}).paux));
+    lista = lista.filter(p =>
+      tipoSel === 'reg'    ? !!p.precursorReg :
+      tipoSel === 'aux'    ? esAux(p) :
+      /* regaux */           (p.precursorReg || esAux(p)));
+  }
+
   lista.sort((a,b) => a.apellido.localeCompare(b.apellido,'es'));
 
-  if(!lista.length) { toast('No hay publicadores en ese grupo'); return; }
+  if(!lista.length) { toast('No hay publicadores que coincidan con el grupo y tipo elegidos'); return; }
   document.getElementById('modalDescargaGrupo').style.display = 'none';
 
   // Generar un HTML con todas las páginas (una por publicador, separadas con page-break)
@@ -9150,7 +9261,8 @@ function confirmarDescargaGrupo() {
     return `<div style="page-break-after:${idx < lista.length-1 ? 'always' : 'auto'}">${clean}</div>`;
   }).join('\n');
 
-  const nombre = grupoSel ? `Grupo_${grupoSel.replace(/\s+/g,'_')}` : 'Todos_los_publicadores';
+  const _tipoTxt = {regaux:'Precursores',reg:'Precursores_regulares',aux:'Precursores_auxiliares'}[tipoSel];
+  const nombre = (_tipoTxt || (grupoSel ? '' : 'Todos_los_publicadores')) + (grupoSel ? (_tipoTxt?'_':'') + `Grupo_${grupoSel.replace(/\s+/g,'_')}` : '');
 
   const fullHtml = `<!DOCTYPE html>
 <html lang="es"><head>
@@ -13131,6 +13243,15 @@ document.addEventListener('change', e => {
       <div class="form-group">
         <label class="form-label">Grupo</label>
         <select id="selectGrupoDescarga" class="form-input form-select"></select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Tipo de publicador</label>
+        <select id="selectTipoDescarga" class="form-input form-select">
+          <option value="">Todos</option>
+          <option value="regaux">Precursores regulares y auxiliares</option>
+          <option value="reg">Solo precursores regulares</option>
+          <option value="aux">Solo precursores auxiliares</option>
+        </select>
       </div>
       <div class="form-group">
         <label class="form-label" style="margin-bottom:8px">Incluir</label>
