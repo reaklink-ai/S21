@@ -4134,11 +4134,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1791834182361
           },
           "Oct": {
             "particip": false,
@@ -51613,6 +51614,122 @@
         "notasMed": "",
         "_ts": 1791829505304
       }
+    },
+    {
+      "id": "p1791834092358",
+      "registros": {
+        "2026": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Monsalva",
+      "nombre": "Alfonso",
+      "nacimiento": "1969-01-19",
+      "bautismo": "1989-11-11",
+      "grupo": "",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1791834092358,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1791834092358
+      }
     }
   ],
   "grupos": {
@@ -53091,7 +53208,7 @@
       }
     }
   ],
-  "_lastModified": 1791830569825,
+  "_lastModified": 1791834226135,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56637,6 +56754,54 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834182361,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1791834174017,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1791834174007,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beleño, Isaac · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4kqpna"
+    },
+    {
+      "ts": 1791834092358,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Monsalva, Alfonso · Sin grupo",
+      "pubId": "p1791834092358"
+    },
+    {
+      "ts": 1791833919026,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1791833918961,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1791829779589,
       "user": "Harold_La",
       "rol": "anciano",
@@ -58186,54 +58351,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Mar 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828345996,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Ene 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828345987,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Ene 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828345379,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Feb 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828345370,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Feb 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828344712,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Dic 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828344704,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Dic 2025: cursos=2",
       "pubId": "p1791828303713"
     }
   ],
