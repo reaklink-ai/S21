@@ -7151,11 +7151,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1791834719762
           },
           "Oct": {
             "particip": false,
@@ -53377,7 +53378,7 @@
       }
     }
   ],
-  "_lastModified": 1791834704284,
+  "_lastModified": 1791834720320,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56923,6 +56924,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834719762,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro, Luz Helena · Sep 2026: horas=15",
+      "pubId": "mmm9qi4lss62"
+    },
+    {
+      "ts": 1791834719757,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro, Luz Helena · Sep 2026: horas=15",
+      "pubId": "mmm9qi4lss62"
+    },
+    {
       "ts": 1791834677874,
       "user": "Administrador",
       "rol": "admin",
@@ -58504,22 +58521,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Mar 2025: horas=6",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828378202,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Feb 2025: horas=12",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828373737,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Feb 2025: horas=12",
       "pubId": "p1791828303713"
     }
   ],
