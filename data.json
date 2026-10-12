@@ -50968,6 +50968,134 @@
         "notasMed": "",
         "_ts": 1791828736497
       }
+    },
+    {
+      "id": "p1791828899175",
+      "registros": {
+        "2025": {
+          "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828901401
+          },
+          "Oct": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828901959
+          },
+          "Nov": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828902450
+          },
+          "Dic": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828903051
+          },
+          "Ene": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828903675
+          },
+          "Feb": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828904208
+          },
+          "Mar": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828904725
+          },
+          "Abr": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828905175
+          },
+          "May": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828905642
+          },
+          "Jun": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828906109
+          },
+          "Jul": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828906559
+          },
+          "Ago": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1791828907050
+          }
+        }
+      },
+      "apellido": "Zuleta",
+      "nombre": "Jhonatan",
+      "nacimiento": "1985-10-04",
+      "bautismo": "1999-07-04",
+      "grupo": "",
+      "telefono": "",
+      "genero": "M",
+      "otrasOvejas": true,
+      "ungido": false,
+      "anciano": true,
+      "siervo": false,
+      "precursorReg": true,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1791828899175,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1791828899175
+      }
     }
   ],
   "grupos": {
@@ -52446,7 +52574,7 @@
       }
     }
   ],
-  "_lastModified": 1791828806984,
+  "_lastModified": 1791828909232,
   "vym": {
     "semanas": {},
     "historial": [
@@ -55992,6 +56120,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1791828899176,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Zuleta, Jhonatan · Sin grupo",
+      "pubId": "p1791828899175"
+    },
+    {
       "ts": 1791828806306,
       "user": "Administrador",
       "rol": "admin",
@@ -57577,14 +57713,6 @@
     },
     {
       "ts": 1789959267050,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Sep 2024: horas=52",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959267038,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
