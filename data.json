@@ -28300,11 +28300,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "60",
+            "notas": "",
+            "_ts": 1791834339379
           },
           "Oct": {
             "particip": false,
@@ -53370,7 +53371,7 @@
       }
     }
   ],
-  "_lastModified": 1791834320075,
+  "_lastModified": 1791834340834,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56916,6 +56917,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834339379,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Sep 2026: horas=60",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1791834339372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Sep 2026: horas=60",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1791834337179,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1791834337172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
       "ts": 1791834318488,
       "user": "Administrador",
       "rol": "admin",
@@ -58481,38 +58514,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Nov 2025: horas=28",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828363237,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Nov 2025: horas=28",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828361478,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Oct 2025: horas=24",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828361470,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Oct 2025: horas=24",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828359899,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2025: horas=20",
       "pubId": "p1791828303713"
     }
   ],
