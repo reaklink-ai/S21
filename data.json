@@ -22935,11 +22935,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "32",
+            "notas": "",
+            "_ts": 1791834318488
           },
           "Oct": {
             "particip": false,
@@ -53369,7 +53370,7 @@
       }
     }
   ],
-  "_lastModified": 1791834303007,
+  "_lastModified": 1791834320075,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56915,6 +56916,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834318488,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1791834318480,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1791834315072,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1791834312069,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
+      "ts": 1791834312062,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
+      "pubId": "mmm9qi4q8sw6"
+    },
+    {
       "ts": 1791834286330,
       "user": "Administrador",
       "rol": "admin",
@@ -58472,46 +58513,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Sep 2025: horas=20",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828359889,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2025: horas=20",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828350559,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2025: horas=",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828349854,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Ago 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828349845,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Ago 2025: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828348635,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Jun 2025: cursos=2",
       "pubId": "p1791828303713"
     }
   ],
