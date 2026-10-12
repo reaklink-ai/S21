@@ -50975,99 +50975,99 @@
         "2025": {
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1791828901401
+            "horas": "30",
+            "notas": "LDC 20 Horas",
+            "_ts": 1791828976916
           },
           "Oct": {
             "particip": true,
-            "cursos": "",
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1791828901959
+            "horas": "25",
+            "notas": "Delegado Asamblea Chile",
+            "_ts": 1791828992827
           },
           "Nov": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1791828902450
+            "_ts": 1791829000711
           },
           "Dic": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": "",
-            "_ts": 1791828903051
+            "_ts": 1791829007115
           },
           "Ene": {
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "46",
             "notas": "",
-            "_ts": 1791828903675
+            "_ts": 1791829008916
           },
           "Feb": {
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1791828904208
+            "_ts": 1791829047612
           },
           "Mar": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1791828904725
+            "_ts": 1791829049372
           },
           "Abr": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1791828905175
+            "_ts": 1791829051255
           },
           "May": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "30",
             "notas": "",
-            "_ts": 1791828905642
+            "_ts": 1791829056816
           },
           "Jun": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "40",
             "notas": "",
-            "_ts": 1791828906109
+            "_ts": 1791829064145
           },
           "Jul": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": "",
-            "_ts": 1791828906559
+            "_ts": 1791829065532
           },
           "Ago": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "35",
             "notas": "",
-            "_ts": 1791828907050
+            "_ts": 1791829082711
           }
         }
       },
@@ -52574,7 +52574,7 @@
       }
     }
   ],
-  "_lastModified": 1791828909232,
+  "_lastModified": 1791829084559,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56120,6 +56120,446 @@
   ],
   "auditoria": [
     {
+      "ts": 1791829082711,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=35",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829082696,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=35",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829067064,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829065532,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jul 2025: horas=45",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829065521,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jul 2025: horas=45",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829064145,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829061566,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829061551,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829056816,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829053834,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829053811,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829051255,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Abr 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829051245,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Abr 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829049372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Mar 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829049362,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Mar 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829047612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Feb 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829021539,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Feb 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829021520,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Feb 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829008916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ene 2025: horas=46",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829008904,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ene 2025: horas=46",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829007115,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: horas=40",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829007104,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: horas=40",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829002172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: horas=",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829000711,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Nov 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791829000700,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Nov 2025: horas=50",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828994372,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Nov 2025: horas=",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828981123,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2025: horas=25",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828981109,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2025: horas=25",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828978551,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2025: horas=",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828955429,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=30",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828955415,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=30",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828947172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828945673,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=2",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828945663,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=2",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828941587,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828941574,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828939742,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jul 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828939730,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jul 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828937824,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jun 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828937813,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Jun 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828937122,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · May 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828937113,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · May 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828936540,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Abr 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828936530,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Abr 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828935993,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Mar 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828935981,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Mar 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828934913,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828929349,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828929338,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828927648,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Nov 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828927639,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Nov 2025: cursos=1",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828927055,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2025: cursos=3",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828927046,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2025: cursos=3",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828926463,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Sep 2025: cursos=3",
+      "pubId": "p1791828899175"
+    },
+    {
+      "ts": 1791828926448,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Sep 2025: cursos=3",
+      "pubId": "p1791828899175"
+    },
+    {
       "ts": 1791828899176,
       "user": "Administrador",
       "rol": "admin",
@@ -57278,446 +57718,6 @@
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Oct 2024: cursos=",
       "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789959447830,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2024: horas=66",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789959447820,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2024: horas=66",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789959446608,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2024: cursos=1",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789959446599,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2024: cursos=1",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1789959420763,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Dic 2024: horas=44",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959420754,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Dic 2024: horas=44",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959419487,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Nov 2024: horas=43",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959416028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Nov 2024: horas=43",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959416021,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Nov 2024: horas=43",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959414576,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Oct 2024: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959414567,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Oct 2024: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959413004,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2024: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959412991,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2024: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959408106,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2024: horas=",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959407638,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959407629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Dic 2024: cursos=1",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959406814,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Nov 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959406804,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Nov 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959406201,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Oct 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959406189,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Oct 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959405643,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959405634,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2024: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1789959368687,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2024: horas=20",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959368677,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2024: horas=20",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959346557,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2024: horas=50",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959346542,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Ago 2024: horas=50",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959344425,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Jul 2024: horas=50",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959344408,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Jul 2024: horas=50",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959327895,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Dic 2024: horas=15",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959327889,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Dic 2024: horas=15",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959326411,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Nov 2024: horas=45",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959326398,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Nov 2024: horas=45",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959324756,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959321116,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959321104,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Oct 2024: horas=20",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959318979,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Sep 2024: horas=36",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959318966,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Sep 2024: horas=36",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959313146,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Sep 2024: horas=",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959312791,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Dic 2024: cursos=2",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959312779,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Dic 2024: cursos=2",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959311926,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Nov 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959311916,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Nov 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959311108,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Oct 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959311097,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Oct 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959310576,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Sep 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959310565,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Quiroz, Carmen · Sep 2024: cursos=5",
-      "pubId": "mmm9qi4rakns"
-    },
-    {
-      "ts": 1789959280411,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Dic 2024: horas=50",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959280401,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Dic 2024: horas=50",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959278354,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959274889,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959274880,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: horas=40",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959269247,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Nov 2024: horas=",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959268785,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Oct 2024: horas=50",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959268775,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Oct 2024: horas=50",
-      "pubId": "mmm9qi4oyf8q"
-    },
-    {
-      "ts": 1789959267050,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Larrota, Sergio · Sep 2024: horas=52",
-      "pubId": "mmm9qi4oyf8q"
     }
   ],
   "formHistorial": [
