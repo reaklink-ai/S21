@@ -29332,11 +29332,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "18",
+            "notas": "",
+            "_ts": 1791834381713
           },
           "Oct": {
             "particip": false,
@@ -53373,7 +53374,7 @@
       }
     }
   ],
-  "_lastModified": 1791834371488,
+  "_lastModified": 1791834382195,
   "vym": {
     "semanas": {},
     "historial": [
@@ -56919,6 +56920,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1791834381713,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Sep 2026: horas=18",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1791834381705,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Sep 2026: horas=18",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1791834339379,
       "user": "Administrador",
       "rol": "admin",
@@ -58500,22 +58517,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Dic 2025: horas=30",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828364881,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Dic 2025: horas=",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1791828363246,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Nov 2025: horas=28",
       "pubId": "p1791828303713"
     }
   ],
