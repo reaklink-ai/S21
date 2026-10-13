@@ -9235,8 +9235,8 @@ function confirmarDescargaGrupo() {
   // Filtro por tipo de publicador (precursores regulares / auxiliares del año elegido)
   const tipoSel = document.getElementById('selectTipoDescarga')?.value || '';
   if(tipoSel) {
-    const esAux = p => !p.precursorReg && (p.precAuxContinuo ||
-      MESES_C.some(m => (((p.registros||{})[anio] || (p.registros||{})[String(anio)] || {})[m] || {}).paux));
+    // Auxiliares = solo los indefinidos (marcados como "Precursor auxiliar continuo")
+    const esAux = p => !p.precursorReg && !!p.precAuxContinuo;
     lista = lista.filter(p =>
       tipoSel === 'reg'    ? !!p.precursorReg :
       tipoSel === 'aux'    ? esAux(p) :
@@ -9261,7 +9261,7 @@ function confirmarDescargaGrupo() {
     return `<div style="page-break-after:${idx < lista.length-1 ? 'always' : 'auto'}">${clean}</div>`;
   }).join('\n');
 
-  const _tipoTxt = {regaux:'Precursores',reg:'Precursores_regulares',aux:'Precursores_auxiliares'}[tipoSel];
+  const _tipoTxt = {regaux:'Precursores',reg:'Precursores_regulares',aux:'Auxiliares_indefinidos'}[tipoSel];
   const nombre = (_tipoTxt || (grupoSel ? '' : 'Todos_los_publicadores')) + (grupoSel ? (_tipoTxt?'_':'') + `Grupo_${grupoSel.replace(/\s+/g,'_')}` : '');
 
   const fullHtml = `<!DOCTYPE html>
@@ -13248,9 +13248,9 @@ document.addEventListener('change', e => {
         <label class="form-label">Tipo de publicador</label>
         <select id="selectTipoDescarga" class="form-input form-select">
           <option value="">Todos</option>
-          <option value="regaux">Precursores regulares y auxiliares</option>
+          <option value="regaux">Precursores regulares y auxiliares indefinidos</option>
           <option value="reg">Solo precursores regulares</option>
-          <option value="aux">Solo precursores auxiliares</option>
+          <option value="aux">Solo auxiliares indefinidos (continuos)</option>
         </select>
       </div>
       <div class="form-group">
