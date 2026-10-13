@@ -5409,7 +5409,7 @@
       "id": "mmm9qi4kzg1p",
       "apellido": "Beltran",
       "nombre": "Kevin",
-      "nacimiento": "",
+      "nacimiento": "2003-06-27",
       "bautismo": "2012-03-24",
       "grupo": "Grupo 2",
       "telefono": "3228097724",
@@ -5422,10 +5422,13 @@
       "otrasOvejas": false,
       "ungido": false,
       "emergencia": {
-        "direccion": "Cll 10 #1a-18",
         "nombre": "Gustavo Rodríguez",
+        "relacion": "",
         "tel": "3008518148",
-        "relacion": "Tío"
+        "tel2": "",
+        "direccion": "Cll 10 #1a-18",
+        "notasMed": "",
+        "_ts": 1791853948450
       },
       "registros": {
         "2024": {
@@ -5667,7 +5670,9 @@
           "horas": 0,
           "cursos": 2
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1791853948450
     },
     {
       "id": "mmm9qi4kk1hh",
@@ -53869,7 +53874,7 @@
       }
     }
   ],
-  "_lastModified": 1791835357202,
+  "_lastModified": 1791853951146,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57415,6 +57420,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1791853948450,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Beltran, Kevin · Nacimiento: 2003-06-27",
+      "pubId": "mmm9qi4kzg1p"
+    },
+    {
+      "ts": 1791851837129,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1791835022305,
       "user": "Administrador",
       "rol": "admin",
@@ -57780,6 +57801,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1791831696842,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -58989,30 +59018,6 @@
       "accion": "Horas editadas",
       "detalle": "Uribe Gamez, Diego · Feb 2025: cursos=4",
       "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828801010,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Ene 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828801005,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Ene 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828736498,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Uribe Cancino, Miguel · Sin grupo",
-      "pubId": "p1791828736498"
     }
   ],
   "formHistorial": [
