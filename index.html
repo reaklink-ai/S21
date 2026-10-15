@@ -3460,8 +3460,9 @@ input:focus, select:focus, textarea:focus {
             <div class="asist-page-sub" id="asistPageSub">Registro de asistencia de la congregación</div>
           </div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <select id="asistS3Anio" class="asist-input" style="width:auto;padding:6px 10px" title="Año de servicio (formulario S-3)"></select>
-            <button class="btn btn-ghost" onclick="imprimirS3Asistencia()">🖨 Registro S-3 (PDF)</button>
+            <select id="asistS3Anio" class="asist-input" style="width:auto;padding:6px 10px" title="Período que se muestra en toda la pantalla (y año del Registro S-88)" onchange="setAsistPeriodo(this.value)"></select>
+            <button class="btn btn-primary" onclick="abrirPresentacionAsistencia()">📊 Para presentar</button>
+            <button class="btn btn-ghost" onclick="imprimirS88Asistencia()">🖨 Registro S-88 (PDF)</button>
             <button class="btn btn-ghost" onclick="exportarAsistenciaExcel()">↓ Exportar Excel</button>
           </div>
         </div>
@@ -3472,18 +3473,8 @@ input:focus, select:focus, textarea:focus {
         <!-- Métricas por tipo -->
         <div class="asist-by-tipo" id="asistByTipo"></div>
 
-        <!-- Gráfica -->
-        <div class="asist-chart-wrap">
-          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px">
-            <div class="asist-chart-title">Tendencia de asistencia</div>
-            <div class="asist-chart-tabs" id="asistChartTabs">
-              <button class="asist-chart-tab active" onclick="setChartFilter('todos',this)">Todos</button>
-              <button class="asist-chart-tab" onclick="setChartFilter('Entre semana',this)">Entre semana</button>
-              <button class="asist-chart-tab" onclick="setChartFilter('Fin de semana',this)">Fin de semana</button>
-            </div>
-          </div>
-          <div id="asistChartWrap"></div>
-        </div>
+        <!-- Gráficas -->
+        <div class="asist-chart-wrap" id="asistGraficas" onmousemove="_gTipMove(event)" onmouseleave="_gTipHide()" style="position:relative"></div>
 
         <!-- Formulario -->
         <div class="asist-form-card" id="asistFormCard">
@@ -4854,7 +4845,7 @@ function renderAsistenciaScreen() {
   _poblarSelectorS3();
   renderAsistenciaMetrics();
   renderAsistenciaByTipo();
-  renderAsistenciaChart();
+  renderAsistenciaGraficas();
   renderAsistenciaTabla();
   // Inicializar tema por defecto según tipo seleccionado
   setTimeout(() => {
@@ -4865,152 +4856,609 @@ function renderAsistenciaScreen() {
 
 function renderAsistenciaMetrics() {
   const el = document.getElementById('asistMetrics'); if(!el) return;
-  const lista = state.asistencia||[];
+  const lista = _asistPeriodoLista();
   const sub   = document.getElementById('asistPageSub');
+  const n = lista.length;
+  const nES = lista.filter(r=>r.tipo==='Entre semana').length, nFS = lista.filter(r=>r.tipo==='Fin de semana').length;
+  const memP = _asistPeriodoLista('todos', true).filter(r => _memIds().has(r.id));
+  const memTxt = memP.length ? ` · Conmemoración (${memP.map(r => ((parseInt(r.presencial)||0)+(parseInt(r.zoom)||0)) + ' personas el ' + _fechaCorta(r.fecha)).join(', ')}) no incluida en los promedios` : '';
+  if(sub) sub.textContent = (n ? `${n} ${n!==1?'reuniones':'reunión'} en ${_asistPeriodoTxt()} · ${nES} entre semana · ${nFS} fin de semana` : `Sin reuniones registradas en ${_asistPeriodoTxt()}`) + memTxt;
+  if(!n) { el.innerHTML = '<div style="grid-column:1/-1;padding:24px;text-align:center;color:var(--ink-3);font-size:13px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg)">No hay reuniones registradas en este período</div>'; return; }
 
-  const totalR   = lista.length;
-  const presTotal= lista.reduce((s,r)=>s+r.presencial,0);
-  const zoomTotal= lista.reduce((s,r)=>s+r.zoom,0);
-  const genTotal = presTotal + zoomTotal;
-  const promedio = totalR ? Math.round(genTotal/totalR) : 0;
-
-  // Tendencia: comparar últimas 4 vs las 4 anteriores
-  const ultimas4 = lista.slice(0,4);
-  const ant4     = lista.slice(4,8);
-  const avgUlt   = ultimas4.length ? Math.round(ultimas4.reduce((s,r)=>s+r.total,0)/ultimas4.length) : 0;
-  const avgAnt   = ant4.length     ? Math.round(ant4.reduce((s,r)=>s+r.total,0)/ant4.length)        : 0;
-  const diff     = avgUlt - avgAnt;
-  const trendHtml = ant4.length ? `<div class="asist-met-trend ${diff>=0?'up':'dn'}">${diff>=0?'▲':'▼'} ${Math.abs(diff)} vs período anterior</div>` : '';
-
-  const maxTotal = lista.length ? Math.max(...lista.map(r=>r.total)) : 0;
-  const minTotal = lista.filter(r=>r.total>0).length ? Math.min(...lista.filter(r=>r.total>0).map(r=>r.total)) : 0;
-
-  if(sub) sub.textContent = `${totalR} reunión${totalR!==1?'es':''} registrada${totalR!==1?'s':''}`;
+  const sP = lista.reduce((s,r)=>s+(parseInt(r.presencial)||0),0);
+  const sZ = lista.reduce((s,r)=>s+(parseInt(r.zoom)||0),0);
+  const aP = sP/n, aZ = sZ/n, pct = (sP+sZ) ? Math.round(sZ/(sP+sZ)*100) : 0;
+  const tot = r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
+  const conTot = lista.filter(r => tot(r) > 0);
+  const rMax = conTot.reduce((b,r)=> tot(r) > tot(b) ? r : b, conTot[0] || lista[0]);
+  const rMin = conTot.reduce((b,r)=> tot(r) < tot(b) ? r : b, conTot[0] || lista[0]);
+  const d = _deltaMensual(lista);
+  const flecha = v => v > 0.5 ? '▲' : v < -0.5 ? '▼' : '■';
+  const sg = v => (v>0?'+':'') + Math.round(v);
+  const trend = (txt, cls) => `<div class="asist-met-trend ${cls}">${txt}</div>`;
+  const cmp = d ? `vs. los ${d.k} meses anteriores` : '';
+  const ico = (bg, svg) => `<div class="asist-met-card-ico" style="background:${bg}">${svg}</div>`;
+  const note = t => `<div style="font-size:10px;color:var(--ink-3);margin-top:2px;line-height:1.35">${t}</div>`;
 
   el.innerHTML = `
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:var(--accent-lt)"><svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
-      <div class="asist-met-n">${totalR}</div>
+      ${ico('var(--accent-lt)','<svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>')}
+      <div class="asist-met-n">${n}</div>
       <div class="asist-met-l">Reuniones</div>
+      ${note(nES+' entre semana<br>'+nFS+' fin de semana')}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:var(--accent-lt)"><svg width="14" height="14" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-4 4"/></svg></div>
-      <div class="asist-met-n">${promedio}</div>
-      <div class="asist-met-l">Promedio</div>
-      ${trendHtml}
+      ${ico('#eef2fa','<svg width="14" height="14" fill="none" stroke="#2a4f94" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>')}
+      <div class="asist-met-n">${Math.round(aP)}</div>
+      <div class="asist-met-l">Presencial por reunión</div>
+      ${d ? trend(`${flecha(d.dP)} ${sg(d.dP)} ${cmp}`, d.dP >= -0.5 ? 'up' : 'dn') : note('promedio de personas en el salón')}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:#eff6ff"><svg width="14" height="14" fill="none" stroke="#2563eb" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-      <div class="asist-met-n">${presTotal}</div>
-      <div class="asist-met-l">Presencial</div>
+      ${ico('#fdf0e8','<svg width="14" height="14" fill="none" stroke="#d9671f" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>')}
+      <div class="asist-met-n">${Math.round(aZ)}</div>
+      <div class="asist-met-l">Zoom por reunión</div>
+      ${d ? `<div class="asist-met-trend" style="color:var(--ink-2)">${flecha(d.dZ)} ${sg(d.dZ)} ${cmp}</div>` : note('promedio de conectados')}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:#f5f3ff"><svg width="14" height="14" fill="none" stroke="#7c3aed" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-      <div class="asist-met-n">${zoomTotal}</div>
-      <div class="asist-met-l">Zoom / remoto</div>
+      ${ico('#fdf0e8','<svg width="14" height="14" fill="none" stroke="#d9671f" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 12V3"/><path d="M12 12l6.4 6.4"/></svg>')}
+      <div class="asist-met-n">${pct}%</div>
+      <div class="asist-met-l">Asiste por Zoom</div>
+      ${d ? `<div class="asist-met-trend" style="color:var(--ink-2)">${flecha(d.dPct)} ${d.dPct>0?'+':''}${Math.round(d.dPct)} pts ${cmp}</div>` : note('del total de asistentes')}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:var(--green-lt)"><svg width="14" height="14" fill="none" stroke="var(--green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-      <div class="asist-met-n">${maxTotal}</div>
+      ${ico('var(--green-lt)','<svg width="14" height="14" fill="none" stroke="var(--green)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>')}
+      <div class="asist-met-n">${tot(rMax)}</div>
       <div class="asist-met-l">Máxima</div>
+      ${note(_fechaCorta(rMax.fecha) + ' · ' + (rMax.tipo||'') + (rMax.tema && /conmemora|memorial/i.test(rMax.tema+' '+(rMax.notas||'')) ? ' (Conmemoración)' : ''))}
     </div>
     <div class="asist-met-card">
-      <div class="asist-met-card-ico" style="background:var(--amber-lt)"><svg width="14" height="14" fill="none" stroke="var(--amber)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
-      <div class="asist-met-n">${minTotal||'—'}</div>
+      ${ico('var(--amber-lt)','<svg width="14" height="14" fill="none" stroke="var(--amber)" stroke-width="2" viewBox="0 0 24 24"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>')}
+      <div class="asist-met-n">${tot(rMin) || '—'}</div>
       <div class="asist-met-l">Mínima</div>
+      ${note(_fechaCorta(rMin.fecha) + ' · ' + (rMin.tipo||''))}
     </div>`;
 }
 
 function renderAsistenciaByTipo() {
   const el = document.getElementById('asistByTipo'); if(!el) return;
-  const lista = state.asistencia||[];
   const tipos = ['Entre semana','Fin de semana'];
   const colores = { 'Entre semana':'#4f46e5', 'Fin de semana':'#16a34a' };
+  const tot = r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
 
-  const stats = tipos.map(t => {
-    const sub = lista.filter(r => r.tipo === t);
-    const prom = sub.length ? Math.round(sub.reduce((s,r)=>s+r.total,0)/sub.length) : 0;
-    const max  = sub.length ? Math.max(...sub.map(r=>r.total)) : 0;
-    return { t, sub, prom, max };
+  el.innerHTML = `<div class="asist-tipo-cards">${tipos.map(t => {
+    const sub = _asistPeriodoLista(t);
+    const n = sub.length;
+    if(!n) return `<div class="asist-tipo-card" style="--tc-color:${colores[t]}"><div class="asist-tipo-card-hd"><span class="asist-tipo-card-label">${t}</span><span class="asist-tipo-reuniones">0 reuniones</span></div><div style="font-size:12px;color:var(--ink-3)">Sin reuniones en este período</div></div>`;
+    const aP = sub.reduce((s,r)=>s+(parseInt(r.presencial)||0),0)/n;
+    const aZ = sub.reduce((s,r)=>s+(parseInt(r.zoom)||0),0)/n;
+    const aT = aP + aZ, pZ = aT ? Math.round(aZ/aT*100) : 0;
+    const rMax = sub.reduce((b,r)=> tot(r) > tot(b) ? r : b, sub[0]);
+    const d = _deltaMensual(sub);
+    const dTxt = d ? `<span style="color:${d.dP >= -0.5 ? 'var(--green)' : 'var(--red)'};font-weight:700">${d.dP>0.5?'▲':d.dP<-0.5?'▼':'■'} ${d.dP>0?'+':''}${Math.round(d.dP)}</span> presencial · <span style="font-weight:700">${d.dZ>0.5?'▲':d.dZ<-0.5?'▼':'■'} ${d.dZ>0?'+':''}${Math.round(d.dZ)}</span> Zoom <span style="color:var(--ink-3)">vs. ${d.k} meses anteriores</span>` : '';
+    return `<div class="asist-tipo-card" style="--tc-color:${colores[t]}">
+      <div class="asist-tipo-card-hd"><span class="asist-tipo-card-label">${t}</span><span class="asist-tipo-reuniones">${n} reunión${n!==1?'es':''}</span></div>
+      <div class="asist-tipo-card-n">${Math.round(aT)} <span>asistentes por reunión</span></div>
+      <div style="display:flex;height:10px;border-radius:5px;overflow:hidden;margin:10px 0 6px;gap:2px;background:var(--border)">
+        <div style="flex:${aP};background:#2a4f94"></div><div style="flex:${aZ};background:#d9671f"></div></div>
+      <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:var(--ink-2)">
+        <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#2a4f94;margin-right:4px"></span>Presencial ${Math.round(aP)}</span>
+        <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:#d9671f;margin-right:4px"></span>Zoom ${Math.round(aZ)} (${pZ}%)</span></div>
+      ${dTxt ? `<div style="font-size:11px;margin-top:8px">${dTxt}</div>` : ''}
+      <div class="asist-tipo-max" style="margin-top:6px">Máxima: <strong>${tot(rMax)}</strong> <span>(${_fechaCorta(rMax.fecha)})</span></div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+// ══════════════════════════════════════════
+// TENDENCIAS: PRESENCIAL vs ZOOM (mensual)
+// ══════════════════════════════════════════
+let asistTendTipo  = 'todos';  // todos | Entre semana | Fin de semana
+const _TEND_C = { pres:'#2a4f94', zoom:'#d9671f' }; // azul = presencial, naranja = zoom (paleta validada, separación CVD OK)
+let _tendData = [];
+
+function setTendTipo(v)  { asistTendTipo  = v; renderAsistenciaTendencias(); }
+
+function _tendMeses(tipoSel) {
+  if(tipoSel === undefined) tipoSel = asistTendTipo;
+  const NOM = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+  const meses = _asistRango().meses; // {y, m}
+  const _mem = _memIds();
+  const lista = (state.asistencia||[]).filter(r => !_mem.has(r.id) && (tipoSel === 'todos' || r.tipo === tipoSel));
+  return meses.map(({y,m}) => {
+    const key = y + '-' + String(m+1).padStart(2,'0');
+    const rs = lista.filter(r => (r.fecha||'').slice(0,7) === key);
+    const n = rs.length;
+    const sp = rs.reduce((s,r)=>s+(parseInt(r.presencial)||0),0);
+    const sz = rs.reduce((s,r)=>s+(parseInt(r.zoom)||0),0);
+    return { label: NOM[m] + ' ' + String(y).slice(2), n, sp, sz,
+      p: n ? sp/n : null, z: n ? sz/n : null, pctZ: (sp+sz) ? Math.round(sz/(sp+sz)*100) : null };
   });
-  const maxProm = Math.max(...stats.map(s=>s.prom), 1);
+}
 
-  el.innerHTML = `<div class="asist-tipo-cards">${stats.map(s => `
-    <div class="asist-tipo-card" style="--tc-color:${colores[s.t]}">
-      <div class="asist-tipo-card-hd">
-        <span class="asist-tipo-card-label">${s.t}</span>
-        <span class="asist-tipo-reuniones">${s.sub.length} reunión${s.sub.length!==1?'es':''}</span>
+function renderAsistenciaTendencias() {
+  const el = document.getElementById('asistTend'); if(!el) return;
+  const data = _tendMeses(); _tendData = data;
+  const conDatos = data.filter(d => d.n > 0);
+
+  const pill = (v,t) => `<button class="asist-chart-tab${asistTendTipo===v?' active':''}" onclick="setTendTipo('${v}')">${t}</button>`;
+
+  const head = `
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:6px">
+      <div class="asist-chart-title" style="margin:0">Tendencia mensual: presencial vs. Zoom</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <div class="asist-chart-tabs">${pill('todos','Todas')}${pill('Entre semana','Entre semana')}${pill('Fin de semana','Fin de semana')}</div>
       </div>
-      <div class="asist-tipo-card-n">${s.prom} <span>promedio</span></div>
-      <div class="asist-tipo-bar-bg">
-        <div class="asist-tipo-bar-fg" style="width:${Math.round(s.prom/maxProm*100)}%"></div>
-      </div>
-      <div class="asist-tipo-max">Máxima: <strong>${s.max||'—'}</strong></div>
-    </div>`).join('')}
-  </div>`;
+    </div>`;
+
+  if(!conDatos.length) {
+    el.innerHTML = head + '<div style="text-align:center;padding:32px;color:var(--ink-3);font-size:13px">Sin reuniones registradas en este período</div>';
+    return;
+  }
+
+  // ── KPIs del período ──
+  const totN = conDatos.reduce((s,d)=>s+d.n,0);
+  const totP = conDatos.reduce((s,d)=>s+d.sp,0);
+  const totZ = conDatos.reduce((s,d)=>s+d.sz,0);
+  const avgP = totP/totN, avgZ = totZ/totN;
+  const pctZ = (totP+totZ) ? Math.round(totZ/(totP+totZ)*100) : 0;
+  const k = conDatos.length >= 6 ? 3 : Math.max(1, Math.floor(conDatos.length/2));
+  const prom = (arr, f) => arr.reduce((s,d)=>s+f(d),0) / arr.length;
+  const ini = conDatos.slice(0,k), fin = conDatos.slice(-k);
+  const dP = prom(fin,d=>d.p) - prom(ini,d=>d.p);
+  const dZ = prom(fin,d=>d.z) - prom(ini,d=>d.z);
+  const flecha = v => v > 0.5 ? '▲' : v < -0.5 ? '▼' : '■';
+  const fmt = v => Math.round(v);
+  const signo = v => (v>0?'+':'') + Math.round(v);
+  const tile = (n,l,sub,color) => `<div style="flex:1;min-width:130px;background:var(--surface-2,#f8f7f5);border:1px solid var(--border);border-radius:10px;padding:10px 12px">
+      <div style="font-size:22px;font-weight:800;color:var(--ink);line-height:1.1">${n}</div>
+      <div style="font-size:11px;font-weight:700;color:var(--ink-2);margin-top:3px"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${color};margin-right:5px"></span>${l}</div>
+      <div style="font-size:10px;color:var(--ink-3);margin-top:2px">${sub}</div></div>`;
+  const kpis = `<div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 14px">
+      ${tile(fmt(avgP),'Presencial por reunión',`${flecha(dP)} ${signo(dP)} vs. primeros ${k} meses`,_TEND_C.pres)}
+      ${tile(fmt(avgZ),'Zoom por reunión',`${flecha(dZ)} ${signo(dZ)} vs. primeros ${k} meses`,_TEND_C.zoom)}
+      ${tile(pctZ+'%','De la asistencia es por Zoom',`${totZ} de ${totP+totZ} asistentes en ${totN} reuniones`,_TEND_C.zoom)}
+    </div>`;
+
+  // ── Gráfica 1: líneas presencial vs zoom ──
+  const W = 720, H = 250, L = 38, R = 92, T = 14, B = 30;
+  const iw = W-L-R, ih = H-T-B;
+  const maxV = Math.max(...conDatos.map(d => Math.max(d.p, d.z)), 10);
+  const step = maxV > 200 ? 50 : maxV > 100 ? 25 : maxV > 40 ? 10 : 5;
+  const yMax = Math.ceil(maxV/step)*step;
+  const xs = i => L + (data.length === 1 ? iw/2 : i*iw/(data.length-1));
+  const ys = v => T + ih - (v/yMax)*ih;
+  let grid = '';
+  for(let v = 0; v <= yMax; v += step) grid += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="#e4e2dd" stroke-width="1"/><text x="${L-6}" y="${ys(v)+3.5}" text-anchor="end" font-size="10" fill="#78746d">${v}</text>`;
+  const xl = data.map((d,i) => `<text x="${xs(i)}" y="${H-10}" text-anchor="middle" font-size="10" fill="#78746d">${d.label}</text>`).join('');
+  const serie = (key, color) => {
+    let path = '', pen = false, dots = '';
+    data.forEach((d,i) => { const v = d[key];
+      if(v === null) { pen = false; return; }
+      path += (pen ? 'L' : 'M') + xs(i).toFixed(1) + ' ' + ys(v).toFixed(1) + ' '; pen = true;
+      dots += `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="4" fill="${color}" stroke="#fff" stroke-width="2"/>`;
+    });
+    return `<path d="${path}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>${dots}`;
+  };
+  const ult = data.map((d,i)=>({d,i})).filter(o=>o.d.n>0).pop();
+  const lblP = `<text x="${xs(ult.i)+10}" y="${ys(ult.d.p)+(ult.d.p>=ult.d.z?-4:12)}" font-size="11" font-weight="700" fill="#52514e">Presencial ${fmt(ult.d.p)}</text>`;
+  const lblZ = `<text x="${xs(ult.i)+10}" y="${ys(ult.d.z)+(ult.d.z>ult.d.p?-4:12)}" font-size="11" font-weight="700" fill="#52514e">Zoom ${fmt(ult.d.z)}</text>`;
+  const legend = `<div style="display:flex;gap:16px;font-size:11px;color:var(--ink-2);margin-bottom:4px;flex-wrap:wrap">
+      <span><span style="display:inline-block;width:14px;height:3px;background:${_TEND_C.pres};vertical-align:middle;margin-right:5px;border-radius:2px"></span>Presencial (promedio por reunión)</span>
+      <span><span style="display:inline-block;width:14px;height:3px;background:${_TEND_C.zoom};vertical-align:middle;margin-right:5px;border-radius:2px"></span>Zoom (promedio por reunión)</span></div>`;
+  const svg1 = `<div style="position:relative" id="tendWrap1">${legend}
+    <svg viewBox="0 0 ${W} ${H}" class="asist-chart-svg" role="img" aria-label="Asistencia promedio presencial y por Zoom por mes"
+      onmousemove="tendHover(event,this)" onmouseleave="tendLeave()">
+      ${grid}${xl}<line id="tendCross" x1="0" x2="0" y1="${T}" y2="${T+ih}" stroke="#a8a29e" stroke-width="1" stroke-dasharray="3 3" style="display:none"/>
+      ${serie('p',_TEND_C.pres)}${serie('z',_TEND_C.zoom)}${lblP}${lblZ}
+    </svg><div id="tendTip" style="position:absolute;display:none;pointer-events:none;background:#1a1814;color:#fff;font-size:11px;line-height:1.5;padding:7px 10px;border-radius:8px;white-space:nowrap;z-index:5"></div></div>`;
+
+  // ── Gráfica 2: % de la asistencia por Zoom ──
+  const H2 = 190, T2 = 12, B2 = 28, ih2 = H2-T2-B2;
+  const maxPct = Math.max(...conDatos.map(d=>d.pctZ||0), 10);
+  const y2Max = Math.ceil(maxPct/10)*10;
+  const ys2 = v => T2 + ih2 - (v/y2Max)*ih2;
+  const bw = Math.min(34, iw/data.length*0.62);
+  const bx = i => L + (i+0.5)*iw/data.length; // barras en bandas: no pisan el eje
+  let g2 = '';
+  for(let v = 0; v <= y2Max; v += (y2Max>40?20:10)) g2 += `<line x1="${L}" x2="${W-R}" y1="${ys2(v)}" y2="${ys2(v)}" stroke="#e4e2dd"/><text x="${L-6}" y="${ys2(v)+3.5}" text-anchor="end" font-size="10" fill="#78746d">${v}%</text>`;
+  const maxIdx = data.reduce((b,d,i)=> (d.pctZ!==null && d.pctZ > (data[b]?.pctZ ?? -1)) ? i : b, 0);
+  const bars = data.map((d,i) => {
+    if(d.pctZ === null) return '';
+    const h = Math.max(2, ih2 - (ys2(d.pctZ)-T2));
+    const lbl = (i === maxIdx || i === ult.i) ? `<text x="${bx(i)}" y="${ys2(d.pctZ)-5}" text-anchor="middle" font-size="11" font-weight="700" fill="#52514e">${d.pctZ}%</text>` : '';
+    return `<rect x="${bx(i)-bw/2}" y="${ys2(d.pctZ)}" width="${bw}" height="${h}" rx="3" fill="${_TEND_C.zoom}"/>${lbl}`;
+  }).join('');
+  const xl2 = data.map((d,i) => `<text x="${bx(i)}" y="${H2-9}" text-anchor="middle" font-size="10" fill="#78746d">${d.label}</text>`).join('');
+  const avgLine = `<line x1="${L}" x2="${W-R}" y1="${ys2(pctZ)}" y2="${ys2(pctZ)}" stroke="#52514e" stroke-width="1.5" stroke-dasharray="5 4"/><text x="${W-R+6}" y="${ys2(pctZ)+4}" font-size="11" font-weight="700" fill="#52514e">Prom. ${pctZ}%</text>`;
+  const svg2 = `<div class="asist-chart-title" style="margin:18px 0 4px">Porcentaje de la asistencia que se conecta por Zoom</div>
+    <svg viewBox="0 0 ${W} ${H2}" class="asist-chart-svg" role="img" aria-label="Porcentaje de asistencia por Zoom por mes">${g2}${xl2}${bars}${avgLine}</svg>`;
+
+  // ── Lectura automática ──
+  const mejorZ = conDatos.reduce((b,d)=> d.z > b.z ? d : b, conDatos[0]);
+  const puntos = [];
+  puntos.push(`En promedio asisten <strong>${fmt(avgP)}</strong> personas presenciales y <strong>${fmt(avgZ)}</strong> por Zoom por reunión; Zoom representa el <strong>${pctZ}%</strong> de la asistencia total.`);
+  if(conDatos.length >= 2) puntos.push(`Comparando los últimos ${k} meses con los primeros ${k}: presencial <strong>${signo(dP)}</strong> (${flecha(dP)}) y Zoom <strong>${signo(dZ)}</strong> (${flecha(dZ)}) por reunión.`);
+  puntos.push(`El mes con más conexiones por Zoom fue <strong>${mejorZ.label}</strong> (${fmt(mejorZ.z)} por reunión, ${mejorZ.pctZ}% del total).`);
+  const lectura = `<div style="margin-top:14px;padding:12px 14px;background:var(--accent-lt);border:1px solid #bfdbfe;border-radius:10px;font-size:12px;color:var(--ink);line-height:1.6">
+      <div style="font-weight:700;margin-bottom:4px">Lectura rápida</div>${puntos.map(t=>`<div>• ${t}</div>`).join('')}</div>`;
+
+  el.innerHTML = head + kpis + svg1 + svg2 + lectura;
+}
+
+function tendHover(ev, svg) {
+  if(!_tendData.length) return;
+  const r = svg.getBoundingClientRect();
+  const W = 720, L = 38, Rr = 92, iw = W-L-Rr;
+  const x = (ev.clientX - r.left) / r.width * W;
+  const n = _tendData.length;
+  let i = Math.round((x - L) / iw * (n-1)); i = Math.max(0, Math.min(n-1, i));
+  const d = _tendData[i];
+  const cross = document.getElementById('tendCross'), tip = document.getElementById('tendTip');
+  if(!cross || !tip) return;
+  const cx = L + (n === 1 ? iw/2 : i*iw/(n-1));
+  cross.setAttribute('x1', cx); cross.setAttribute('x2', cx); cross.style.display = '';
+  if(d.n === 0) { tip.innerHTML = `<strong>${d.label}</strong><br>Sin reuniones registradas`; }
+  else tip.innerHTML = `<strong>${d.label}</strong> · ${d.n} reunión${d.n!==1?'es':''}<br>
+    <span style="color:#9db4e0">■</span> Presencial: ${Math.round(d.p)}<br>
+    <span style="color:#f4a574">■</span> Zoom: ${Math.round(d.z)} (${d.pctZ}% del total)`;
+  tip.style.display = 'block';
+  const wrap = document.getElementById('tendWrap1').getBoundingClientRect();
+  let left = (cx / W) * r.width + (r.left - wrap.left) + 12;
+  if(left + 170 > wrap.width) left -= 190;
+  tip.style.left = left + 'px'; tip.style.top = '34px';
+}
+function tendLeave() {
+  const c = document.getElementById('tendCross'), t = document.getElementById('tendTip');
+  if(c) c.style.display = 'none'; if(t) t.style.display = 'none';
+}
+
+// ══════════════════════════════════════════
+// VISTA "PARA PRESENTAR": 3 pantallas simples, lenguaje sencillo
+// ══════════════════════════════════════════
+let _presSlide = 0, _presTipo = 'todos';
+const _PC = { sal:'#2a4f94', zoom:'#d9671f' };
+
+function abrirPresentacionAsistencia() {
+  if(!(state.asistencia||[]).length) { toast('No hay datos de asistencia'); return; }
+  _presSlide = 0; _presTipo = 'todos';
+  let ov = document.getElementById('asistPresent');
+  if(!ov) {
+    ov = document.createElement('div'); ov.id = 'asistPresent';
+    ov.style.cssText = 'position:fixed;inset:0;z-index:9999;background:#fff;overflow:auto;font-family:var(--font,Arial,sans-serif);color:#1a1814';
+    document.body.appendChild(ov);
+    const st = document.createElement('style');
+    st.textContent = '@media print{body>*:not(#asistPresent){display:none!important}#asistPresent{position:static!important;overflow:visible!important}#asistPresent .pres-ui{display:none!important}#asistPresent .pres-slide{display:block!important;page-break-after:always;min-height:0!important}}';
+    document.head.appendChild(st);
+    document.addEventListener('keydown', _presKey);
+  }
+  ov.style.display = 'block';
+  _presRender();
+}
+function cerrarPresentacionAsistencia() { const ov = document.getElementById('asistPresent'); if(ov) ov.style.display = 'none'; }
+function _presKey(e) {
+  const ov = document.getElementById('asistPresent'); if(!ov || ov.style.display === 'none') return;
+  if(e.key === 'Escape') cerrarPresentacionAsistencia();
+  if(e.key === 'ArrowRight') _presIr(1);
+  if(e.key === 'ArrowLeft') _presIr(-1);
+}
+function _presIr(d) { _presSlide = Math.max(0, Math.min(2, _presSlide + d)); _presRender(); }
+function _presSetTipo(t) { _presTipo = t; _presRender(); }
+
+function _presDatosPeriodo(tipo) {
+  const l = _asistPeriodoLista(tipo), n = l.length;
+  if(!n) return null;
+  const p = l.reduce((s,r)=>s+(parseInt(r.presencial)||0),0)/n, z = l.reduce((s,r)=>s+(parseInt(r.zoom)||0),0)/n;
+  return { n, p, z, t:p+z, pct: (p+z) ? Math.round(z/(p+z)*100) : 0 };
+}
+
+// Inicio vs. ahora (promedio de los primeros k y los últimos k meses con datos)
+function _presAntesAhora(data) {
+  const cd = data.filter(d => d.n > 0);
+  if(cd.length < 2) return null;
+  const k = Math.min(3, Math.floor(cd.length/2));
+  const av = (arr,f) => arr.reduce((s,x)=>s+f(x),0)/arr.length;
+  const ini = cd.slice(0,k), fin = cd.slice(-k);
+  const pI = av(ini,d=>d.p), zI = av(ini,d=>d.z), pF = av(fin,d=>d.p), zF = av(fin,d=>d.z);
+  return { k, pI, zI, pF, zF, pctI: Math.round(zI/(pI+zI)*100), pctF: Math.round(zF/(pF+zF)*100), ini, fin, mesesEntre: cd.length };
+}
+
+function _presRender() {
+  const ov = document.getElementById('asistPresent'); if(!ov) return;
+  const periodo = _asistPeriodoTxt();
+  const tipoNom = { todos:'todas las reuniones', 'Entre semana':'reunión de entre semana', 'Fin de semana':'reunión del fin de semana' }[_presTipo];
+  const R = Math.round;
+  const barra = (p, z, h) => `<div style="display:flex;gap:3px;height:${h}px;border-radius:10px;overflow:hidden;font-weight:800;font-size:20px;color:#fff;margin:10px 0 0">
+      <div style="flex:${Math.max(p,1)};background:${_PC.sal};display:flex;align-items:center;padding-left:16px;white-space:nowrap">En el salón: ${R(p)}</div>
+      <div style="flex:${Math.max(z,1)};background:${_PC.zoom};display:flex;align-items:center;justify-content:center;white-space:nowrap;padding:0 8px">${z >= 8 ? 'Zoom: '+R(z) : ''}</div></div>
+      ${z < 8 ? `<div style="text-align:right;color:${_PC.zoom};font-weight:800;font-size:18px;margin-top:4px">Zoom: ${R(z)}</div>` : ''}`;
+
+  let cuerpo = '';
+  // ---------- Pantalla 1 ----------
+  if(_presSlide === 0) {
+    const bloques = ['Entre semana','Fin de semana'].map(t => {
+      const d = _presDatosPeriodo(t);
+      if(!d) return `<div style="margin-bottom:34px"><div style="font-size:24px;font-weight:800">Reunión ${t === 'Entre semana' ? 'de entre semana' : 'del fin de semana'}</div><div style="color:#78746d;font-size:18px;margin-top:6px">Sin reuniones en este período</div></div>`;
+      return `<div style="margin-bottom:38px">
+        <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+          <div style="font-size:24px;font-weight:800">Reunión ${t === 'Entre semana' ? 'de entre semana' : 'del fin de semana'}</div>
+          <div style="font-size:52px;font-weight:800;line-height:1">${R(d.t)}</div><div style="font-size:20px;color:#52514e">personas en promedio</div></div>
+        ${barra(d.p, d.z, 56)}
+        <div style="color:#78746d;font-size:15px;margin-top:8px">Según ${d.n} reuniones registradas</div></div>`;
+    }).join('');
+    cuerpo = `<h1 style="font-size:34px;margin:0 0 6px">¿Cuántas personas asisten a cada reunión?</h1>
+      <p style="font-size:18px;color:#52514e;margin:0 0 30px">Promedio ${periodo.startsWith('el ') ? 'del ' + periodo.slice(3) : 'de ' + periodo}. Se suman las personas que están en el salón y las que se conectan por Zoom.</p>${bloques}`;
+  }
+  // ---------- Pantalla 2 ----------
+  if(_presSlide === 1) {
+    const data = _tendMeses(_presTipo), cd = data.filter(d=>d.n>0), aa = _presAntesAhora(data);
+    let titulo = 'Cómo ha cambiado la asistencia mes a mes', sub = '';
+    if(aa) {
+      // Se usa el primer y el último mes del gráfico, para que los números coincidan con los que se ven en él
+      const e = { pI:cd[0].p, zI:cd[0].z, pF:cd[cd.length-1].p, zF:cd[cd.length-1].z };
+      const dP = e.pF - e.pI, dZ = e.zF - e.zI;
+      titulo = dZ > 0.5 && dP < -0.5 ? 'Cada vez más personas se conectan por Zoom y menos asisten al salón'
+        : dZ > 0.5 && dP >= -0.5 ? 'Más personas se conectan por Zoom y el salón se mantiene'
+        : dP < -0.5 ? 'Cada vez menos personas asisten al salón'
+        : dP > 0.5 ? 'Cada vez más personas asisten al salón'
+        : 'La asistencia se ha mantenido estable';
+      sub = `En el salón: de <strong style="color:${_PC.sal}">${R(e.pI)}</strong> a <strong style="color:${_PC.sal}">${R(e.pF)}</strong> personas por reunión &nbsp;·&nbsp; Por Zoom: de <strong style="color:${_PC.zoom}">${R(e.zI)}</strong> a <strong style="color:${_PC.zoom}">${R(e.zF)}</strong>`;
+    }
+    const W = 860, H = 360, L = 50, Rr = 40, T = 20, B = 40, iw = W-L-Rr, ih = H-T-B;
+    const mx = Math.max(...cd.map(d=>Math.max(d.p,d.z)), 10);
+    const stp = mx > 200 ? 50 : mx > 100 ? 25 : mx > 40 ? 10 : 5, yM = Math.ceil(mx/stp)*stp;
+    const xs = i => L + (data.length === 1 ? iw/2 : i*iw/(data.length-1)), ys = v => T + ih - v/yM*ih;
+    let g = ''; for(let v = 0; v <= yM; v += stp) g += `<line x1="${L}" x2="${W-Rr}" y1="${ys(v)}" y2="${ys(v)}" stroke="#e8e6e1"/><text x="${L-8}" y="${ys(v)+5}" text-anchor="end" font-size="14" fill="#78746d">${v}</text>`;
+    const xl = data.map((d,i)=>`<text x="${xs(i)}" y="${H-12}" text-anchor="middle" font-size="14" fill="#52514e">${d.label.split(' ')[0]}</text>`).join('');
+    const linea = (key,c) => { let path='',pen=false,dots=''; data.forEach((d,i)=>{ const v=d[key]; if(v===null){pen=false;return;} path+=(pen?'L':'M')+xs(i).toFixed(1)+' '+ys(v).toFixed(1)+' '; pen=true; dots+=`<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="6" fill="${c}" stroke="#fff" stroke-width="2.5"/>`; });
+      return `<path d="${path}" fill="none" stroke="${c}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>${dots}`; };
+    const idxs = data.map((d,i)=>d.n>0?i:-1).filter(i=>i>=0), a = idxs[0], z = idxs[idxs.length-1];
+    const rot = (i,key,c,dy) => `<text x="${xs(i)}" y="${ys(data[i][key])+dy}" text-anchor="middle" font-size="20" font-weight="800" fill="${c}">${R(data[i][key])}</text>`;
+    const dyP = (i) => (data[i].p >= data[i].z ? -14 : 28), dyZ = (i) => (data[i].z > data[i].p ? -14 : 28);
+    const etiq = cd.length ? rot(a,'p',_PC.sal,dyP(a)) + rot(a,'z',_PC.zoom,dyZ(a)) + (z!==a ? rot(z,'p',_PC.sal,dyP(z)) + rot(z,'z',_PC.zoom,dyZ(z)) : '') : '';
+    cuerpo = `<h1 style="font-size:32px;margin:0 0 8px;line-height:1.2">${titulo}</h1>
+      <p style="font-size:19px;color:#52514e;margin:0 0 14px">${sub || 'Promedio de personas por reunión, mes a mes ('+tipoNom+').'}</p>
+      <div style="display:flex;gap:26px;font-size:19px;font-weight:700;margin-bottom:6px;flex-wrap:wrap">
+        <span><span style="display:inline-block;width:26px;height:6px;background:${_PC.sal};border-radius:3px;vertical-align:middle;margin-right:8px"></span>Personas en el salón</span>
+        <span><span style="display:inline-block;width:26px;height:6px;background:${_PC.zoom};border-radius:3px;vertical-align:middle;margin-right:8px"></span>Personas por Zoom</span></div>
+      <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto" role="img" aria-label="Personas en el salón y por Zoom, mes a mes">${g}${xl}${linea('p',_PC.sal)}${linea('z',_PC.zoom)}${etiq}</svg>
+      <p style="font-size:15px;color:#78746d;margin:4px 0 0">Cada punto es el promedio de personas por reunión en ese mes (${tipoNom}).</p>`;
+  }
+  // ---------- Pantalla 3 ----------
+  if(_presSlide === 2) {
+    const data = _tendMeses(_presTipo), aa = _presAntesAhora(data);
+    const pict = (pct, titulo, color) => {
+      let dots = ''; for(let i = 0; i < 100; i++) { const fila = Math.floor(i/10), col = i%10; const esZ = i < pct;
+        dots += `<circle cx="${col*26+13}" cy="${fila*26+13}" r="9.5" fill="${esZ ? _PC.zoom : '#cdd7ea'}"/>`; }
+      return `<div style="text-align:center"><div style="font-size:20px;font-weight:700;margin-bottom:8px">${titulo}</div>
+        <svg viewBox="0 0 260 260" style="width:260px;max-width:100%">${dots}</svg>
+        <div style="font-size:44px;font-weight:800;color:${color};line-height:1.1">${pct} <span style="font-size:20px;font-weight:700;color:#1a1814">de cada 100 por Zoom</span></div></div>`; };
+    let cuerpoP;
+    if(aa) {
+      const cambio = aa.pctF - aa.pctI;
+      cuerpoP = `<div style="display:flex;gap:40px;justify-content:center;flex-wrap:wrap;align-items:flex-start">
+        ${pict(aa.pctI, 'Al inicio (primeros '+aa.k+' meses)', _PC.zoom)}
+        <div style="align-self:center;font-size:48px;color:#a8a29e">→</div>
+        ${pict(aa.pctF, 'Ahora (últimos '+aa.k+' meses)', _PC.zoom)}</div>
+        <p style="font-size:20px;text-align:center;margin:20px 0 0">${cambio > 0 ? `El porcentaje de personas que se conecta por Zoom <strong>subió ${cambio} puntos</strong>.` : cambio < 0 ? `El porcentaje de personas que se conecta por Zoom <strong>bajó ${-cambio} puntos</strong>.` : 'El porcentaje de personas que se conecta por Zoom <strong>se mantiene igual</strong>.'}</p>`;
+    } else {
+      const d = _presDatosPeriodo(_presTipo);
+      cuerpoP = d ? `<div style="display:flex;justify-content:center">${pict(d.pct, 'En este período', _PC.zoom)}</div>` : '<p style="font-size:20px">Aún no hay reuniones registradas.</p>';
+    }
+    cuerpo = `<h1 style="font-size:32px;margin:0 0 6px;line-height:1.2">De cada 100 personas que asisten, ¿cuántas se conectan por Zoom?</h1>
+      <p style="font-size:18px;color:#52514e;margin:0 0 22px">Cada círculo es una persona: <span style="color:${_PC.zoom};font-weight:800">naranja = Zoom</span>, <span style="color:#5f7db3;font-weight:800">azul claro = en el salón</span> (${tipoNom}).</p>${cuerpoP}`;
+  }
+
+  const pill = (v,t) => `<button onclick="_presSetTipo('${v}')" style="padding:8px 16px;border-radius:20px;font-size:14px;font-weight:700;border:2px solid ${_presTipo===v?'#3d5a9e':'#d6d3cc'};background:${_presTipo===v?'#3d5a9e':'#fff'};color:${_presTipo===v?'#fff':'#52514e'};cursor:pointer">${t}</button>`;
+  const nav = (txt, d, dis) => `<button onclick="_presIr(${d})" ${dis?'disabled':''} style="padding:12px 26px;border-radius:10px;font-size:16px;font-weight:700;border:2px solid #3d5a9e;background:${dis?'#f1f0ed':'#3d5a9e'};color:${dis?'#a8a29e':'#fff'};border-color:${dis?'#e4e2dd':'#3d5a9e'};cursor:${dis?'default':'pointer'}">${txt}</button>`;
+  ov.innerHTML = `<div class="pres-ui" style="display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-bottom:1px solid #e4e2dd;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">${_presSlide>0 ? '<span style="font-size:13px;color:#78746d;margin-right:4px">Ver:</span>'+pill('todos','Todas')+pill('Entre semana','Entre semana')+pill('Fin de semana','Fin de semana') : '<span style="font-size:14px;color:#78746d">Pantalla 1 de 3 · usa las flechas ← → del teclado o los botones</span>'}</div>
+      <div style="display:flex;gap:8px"><button onclick="window.print()" style="padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;border:2px solid #d6d3cc;background:#fff;cursor:pointer">🖨 Imprimir / PDF</button>
+      <button onclick="cerrarPresentacionAsistencia()" style="padding:8px 16px;border-radius:8px;font-size:14px;font-weight:700;border:2px solid #d6d3cc;background:#fff;cursor:pointer">✕ Cerrar</button></div></div>
+    <div class="pres-slide" style="max-width:960px;margin:0 auto;padding:30px 24px 10px">${cuerpo}</div>
+    <div class="pres-ui" style="max-width:960px;margin:0 auto;padding:10px 24px 40px;display:flex;justify-content:space-between;align-items:center">
+      ${nav('← Anterior',-1,_presSlide===0)}<span style="font-size:15px;color:#78746d;font-weight:700">${_presSlide+1} / 3</span>${nav('Siguiente →',1,_presSlide===2)}</div>`;
+}
+
+// ══════════════════════════════════════════
+// GRÁFICAS DE ASISTENCIA (una sola tarjeta con pestañas; tamaño real, sin escalar texto)
+// ══════════════════════════════════════════
+let asistGrafTab = 'reuniones', asistGrafTipo = 'todos';
+const _GC = { sal:'#2a4f94', zoom:'#d9671f', ink:'#1a1814', sec:'#52514e', mut:'#8a857d', grid:'#ebe9e4' };
+function setGrafTab(t)  { asistGrafTab = t;  renderAsistenciaGraficas(); }
+function setGrafTipo(t) { asistGrafTipo = t; renderAsistenciaGraficas(); }
+(function(){ const st = document.createElement('style');
+  st.textContent = '.gh .hl{opacity:0}.gh:hover .hl{opacity:1}.gh:hover .gb{filter:brightness(1.1)}#gTip{position:absolute;display:none;pointer-events:none;background:#14233f;color:#fff;font-size:12px;line-height:1.6;padding:9px 12px;border-radius:6px;white-space:nowrap;z-index:6;box-shadow:0 6px 18px rgba(20,35,63,.28)}'
+    + '#asistGraficas{padding:22px 26px 20px!important;border-radius:14px!important;box-shadow:0 1px 2px rgba(20,35,63,.05),0 8px 24px -12px rgba(20,35,63,.12)}'
+    + '.gseg{display:inline-flex;background:#f1efeb;border-radius:9px;padding:3px;gap:2px}.gseg button{border:0;background:transparent;padding:7px 15px;border-radius:7px;font-size:12px;font-weight:600;color:#6b665e;cursor:pointer;font-family:inherit;transition:all .15s}.gseg button:hover{color:#14233f}.gseg button.on{background:#fff;color:#14233f;box-shadow:0 1px 3px rgba(20,35,63,.15)}'
+    + '.gtipo{display:inline-flex;gap:18px}.gtipo button{border:0;background:none;padding:4px 0;font-size:12px;font-weight:600;color:#8a857d;cursor:pointer;font-family:inherit;border-bottom:2px solid transparent}.gtipo button:hover{color:#14233f}.gtipo button.on{color:#14233f;border-bottom-color:#2a4f94}'
+    + '.gkpi{display:flex;border:1px solid #ebe9e4;border-radius:10px;margin:14px 0 18px;overflow:hidden;flex-wrap:wrap}.gkpi>div{flex:1;min-width:130px;padding:12px 16px;border-left:1px solid #ebe9e4}.gkpi>div:first-child{border-left:0}.gkpi .n{font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:#14233f}.gkpi .l{font-size:10.5px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#8a857d;margin-top:4px}'
+    + '.gtit{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#14233f}.gtit:after{content:"";display:block;width:28px;height:2px;background:#2a4f94;margin-top:7px}'
+    + '.gnote{font-size:12px;color:#6b665e;margin:0 0 8px;line-height:1.5}.gh1{font-size:17px;font-weight:700;letter-spacing:-.01em;color:#14233f;margin:2px 0 3px}.gh2{font-size:13px;color:#52514e;margin-bottom:10px}';
+  document.head.appendChild(st);
+  let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { const el = document.getElementById('asistGraficas'); if(el && el.offsetParent) renderAsistenciaGraficas(); }, 150); });
+})();
+function _gTipMove(ev) {
+  const card = document.getElementById('asistGraficas'), tip = document.getElementById('gTip'); if(!tip) return;
+  const h = ev.target.closest && ev.target.closest('[data-tip]');
+  if(!h) { tip.style.display = 'none'; return; }
+  tip.innerHTML = h.getAttribute('data-tip'); tip.style.display = 'block';
+  const r = card.getBoundingClientRect(); let x = ev.clientX - r.left + 14, y = ev.clientY - r.top - 10;
+  if(x + tip.offsetWidth > r.width - 6) x = ev.clientX - r.left - tip.offsetWidth - 14;
+  tip.style.left = Math.max(4, x) + 'px'; tip.style.top = Math.max(4, y - tip.offsetHeight) + 'px';
+}
+function _gTipHide() { const t = document.getElementById('gTip'); if(t) t.style.display = 'none'; }
+
+function _gEsc(t) { return String(t).replace(/"/g,'&quot;'); }
+const _MES3 = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+// Gráfica 1: una barra por reunión (salón abajo, Zoom arriba)
+function _gBarrasReuniones(lista, tipo, W) {
+  const titulo = tipo === 'Entre semana' ? 'Reunión de entre semana' : 'Reunión del fin de semana';
+  if(!lista.length) return `<div style="margin:6px 0 18px"><div style="font-size:14px;font-weight:800">${titulo}</div><div style="padding:16px 0;color:var(--ink-3);font-size:13px">Sin reuniones en este período</div></div>`;
+  const chico = W < 520, H = chico ? 220 : 270, L = 38, R = chico ? 12 : 84, T = 24, B = 34, iw = W-L-R, ih = H-T-B;
+  const tot = r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
+  const l = lista.slice(-30);
+  const mx = Math.max(...l.map(tot), 10), stp = mx > 300 ? 100 : mx > 150 ? 50 : mx > 60 ? 25 : 10, yM = Math.ceil(mx*1.04/stp)*stp;
+  const ys = v => T + ih - v/yM*ih, slot = iw/l.length, bw = Math.min(34, slot*0.7), bx = i => L + (i+0.5)*slot;
+  let g = ''; for(let v = 0; v <= yM; v += stp) g += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="${_GC.grid}"/><text x="${L-6}" y="${ys(v)+4}" text-anchor="end" font-size="11" fill="${_GC.mut}">${v}</text>`;
+  const prom = Math.round(l.reduce((s,r)=>s+tot(r),0)/l.length), iMax = l.reduce((b,r,i)=> tot(r) > tot(l[b]) ? i : b, 0);
+  const cada = Math.max(1, Math.ceil(l.length / Math.max(2, Math.floor(iw/62))));
+  const bars = l.map((r,i) => {
+    const p = parseInt(r.presencial)||0, z = parseInt(r.zoom)||0, x = bx(i)-bw/2, [,mo,dy] = (r.fecha||'--').split('-');
+    const tip = `<strong>${_fechaCorta(r.fecha)}</strong><br>Total: <strong>${p+z}</strong><br><span style="color:#9db4e0">■</span> En el salón: ${p}<br><span style="color:#f4a574">■</span> Por Zoom: ${z}`;
+    const lt = (i === iMax || i === l.length-1 || i === 0) ? `<text x="${bx(i)}" y="${ys(p+z)-6}" text-anchor="middle" font-size="12" font-weight="800" fill="${_GC.ink}" paint-order="stroke" stroke="#fff" stroke-width="3.5" stroke-linejoin="round">${p+z}</text>` : '';
+    const lx = (i % cada === 0 || (i === l.length-1 && (i % cada) >= Math.ceil(cada*0.6))) ? `<text x="${bx(i)}" y="${H-12}" text-anchor="middle" font-size="11" fill="${_GC.sec}">${parseInt(dy)} ${_MES3[parseInt(mo)-1]||''}</text>` : '';
+    return `<g class="gh" data-tip="${_gEsc(tip)}"><rect class="hl" x="${bx(i)-slot/2}" y="${T}" width="${slot}" height="${ih}" fill="#e8e6e1"/>
+      <rect class="gb" x="${x}" y="${ys(p)}" width="${bw}" height="${Math.max(0,p/yM*ih)}" fill="${_GC.sal}"/>
+      <rect class="gb" x="${x}" y="${ys(p+z)}" width="${bw}" height="${Math.max(0,z/yM*ih)}" fill="${_GC.zoom}" rx="3"/>${lt}${lx}</g>`;
+  }).join('');
+  const avg = `<line x1="${L}" x2="${W-R}" y1="${ys(prom)}" y2="${ys(prom)}" stroke="${_GC.sec}" stroke-width="1.5" stroke-dasharray="5 4"/>` +
+    (chico ? '' : `<text x="${W-R+7}" y="${ys(prom)-2}" font-size="11" font-weight="700" fill="${_GC.sec}">Promedio</text><text x="${W-R+7}" y="${ys(prom)+13}" font-size="13" font-weight="800" fill="${_GC.sec}">${prom}</text>`);
+  return `<div style="margin:6px 0 20px"><div style="font-size:13px;font-weight:700;color:#14233f;margin-bottom:2px">${titulo} <span style="font-weight:500;color:var(--ink-3);font-size:12px">· ${l.length} reuniones · promedio ${prom}</span></div>
+    <svg width="${W}" height="${H}" role="img" aria-label="Asistencia en cada ${titulo.toLowerCase()}" style="display:block">${g}${bars}${avg}</svg></div>`;
+}
+
+// Gráfica 2: promedio mensual, salón vs Zoom (líneas)
+function _gLineasMes(data, W) {
+  const cd = data.filter(d => d.n > 0);
+  if(!cd.length) return '<div style="padding:30px;text-align:center;color:var(--ink-3);font-size:13px">Sin reuniones registradas en este período</div>';
+  const chico = W < 560, H = chico ? 260 : 320, L = 40, R = chico ? 16 : 104, T = 26, B = 36, iw = W-L-R, ih = H-T-B;
+  const mx = Math.max(...cd.map(d => Math.max(d.p, d.z)), 10), stp = mx > 200 ? 50 : mx > 100 ? 25 : mx > 40 ? 10 : 5, yM = Math.ceil(mx*1.06/stp)*stp;
+  const xs = i => L + (data.length === 1 ? iw/2 : i*iw/(data.length-1)), ys = v => T + ih - v/yM*ih;
+  let g = ''; for(let v = 0; v <= yM; v += stp) g += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="${_GC.grid}"/><text x="${L-6}" y="${ys(v)+4}" text-anchor="end" font-size="11" fill="${_GC.mut}">${v}</text>`;
+  const cada = Math.max(1, Math.ceil(data.length / Math.max(3, Math.floor(iw/52))));
+  const xl = data.map((d,i) => (i % cada === 0 || i === data.length-1) ? `<text x="${xs(i)}" y="${H-12}" text-anchor="middle" font-size="11" fill="${_GC.sec}">${d.label}</text>` : '').join('');
+  const linea = (k,c) => { let path = '', pen = false, dots = '';
+    data.forEach((d,i) => { const v = d[k]; if(v === null) { pen = false; return; } path += (pen?'L':'M') + xs(i).toFixed(1) + ' ' + ys(v).toFixed(1) + ' '; pen = true;
+      dots += `<circle cx="${xs(i).toFixed(1)}" cy="${ys(v).toFixed(1)}" r="4" fill="#fff" stroke="${c}" stroke-width="2.25"/>`; });
+    const first = data.findIndex(d => d[k] !== null), lastI = data.length - 1 - [...data].reverse().findIndex(d => d[k] !== null);
+    const area = path && !path.includes('M', 1) ? `<path d="${path} L${xs(lastI).toFixed(1)} ${T+ih} L${xs(first).toFixed(1)} ${T+ih} Z" fill="${c}" opacity="0.07"/>` : '';
+    return `${area}<path d="${path}" fill="none" stroke="${c}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>${dots}`; };
+  const hits = data.map((d,i) => { const w = iw/Math.max(1,data.length-1);
+    const tip = d.n ? `<strong>${d.label}</strong> · ${d.n} reunión${d.n!==1?'es':''}<br><span style="color:#9db4e0">■</span> En el salón: ${Math.round(d.p)}<br><span style="color:#f4a574">■</span> Por Zoom: ${Math.round(d.z)} (${d.pctZ}% del total)` : `<strong>${d.label}</strong><br>Sin reuniones registradas`;
+    return `<g class="gh" data-tip="${_gEsc(tip)}"><rect class="hl" x="${xs(i)-1}" y="${T}" width="2" height="${ih}" fill="#a8a29e"/><rect x="${xs(i)-w/2}" y="${T}" width="${w}" height="${ih}" fill="transparent"/></g>`; }).join('');
+  const idx = data.map((d,i)=>d.n>0?i:-1).filter(i=>i>=0), a = idx[0], z = idx[idx.length-1];
+  const lab = (i,k,c,dy) => `<text x="${xs(i)}" y="${ys(data[i][k])+dy}" text-anchor="middle" font-size="13" font-weight="800" fill="${c}" paint-order="stroke" stroke="#fff" stroke-width="3.5" stroke-linejoin="round">${Math.round(data[i][k])}</text>`;
+  const dyP = i => data[i].p >= data[i].z ? -11 : 20, dyZ = i => data[i].z > data[i].p ? -11 : 20;
+  const ends = lab(a,'p',_GC.sal,dyP(a)) + lab(a,'z',_GC.zoom,dyZ(a)) + (z !== a ? lab(z,'p',_GC.sal,dyP(z)) + lab(z,'z',_GC.zoom,dyZ(z)) : '');
+  const side = chico ? '' : `<text x="${xs(z)+14}" y="${ys(data[z].p)+4}" font-size="12" font-weight="700" fill="${_GC.sec}">En el salón</text><text x="${xs(z)+14}" y="${ys(data[z].z)+4}" font-size="12" font-weight="700" fill="${_GC.sec}">Por Zoom</text>`;
+  return `<svg width="${W}" height="${H}" role="img" aria-label="Promedio de personas en el salón y por Zoom, mes a mes" style="display:block">${g}${xl}${hits}${linea('p',_GC.sal)}${linea('z',_GC.zoom)}${ends}${side}</svg>`;
+}
+
+// Gráfica 3: % de la asistencia que se conecta por Zoom
+function _gPctZoom(data, W) {
+  const cd = data.filter(d => d.n > 0);
+  if(!cd.length) return '<div style="padding:30px;text-align:center;color:var(--ink-3);font-size:13px">Sin reuniones registradas en este período</div>';
+  const chico = W < 560, H = chico ? 240 : 290, L = 40, R = chico ? 12 : 88, T = 26, B = 36, iw = W-L-R, ih = H-T-B;
+  const mxp = Math.max(...cd.map(d => d.pctZ||0), 10), yM = Math.ceil(mxp*1.1/10)*10, ys = v => T + ih - v/yM*ih;
+  const sp = cd.reduce((s,d)=>s+d.sp,0), sz = cd.reduce((s,d)=>s+d.sz,0), prom = (sp+sz) ? Math.round(sz/(sp+sz)*100) : 0;
+  const slot = iw/data.length, bw = Math.min(40, slot*0.66), bx = i => L + (i+0.5)*slot;
+  let g = ''; const stp = yM > 40 ? 20 : 10; for(let v = 0; v <= yM; v += stp) g += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="${_GC.grid}"/><text x="${L-6}" y="${ys(v)+4}" text-anchor="end" font-size="11" fill="${_GC.mut}">${v}%</text>`;
+  const cada = Math.max(1, Math.ceil(data.length / Math.max(3, Math.floor(iw/52)))), todos = data.length <= 13 && slot >= 34;
+  const bars = data.map((d,i) => { if(d.n === 0) return '';
+    const tip = `<strong>${d.label}</strong><br>${d.pctZ}% por Zoom<br>${Math.round(d.z)} de ${Math.round(d.p+d.z)} personas por reunión`;
+    const lbl = (todos || i === data.length-1 || i === 0) ? `<text x="${bx(i)}" y="${ys(d.pctZ)-6}" text-anchor="middle" font-size="12" font-weight="800" fill="${_GC.ink}" paint-order="stroke" stroke="#fff" stroke-width="3.5" stroke-linejoin="round">${d.pctZ}%</text>` : '';
+    const lx = (i % cada === 0 || i === data.length-1) ? `<text x="${bx(i)}" y="${H-12}" text-anchor="middle" font-size="11" fill="${_GC.sec}">${d.label}</text>` : '';
+    return `<g class="gh" data-tip="${_gEsc(tip)}"><rect x="${bx(i)-slot/2}" y="${T}" width="${slot}" height="${ih}" fill="transparent"/><rect class="gb" x="${bx(i)-bw/2}" y="${ys(d.pctZ)}" width="${bw}" height="${Math.max(2,ih-(ys(d.pctZ)-T))}" rx="3" fill="${_GC.zoom}"/>${lbl}${lx}</g>`; }).join('');
+  const avg = `<line x1="${L}" x2="${W-R}" y1="${ys(prom)}" y2="${ys(prom)}" stroke="${_GC.sec}" stroke-width="1.5" stroke-dasharray="5 4"/>` +
+    (chico ? '' : `<text x="${W-R+7}" y="${ys(prom)-2}" font-size="11" font-weight="700" fill="${_GC.sec}">Promedio</text><text x="${W-R+7}" y="${ys(prom)+13}" font-size="13" font-weight="800" fill="${_GC.sec}">${prom}%</text>`);
+  return `<svg width="${W}" height="${H}" role="img" aria-label="Porcentaje de la asistencia por Zoom, mes a mes" style="display:block">${g}${bars}${avg}</svg>`;
+}
+
+function renderAsistenciaGraficas() {
+  const el = document.getElementById('asistGraficas'); if(!el) return;
+  const W = Math.max(300, Math.floor((el.clientWidth || 720) - 40)); // ancho real del contenedor (menos el relleno)
+  const tabs = [['reuniones','Cada reunión'],['mes','Mes a mes'],['pct','% por Zoom']];
+  const tipos = [['todos','Todas'],['Entre semana','Entre semana'],['Fin de semana','Fin de semana']];
+  const seg = (act, fn, v, t) => `<button class="${act?'on':''}" onclick="${fn}('${v}')">${t}</button>`;
+  const lst = _asistPeriodoLista(asistGrafTipo), nn = lst.length;
+  const mP = nn ? lst.reduce((s,r)=>s+(parseInt(r.presencial)||0),0)/nn : 0, mZ = nn ? lst.reduce((s,r)=>s+(parseInt(r.zoom)||0),0)/nn : 0;
+  const kpi = nn ? `<div class="gkpi"><div><div class="n">${nn}</div><div class="l">Reuniones</div></div><div><div class="n" style="color:${_GC.sal}">${Math.round(mP)}</div><div class="l">En el salón (prom.)</div></div><div><div class="n" style="color:${_GC.zoom}">${Math.round(mZ)}</div><div class="l">Por Zoom (prom.)</div></div><div><div class="n">${(mP+mZ) ? Math.round(mZ/(mP+mZ)*100) : 0}%</div><div class="l">Asiste por Zoom</div></div></div>` : '';
+  const head = `<div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px">
+      <div class="gtit">Asistencia a las reuniones</div>
+      <div class="gseg">${tabs.map(([v,t]) => seg(asistGrafTab===v,'setGrafTab',v,t)).join('')}</div></div>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px"><span style="font-size:11px;color:#8a857d;font-weight:700;letter-spacing:.07em;text-transform:uppercase">Reunión</span>
+      <div class="gtipo">${tipos.map(([v,t]) => seg(asistGrafTipo===v,'setGrafTipo',v,t)).join('')}</div></div>${kpi}`;
+  const leyenda = (extra) => `<div style="display:flex;gap:18px;font-size:12px;color:var(--ink-2);font-weight:600;flex-wrap:wrap;margin-top:6px">
+      <span><span style="display:inline-block;width:11px;height:11px;background:${_GC.sal};border-radius:2px;margin-right:5px;vertical-align:-1px"></span>En el salón</span>
+      <span><span style="display:inline-block;width:11px;height:11px;background:${_GC.zoom};border-radius:2px;margin-right:5px;vertical-align:-1px"></span>Por Zoom</span>${extra||''}</div>`;
+  const avgLeg = '<span><span style="display:inline-block;width:20px;border-top:2px dashed #52514e;margin-right:5px;vertical-align:3px"></span>Promedio del período</span>';
+  let cuerpo = '';
+
+  if(asistGrafTab === 'reuniones') {
+    const sorted = _asistPeriodoLista().slice().sort((a,b) => (a.fecha||'').localeCompare(b.fecha||''));
+    if(!sorted.length) cuerpo = '<div style="padding:30px;text-align:center;color:var(--ink-3);font-size:13px">Sin reuniones registradas en este período</div>';
+    else {
+      const ts = asistGrafTipo === 'todos' ? ['Entre semana','Fin de semana'] : [asistGrafTipo];
+      cuerpo = `<p class="gnote">Cada barra es una reunión. Su altura es el total de personas: las que estuvieron <strong style="color:${_GC.sal}">en el salón</strong> más las que se conectaron <strong style="color:${_GC.zoom}">por Zoom</strong>.</p>`
+        + ts.map(t => _gBarrasReuniones(sorted.filter(r => r.tipo === t), t, W)).join('') + leyenda(avgLeg);
+    }
+  } else {
+    const data = _tendMeses(asistGrafTipo), aa = _presAntesAhora(data), cd = data.filter(d=>d.n>0);
+    const R = Math.round;
+    if(cd.length < 2) {
+      cuerpo = '<div style="padding:34px 16px;text-align:center;color:var(--ink-3);font-size:14px;line-height:1.5"><strong style="color:var(--ink);font-size:15px">Un solo mes no muestra tendencia</strong><br>Para ver cómo cambia la asistencia mes a mes, elige <em>Últimos 3 meses</em>, <em>Últimos 6 meses</em> o un <em>año de servicio</em>.<br>La pestaña <em>Cada reunión</em> sí muestra el detalle de este período.</div>';
+    } else if(asistGrafTab === 'mes') {
+      let frase = '';
+      if(cd.length >= 2) { const e = { pI:cd[0].p, zI:cd[0].z, pF:cd[cd.length-1].p, zF:cd[cd.length-1].z }, dP = e.pF-e.pI, dZ = e.zF-e.zI;
+        const t = dZ > 0.5 && dP < -0.5 ? 'Cada vez más personas se conectan por Zoom y menos asisten al salón' : dZ > 0.5 && dP >= -0.5 ? 'Más personas se conectan por Zoom y el salón se mantiene' : dP < -0.5 ? 'Cada vez menos personas asisten al salón' : dP > 0.5 ? 'Cada vez más personas asisten al salón' : 'La asistencia se ha mantenido estable';
+        frase = `<div class="gh1">${t}</div><div class="gh2">En el salón: de <strong style="color:${_GC.sal}">${R(e.pI)}</strong> a <strong style="color:${_GC.sal}">${R(e.pF)}</strong> personas por reunión · Por Zoom: de <strong style="color:${_GC.zoom}">${R(e.zI)}</strong> a <strong style="color:${_GC.zoom}">${R(e.zF)}</strong></div>`; }
+      cuerpo = frase + `<p class="gnote">Cada punto es el promedio de personas por reunión en ese mes.</p>` + _gLineasMes(data, W) + leyenda();
+    } else {
+      let frase = '';
+      if(aa) { const c = aa.pctF - aa.pctI;
+        frase = `<div class="gh1">${c > 0 ? 'Cada vez más personas se conectan por Zoom' : c < 0 ? 'Cada vez menos personas se conectan por Zoom' : 'El uso de Zoom se mantiene igual'}</div><div class="gh2">Al inicio ${aa.pctI} de cada 100 asistentes se conectaba por Zoom; en los últimos ${aa.k} meses, ${aa.pctF} de cada 100.</div>`; }
+      cuerpo = frase + `<p class="gnote">Cada barra muestra, del total de personas que asistió ese mes, qué porcentaje lo hizo por Zoom.</p>` + _gPctZoom(data, W)
+        + `<div style="display:flex;gap:18px;font-size:12px;color:var(--ink-2);font-weight:600;flex-wrap:wrap;margin-top:6px"><span><span style="display:inline-block;width:11px;height:11px;background:${_GC.zoom};border-radius:2px;margin-right:5px;vertical-align:-1px"></span>% de la asistencia por Zoom</span>${avgLeg}</div>`;
+    }
+  }
+  el.innerHTML = head + cuerpo + '<div id="gTip"></div>';
 }
 
 function renderAsistenciaChart() {
   const el = document.getElementById('asistChartWrap'); if(!el) return;
-  let lista = (state.asistencia||[]).slice().reverse(); // cronológico
-  if(asistChartFilter !== 'todos') lista = lista.filter(r => r.tipo === asistChartFilter);
+  const todas = _asistPeriodoLista().slice().sort((a,b) => (a.fecha||'').localeCompare(b.fecha||'')); // cronológico, del período elegido
+  const tipos = asistChartFilter === 'todos' ? ['Entre semana','Fin de semana'] : [asistChartFilter];
+  const MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const C = { sal:'#2a4f94', zoom:'#d9671f' };
+  const tot = r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
 
-  // Últimas 20 reuniones
-  lista = lista.slice(-20);
+  const panel = (tipo) => {
+    const lista = todas.filter(r => r.tipo === tipo).slice(-30);
+    const titulo = tipo === 'Entre semana' ? 'Reunión de entre semana' : 'Reunión del fin de semana';
+    if(!lista.length) return `<div style="margin-bottom:10px"><div style="font-size:14px;font-weight:800">${titulo}</div><div style="padding:18px 0;color:var(--ink-3);font-size:13px">Sin reuniones en este período</div></div>`;
+    const W = 720, H = 230, L = 40, R = 74, T = 22, B = 34, iw = W-L-R, ih = H-T-B;
+    const mx = Math.max(...lista.map(tot), 10);
+    const stp = mx > 300 ? 100 : mx > 150 ? 50 : mx > 60 ? 25 : 10, yM = Math.ceil(mx/stp)*stp;
+    const ys = v => T + ih - v/yM*ih;
+    const slot = iw/lista.length, bw = Math.min(30, slot*0.68);
+    const bx = i => L + (i+0.5)*slot;
+    let g = ''; for(let v = 0; v <= yM; v += stp) g += `<line x1="${L}" x2="${W-R}" y1="${ys(v)}" y2="${ys(v)}" stroke="#e8e6e1"/><text x="${L-6}" y="${ys(v)+3.5}" text-anchor="end" font-size="10" fill="#78746d">${v}</text>`;
+    const prom = Math.round(lista.reduce((s,r)=>s+tot(r),0)/lista.length);
+    const iMax = lista.reduce((b,r,i)=> tot(r) > tot(lista[b]) ? i : b, 0);
+    const cada = Math.ceil(lista.length/9);
+    const bars = lista.map((r,i) => {
+      const p = parseInt(r.presencial)||0, z = parseInt(r.zoom)||0;
+      const hP = p/yM*ih, hZ = z/yM*ih, x = bx(i)-bw/2;
+      const [,mo,dy] = (r.fecha||'--').split('-');
+      const lblTot = (i === iMax || i === lista.length-1 || i === 0) ? `<text x="${bx(i)}" y="${ys(p+z)-5}" text-anchor="middle" font-size="11" font-weight="800" fill="#1a1814">${p+z}</text>` : '';
+      const lblX = (i % cada === 0 || (i === lista.length-1 && (i % cada) >= Math.ceil(cada*0.6))) ? `<text x="${bx(i)}" y="${H-14}" text-anchor="middle" font-size="10" fill="#52514e">${parseInt(dy)} ${MES[parseInt(mo)-1]||''}</text>` : '';
+      return `<g><title>${r.fecha} · ${tipo}\nTotal: ${p+z}\nEn el salón: ${p}\nPor Zoom: ${z}</title>
+        <rect x="${x}" y="${ys(p)}" width="${bw}" height="${Math.max(hP,0)}" fill="${C.sal}"/>
+        <rect x="${x}" y="${ys(p+z)}" width="${bw}" height="${Math.max(hZ,0)}" fill="${C.zoom}" rx="3"/>${lblTot}${lblX}</g>`;
+    }).join('');
+    const avg = `<line x1="${L}" x2="${W-R}" y1="${ys(prom)}" y2="${ys(prom)}" stroke="#52514e" stroke-width="1.5" stroke-dasharray="5 4"/><text x="${W-R+6}" y="${ys(prom)-3}" font-size="11" font-weight="700" fill="#52514e">Promedio</text><text x="${W-R+6}" y="${ys(prom)+11}" font-size="11" font-weight="700" fill="#52514e">${prom}</text>`;
+    return `<div style="margin-bottom:14px"><div style="font-size:13px;font-weight:700;color:#14233f;margin-bottom:2px">${titulo} <span style="font-weight:500;color:var(--ink-3);font-size:12px">· ${lista.length} reuniones${todas.filter(r=>r.tipo===tipo).length>30?' (las últimas 30)':''}</span></div>
+      <svg viewBox="0 0 ${W} ${H}" class="asist-chart-svg" role="img" aria-label="Asistencia en cada ${titulo.toLowerCase()}">${g}${bars}${avg}</svg></div>`;
+  };
 
-  if(!lista.length) {
-    el.innerHTML = '<div style="text-align:center;padding:32px;color:var(--ink-3);font-size:13px">Sin datos suficientes para graficar</div>';
-    return;
-  }
-
-  const maxVal = Math.max(...lista.map(r=>r.total), 1);
-  const W = 700, H = 160, padL = 32, padB = 40, padT = 10, padR = 10;
-  const barW = Math.min(28, Math.floor((W-padL-padR) / lista.length) - 4);
-  const gap  = (W - padL - padR - barW * lista.length) / (lista.length + 1);
-  const colores = { 'Entre semana':'#1d4ed8', 'Fin de semana':'#15803d' };
-
-  // Líneas guía
-  const guias = [0, 0.25, 0.5, 0.75, 1].map(f => {
-    const v = Math.round(maxVal * f);
-    const y = padT + (H - padT - padB) * (1 - f);
-    return `<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#e5e0d8" stroke-width="1"/>
-            <text x="${padL-4}" y="${y+4}" font-size="9" fill="#a09a93" text-anchor="end">${v}</text>`;
-  }).join('');
-
-  const bars = lista.map((r, i) => {
-    const x = padL + gap + i * (barW + gap);
-    const barH = ((H - padT - padB) * r.total / maxVal);
-    const y = padT + (H - padT - padB) - barH;
-    const col = colores[r.tipo] || '#64748b';
-    const [yr, mo, dy] = r.fecha.split('-');
-    const label = `${dy}/${mo}`;
-    const presH = ((H - padT - padB) * r.presencial / maxVal);
-    const zoomH = barH - presH;
-    return `
-      <title>${r.fecha} · ${r.tipo}\nTotal: ${r.total} (${r.presencial} presencial + ${r.zoom} zoom)</title>
-      <rect x="${x}" y="${y+zoomH}" width="${barW}" height="${presH}" fill="${col}" rx="2" opacity=".9"/>
-      <rect x="${x}" y="${y}" width="${barW}" height="${zoomH}" fill="${col}" rx="2" opacity=".45"/>
-      <text x="${x+barW/2}" y="${H-padB+14}" font-size="9" fill="#a09a93" text-anchor="middle">${label}</text>
-      <text x="${x+barW/2}" y="${y-4}" font-size="9" fill="${col}" text-anchor="middle" font-weight="600">${r.total}</text>`;
-  }).join('');
-
-  // Línea de promedio
-  const prom = Math.round(lista.reduce((s,r)=>s+r.total,0)/lista.length);
-  const yProm = padT + (H - padT - padB) * (1 - prom / maxVal);
-  const promLine = `<line x1="${padL}" y1="${yProm}" x2="${W-padR}" y2="${yProm}" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <text x="${W-padR+2}" y="${yProm+4}" font-size="9" fill="#f59e0b" font-weight="600">Ø${prom}</text>`;
-
-  el.innerHTML = `<div style="overflow-x:auto">
-    <svg viewBox="0 0 ${W} ${H}" class="asist-chart-svg" style="min-width:${Math.max(W, lista.length*40)}px;height:${H}px">
-      ${guias}${bars}${promLine}
-    </svg>
-    <div style="display:flex;gap:16px;margin-top:8px;font-size:11px;color:var(--ink-3)">
-      <span><span style="display:inline-block;width:10px;height:10px;background:#1d4ed8;border-radius:2px;margin-right:4px"></span>Entre semana</span>
-      <span><span style="display:inline-block;width:10px;height:10px;background:#15803d;border-radius:2px;margin-right:4px"></span>Fin de semana</span>
-      <span><span style="display:inline-block;width:22px;height:2px;background:#f59e0b;border-radius:1px;margin-right:4px;vertical-align:middle"></span>Promedio</span>
-      <span style="color:var(--ink-3)">· Barra sólida = presencial · transparente = Zoom</span>
-    </div>
-  </div>`;
+  if(!todas.length) { el.innerHTML = '<div style="text-align:center;padding:32px;color:var(--ink-3);font-size:13px">Sin reuniones registradas en este período</div>'; return; }
+  el.innerHTML = `<div style="font-size:12px;color:var(--ink-2);margin:-4px 0 10px">Cada barra es una reunión. Su altura es el total de personas: las que estuvieron <strong style="color:${C.sal}">en el salón</strong> más las que se conectaron <strong style="color:${C.zoom}">por Zoom</strong>.</div>
+    ${tipos.map(panel).join('')}
+    <div style="display:flex;gap:18px;font-size:12px;color:var(--ink-2);font-weight:600;flex-wrap:wrap">
+      <span><span style="display:inline-block;width:11px;height:11px;background:${C.sal};border-radius:2px;margin-right:5px;vertical-align:-1px"></span>En el salón</span>
+      <span><span style="display:inline-block;width:11px;height:11px;background:${C.zoom};border-radius:2px;margin-right:5px;vertical-align:-1px"></span>Por Zoom</span>
+      <span><span style="display:inline-block;width:20px;border-top:2px dashed #52514e;margin-right:5px;vertical-align:3px"></span>Promedio del período</span></div>`;
 }
 
 function renderAsistenciaTabla() {
@@ -5154,31 +5602,120 @@ function guardarEditAsist() {
 }
 
 // ══════════════════════════════════════════
-// REGISTRO DE ASISTENCIA S-3 (formulario oficial, por año de servicio)
+// REGISTRO DE ASISTENCIA S-88 (formulario oficial, por año de servicio)
 // ══════════════════════════════════════════
-// El S-3 nombra el año de servicio por el año en que TERMINA (Sep 2025–Ago 2026 = "2026").
+// El S-88 nombra el año de servicio por el año en que TERMINA (Sep 2025–Ago 2026 = "2026").
 // Internamente la app usa el año en que EMPIEZA (anio = 2025), por eso el rótulo es anio+1.
+let asistPeriodo = '12m'; // '12m' | año de servicio (inicio)
+function setAsistPeriodo(v) { asistPeriodo = v; renderAsistenciaScreen(); }
+
 function _poblarSelectorS3() {
   const sel = document.getElementById('asistS3Anio'); if(!sel) return;
-  const prev = sel.value;
   const hoy = anioHoy();
   let minA = hoy;
+  const mesesConDatos = new Set();
   (state.asistencia||[]).forEach(r => {
     const d = new Date((r.fecha||'')+'T00:00:00'); if(isNaN(d)) return;
     const a = d.getMonth() >= 8 ? d.getFullYear() : d.getFullYear()-1;
     if(a < minA) minA = a;
+    mesesConDatos.add((r.fecha||'').slice(0,7));
   });
-  let opts = '';
-  for(let a = hoy; a >= minA; a--) opts += `<option value="${a}">Año de servicio ${a+1}${a===hoy?' (actual)':''}</option>`;
+  const MN = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  let opts = '<optgroup label="Período rápido">'
+    + '<option value="mes">Mes actual</option>'
+    + '<option value="3m">Últimos 3 meses</option>'
+    + '<option value="6m">Últimos 6 meses</option>'
+    + '<option value="12m">Últimos 12 meses</option></optgroup>';
+  opts += '<optgroup label="Año de servicio">';
+  for(let a = hoy; a >= minA; a--) {
+    const et = a===hoy ? ' (actual)' : (a===hoy-1 ? ' (pasado)' : '');
+    opts += `<option value="${a}">Año de servicio ${a+1}${et}</option>`;
+  }
+  opts += '</optgroup>';
+  const ms = [...mesesConDatos].filter(Boolean).sort().reverse();
+  if(ms.length) {
+    opts += '<optgroup label="Elegir un mes">';
+    ms.forEach(k => { const [y,m] = k.split('-'); opts += `<option value="m:${k}">${MN[parseInt(m)-1]} ${y}</option>`; });
+    opts += '</optgroup>';
+  }
   sel.innerHTML = opts;
-  if(prev && [...sel.options].some(o => o.value === prev)) sel.value = prev;
+  sel.value = [...sel.options].some(o => o.value === String(asistPeriodo)) ? String(asistPeriodo) : '12m';
 }
 
-function _s3Datos(anio, tipo) {
+// Rango del período elegido → { meses:[{y,m}], ini:Date, fin:Date, txt, sa:(año servicio|null) }
+function _asistRango() {
+  const hoy = new Date(), P = String(asistPeriodo);
+  const MNm = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  let meses = [], txt, sa = null;
+  const ultimos = k => { for(let i = k-1; i >= 0; i--) { const d = new Date(hoy.getFullYear(), hoy.getMonth()-i, 1); meses.push({ y:d.getFullYear(), m:d.getMonth() }); } };
+  if(P === 'mes') { ultimos(1); txt = 'este mes (' + MNm[hoy.getMonth()] + ')'; }
+  else if(P === '3m') { ultimos(3); txt = 'los últimos 3 meses'; }
+  else if(P === '6m') { ultimos(6); txt = 'los últimos 6 meses'; }
+  else if(P.slice(0,2) === 'm:') {
+    const [y,m] = P.slice(2).split('-').map(Number); meses.push({ y, m:m-1 }); txt = MNm[m-1] + ' de ' + y;
+  }
+  else if(P === '12m' || isNaN(parseInt(P))) { ultimos(12); txt = 'los últimos 12 meses'; }
+  else {
+    sa = parseInt(P);
+    for(let k = 0; k < 12; k++) { const m = (8 + k) % 12; meses.push({ y: m >= 8 ? sa : sa + 1, m }); }
+    txt = 'el año de servicio ' + (sa+1);
+  }
+  const f = meses[0], l = meses[meses.length-1];
+  return { meses, ini: new Date(f.y, f.m, 1), fin: new Date(l.y, l.m+1, 1), txt, sa };
+}
+
+// Reuniones del período elegido (opcionalmente de un solo tipo)
+// La Conmemoración (asistencia muy alta, no representa una reunión normal) se reporta aparte y NO entra en promedios ni en el S-88.
+function _memIds() {
+  const ids = new Set(), grupos = {};
+  const tot = r => (parseInt(r.presencial)||0) + (parseInt(r.zoom)||0);
+  (state.asistencia||[]).forEach(r => {
+    const d = new Date((r.fecha||'')+'T00:00:00'); if(isNaN(d)) return;
+    const a = d.getMonth() >= 8 ? d.getFullYear() : d.getFullYear()-1;
+    (grupos[a+'|'+r.tipo] = grupos[a+'|'+r.tipo] || []).push(r);
+  });
+  Object.values(grupos).forEach(arr => {
+    const t = arr.map(tot).sort((x,y)=>x-y), med = t.length ? t[Math.floor(t.length/2)] : 0;
+    arr.forEach(r => {
+      const txt = ((r.tema||'') + ' ' + (r.notas||'')).toLowerCase();
+      const mes = parseInt((r.fecha||'').split('-')[1]);
+      if(/conmemora|memorial/.test(txt) || ((mes === 3 || mes === 4) && arr.length >= 4 && med > 0 && tot(r) > 1.7*med)) ids.add(r.id);
+    });
+  });
+  return ids;
+}
+function _asistPeriodoLista(tipo, incluirMem) {
+  const mem = incluirMem ? new Set() : _memIds();
+  const lista = (state.asistencia||[]).filter(r => !mem.has(r.id) && (!tipo || tipo === 'todos' || r.tipo === tipo));
+  const R = _asistRango();
+  return lista.filter(r => { const d = new Date((r.fecha||'')+'T00:00:00'); return !isNaN(d) && d >= R.ini && d < R.fin; });
+}
+function _asistPeriodoTxt() { return _asistRango().txt; }
+function _fechaCorta(f) {
+  const M = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+  const [y,m,d] = (f||'').split('-'); return d ? `${parseInt(d)} ${M[parseInt(m)-1]} ${y.slice(2)}` : '';
+}
+// Tendencia: promedio por reunión de los últimos k meses con datos vs los k anteriores
+function _deltaMensual(lista) {
+  const porMes = {};
+  lista.forEach(r => { const k = (r.fecha||'').slice(0,7); if(!k) return;
+    (porMes[k] = porMes[k] || { n:0, p:0, z:0 }); porMes[k].n++; porMes[k].p += parseInt(r.presencial)||0; porMes[k].z += parseInt(r.zoom)||0; });
+  const ms = Object.keys(porMes).sort().map(k => ({ p: porMes[k].p/porMes[k].n, z: porMes[k].z/porMes[k].n }));
+  if(ms.length < 4) return null;
+  const k = Math.min(3, Math.floor(ms.length/2));
+  const avg = (arr, f) => arr.reduce((s,x)=>s+f(x),0)/arr.length;
+  const rec = ms.slice(-k), prev = ms.slice(-2*k, -k);
+  const pr = avg(rec,x=>x.p), zr = avg(rec,x=>x.z), pp = avg(prev,x=>x.p), zp = avg(prev,x=>x.z);
+  const pctR = (pr+zr) ? zr/(pr+zr)*100 : 0, pctP = (pp+zp) ? zp/(pp+zp)*100 : 0;
+  return { k, dP: pr-pp, dZ: zr-zp, dPct: pctR-pctP };
+}
+
+function _s88Datos(anio, tipo) {
   // 12 meses Sep..Ago → { n, total, prom }
   const meses = Array.from({length:12}, () => ({ n:0, total:0 }));
+  const _mem = _memIds();
   (state.asistencia||[]).forEach(r => {
-    if(r.tipo !== tipo || !fechaEnAnioServicio(r.fecha, anio)) return;
+    if(_mem.has(r.id) || r.tipo !== tipo || !fechaEnAnioServicio(r.fecha, anio)) return;
     const m = parseInt((r.fecha||'').split('-')[1]) - 1; // 0..11 calendario
     if(isNaN(m)) return;
     const idx = (m + 4) % 12; // Sep→0 … Ago→11
@@ -5191,14 +5728,21 @@ function _s3Datos(anio, tipo) {
   return { meses, promMensual: tn ? Math.floor(tt / tn) : null };
 }
 
-function imprimirS3Asistencia() {
+function imprimirS88Asistencia() {
   const sel = document.getElementById('asistS3Anio');
-  const anio = parseInt(sel && sel.value) || anioHoy();
+  let anio = (sel && /^\d{4}$/.test(sel.value)) ? parseInt(sel.value) : NaN; // OJO: parseInt('12m') daría 12
+  if(isNaN(anio)) { // "Últimos 12 meses": año anterior a la izquierda y el más reciente a la derecha
+    const ult = (state.asistencia||[]).map(r => r.fecha).filter(Boolean).sort().pop();
+    const d = ult ? new Date(ult+'T00:00:00') : new Date();
+    const aUlt = d.getMonth() >= 8 ? d.getFullYear() : d.getFullYear()-1;
+    const hayAnt = (state.asistencia||[]).some(r => fechaEnAnioServicio(r.fecha, aUlt-1));
+    anio = hayAnt ? aUlt-1 : aUlt;
+  }
   if(!(state.asistencia||[]).length) { toast('No hay datos de asistencia'); return; }
   const NOMBRES = ['Septiembre','Octubre','Noviembre','Diciembre','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto'];
 
   const bloque = (tipo, titulo) => {
-    const A = _s3Datos(anio, tipo), B = _s3Datos(anio+1, tipo);
+    const A = _s88Datos(anio, tipo), B = _s88Datos(anio+1, tipo);
     const cel = v => (v === null || v === 0 && false) ? '' : v;
     const lado = (D, rotulo) => `
       <th>Año de servicio<br><span class="yr">${rotulo}</span></th>
@@ -5210,7 +5754,7 @@ function imprimirS3Asistencia() {
         <td class="mes bl">${nm}</td><td class="c">${b.n||''}</td><td class="c">${b.n?b.total:''}</td><td class="c">${b.prom===null?'':b.prom}</td></tr>`;
     }).join('');
     return `<h2>${titulo}</h2>
-    <table class="s3">
+    <table class="s88">
       <thead><tr>${lado(A, anio+1)}${lado(B, anio+2).replace('<th>','<th class="bl">')}</tr></thead>
       <tbody>${filas}
         <tr class="tot"><td colspan="3" class="r">Promedio de asistencia mensual</td><td class="c">${A.promMensual===null?'':A.promMensual}</td>
@@ -5219,20 +5763,20 @@ function imprimirS3Asistencia() {
   };
 
   const html = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">
-<title>S-3 Registro de asistencia ${anio+1}</title>
+<title>S-88 Registro de asistencia ${anio+1}</title>
 <style>
   @page { size: letter portrait; margin: 10mm; }
   * { box-sizing:border-box; }
   body { font-family: Georgia,'Times New Roman',serif; color:#000; margin:0; padding:8mm; }
   h1 { font-size:14pt; text-align:center; text-transform:uppercase; letter-spacing:.5px; margin:0 0 5mm; }
   h2 { font-size:11.5pt; margin:5mm 0 2mm 2mm; }
-  table.s3 { width:100%; border-collapse:collapse; border:2px solid #000; table-layout:fixed; }
-  .s3 th { border:1px solid #000; font-size:7.5pt; padding:1.2mm; text-align:center; vertical-align:middle; line-height:1.15; }
-  .s3 th .yr { font-weight:normal; font-size:10pt; }
-  .s3 td { border:1px solid #000; height:6.3mm; padding:0 1.5mm; font-size:9pt; }
-  .s3 .mes { width:15%; } .s3 .c { text-align:center; } .s3 .r { text-align:right; font-weight:bold; padding-right:3mm; }
-  .s3 .bl { border-left:2px solid #000; }
-  .s3 .tot td { height:7mm; font-weight:bold; border-top:2px solid #000; }
+  table.s88 { width:100%; border-collapse:collapse; border:2px solid #000; table-layout:fixed; }
+  .s88 th { border:1px solid #000; font-size:7.5pt; padding:1.2mm; text-align:center; vertical-align:middle; line-height:1.15; }
+  .s88 th .yr { font-weight:normal; font-size:10pt; }
+  .s88 td { border:1px solid #000; height:6.3mm; padding:0 1.5mm; font-size:9pt; }
+  .s88 .mes { width:15%; } .s88 .c { text-align:center; } .s88 .r { text-align:right; font-weight:bold; padding-right:3mm; }
+  .s88 .bl { border-left:2px solid #000; }
+  .s88 .tot td { height:7mm; font-weight:bold; border-top:2px solid #000; }
   .btn { text-align:center; margin-bottom:5mm; }
   .btn button { background:#3d5a9e; color:#fff; border:0; padding:8px 24px; border-radius:6px; font-size:13px; font-weight:700; cursor:pointer; }
   .cod { text-align:right; font-size:7.5pt; color:#555; margin-top:3mm; }
@@ -5242,7 +5786,7 @@ function imprimirS3Asistencia() {
 <h1>Registro de asistencia a las reuniones de congregación</h1>
 ${bloque('Entre semana','Reunión de entre semana')}
 ${bloque('Fin de semana','Reunión del fin de semana')}
-<div class="cod">S-3-S</div>
+<div class="cod">S-88-S</div>
 <script>window.addEventListener('load',function(){setTimeout(function(){window.print();},500);});<\/script>
 </body></html>`;
   const w = window.open('', '_blank', 'width=870,height=1000');
