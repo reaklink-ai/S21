@@ -53209,6 +53209,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1792075228687",
+      "fecha": "2026-10-13",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 156,
+      "zoom": 61,
+      "total": 217,
+      "notas": "Visita Superintendente de Circuito",
+      "_ts": 1792075228687
+    },
+    {
       "id": "r1791667085808",
       "fecha": "2026-10-10",
       "tipo": "Fin de semana",
@@ -53874,7 +53885,7 @@
       }
     }
   ],
-  "_lastModified": 1791853951146,
+  "_lastModified": 1792075230427,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57420,6 +57431,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1792075143046,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792074905101,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792074602266,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792072875918,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792072439228,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1791853948450,
       "user": "Administrador",
       "rol": "admin",
@@ -57433,6 +57484,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1791836206794,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -58969,54 +59028,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe Gamez, Diego · May 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828803188,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Abr 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828803181,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Abr 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828802460,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Mar 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828802455,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Mar 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828801777,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Feb 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828801771,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Feb 2025: cursos=4",
       "pubId": "p1791828537787"
     }
   ],
