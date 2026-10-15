@@ -108,11 +108,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792095740861
           },
           "Oct": {
             "particip": false,
@@ -14576,12 +14577,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788921981582
+            "_ts": 1792095765953
           },
           "Oct": {
             "particip": false,
@@ -22335,12 +22336,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788921983834
+            "_ts": 1792095768668
           },
           "Oct": {
             "particip": false,
@@ -22586,12 +22587,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788921985550
+            "_ts": 1792096528298
           },
           "Oct": {
             "particip": false,
@@ -22841,12 +22842,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788921994117
+            "_ts": 1792095858118
           },
           "Oct": {
             "particip": false,
@@ -23886,12 +23887,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1788921998511
+            "_ts": 1792095859077
           },
           "Oct": {
             "particip": false,
@@ -31554,12 +31555,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1788922004793
+            "horas": "8",
+            "notas": "55 horas betel ",
+            "_ts": 1792095945799
           },
           "Oct": {
             "particip": false,
@@ -32389,25 +32390,28 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "55 horas betel",
+            "_ts": 1792095965047
           },
           "Oct": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792095968352
           },
           "Nov": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792095966009
           },
           "Dic": {
             "particip": false,
@@ -34982,11 +34986,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "34",
+            "notas": "Problemas de salud ",
+            "_ts": 1792096105256
           },
           "Oct": {
             "particip": false,
@@ -35000,7 +35005,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792096111024
           },
           "Dic": {
             "particip": false,
@@ -38429,11 +38435,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792096112250
           },
           "Oct": {
             "particip": false,
@@ -38945,11 +38952,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792096115098
           },
           "Oct": {
             "particip": false,
@@ -48239,11 +48247,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792095747519
           },
           "Oct": {
             "particip": false,
@@ -53885,7 +53894,7 @@
       }
     }
   ],
-  "_lastModified": 1792075230427,
+  "_lastModified": 1792096698100,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57431,6 +57440,230 @@
   ],
   "auditoria": [
     {
+      "ts": 1792096528298,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792096528283,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792096094499,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1792096093559,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1792096093391,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1792096083196,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Sep 2026: horas=34",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1792096083183,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Sep 2026: horas=34",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1792095968352,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Oct 2026: cursos=",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095966009,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Nov 2026: horas=",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095965047,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095965034,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: horas=20",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095954550,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: horas=18",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095954534,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: horas=18",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095934307,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2026: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1792095934293,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2026: horas=8",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1792095928476,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095925055,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: cursos=3",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095924711,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095924503,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1792095864144,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1792095862101,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1792095858119,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1792095856663,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1792095854168,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=0",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792095853409,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=0",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792095850635,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792095849094,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Roger · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4q76n8"
+    },
+    {
+      "ts": 1792095694796,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792075143046,
       "user": "Administrador",
       "rol": "admin",
@@ -58805,230 +59038,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=1",
       "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828939742,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jul 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828939730,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jul 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828937824,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jun 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828937813,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jun 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828937122,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · May 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828937113,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · May 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828936540,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Abr 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828936530,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Abr 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828935993,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Mar 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828935981,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Mar 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828934913,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828929349,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828929338,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Dic 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828927648,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Nov 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828927639,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Nov 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828927055,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Oct 2025: cursos=3",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828927046,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Oct 2025: cursos=3",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828926463,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2025: cursos=3",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828926448,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2025: cursos=3",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828899176,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Zuleta, Jhonatan · Sin grupo",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828806306,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Ago 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828806297,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Ago 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828805321,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Jul 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828805314,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Jul 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828804489,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Jun 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828804480,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Jun 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828803830,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · May 2025: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1791828803822,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · May 2025: cursos=4",
-      "pubId": "p1791828537787"
     }
   ],
   "formHistorial": [
