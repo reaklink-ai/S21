@@ -7753,11 +7753,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "19",
+            "notas": "",
+            "_ts": 1792162707188
           },
           "Oct": {
             "particip": false,
@@ -53904,7 +53905,7 @@
       }
     }
   ],
-  "_lastModified": 1792162676670,
+  "_lastModified": 1792162708579,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57450,6 +57451,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792162707188,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Sep 2026: horas=19",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1792162707172,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Sep 2026: horas=19",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1792162704268,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
+      "ts": 1792162704249,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Alfonso · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4l1oio"
+    },
+    {
       "ts": 1792162675288,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -59015,38 +59048,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829053811,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829051255,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Abr 2025: horas=50",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829051245,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Abr 2025: horas=50",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829049372,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Mar 2025: horas=50",
       "pubId": "p1791828899175"
     }
   ],
