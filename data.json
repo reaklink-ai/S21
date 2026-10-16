@@ -15151,11 +15151,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "",
+            "_ts": 1792162539208
           },
           "Oct": {
             "particip": false,
@@ -53898,7 +53899,7 @@
       }
     }
   ],
-  "_lastModified": 1792162501022,
+  "_lastModified": 1792162540660,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57444,6 +57445,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792162539208,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Sep 2026: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1792162539188,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Sep 2026: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
       "ts": 1792162421400,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -59025,22 +59042,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Oct 2025: horas=",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828955429,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=30",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828955415,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=30",
       "pubId": "p1791828899175"
     }
   ],
