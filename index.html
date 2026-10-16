@@ -7506,53 +7506,79 @@ ${tablasHTML}
 // ══════════════════════════════════════════
 // HELPERS DASHBOARD
 // ══════════════════════════════════════════
+// IRREGULARES (definición oficial): faltó a informar 1 o más de los últimos 6 meses, pero participó al menos uno.
+// Quien no participó NINGÚN mes de los 6 se separa como "sin informar 6 meses" (posible inactivo).
+// Ventana: los 6 meses ANTERIORES al mes a reportar/actual (ese mes no cuenta). Se omiten nuevos publicadores, los meses
+// de/antes de una nota "reactivad..."/"readmitid..." y meses sin registro. No modifica ningún registro.
+function _irregDatos() {
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const pubs = state.publicadores.filter(p =>
+    !_mudIds.has(p.id) && !_inacIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true)
+  );
+  // El mes a reportar (mesActual) NO cuenta: aún está en curso / pendiente de enviar. La ventana son los 6 meses ANTERIORES.
+  const ma = mesActual();
+  const ventana = [];
+  for(let i = 6; i >= 1; i--) {
+    let idx = ma.idx - i, a = ma.anio;
+    if(idx < 0) { idx += 12; a--; }
+    ventana.push({ m: MESES_C[idx], a });
+  }
+  const NUEVO = /nuevo publicador|nueva publicadora|no bautizad/i;
+  const REACT = /reactiv|readmit/i; // "reactivado", "se reactiva en la congregación", "readmitido"...
+  const irregulares = [], sinPart = [];
+  pubs.forEach(p => {
+    const regs = p.registros || {};
+    const get = ({m,a}) => (regs[a] || regs[String(a)] || {})[m];
+    // Nuevo publicador: exento por completo (igual que en los informes).
+    const anios = [...new Set(ventana.map(v => v.a))];
+    if(anios.some(a => MESES_C.some(m => NUEVO.test(((regs[a]||regs[String(a)]||{})[m]?.notas)||'')))) return;
+    // Reactivado/readmitido: no cuenta el mes de la nota ni los anteriores (solo los meses posteriores).
+    let desde = 0;
+    ventana.forEach((v,i) => { const r = get(v); if(r && REACT.test(r.notas||'')) desde = i + 1; });
+    const meses = ventana.slice(desde).filter(v => get(v) !== undefined);
+    if(meses.length < 1) return;
+    const ausentes = meses.filter(v => !get(v).particip);
+    if(!ausentes.length) return;
+    const item = { p, ausentes, total: meses.length, get };
+    if(ausentes.length === meses.length) sinPart.push(item); else irregulares.push(item);
+  });
+  const orden = (x,y) => y.ausentes.length - x.ausentes.length || x.p.apellido.localeCompare(y.p.apellido,'es');
+  irregulares.sort(orden); sinPart.sort(orden);
+  return { irregulares, sinPart, ventana };
+}
+
 function _renderDashNoInf() {
   const col = document.getElementById('dash-noInf-col');
   if(!col) return;
-  const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
-  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
-  const pubs = state.publicadores.filter(p =>
-    !_mudIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true)
-  );
-  const ma = mesActual();
-  const ultimos3 = Array.from({length:3},(_,i)=>{
-    const idx = ((ma.idx-i)+12)%12;
-    const a = idx<=ma.idx ? ma.anio : ma.anio-1;
-    return { m: MESES_C[idx], a };
-  });
-  const encontrados = pubs.filter(p =>
-    ultimos3.some(({m,a}) => { const r=p.registros?.[a]?.[m]; return r?.notas && PATRON.test(r.notas); })
-  );
-  const n = encontrados.length;
+  const { irregulares, sinPart } = _irregDatos();
+  const n = irregulares.length;
+  const extra = sinPart.length ? `<div style="font-size:9px;color:#fcd34d;margin-top:4px">+ ${sinPart.length} sin informar en 6 meses</div>` : '';
 
-  if(n===0) {
-    col.innerHTML = `<div style="padding:20px 22px;display:flex;flex-direction:column;justify-content:center;height:100%">
-      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:6px">Irregularidades</div>
+  if(n === 0) {
+    col.innerHTML = `<div style="padding:20px 22px;display:flex;flex-direction:column;justify-content:center;height:100%;cursor:pointer" onclick="abrirModalNoInformaron()">
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:6px">Irregulares</div>
       <div style="font-family:'Sora',var(--font);font-size:38px;font-weight:800;color:#86efac;line-height:1">0</div>
-      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:3px">sin irregularidades</div>
+      <div style="font-size:10px;color:rgba(255,255,255,.4);margin-top:3px">últimos 6 meses · ninguno</div>${extra}
     </div>`;
     return;
   }
 
-  const lista = encontrados.slice(0,4).map(({apellido,nombre,registros,id})=>{
-    let ultimoMes = '';
-    ultimos3.forEach(({m,a})=>{ const r=registros?.[a]?.[m]; if(r?.notas&&PATRON.test(r.notas)&&!ultimoMes) ultimoMes=m; });
-    return `<div onclick="selPubYAbrir('${id}')"
+  const lista = irregulares.slice(0,4).map(({p,ausentes}) => `<div onclick="selPubYAbrir('${p.id}')"
       style="display:flex;align-items:center;gap:8px;padding:5px 10px;cursor:pointer;border-radius:6px;transition:background .12s"
       onmouseover="this.style.background='rgba(255,255,255,.08)'" onmouseout="this.style.background=''">
-      <span style="font-size:11px;color:rgba(255,255,255,.75);font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(apellido)}, ${escHtml(nombre.split(' ')[0])}</span>
-      <span style="font-size:9px;background:rgba(239,68,68,.25);color:#fca5a5;padding:1px 6px;border-radius:10px;white-space:nowrap">${ultimoMes}</span>
-    </div>`;
-  }).join('');
-
+      <span style="font-size:11px;color:rgba(255,255,255,.75);font-weight:600;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${escHtml(p.apellido)}, ${escHtml((p.nombre||'').split(' ')[0])}</span>
+      <span style="font-size:9px;background:rgba(239,68,68,.25);color:#fca5a5;padding:1px 6px;border-radius:10px;white-space:nowrap">${ausentes.length} ${ausentes.length>1?'meses':'mes'}</span>
+    </div>`).join('');
   const masLabel = n>4 ? `<div style="font-size:9px;color:rgba(255,255,255,.35);padding:4px 10px;cursor:pointer" onclick="abrirModalNoInformaron()">+${n-4} más → ver todos</div>` : '';
 
   col.innerHTML = `
     <div style="padding:14px 16px 8px;cursor:pointer" onclick="abrirModalNoInformaron()">
-      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:4px">Sin informar (notas)</div>
+      <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(255,255,255,.4);margin-bottom:4px">Irregulares</div>
       <div style="font-family:'Sora',var(--font);font-size:34px;font-weight:800;color:#fca5a5;line-height:1;letter-spacing:-1.5px">${n}</div>
-      <div style="font-size:9.5px;color:rgba(255,255,255,.35);margin-top:2px;margin-bottom:8px">últimos 3 meses · clic para ver</div>
+      <div style="font-size:9.5px;color:rgba(255,255,255,.35);margin-top:2px">últimos 6 meses · clic para ver</div>${extra}
+      <div style="margin-bottom:8px"></div>
     </div>
     <div style="flex:1;overflow-y:auto;padding:0 6px 10px">${lista}${masLabel}</div>`;
 }
@@ -7562,62 +7588,99 @@ function selPubYAbrir(id) {
   setTimeout(() => selPub(id), 150);
 }
 
+// PDF (ventana de impresión) del listado de irregulares, con el mismo criterio del cuadro del inicio
+function descargarIrregularesPDF() {
+  const { irregulares, sinPart, ventana } = _irregDatos();
+  const MES = {Sep:'Septiembre',Oct:'Octubre',Nov:'Noviembre',Dic:'Diciembre',Ene:'Enero',Feb:'Febrero',Mar:'Marzo',Abr:'Abril',May:'Mayo',Jun:'Junio',Jul:'Julio',Ago:'Agosto'};
+  const cal = v => v.a + (['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'].includes(v.m) ? 1 : 0); // año calendario del mes
+  const rango = `${MES[ventana[0].m]} ${cal(ventana[0])} – ${MES[ventana[ventana.length-1].m]} ${cal(ventana[ventana.length-1])}`;
+  const hoy = new Date().toLocaleDateString('es-CO', {year:'numeric',month:'long',day:'numeric'});
+  const grupoTxt = (can('soloGrupo') && currentUser?.grupo) ? ' · ' + currentUser.grupo : '';
+  const filas = arr => arr.map(({p, ausentes, total, get}) => {
+    const celdas = ventana.map(v => {
+      const r = get(v);
+      if(r === undefined) return '<td class="c na">—</td>';
+      return r.particip ? '<td class="c ok">✓</td>' : '<td class="c no">✗</td>';
+    }).join('');
+    const notas = ventana.map(v => { const r = get(v); return (r && !r.particip && (r.notas||'').trim()) ? `${v.m}: ${escHtml(r.notas.trim().slice(0,40))}` : ''; }).filter(Boolean);
+    const nn = [...new Set(notas.map(x => x.split(': ').slice(1).join(': ')))];
+    const notaTxt = nn.length === 1 && notas.length > 1 ? nn[0] : notas.join(' · ');
+    return `<tr><td>${escHtml(p.apellido)}, ${escHtml(p.nombre)}</td><td>${escHtml(p.grupo||'Sin grupo')}</td>${celdas}<td class="c b">${ausentes.length} de ${total}</td><td class="nt">${notaTxt}</td></tr>`;
+  }).join('');
+  const cab = ventana.map(v => `<th class="c">${v.m}<br><span>${String(cal(v)).slice(2)}</span></th>`).join('');
+  const tabla = (tit, sub, arr) => arr.length ? `<h2>${tit} <span class="n">(${arr.length})</span></h2><div class="sub2">${sub}</div>
+    <table><thead><tr><th>Publicador</th><th>Grupo</th>${cab}<th class="c">Sin informar</th><th>Notas</th></tr></thead><tbody>${filas(arr)}</tbody></table>` : '';
+  const cuerpo = tabla('Irregulares', 'Faltaron a informar 1 o más meses del período, pero participaron alguna vez', irregulares)
+    + tabla('Sin informar en el período', 'No participaron ningún mes del período: posibles inactivos', sinPart);
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Publicadores irregulares</title>
+  <style>
+    @page { size: landscape; margin: 12mm }
+    body { font-family:'Segoe UI',Arial,sans-serif; color:#1a1814; margin:0; font-size:11px }
+    h1 { font-size:18px; margin:0 0 2px } h2 { font-size:13px; margin:18px 0 2px } h2 .n { color:#78716c; font-weight:600 }
+    .sub { color:#57534e; font-size:10.5px; margin-bottom:6px; line-height:1.5 } .sub2 { color:#78716c; font-size:10px; margin-bottom:6px }
+    table { width:100%; border-collapse:collapse } th,td { border:1px solid #d6d3d1; padding:4px 6px; text-align:left }
+    th { background:#f1f5f9; font-size:10px } th span { font-weight:500; color:#78716c }
+    .c { text-align:center } .ok { color:#15803d; background:#f0fdf4; font-weight:700 } .no { color:#b91c1c; background:#fef2f2; font-weight:700 }
+    .na { color:#a8a29e; background:#f8fafc } .b { font-weight:700 } .nt { font-size:9.5px; color:#57534e }
+    tr { page-break-inside:avoid } .vacio { padding:30px; text-align:center; color:#57534e }
+    .nota { margin-top:14px; font-size:9.5px; color:#78716c; line-height:1.5 }
+  </style></head><body>
+  <h1>Publicadores irregulares${grupoTxt}</h1>
+  <div class="sub">Período: ${rango} (6 meses anteriores al mes que se reporta) · Generado el ${hoy}</div>
+  ${cuerpo || '<div class="vacio">Nadie con meses sin informar en el período.</div>'}
+  <div class="nota">✓ informó · ✗ no informó · — sin registro. Irregular: no informó 1 o más meses del período pero participó alguna vez. No se cuentan el mes en curso, los nuevos publicadores ni los meses hasta la reactivación de quien se reactivó.</div>
+  </body></html>`;
+  const w = window.open('', '_blank');
+  if(!w) { toast('⚠ Activa las ventanas emergentes'); return; }
+  w.document.write(html); w.document.close();
+  setTimeout(() => w.print(), 300);
+}
+
 function abrirModalNoInformaron() {
-  const PATRON = /no\s*inform|no\s*predic|no\s*particip|enferm|viaj|trabajo|vacac/i;
-  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
-  const pubs = state.publicadores.filter(p =>
-    !_mudIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true)
-  );
-  const ma = mesActual();
-  const ultimos3 = Array.from({length:3},(_,i)=>{
-    const idx = ((ma.idx-i)+12)%12;
-    const a = idx<=ma.idx ? ma.anio : ma.anio-1;
-    return { m: MESES_C[idx], a };
-  });
-
-  const encontrados = pubs.filter(p =>
-    ultimos3.some(({m,a}) => {
-      const r = p.registros?.[a]?.[m];
-      return r?.notas && PATRON.test(r.notas);
-    })
-  );
-
-  const filas = encontrados.sort((a,b)=>a.apellido.localeCompare(b.apellido,'es')).map(p => {
-    const notas = ultimos3.map(({m,a})=>{
-      const r = p.registros?.[a]?.[m];
-      return r?.notas && PATRON.test(r.notas) ? `<span style="background:#fef2f2;color:#b91c1c;font-size:10px;padding:1px 7px;border-radius:10px;margin-left:4px">${m}: ${escHtml(r.notas.slice(0,20))}</span>` : '';
-    }).filter(Boolean).join('');
-    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border-2);cursor:pointer;transition:background .1s"
+  const { irregulares, sinPart, ventana } = _irregDatos();
+  const fila = ({p, ausentes, total, get}) => {
+    const chips = ventana.map(v => {
+      const r = get(v);
+      if(r === undefined) return '';
+      const ok = !!r.particip;
+      return `<span title="${escHtml((r.notas||'').slice(0,60))}" style="background:${ok?'#f0fdf4':'#fef2f2'};color:${ok?'#15803d':'#b91c1c'};font-size:10px;padding:1px 7px;border-radius:10px;margin:2px 3px 0 0;display:inline-block">${v.m}${ok?' ✓':' ✗'}</span>`;
+    }).join('');
+    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border-2);cursor:pointer"
       onclick="document.getElementById('modalNoInfOverlay').style.display='none';selPubYAbrir('${p.id}')"
       onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
       <div style="flex:1">
-        <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)}</div>
-        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">${p.grupo||'Sin grupo'} ${notas}</div>
+        <div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(p.apellido)}, ${escHtml(p.nombre)} <span style="font-size:11px;font-weight:500;color:var(--ink-3)">· ${ausentes.length} de ${total} meses sin informar</span></div>
+        <div style="font-size:11px;color:var(--ink-3);margin-top:2px">${escHtml(p.grupo||'Sin grupo')}</div>
+        <div>${chips}</div>
       </div>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--ink-3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </div>`;
-  }).join('');
+  };
+  const sec = (tit, sub, arr) => arr.length ? `<div style="padding:10px 16px 6px;background:var(--surface-2);border-bottom:1px solid var(--border-2)"><div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--ink)">${tit} (${arr.length})</div><div style="font-size:10.5px;color:var(--ink-3);margin-top:1px">${sub}</div></div>` + arr.map(fila).join('') : '';
 
-  // Crear overlay si no existe
   let ov = document.getElementById('modalNoInfOverlay');
   if(!ov) {
     ov = document.createElement('div');
     ov.id = 'modalNoInfOverlay';
     ov.className = 'overlay';
-    ov.innerHTML = `<div class="modal" style="max-width:500px">
+    ov.innerHTML = `<div class="modal" style="max-width:560px">
       <div class="modal-hd">
-        <span class="modal-hd-title" style="color:var(--red)">Sin informar — últimos 3 meses</span>
+        <span class="modal-hd-title" style="color:var(--red)">Publicadores irregulares — últimos 6 meses</span>
         <button class="modal-x" onclick="document.getElementById('modalNoInfOverlay').style.display='none'">×</button>
       </div>
-      <div class="modal-body" style="padding:0;max-height:480px;overflow-y:auto" id="modalNoInfBody"></div>
+      <div class="modal-body" style="padding:0;max-height:520px;overflow-y:auto" id="modalNoInfBody"></div>
       <div class="modal-ft">
         <button class="btn-cancel" onclick="document.getElementById('modalNoInfOverlay').style.display='none'">Cerrar</button>
+        <button class="btn btn-primary" onclick="descargarIrregularesPDF()">🖨 Descargar PDF</button>
       </div>
     </div>`;
     document.body.appendChild(ov);
   }
-  document.getElementById('modalNoInfBody').innerHTML = filas || '<div style="padding:24px;text-align:center;color:var(--ink-3)">Ningún publicador tiene notas de irregularidades</div>';
+  const rango = ventana[0].m + ' – ' + ventana[ventana.length-1].m;
+  document.getElementById('modalNoInfBody').innerHTML =
+    sec('Irregulares', `Faltaron a informar 1 o más meses de ${rango}, pero participaron alguna vez`, irregulares)
+    + sec('Sin informar en 6 meses', 'No participaron ningún mes de la ventana: posibles inactivos', sinPart)
+    || '<div style="padding:24px;text-align:center;color:var(--ink-3)">Nadie con meses sin informar en los últimos 6 meses</div>';
   ov.style.display = 'flex';
 }
 
@@ -9065,7 +9128,7 @@ function generarInformeGrupo(modo) {
       const esReadmitido = MESES_K.some(m => {
         const reg = (p.registros||{})[anio]?.[m];
         const n = (reg?.notas||'').toLowerCase();
-        return n.includes('readmitido') || n.includes('readmitida');
+        return n.includes('readmit') || n.includes('reactiv');
       });
       if(esReadmitido) {
         alertas.push({tipo:'readmitido',msg:'Readmitido',nivel:'positivo',color:'#16a34a'});
@@ -9268,7 +9331,7 @@ function generarInformeGrupo(modo) {
       if(idx !== -1) return;
       const reg = (p.registros||{})[anio]?.[mk] || (p.registros||{})[String(anio)]?.[mk];
       const n = (reg?.notas||'').toLowerCase();
-      if(n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad') || n.includes('readmitid')) {
+      if(n.includes('nuevo publicador') || n.includes('nueva publicadora') || n.includes('no bautizad') || n.includes('readmit') || n.includes('reactiv')) {
         idx = i;
       }
     });
@@ -9282,12 +9345,13 @@ function generarInformeGrupo(modo) {
     return MESES_K.indexOf(m.mesKey) >= inicio;
   }
 
-  // Irregulares: cualquier publicador con al menos 1 ausencia en el período,
+  // Irregulares: al menos 1 ausencia pero con alguna participación en el período (sin participación alguna = inactivo),
   // contando solo los meses en que ya era publicador
   const irregularesPer = pubs.filter(p => {
     const mesesValidosP = periodoMeses.filter(m => mesEsValidoParaPublicador(p, m));
     const aus = mesesValidosP.filter(m=>!getReg(p,m.anio,m.mesKey).particip).length;
-    return mesesValidosP.length>0 && aus > 0;
+    // Irregular = faltó 1+ mes pero SÍ participó alguna vez; quien no participó ningún mes es inactivo (igual que en la tabla)
+    return mesesValidosP.length>0 && aus > 0 && aus < mesesValidosP.length;
   });
 
   // Mejor y peor mes
@@ -9301,7 +9365,7 @@ function generarInformeGrupo(modo) {
   }
   if(totalCursosPer>0) fuertesPer.push(`${totalCursosPer} cursos bíblicos en el período`);
   else debilesPer.push(`Sin cursos bíblicos reportados en el período`);
-  if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicadores ausentes más del 50% del período`);
+  if(irregularesPer.length>0) debilesPer.push(`${irregularesPer.length} publicador${irregularesPer.length>1?'es irregulares':' irregular'} (faltó al menos un mes del período)`);
   // Nuevos publicadores (no bautizados) y bautizados del grupo este año de servicio
   const { noBautizados: nuevosPubPer, bautizados: bautizadosPer } = clasificarNuevosYBautizados(pubs, anio);
   const nuevosOBautizadosPer = [...nuevosPubPer, ...bautizadosPer];
@@ -12402,9 +12466,18 @@ const PREC_LIMITE_BETEL = 55; // horas máx acreditables al combinar predicació
 let _precAnioActivo = null;
 
 function precCambiarAnio(delta) {
-  if(_precAnioActivo === null) _precAnioActivo = anioHoy();
+  if(_precAnioActivo === null) _precAnioActivo = mesActual().anio;
   _precAnioActivo += delta;
   renderPrecursores();
+}
+
+// Último mes (índice MESES_C) ya "vencido" para reportar, según la regla del día 20.
+// Entre el 1 y el 19 de septiembre mesActual() es agosto del año de servicio ANTERIOR:
+// el año nuevo aún no tiene ningún mes vencido (-1), no "todos" (11).
+function _precCorteIdx(anio) {
+  const ma = mesActual();
+  if(anio === ma.anio) return ma.idx;
+  return anio < ma.anio ? 11 : -1;
 }
 
 function precGetDatos(pub, anio) {
@@ -12497,7 +12570,7 @@ function precGetDatos(pub, anio) {
   // Si "anio" es un año de servicio anterior (ya cerrado), no debe truncarse al mes
   // calendario actual — el año completo ya transcurrió. Solo el año de servicio en
   // curso usa el mes real de hoy como corte.
-  const mesActualIdx = (anio === anioHoy()) ? mesActual().idx : 11;
+  const mesActualIdx = _precCorteIdx(anio);
   const mesesPasados   = meses.filter(m => m.idx <= mesActualIdx && m.idx >= mesInicioPrec);
   const mesesRestantes = meses.filter(m => m.idx >  mesActualIdx).length;
 
@@ -12640,9 +12713,9 @@ function precAbrirRegistro(pubId) {
 function renderPrecursores() {
   const root = document.getElementById('precursores-root');
   if(!root) return;
-  if(_precAnioActivo === null) _precAnioActivo = anioHoy();
+  if(_precAnioActivo === null) _precAnioActivo = mesActual().anio;
   const anio = _precAnioActivo;
-  const esAnioActual = anio === anioHoy();
+  const esAnioActual = anio === mesActual().anio;
 
   // Filtrar por grupo si es anciano o auxiliar
   const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
@@ -12709,10 +12782,10 @@ function renderPrecursores() {
       'Promedio anual combinado < 45h · incumplimiento habitual · requiere reunión con el superintendente',
       grupoMal.length, '#dc2626', '#fef2f2', '#ef4444', 'mal')}
     ${mkKpi('Bajo la meta',
-      'Promedio anual entre 45–50h · cerca de la meta pero sin cumplirla de forma consistente',
+      'Promedio por debajo de 50h, o necesita más de 50h/mes para llegar a las 560h · incluye los de riesgo anual',
       grupoAlerta.length, '#b45309', '#fffbeb', '#f59e0b', 'alerta')}
     ${mkKpi('Al día',
-      'Promedio anual ≥ 50h · cumpliendo la meta mensual y en buen camino hacia las 560h anuales',
+      'Promedio ≥ 50h y puede llegar a las 560h anuales con 50h/mes o menos',
       grupoBien.length, '#15803d', '#f0fdf4', '#22c55e', 'bien')}
   </div>`;
 
@@ -12813,7 +12886,7 @@ function renderPrecursores() {
     // Chips mes a mes
     html += '<div class="prec-meses">';
     d.meses.forEach((m,i) => {
-      const mesActualIdx = (d.anio === anioHoy()) ? mesActual().idx : 11;
+      const mesActualIdx = _precCorteIdx(d.anio);
       let clase = 'futuro', valor = '\u2014';
       if(d.esNuevoPrecReg && i < d.mesInicioPrec) {
         // Mes anterior a que empezara como precursor regular nuevo: no aplica la
@@ -12964,7 +13037,7 @@ function precChartHTML(d) {
   // 12 meses completos — mesActual().idx es el mes de HOY, que no tiene ningún
   // sentido aplicado a un año distinto al actual (antes ocultaba todo lo que no
   // fuera el mismo mes calendario de hoy en cualquier año que se estuviera viendo).
-  const mesActualIdx = (d.anio === anioHoy()) ? mesActual().idx : 11;
+  const mesActualIdx = _precCorteIdx(d.anio);
   // Si es nuevo precursor regular este año, no mostrar los meses previos a su inicio
   // como precursor (no aplicaba la meta de 50h en esos meses).
   const mesInicio = d.esNuevoPrecReg ? d.mesInicioPrec : 0;
