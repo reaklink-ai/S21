@@ -3862,11 +3862,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1792162793619
           },
           "Oct": {
             "particip": false,
@@ -53906,7 +53907,7 @@
       }
     }
   ],
-  "_lastModified": 1792162742890,
+  "_lastModified": 1792162795033,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57452,6 +57453,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792162793619,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Sep 2026: horas=15",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
+      "ts": 1792162793602,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Bejarano, Martha · Sep 2026: horas=15",
+      "pubId": "mmm9qi4kye7q"
+    },
+    {
       "ts": 1792162728541,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -59029,22 +59046,6 @@
     },
     {
       "ts": 1791829064145,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829061566,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829061551,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
