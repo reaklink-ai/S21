@@ -351,11 +351,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792162435997
           },
           "Oct": {
             "particip": false,
@@ -53894,7 +53895,7 @@
       }
     }
   ],
-  "_lastModified": 1792119700806,
+  "_lastModified": 1792162437920,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57440,6 +57441,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792162421400,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1792119363294,
       "user": "Administrador",
       "rol": "admin",
@@ -59029,14 +59038,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Sep 2025: horas=30",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828947172,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2025: horas=",
       "pubId": "p1791828899175"
     }
   ],
