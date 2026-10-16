@@ -8051,11 +8051,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "16",
+            "notas": "Betel 35",
+            "_ts": 1792162740998
           },
           "Oct": {
             "particip": false,
@@ -53905,7 +53906,7 @@
       }
     }
   ],
-  "_lastModified": 1792162708579,
+  "_lastModified": 1792162742890,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57451,6 +57452,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792162728541,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Sep 2026: horas=16",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1792162728526,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Sep 2026: horas=16",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
       "ts": 1792162707188,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -59032,22 +59049,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Jun 2025: horas=40",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829056816,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829053834,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · May 2025: horas=30",
       "pubId": "p1791828899175"
     }
   ],
