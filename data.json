@@ -18764,11 +18764,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792162487931
           },
           "Oct": {
             "particip": false,
@@ -53896,7 +53897,7 @@
       }
     }
   ],
-  "_lastModified": 1792162479039,
+  "_lastModified": 1792162489078,
   "vym": {
     "semanas": {},
     "historial": [
