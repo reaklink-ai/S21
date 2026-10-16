@@ -19484,7 +19484,7 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1781836312984
+            "_ts": 1792119696941
           },
           "Abr": {
             "particip": true,
@@ -19505,8 +19505,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "NO INFORMA",
-            "_ts": 1786893388467
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1792119698745
           },
           "Jul": {
             "particip": true,
@@ -19514,7 +19514,7 @@
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1786893388731
+            "_ts": 1792119697467
           },
           "Ago": {
             "particip": true,
@@ -53894,7 +53894,7 @@
       }
     }
   ],
-  "_lastModified": 1792096698100,
+  "_lastModified": 1792119700806,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57440,6 +57440,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792119363294,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792096528298,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -57664,6 +57672,14 @@
       "pubId": null
     },
     {
+      "ts": 1792079212373,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792075143046,
       "user": "Administrador",
       "rol": "admin",
@@ -57697,6 +57713,22 @@
     },
     {
       "ts": 1792072439228,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792069688453,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1791991862824,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
@@ -59005,38 +59037,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Sep 2025: horas=",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828945673,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=2",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828945663,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=2",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828941587,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=1",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791828941574,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: cursos=1",
       "pubId": "p1791828899175"
     }
   ],
