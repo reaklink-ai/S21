@@ -53236,6 +53236,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1792269972359",
+      "fecha": "2026-10-17",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 195,
+      "zoom": 45,
+      "total": 240,
+      "notas": "",
+      "_ts": 1792269972359
+    },
+    {
       "id": "r1792075228687",
       "fecha": "2026-10-13",
       "tipo": "Entre semana",
@@ -53912,7 +53923,7 @@
       }
     }
   ],
-  "_lastModified": 1792205163246,
+  "_lastModified": 1792269974262,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57458,9 +57469,33 @@
   ],
   "auditoria": [
     {
+      "ts": 1792269930852,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1792205652578,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1792205151637,
       "user": "Jaime_P",
       "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1792204780210,
+      "user": "Administrador",
+      "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -57703,6 +57738,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792097974822,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -57986,11 +58029,35 @@
       "pubId": null
     },
     {
+      "ts": 1792034044530,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1791991862824,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1791939305771,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1791856014842,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     },
     {
@@ -59000,62 +59067,6 @@
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Oct 2025: cursos=4",
       "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829321752,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Sep 2025: cursos=4",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829321739,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Sep 2025: cursos=4",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829298292,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Zuleta, Brenda · Sin grupo",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829204619,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2026: horas=34",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829204610,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Sep 2026: horas=34",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829082711,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=35",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829082696,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=35",
-      "pubId": "p1791828899175"
     }
   ],
   "formHistorial": [
