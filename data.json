@@ -43707,11 +43707,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792205161199
           },
           "Oct": {
             "particip": false,
@@ -53911,7 +53912,7 @@
       }
     }
   ],
-  "_lastModified": 1792162874918,
+  "_lastModified": 1792205163246,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57457,6 +57458,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792205151637,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1792162873505,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -59046,14 +59055,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Jhonatan · Ago 2025: horas=35",
-      "pubId": "p1791828899175"
-    },
-    {
-      "ts": 1791829067064,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Ago 2025: horas=",
       "pubId": "p1791828899175"
     }
   ],
