@@ -22038,11 +22038,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792457009941
           },
           "Oct": {
             "particip": false,
@@ -22108,12 +22109,12 @@
             "notas": ""
           },
           "Jul": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1789000212582
+            "_ts": 1792457008992
           }
         }
       }
@@ -55538,7 +55539,7 @@
       }
     }
   ],
-  "_lastModified": 1792456999234,
+  "_lastModified": 1792457011603,
   "vym": {
     "semanas": {},
     "historial": [
