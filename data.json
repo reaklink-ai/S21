@@ -52692,11 +52692,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792458975806
           },
           "Oct": {
             "particip": false,
@@ -52781,7 +52782,7 @@
       "nombre": "Keyla",
       "nacimiento": "2014-01-24",
       "bautismo": "",
-      "grupo": "",
+      "grupo": "Grupo 2",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": true,
@@ -52792,7 +52793,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1791828596369,
+      "_tsPersonal": 1792458970423,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -52800,7 +52801,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1791828596369
+        "_ts": 1792458970423
       }
     },
     {
@@ -55733,7 +55734,7 @@
       }
     }
   ],
-  "_lastModified": 1792458964520,
+  "_lastModified": 1792458977249,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59279,6 +59280,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792458970423,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Uribe Cancino, Keyla · Grupo: ninguno → Grupo 2",
+      "pubId": "p1791828596369"
+    },
+    {
       "ts": 1792458960560,
       "user": "Administrador",
       "rol": "admin",
@@ -60864,14 +60873,6 @@
     },
     {
       "ts": 1792162704268,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1792162704249,
       "user": "Felipe_C",
       "rol": "auxiliar",
       "accion": "Horas editadas",
