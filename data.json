@@ -3703,11 +3703,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792454699123
           },
           "Oct": {
             "particip": false,
@@ -54165,7 +54166,7 @@
       }
     }
   ],
-  "_lastModified": 1792379412862,
+  "_lastModified": 1792454700744,
   "vym": {
     "semanas": {},
     "historial": [
@@ -57711,6 +57712,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792454674034,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792379409613,
       "user": "Administrador",
       "rol": "admin",
@@ -57759,6 +57768,14 @@
       "pubId": null
     },
     {
+      "ts": 1792208228983,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792205652578,
       "user": "Administrador",
       "rol": "admin",
@@ -57780,6 +57797,14 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1792196819825,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -58012,6 +58037,14 @@
       "rol": "auxiliar",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1792152587394,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
     },
     {
@@ -59276,38 +59309,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Feb 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829329231,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ene 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829329224,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ene 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829328531,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829328524,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: cursos=2",
       "pubId": "p1791829298292"
     }
   ],
