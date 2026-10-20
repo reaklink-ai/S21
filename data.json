@@ -40597,6 +40597,77 @@
             "notas": ""
           },
           "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1792455753180
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -54795,7 +54866,7 @@
       }
     }
   ],
-  "_lastModified": 1792455735109,
+  "_lastModified": 1792455753737,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58341,6 +58412,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455753180,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Sep 2026: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1792455753174,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Sep 2026: horas=50",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1792455750838,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
+      "ts": 1792455750832,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Mayerli · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4twt9q"
+    },
+    {
       "ts": 1792455734519,
       "user": "Administrador",
       "rol": "admin",
@@ -59906,38 +60009,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Abr 2025: horas=51",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829400718,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Mar 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829397922,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Mar 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829397908,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Mar 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829395636,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Feb 2025: horas=50",
       "pubId": "p1791829298292"
     }
   ],
