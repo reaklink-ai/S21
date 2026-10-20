@@ -36100,11 +36100,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "6",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1792456533713
           },
           "Oct": {
             "particip": false,
@@ -55246,7 +55247,7 @@
       }
     }
   ],
-  "_lastModified": 1792456517917,
+  "_lastModified": 1792456534325,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58792,6 +58793,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456533713,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Sep 2026: horas=50",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1792456533706,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Sep 2026: horas=50",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1792456531916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Sep 2026: cursos=6",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
+      "ts": 1792456531906,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Lina · Sep 2026: cursos=6",
+      "pubId": "mmm9qi4s4baq"
+    },
+    {
       "ts": 1792456516607,
       "user": "Administrador",
       "rol": "admin",
@@ -60358,38 +60391,6 @@
       "accion": "Horas editadas",
       "detalle": "Amortegui, Cesar Mauricio · Sep 2026: horas=15",
       "pubId": "mmm9qi4jl2r2"
-    },
-    {
-      "ts": 1791834674844,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Amortegui, Cesar Mauricio · Sep 2026: horas=15",
-      "pubId": "mmm9qi4jl2r2"
-    },
-    {
-      "ts": 1791834672447,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Amortegui, Cesar Mauricio · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4jl2r2"
-    },
-    {
-      "ts": 1791834672438,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Amortegui, Cesar Mauricio · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4jl2r2"
-    },
-    {
-      "ts": 1791834381713,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Sep 2026: horas=18",
-      "pubId": "mmm9qi4r9s54"
     }
   ],
   "formHistorial": [
