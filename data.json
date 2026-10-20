@@ -44735,11 +44735,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "16",
+            "notas": "",
+            "_ts": 1792457957967
           },
           "Oct": {
             "particip": false,
@@ -55717,7 +55718,7 @@
       }
     }
   ],
-  "_lastModified": 1792457946120,
+  "_lastModified": 1792457958424,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59263,6 +59264,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457957967,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Sep 2026: horas=16",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1792457957958,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Sep 2026: horas=16",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1792457955808,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
+      "ts": 1792457955800,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Oscar Javier · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4uvqhc"
+    },
+    {
       "ts": 1792457945698,
       "user": "Administrador",
       "rol": "admin",
@@ -60829,38 +60862,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1792097974822,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792096528298,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Roger · Sep 2026: cursos=",
-      "pubId": "mmm9qi4q76n8"
-    },
-    {
-      "ts": 1792096528283,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Roger · Sep 2026: cursos=",
-      "pubId": "mmm9qi4q76n8"
-    },
-    {
-      "ts": 1792096094499,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4spd20"
     }
   ],
   "formHistorial": [
