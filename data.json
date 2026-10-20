@@ -14128,11 +14128,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "57",
+            "notas": "",
+            "_ts": 1792459541444
           },
           "Oct": {
             "particip": false,
@@ -14383,11 +14384,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459788565
           },
           "Oct": {
             "particip": false,
@@ -14635,11 +14637,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459790706
           },
           "Oct": {
             "particip": false,
@@ -30561,11 +30564,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459795928
           },
           "Oct": {
             "particip": false,
@@ -43531,11 +43535,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459793509
           },
           "Oct": {
             "particip": false,
@@ -55828,7 +55833,7 @@
       }
     }
   ],
-  "_lastModified": 1792459569594,
+  "_lastModified": 1792459797989,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59390,12 +59395,52 @@
       "pubId": "mmm9qi4qnxk5"
     },
     {
+      "ts": 1792459541444,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792459541413,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
       "ts": 1792459540110,
       "user": "Jaime_P",
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Padilla, Anyela · Sep 2026: horas=",
       "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1792459534886,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792459534858,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792459523401,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
     },
     {
       "ts": 1792459523093,
@@ -59505,6 +59550,94 @@
       "ts": 1792458912884,
       "user": "Administrador",
       "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
+      "ts": 1792458573842,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792458573818,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792458568869,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792458568847,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792458547547,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1792458547525,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1792458542318,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792458542294,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792458538036,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792458538010,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792458154027,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
@@ -59750,6 +59883,54 @@
       "pubId": "p1788529197916"
     },
     {
+      "ts": 1792457363573,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792457363558,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792457350888,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792457350873,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792457337285,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1792457337264,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
       "ts": 1792457328243,
       "user": "Administrador",
       "rol": "admin",
@@ -59764,6 +59945,62 @@
       "accion": "Horas editadas",
       "detalle": "Hernandez, Ingrid · Sep 2026: horas=30",
       "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1792457318212,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1792457318196,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1792457314836,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792457314820,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792457312407,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792457312392,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1792457257280,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
     },
     {
       "ts": 1792457119008,
@@ -60740,238 +60977,6 @@
       "accion": "Horas editadas",
       "detalle": "Millán, Laura Camila · Sep 2026: horas=27",
       "pubId": "mmm9qi4qf90z"
-    },
-    {
-      "ts": 1792455464237,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1792455460630,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1792455460621,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
-      "pubId": "mmm9qi4qp27l"
-    },
-    {
-      "ts": 1792455438615,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Sep 2026: horas=36",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1792455438608,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Sep 2026: horas=36",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1792455436381,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Oct 2026: horas=",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1792455435864,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1792455435856,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Millan, Fernando · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4q1iwb"
-    },
-    {
-      "ts": 1792455074510,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1792455074504,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1792455073559,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuluaga, Carlos · Sep 2026: horas=",
-      "pubId": "mmm9qi4ttlv0"
-    },
-    {
-      "ts": 1792455049368,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Sep 2026: horas=48",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1792455049363,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Stefany · Sep 2026: horas=48",
-      "pubId": "mmm9qi4lgiwv"
-    },
-    {
-      "ts": 1792455038264,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1792455038258,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1792455036572,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beltran, Mauricio · Sep 2026: horas=",
-      "pubId": "mmm9qi4kk1hh"
-    },
-    {
-      "ts": 1792455016057,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Sacado",
-      "detalle": "Beltran, Kevin · Sacado Septiembre 2026",
-      "pubId": "mmm9qi4kzg1p"
-    },
-    {
-      "ts": 1792454674034,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1792379409613,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Aular, Jose · Nacimiento: 1985-02-10",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1792379354871,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792379134300,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792279789562,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792273046631,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792269930852,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792208228983,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1792205652578,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792205151637,
-      "user": "Jaime_P",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792204780210,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1792196819825,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
