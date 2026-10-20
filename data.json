@@ -5687,11 +5687,11 @@
           },
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792455021023
+            "_ts": 1792455038264
           },
           "Oct": {
             "particip": false,
@@ -54704,7 +54704,7 @@
       }
     }
   ],
-  "_lastModified": 1792455022405,
+  "_lastModified": 1792455038761,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58250,6 +58250,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455038264,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1792455038258,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
+      "ts": 1792455036572,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Sep 2026: horas=",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
       "ts": 1792455016057,
       "user": "Administrador",
       "rol": "admin",
@@ -59823,30 +59847,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Mar 2025: cursos=1",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829336120,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Mar 2025: cursos=1",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829335204,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Feb 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829330972,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Feb 2025: cursos=2",
       "pubId": "p1791829298292"
     }
   ],
