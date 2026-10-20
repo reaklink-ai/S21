@@ -45413,11 +45413,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792457863608
           },
           "Oct": {
             "particip": false,
@@ -55710,7 +55711,7 @@
       }
     }
   ],
-  "_lastModified": 1792457846799,
+  "_lastModified": 1792457864258,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59256,6 +59257,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457863608,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Rivadeneira, Cristina · Sep 2026: cursos=1",
+      "pubId": "p1776221052712"
+    },
+    {
+      "ts": 1792457863600,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Rivadeneira, Cristina · Sep 2026: cursos=1",
+      "pubId": "p1776221052712"
+    },
+    {
       "ts": 1792457442662,
       "user": "Administrador",
       "rol": "admin",
@@ -60838,22 +60855,6 @@
       "accion": "Horas editadas",
       "detalle": "Rivera, Sandra · Sep 2026: horas=34",
       "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1792096083183,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Sep 2026: horas=34",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1792095968352,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Oct 2026: cursos=",
-      "pubId": "mmm9qi4r1pju"
     }
   ],
   "formHistorial": [
