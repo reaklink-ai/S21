@@ -42145,11 +42145,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792458091519
           },
           "Oct": {
             "particip": false,
@@ -55731,7 +55732,7 @@
       }
     }
   ],
-  "_lastModified": 1792458076963,
+  "_lastModified": 1792458092082,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59277,6 +59278,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792458091519,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
+      "ts": 1792458091511,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
+      "ts": 1792458090147,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Sep 2026: horas=",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
       "ts": 1792458042229,
       "user": "Administrador",
       "rol": "admin",
@@ -60851,30 +60876,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Martha · Sep 2026: horas=50",
       "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1792162637884,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1792162637869,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1792162601776,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
     }
   ],
   "formHistorial": [
