@@ -28550,9 +28550,9 @@
             "particip": true,
             "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "45",
             "notas": "",
-            "_ts": 1791754883852
+            "_ts": 1792459563869
           },
           "Oct": {
             "particip": false,
@@ -47080,7 +47080,7 @@
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792459323645
+            "_ts": 1792459060334
           },
           "Oct": {
             "particip": false,
@@ -47388,12 +47388,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1792459409070
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1792459096561
           },
           "Oct": {
             "particip": false,
@@ -55828,7 +55828,7 @@
       }
     }
   ],
-  "_lastModified": 1792459567018,
+  "_lastModified": 1792459569594,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59374,6 +59374,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792459563869,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Sep 2026: horas=45",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1792459563863,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Sep 2026: horas=45",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1792459540110,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Sep 2026: horas=",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1792459523093,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1792459109681,
       "user": "Administrador",
       "rol": "admin",
@@ -60940,38 +60972,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1792162873505,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Sep 2026: horas=15",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1792162873485,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Sep 2026: horas=15",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1792162871838,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Villa, Julia · Oct 2026: horas=",
-      "pubId": "mmm9qi4tnncr"
-    },
-    {
-      "ts": 1792162793619,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Sep 2026: horas=15",
-      "pubId": "mmm9qi4kye7q"
     }
   ],
   "formHistorial": [
