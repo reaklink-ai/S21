@@ -1885,12 +1885,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
             "notas": "embarazo",
-            "_ts": 1792459105344
+            "_ts": 1792459116177
           },
           "Oct": {
             "particip": false,
@@ -47851,7 +47851,7 @@
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792459109681
+            "_ts": 1792459114376
           },
           "Oct": {
             "particip": false,
@@ -55828,7 +55828,7 @@
       }
     }
   ],
-  "_lastModified": 1792459110184,
+  "_lastModified": 1792459117518,
   "vym": {
     "semanas": {},
     "historial": [
