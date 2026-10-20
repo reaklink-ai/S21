@@ -39566,11 +39566,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "Problema de Salud ",
+            "_ts": 1792455638112
           },
           "Oct": {
             "particip": false,
@@ -54792,7 +54793,7 @@
       }
     }
   ],
-  "_lastModified": 1792455617470,
+  "_lastModified": 1792455640284,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58338,6 +58339,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455635433,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2026: horas=8",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
+      "ts": 1792455635425,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Sep 2026: horas=8",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
       "ts": 1792455615602,
       "user": "Administrador",
       "rol": "admin",
@@ -59915,22 +59932,6 @@
     },
     {
       "ts": 1791829386748,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: horas=40",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829383074,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: horas=40",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829374338,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
