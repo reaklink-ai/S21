@@ -30665,15 +30665,16 @@
       "precursorReg": true,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Bentura Agudelo",
-        "relacion": "Tío",
+        "relacion": "",
         "tel": "573132657526",
         "tel2": "",
         "direccion": "Carrera 9 # 17-24 sur Conjunto Zapan Novaterra To 10 apto 1037",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1792458034916
       },
       "registros": {
         "2024": {
@@ -30823,11 +30824,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "40",
+            "notas": "",
+            "_ts": 1792458042229
           },
           "Oct": {
             "particip": false,
@@ -30912,7 +30914,9 @@
           "horas": 181,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1792458034916
     },
     {
       "id": "mmm9qi4r0lk8",
@@ -55721,7 +55725,7 @@
       }
     }
   ],
-  "_lastModified": 1792458021828,
+  "_lastModified": 1792458042909,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59267,6 +59271,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792458042229,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Sep 2026: horas=40",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1792458042221,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Sep 2026: horas=40",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
+      "ts": 1792458034916,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Perez, Danna · datos generales",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
       "ts": 1792458021292,
       "user": "Administrador",
       "rol": "admin",
@@ -60840,30 +60868,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1792162601754,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1792162600357,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Oct 2026: cursos=",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1792162599832,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Sep 2026: horas=43",
       "pubId": "mmm9qi4rhmxc"
     }
   ],
