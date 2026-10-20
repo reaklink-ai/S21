@@ -2829,7 +2829,7 @@
             "paux": false,
             "horas": "52",
             "notas": "NUEVO PRECURSOR REGULAR",
-            "_ts": 1792456801167
+            "_ts": 1792456809122
           },
           "Oct": {
             "particip": false,
@@ -3048,11 +3048,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "54",
+            "notas": "NUEVO PRECURSOR REGULAR",
+            "_ts": 1792456841023
           },
           "Oct": {
             "particip": false,
@@ -55320,7 +55321,7 @@
       }
     }
   ],
-  "_lastModified": 1792456803192,
+  "_lastModified": 1792456843588,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58866,6 +58867,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456841023,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
+      "ts": 1792456841016,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
+      "ts": 1792456840154,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Sep 2026: horas=54",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
+      "ts": 1792456840148,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Sep 2026: horas=54",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
       "ts": 1792456782065,
       "user": "Administrador",
       "rol": "admin",
@@ -60432,38 +60465,6 @@
       "accion": "Horas editadas",
       "detalle": "Rivera, Patricia · Sep 2026: horas=50",
       "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1791834839497,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1791834839488,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Patricia · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4spxmz"
-    },
-    {
-      "ts": 1791834808149,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1791834808140,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Flor · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4nszua"
     }
   ],
   "formHistorial": [
