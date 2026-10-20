@@ -48027,11 +48027,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792456128347
           },
           "Oct": {
             "particip": false,
@@ -55014,7 +55015,7 @@
       }
     }
   ],
-  "_lastModified": 1792456120010,
+  "_lastModified": 1792456128835,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58560,6 +58561,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456128347,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Sep 2026: cursos=2",
+      "pubId": "p1781993446050"
+    },
+    {
+      "ts": 1792456128342,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Dario · Sep 2026: cursos=2",
+      "pubId": "p1781993446050"
+    },
+    {
       "ts": 1792455811131,
       "user": "Administrador",
       "rol": "admin",
@@ -60141,22 +60158,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Sep 2026: horas=36",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829419173,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ago 2025: horas=52",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829419162,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ago 2025: horas=52",
       "pubId": "p1791829298292"
     }
   ],
