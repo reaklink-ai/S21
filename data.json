@@ -26568,11 +26568,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792456179477
           },
           "Oct": {
             "particip": false,
@@ -55018,7 +55019,7 @@
       }
     }
   ],
-  "_lastModified": 1792456168974,
+  "_lastModified": 1792456179993,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58564,6 +58565,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456179477,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1792456179470,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
       "ts": 1792456162210,
       "user": "Administrador",
       "rol": "admin",
@@ -60145,22 +60162,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Manosalva, Nidia · Jun 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829538321,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Jun 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829537563,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Dic 2025: cursos=1",
       "pubId": "p1791829505304"
     }
   ],
