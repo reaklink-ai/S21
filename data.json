@@ -44785,10 +44785,10 @@
           "Sep": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "16",
             "notas": "",
-            "_ts": 1792455416911
+            "_ts": 1792455775363
           },
           "Oct": {
             "particip": false,
@@ -44844,7 +44844,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792455770724
           },
           "Jun": {
             "particip": false,
@@ -54867,7 +54868,7 @@
       }
     }
   ],
-  "_lastModified": 1792455763206,
+  "_lastModified": 1792455776605,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58413,6 +58414,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455775363,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=16",
+      "pubId": "p1776221244569"
+    },
+    {
+      "ts": 1792455775357,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=16",
+      "pubId": "p1776221244569"
+    },
+    {
+      "ts": 1792455770724,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Figueredo, Fergie Alexandra · May 2026: horas=",
+      "pubId": "p1776221244569"
+    },
+    {
+      "ts": 1792455769624,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=43",
+      "pubId": "p1776221244569"
+    },
+    {
+      "ts": 1792455769616,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=43",
+      "pubId": "p1776221244569"
+    },
+    {
       "ts": 1792455762731,
       "user": "Administrador",
       "rol": "admin",
@@ -59970,46 +60011,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Jul 2025: horas=51",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829414157,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jun 2025: horas=45",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829412591,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jun 2025: horas=45",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829412583,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jun 2025: horas=45",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829408674,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jun 2025: horas=",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829407237,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · May 2025: horas=53",
       "pubId": "p1791829298292"
     }
   ],
