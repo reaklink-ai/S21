@@ -11585,11 +11585,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "10",
+            "notas": "",
+            "_ts": 1792457945698
           },
           "Oct": {
             "particip": false,
@@ -55716,7 +55717,7 @@
       }
     }
   ],
-  "_lastModified": 1792457930878,
+  "_lastModified": 1792457946120,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59262,6 +59263,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457945698,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Sep 2026: horas=10",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
+      "ts": 1792457945690,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Sep 2026: horas=10",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
       "ts": 1792457876667,
       "user": "Administrador",
       "rol": "admin",
@@ -60843,22 +60860,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Rivera, Sandra · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1792096093559,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4spd20"
-    },
-    {
-      "ts": 1792096093391,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Rivera, Sandra · Sep 2026: cursos=1",
       "pubId": "mmm9qi4spd20"
     }
   ],
