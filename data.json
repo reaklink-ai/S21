@@ -53670,11 +53670,12 @@
       "registros": {
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459032896
           },
           "Oct": {
             "particip": false,
@@ -55822,7 +55823,7 @@
       }
     }
   ],
-  "_lastModified": 1792459002205,
+  "_lastModified": 1792459035270,
   "vym": {
     "semanas": {},
     "historial": [
