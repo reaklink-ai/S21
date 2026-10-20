@@ -52478,11 +52478,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792458997002
           },
           "Oct": {
             "particip": false,
@@ -52567,7 +52568,7 @@
       "nombre": "Diego",
       "nacimiento": "1986-06-09",
       "bautismo": "2016-07-23",
-      "grupo": "",
+      "grupo": "Grupo 2",
       "telefono": "",
       "genero": "M",
       "otrasOvejas": true,
@@ -52578,7 +52579,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1791828537787,
+      "_tsPersonal": 1792459000744,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -52586,7 +52587,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1791828537787
+        "_ts": 1792459000744
       }
     },
     {
@@ -55821,7 +55822,7 @@
       }
     }
   ],
-  "_lastModified": 1792458988829,
+  "_lastModified": 1792459002205,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59367,6 +59368,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792459000745,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Uribe Gamez, Diego · Grupo: ninguno → Grupo 2",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1792458997002,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Sep 2026: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
+      "ts": 1792458996995,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Sep 2026: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
       "ts": 1792458987807,
       "user": "Administrador",
       "rol": "admin",
@@ -60941,30 +60966,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Camila · Sep 2026: horas=16",
       "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1792162728526,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Sep 2026: horas=16",
-      "pubId": "mmm9qi4lfo92"
-    },
-    {
-      "ts": 1792162707188,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Sep 2026: horas=19",
-      "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1792162707172,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Alfonso · Sep 2026: horas=19",
-      "pubId": "mmm9qi4l1oio"
     }
   ],
   "formHistorial": [
