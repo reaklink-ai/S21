@@ -51456,12 +51456,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "55",
             "notas": "",
-            "_ts": 1788974783551
+            "_ts": 1792457376300
           },
           "Oct": {
             "particip": false,
@@ -55633,7 +55633,7 @@
       }
     }
   ],
-  "_lastModified": 1792457364661,
+  "_lastModified": 1792457377584,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59179,6 +59179,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457376300,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=55",
+      "pubId": "p1788529197916"
+    },
+    {
+      "ts": 1792457376294,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Méndez, Yaneth · Sep 2026: horas=55",
+      "pubId": "p1788529197916"
+    },
+    {
       "ts": 1792457328243,
       "user": "Administrador",
       "rol": "admin",
@@ -60761,22 +60777,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Sep 2026: horas=18",
       "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095934307,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2026: horas=8",
-      "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1792095934293,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Daniela · Sep 2026: horas=8",
-      "pubId": "mmm9qi4rwj0v"
     }
   ],
   "formHistorial": [
