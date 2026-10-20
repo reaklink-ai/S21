@@ -39868,11 +39868,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "37",
+            "notas": "",
+            "_ts": 1792455690669
           },
           "Oct": {
             "particip": false,
@@ -54793,7 +54794,7 @@
       }
     }
   ],
-  "_lastModified": 1792455640284,
+  "_lastModified": 1792455693363,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58339,6 +58340,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455690669,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2026: horas=37",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1792455690662,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2026: horas=37",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1792455688453,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
+      "ts": 1792455688445,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Mario · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4t7a77"
+    },
+    {
       "ts": 1792455635433,
       "user": "Administrador",
       "rol": "admin",
@@ -59904,38 +59937,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Ene 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829394044,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ene 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829391927,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: horas=40",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829389467,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: horas=40",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829386748,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Dic 2025: horas=40",
       "pubId": "p1791829298292"
     }
   ],
