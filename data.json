@@ -37461,7 +37461,7 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Yuli Obando",
@@ -37469,7 +37469,8 @@
         "tel": "3104843619",
         "tel2": "",
         "direccion": "",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1792457427323
       },
       "registros": {
         "2024": {
@@ -37624,6 +37625,77 @@
             "notas": ""
           },
           "Sep": {
+            "particip": true,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1792457421540
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -37643,7 +37715,9 @@
           "horas": 0,
           "cursos": 1
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1792457427323
     },
     {
       "id": "mmm9qi4si0is",
@@ -45135,11 +45209,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792457845166
           },
           "Oct": {
             "particip": false,
@@ -55635,7 +55710,7 @@
       }
     }
   ],
-  "_lastModified": 1792457410515,
+  "_lastModified": 1792457846799,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59181,6 +59256,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457442662,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Sep 2026: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
+      "ts": 1792457442656,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Serna Mosquera, Cristian · Sep 2026: cursos=1",
+      "pubId": "p1776220868449"
+    },
+    {
+      "ts": 1792457427324,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Sanchez, Maritza · datos generales",
+      "pubId": "mmm9qi4spx52"
+    },
+    {
       "ts": 1792457394085,
       "user": "Administrador",
       "rol": "admin",
@@ -60754,30 +60853,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Oct 2026: cursos=",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095966009,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Nov 2026: horas=",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095965047,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Sep 2026: horas=20",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095965034,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Sep 2026: horas=20",
       "pubId": "mmm9qi4r1pju"
     }
   ],
