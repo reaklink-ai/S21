@@ -3252,6 +3252,9 @@ input:focus, select:focus, textarea:focus {
         <button class="sb-nav-item sb-perm-admin" onclick="sincronizarFirebase()">
           <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg></span>Sincronizar Formularios
         </button>
+        <button class="sb-nav-item" onclick="refrescarDesdeNube(true)" title="Trae los informes y cambios que otros cargaron en la nube">
+          <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 2v6h-6"/><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M3 22v-6h6"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/></svg></span>Actualizar desde la nube
+        </button>
         <button class="sb-nav-item sb-perm-admin" onclick="verLinksGrupos()">
           <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>Links por Grupo
         </button>
@@ -4033,6 +4036,7 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
     }
 
     // 2. Mezclar: local gana en sus cambios, preserva cambios remotos no tocados
+    const lmAntes = state._lastModified || 0; // para detectar ediciones hechas mientras se sube
     const merged = remoto ? _mergeStates(remoto, state) : JSON.parse(JSON.stringify(state));
     merged._lastModified = Date.now();
 
@@ -4046,8 +4050,19 @@ async function _mergeAndPush(intentos = 0, silencioso = false) {
     if(putRes.ok) {
       const putJson = await putRes.json();
       if(putJson.sha) _lastSha = putJson.sha;
-      state = merged;
-      saveState();
+      if((state._lastModified || 0) !== lmAntes) {
+        // El usuario siguió editando mientras se subía: NO descartar esas ediciones.
+        // El estado actual (con lo nuevo) es la base y se le suma lo que llegó de la nube.
+        const lm = state._lastModified;
+        state = _mergeStates(merged, state);
+        state._lastModified = lm;
+        localStorage.setItem(KEY, JSON.stringify(state));
+        _hayCambios = true;
+        const b = document.getElementById('btn-guardar-flotante'); if(b) b.classList.add('visible');
+      } else {
+        state = merged;
+        saveState();
+      }
       // Feedback visual claro de éxito (solo si fue guardado manualmente)
       if(!silencioso) _mostrarConfirmGuardado();
       return; // éxito — no seguir al manejo de error de abajo
@@ -4145,6 +4160,18 @@ function _mostrarErrorGuardado(detalle) {
   }, 8000);
 }
 
+// ¿Debe el registro mensual "otro" reemplazar al registro "base"?
+// - Gana el de _ts más reciente (antes exigía que AMBOS tuvieran _ts: un registro vacío creado solo por
+//   abrir el S-21, o uno importado sin _ts, pisaba datos reales del otro dispositivo).
+// - Sin timestamps en ninguno: gana el que tiene datos si el base está vacío.
+function _regVacio(r) { return !r || (!r.particip && !r.paux && !String(r.cursos||'').trim() && !String(r.horas||'').trim() && !String(r.notas||'').trim()); }
+function _regGana(base, otro) {
+  const tb = base._ts || 0, to = otro._ts || 0;
+  if(to > tb) return true;
+  if(to === tb && _regVacio(base) && !_regVacio(otro)) return true;
+  return false;
+}
+
 // Mezcla inteligente: preserva cambios de ambos lados
 function _mergeStates(remoto, local) {
   const m = JSON.parse(JSON.stringify(local));
@@ -4166,7 +4193,7 @@ function _mergeStates(remoto, local) {
     // Merge campos personales — gana el más reciente según _tsPersonal
     const tsLocal  = lp._tsPersonal || 0;
     const tsRemoto = rp._tsPersonal || 0;
-    const camposPersonales = ['nacimiento','bautismo','telefono','genero','_tsPersonal'];
+    const camposPersonales = ['apellido','nombre','nacimiento','bautismo','telefono','genero','grupo','otrasOvejas','ungido','anciano','siervo','precursorReg','precursorEsp','misionero','precAuxContinuo','_tsPersonal'];
     if(tsRemoto > tsLocal) {
       // Remoto es más reciente — tomar sus campos personales
       camposPersonales.forEach(campo => { if(rp[campo] !== undefined) lp[campo] = rp[campo]; });
@@ -4199,11 +4226,11 @@ function _mergeStates(remoto, local) {
         if(!localReg) {
           // Local no tiene este mes — tomar del remoto
           lp.registros[anio][mes] = val;
-        } else if(val && val._ts && localReg._ts && val._ts > localReg._ts) {
-          // Remoto tiene timestamp más reciente — tomar del remoto
+        } else if(val && _regGana(localReg, val)) {
+          // El otro lado tiene una versión más reciente (o la nuestra está vacía) — tomarla
           lp.registros[anio][mes] = val;
         }
-        // Si local tiene datos y no hay timestamp, local SIEMPRE gana (es la edición activa)
+        // Empate sin timestamps y con datos en ambos lados: el lado base (local) gana
       });
     });
   });
@@ -4292,6 +4319,53 @@ function _mergeStates(remoto, local) {
 }
 
 async function ghPush() { return _mergeAndPush(); }
+
+// ── Traer cambios de OTROS dispositivos/usuarios sin recargar ──
+// Antes la app solo bajaba datos al iniciar sesión o al guardar: quien dejaba la pantalla abierta no veía los
+// informes que otro cargaba. Ahora se actualiza sola (cada 2 min y al volver a la pestaña) y hay un botón manual.
+// No sube nada y se salta si hay cambios sin guardar, un guardado en curso o un campo en edición.
+let _refrescando = false;
+async function refrescarDesdeNube(manual) {
+  if(_refrescando || typeof currentUser === 'undefined' || !currentUser) return;
+  const ed = document.activeElement;
+  const editando = ed && /^(INPUT|TEXTAREA|SELECT)$/.test(ed.tagName) && !ed.readOnly;
+  if(_hayCambios || _guardandoPub || (editando && !manual)) {
+    if(manual) toast(_hayCambios ? '⚠️ Tienes cambios sin guardar — guárdalos primero y luego actualiza' : '⏳ Hay un guardado en proceso, intenta en un momento');
+    return;
+  }
+  _refrescando = true;
+  try {
+    const res = await fetch(SYNC_URL + '?t=' + Date.now(), { headers: SYNC_HEADERS });
+    if(!res.ok) { if(manual) toast('⚠️ No se pudo conectar con la nube'); return; }
+    const json = await res.json();
+    const remoto = json.data; if(!remoto) { if(manual) toast('No hay datos en la nube aún'); return; }
+    if(_hayCambios || _guardandoPub) return; // el usuario editó mientras se descargaba
+    _lastSha = json.sha;
+    const antes = JSON.stringify(state);
+    const merged = _mergeStates(remoto, state);
+    if(!merged.usuarios || merged.usuarios.length === 0) merged.usuarios = state.usuarios;
+    merged._lastModified = Math.max(state._lastModified || 0, remoto._lastModified || 0);
+    const cambio = JSON.stringify(merged) !== antes;
+    if(!cambio) { if(manual) toast('✓ Ya tienes todo actualizado'); return; }
+    state = merged;
+    localStorage.setItem(KEY, JSON.stringify(state));
+    try { migrarUsuariosLegacy(); } catch(e) {}
+    // Redibujar la pantalla actual sin perder la selección
+    const ed2 = document.activeElement;
+    if(!(ed2 && /^(INPUT|TEXTAREA|SELECT)$/.test(ed2.tagName))) {
+      try {
+        renderDashboard(); if(typeof renderLista === 'function') renderLista();
+        if(pantallaActual && pantallaActual !== 'inicio' && pantallaActual !== 'publicadores') irA(pantallaActual);
+        if(selId && pantallaActual === 'publicadores') renderS21();
+      } catch(e) { console.warn('[S21] redibujo tras actualizar:', e); }
+    }
+    toast('☁️ Datos actualizados con cambios de otros dispositivos', 3000);
+  } catch(e) {
+    if(manual) toast('⚠️ No se pudo actualizar: ' + (e?.message || 'sin conexión'));
+  } finally { _refrescando = false; }
+}
+setInterval(() => { if(document.visibilityState === 'visible') refrescarDesdeNube(false); }, 120000);
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') setTimeout(() => refrescarDesdeNube(false), 800); });
 
 async function ghPull() {
   if(_guardandoPub) {
@@ -4754,6 +4828,9 @@ function toggleBool(pid,anio,mes,campo) {
 
 function setV(pid,anio,mes,campo,val) {
   const pub=getPub(pid), r=getReg(pub,anio,mes);
+  // onchange + onblur llaman a esta función: si el valor no cambió no se toca el _ts, o solo
+  // pasar por un campo "ganaría" en el merge contra una edición real hecha en otro dispositivo.
+  if(String(r[campo] ?? '') === String(val ?? '')) return;
   r[campo]=val;
   r._ts = Date.now();
   if(campo==='horas'||campo==='cursos') auditLog('Horas editadas', `${pub.apellido}, ${pub.nombre} · ${mes} ${anio}: ${campo}=${val}`, pid); // timestamp para resolver conflictos en merge
@@ -6756,7 +6833,7 @@ function cargarInformes(e) {
         const paux=act.includes('AUXILIAR');
         const noInf=act.includes('NO INFORM');
         const horas=row[iHoras]?String(row[iHoras]).trim():'';
-        const cursos=row[iCursos]?String(parseInt(row[iCursos])):'';
+        const cursos=row[iCursos]&&!isNaN(parseInt(row[iCursos]))?String(parseInt(row[iCursos])):'';
         const notas=iComent>=0&&row[iComent]?String(row[iComent]).trim():'';
         if(!pub.registros)pub.registros={};
         if(!pub.registros[anioEsc])pub.registros[anioEsc]={};
@@ -6765,8 +6842,9 @@ function cargarInformes(e) {
         reg.particip=noInf?false:particip;
         if(paux)reg.paux=true;
         if(horas)reg.horas=horas;
-        if(cursos)reg.cursos=cursos;
+        if(cursos && cursos!=='NaN')reg.cursos=cursos;
         if(notas)reg.notas=notas;
+        reg._ts=Date.now(); // sin esto el merge con la nube podía descartar lo importado
         actualizarTotales(pub,anioEsc);
         ok++;
       }
@@ -6810,12 +6888,16 @@ function _importarFormatoViejo(rows) {
     let mesIdx=MESES_C.findIndex(m=>m.toLowerCase()===mesC.toLowerCase());
     if(mesIdx<0){const{mesC:m}=mesActual();mesIdx=MESES_C.findIndex(x=>x===m);}
     if(mesIdx<0){skip++;continue;}
-    const anio=anioHoy();
+    // Año de servicio del mes importado: si el mes es posterior al mes en curso, pertenece al año de servicio anterior
+    // (antes siempre usaba anioHoy() y, p. ej., un "Ago" importado en octubre se guardaba en el año equivocado).
+    const _ma=mesActual();
+    const anio = mesIdx > _ma.idx ? _ma.anio-1 : _ma.anio;
     const reg=getReg(pub,anio,MESES_C[mesIdx]);
     if(particip||paux){reg.particip=particip;reg.paux=paux;}
     if(cursos!=='')reg.cursos=cursos;
     if(horas!=='')reg.horas=horas;
     if(notas!=='')reg.notas=notas;
+    reg._ts=Date.now();
     actualizarTotales(pub,anio);
     ok++;
   }
@@ -7582,6 +7664,114 @@ function _renderDashNoInf() {
     </div>
     <div style="flex:1;overflow-y:auto;padding:0 6px 10px">${lista}${masLabel}</div>`;
 }
+// ══════════════════════════════════════════
+// ANCIANOS Y CURSOS BÍBLICOS
+// ══════════════════════════════════════════
+// Un curso bíblico dirigido = campo "cursos" > 0 en el S-21 de ese mes. Se revisa el período elegido
+// (termina en el mes a reportar) y se cuenta a cada anciano: meses con cursos, máximo de cursos y último mes con cursos.
+let _ancCursosPeriodo = '6m'; // '1m' | '3m' | '6m' | 'anio'
+function _ancCursosVentana() {
+  const ma = mesActual(), v = [];
+  const n = _ancCursosPeriodo === '1m' ? 1 : _ancCursosPeriodo === '3m' ? 3 : _ancCursosPeriodo === 'anio' ? ma.idx + 1 : 6;
+  for(let i = n - 1; i >= 0; i--) {
+    let idx = ma.idx - i, a = ma.anio;
+    if(idx < 0) { idx += 12; a--; }
+    v.push({ m: MESES_C[idx], a });
+  }
+  return v;
+}
+function _ancCursosDatos(periodo) {
+  const prev = _ancCursosPeriodo; if(periodo) _ancCursosPeriodo = periodo;
+  const ventana = _ancCursosVentana(); _ancCursosPeriodo = prev;
+  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
+  const ancianos = state.publicadores.filter(p => p.anciano && !_mudIds.has(p.id) && !_inacIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true));
+  const filas = ancianos.map(p => {
+    const regs = p.registros || {};
+    const get = ({m,a}) => (regs[a] || regs[String(a)] || {})[m];
+    let mesesCursos = 0, maxCursos = 0, ultimo = '', particip = 0, conRegistro = 0;
+    ventana.forEach(v => {
+      const r = get(v); if(!r) return;
+      conRegistro++; if(r.particip) particip++;
+      const c = parseInt(r.cursos) || 0;
+      if(c > 0) { mesesCursos++; if(c > maxCursos) maxCursos = c; ultimo = v.m; }
+    });
+    return { p, mesesCursos, maxCursos, ultimo, particip, conRegistro, total: ventana.length };
+  }).sort((x,y) => (x.mesesCursos>0) - (y.mesesCursos>0) || x.p.apellido.localeCompare(y.p.apellido,'es'));
+  const sin = filas.filter(f => f.mesesCursos === 0), con = filas.filter(f => f.mesesCursos > 0);
+  const porGrupo = {};
+  filas.forEach(f => { const g = f.p.grupo || 'Sin grupo'; (porGrupo[g] = porGrupo[g] || { total:0, sin:0 }); porGrupo[g].total++; if(f.mesesCursos === 0) porGrupo[g].sin++; });
+  return { filas, sin, con, porGrupo, ventana, total: filas.length };
+}
+function _ancCursosResumen() {
+  try { const d = _ancCursosDatos('6m'); return d.total ? `${d.sin.length} de ${d.total}` : '—'; } catch(e) { return '—'; }
+}
+function _ancCursosTxtPeriodo(d) {
+  const v = d.ventana, nom = x => x.m + ' ' + (x.a + (['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'].includes(x.m) ? 1 : 0));
+  return v.length === 1 ? nom(v[0]) : nom(v[0]) + ' – ' + nom(v[v.length-1]);
+}
+function setAncCursosPeriodo(v) { _ancCursosPeriodo = v; abrirModalAncianosCursos(); }
+
+function abrirModalAncianosCursos() {
+  const d = _ancCursosDatos();
+  const pct = d.total ? Math.round(d.sin.length / d.total * 100) : 0;
+  const kpi = (n, l, col) => `<div style="flex:1;min-width:110px;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:10px 12px"><div style="font-family:Sora,var(--font);font-size:24px;font-weight:800;color:${col}">${n}</div><div style="font-size:10.5px;color:var(--ink-3);font-weight:600">${l}</div></div>`;
+  const grupos = Object.entries(d.porGrupo).sort((a,b)=>b[1].sin - a[1].sin || a[0].localeCompare(b[0],'es'))
+    .map(([g,x]) => `<div style="display:flex;align-items:center;gap:8px;font-size:12px;padding:3px 0"><span style="width:110px;font-weight:600;color:var(--ink)">${escHtml(g)}</span><div style="flex:1;height:8px;background:#e7e5e4;border-radius:4px;overflow:hidden"><div style="height:100%;width:${x.total?Math.round((x.total-x.sin)/x.total*100):0}%;background:#2a4f94"></div></div><span style="width:120px;text-align:right;color:var(--ink-3)">${x.total-x.sin} de ${x.total} con cursos</span></div>`).join('');
+  const fila = f => {
+    const ok = f.mesesCursos > 0;
+    const det = ok ? `${f.mesesCursos} de ${f.total} meses · máx. ${f.maxCursos} curso${f.maxCursos>1?'s':''} · último: ${f.ultimo}` : `Ningún curso en ${f.total} mes${f.total>1?'es':''}${f.conRegistro && !f.particip ? ' · no informó' : ''}`;
+    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border-2);cursor:pointer" onclick="document.getElementById('modalAncCursos').style.display='none';selPubYAbrir('${f.p.id}')" onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
+      <div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(f.p.apellido)}, ${escHtml(f.p.nombre)}</div><div style="font-size:11px;color:var(--ink-3);margin-top:2px">${escHtml(f.p.grupo||'Sin grupo')} · ${det}</div></div>
+      <span style="font-size:10px;font-weight:700;padding:2px 9px;border-radius:10px;background:${ok?'#f0fdf4':'#fef2f2'};color:${ok?'#15803d':'#b91c1c'}">${ok?'Dirige cursos':'Sin cursos'}</span></div>`;
+  };
+  let ov = document.getElementById('modalAncCursos');
+  if(!ov) {
+    ov = document.createElement('div'); ov.id = 'modalAncCursos'; ov.className = 'overlay';
+    ov.innerHTML = `<div class="modal" style="max-width:640px"><div class="modal-hd"><span class="modal-hd-title">Ancianos y cursos bíblicos</span><button class="modal-x" onclick="document.getElementById('modalAncCursos').style.display='none'">×</button></div>
+      <div class="modal-body" style="padding:0;max-height:560px;overflow-y:auto" id="modalAncCursosBody"></div>
+      <div class="modal-ft"><button class="btn-cancel" onclick="document.getElementById('modalAncCursos').style.display='none'">Cerrar</button><button class="btn btn-primary" onclick="descargarAncianosCursosPDF()">🖨 Descargar PDF</button></div></div>`;
+    document.body.appendChild(ov);
+  }
+  const sel = `<select class="asist-input" style="width:auto;padding:5px 9px" onchange="setAncCursosPeriodo(this.value)">${[['1m','Último mes'],['3m','Últimos 3 meses'],['6m','Últimos 6 meses'],['anio','Año de servicio (hasta hoy)']].map(([v,t])=>`<option value="${v}"${_ancCursosPeriodo===v?' selected':''}>${t}</option>`).join('')}</select>`;
+  document.getElementById('modalAncCursosBody').innerHTML = d.total ? `
+    <div style="padding:14px 16px;border-bottom:1px solid var(--border-2)">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span style="font-size:11px;color:var(--ink-3)">Período: <strong>${_ancCursosTxtPeriodo(d)}</strong></span>${sel}</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">${kpi(d.total,'Ancianos','var(--ink)')}${kpi(d.con.length,'Dirigen cursos','#15803d')}${kpi(d.sin.length,'Sin cursos','#b91c1c')}${kpi(pct+'%','Sin cursos (del total)','#b45309')}</div>
+      <div style="font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-3);margin-bottom:4px">Por grupo</div>${grupos}
+    </div>${d.filas.map(fila).join('')}` : '<div style="padding:30px;text-align:center;color:var(--ink-3)">No hay ancianos registrados (casilla "Anciano" en el publicador).</div>';
+  ov.style.display = 'flex';
+}
+
+function descargarAncianosCursosPDF() {
+  const d = _ancCursosDatos();
+  const hoy = new Date().toLocaleDateString('es-CO', {year:'numeric',month:'long',day:'numeric'});
+  const pct = d.total ? Math.round(d.sin.length / d.total * 100) : 0;
+  const fila = f => { const ok = f.mesesCursos > 0;
+    return `<tr><td>${escHtml(f.p.apellido)}, ${escHtml(f.p.nombre)}</td><td>${escHtml(f.p.grupo||'Sin grupo')}</td><td class="c ${ok?'ok':'no'}">${ok?'Dirige cursos':'Sin cursos'}</td><td class="c">${f.mesesCursos} de ${f.total}</td><td class="c">${ok?f.maxCursos:'—'}</td><td class="c">${ok?f.ultimo:'—'}</td><td class="c">${f.conRegistro ? f.particip + ' de ' + f.conRegistro : '—'}</td></tr>`; };
+  const grupos = Object.entries(d.porGrupo).sort((a,b)=>b[1].sin - a[1].sin || a[0].localeCompare(b[0],'es'))
+    .map(([g,x]) => `<tr><td>${escHtml(g)}</td><td class="c">${x.total}</td><td class="c">${x.total-x.sin}</td><td class="c ${x.sin?'no':''}">${x.sin}</td></tr>`).join('');
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Ancianos y cursos bíblicos</title><style>
+    @page { margin:14mm } body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1814;margin:0;font-size:11px}
+    h1{font-size:18px;margin:0 0 2px} h2{font-size:13px;margin:16px 0 6px} .sub{color:#57534e;font-size:10.5px;margin-bottom:10px}
+    .k{display:flex;gap:10px;margin-bottom:6px}.k div{flex:1;border:1px solid #d6d3d1;border-radius:8px;padding:8px 10px}.k b{display:block;font-size:20px}.k span{font-size:9.5px;color:#78716c;font-weight:600}
+    table{width:100%;border-collapse:collapse}th,td{border:1px solid #d6d3d1;padding:4px 6px;text-align:left}th{background:#f1f5f9;font-size:10px}
+    .c{text-align:center}.ok{color:#15803d;background:#f0fdf4;font-weight:700}.no{color:#b91c1c;background:#fef2f2;font-weight:700} tr{page-break-inside:avoid}
+    .nota{margin-top:12px;font-size:9.5px;color:#78716c;line-height:1.5}</style></head><body>
+    <h1>Ancianos y cursos bíblicos</h1>
+    <div class="sub">Período: ${_ancCursosTxtPeriodo(d)} · Generado el ${hoy}</div>
+    <div class="k"><div><b>${d.total}</b><span>ANCIANOS</span></div><div><b style="color:#15803d">${d.con.length}</b><span>DIRIGEN CURSOS</span></div><div><b style="color:#b91c1c">${d.sin.length}</b><span>SIN CURSOS</span></div><div><b>${pct}%</b><span>SIN CURSOS DEL TOTAL</span></div></div>
+    <h2>Por grupo</h2><table><thead><tr><th>Grupo</th><th class="c">Ancianos</th><th class="c">Con cursos</th><th class="c">Sin cursos</th></tr></thead><tbody>${grupos}</tbody></table>
+    <h2>Detalle (primero los que no dirigen cursos)</h2>
+    <table><thead><tr><th>Anciano</th><th>Grupo</th><th class="c">Estado</th><th class="c">Meses con cursos</th><th class="c">Máx. cursos</th><th class="c">Último mes</th><th class="c">Meses que informó</th></tr></thead><tbody>${d.filas.map(fila).join('')}</tbody></table>
+    <div class="nota">Dirige cursos = el S-21 registra 1 o más cursos bíblicos en al menos un mes del período. Se excluyen inactivos y mudados.</div>
+    </body></html>`;
+  const w = window.open('', '_blank');
+  if(!w) { toast('⚠ Activa las ventanas emergentes'); return; }
+  w.document.write(html); w.document.close(); setTimeout(() => w.print(), 300);
+}
+
 // ══════════════════════════════════════════
 function selPubYAbrir(id) {
   irA('publicadores');
@@ -11133,6 +11323,12 @@ function renderDashboard() {
         <div class="dash-card-label">Asistencia</div>
         <div class="dash-card-value">${(state.asistencia||[]).length}</div>
         <div class="dash-card-desc">Reuniones registradas</div>
+      </div>
+      <div class="dash-card c-amber" onclick="abrirModalAncianosCursos()">
+        <div class="dash-card-ico"><svg><use href="#ico-star"/></svg></div>
+        <div class="dash-card-label">Ancianos · cursos bíblicos</div>
+        <div class="dash-card-value">${_ancCursosResumen()}</div>
+        <div class="dash-card-desc">Sin cursos · últimos 6 meses</div>
       </div>
       <div class="dash-card" onclick="abrirModalGrupos()">
         <div class="dash-card-ico"><svg><use href="#ico-gear"/></svg></div>
