@@ -3232,11 +3232,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1792456342340
           },
           "Oct": {
             "particip": false,
@@ -55023,7 +55024,7 @@
       }
     }
   ],
-  "_lastModified": 1792456293786,
+  "_lastModified": 1792456342903,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58569,6 +58570,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456342340,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Avila, Rosario · Sep 2026: horas=15",
+      "pubId": "mmm9qi4k2l0u"
+    },
+    {
+      "ts": 1792456340437,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Avila, Rosario · Sep 2026: horas=15",
+      "pubId": "mmm9qi4k2l0u"
+    },
+    {
+      "ts": 1792456340427,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Avila, Rosario · Sep 2026: horas=15",
+      "pubId": "mmm9qi4k2l0u"
+    },
+    {
       "ts": 1792456220430,
       "user": "Administrador",
       "rol": "admin",
@@ -60143,30 +60168,6 @@
       "accion": "Horas editadas",
       "detalle": "Beleño, Isaac · Sep 2026: cursos=1",
       "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1791834174007,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Isaac · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4kqpna"
-    },
-    {
-      "ts": 1791834092358,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Nuevo publicador",
-      "detalle": "Monsalva, Alfonso · Sin grupo",
-      "pubId": "p1791834092358"
-    },
-    {
-      "ts": 1791833919026,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
