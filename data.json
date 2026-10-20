@@ -44220,7 +44220,7 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1789490258227
+            "_ts": 1792457274320
           }
         },
         "2026": {
@@ -44236,7 +44236,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1792457276673
           },
           "Oct": {
             "particip": false,
@@ -55625,7 +55626,7 @@
       }
     }
   ],
-  "_lastModified": 1792457263963,
+  "_lastModified": 1792457278172,
   "vym": {
     "semanas": {},
     "historial": [
