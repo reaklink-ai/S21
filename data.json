@@ -47846,11 +47846,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459109681
           },
           "Oct": {
             "particip": false,
@@ -55827,7 +55828,7 @@
       }
     }
   ],
-  "_lastModified": 1792459105879,
+  "_lastModified": 1792459110184,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59373,6 +59374,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792459109681,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
+      "ts": 1792459109666,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alba, Nicolas · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4jq3yf"
+    },
+    {
       "ts": 1792459000745,
       "user": "Administrador",
       "rol": "admin",
@@ -60955,22 +60972,6 @@
       "accion": "Horas editadas",
       "detalle": "Bejarano, Martha · Sep 2026: horas=15",
       "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1792162793602,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Bejarano, Martha · Sep 2026: horas=15",
-      "pubId": "mmm9qi4kye7q"
-    },
-    {
-      "ts": 1792162728541,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Camila · Sep 2026: horas=16",
-      "pubId": "mmm9qi4lfo92"
     }
   ],
   "formHistorial": [
