@@ -40715,7 +40715,7 @@
       "precursorReg": false,
       "precursorEsp": false,
       "misionero": false,
-      "otrasOvejas": false,
+      "otrasOvejas": true,
       "ungido": false,
       "emergencia": {
         "nombre": "Karen Valderrama",
@@ -40723,7 +40723,8 @@
         "tel": "3103400431",
         "tel2": "",
         "direccion": "Carrera 14 A # 10-27S conjunto Sauce T:7 apto:804",
-        "notasMed": ""
+        "notasMed": "",
+        "_ts": 1792457119008
       },
       "registros": {
         "2024": {
@@ -40969,7 +40970,9 @@
           "horas": 0,
           "cursos": 0
         }
-      }
+      },
+      "precAuxContinuo": false,
+      "_tsPersonal": 1792457119008
     },
     {
       "id": "mmm9qi4t6vl7",
@@ -55618,7 +55621,7 @@
       }
     }
   ],
-  "_lastModified": 1792457115048,
+  "_lastModified": 1792457120668,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59164,6 +59167,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457119008,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Valderrama, Melissa · datos generales",
+      "pubId": "mmm9qi4tlges"
+    },
+    {
       "ts": 1792457102030,
       "user": "Administrador",
       "rol": "admin",
@@ -60753,14 +60764,6 @@
       "rol": "anciano",
       "accion": "Horas editadas",
       "detalle": "Ramos, Miguel · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095924711,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Sep 2026: cursos=2",
       "pubId": "mmm9qi4r1pju"
     }
   ],
