@@ -44984,11 +44984,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "39",
+            "notas": "",
+            "_ts": 1792455811131
           },
           "Oct": {
             "particip": false,
@@ -54868,7 +54869,7 @@
       }
     }
   ],
-  "_lastModified": 1792455776605,
+  "_lastModified": 1792455811732,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58414,6 +58415,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455811131,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ormaza, Gloria · Sep 2026: horas=39",
+      "pubId": "p1777912957789"
+    },
+    {
+      "ts": 1792455811123,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ormaza, Gloria · Sep 2026: horas=39",
+      "pubId": "p1777912957789"
+    },
+    {
       "ts": 1792455775363,
       "user": "Administrador",
       "rol": "admin",
@@ -59995,22 +60012,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Ago 2025: horas=52",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829415826,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jul 2025: horas=51",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829415815,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Jul 2025: horas=51",
       "pubId": "p1791829298292"
     }
   ],
