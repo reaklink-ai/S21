@@ -39166,11 +39166,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "43 horas Betel",
+            "_ts": 1792456202304
           },
           "Oct": {
             "particip": false,
@@ -55019,7 +55020,7 @@
       }
     }
   ],
-  "_lastModified": 1792456179993,
+  "_lastModified": 1792456203059,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58565,6 +58566,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456194840,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Sep 2026: horas=12",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1792456194834,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Sep 2026: horas=12",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1792456193743,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Sep 2026: cursos=",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
       "ts": 1792456179477,
       "user": "Administrador",
       "rol": "admin",
@@ -60138,30 +60163,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Manosalva, Nidia · Ago 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829539028,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Jul 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829539020,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Jul 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829538328,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Jun 2025: cursos=1",
       "pubId": "p1791829505304"
     }
   ],
