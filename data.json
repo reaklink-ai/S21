@@ -48242,11 +48242,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792456139461
           },
           "Oct": {
             "particip": false,
@@ -55015,7 +55016,7 @@
       }
     }
   ],
-  "_lastModified": 1792456128835,
+  "_lastModified": 1792456139972,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58561,6 +58562,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456139461,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Alejandra · Sep 2026: cursos=3",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1792456139455,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Alejandra · Sep 2026: cursos=3",
+      "pubId": "p1781993516577"
+    },
+    {
       "ts": 1792456128347,
       "user": "Administrador",
       "rol": "admin",
@@ -60143,22 +60160,6 @@
       "accion": "Nuevo publicador",
       "detalle": "Manosalva, Nidia · Sin grupo",
       "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829431385,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Sep 2026: horas=36",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829431377,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Sep 2026: horas=36",
-      "pubId": "p1791829298292"
     }
   ],
   "formHistorial": [
