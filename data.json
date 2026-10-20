@@ -2821,6 +2821,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5058,6 +5065,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -5226,6 +5240,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -5926,6 +5947,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -7071,6 +7099,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7504,6 +7539,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -7668,6 +7710,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -11789,6 +11838,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -12453,6 +12509,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -17064,6 +17127,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -31277,6 +31347,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -36460,6 +36537,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -36896,6 +36980,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -40607,6 +40698,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -46724,6 +46822,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -47275,6 +47380,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       }
@@ -47587,11 +47699,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792454977042
           },
           "Oct": {
             "particip": false,
@@ -48788,6 +48901,13 @@
         },
         "2026": {
           "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Sep": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -54239,7 +54359,7 @@
       }
     }
   ],
-  "_lastModified": 1792454721708,
+  "_lastModified": 1792454984048,
   "vym": {
     "semanas": {},
     "historial": [
