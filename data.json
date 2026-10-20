@@ -15712,11 +15712,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1792456388708
           },
           "Oct": {
             "particip": false,
@@ -55097,7 +55098,7 @@
       }
     }
   ],
-  "_lastModified": 1792456372067,
+  "_lastModified": 1792456389974,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58643,6 +58644,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456388708,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2026: horas=55",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1792456388702,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2026: horas=55",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1792456385518,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1792456385510,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
       "ts": 1792456370779,
       "user": "Administrador",
       "rol": "admin",
@@ -60209,38 +60242,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Oscar · Sep 2026: cursos=2",
       "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1791834284140,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1791834239955,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Sep 2026: horas=6",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1791834236185,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Sep 2026: horas=6",
-      "pubId": "mmm9qi4k0gox"
-    },
-    {
-      "ts": 1791834236176,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Beleño, Laura · Sep 2026: horas=6",
-      "pubId": "mmm9qi4k0gox"
     }
   ],
   "formHistorial": [
