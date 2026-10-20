@@ -5700,7 +5700,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "Sacado de la congregación",
+            "_ts": 1792455000326
           },
           "Oct": {
             "particip": false,
@@ -54360,7 +54361,7 @@
       }
     }
   ],
-  "_lastModified": 1792454988033,
+  "_lastModified": 1792455001445,
   "vym": {
     "semanas": {},
     "historial": [
