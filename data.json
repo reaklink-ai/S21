@@ -25580,7 +25580,7 @@
             "paux": false,
             "horas": "7",
             "notas": "48 horas betel",
-            "_ts": 1788974125678
+            "_ts": 1792456463030
           }
         },
         "2026": {
@@ -25592,11 +25592,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "8",
+            "notas": "64 horas betel",
+            "_ts": 1792456471492
           },
           "Oct": {
             "particip": false,
@@ -55172,7 +55173,7 @@
       }
     }
   ],
-  "_lastModified": 1792456441282,
+  "_lastModified": 1792456473273,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58718,6 +58719,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456457621,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Sep 2026: horas=8",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
+      "ts": 1792456457613,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Sep 2026: horas=8",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1792456420729,
       "user": "Administrador",
       "rol": "admin",
@@ -60300,22 +60317,6 @@
       "accion": "Horas editadas",
       "detalle": "Parra, Flor Alba · Sep 2026: cursos=3",
       "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1791834318488,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1791834318480,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4q8sw6"
     }
   ],
   "formHistorial": [
