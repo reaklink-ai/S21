@@ -10856,7 +10856,7 @@
           "Dic": {
             "particip": false,
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1781578703521
+            "_ts": 1792455399103
           },
           "Ene": {
             "particip": false,
@@ -10920,12 +10920,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1792455387540
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1792455401432
           },
           "Oct": {
             "particip": false,
@@ -54783,7 +54783,7 @@
       }
     }
   ],
-  "_lastModified": 1792455388942,
+  "_lastModified": 1792455402346,
   "vym": {
     "semanas": {},
     "historial": [
