@@ -47327,7 +47327,7 @@
             "paux": false,
             "horas": "",
             "notas": "NO INFORMO EN EL MES",
-            "_ts": 1778011504760
+            "_ts": 1792459094561
           },
           "Mar": {
             "particip": false,
@@ -47391,7 +47391,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1792459096561
           },
           "Oct": {
             "particip": false,
@@ -47440,7 +47441,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459097230
           },
           "May": {
             "particip": false,
@@ -55824,7 +55826,7 @@
       }
     }
   ],
-  "_lastModified": 1792459062859,
+  "_lastModified": 1792459097868,
   "vym": {
     "semanas": {},
     "historial": [
