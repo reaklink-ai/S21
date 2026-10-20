@@ -2824,6 +2824,78 @@
             "notas": ""
           },
           "Sep": {
+            "particip": true,
+            "cursos": "1",
+            "paux": false,
+            "horas": "52",
+            "notas": "NUEVO PRECURSOR REGULAR",
+            "_ts": 1792456801167
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": "",
+            "_ts": 1792456776789
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -55248,7 +55320,7 @@
       }
     }
   ],
-  "_lastModified": 1792456767737,
+  "_lastModified": 1792456803192,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58794,6 +58866,62 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456782065,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Sep 2026: horas=52",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456782059,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Sep 2026: horas=52",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456778659,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Sep 2026: horas=",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456778178,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456778172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456776789,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Oct 2026: cursos=",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
+      "ts": 1792456774015,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Oct 2026: cursos=",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
       "ts": 1792456597326,
       "user": "Administrador",
       "rol": "admin",
@@ -60336,62 +60464,6 @@
       "accion": "Horas editadas",
       "detalle": "Jimenez, Flor · Sep 2026: cursos=1",
       "pubId": "mmm9qi4nszua"
-    },
-    {
-      "ts": 1791834801529,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1791834798979,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1791834798971,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1791834796154,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Jimenez, Carlos · Sep 2026: horas=",
-      "pubId": "mmm9qi4n3qgi"
-    },
-    {
-      "ts": 1791834719762,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro, Luz Helena · Sep 2026: horas=15",
-      "pubId": "mmm9qi4lss62"
-    },
-    {
-      "ts": 1791834719757,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro, Luz Helena · Sep 2026: horas=15",
-      "pubId": "mmm9qi4lss62"
-    },
-    {
-      "ts": 1791834677874,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Amortegui, Cesar Mauricio · Sep 2026: horas=15",
-      "pubId": "mmm9qi4jl2r2"
     }
   ],
   "formHistorial": [
