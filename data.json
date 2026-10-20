@@ -5947,11 +5947,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "48",
+            "notas": "",
+            "_ts": 1792455049368
           },
           "Oct": {
             "particip": false,
@@ -54704,7 +54705,7 @@
       }
     }
   ],
-  "_lastModified": 1792455038761,
+  "_lastModified": 1792455049771,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58250,6 +58251,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455049368,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Sep 2026: horas=48",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
+      "ts": 1792455049363,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Stefany · Sep 2026: horas=48",
+      "pubId": "mmm9qi4lgiwv"
+    },
+    {
       "ts": 1792455038264,
       "user": "Administrador",
       "rol": "admin",
@@ -59831,22 +59848,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Abr 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829336903,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Abr 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829336127,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Mar 2025: cursos=1",
       "pubId": "p1791829298292"
     }
   ],
