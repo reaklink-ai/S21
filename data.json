@@ -17271,11 +17271,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1792457328243
           },
           "Oct": {
             "particip": false,
@@ -55629,7 +55630,7 @@
       }
     }
   ],
-  "_lastModified": 1792457308357,
+  "_lastModified": 1792457329498,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59175,6 +59176,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457328243,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Sep 2026: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
+      "ts": 1792457328236,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Sep 2026: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
       "ts": 1792457119008,
       "user": "Administrador",
       "rol": "admin",
@@ -60757,22 +60774,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Daniela · Sep 2026: horas=8",
       "pubId": "mmm9qi4rwj0v"
-    },
-    {
-      "ts": 1792095928476,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4r1pju"
-    },
-    {
-      "ts": 1792095925055,
-      "user": "Miguel_R",
-      "rol": "anciano",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Miguel · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4r1pju"
     }
   ],
   "formHistorial": [
