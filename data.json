@@ -52263,11 +52263,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "16",
+            "notas": "",
+            "_ts": 1792458960560
           },
           "Oct": {
             "particip": false,
@@ -52352,7 +52353,7 @@
       "nombre": "Catherine",
       "nacimiento": "1983-07-18",
       "bautismo": "2016-07-23",
-      "grupo": "",
+      "grupo": "Grupo 2",
       "telefono": "",
       "genero": "F",
       "otrasOvejas": true,
@@ -52363,7 +52364,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1791828303713,
+      "_tsPersonal": 1792458948650,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -52371,7 +52372,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1791828303713
+        "_ts": 1792458948650
       }
     },
     {
@@ -55732,7 +55733,7 @@
       }
     }
   ],
-  "_lastModified": 1792458872749,
+  "_lastModified": 1792458964520,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59278,6 +59279,54 @@
   ],
   "auditoria": [
     {
+      "ts": 1792458960560,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2026: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1792458960551,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2026: horas=16",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1792458957235,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2026: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1792458957223,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Sep 2026: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1792458948650,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Uribe, Catherine · Grupo: ninguno → Grupo 2",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1792458912884,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792458091519,
       "user": "Administrador",
       "rol": "admin",
@@ -60828,54 +60877,6 @@
       "accion": "Horas editadas",
       "detalle": "Chacon, Alfonso · Sep 2026: cursos=1",
       "pubId": "mmm9qi4l1oio"
-    },
-    {
-      "ts": 1792162675288,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Sep 2026: horas=42",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1792162675270,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Sep 2026: horas=42",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1792162669874,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1792162669861,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Chacon, Lina · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4lxrtx"
-    },
-    {
-      "ts": 1792162639443,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2026: horas=50",
-      "pubId": "mmm9qi4rre7b"
-    },
-    {
-      "ts": 1792162639427,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Martha · Sep 2026: horas=50",
-      "pubId": "mmm9qi4rre7b"
     }
   ],
   "formHistorial": [
