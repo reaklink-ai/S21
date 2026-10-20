@@ -17237,6 +17237,77 @@
             "notas": ""
           },
           "Sep": {
+            "particip": true,
+            "cursos": "2",
+            "paux": false,
+            "horas": "31",
+            "notas": "",
+            "_ts": 1792456420729
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -55099,7 +55170,7 @@
       }
     }
   ],
-  "_lastModified": 1792456408046,
+  "_lastModified": 1792456421455,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58645,6 +58716,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456420729,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Sep 2026: horas=31",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1792456420722,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Sep 2026: horas=31",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1792456418629,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
+      "ts": 1792456418622,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Martha · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4n8uw3"
+    },
+    {
       "ts": 1792456406955,
       "user": "Administrador",
       "rol": "admin",
@@ -60211,38 +60314,6 @@
       "accion": "Horas editadas",
       "detalle": "Lugo, Yasmilys · Sep 2026: cursos=1",
       "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1791834315072,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1791834312069,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1791834312062,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Yasmilys · Sep 2026: horas=32",
-      "pubId": "mmm9qi4q8sw6"
-    },
-    {
-      "ts": 1791834286330,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Sep 2026: horas=32",
-      "pubId": "mmm9qi4otsz7"
     }
   ],
   "formHistorial": [
