@@ -25513,11 +25513,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "35",
+            "notas": "",
+            "_ts": 1792455464236
           },
           "Oct": {
             "particip": false,
@@ -54787,7 +54788,7 @@
       }
     }
   ],
-  "_lastModified": 1792455440277,
+  "_lastModified": 1792455464734,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58333,6 +58334,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455464237,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1792455460630,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1792455460621,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Sep 2026: horas=35",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
       "ts": 1792455438615,
       "user": "Administrador",
       "rol": "admin",
@@ -59906,30 +59931,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Sep 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829348157,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ago 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829345966,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ago 2025: cursos=2",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829345957,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Ago 2025: cursos=2",
       "pubId": "p1791829298292"
     }
   ],
