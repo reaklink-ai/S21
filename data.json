@@ -37899,11 +37899,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792459802616
           },
           "Oct": {
             "particip": false,
@@ -55833,7 +55834,7 @@
       }
     }
   ],
-  "_lastModified": 1792459797989,
+  "_lastModified": 1792459804605,
   "vym": {
     "semanas": {},
     "historial": [
