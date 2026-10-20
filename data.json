@@ -26146,7 +26146,7 @@
             "paux": false,
             "horas": "32",
             "notas": "18 horas SAC",
-            "_ts": 1788973193670
+            "_ts": 1792455514123
           }
         },
         "2026": {
@@ -26158,11 +26158,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "27",
+            "notas": "25 horas SAC",
+            "_ts": 1792455523763
           },
           "Oct": {
             "particip": false,
@@ -54789,7 +54790,7 @@
       }
     }
   ],
-  "_lastModified": 1792455502896,
+  "_lastModified": 1792455525316,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58335,6 +58336,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792455508576,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Sep 2026: horas=27",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1792455508568,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Sep 2026: horas=27",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
       "ts": 1792455501583,
       "user": "Administrador",
       "rol": "admin",
@@ -59916,22 +59933,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Zuleta, Brenda · Ene 2025: horas=",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829367947,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Nov 2025: horas=50",
-      "pubId": "p1791829298292"
-    },
-    {
-      "ts": 1791829367938,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Nov 2025: horas=50",
       "pubId": "p1791829298292"
     }
   ],
