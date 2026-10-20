@@ -35837,18 +35837,20 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1792456516607
           },
           "Oct": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792456514627
           },
           "Nov": {
             "particip": false,
@@ -55244,7 +55246,7 @@
       }
     }
   ],
-  "_lastModified": 1792456482692,
+  "_lastModified": 1792456517917,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58790,6 +58792,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456516607,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Sep 2026: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1792456516600,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Sep 2026: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1792456514627,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Oct 2026: horas=",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1792456513860,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1792456513850,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
       "ts": 1792456457621,
       "user": "Administrador",
       "rol": "admin",
@@ -60348,46 +60390,6 @@
       "accion": "Horas editadas",
       "detalle": "Pelaez, Neismer · Sep 2026: horas=18",
       "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1791834381705,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Pelaez, Neismer · Sep 2026: horas=18",
-      "pubId": "mmm9qi4r9s54"
-    },
-    {
-      "ts": 1791834339379,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Sep 2026: horas=60",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1791834339372,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Sep 2026: horas=60",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1791834337179,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4qzusx"
-    },
-    {
-      "ts": 1791834337172,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Parra, Flor Alba · Sep 2026: cursos=3",
-      "pubId": "mmm9qi4qzusx"
     }
   ],
   "formHistorial": [
