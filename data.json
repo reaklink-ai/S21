@@ -16707,11 +16707,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1792456406955
           },
           "Oct": {
             "particip": false,
@@ -55098,7 +55099,7 @@
       }
     }
   ],
-  "_lastModified": 1792456389974,
+  "_lastModified": 1792456408046,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58644,6 +58645,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456406955,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Daniel · Sep 2026: horas=15",
+      "pubId": "mmm9qi4nr0kx"
+    },
+    {
+      "ts": 1792456406947,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Daniel · Sep 2026: horas=15",
+      "pubId": "mmm9qi4nr0kx"
+    },
+    {
       "ts": 1792456388708,
       "user": "Administrador",
       "rol": "admin",
@@ -60225,22 +60242,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Lugo, Oscar · Sep 2026: horas=32",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1791834286322,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Sep 2026: horas=32",
-      "pubId": "mmm9qi4otsz7"
-    },
-    {
-      "ts": 1791834284151,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lugo, Oscar · Sep 2026: cursos=2",
       "pubId": "mmm9qi4otsz7"
     }
   ],
