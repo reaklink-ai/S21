@@ -44701,11 +44701,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1792455416911
           },
           "Oct": {
             "particip": false,
@@ -54784,7 +54785,7 @@
       }
     }
   ],
-  "_lastModified": 1792455408607,
+  "_lastModified": 1792455419334,
   "vym": {
     "semanas": {},
     "historial": [
