@@ -51769,11 +51769,12 @@
         },
         "2026": {
           "Sep": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1792458021292
           },
           "Oct": {
             "particip": false,
@@ -55720,7 +55721,7 @@
       }
     }
   ],
-  "_lastModified": 1792458002037,
+  "_lastModified": 1792458021828,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59266,6 +59267,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792458021292,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Sep 2026: horas=50",
+      "pubId": "p1789569820666"
+    },
+    {
+      "ts": 1792458021282,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Sep 2026: horas=50",
+      "pubId": "p1789569820666"
+    },
+    {
+      "ts": 1792458017611,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Sep 2026: cursos=1",
+      "pubId": "p1789569820666"
+    },
+    {
+      "ts": 1792458017598,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Sep 2026: cursos=1",
+      "pubId": "p1789569820666"
+    },
+    {
       "ts": 1792458001498,
       "user": "Administrador",
       "rol": "admin",
@@ -60832,38 +60865,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Roger · Sep 2026: horas=43",
       "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1792162599816,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Roger · Sep 2026: horas=43",
-      "pubId": "mmm9qi4rhmxc"
-    },
-    {
-      "ts": 1792162565114,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Sep 2026: horas=20",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1792162565099,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Adriana · Sep 2026: horas=20",
-      "pubId": "mmm9qi4ndp9i"
-    },
-    {
-      "ts": 1792162539208,
-      "user": "Felipe_C",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Gabriela · Sep 2026: horas=20",
-      "pubId": "mmm9qi4now8s"
     }
   ],
   "formHistorial": [
