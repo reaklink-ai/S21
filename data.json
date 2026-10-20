@@ -42192,11 +42192,12 @@
             "notas": ""
           },
           "Sep": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "21",
+            "notas": "",
+            "_ts": 1792456220430
           },
           "Oct": {
             "particip": false,
@@ -55020,7 +55021,7 @@
       }
     }
   ],
-  "_lastModified": 1792456203059,
+  "_lastModified": 1792456220933,
   "vym": {
     "semanas": {},
     "historial": [
@@ -58566,6 +58567,46 @@
   ],
   "auditoria": [
     {
+      "ts": 1792456220430,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Sep 2026: horas=21",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1792456220425,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Sep 2026: horas=21",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1792456215269,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Sep 2026: horas=",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1792456214404,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
+      "ts": 1792456214393,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Yanes, Maria · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4tpwhw"
+    },
+    {
       "ts": 1792456194840,
       "user": "Administrador",
       "rol": "admin",
@@ -60124,46 +60165,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1791833918961,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1791831696842,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1791829779589,
-      "user": "Harold_La",
-      "rol": "anciano",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1791829540229,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Ago 2025: cursos=1",
-      "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1791829540221,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Manosalva, Nidia · Ago 2025: cursos=1",
-      "pubId": "p1791829505304"
     }
   ],
   "formHistorial": [
