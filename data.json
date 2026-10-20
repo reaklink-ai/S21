@@ -22039,11 +22039,11 @@
           },
           "Sep": {
             "particip": true,
-            "cursos": "",
+            "cursos": "2",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792457009941
+            "_ts": 1792457019822
           },
           "Oct": {
             "particip": false,
@@ -55539,7 +55539,7 @@
       }
     }
   ],
-  "_lastModified": 1792457011603,
+  "_lastModified": 1792457020323,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59085,6 +59085,38 @@
   ],
   "auditoria": [
     {
+      "ts": 1792457019822,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1792457019812,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=2",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1792457014614,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
+      "ts": 1792457014606,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=1",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
       "ts": 1792456902214,
       "user": "Administrador",
       "rol": "admin",
@@ -60650,38 +60682,6 @@
       "rol": "admin",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1792069688453,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1792034044530,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
-      "pubId": null
-    },
-    {
-      "ts": 1791991862824,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1791939305771,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
     }
   ],
