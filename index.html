@@ -3231,6 +3231,9 @@ input:focus, select:focus, textarea:focus {
         <button class="sb-nav-item sb-perm-export" onclick="exportarPDFGrupos()">
           <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-move"/></svg></span>PDF Estructura grupos
         </button>
+        <button class="sb-nav-item sb-perm-export" onclick="exportarExcelGrupos()">
+          <span class="sb-nav-ico"><svg width="16" height="16"><use href="#ico-move"/></svg></span>Excel Estructura grupos
+        </button>
         <button class="sb-nav-item sb-perm-export" onclick="abrirInformeGrupo()">
           <span class="sb-nav-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>Informe por Grupo
         </button>
@@ -7456,6 +7459,164 @@ function regresarMudado(id) {
 // ══════════════════════════════════════════
 // PDF ESTRUCTURA DE GRUPOS
 // ══════════════════════════════════════════
+// ── Estructura de grupos en Excel: misma distribución y colores que el PDF ──
+// Hoja "Estructura": franjas de 7 grupos (encabezado azul, superintendente celeste, auxiliar verde, miembros con filas alternas).
+// Hojas "Listado" (una fila por publicador, con filtros) y "Resumen" (una fila por grupo).
+// Los estilos requieren ExcelJS (se carga al momento desde cdnjs); si no hay conexión se baja una versión sin colores.
+function _gruposDatosExport() {
+  const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
+  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
+  const pubsAct  = state.publicadores.filter(p => !_mudIds.has(p.id) && !_inacIds.has(p.id));
+  const orden = (a,b) => (a.apellido||'').localeCompare(b.apellido||'','es') || (a.nombre||'').localeCompare(b.nombre||'','es');
+  const nom = p => p ? `${p.apellido||''}, ${p.nombre||''}`.replace(/^, |, $/g,'') : '';
+  const tipo = p => [p.anciano&&'Anciano', p.siervo&&'Siervo ministerial', p.misionero&&'Misionero', p.precursorEsp&&'Precursor especial', p.precursorReg&&'Precursor regular'].filter(Boolean).join(' · ') || 'Publicador';
+  const grupos = GRUPOS_LISTA.filter(g => pubsAct.some(p => p.grupo === g));
+  const sinGrupo = pubsAct.filter(p => !p.grupo || !GRUPOS_LISTA.includes(p.grupo));
+  const datos = grupos.map(g => {
+    const cfg = state.grupos?.[g] || {};
+    const sup = cfg.super ? pubsAct.find(p => p.id === cfg.super) : null;
+    const aux = cfg.aux   ? pubsAct.find(p => p.id === cfg.aux)   : null;
+    return { g, sup, aux, miembros: pubsAct.filter(p => p.grupo === g).sort(orden) };
+  });
+  if(sinGrupo.length) datos.push({ g:'Sin grupo', sup:null, aux:null, miembros: sinGrupo.sort(orden) });
+  const f = new Date();
+  const fechaArch = f.getFullYear() + '-' + String(f.getMonth()+1).padStart(2,'0') + '-' + String(f.getDate()).padStart(2,'0');
+  return { datos, nom, tipo, fechaArch, fechaTxt: f.toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'}) };
+}
+
+function _cargarScriptExterno(url) {
+  return new Promise((res, rej) => {
+    const sc = document.createElement('script'); sc.src = url; sc.onload = res; sc.onerror = () => rej(new Error('No se pudo cargar ' + url));
+    document.head.appendChild(sc);
+  });
+}
+
+async function exportarExcelGrupos() {
+  const E = _gruposDatosExport();
+  if(!E.datos.length) { toast('No hay publicadores para exportar'); return; }
+  try {
+    if(typeof ExcelJS === 'undefined') await _cargarScriptExterno('https://cdnjs.cloudflare.com/ajax/libs/exceljs/4.4.0/exceljs.min.js');
+    await _excelGruposEstilo(E);
+    toast('✓ Excel de grupos descargado');
+  } catch(e) {
+    console.warn('[S21] Excel con estilos no disponible, se baja la versión simple:', e);
+    _excelGruposSimple(E);
+  }
+}
+
+async function _excelGruposEstilo(E) {
+  const { datos, nom, tipo } = E;
+  const AZUL = 'FF3D5A9E', AZUL_OSC = 'FF1E3A6E', CELESTE = 'FFEEF1F9', VERDE = 'FFF0FAF4', VERDE_OSC = 'FF1A5C38', ALT = 'FFF5F7FC';
+  const wb = new ExcelJS.Workbook();
+  wb.creator = 'S-21'; wb.created = new Date();
+  const ws = wb.addWorksheet('Estructura', { views:[{ showGridLines:false }] });
+  const COLS = 7;
+  ws.columns = Array.from({length:COLS}, () => ({ width: 31 }));
+  const total = datos.reduce((s,d) => s + d.miembros.length, 0);
+
+  // Título
+  ws.mergeCells(1,1,1,COLS);
+  const t = ws.getCell(1,1); t.value = 'Estructura de grupos';
+  t.font = { name:'Calibri', size:18, bold:true, color:{argb:AZUL} }; t.alignment = { vertical:'middle' };
+  ws.getRow(1).height = 28;
+  ws.mergeCells(2,1,2,COLS);
+  const st = ws.getCell(2,1); st.value = `${datos.length} grupo${datos.length!==1?'s':''} · ${total} publicadores · ${E.fechaTxt}`;
+  st.font = { name:'Calibri', size:10, color:{argb:'FF888888'} };
+  for(let c=1;c<=COLS;c++) ws.getCell(2,c).border = { bottom:{style:'medium', color:{argb:AZUL}} };
+  ws.getRow(2).height = 20;
+
+  let r = 4;
+  for(let b = 0; b < datos.length; b += COLS) {
+    const bloque = datos.slice(b, b + COLS);
+    const maxF = Math.max(...bloque.map(d => d.miembros.length), 0);
+    // encabezado de grupo
+    bloque.forEach((d,i) => {
+      const c = ws.getCell(r, i+1);
+      c.value = { richText:[ {text:d.g, font:{name:'Calibri',size:12,bold:true,color:{argb:'FFFFFFFF'}}}, {text:'   ' + d.miembros.length, font:{name:'Calibri',size:9,color:{argb:'FFD6DEF2'}}} ] };
+      c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:AZUL} };
+      c.alignment = { vertical:'middle', indent:1 };
+      c.border = { right:{style:'medium', color:{argb:'FFFFFFFF'}} };
+    });
+    ws.getRow(r).height = 24;
+    // superintendente
+    bloque.forEach((d,i) => {
+      const c = ws.getCell(r+1, i+1);
+      c.value = { richText:[ {text:'SUPERINTENDENTE\n', font:{name:'Calibri',size:7,bold:true,color:{argb:'FF7A8DB8'}}}, {text: d.sup ? nom(d.sup) : '—', font:{name:'Calibri',size:10,bold:true,color:{argb:AZUL_OSC}}} ] };
+      c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:CELESTE} };
+      c.alignment = { vertical:'middle', wrapText:true, indent:1 };
+      c.border = { right:{style:'thin', color:{argb:'FFC8D4EE'}}, bottom:{style:'thin', color:{argb:'FFC8D4EE'}} };
+    });
+    ws.getRow(r+1).height = 30;
+    // auxiliar
+    bloque.forEach((d,i) => {
+      const c = ws.getCell(r+2, i+1);
+      c.value = { richText:[ {text:'AUXILIAR\n', font:{name:'Calibri',size:7,bold:true,color:{argb:'FF6FA88A'}}}, {text: d.aux ? nom(d.aux) : '—', font:{name:'Calibri',size:10,bold:true,color:{argb:VERDE_OSC}}} ] };
+      c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:VERDE} };
+      c.alignment = { vertical:'middle', wrapText:true, indent:1 };
+      c.border = { right:{style:'thin', color:{argb:'FFB8D9C8'}}, bottom:{style:'medium', color:{argb:AZUL}} };
+    });
+    ws.getRow(r+2).height = 30;
+    // miembros
+    for(let i = 0; i < maxF; i++) {
+      bloque.forEach((d,k) => {
+        const p = d.miembros[i];
+        const c = ws.getCell(r+3+i, k+1);
+        c.value = p ? nom(p) : '';
+        c.font = { name:'Calibri', size:10, color:{argb:'FF333333'} };
+        c.alignment = { vertical:'middle', indent:1 };
+        if(i % 2 === 1) c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:ALT} };
+        c.border = { right:{style:'thin', color:{argb:'FFE8ECF5'}}, bottom:{style:'thin', color:{argb:'FFF2F4F8'}} };
+      });
+      ws.getRow(r+3+i).height = 17;
+    }
+    r += 3 + maxF;
+    ws.getRow(r).height = 12; // separación entre franjas
+    r += 1;
+  }
+  ws.pageSetup = { orientation:'landscape', paperSize:9, fitToPage:true, fitToWidth:1, fitToHeight:0,
+    margins:{ left:0.3, right:0.3, top:0.4, bottom:0.4, header:0.2, footer:0.2 } };
+
+  // Hoja Listado
+  const ws2 = wb.addWorksheet('Listado', { views:[{ state:'frozen', ySplit:1 }] });
+  ws2.columns = [{header:'Grupo',width:12},{header:'Apellido',width:24},{header:'Nombre',width:22},{header:'Tipo',width:28},{header:'Superintendente de grupo',width:24},{header:'Auxiliar de grupo',width:18},{header:'Teléfono',width:16}];
+  datos.forEach(d => d.miembros.forEach(p => ws2.addRow([d.g, p.apellido||'', p.nombre||'', tipo(p), d.sup && d.sup.id===p.id ? 'Sí':'', d.aux && d.aux.id===p.id ? 'Sí':'', p.telefono||''])));
+  const h2 = ws2.getRow(1); h2.height = 22;
+  h2.eachCell(c => { c.font = { bold:true, color:{argb:'FFFFFFFF'} }; c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:AZUL} }; c.alignment = { vertical:'middle' }; });
+  ws2.autoFilter = { from:{row:1,column:1}, to:{row:1,column:7} };
+
+  // Hoja Resumen
+  const ws3 = wb.addWorksheet('Resumen', { views:[{ state:'frozen', ySplit:1 }] });
+  ws3.columns = [{header:'Grupo',width:12},{header:'Superintendente',width:30},{header:'Auxiliar',width:30},{header:'Publicadores',width:14}];
+  datos.forEach(d => ws3.addRow([d.g, d.sup ? nom(d.sup) : '', d.aux ? nom(d.aux) : '', d.miembros.length]));
+  const tr = ws3.addRow(['Total','','',total]); tr.font = { bold:true }; tr.eachCell(c => { c.border = { top:{style:'thin'} }; });
+  const h3 = ws3.getRow(1); h3.height = 22;
+  h3.eachCell(c => { c.font = { bold:true, color:{argb:'FFFFFFFF'} }; c.fill = { type:'pattern', pattern:'solid', fgColor:{argb:AZUL} }; c.alignment = { vertical:'middle' }; });
+
+  const buf = await wb.xlsx.writeBuffer();
+  const blob = new Blob([buf], { type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'Estructura_grupos_' + E.fechaArch + '.xlsx';
+  document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+}
+
+// Respaldo sin colores (SheetJS) para cuando no se puede cargar ExcelJS
+function _excelGruposSimple(E) {
+  if(typeof XLSX === 'undefined') { alert('No se pudo generar el Excel (sin conexión a internet). Conéctate y vuelve a intentar.'); return; }
+  const { datos, nom, tipo } = E;
+  const maxM = Math.max(...datos.map(d => d.miembros.length), 0);
+  const filas = [ datos.map(d => `${d.g} (${d.miembros.length})`), datos.map(d => 'Superintendente: ' + (d.sup ? nom(d.sup) : '—')), datos.map(d => 'Auxiliar: ' + (d.aux ? nom(d.aux) : '—')), datos.map(() => '') ];
+  for(let i = 0; i < maxM; i++) filas.push(datos.map(d => d.miembros[i] ? nom(d.miembros[i]) : ''));
+  const ws1 = XLSX.utils.aoa_to_sheet(filas); ws1['!cols'] = datos.map(() => ({ wch:34 }));
+  const filas2 = []; datos.forEach(d => d.miembros.forEach(p => filas2.push([d.g, p.apellido||'', p.nombre||'', tipo(p), d.sup && d.sup.id===p.id ? 'Sí':'', d.aux && d.aux.id===p.id ? 'Sí':'', p.telefono||''])));
+  const ws2 = XLSX.utils.aoa_to_sheet([['Grupo','Apellido','Nombre','Tipo','Superintendente de grupo','Auxiliar de grupo','Teléfono'], ...filas2]);
+  ws2['!cols'] = [{wch:12},{wch:24},{wch:22},{wch:28},{wch:22},{wch:18},{wch:16}];
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws1, 'Estructura'); XLSX.utils.book_append_sheet(wb, ws2, 'Listado');
+  XLSX.writeFile(wb, 'Estructura_grupos_' + E.fechaArch + '.xlsx');
+  toast('✓ Excel de grupos descargado (versión sin colores)');
+}
+
 function exportarPDFGrupos() {
   const fechaHoy = new Date().toLocaleDateString('es-CO',{year:'numeric',month:'long',day:'numeric'});
   const _mudIds  = new Set((state.mudados||[]).map(m=>m.id));
@@ -7664,114 +7825,6 @@ function _renderDashNoInf() {
     </div>
     <div style="flex:1;overflow-y:auto;padding:0 6px 10px">${lista}${masLabel}</div>`;
 }
-// ══════════════════════════════════════════
-// ANCIANOS Y CURSOS BÍBLICOS
-// ══════════════════════════════════════════
-// Un curso bíblico dirigido = campo "cursos" > 0 en el S-21 de ese mes. Se revisa el período elegido
-// (termina en el mes a reportar) y se cuenta a cada anciano: meses con cursos, máximo de cursos y último mes con cursos.
-let _ancCursosPeriodo = '6m'; // '1m' | '3m' | '6m' | 'anio'
-function _ancCursosVentana() {
-  const ma = mesActual(), v = [];
-  const n = _ancCursosPeriodo === '1m' ? 1 : _ancCursosPeriodo === '3m' ? 3 : _ancCursosPeriodo === 'anio' ? ma.idx + 1 : 6;
-  for(let i = n - 1; i >= 0; i--) {
-    let idx = ma.idx - i, a = ma.anio;
-    if(idx < 0) { idx += 12; a--; }
-    v.push({ m: MESES_C[idx], a });
-  }
-  return v;
-}
-function _ancCursosDatos(periodo) {
-  const prev = _ancCursosPeriodo; if(periodo) _ancCursosPeriodo = periodo;
-  const ventana = _ancCursosVentana(); _ancCursosPeriodo = prev;
-  const _mudIds = new Set((state.mudados||[]).map(m=>m.id));
-  const _inacIds = new Set((state.inactivos||[]).map(i=>i.id));
-  const _soloGrupo = can('soloGrupo') && currentUser?.grupo;
-  const ancianos = state.publicadores.filter(p => p.anciano && !_mudIds.has(p.id) && !_inacIds.has(p.id) && (_soloGrupo ? p.grupo === currentUser.grupo : true));
-  const filas = ancianos.map(p => {
-    const regs = p.registros || {};
-    const get = ({m,a}) => (regs[a] || regs[String(a)] || {})[m];
-    let mesesCursos = 0, maxCursos = 0, ultimo = '', particip = 0, conRegistro = 0;
-    ventana.forEach(v => {
-      const r = get(v); if(!r) return;
-      conRegistro++; if(r.particip) particip++;
-      const c = parseInt(r.cursos) || 0;
-      if(c > 0) { mesesCursos++; if(c > maxCursos) maxCursos = c; ultimo = v.m; }
-    });
-    return { p, mesesCursos, maxCursos, ultimo, particip, conRegistro, total: ventana.length };
-  }).sort((x,y) => (x.mesesCursos>0) - (y.mesesCursos>0) || x.p.apellido.localeCompare(y.p.apellido,'es'));
-  const sin = filas.filter(f => f.mesesCursos === 0), con = filas.filter(f => f.mesesCursos > 0);
-  const porGrupo = {};
-  filas.forEach(f => { const g = f.p.grupo || 'Sin grupo'; (porGrupo[g] = porGrupo[g] || { total:0, sin:0 }); porGrupo[g].total++; if(f.mesesCursos === 0) porGrupo[g].sin++; });
-  return { filas, sin, con, porGrupo, ventana, total: filas.length };
-}
-function _ancCursosResumen() {
-  try { const d = _ancCursosDatos('6m'); return d.total ? `${d.sin.length} de ${d.total}` : '—'; } catch(e) { return '—'; }
-}
-function _ancCursosTxtPeriodo(d) {
-  const v = d.ventana, nom = x => x.m + ' ' + (x.a + (['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago'].includes(x.m) ? 1 : 0));
-  return v.length === 1 ? nom(v[0]) : nom(v[0]) + ' – ' + nom(v[v.length-1]);
-}
-function setAncCursosPeriodo(v) { _ancCursosPeriodo = v; abrirModalAncianosCursos(); }
-
-function abrirModalAncianosCursos() {
-  const d = _ancCursosDatos();
-  const pct = d.total ? Math.round(d.sin.length / d.total * 100) : 0;
-  const kpi = (n, l, col) => `<div style="flex:1;min-width:110px;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:10px 12px"><div style="font-family:Sora,var(--font);font-size:24px;font-weight:800;color:${col}">${n}</div><div style="font-size:10.5px;color:var(--ink-3);font-weight:600">${l}</div></div>`;
-  const grupos = Object.entries(d.porGrupo).sort((a,b)=>b[1].sin - a[1].sin || a[0].localeCompare(b[0],'es'))
-    .map(([g,x]) => `<div style="display:flex;align-items:center;gap:8px;font-size:12px;padding:3px 0"><span style="width:110px;font-weight:600;color:var(--ink)">${escHtml(g)}</span><div style="flex:1;height:8px;background:#e7e5e4;border-radius:4px;overflow:hidden"><div style="height:100%;width:${x.total?Math.round((x.total-x.sin)/x.total*100):0}%;background:#2a4f94"></div></div><span style="width:120px;text-align:right;color:var(--ink-3)">${x.total-x.sin} de ${x.total} con cursos</span></div>`).join('');
-  const fila = f => {
-    const ok = f.mesesCursos > 0;
-    const det = ok ? `${f.mesesCursos} de ${f.total} meses · máx. ${f.maxCursos} curso${f.maxCursos>1?'s':''} · último: ${f.ultimo}` : `Ningún curso en ${f.total} mes${f.total>1?'es':''}${f.conRegistro && !f.particip ? ' · no informó' : ''}`;
-    return `<div style="display:flex;align-items:center;gap:10px;padding:8px 16px;border-bottom:1px solid var(--border-2);cursor:pointer" onclick="document.getElementById('modalAncCursos').style.display='none';selPubYAbrir('${f.p.id}')" onmouseover="this.style.background='var(--surface-2)'" onmouseout="this.style.background=''">
-      <div style="flex:1"><div style="font-size:13px;font-weight:600;color:var(--ink)">${escHtml(f.p.apellido)}, ${escHtml(f.p.nombre)}</div><div style="font-size:11px;color:var(--ink-3);margin-top:2px">${escHtml(f.p.grupo||'Sin grupo')} · ${det}</div></div>
-      <span style="font-size:10px;font-weight:700;padding:2px 9px;border-radius:10px;background:${ok?'#f0fdf4':'#fef2f2'};color:${ok?'#15803d':'#b91c1c'}">${ok?'Dirige cursos':'Sin cursos'}</span></div>`;
-  };
-  let ov = document.getElementById('modalAncCursos');
-  if(!ov) {
-    ov = document.createElement('div'); ov.id = 'modalAncCursos'; ov.className = 'overlay';
-    ov.innerHTML = `<div class="modal" style="max-width:640px"><div class="modal-hd"><span class="modal-hd-title">Ancianos y cursos bíblicos</span><button class="modal-x" onclick="document.getElementById('modalAncCursos').style.display='none'">×</button></div>
-      <div class="modal-body" style="padding:0;max-height:560px;overflow-y:auto" id="modalAncCursosBody"></div>
-      <div class="modal-ft"><button class="btn-cancel" onclick="document.getElementById('modalAncCursos').style.display='none'">Cerrar</button><button class="btn btn-primary" onclick="descargarAncianosCursosPDF()">🖨 Descargar PDF</button></div></div>`;
-    document.body.appendChild(ov);
-  }
-  const sel = `<select class="asist-input" style="width:auto;padding:5px 9px" onchange="setAncCursosPeriodo(this.value)">${[['1m','Último mes'],['3m','Últimos 3 meses'],['6m','Últimos 6 meses'],['anio','Año de servicio (hasta hoy)']].map(([v,t])=>`<option value="${v}"${_ancCursosPeriodo===v?' selected':''}>${t}</option>`).join('')}</select>`;
-  document.getElementById('modalAncCursosBody').innerHTML = d.total ? `
-    <div style="padding:14px 16px;border-bottom:1px solid var(--border-2)">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px"><span style="font-size:11px;color:var(--ink-3)">Período: <strong>${_ancCursosTxtPeriodo(d)}</strong></span>${sel}</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px">${kpi(d.total,'Ancianos','var(--ink)')}${kpi(d.con.length,'Dirigen cursos','#15803d')}${kpi(d.sin.length,'Sin cursos','#b91c1c')}${kpi(pct+'%','Sin cursos (del total)','#b45309')}</div>
-      <div style="font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--ink-3);margin-bottom:4px">Por grupo</div>${grupos}
-    </div>${d.filas.map(fila).join('')}` : '<div style="padding:30px;text-align:center;color:var(--ink-3)">No hay ancianos registrados (casilla "Anciano" en el publicador).</div>';
-  ov.style.display = 'flex';
-}
-
-function descargarAncianosCursosPDF() {
-  const d = _ancCursosDatos();
-  const hoy = new Date().toLocaleDateString('es-CO', {year:'numeric',month:'long',day:'numeric'});
-  const pct = d.total ? Math.round(d.sin.length / d.total * 100) : 0;
-  const fila = f => { const ok = f.mesesCursos > 0;
-    return `<tr><td>${escHtml(f.p.apellido)}, ${escHtml(f.p.nombre)}</td><td>${escHtml(f.p.grupo||'Sin grupo')}</td><td class="c ${ok?'ok':'no'}">${ok?'Dirige cursos':'Sin cursos'}</td><td class="c">${f.mesesCursos} de ${f.total}</td><td class="c">${ok?f.maxCursos:'—'}</td><td class="c">${ok?f.ultimo:'—'}</td><td class="c">${f.conRegistro ? f.particip + ' de ' + f.conRegistro : '—'}</td></tr>`; };
-  const grupos = Object.entries(d.porGrupo).sort((a,b)=>b[1].sin - a[1].sin || a[0].localeCompare(b[0],'es'))
-    .map(([g,x]) => `<tr><td>${escHtml(g)}</td><td class="c">${x.total}</td><td class="c">${x.total-x.sin}</td><td class="c ${x.sin?'no':''}">${x.sin}</td></tr>`).join('');
-  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Ancianos y cursos bíblicos</title><style>
-    @page { margin:14mm } body{font-family:'Segoe UI',Arial,sans-serif;color:#1a1814;margin:0;font-size:11px}
-    h1{font-size:18px;margin:0 0 2px} h2{font-size:13px;margin:16px 0 6px} .sub{color:#57534e;font-size:10.5px;margin-bottom:10px}
-    .k{display:flex;gap:10px;margin-bottom:6px}.k div{flex:1;border:1px solid #d6d3d1;border-radius:8px;padding:8px 10px}.k b{display:block;font-size:20px}.k span{font-size:9.5px;color:#78716c;font-weight:600}
-    table{width:100%;border-collapse:collapse}th,td{border:1px solid #d6d3d1;padding:4px 6px;text-align:left}th{background:#f1f5f9;font-size:10px}
-    .c{text-align:center}.ok{color:#15803d;background:#f0fdf4;font-weight:700}.no{color:#b91c1c;background:#fef2f2;font-weight:700} tr{page-break-inside:avoid}
-    .nota{margin-top:12px;font-size:9.5px;color:#78716c;line-height:1.5}</style></head><body>
-    <h1>Ancianos y cursos bíblicos</h1>
-    <div class="sub">Período: ${_ancCursosTxtPeriodo(d)} · Generado el ${hoy}</div>
-    <div class="k"><div><b>${d.total}</b><span>ANCIANOS</span></div><div><b style="color:#15803d">${d.con.length}</b><span>DIRIGEN CURSOS</span></div><div><b style="color:#b91c1c">${d.sin.length}</b><span>SIN CURSOS</span></div><div><b>${pct}%</b><span>SIN CURSOS DEL TOTAL</span></div></div>
-    <h2>Por grupo</h2><table><thead><tr><th>Grupo</th><th class="c">Ancianos</th><th class="c">Con cursos</th><th class="c">Sin cursos</th></tr></thead><tbody>${grupos}</tbody></table>
-    <h2>Detalle (primero los que no dirigen cursos)</h2>
-    <table><thead><tr><th>Anciano</th><th>Grupo</th><th class="c">Estado</th><th class="c">Meses con cursos</th><th class="c">Máx. cursos</th><th class="c">Último mes</th><th class="c">Meses que informó</th></tr></thead><tbody>${d.filas.map(fila).join('')}</tbody></table>
-    <div class="nota">Dirige cursos = el S-21 registra 1 o más cursos bíblicos en al menos un mes del período. Se excluyen inactivos y mudados.</div>
-    </body></html>`;
-  const w = window.open('', '_blank');
-  if(!w) { toast('⚠ Activa las ventanas emergentes'); return; }
-  w.document.write(html); w.document.close(); setTimeout(() => w.print(), 300);
-}
-
 // ══════════════════════════════════════════
 function selPubYAbrir(id) {
   irA('publicadores');
@@ -11170,12 +11223,20 @@ function renderDashboard() {
             ${gruposActivos.length} grupos · toca para editar superintendente o auxiliar
           </div>
         </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button onclick="exportarPDFGrupos()"
           style="display:inline-flex;align-items:center;gap:7px;background:var(--accent);color:#fff;
           border:none;padding:8px 16px;border-radius:10px;font-size:12px;font-weight:700;
           cursor:pointer;font-family:var(--font);box-shadow:0 2px 10px rgba(61,90,158,.3)">
           🖨 PDF grupos
         </button>
+        <button onclick="exportarExcelGrupos()"
+          style="display:inline-flex;align-items:center;gap:7px;background:#16a34a;color:#fff;
+          border:none;padding:8px 16px;border-radius:10px;font-size:12px;font-weight:700;
+          cursor:pointer;font-family:var(--font);box-shadow:0 2px 10px rgba(22,163,74,.3)">
+          📊 Excel grupos
+        </button>
+        </div>
       </div>
       <div class="dir-grupos-grid">
         ${tarjetasGrupo}
@@ -11323,12 +11384,6 @@ function renderDashboard() {
         <div class="dash-card-label">Asistencia</div>
         <div class="dash-card-value">${(state.asistencia||[]).length}</div>
         <div class="dash-card-desc">Reuniones registradas</div>
-      </div>
-      <div class="dash-card c-amber" onclick="abrirModalAncianosCursos()">
-        <div class="dash-card-ico"><svg><use href="#ico-star"/></svg></div>
-        <div class="dash-card-label">Ancianos · cursos bíblicos</div>
-        <div class="dash-card-value">${_ancCursosResumen()}</div>
-        <div class="dash-card-desc">Sin cursos · últimos 6 meses</div>
       </div>
       <div class="dash-card" onclick="abrirModalGrupos()">
         <div class="dash-card-ico"><svg><use href="#ico-gear"/></svg></div>
