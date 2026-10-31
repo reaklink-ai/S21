@@ -55150,6 +55150,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1793481280350",
+      "fecha": "2026-10-31",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 125,
+      "zoom": 67,
+      "total": 192,
+      "notas": "",
+      "_ts": 1793481280350
+    },
+    {
       "id": "r1792269972359",
       "fecha": "2026-10-17",
       "tipo": "Fin de semana",
@@ -55837,7 +55848,7 @@
       }
     }
   ],
-  "_lastModified": 1792459842898,
+  "_lastModified": 1793481282187,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59383,6 +59394,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1793481233796,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1792539956700,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1792459835066,
       "user": "Isaac_G",
       "rol": "auxiliar",
@@ -60964,22 +60991,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Suarez, Laura · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1792455615596,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4s08s9"
-    },
-    {
-      "ts": 1792455606260,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Sep 2026: horas=",
       "pubId": "mmm9qi4s08s9"
     }
   ],
