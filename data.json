@@ -55150,6 +55150,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1793842167519",
+      "fecha": "2026-11-04",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 111,
+      "zoom": 78,
+      "total": 189,
+      "notas": "",
+      "_ts": 1793842167519
+    },
+    {
       "id": "r1793481280350",
       "fecha": "2026-10-31",
       "tipo": "Fin de semana",
@@ -55848,7 +55859,7 @@
       }
     }
   ],
-  "_lastModified": 1793481282187,
+  "_lastModified": 1793842169389,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59394,6 +59405,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1793842143010,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1793804216949,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1793673560405,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1793481233796,
       "user": "Administrador",
       "rol": "admin",
@@ -60968,30 +61003,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Mario · Sep 2026: cursos=1",
       "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1792455635433,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Sep 2026: horas=8",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1792455635425,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Gloria · Sep 2026: horas=8",
-      "pubId": "mmm9qi4tcdjz"
-    },
-    {
-      "ts": 1792455615602,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Suarez, Laura · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4s08s9"
     }
   ],
   "formHistorial": [
