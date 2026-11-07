@@ -55150,6 +55150,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1794087114201",
+      "fecha": "2026-11-07",
+      "tipo": "Fin de semana",
+      "tema": "Estudio de la Atalaya",
+      "presencial": 135,
+      "zoom": 62,
+      "total": 197,
+      "notas": "",
+      "_ts": 1794087114201
+    },
+    {
       "id": "r1793842167519",
       "fecha": "2026-11-04",
       "tipo": "Entre semana",
@@ -55859,7 +55870,7 @@
       }
     }
   ],
-  "_lastModified": 1793842169389,
+  "_lastModified": 1794087407142,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59405,6 +59416,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794087092651,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1793842143010,
       "user": "Administrador",
       "rol": "admin",
@@ -60990,14 +61009,6 @@
     },
     {
       "ts": 1792455688453,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1792455688445,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
