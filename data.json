@@ -55150,6 +55150,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1794449708359",
+      "fecha": "2026-11-11",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 115,
+      "zoom": 87,
+      "total": 202,
+      "notas": "",
+      "_ts": 1794449708359
+    },
+    {
       "id": "r1794087114201",
       "fecha": "2026-11-07",
       "tipo": "Fin de semana",
@@ -55870,7 +55881,7 @@
       }
     }
   ],
-  "_lastModified": 1794087407142,
+  "_lastModified": 1794449710372,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59416,6 +59427,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794449681116,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1794177588479,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794087092651,
       "user": "Administrador",
       "rol": "admin",
@@ -60997,22 +61024,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Tovar, Mario · Sep 2026: horas=37",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1792455690662,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Sep 2026: horas=37",
-      "pubId": "mmm9qi4t7a77"
-    },
-    {
-      "ts": 1792455688453,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Sep 2026: cursos=1",
       "pubId": "mmm9qi4t7a77"
     }
   ],
