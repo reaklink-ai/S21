@@ -37160,11 +37160,12 @@
             "_ts": 1792457103156
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1794707065558
           },
           "Nov": {
             "particip": false,
@@ -55940,7 +55941,7 @@
       }
     }
   ],
-  "_lastModified": 1794707050414,
+  "_lastModified": 1794707066283,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59486,6 +59487,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707065558,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Oct 2026: horas=45",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
+      "ts": 1794707063850,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ruiz, Luz Marina · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4seyz6"
+    },
+    {
       "ts": 1794707049902,
       "user": "Administrador",
       "rol": "admin",
@@ -61067,22 +61084,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Yanes, Maria · Sep 2026: horas=",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1792456214404,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1792456214393,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Sep 2026: cursos=1",
       "pubId": "mmm9qi4tpwhw"
     }
   ],
