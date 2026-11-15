@@ -41297,11 +41297,11 @@
           },
           "Oct": {
             "particip": true,
-            "cursos": "",
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1794707624168
+            "_ts": 1794707634402
           },
           "Nov": {
             "particip": false,
@@ -55955,7 +55955,7 @@
       }
     }
   ],
-  "_lastModified": 1794707625569,
+  "_lastModified": 1794707635510,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59501,6 +59501,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707634402,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Juan Pablo · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4t6vl7"
+    },
+    {
       "ts": 1794707617455,
       "user": "Administrador",
       "rol": "admin",
@@ -61091,14 +61099,6 @@
       "accion": "Horas editadas",
       "detalle": "Hernandez, Daniel · Sep 2026: horas=15",
       "pubId": "mmm9qi4nr0kx"
-    },
-    {
-      "ts": 1792456388708,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2026: horas=55",
-      "pubId": "mmm9qi4np3hl"
     }
   ],
   "formHistorial": [
