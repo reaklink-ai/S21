@@ -13350,11 +13350,12 @@
             "_ts": 1792456149688
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "54",
+            "notas": "",
+            "_ts": 1794707950653
           },
           "Nov": {
             "particip": false,
@@ -55964,7 +55965,7 @@
       }
     }
   ],
-  "_lastModified": 1794707936105,
+  "_lastModified": 1794707951986,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59510,6 +59511,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707950653,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Oct 2026: horas=54",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
+      "ts": 1794707948616,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Luis Fernando · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4n4dj1"
+    },
+    {
       "ts": 1794707934955,
       "user": "Administrador",
       "rol": "admin",
@@ -61092,22 +61109,6 @@
       "accion": "Horas editadas",
       "detalle": "Rodriguez, Lina · Sep 2026: cursos=6",
       "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1792456516607,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · Sep 2026: horas=50",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1792456516600,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · Sep 2026: horas=50",
-      "pubId": "mmm9qi4sgwb2"
     }
   ],
   "formHistorial": [
