@@ -32756,11 +32756,12 @@
             "_ts": 1792457044764
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "14",
+            "notas": "41horas betel",
+            "_ts": 1794706997977
           },
           "Nov": {
             "particip": false,
@@ -55939,7 +55940,7 @@
       }
     }
   ],
-  "_lastModified": 1794706972025,
+  "_lastModified": 1794707001417,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59485,6 +59486,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706987919,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Oct 2026: horas=14",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
+      "ts": 1794706983541,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Jhonatan · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4r25tb"
+    },
+    {
       "ts": 1794706971113,
       "user": "Administrador",
       "rol": "admin",
@@ -61067,22 +61084,6 @@
       "accion": "Horas editadas",
       "detalle": "Tovar, Brayan · Sep 2026: cursos=",
       "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1792456179477,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1792456179470,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montañez, Ana · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4qg4ch"
     }
   ],
   "formHistorial": [
