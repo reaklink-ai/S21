@@ -5917,10 +5917,10 @@
           "Oct": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "15",
             "notas": "",
-            "_ts": 1794706092686
+            "_ts": 1794706122638
           },
           "Nov": {
             "particip": false,
@@ -55884,7 +55884,7 @@
       }
     }
   ],
-  "_lastModified": 1794706094021,
+  "_lastModified": 1794706126916,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59430,6 +59430,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706122638,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Beltran, Mauricio · Oct 2026: horas=15",
+      "pubId": "mmm9qi4kk1hh"
+    },
+    {
       "ts": 1794705942926,
       "user": "Administrador",
       "rol": "admin",
@@ -61015,14 +61023,6 @@
     },
     {
       "ts": 1792455734519,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Juan Pablo · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1792455734511,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
