@@ -53738,11 +53738,12 @@
             "_ts": 1792459032896
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706724591
           },
           "Nov": {
             "particip": false,
@@ -53820,7 +53821,7 @@
       "nombre": "Alfonso",
       "nacimiento": "1969-01-19",
       "bautismo": "1989-11-11",
-      "grupo": "",
+      "grupo": "Grupo 8",
       "telefono": "",
       "genero": "M",
       "otrasOvejas": true,
@@ -53831,7 +53832,7 @@
       "precursorEsp": false,
       "misionero": false,
       "precAuxContinuo": false,
-      "_tsPersonal": 1791834092358,
+      "_tsPersonal": 1794706723015,
       "emergencia": {
         "nombre": "",
         "relacion": "",
@@ -53839,7 +53840,7 @@
         "tel2": "",
         "direccion": "",
         "notasMed": "",
-        "_ts": 1791834092358
+        "_ts": 1794706723015
       }
     },
     {
@@ -55927,7 +55928,7 @@
       }
     }
   ],
-  "_lastModified": 1794706675890,
+  "_lastModified": 1794706726314,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59473,6 +59474,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706723015,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Publicador editado",
+      "detalle": "Monsalva, Alfonso · Grupo: ninguno → Grupo 8",
+      "pubId": "p1791834092358"
+    },
+    {
       "ts": 1794706630506,
       "user": "Administrador",
       "rol": "admin",
@@ -61058,14 +61067,6 @@
     },
     {
       "ts": 1792456128347,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Sep 2026: cursos=2",
-      "pubId": "p1781993446050"
-    },
-    {
-      "ts": 1792456128342,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
