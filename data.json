@@ -25920,11 +25920,12 @@
             "_ts": 1792456471492
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "6",
+            "notas": "56 horas betel",
+            "_ts": 1794706568603
           },
           "Nov": {
             "particip": false,
@@ -55924,7 +55925,7 @@
       }
     }
   ],
-  "_lastModified": 1794706496681,
+  "_lastModified": 1794706581235,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59470,6 +59471,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706522799,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Mesa, Lina · Oct 2026: horas=6",
+      "pubId": "mmm9qi4qxdzp"
+    },
+    {
       "ts": 1794706441088,
       "user": "Administrador",
       "rol": "admin",
@@ -61059,14 +61068,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=16",
-      "pubId": "p1776221244569"
-    },
-    {
-      "ts": 1792455770724,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Figueredo, Fergie Alexandra · May 2026: horas=",
       "pubId": "p1776221244569"
     }
   ],
