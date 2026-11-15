@@ -9435,12 +9435,12 @@
             "_ts": 1792456113359
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792456112809
+            "_ts": 1794707879932
           },
           "Nov": {
             "particip": false,
@@ -55962,7 +55962,7 @@
       }
     }
   ],
-  "_lastModified": 1794707870950,
+  "_lastModified": 1794707880891,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59508,6 +59508,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707879933,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Clavijo Arias, Luz Marina · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4l379l"
+    },
+    {
       "ts": 1794707762944,
       "user": "Administrador",
       "rol": "admin",
@@ -61093,14 +61101,6 @@
     },
     {
       "ts": 1792456457621,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Mesa, Lina · Sep 2026: horas=8",
-      "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1792456457613,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
