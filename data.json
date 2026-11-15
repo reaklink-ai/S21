@@ -36888,12 +36888,12 @@
             "_ts": 1792457080917
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
+            "horas": "58",
             "notas": "",
-            "_ts": 1792457075179
+            "_ts": 1794707049901
           },
           "Nov": {
             "particip": false,
@@ -55940,7 +55940,7 @@
       }
     }
   ],
-  "_lastModified": 1794707016010,
+  "_lastModified": 1794707050414,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59486,6 +59486,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707049902,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Oct 2026: horas=58",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
+      "ts": 1794707047451,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rojas, Blanca Cecilia · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4s0oc6"
+    },
+    {
       "ts": 1794707015221,
       "user": "Administrador",
       "rol": "admin",
@@ -61068,22 +61084,6 @@
       "accion": "Horas editadas",
       "detalle": "Yanes, Maria · Sep 2026: cursos=1",
       "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1792456194840,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Sep 2026: horas=12",
-      "pubId": "mmm9qi4s0lt4"
-    },
-    {
-      "ts": 1792456194834,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Brayan · Sep 2026: horas=12",
-      "pubId": "mmm9qi4s0lt4"
     }
   ],
   "formHistorial": [
