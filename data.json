@@ -12857,11 +12857,12 @@
             "_ts": 1792456370779
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794706368551
           },
           "Nov": {
             "particip": false,
@@ -55918,7 +55919,7 @@
       }
     }
   ],
-  "_lastModified": 1794706328222,
+  "_lastModified": 1794706371257,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59464,6 +59465,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706368551,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Galindo, Estefania · Oct 2026: horas=50",
+      "pubId": "mmm9qi4nj17y"
+    },
+    {
       "ts": 1794706249132,
       "user": "Administrador",
       "rol": "admin",
@@ -61049,14 +61058,6 @@
     },
     {
       "ts": 1792455760179,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1792455760166,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
