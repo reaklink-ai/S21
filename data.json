@@ -26153,11 +26153,12 @@
             "_ts": 1792455464236
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "25",
+            "notas": "Problema de Salud - incapacidad ",
+            "_ts": 1794707426765
           },
           "Nov": {
             "particip": false,
@@ -55947,7 +55948,7 @@
       }
     }
   ],
-  "_lastModified": 1794707398640,
+  "_lastModified": 1794707428940,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59493,6 +59494,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707423491,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Oct 2026: horas=25",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
+      "ts": 1794707421016,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Andrea Carolina · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4qp27l"
+    },
+    {
       "ts": 1794707396984,
       "user": "Administrador",
       "rol": "admin",
@@ -61070,22 +61087,6 @@
     },
     {
       "ts": 1792456342340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Avila, Rosario · Sep 2026: horas=15",
-      "pubId": "mmm9qi4k2l0u"
-    },
-    {
-      "ts": 1792456340437,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Avila, Rosario · Sep 2026: horas=15",
-      "pubId": "mmm9qi4k2l0u"
-    },
-    {
-      "ts": 1792456340427,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
