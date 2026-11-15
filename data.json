@@ -40461,11 +40461,12 @@
             "_ts": 1792455638112
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "5",
+            "notas": "Problema de Salud - incapacidad",
+            "_ts": 1794707584696
           },
           "Nov": {
             "particip": false,
@@ -55952,7 +55953,7 @@
       }
     }
   ],
-  "_lastModified": 1794707564925,
+  "_lastModified": 1794707586506,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59498,6 +59499,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707583006,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Gloria · Oct 2026: horas=5",
+      "pubId": "mmm9qi4tcdjz"
+    },
+    {
       "ts": 1794707563576,
       "user": "Administrador",
       "rol": "admin",
@@ -61087,14 +61096,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Guerrero, Transito · Sep 2026: horas=55",
-      "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1792456385518,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Guerrero, Transito · Sep 2026: cursos=2",
       "pubId": "mmm9qi4np3hl"
     }
   ],
