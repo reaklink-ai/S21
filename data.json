@@ -26584,11 +26584,12 @@
             "_ts": 1792455501583
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "13",
+            "notas": "",
+            "_ts": 1794707443995
           },
           "Nov": {
             "particip": false,
@@ -55948,7 +55949,7 @@
       }
     }
   ],
-  "_lastModified": 1794707428940,
+  "_lastModified": 1794707445640,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59494,6 +59495,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707443995,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Laura Camila · Oct 2026: horas=13",
+      "pubId": "mmm9qi4qf90z"
+    },
+    {
       "ts": 1794707423491,
       "user": "Administrador",
       "rol": "admin",
@@ -61084,14 +61093,6 @@
       "accion": "Horas editadas",
       "detalle": "Galindo, Estefania · Sep 2026: horas=50",
       "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1792456342340,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Avila, Rosario · Sep 2026: horas=15",
-      "pubId": "mmm9qi4k2l0u"
     }
   ],
   "formHistorial": [
