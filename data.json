@@ -22082,11 +22082,12 @@
             "_ts": 1792457019822
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706971113
           },
           "Nov": {
             "particip": false,
@@ -55938,7 +55939,7 @@
       }
     }
   ],
-  "_lastModified": 1794706956230,
+  "_lastModified": 1794706972025,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59484,6 +59485,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706971113,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Lopez Pardo, Willian · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4oaz18"
+    },
+    {
       "ts": 1794706917409,
       "user": "Administrador",
       "rol": "admin",
@@ -61074,14 +61083,6 @@
       "accion": "Horas editadas",
       "detalle": "Montañez, Ana · Sep 2026: cursos=1",
       "pubId": "mmm9qi4qg4ch"
-    },
-    {
-      "ts": 1792456162210,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Sep 2026: horas=50",
-      "pubId": "mmm9qi4ntbx0"
     }
   ],
   "formHistorial": [
