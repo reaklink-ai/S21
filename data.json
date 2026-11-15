@@ -4897,11 +4897,12 @@
             "_ts": 1792456863827
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "41",
+            "notas": "",
+            "_ts": 1794706886138
           },
           "Nov": {
             "particip": false,
@@ -4950,7 +4951,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706882435
           },
           "Jun": {
             "particip": false,
@@ -55930,7 +55932,7 @@
       }
     }
   ],
-  "_lastModified": 1794706854891,
+  "_lastModified": 1794706886832,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59476,6 +59478,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706886138,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2026: horas=41",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
+      "ts": 1794706881120,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Melissa · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4kqs2f"
+    },
+    {
       "ts": 1794706852592,
       "user": "Administrador",
       "rol": "admin",
@@ -61058,22 +61076,6 @@
       "accion": "Horas editadas",
       "detalle": "Isaza, Maria Del Rosario · Sep 2026: cursos=2",
       "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1792456149688,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Sep 2026: horas=40",
-      "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1792456149683,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Garcia, Luis Fernando · Sep 2026: horas=40",
-      "pubId": "mmm9qi4n4dj1"
     }
   ],
   "formHistorial": [
