@@ -116,11 +116,12 @@
             "_ts": 1792095740861
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719103134
           },
           "Nov": {
             "particip": false,
@@ -15169,11 +15170,12 @@
             "_ts": 1792095765953
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719110197
           },
           "Nov": {
             "particip": false,
@@ -23104,11 +23106,12 @@
             "_ts": 1792095768668
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719112222
           },
           "Nov": {
             "particip": false,
@@ -23355,11 +23358,12 @@
             "_ts": 1792096528298
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719114039
           },
           "Nov": {
             "particip": false,
@@ -23610,11 +23614,12 @@
             "_ts": 1792095858118
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719125496
           },
           "Nov": {
             "particip": false,
@@ -24656,11 +24661,12 @@
             "_ts": 1792095859077
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719129089
           },
           "Nov": {
             "particip": false,
@@ -32500,11 +32506,12 @@
             "_ts": 1792095945799
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "24 horas betel / problemas de salud (influenza)",
+            "_ts": 1794719358722
           },
           "Nov": {
             "particip": false,
@@ -33338,12 +33345,12 @@
             "_ts": 1792095965047
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": "",
-            "_ts": 1792095968352
+            "horas": "8",
+            "notas": "36 horas betel / problemas de salud (influenza))",
+            "_ts": 1794719384719
           },
           "Nov": {
             "particip": false,
@@ -35941,11 +35948,12 @@
             "_ts": 1792096105256
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794719283745
           },
           "Nov": {
             "particip": false,
@@ -39645,11 +39653,12 @@
             "_ts": 1792096112250
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719143401
           },
           "Nov": {
             "particip": false,
@@ -40164,11 +40173,12 @@
             "_ts": 1792096115098
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719145664
           },
           "Nov": {
             "particip": false,
@@ -49617,11 +49627,12 @@
             "_ts": 1792095747519
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794719107606
           },
           "Nov": {
             "particip": false,
@@ -55969,7 +55980,7 @@
       }
     }
   ],
-  "_lastModified": 1794708050139,
+  "_lastModified": 1794719416603,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59515,6 +59526,102 @@
   ],
   "auditoria": [
     {
+      "ts": 1794719384719,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Oct 2026: cursos=3",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1794719335959,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Oct 2026: horas=2",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1794719292867,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Miguel · Oct 2026: horas=8",
+      "pubId": "mmm9qi4r1pju"
+    },
+    {
+      "ts": 1794719283746,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: horas=50",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719251094,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: horas=2",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719249856,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: horas=1.5",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719249073,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: horas=1",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719248917,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: horas=0.5",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719154446,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Sandra · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4spd20"
+    },
+    {
+      "ts": 1794719135730,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Daniela · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4rwj0v"
+    },
+    {
+      "ts": 1794719125496,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Lugo, Rogers · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4qvq3o"
+    },
+    {
+      "ts": 1794719092954,
+      "user": "Miguel_R",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1794708011007,
       "user": "Administrador",
       "rol": "admin",
@@ -61017,102 +61124,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Melissa · Sep 2026: horas=41",
       "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1792456862879,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2026: horas=41",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1792456857508,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2026: horas=",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1792456841023,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1792456841016,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1792456840154,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · Sep 2026: horas=54",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1792456840148,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Jose · Sep 2026: horas=54",
-      "pubId": "mmm9qi4k5qc0"
-    },
-    {
-      "ts": 1792456782065,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Sep 2026: horas=52",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456782059,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Sep 2026: horas=52",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456778659,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Sep 2026: horas=",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456778178,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456778172,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456776789,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Oct 2026: cursos=",
-      "pubId": "mmm9qi4jl0fy"
     }
   ],
   "formHistorial": [
