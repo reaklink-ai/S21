@@ -5157,11 +5157,12 @@
             "_ts": 1792456870937
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706892566
           },
           "Nov": {
             "particip": false,
@@ -55932,7 +55933,7 @@
       }
     }
   ],
-  "_lastModified": 1794706886832,
+  "_lastModified": 1794706894483,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59478,6 +59479,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706892566,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Bellino, Roberto · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4k6yoa"
+    },
+    {
       "ts": 1794706886138,
       "user": "Administrador",
       "rol": "admin",
@@ -61063,14 +61072,6 @@
     },
     {
       "ts": 1792456160045,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1792456160039,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
