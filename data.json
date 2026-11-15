@@ -49044,11 +49044,12 @@
             "_ts": 1792456139461
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "3",
+            "paux": true,
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794707934955
           },
           "Nov": {
             "particip": false,
@@ -55963,7 +55964,7 @@
       }
     }
   ],
-  "_lastModified": 1794707918476,
+  "_lastModified": 1794707936105,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59509,6 +59510,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707934955,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Alejandra · Oct 2026: horas=50",
+      "pubId": "p1781993516577"
+    },
+    {
+      "ts": 1794707930544,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Espinel, Alejandra · Oct 2026: cursos=3",
+      "pubId": "p1781993516577"
+    },
+    {
       "ts": 1794707917016,
       "user": "Administrador",
       "rol": "admin",
@@ -61090,22 +61107,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Rodriguez, Cristian · Sep 2026: horas=50",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1792456514627,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · Oct 2026: horas=",
-      "pubId": "mmm9qi4sgwb2"
-    },
-    {
-      "ts": 1792456513860,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Cristian · Sep 2026: cursos=2",
       "pubId": "mmm9qi4sgwb2"
     }
   ],
