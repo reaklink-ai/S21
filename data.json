@@ -36182,12 +36182,12 @@
             "_ts": 1792456516607
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1792456514627
+            "_ts": 1794706610279
           },
           "Nov": {
             "particip": false,
@@ -55926,7 +55926,7 @@
       }
     }
   ],
-  "_lastModified": 1794706590959,
+  "_lastModified": 1794706612953,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59472,6 +59472,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706610279,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Oct 2026: horas=50",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
+      "ts": 1794706608083,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rodriguez, Cristian · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4sgwb2"
+    },
+    {
       "ts": 1794706522799,
       "user": "Administrador",
       "rol": "admin",
@@ -61054,22 +61070,6 @@
       "accion": "Horas editadas",
       "detalle": "Ormaza, Gloria · Sep 2026: horas=39",
       "pubId": "p1777912957789"
-    },
-    {
-      "ts": 1792455775363,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=16",
-      "pubId": "p1776221244569"
-    },
-    {
-      "ts": 1792455775357,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Figueredo, Fergie Alexandra · Sep 2026: horas=16",
-      "pubId": "p1776221244569"
     }
   ],
   "formHistorial": [
