@@ -3058,11 +3058,12 @@
             "_ts": 1792456841023
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "51",
+            "notas": "",
+            "_ts": 1794706852592
           },
           "Nov": {
             "particip": false,
@@ -55929,7 +55930,7 @@
       }
     }
   ],
-  "_lastModified": 1794706836688,
+  "_lastModified": 1794706854891,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59475,6 +59476,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706852592,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Oct 2026: horas=51",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
+      "ts": 1794706848265,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Jose · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4k5qc0"
+    },
+    {
       "ts": 1794706836268,
       "user": "Administrador",
       "rol": "admin",
@@ -61057,22 +61074,6 @@
       "accion": "Horas editadas",
       "detalle": "Garcia, Luis Fernando · Sep 2026: horas=40",
       "pubId": "mmm9qi4n4dj1"
-    },
-    {
-      "ts": 1792456139461,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Alejandra · Sep 2026: cursos=3",
-      "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1792456139455,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Alejandra · Sep 2026: cursos=3",
-      "pubId": "p1781993516577"
     }
   ],
   "formHistorial": [
