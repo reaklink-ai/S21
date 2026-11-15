@@ -26367,12 +26367,12 @@
             "_ts": 1792455438615
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "39",
             "notas": "",
-            "_ts": 1792455436381
+            "_ts": 1794707396984
           },
           "Nov": {
             "particip": false,
@@ -55947,7 +55947,7 @@
       }
     }
   ],
-  "_lastModified": 1794707365966,
+  "_lastModified": 1794707398640,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59493,6 +59493,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707396984,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millan, Fernando · Oct 2026: horas=39",
+      "pubId": "mmm9qi4q1iwb"
+    },
+    {
       "ts": 1794707222687,
       "user": "Administrador",
       "rol": "admin",
@@ -61083,14 +61091,6 @@
       "accion": "Horas editadas",
       "detalle": "Avila, Rosario · Sep 2026: horas=15",
       "pubId": "mmm9qi4k2l0u"
-    },
-    {
-      "ts": 1792456220430,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Sep 2026: horas=21",
-      "pubId": "mmm9qi4tpwhw"
     }
   ],
   "formHistorial": [
