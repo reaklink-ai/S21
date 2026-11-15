@@ -39919,11 +39919,12 @@
             "_ts": 1792456202304
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "14",
+            "notas": "41 horas Betel",
+            "_ts": 1794708039511
           },
           "Nov": {
             "particip": false,
@@ -55967,7 +55968,7 @@
       }
     }
   ],
-  "_lastModified": 1794707984934,
+  "_lastModified": 1794708041252,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59513,6 +59514,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794708011007,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Oct 2026: horas=14",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
+      "ts": 1794708009148,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Tovar, Brayan · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4s0lt4"
+    },
+    {
       "ts": 1794707983516,
       "user": "Administrador",
       "rol": "admin",
@@ -61095,22 +61112,6 @@
       "accion": "Horas editadas",
       "detalle": "Aular, Daritza · Oct 2026: cursos=",
       "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456774015,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Aular, Daritza · Oct 2026: cursos=",
-      "pubId": "mmm9qi4jl0fy"
-    },
-    {
-      "ts": 1792456597326,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Manosalva, Nidia · Grupo: ninguno → Grupo 8",
-      "pubId": "p1791829505304"
     }
   ],
   "formHistorial": [
