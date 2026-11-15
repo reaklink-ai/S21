@@ -52292,11 +52292,12 @@
             "_ts": 1792458960560
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "24",
+            "notas": "",
+            "_ts": 1794706197661
           },
           "Nov": {
             "particip": false,
@@ -55888,7 +55889,7 @@
       }
     }
   ],
-  "_lastModified": 1794706168387,
+  "_lastModified": 1794706198848,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59434,6 +59435,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706197661,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2026: horas=24",
+      "pubId": "p1791828303713"
+    },
+    {
+      "ts": 1794706188323,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe, Catherine · Oct 2026: cursos=2",
+      "pubId": "p1791828303713"
+    },
+    {
       "ts": 1794706144416,
       "user": "Administrador",
       "rol": "admin",
@@ -61015,22 +61032,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Vargas, Mayerli · Sep 2026: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1792455750838,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1792455750832,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Sep 2026: cursos=1",
       "pubId": "mmm9qi4twt9q"
     }
   ],
