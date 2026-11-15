@@ -7148,11 +7148,12 @@
             "_ts": 1792456902214
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "55",
+            "notas": "",
+            "_ts": 1794706917409
           },
           "Nov": {
             "particip": false,
@@ -55934,7 +55935,7 @@
       }
     }
   ],
-  "_lastModified": 1794706904326,
+  "_lastModified": 1794706918621,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59480,6 +59481,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706917409,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Oct 2026: horas=55",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
+      "ts": 1794706914599,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro De Cruz, Elizabeth · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4l0gf8"
+    },
+    {
       "ts": 1794706892566,
       "user": "Administrador",
       "rol": "admin",
@@ -61061,22 +61078,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Isaza, Maria Del Rosario · Sep 2026: horas=50",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1792456162204,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Sep 2026: horas=50",
-      "pubId": "mmm9qi4ntbx0"
-    },
-    {
-      "ts": 1792456160045,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Isaza, Maria Del Rosario · Sep 2026: cursos=2",
       "pubId": "mmm9qi4ntbx0"
     }
   ],
