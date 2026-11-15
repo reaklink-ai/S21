@@ -48546,11 +48546,12 @@
             "_ts": 1792454977042
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706040117
           },
           "Nov": {
             "particip": false,
@@ -55881,7 +55882,7 @@
       }
     }
   ],
-  "_lastModified": 1794449710372,
+  "_lastModified": 1794706075130,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59427,6 +59428,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794705942926,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1794449681116,
       "user": "Administrador",
       "rol": "admin",
@@ -61017,14 +61026,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Juan Pablo · Sep 2026: cursos=1",
       "pubId": "mmm9qi4t6vl7"
-    },
-    {
-      "ts": 1792455690669,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Tovar, Mario · Sep 2026: horas=37",
-      "pubId": "mmm9qi4t7a77"
     }
   ],
   "formHistorial": [
