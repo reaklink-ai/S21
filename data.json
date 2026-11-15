@@ -7666,7 +7666,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "NO INFORMO EN EL MES",
+            "_ts": 1794707851503
           },
           "Nov": {
             "particip": false,
@@ -55958,7 +55959,7 @@
       }
     }
   ],
-  "_lastModified": 1794707764819,
+  "_lastModified": 1794707852935,
   "vym": {
     "semanas": {},
     "historial": [
