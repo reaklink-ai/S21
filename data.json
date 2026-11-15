@@ -26800,11 +26800,12 @@
             "_ts": 1792455523763
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "42",
+            "notas": "",
+            "_ts": 1794707466612
           },
           "Nov": {
             "particip": false,
@@ -55949,7 +55950,7 @@
       }
     }
   ],
-  "_lastModified": 1794707445640,
+  "_lastModified": 1794707468185,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59495,6 +59496,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707466612,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Oct 2026: horas=42",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
+      "ts": 1794707464525,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Millán, Valentina · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4qve1a"
+    },
+    {
       "ts": 1794707443995,
       "user": "Administrador",
       "rol": "admin",
@@ -61077,22 +61094,6 @@
       "accion": "Horas editadas",
       "detalle": "Guerrero, Transito · Sep 2026: cursos=2",
       "pubId": "mmm9qi4np3hl"
-    },
-    {
-      "ts": 1792456370779,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · Sep 2026: horas=50",
-      "pubId": "mmm9qi4nj17y"
-    },
-    {
-      "ts": 1792456370773,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Galindo, Estefania · Sep 2026: horas=50",
-      "pubId": "mmm9qi4nj17y"
     }
   ],
   "formHistorial": [
