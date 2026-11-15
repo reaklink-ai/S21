@@ -52508,11 +52508,12 @@
             "_ts": 1792458997002
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "4",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706233084
           },
           "Nov": {
             "particip": false,
@@ -55891,7 +55892,7 @@
       }
     }
   ],
-  "_lastModified": 1794706214056,
+  "_lastModified": 1794706234370,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59437,6 +59438,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706233084,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Uribe Gamez, Diego · Oct 2026: cursos=4",
+      "pubId": "p1791828537787"
+    },
+    {
       "ts": 1794706197661,
       "user": "Administrador",
       "rol": "admin",
@@ -61022,14 +61031,6 @@
     },
     {
       "ts": 1792455753180,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Sep 2026: horas=50",
-      "pubId": "mmm9qi4twt9q"
-    },
-    {
-      "ts": 1792455753174,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
