@@ -2625,11 +2625,12 @@
             "_ts": 1792455368558
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1794707222687
           },
           "Nov": {
             "particip": false,
@@ -55941,7 +55942,7 @@
       }
     }
   ],
-  "_lastModified": 1794707071647,
+  "_lastModified": 1794707223751,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59487,6 +59488,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707222687,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Arevalo, Mercedes · Oct 2026: horas=15",
+      "pubId": "mmm9qi4jevxb"
+    },
+    {
+      "ts": 1794707206122,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1794707065558,
       "user": "Administrador",
       "rol": "admin",
@@ -61068,22 +61085,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Yanes, Maria · Sep 2026: horas=21",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1792456220425,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Sep 2026: horas=21",
-      "pubId": "mmm9qi4tpwhw"
-    },
-    {
-      "ts": 1792456215269,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Yanes, Maria · Sep 2026: horas=",
       "pubId": "mmm9qi4tpwhw"
     }
   ],
