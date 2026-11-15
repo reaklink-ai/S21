@@ -45903,11 +45903,12 @@
             "_ts": 1792455811131
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "2",
+            "paux": true,
+            "horas": "45",
+            "notas": "",
+            "_ts": 1794707762944
           },
           "Nov": {
             "particip": false,
@@ -55957,7 +55958,7 @@
       }
     }
   ],
-  "_lastModified": 1794707656472,
+  "_lastModified": 1794707764819,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59503,6 +59504,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707762944,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ormaza, Gloria · Oct 2026: horas=45",
+      "pubId": "p1777912957789"
+    },
+    {
+      "ts": 1794707761124,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Ormaza, Gloria · Oct 2026: cursos=2",
+      "pubId": "p1777912957789"
+    },
+    {
       "ts": 1794707654961,
       "user": "Administrador",
       "rol": "admin",
@@ -61085,22 +61102,6 @@
       "accion": "Horas editadas",
       "detalle": "Mesa, Lina · Sep 2026: horas=8",
       "pubId": "mmm9qi4qxdzp"
-    },
-    {
-      "ts": 1792456420729,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Sep 2026: horas=31",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1792456420722,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Sep 2026: horas=31",
-      "pubId": "mmm9qi4n8uw3"
     }
   ],
   "formHistorial": [
