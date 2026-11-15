@@ -6394,18 +6394,20 @@
             "_ts": 1792456351391
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706313227
           },
           "Nov": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706313703
           },
           "Dic": {
             "particip": false,
@@ -55915,7 +55917,7 @@
       }
     }
   ],
-  "_lastModified": 1794706306487,
+  "_lastModified": 1794706316399,
   "vym": {
     "semanas": {},
     "historial": [
