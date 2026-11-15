@@ -27070,11 +27070,12 @@
             "_ts": 1792456179477
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "22",
+            "notas": "",
+            "_ts": 1794707983516
           },
           "Nov": {
             "particip": false,
@@ -55966,7 +55967,7 @@
       }
     }
   ],
-  "_lastModified": 1794707967628,
+  "_lastModified": 1794707984934,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59512,6 +59513,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707983516,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Oct 2026: horas=22",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
+      "ts": 1794707980111,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montañez, Ana · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4qg4ch"
+    },
+    {
       "ts": 1794707966168,
       "user": "Administrador",
       "rol": "admin",
@@ -61094,22 +61111,6 @@
       "accion": "Publicador editado",
       "detalle": "Manosalva, Nidia · Grupo: ninguno → Grupo 8",
       "pubId": "p1791829505304"
-    },
-    {
-      "ts": 1792456533713,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · Sep 2026: horas=50",
-      "pubId": "mmm9qi4s4baq"
-    },
-    {
-      "ts": 1792456533706,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Lina · Sep 2026: horas=50",
-      "pubId": "mmm9qi4s4baq"
     }
   ],
   "formHistorial": [
