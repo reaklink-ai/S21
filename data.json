@@ -3315,11 +3315,12 @@
             "_ts": 1792456342340
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706302598
           },
           "Nov": {
             "particip": false,
@@ -47673,6 +47674,13 @@
             "paux": false,
             "horas": "",
             "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
           }
         }
       },
@@ -48227,6 +48235,13 @@
             "notas": ""
           },
           "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -49757,6 +49772,13 @@
             "notas": ""
           },
           "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
             "particip": false,
             "cursos": "",
             "paux": false,
@@ -55893,7 +55915,7 @@
       }
     }
   ],
-  "_lastModified": 1794706250560,
+  "_lastModified": 1794706306487,
   "vym": {
     "semanas": {},
     "historial": [
