@@ -43164,11 +43164,12 @@
             "_ts": 1792455074510
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794706249132
           },
           "Nov": {
             "particip": false,
@@ -55892,7 +55893,7 @@
       }
     }
   ],
-  "_lastModified": 1794706234370,
+  "_lastModified": 1794706250560,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59438,6 +59439,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706249132,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuluaga, Carlos · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4ttlv0"
+    },
+    {
       "ts": 1794706233084,
       "user": "Administrador",
       "rol": "admin",
@@ -61028,14 +61037,6 @@
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Sep 2026: cursos=1",
       "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1792455753180,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Mayerli · Sep 2026: horas=50",
-      "pubId": "mmm9qi4twt9q"
     }
   ],
   "formHistorial": [
