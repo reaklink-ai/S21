@@ -41965,11 +41965,12 @@
             "_ts": 1792455762731
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794707654961
           },
           "Nov": {
             "particip": false,
@@ -55956,7 +55957,7 @@
       }
     }
   ],
-  "_lastModified": 1794707645916,
+  "_lastModified": 1794707656472,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59502,6 +59503,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794707654961,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Oct 2026: horas=50",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
+      "ts": 1794707652898,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vargas, Samantha · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4tl3oj"
+    },
+    {
       "ts": 1794707644498,
       "user": "Administrador",
       "rol": "admin",
@@ -61083,22 +61100,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Hernandez, Martha · Sep 2026: horas=31",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1792456418629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4n8uw3"
-    },
-    {
-      "ts": 1792456418622,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Martha · Sep 2026: cursos=2",
       "pubId": "mmm9qi4n8uw3"
     }
   ],
