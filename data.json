@@ -2834,12 +2834,12 @@
             "_ts": 1792456809122
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "53",
             "notas": "",
-            "_ts": 1792456776789
+            "_ts": 1794706836268
           },
           "Nov": {
             "particip": false,
@@ -55929,7 +55929,7 @@
       }
     }
   ],
-  "_lastModified": 1794706822727,
+  "_lastModified": 1794706836688,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59475,6 +59475,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706836268,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Aular, Daritza · Oct 2026: horas=53",
+      "pubId": "mmm9qi4jl0fy"
+    },
+    {
       "ts": 1794706723015,
       "user": "Administrador",
       "rol": "admin",
@@ -61065,14 +61073,6 @@
       "accion": "Horas editadas",
       "detalle": "Espinel, Alejandra · Sep 2026: cursos=3",
       "pubId": "p1781993516577"
-    },
-    {
-      "ts": 1792456128347,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Espinel, Dario · Sep 2026: cursos=2",
-      "pubId": "p1781993446050"
     }
   ],
   "formHistorial": [
