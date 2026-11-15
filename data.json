@@ -16028,11 +16028,12 @@
             "_ts": 1792456388708
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "52",
+            "notas": "",
+            "_ts": 1794706396311
           },
           "Nov": {
             "particip": false,
@@ -55919,7 +55920,7 @@
       }
     }
   ],
-  "_lastModified": 1794706371257,
+  "_lastModified": 1794706398011,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59465,6 +59466,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794706396311,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2026: horas=52",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
+      "ts": 1794706387863,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Transito · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4np3hl"
+    },
+    {
       "ts": 1794706368551,
       "user": "Administrador",
       "rol": "admin",
@@ -61046,22 +61063,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Vargas, Samantha · Sep 2026: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1792455762723,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Sep 2026: horas=50",
-      "pubId": "mmm9qi4tl3oj"
-    },
-    {
-      "ts": 1792455760179,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vargas, Samantha · Sep 2026: cursos=1",
       "pubId": "mmm9qi4tl3oj"
     }
   ],
