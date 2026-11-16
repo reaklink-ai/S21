@@ -29353,11 +29353,12 @@
             "_ts": 1791834339379
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "47",
+            "notas": "",
+            "_ts": 1794845746313
           },
           "Nov": {
             "particip": false,
@@ -56004,7 +56005,7 @@
       }
     }
   ],
-  "_lastModified": 1794845726060,
+  "_lastModified": 1794845747574,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59550,6 +59551,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794845746313,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Oct 2026: horas=47",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
+      "ts": 1794845743999,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Parra, Flor Alba · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4qzusx"
+    },
+    {
       "ts": 1794845724599,
       "user": "Administrador",
       "rol": "admin",
@@ -61132,22 +61149,6 @@
       "accion": "Publicador editado",
       "detalle": "Valderrama, Melissa · datos generales",
       "pubId": "mmm9qi4tlges"
-    },
-    {
-      "ts": 1792457102030,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Sep 2026: horas=51",
-      "pubId": "mmm9qi4seyz6"
-    },
-    {
-      "ts": 1792457102022,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ruiz, Luz Marina · Sep 2026: horas=51",
-      "pubId": "mmm9qi4seyz6"
     }
   ],
   "formHistorial": [
