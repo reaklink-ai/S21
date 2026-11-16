@@ -53511,11 +53511,12 @@
             "_ts": 1791829431385
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1794846483630
           },
           "Nov": {
             "particip": false,
@@ -56034,7 +56035,7 @@
       }
     }
   ],
-  "_lastModified": 1794846461367,
+  "_lastModified": 1794846484209,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59580,6 +59581,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846483630,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Brenda · Oct 2026: horas=45",
+      "pubId": "p1791829298292"
+    },
+    {
       "ts": 1794846460421,
       "user": "Administrador",
       "rol": "admin",
@@ -61165,14 +61174,6 @@
     },
     {
       "ts": 1792457337285,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457337264,
       "user": "Isaac_G",
       "rol": "auxiliar",
       "accion": "Horas editadas",
