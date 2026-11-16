@@ -20841,8 +20841,8 @@
             "cursos": "1",
             "paux": false,
             "horas": "41",
-            "notas": "",
-            "_ts": 1794797477123
+            "notas": "Enferma",
+            "_ts": 1794797511734
           },
           "Nov": {
             "particip": false,
@@ -55988,7 +55988,7 @@
       }
     }
   ],
-  "_lastModified": 1794797478002,
+  "_lastModified": 1794797516911,
   "vym": {
     "semanas": {},
     "historial": [
