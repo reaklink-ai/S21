@@ -14173,11 +14173,12 @@
             "_ts": 1792459541444
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "51",
+            "notas": "",
+            "_ts": 1794846541283
           },
           "Nov": {
             "particip": false,
@@ -14429,11 +14430,12 @@
             "_ts": 1792459835066
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846545428
           },
           "Nov": {
             "particip": false,
@@ -14694,7 +14696,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846550315
           },
           "Dic": {
             "particip": false,
@@ -38001,11 +38004,12 @@
             "_ts": 1792459802616
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846566043
           },
           "Nov": {
             "particip": false,
@@ -38297,11 +38301,12 @@
             "_ts": 1792459820910
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "43",
+            "notas": "",
+            "_ts": 1794846585652
           },
           "Nov": {
             "particip": false,
@@ -39188,11 +39193,12 @@
             "_ts": 1792459825428
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846588029
           },
           "Nov": {
             "particip": false,
@@ -39439,11 +39445,12 @@
             "_ts": 1792459829009
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846591276
           },
           "Nov": {
             "particip": false,
@@ -44253,12 +44260,11 @@
             "_ts": 1792457869638
           },
           "Oct": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1794846385358
+            "notas": ""
           },
           "Nov": {
             "particip": false,
@@ -53295,12 +53301,11 @@
             "_ts": 1791829204619
           },
           "Oct": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "45",
-            "notas": "",
-            "_ts": 1794846460421
+            "horas": "",
+            "notas": ""
           },
           "Nov": {
             "particip": false,
@@ -53511,12 +53516,11 @@
             "_ts": 1791829431385
           },
           "Oct": {
-            "particip": true,
+            "particip": false,
             "cursos": "",
             "paux": false,
-            "horas": "45",
-            "notas": "",
-            "_ts": 1794846483630
+            "horas": "",
+            "notas": ""
           },
           "Nov": {
             "particip": false,
@@ -56035,7 +56039,7 @@
       }
     }
   ],
-  "_lastModified": 1794846484209,
+  "_lastModified": 1794846611153,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59581,20 +59585,52 @@
   ],
   "auditoria": [
     {
-      "ts": 1794846483630,
-      "user": "Administrador",
-      "rol": "admin",
+      "ts": 1794846585652,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
       "accion": "Horas editadas",
-      "detalle": "Zuleta, Brenda · Oct 2026: horas=45",
-      "pubId": "p1791829298292"
+      "detalle": "Sierra, Lizeth · Oct 2026: horas=43",
+      "pubId": "mmm9qi4smd7i"
     },
     {
-      "ts": 1794846460421,
-      "user": "Administrador",
-      "rol": "admin",
+      "ts": 1794846582092,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
       "accion": "Horas editadas",
-      "detalle": "Zuleta, Jhonatan · Oct 2026: horas=45",
-      "pubId": "p1791828899175"
+      "detalle": "Sierra, Lizeth · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1794846545428,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Carlos · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4nsgsv"
+    },
+    {
+      "ts": 1794846541283,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Oct 2026: horas=51",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1794846537452,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Gomez, Betsabe · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4ndhnb"
+    },
+    {
+      "ts": 1794846511952,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
     },
     {
       "ts": 1794846324296,
@@ -60589,6 +60625,14 @@
       "pubId": null
     },
     {
+      "ts": 1792459868643,
+      "user": "Isaac_G",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde escritorio",
+      "pubId": null
+    },
+    {
       "ts": 1792459835066,
       "user": "Isaac_G",
       "rol": "auxiliar",
@@ -61139,46 +61183,6 @@
       "accion": "Horas editadas",
       "detalle": "Méndez, Yaneth · Sep 2026: horas=55",
       "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1792457363573,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457363558,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457350888,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457350873,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457337285,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
-      "pubId": "mmm9qi4smd7i"
     }
   ],
   "formHistorial": [
