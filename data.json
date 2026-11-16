@@ -38545,16 +38545,17 @@
             "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
+            "horas": "50",
             "notas": "",
-            "_ts": 1791834936720
+            "_ts": 1794846864801
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794846854478
           },
           "Nov": {
             "particip": false,
@@ -56045,7 +56046,7 @@
       }
     }
   ],
-  "_lastModified": 1794846826847,
+  "_lastModified": 1794846866296,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59591,6 +59592,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846864801,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Sep 2026: horas=50",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
+      "ts": 1794846854478,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Silva, Edith · Oct 2026: horas=50",
+      "pubId": "mmm9qi4surcd"
+    },
+    {
       "ts": 1794846817073,
       "user": "Administrador",
       "rol": "admin",
@@ -61173,22 +61190,6 @@
       "accion": "Horas editadas",
       "detalle": "Serna Mosquera, Cristian · Sep 2026: cursos=1",
       "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1792457442656,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Sep 2026: cursos=1",
-      "pubId": "p1776220868449"
-    },
-    {
-      "ts": 1792457427324,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Sanchez, Maritza · datos generales",
-      "pubId": "mmm9qi4spx52"
     }
   ],
   "formHistorial": [
