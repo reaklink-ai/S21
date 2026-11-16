@@ -32208,11 +32208,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "7",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "49",
+            "notas": "",
+            "_ts": 1794797697511
           },
           "Nov": {
             "particip": false,
@@ -55993,7 +55994,7 @@
       }
     }
   ],
-  "_lastModified": 1794797652956,
+  "_lastModified": 1794797698013,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59539,6 +59540,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797697511,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2026: cursos=7",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
+      "ts": 1794797694570,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Quiroz, Carmen · Oct 2026: horas=49",
+      "pubId": "mmm9qi4rakns"
+    },
+    {
       "ts": 1794797652469,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61121,22 +61138,6 @@
       "accion": "Horas editadas",
       "detalle": "Rodriguez, Olga · Oct 2026: cursos=",
       "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1792457039404,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Sep 2026: horas=12",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1792457035999,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Sep 2026: horas=12",
-      "pubId": "mmm9qi4r25tb"
     }
   ],
   "formHistorial": [
