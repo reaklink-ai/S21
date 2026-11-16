@@ -18281,11 +18281,12 @@
             "notas": "48 Betel"
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "2",
+            "notas": "48 Betel",
+            "_ts": 1794797319192
           },
           "Nov": {
             "particip": false,
@@ -55984,7 +55985,7 @@
       }
     }
   ],
-  "_lastModified": 1794797282913,
+  "_lastModified": 1794797319858,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59530,6 +59531,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797312847,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Sabrina · Oct 2026: horas=2",
+      "pubId": "mmm9qi4ntf6r"
+    },
+    {
       "ts": 1794797263083,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61120,14 +61129,6 @@
       "accion": "Horas editadas",
       "detalle": "Castro De Cruz, Elizabeth · Sep 2026: cursos=1",
       "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1792456870938,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
     }
   ],
   "formHistorial": [
