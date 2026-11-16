@@ -25693,11 +25693,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "46",
+            "notas": "",
+            "_ts": 1794797652469
           },
           "Nov": {
             "particip": false,
@@ -55992,7 +55993,7 @@
       }
     }
   ],
-  "_lastModified": 1794797635294,
+  "_lastModified": 1794797652956,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59538,6 +59539,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797652469,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Yakci · Oct 2026: horas=46",
+      "pubId": "mmm9qi4qdi8f"
+    },
+    {
       "ts": 1794797634703,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61123,14 +61132,6 @@
     },
     {
       "ts": 1792457035999,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Sep 2026: horas=12",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1792457035990,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
