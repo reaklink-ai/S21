@@ -30388,11 +30388,12 @@
             "_ts": 1791834396806
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1794845791508
           },
           "Nov": {
             "particip": false,
@@ -56007,7 +56008,7 @@
       }
     }
   ],
-  "_lastModified": 1794845767573,
+  "_lastModified": 1794845796875,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59553,6 +59554,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794845791508,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Oct 2026: horas=30",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
+      "ts": 1794845789880,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Pelaez, Neismer · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4r9s54"
+    },
+    {
       "ts": 1794845746313,
       "user": "Administrador",
       "rol": "admin",
@@ -61135,22 +61152,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
       "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792457257280,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
-    },
-    {
-      "ts": 1792457119008,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Valderrama, Melissa · datos generales",
-      "pubId": "mmm9qi4tlges"
     }
   ],
   "formHistorial": [
