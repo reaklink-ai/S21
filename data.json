@@ -28647,11 +28647,12 @@
             "_ts": 1792459563869
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794847742032
           },
           "Nov": {
             "particip": false,
@@ -56289,7 +56290,7 @@
       }
     }
   ],
-  "_lastModified": 1794847720062,
+  "_lastModified": 1794847743489,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59835,6 +59836,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794847742032,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Oct 2026: horas=50",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
+      "ts": 1794847732278,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Padilla, Anyela · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4qnxk5"
+    },
+    {
       "ts": 1794847660642,
       "user": "Jaime_P",
       "rol": "anciano",
@@ -61417,22 +61434,6 @@
       "accion": "Horas editadas",
       "detalle": "Dominguez, Oscar Javier · Sep 2026: cursos=2",
       "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1792457955800,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Oscar Javier · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4uvqhc"
-    },
-    {
-      "ts": 1792457945698,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Sep 2026: horas=10",
-      "pubId": "mmm9qi4mz3i4"
     }
   ],
   "formHistorial": [
