@@ -10386,18 +10386,18 @@
           "Sep": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "13",
             "notas": "",
-            "_ts": 1792457238762
+            "_ts": 1794846215511
           },
           "Oct": {
             "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "26",
             "notas": "",
-            "_ts": 1794846120018
+            "_ts": 1794846220738
           },
           "Nov": {
             "particip": false,
@@ -56024,7 +56024,7 @@
       }
     }
   ],
-  "_lastModified": 1794846189897,
+  "_lastModified": 1794846221855,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59570,6 +59570,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846220738,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · Oct 2026: horas=26",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
+      "ts": 1794846215511,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "De Leon, Marcela · Sep 2026: horas=13",
+      "pubId": "mmm9qi4m00va"
+    },
+    {
       "ts": 1794846189144,
       "user": "Administrador",
       "rol": "admin",
@@ -61151,22 +61167,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792457314820,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792457312407,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
       "pubId": "mmm9qi4ndhnb"
     }
   ],
