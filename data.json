@@ -11867,11 +11867,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "16",
+            "notas": "Familiares enfermos",
+            "_ts": 1794797263083
           },
           "Nov": {
             "particip": false,
@@ -55980,7 +55981,7 @@
       }
     }
   ],
-  "_lastModified": 1794719416603,
+  "_lastModified": 1794797264060,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59526,6 +59527,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797263083,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Duarte, Dufay Arlet · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4m740x"
+    },
+    {
+      "ts": 1794797245913,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Duarte, Dufay Arlet · Oct 2026: horas=16",
+      "pubId": "mmm9qi4m740x"
+    },
+    {
+      "ts": 1794796909865,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794719384719,
       "user": "Miguel_R",
       "rol": "anciano",
@@ -60177,6 +60202,14 @@
       "ts": 1793842143010,
       "user": "Administrador",
       "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1793840411200,
+      "user": "Harold_La",
+      "rol": "anciano",
       "accion": "Login",
       "detalle": "Ingresó al sistema desde móvil",
       "pubId": null
@@ -61092,38 +61125,6 @@
       "accion": "Horas editadas",
       "detalle": "Bellino, Roberto · Sep 2026: cursos=1",
       "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1792456870930,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Roberto · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4k6yoa"
-    },
-    {
-      "ts": 1792456863827,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1792456863821,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4kqs2f"
-    },
-    {
-      "ts": 1792456862887,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Bellino, Melissa · Sep 2026: horas=41",
-      "pubId": "mmm9qi4kqs2f"
     }
   ],
   "formHistorial": [
