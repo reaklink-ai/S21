@@ -35478,11 +35478,12 @@
             "_ts": 1791834842241
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "49",
+            "notas": "",
+            "_ts": 1794846817073
           },
           "Nov": {
             "particip": false,
@@ -56043,7 +56044,7 @@
       }
     }
   ],
-  "_lastModified": 1794846790870,
+  "_lastModified": 1794846818285,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59589,6 +59590,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846817073,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Oct 2026: horas=49",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
+      "ts": 1794846815431,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Rivera, Patricia · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4spxmz"
+    },
+    {
       "ts": 1794846774957,
       "user": "Administrador",
       "rol": "admin",
@@ -61171,22 +61188,6 @@
       "accion": "Publicador editado",
       "detalle": "Sanchez, Maritza · datos generales",
       "pubId": "mmm9qi4spx52"
-    },
-    {
-      "ts": 1792457394085,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1792457394080,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Reyes, Santiago · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4swquo"
     }
   ],
   "formHistorial": [
