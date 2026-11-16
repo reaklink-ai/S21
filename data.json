@@ -20580,11 +20580,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "37",
+            "notas": "",
+            "_ts": 1794797727922
           },
           "Nov": {
             "particip": false,
@@ -55994,7 +55995,7 @@
       }
     }
   ],
-  "_lastModified": 1794797698013,
+  "_lastModified": 1794797728493,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59540,6 +59541,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797727922,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Oct 2026: horas=37",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
+      "ts": 1794797723343,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Harold · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4ol4i0"
+    },
+    {
       "ts": 1794797697511,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61121,22 +61138,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Rodriguez, Olga · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1792457054629,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4spu34"
-    },
-    {
-      "ts": 1792457053079,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Rodriguez, Olga · Oct 2026: cursos=",
       "pubId": "mmm9qi4spu34"
     }
   ],
