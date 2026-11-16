@@ -24400,11 +24400,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "12",
+            "notas": "Accidente Colegio Boca ",
+            "_ts": 1794797614185
           },
           "Nov": {
             "particip": false,
@@ -55990,7 +55991,7 @@
       }
     }
   ],
-  "_lastModified": 1794797559598,
+  "_lastModified": 1794797614715,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59536,6 +59537,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797595519,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Martinez, Juan David · Oct 2026: horas=12",
+      "pubId": "mmm9qi4q2dwl"
+    },
+    {
       "ts": 1794797559113,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61121,14 +61130,6 @@
     },
     {
       "ts": 1792457034669,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Ramos, Jhonatan · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1792457034662,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
