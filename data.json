@@ -54348,6 +54348,122 @@
         "notasMed": "",
         "_ts": 1794847207582
       }
+    },
+    {
+      "id": "p1794847262571",
+      "registros": {
+        "2026": {
+          "Sep": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Oct": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Nov": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Dic": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ene": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Feb": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Mar": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Abr": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "May": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jun": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Jul": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          },
+          "Ago": {
+            "particip": false,
+            "cursos": "",
+            "paux": false,
+            "horas": "",
+            "notas": ""
+          }
+        }
+      },
+      "apellido": "Perdono Rojas",
+      "nombre": "Hanna Gabriela",
+      "nacimiento": "",
+      "bautismo": "",
+      "grupo": "Grupo 14",
+      "telefono": "",
+      "genero": "F",
+      "otrasOvejas": false,
+      "ungido": false,
+      "anciano": false,
+      "siervo": false,
+      "precursorReg": false,
+      "precursorEsp": false,
+      "misionero": false,
+      "precAuxContinuo": false,
+      "_tsPersonal": 1794847262571,
+      "emergencia": {
+        "nombre": "",
+        "relacion": "",
+        "tel": "",
+        "tel2": "",
+        "direccion": "",
+        "notasMed": "",
+        "_ts": 1794847262571
+      }
     }
   ],
   "grupos": {
@@ -56165,7 +56281,7 @@
       }
     }
   ],
-  "_lastModified": 1794847228175,
+  "_lastModified": 1794847265155,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59711,6 +59827,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794847262571,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Nuevo publicador",
+      "detalle": "Perdono Rojas, Hanna Gabriela · Grupo 14",
+      "pubId": "p1794847262571"
+    },
+    {
       "ts": 1794847207583,
       "user": "Administrador",
       "rol": "admin",
@@ -61301,14 +61425,6 @@
       "accion": "Publicador editado",
       "detalle": "Silva, Jhasleidy · datos generales",
       "pubId": "mmm9qi4ux55z"
-    },
-    {
-      "ts": 1792457863608,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Rivadeneira, Cristina · Sep 2026: cursos=1",
-      "pubId": "p1776221052712"
     }
   ],
   "formHistorial": [
