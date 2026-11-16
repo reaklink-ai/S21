@@ -3576,11 +3576,12 @@
             "_ts": 1791754676868
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "60",
+            "notas": "",
+            "_ts": 1794847660642
           },
           "Nov": {
             "particip": false,
@@ -56282,7 +56283,7 @@
       }
     }
   ],
-  "_lastModified": 1794847277961,
+  "_lastModified": 1794847661490,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59828,6 +59829,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794847660642,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Ayala, Saul · Oct 2026: horas=60",
+      "pubId": "mmm9qi4k6wjw"
+    },
+    {
+      "ts": 1794847632997,
+      "user": "Jaime_P",
+      "rol": "anciano",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794847262571,
       "user": "Administrador",
       "rol": "admin",
@@ -61410,22 +61427,6 @@
       "accion": "Horas editadas",
       "detalle": "Dominguez, Sonia · Sep 2026: horas=10",
       "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1792457945690,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Dominguez, Sonia · Sep 2026: horas=10",
-      "pubId": "mmm9qi4mz3i4"
-    },
-    {
-      "ts": 1792457876667,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Silva, Jhasleidy · datos generales",
-      "pubId": "mmm9qi4ux55z"
     }
   ],
   "formHistorial": [
