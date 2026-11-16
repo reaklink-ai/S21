@@ -44253,11 +44253,12 @@
             "_ts": 1792457869638
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846385358
           },
           "Nov": {
             "particip": false,
@@ -53294,11 +53295,12 @@
             "_ts": 1791829204619
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1794846460421
           },
           "Nov": {
             "particip": false,
@@ -56032,7 +56034,7 @@
       }
     }
   ],
-  "_lastModified": 1794846363145,
+  "_lastModified": 1794846461367,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59578,6 +59580,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846460421,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Zuleta, Jhonatan · Oct 2026: horas=45",
+      "pubId": "p1791828899175"
+    },
+    {
       "ts": 1794846324296,
       "user": "Administrador",
       "rol": "admin",
@@ -61168,14 +61178,6 @@
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
       "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457328243,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Hernandez, Ingrid · Sep 2026: horas=30",
-      "pubId": "mmm9qi4nts9j"
     }
   ],
   "formHistorial": [
