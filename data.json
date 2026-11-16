@@ -7411,11 +7411,12 @@
             "_ts": 1791834719762
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "16",
+            "notas": "",
+            "_ts": 1794846716773
           },
           "Nov": {
             "particip": false,
@@ -56037,7 +56038,7 @@
       }
     }
   ],
-  "_lastModified": 1794846689189,
+  "_lastModified": 1794846717962,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59583,6 +59584,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846716774,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Castro, Luz Helena · Oct 2026: horas=16",
+      "pubId": "mmm9qi4lss62"
+    },
+    {
       "ts": 1794846688529,
       "user": "Administrador",
       "rol": "admin",
@@ -61172,14 +61181,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457350888,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
       "pubId": "mmm9qi4smd7i"
     }
   ],
