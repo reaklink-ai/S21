@@ -17330,11 +17330,12 @@
             "_ts": 1792457328243
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "30",
+            "notas": "",
+            "_ts": 1794846189144
           },
           "Nov": {
             "particip": false,
@@ -56023,7 +56024,7 @@
       }
     }
   ],
-  "_lastModified": 1794846174094,
+  "_lastModified": 1794846189897,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59569,6 +59570,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846189144,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Ingrid · Oct 2026: horas=30",
+      "pubId": "mmm9qi4nts9j"
+    },
+    {
       "ts": 1794845791508,
       "user": "Administrador",
       "rol": "admin",
@@ -61154,14 +61163,6 @@
     },
     {
       "ts": 1792457312407,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792457312392,
       "user": "Isaac_G",
       "rol": "auxiliar",
       "accion": "Horas editadas",
