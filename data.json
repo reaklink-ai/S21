@@ -20837,11 +20837,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "41",
+            "notas": "",
+            "_ts": 1794797477123
           },
           "Nov": {
             "particip": false,
@@ -55987,7 +55988,7 @@
       }
     }
   ],
-  "_lastModified": 1794797432713,
+  "_lastModified": 1794797478002,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59533,6 +59534,30 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797477123,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Mercedes · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4ocyur"
+    },
+    {
+      "ts": 1794797472060,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Mercedes · Oct 2026: horas=41",
+      "pubId": "mmm9qi4ocyur"
+    },
+    {
+      "ts": 1794797464990,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Mercedes · Oct 2026: cursos=41",
+      "pubId": "mmm9qi4ocyur"
+    },
+    {
       "ts": 1794797424741,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61107,30 +61132,6 @@
       "accion": "Horas editadas",
       "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=2",
       "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1792457014614,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1792457014606,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1792456902214,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Sep 2026: horas=30",
-      "pubId": "mmm9qi4l0gf8"
     }
   ],
   "formHistorial": [
