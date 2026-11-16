@@ -2414,11 +2414,12 @@
             "_ts": 1791834685152
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "17",
+            "notas": "",
+            "_ts": 1794846688529
           },
           "Nov": {
             "particip": false,
@@ -56036,7 +56037,7 @@
       }
     }
   ],
-  "_lastModified": 1794846673451,
+  "_lastModified": 1794846689189,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59582,6 +59583,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846688529,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Amortegui, Natalia · Oct 2026: horas=17",
+      "pubId": "mmm9qi4j8aj2"
+    },
+    {
+      "ts": 1794846687074,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Amortegui, Natalia · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4j8aj2"
+    },
+    {
       "ts": 1794846483630,
       "user": "Administrador",
       "rol": "admin",
@@ -61163,22 +61180,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457350873,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792457337285,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=32",
       "pubId": "mmm9qi4smd7i"
     }
   ],
