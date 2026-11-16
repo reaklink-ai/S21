@@ -21101,11 +21101,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "31",
+            "notas": "",
+            "_ts": 1794797540630
           },
           "Nov": {
             "particip": false,
@@ -55988,7 +55989,7 @@
       }
     }
   ],
-  "_lastModified": 1794797516911,
+  "_lastModified": 1794797541194,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59534,6 +59535,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797540630,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Rose · Oct 2026: horas=31",
+      "pubId": "mmm9qi4oz8wb"
+    },
+    {
       "ts": 1794797477123,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61119,14 +61128,6 @@
     },
     {
       "ts": 1792457019822,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4oaz18"
-    },
-    {
-      "ts": 1792457019812,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
