@@ -21381,11 +21381,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "53",
+            "notas": "",
+            "_ts": 1794797559113
           },
           "Nov": {
             "particip": false,
@@ -55989,7 +55990,7 @@
       }
     }
   ],
-  "_lastModified": 1794797541194,
+  "_lastModified": 1794797559598,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59535,6 +59536,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797559113,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Larrota, Sergio · Oct 2026: horas=53",
+      "pubId": "mmm9qi4oyf8q"
+    },
+    {
       "ts": 1794797540630,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61125,14 +61134,6 @@
       "accion": "Horas editadas",
       "detalle": "Ramos, Jhonatan · Sep 2026: cursos=1",
       "pubId": "mmm9qi4r25tb"
-    },
-    {
-      "ts": 1792457019822,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Lopez Pardo, Willian · Sep 2026: cursos=2",
-      "pubId": "mmm9qi4oaz18"
     }
   ],
   "formHistorial": [
