@@ -1898,8 +1898,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": "",
-            "_ts": 1794845835028
+            "notas": "Embarazo ",
+            "_ts": 1794845846487
           },
           "Nov": {
             "particip": false,
@@ -56010,7 +56010,7 @@
       }
     }
   ],
-  "_lastModified": 1794845836948,
+  "_lastModified": 1794845847791,
   "vym": {
     "semanas": {},
     "historial": [
