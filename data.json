@@ -20081,11 +20081,12 @@
             "_ts": 1791834808149
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "particip": true,
+            "cursos": "1",
+            "paux": true,
+            "horas": "17",
+            "notas": "",
+            "_ts": 1794846774957
           },
           "Nov": {
             "particip": false,
@@ -56040,7 +56041,7 @@
       }
     }
   ],
-  "_lastModified": 1794846757588,
+  "_lastModified": 1794846776465,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59586,6 +59587,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846774957,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Oct 2026: horas=17",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
+      "ts": 1794846773669,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Jimenez, Flor · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4nszua"
+    },
+    {
       "ts": 1794846754742,
       "user": "Administrador",
       "rol": "admin",
@@ -61168,22 +61185,6 @@
       "accion": "Horas editadas",
       "detalle": "Reyes, Santiago · Sep 2026: cursos=1",
       "pubId": "mmm9qi4swquo"
-    },
-    {
-      "ts": 1792457376300,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Sep 2026: horas=55",
-      "pubId": "p1788529197916"
-    },
-    {
-      "ts": 1792457376294,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Méndez, Yaneth · Sep 2026: horas=55",
-      "pubId": "p1788529197916"
     }
   ],
   "formHistorial": [
