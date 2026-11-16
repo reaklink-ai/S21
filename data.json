@@ -42770,11 +42770,12 @@
             "_ts": 1791835022305
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794846926769
           },
           "Nov": {
             "particip": false,
@@ -43475,11 +43476,12 @@
             "_ts": 1791835031837
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794847048669
           },
           "Nov": {
             "particip": false,
@@ -56046,7 +56048,7 @@
       }
     }
   ],
-  "_lastModified": 1794846866296,
+  "_lastModified": 1794847110155,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59592,6 +59594,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794846926770,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vivas, Sonia Julieth · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4t0167"
+    },
+    {
       "ts": 1794846864801,
       "user": "Administrador",
       "rol": "admin",
@@ -61182,14 +61192,6 @@
       "accion": "Horas editadas",
       "detalle": "Serna Rivadeneira, Cristina · Sep 2026: cursos=1",
       "pubId": "p1776221052712"
-    },
-    {
-      "ts": 1792457442662,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Serna Mosquera, Cristian · Sep 2026: cursos=1",
-      "pubId": "p1776220868449"
     }
   ],
   "formHistorial": [
