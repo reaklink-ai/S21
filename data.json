@@ -13651,11 +13651,12 @@
             "notas": "24 Escuela de ancianos (23 Betel)"
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "15",
+            "notas": "40 Betel",
+            "_ts": 1794797432123
           },
           "Nov": {
             "particip": false,
@@ -55986,7 +55987,7 @@
       }
     }
   ],
-  "_lastModified": 1794797387889,
+  "_lastModified": 1794797432713,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59532,6 +59533,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797424741,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Samuel · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4nd6my"
+    },
+    {
+      "ts": 1794797422121,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Garcia, Samuel · Oct 2026: horas=15",
+      "pubId": "mmm9qi4nd6my"
+    },
+    {
       "ts": 1794797351099,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61113,22 +61130,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Castro De Cruz, Elizabeth · Sep 2026: horas=30",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1792456902208,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Sep 2026: horas=30",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1792456900056,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Sep 2026: cursos=1",
       "pubId": "mmm9qi4l0gf8"
     }
   ],
