@@ -18569,11 +18569,12 @@
             "notas": ""
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "24",
+            "notas": "Mamá Hospitalizada en UCI",
+            "_ts": 1794797372970
           },
           "Nov": {
             "particip": false,
@@ -55985,7 +55986,7 @@
       }
     }
   ],
-  "_lastModified": 1794797319858,
+  "_lastModified": 1794797387889,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59531,6 +59532,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794797351099,
+      "user": "Harold_La",
+      "rol": "anciano",
+      "accion": "Horas editadas",
+      "detalle": "Hernandez, Yudid · Oct 2026: horas=24",
+      "pubId": "mmm9qi4nym0v"
+    },
+    {
       "ts": 1794797312847,
       "user": "Harold_La",
       "rol": "anciano",
@@ -61116,14 +61125,6 @@
     },
     {
       "ts": 1792456900056,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Castro De Cruz, Elizabeth · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4l0gf8"
-    },
-    {
-      "ts": 1792456900050,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
