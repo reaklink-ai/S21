@@ -15777,11 +15777,12 @@
             "_ts": 1792162539208
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "20",
+            "notas": "",
+            "_ts": 1794909205541
           },
           "Nov": {
             "particip": false,
@@ -56331,7 +56332,7 @@
       }
     }
   ],
-  "_lastModified": 1794904756175,
+  "_lastModified": 1794909225084,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59877,6 +59878,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794909205541,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Gabriela · Oct 2026: horas=20",
+      "pubId": "mmm9qi4now8s"
+    },
+    {
+      "ts": 1794908763665,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794904686976,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61458,22 +61475,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Sep 2026: horas=16",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1792458957235,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2026: cursos=2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1792458957223,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2026: cursos=2",
       "pubId": "p1791828303713"
     }
   ],
