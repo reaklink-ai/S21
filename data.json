@@ -51981,11 +51981,12 @@
             "_ts": 1792458021292
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794877659166
           },
           "Nov": {
             "particip": false,
@@ -56302,7 +56303,7 @@
       }
     }
   ],
-  "_lastModified": 1794877623756,
+  "_lastModified": 1794877660524,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59848,6 +59849,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877659166,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Oct 2026: horas=50",
+      "pubId": "p1789569820666"
+    },
+    {
+      "ts": 1794877657443,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Moreno, Sandra · Oct 2026: cursos=1",
+      "pubId": "p1789569820666"
+    },
+    {
       "ts": 1794877622313,
       "user": "Administrador",
       "rol": "admin",
@@ -61430,22 +61447,6 @@
       "accion": "Horas editadas",
       "detalle": "Vega Palomino, Zulma · Sep 2026: horas=",
       "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1792458042229,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Sep 2026: horas=40",
-      "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1792458042221,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Perez, Danna · Sep 2026: horas=40",
-      "pubId": "mmm9qi4rigm6"
     }
   ],
   "formHistorial": [
