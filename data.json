@@ -11631,11 +11631,12 @@
             "_ts": 1792457945698
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "10",
+            "notas": "",
+            "_ts": 1794877561200
           },
           "Nov": {
             "particip": false,
@@ -56298,7 +56299,7 @@
       }
     }
   ],
-  "_lastModified": 1794877547177,
+  "_lastModified": 1794877562435,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59844,6 +59845,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877561200,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Dominguez, Sonia · Oct 2026: horas=10",
+      "pubId": "mmm9qi4mz3i4"
+    },
+    {
       "ts": 1794877545962,
       "user": "Administrador",
       "rol": "admin",
@@ -61429,14 +61438,6 @@
     },
     {
       "ts": 1792458017611,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Sep 2026: cursos=1",
-      "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1792458017598,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
