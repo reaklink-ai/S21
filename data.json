@@ -27582,11 +27582,12 @@
             "_ts": 1792457986291
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794877603328
           },
           "Nov": {
             "particip": false,
@@ -56300,7 +56301,7 @@
       }
     }
   ],
-  "_lastModified": 1794877585135,
+  "_lastModified": 1794877604976,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59846,6 +59847,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877603328,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Montoya, Marco · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4qfkhc"
+    },
+    {
       "ts": 1794877583848,
       "user": "Administrador",
       "rol": "admin",
@@ -61436,14 +61445,6 @@
       "accion": "Publicador editado",
       "detalle": "Perez, Danna · datos generales",
       "pubId": "mmm9qi4rigm6"
-    },
-    {
-      "ts": 1792458021292,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Moreno, Sandra · Sep 2026: horas=50",
-      "pubId": "p1789569820666"
     }
   ],
   "formHistorial": [
