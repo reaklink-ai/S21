@@ -33150,11 +33150,12 @@
             "_ts": 1792162639443
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "3",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "50",
+            "notas": "",
+            "_ts": 1794904562913
           },
           "Nov": {
             "particip": false,
@@ -56328,7 +56329,7 @@
       }
     }
   ],
-  "_lastModified": 1794904530284,
+  "_lastModified": 1794904564538,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59874,6 +59875,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794904562913,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Oct 2026: horas=50",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
+      "ts": 1794904561132,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Martha · Oct 2026: cursos=3",
+      "pubId": "mmm9qi4rre7b"
+    },
+    {
       "ts": 1794904529049,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61456,22 +61473,6 @@
       "accion": "Login",
       "detalle": "Ingresó al sistema desde escritorio",
       "pubId": null
-    },
-    {
-      "ts": 1792458573842,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792458573818,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Sierra, Lizeth · Sep 2026: horas=36",
-      "pubId": "mmm9qi4smd7i"
     }
   ],
   "formHistorial": [
