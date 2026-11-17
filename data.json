@@ -30941,11 +30941,12 @@
             "_ts": 1792458042229
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "45",
+            "notas": "",
+            "_ts": 1794877705061
           },
           "Nov": {
             "particip": false,
@@ -56303,7 +56304,7 @@
       }
     }
   ],
-  "_lastModified": 1794877660524,
+  "_lastModified": 1794877706742,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59849,6 +59850,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877705061,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Perez, Danna · Oct 2026: horas=45",
+      "pubId": "mmm9qi4rigm6"
+    },
+    {
       "ts": 1794877659166,
       "user": "Administrador",
       "rol": "admin",
@@ -61438,14 +61447,6 @@
       "rol": "admin",
       "accion": "Horas editadas",
       "detalle": "Vega Palomino, Zulma · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1792458090147,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Sep 2026: horas=",
       "pubId": "mmm9qi4t0ubg"
     }
   ],
