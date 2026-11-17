@@ -15483,11 +15483,12 @@
             "_ts": 1792162565114
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "15",
+            "notas": "",
+            "_ts": 1794904467243
           },
           "Nov": {
             "particip": false,
@@ -56325,7 +56326,7 @@
       }
     }
   ],
-  "_lastModified": 1794904447550,
+  "_lastModified": 1794904468508,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59871,6 +59872,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794904467243,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Guerrero, Adriana · Oct 2026: horas=15",
+      "pubId": "mmm9qi4ndp9i"
+    },
+    {
       "ts": 1794904386965,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61461,14 +61470,6 @@
       "accion": "Horas editadas",
       "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
       "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1792458542318,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
-      "pubId": "mmm9qi4ndhnb"
     }
   ],
   "formHistorial": [
