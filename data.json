@@ -1650,11 +1650,12 @@
             "_ts": 1792457929623
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
-            "notas": ""
+            "paux": true,
+            "horas": "15",
+            "notas": "",
+            "_ts": 1794877545961
           },
           "Nov": {
             "particip": false,
@@ -56297,7 +56298,7 @@
       }
     }
   ],
-  "_lastModified": 1794877515098,
+  "_lastModified": 1794877547177,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59843,6 +59844,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877545962,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Alarcon, Victor Hugo · Oct 2026: horas=15",
+      "pubId": "mmm9qi4jnax6"
+    },
+    {
       "ts": 1794877506380,
       "user": "Administrador",
       "rol": "admin",
@@ -61433,14 +61442,6 @@
       "accion": "Horas editadas",
       "detalle": "Moreno, Sandra · Sep 2026: cursos=1",
       "pubId": "p1789569820666"
-    },
-    {
-      "ts": 1792458001498,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Montoya, Xiomara · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4qgt8u"
     }
   ],
   "formHistorial": [
