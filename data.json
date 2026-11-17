@@ -33718,19 +33718,20 @@
             "_ts": 1792162601776
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
             "notas": "",
-            "_ts": 1792162600357
+            "_ts": 1794904600526
           },
           "Nov": {
             "particip": false,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794904594476
           },
           "Dic": {
             "particip": false,
@@ -42570,12 +42571,12 @@
             "_ts": 1792162873505
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
-            "paux": false,
-            "horas": "",
+            "paux": true,
+            "horas": "19",
             "notas": "",
-            "_ts": 1792162871838
+            "_ts": 1794904686975
           },
           "Nov": {
             "particip": false,
@@ -56329,7 +56330,7 @@
       }
     }
   ],
-  "_lastModified": 1794904564538,
+  "_lastModified": 1794904748028,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59875,6 +59876,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794904686976,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Villa, Julia · Oct 2026: horas=19",
+      "pubId": "mmm9qi4tnncr"
+    },
+    {
+      "ts": 1794904600526,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Ramos, Roger · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4rhmxc"
+    },
+    {
       "ts": 1794904562913,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61457,22 +61474,6 @@
       "accion": "Horas editadas",
       "detalle": "Uribe, Catherine · Sep 2026: cursos=2",
       "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1792458948650,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Uribe, Catherine · Grupo: ninguno → Grupo 2",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1792458912884,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Login",
-      "detalle": "Ingresó al sistema desde escritorio",
-      "pubId": null
     }
   ],
   "formHistorial": [
