@@ -8989,11 +8989,12 @@
             "_ts": 1792162675288
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "47",
+            "notas": "",
+            "_ts": 1794904493526
           },
           "Nov": {
             "particip": false,
@@ -56326,7 +56327,7 @@
       }
     }
   ],
-  "_lastModified": 1794904468508,
+  "_lastModified": 1794904522786,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59872,6 +59873,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794904493526,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
+      "ts": 1794904491973,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Lina · Oct 2026: horas=47",
+      "pubId": "mmm9qi4lxrtx"
+    },
+    {
       "ts": 1794904467243,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61454,22 +61471,6 @@
       "accion": "Horas editadas",
       "detalle": "Sierra, Lizeth · Sep 2026: cursos=2",
       "pubId": "mmm9qi4smd7i"
-    },
-    {
-      "ts": 1792458547547,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4nsgsv"
-    },
-    {
-      "ts": 1792458547525,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Carlos · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4nsgsv"
     }
   ],
   "formHistorial": [
