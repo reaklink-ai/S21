@@ -8473,11 +8473,12 @@
             "_ts": 1792162740998
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "12",
+            "notas": "Betel 39",
+            "_ts": 1794915230402
           },
           "Nov": {
             "particip": false,
@@ -56332,7 +56333,7 @@
       }
     }
   ],
-  "_lastModified": 1794909225084,
+  "_lastModified": 1794915232196,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59878,6 +59879,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794915227087,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Horas editadas",
+      "detalle": "Chacon, Camila · Oct 2026: horas=12",
+      "pubId": "mmm9qi4lfo92"
+    },
+    {
+      "ts": 1794914580588,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794909205541,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61460,22 +61477,6 @@
       "accion": "Publicador editado",
       "detalle": "Uribe Cancino, Keyla · Grupo: ninguno → Grupo 2",
       "pubId": "p1791828596369"
-    },
-    {
-      "ts": 1792458960560,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2026: horas=16",
-      "pubId": "p1791828303713"
-    },
-    {
-      "ts": 1792458960551,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe, Catherine · Sep 2026: horas=16",
-      "pubId": "p1791828303713"
     }
   ],
   "formHistorial": [
