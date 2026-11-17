@@ -38331,11 +38331,12 @@
             "_ts": 1792459820910
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "2",
             "paux": false,
-            "horas": "",
-            "notas": ""
+            "horas": "43",
+            "notas": "",
+            "_ts": 1794877930073
           },
           "Nov": {
             "particip": false,
@@ -56313,7 +56314,7 @@
       }
     }
   ],
-  "_lastModified": 1794877910820,
+  "_lastModified": 1794877931733,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59859,6 +59860,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877930074,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2026: horas=43",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
+      "ts": 1794877928463,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Sierra, Lizeth · Oct 2026: cursos=2",
+      "pubId": "mmm9qi4smd7i"
+    },
+    {
       "ts": 1794877900150,
       "user": "Administrador",
       "rol": "admin",
@@ -61440,22 +61457,6 @@
       "rol": "auxiliar",
       "accion": "Horas editadas",
       "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792458538036,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792458538010,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: cursos=1",
       "pubId": "mmm9qi4ndhnb"
     }
   ],
