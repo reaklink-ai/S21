@@ -42300,11 +42300,12 @@
             "_ts": 1792458091519
           },
           "Oct": {
-            "particip": false,
-            "cursos": "",
+            "particip": true,
+            "cursos": "1",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794877843172
           },
           "Nov": {
             "particip": false,
@@ -56310,7 +56311,7 @@
       }
     }
   ],
-  "_lastModified": 1794877823133,
+  "_lastModified": 1794877844886,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59856,6 +59857,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794877843172,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Horas editadas",
+      "detalle": "Vega Palomino, Zulma · Oct 2026: cursos=1",
+      "pubId": "mmm9qi4t0ubg"
+    },
+    {
       "ts": 1794877705061,
       "user": "Administrador",
       "rol": "admin",
@@ -61441,14 +61450,6 @@
     },
     {
       "ts": 1792458091519,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Vega Palomino, Zulma · Sep 2026: cursos=1",
-      "pubId": "mmm9qi4t0ubg"
-    },
-    {
-      "ts": 1792458091511,
       "user": "Administrador",
       "rol": "admin",
       "accion": "Horas editadas",
