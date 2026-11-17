@@ -8718,11 +8718,12 @@
             "_ts": 1792162477492
           },
           "Oct": {
-            "particip": false,
+            "particip": true,
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "",
+            "_ts": 1794904395206
           },
           "Nov": {
             "particip": false,
@@ -56319,7 +56320,7 @@
       }
     }
   ],
-  "_lastModified": 1794877994035,
+  "_lastModified": 1794904400117,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59865,6 +59866,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794904386965,
+      "user": "Felipe_C",
+      "rol": "auxiliar",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794877930074,
       "user": "Administrador",
       "rol": "admin",
@@ -61450,14 +61459,6 @@
     },
     {
       "ts": 1792458542318,
-      "user": "Isaac_G",
-      "rol": "auxiliar",
-      "accion": "Horas editadas",
-      "detalle": "Gomez, Betsabe · Sep 2026: horas=57",
-      "pubId": "mmm9qi4ndhnb"
-    },
-    {
-      "ts": 1792458542294,
       "user": "Isaac_G",
       "rol": "auxiliar",
       "accion": "Horas editadas",
