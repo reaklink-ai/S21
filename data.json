@@ -24197,7 +24197,8 @@
             "cursos": "",
             "paux": false,
             "horas": "",
-            "notas": ""
+            "notas": "No informó en el mes",
+            "_ts": 1794930143903
           },
           "Nov": {
             "particip": false,
@@ -56333,7 +56334,7 @@
       }
     }
   ],
-  "_lastModified": 1794915232196,
+  "_lastModified": 1794930145166,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59879,6 +59880,14 @@
   ],
   "auditoria": [
     {
+      "ts": 1794930087496,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794915227087,
       "user": "Felipe_C",
       "rol": "auxiliar",
@@ -61469,14 +61478,6 @@
       "accion": "Publicador editado",
       "detalle": "Uribe Cancino, Miguel · Grupo: ninguno → Grupo 2",
       "pubId": "p1791828736498"
-    },
-    {
-      "ts": 1792458970423,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Uribe Cancino, Keyla · Grupo: ninguno → Grupo 2",
-      "pubId": "p1791828596369"
     }
   ],
   "formHistorial": [
