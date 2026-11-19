@@ -55603,6 +55603,17 @@
   ],
   "asistencia": [
     {
+      "id": "r1795050727837",
+      "fecha": "2026-11-18",
+      "tipo": "Entre semana",
+      "tema": "Vida y Ministerio Cristiano",
+      "presencial": 129,
+      "zoom": 91,
+      "total": 220,
+      "notas": "",
+      "_ts": 1795050727837
+    },
+    {
       "id": "r1794449708359",
       "fecha": "2026-11-11",
       "tipo": "Entre semana",
@@ -56334,7 +56345,7 @@
       }
     }
   ],
-  "_lastModified": 1794930145166,
+  "_lastModified": 1795050730099,
   "vym": {
     "semanas": {},
     "historial": [
@@ -59880,6 +59891,22 @@
   ],
   "auditoria": [
     {
+      "ts": 1795050694347,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
+      "ts": 1795050198640,
+      "user": "Administrador",
+      "rol": "admin",
+      "accion": "Login",
+      "detalle": "Ingresó al sistema desde móvil",
+      "pubId": null
+    },
+    {
       "ts": 1794930087496,
       "user": "Administrador",
       "rol": "admin",
@@ -61462,22 +61489,6 @@
       "accion": "Horas editadas",
       "detalle": "Uribe Gamez, Diego · Sep 2026: cursos=4",
       "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1792458996995,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Horas editadas",
-      "detalle": "Uribe Gamez, Diego · Sep 2026: cursos=4",
-      "pubId": "p1791828537787"
-    },
-    {
-      "ts": 1792458987807,
-      "user": "Administrador",
-      "rol": "admin",
-      "accion": "Publicador editado",
-      "detalle": "Uribe Cancino, Miguel · Grupo: ninguno → Grupo 2",
-      "pubId": "p1791828736498"
     }
   ],
   "formHistorial": [
